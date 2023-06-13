@@ -25,15 +25,6 @@ HTML asoslarini bilib oling:
 5. https://webref.ru/course/html5-form - 2h
 
 
-
-## FAQ
-## Savolni qayerda berishim mumkin??
-Savollarni telegram chatida berish mumkin: @itechmarafon_bot
-
-## Yashash shahri muhimmi? Kursni butunlay onlayn o'tashim mumkinmi?
-
-Yashash shahri muhim emas. Treningning barcha bosqichlari onlayn tarzda yakunlanishi mumkin.
-
 # Kursni boshlaymiz 
 
 ### Asosiy kursning bosqichlari
@@ -64,3 +55,9 @@ Yashash shahri muhim emas. Treningning barcha bosqichlari onlayn tarzda yakunlan
 </p>
 
 
+## FAQ
+## Savolni qayerda berishim mumkin??
+ - Savollarni telegram chatida berish mumkin: @itechmarafon_bot
+## Yashash shahri muhimmi? Kursni butunlay onlayn o'tashim mumkinmi?
+
+- Yashash shahri muhim emas. Treningning barcha bosqichlari onlayn tarzda yakunlanishi mumkin
