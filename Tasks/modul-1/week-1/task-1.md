@@ -1,14 +1,14 @@
-# Изучение готовых проектов
+# Tugallangan loyihalarni o'rganish
+- Qancha dasturlash kitobini o'qiganingiz, qancha video tomosha qilganingiz yoki qancha podkast tinglaganingiz muhim emas - agar siz dasturchi bo'lishni istasangiz, kod yozishingiz kerak.
 
-Не так важно, сколько книг по программированию вы прочли, сколько видео просмотрели и сколько подкастов прослушали, - если вы хотите стать разработчиком, вам нужно писать код.
+- Siz o'zingizning ilovalaringizni yaratish va boshqa ishlab chiquvchilar o'z loyihalarini qanday yozishlarini tahlil qilish orqali mashq qilishingiz mumkin. Shu bilan birga, birovning kodini shunchaki nusxalash natija bermaydi va sizning mahorat mahoratingiz oshmaydi. Kod nima uchun bu tarzda yozilganligini va boshqacha emasligini tushunishga harakat qiling, dastur muallifining mantig'ini tushuning, shunchaki tugatilgan ishni takrorlang, balki uni yaxshilang, aniqlangan xatolar va noaniqliklarni tuzating, unga o'zingizdan biror narsa qo'shing. .
 
-Практиковаться можно как создавая свои собственные приложения, так и разбирая как пишут свои проекты другие разработчики. При этом простое копирование чужого кода результата не даст и ваш навык мастерства не поднимет. Постарайтесь разобраться, почему код пишется так, а не иначе, понять логику автора приложения, не просто повторить готовую работу, но улучшить её, исправить замеченные ошибки и неточности, внести в неё что-то своё.
+## 1 - Vazifa  Jamoaviy Card yaratish!
 
-## Task 1. Calculator +40
-
-- Создание калькулятора, выполняющего математические операции. Отличное объяснение, единственное в этой подборке на русском языке. Код немного устарел: всё ещё используются объявления переменных var вместо const и let, обычные функции, вместо стрелочных. Но логика создания приложения осталась неизменной. 
-- Чему вы научитесь: созданию приложений, делению кода на функции
-- Видео: https://youtu.be/VHGaBc9OcXU (1:21:28)
-- Код: https://github.com/projectcalculator1/projectcalculator1.github.io (103 lines js-code)
-- Demo: https://projectcalculator1.github.io/
-- Время выполнения: 10 часов
+- Card uchun image topish
+- h1 tagi ichiga F.I yozish
+- Cardning tag qismiga 3 ta havola qoldirish
+- Video: https://www.youtube.com/watch?v=HRd4pJwmy_0
+- Code: none
+- Demo: none
+- Bajarish vaqti: 1 soat

@@ -27,14 +27,14 @@ HTML asoslarini bilib oling:
 
 
 ## FAQ
-### Savolni qayerda berishim mumkin??
-Вопросы можно задать в Discord чате: @itechmarafon_bot
+## Savolni qayerda berishim mumkin??
+Savollarni telegram chatida berish mumkin: @itechmarafon_bot
 
-### Yashash shahri muhimmi? Kursni butunlay onlayn o'tashim mumkinmi?
+## Yashash shahri muhimmi? Kursni butunlay onlayn o'tashim mumkinmi?
 
 Yashash shahri muhim emas. Treningning barcha bosqichlari onlayn tarzda yakunlanishi mumkin.
 
-### 
+
 
 
 
