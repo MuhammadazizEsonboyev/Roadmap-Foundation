@@ -1,4 +1,4 @@
-# [Stage#0.](../../) HTML asoslari
+# [iTech Academy](../../) HTML asoslari
 ## Ushbu modulda talabalar:
 HTML asoslarini bilib oling:
 1. Sintaksis
