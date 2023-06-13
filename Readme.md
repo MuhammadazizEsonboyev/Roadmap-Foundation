@@ -38,25 +38,27 @@ Yashash shahri muhim emas. Treningning barcha bosqichlari onlayn tarzda yakunlan
 
 ### Asosiy kursning bosqichlari
 - [#1 Modul](./Html%20Tutorial/modul-1/)
-    - HTML haqida
-    - Mavzular:
-        - HTML Editors
-        - HTML Basic
-        - HTML Elements
-        - HTML Attributes
-        - HTML Headings
-        - HTML Paragraphs
-        - HTML Styles
-        - HTML Formatting
-        - HTML Quotations
-        - HTML Comments
-        - HTML Colors
-        - HTML CSS
-        - CSS Introduction
-        - CSS Syntax
-        - CSS Selectors
-        - HTML Links
-
-
+    - [HTML Tutorial](./Html%20Tutorial/modul-1/week-1/)
+    - [HTML Forms, CSS Tutorial](./Html%20Tutorial/modul-1/week-2/)  
+    - [HTML Media](./Html%20Tutorial/modul-1/week-3/)  
+    - [CSS Responsive](./Html%20Tutorial/modul-1/week-3/)
+ - [#2 Modul](./Html%20Tutorial/modul-2/)
+     - [HTML Tutorial](./Html%20Tutorial/modul-1/week-1/)
+     - [HTML Forms, CSS Tutorial](./Html%20Tutorial/modul-1/week-2/)  
+     - [HTML Media](./Html%20Tutorial/modul-1/week-3/)  
+     - [CSS Responsive](./Html%20Tutorial/modul-1/week-3/)
+ - [#3 Modul](./Html%20Tutorial/modul-2/)
+     - [HTML Tutorial](./Html%20Tutorial/modul-1/week-1/)
+     - [HTML Forms, CSS Tutorial](./Html%20Tutorial/modul-1/week-2/)  
+     - [HTML Media](./Html%20Tutorial/modul-1/week-3/)  
+     - [CSS Responsive](./Html%20Tutorial/modul-1/week-3/)
+ - [#4 Modul](./Html%20Tutorial/modul-2/)
+     - [HTML Tutorial](./Html%20Tutorial/modul-1/week-1/)
+     - [HTML Forms, CSS Tutorial](./Html%20Tutorial/modul-1/week-2/)  
+     - [HTML Media](./Html%20Tutorial/modul-1/week-3/)  
+     - [CSS Responsive](./Html%20Tutorial/modul-1/week-3/) 
+         
+<br/>
+<img src="https://cdn-edge.kwork.ru/pics/t3/73/13426712-1615540173.jpg" alt="jpg"/>
 
 
