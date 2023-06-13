@@ -34,8 +34,7 @@ HTML asoslarini bilib oling:
 
 Yashash shahri muhim emas. Treningning barcha bosqichlari onlayn tarzda yakunlanishi mumkin.
 
-### Trening boshlanishidan oldin nima qilish kerak?
-1. [tayyorgarlik kursi] (bosqich0/) topshiriqlari va testlarini bajaring.
-2. Pre-Intermediate darajasigacha (Minimum A2) ingliz tili kursini o'ting.
+### 
+
 
 
