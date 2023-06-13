@@ -34,6 +34,28 @@ Savollarni telegram chatida berish mumkin: @itechmarafon_bot
 
 Yashash shahri muhim emas. Treningning barcha bosqichlari onlayn tarzda yakunlanishi mumkin.
 
+# Kursni boshlaymiz 
+
+### Asosiy kursning bosqichlari
+- [#1 Modul](./Html%20Tutorial/modul-1/)
+    - HTML haqida
+    - Mavzular:
+        - HTML Editors
+        - HTML Basic
+        - HTML Elements
+        - HTML Attributes
+        - HTML Headings
+        - HTML Paragraphs
+        - HTML Styles
+        - HTML Formatting
+        - HTML Quotations
+        - HTML Comments
+        - HTML Colors
+        - HTML CSS
+        - CSS Introduction
+        - CSS Syntax
+        - CSS Selectors
+        - HTML Links
 
 
 
