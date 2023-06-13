@@ -57,8 +57,9 @@ Yashash shahri muhim emas. Treningning barcha bosqichlari onlayn tarzda yakunlan
      - [HTML Forms, CSS Tutorial](./Html%20Tutorial/modul-1/week-2/)  
      - [HTML Media](./Html%20Tutorial/modul-1/week-3/)  
      - [CSS Responsive](./Html%20Tutorial/modul-1/week-3/) 
-         
+
 <br/>
-<img src="https://cdn-edge.kwork.ru/pics/t3/73/13426712-1615540173.jpg" alt="jpg"/>
+<center>
+<img src="https://cdn-edge.kwork.ru/pics/t3/73/13426712-1615540173.jpg" alt="jpg"/></center>
 
 
