@@ -7,6 +7,15 @@
 <img src="https://cdn-edge.kwork.ru/pics/t3/73/13426712-1615540173.jpg" alt="jpg"/>
 </p>
 
+- 1.1
+    - 1.1.1
+        - hujjatlari,<!DOCTYPE> Deklaratsiyasi   
+- 1.2
+    - 1.2.1 - 1-hafta 2-dars
+- 1.3
+- 1.4
+
+
 
 ## FAQ
 ## Savolni qayerda berishim mumkin?
