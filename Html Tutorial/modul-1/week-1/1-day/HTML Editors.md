@@ -53,3 +53,8 @@
 </body>
 </html>
 ```
+
+
+<p aligin="center">
+    <img src="https://www.w3schools.com/html/img_notepad.png" alt="jpg"/>
+</p>
