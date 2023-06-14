@@ -140,7 +140,9 @@ Teg <br>satr uzilishini belgilaydi va yopish tegi bo'lmagan bo'sh elementdir:
 # HTML katta harflarga sezgir emas
 
 ```md
-HTML teglari katta-kichik harflarga sezgir emas: <P>bilan bir xil degan ma'noni anglatadi <p>.
+HTML teglari katta-kichik harflarga sezgir emas: <p>bilan bir xil degan ma'noni anglatadi <p>.
 
 HTML standarti kichik harf teglarini talab qilmaydi, lekin W3C HTMLda kichik harflarni tavsiya qiladi va XHTML kabi qattiqroq hujjat turlari uchun kichik harflarni talab qiladi .
 ```
+
+
