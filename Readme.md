@@ -56,8 +56,8 @@ HTML asoslarini bilib oling:
 
 
 ## FAQ
-## Savolni qayerda berishim mumkin??
- - Savollarni telegram chatida berish mumkin:  @itechmarafon_bot
+## Savolni qayerda berishim mumkin?
+- Savollarni telegram chatida berish mumkin:  [Telegram bot](https://t.me/itechmarafon_bot)
 ## Yashash shahri muhimmi? Kursni butunlay onlayn o'tashim mumkinmi?
 
 - Yashash shahri muhim emas. Treningning barcha bosqichlari onlayn tarzda yakunlanishi mumkin
