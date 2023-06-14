@@ -3,7 +3,6 @@
 - [#1.0.0.0](../../../Html%20Tutorial/)
     - [HTML darslik](./1-day/readme.md)
 <br/>
-<br/>
 <p align="center">
 <img src="https://cdn-edge.kwork.ru/pics/t3/73/13426712-1615540173.jpg" alt="jpg"/>
 </p>
