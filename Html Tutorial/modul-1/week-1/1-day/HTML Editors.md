@@ -57,4 +57,57 @@
 
 <p aligin="center">
     <img src="https://www.w3schools.com/html/img_notepad.png" alt="jpg"/>
+</p>    
+
+
+# 3-qadam: HTML sahifani saqlang
+
+
+- Faylni kompyuteringizga saqlang. Bloknot menyusida Fayl > Saqlash-ni tanlang .
+
+- Faylni "index.htm" deb nomlang va kodlashni UTF-8 ga o'rnating (bu HTML fayllari uchun afzal ko'rilgan kodlash).
+
+
+# 4-qadam: Brauzeringizda HTML sahifasini ko'ring
+
+
+- Saqlangan HTML faylni sevimli brauzeringizda oching (faylni ikki marta bosing yoki sichqonchaning o'ng tugmachasini bosing va "Ochish" ni tanlang).
+
+- Natija quyidagicha ko'rinadi:
+
+
+<p aligin="center">
+    <img src="https://www.w3schools.com/html/img_chrome.png"/>
 </p>
+
+# W3Schools onlayn muharriri - "O'zingiz sinab ko'ring"
+
+- Bizning bepul onlayn muharririmiz yordamida siz HTML kodni tahrirlashingiz va natijani brauzeringizda ko'rishingiz mumkin.
+
+- Bu kodni tezda sinab ko'rmoqchi bo'lganingizda mukammal vositadir . Shuningdek, u ranglarni kodlash va kodni saqlash va boshqalar bilan baham ko'rish qobiliyatiga ega:
+
+
+```html 
+Misol: 
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body>
+
+<h1>This is a Heading</h1>
+<p>This is a paragraph.</p>
+
+</body>
+</html>
+```
+
+[O'zingiz sinab ko'ring 👆](https://www.w3schools.com/html/tryit.asp?filename=tryhtml_editors)
+
+# W3Schools Spaces
+
+- Agar siz o'z veb-saytingizni yaratmoqchi bo'lsangiz va kodingizni onlayn saqlamoqchi bo'lsangiz, W3schools Spaces deb nomlangan bepul veb-sayt yaratuvchimizni sinab ko'ring :
+
+
