@@ -1,6 +1,6 @@
 
 ### Bir haftalik mavzular ro'yxati
-- [#1.0.0.0](../../../Html%20Tutorial/)
+- [Ortga qaytish](../../../Html%20Tutorial/)
     - [HTML darslik](./1-day/readme.md)
 <br/>
 <p align="center">
