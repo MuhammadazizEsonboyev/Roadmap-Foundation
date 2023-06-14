@@ -131,4 +131,4 @@ Misol:
 - Elementni (yoki bo'sh joyni) sichqonchaning o'ng tugmasi bilan bosing va qanday elementlardan iboratligini ko'rish uchun "Tekshirish" yoki "Elementni tekshirish" ni tanlang (siz HTML va CSS-ni ham ko'rasiz). Bundan tashqari, ochilgan Elementlar yoki Uslublar panelida HTML yoki CSS-ni tezda tahrirlashingiz mumkin.
 
 # Savolni qayerda berishim mumkin?
- - Savollarni telegram chatida berish mumkin:  [Telegram bot](https://t.me/itechmarafon_bot)
+ - Savollarni telegram chatida berish mumkin:  [Telegram bot](https://t.me/co_itech)
