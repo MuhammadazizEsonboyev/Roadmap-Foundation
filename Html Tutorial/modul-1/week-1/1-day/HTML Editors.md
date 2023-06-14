@@ -36,3 +36,20 @@
     - Keyin "Ochish va saqlash" ostida "HTML fayllarini formatlangan matn o'rniga HTML kodi sifatida ko'rsatish" degan katakchani belgilang.
 
     - Keyin kodni joylashtirish uchun yangi hujjatni oching.
+
+## 2-qadam: Bir oz HTML yozing
+
+```html 
+- Quyidagi HTML kodni bloknotga yozing yoki nusxa ko'chiring:
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>My First Heading</h1>
+
+<p>My first paragraph.</p>
+
+</body>
+</html>
+```
