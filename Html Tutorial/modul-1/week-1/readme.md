@@ -3,9 +3,6 @@
 - [Ortga qaytish](../../../Html%20Tutorial/)
     - [HTML darslik](./1-day/readme.md)
 <br/>
-<p align="center">
-<img src="https://cdn-edge.kwork.ru/pics/t3/73/13426712-1615540173.jpg" alt="jpg"/>
-</p>
 
 - 1.1
     - 1.1.1 HTML Basic Examples
@@ -32,7 +29,12 @@
     - 1.4.5 Veb-brauzerlar
     - 1.4.6 HTML sahifa tuzilishi
 
+<br>
+<br>
 
+<p align="center">
+<img src="https://cdn-edge.kwork.ru/pics/t3/73/13426712-1615540173.jpg" alt="jpg"/>
+</p>
 
 ## FAQ
 ## Savolni qayerda berishim mumkin?
