@@ -1,8 +1,7 @@
 
 ### Bir haftalik mavzular ro'yxati
 - [Ortga qaytish](../../../Html%20Tutorial/)
-    - [HTML darslik](./1-day/readme.md)
-<br/>
+- [HTML darslik](./1-day/readme.md)
 
 - 1.1
     - 1.1.1 HTML Basic Examples
