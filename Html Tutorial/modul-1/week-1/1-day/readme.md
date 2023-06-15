@@ -1,7 +1,7 @@
-# 1.1.1.1 HTML Basic Examples
+# HTML Basic Examples
 
 
-## 1.1.1.2 HTML hujjatlari
+## HTML hujjatlari
 
 - Barcha HTML hujjatlari hujjat turi deklaratsiyasidan boshlanishi kerak: <!DOCTYPE html>.
 
@@ -13,10 +13,8 @@
 <!DOCTYPE html>
 <html>
 <body>
-
-<h1>My First Heading</h1>
-<p>My first paragraph.</p>
-
+    <h1>My First Heading</h1>
+    <p>My first paragraph.</p>
 </body>
 </html>
 ```
@@ -40,7 +38,7 @@
 ```
 
 
-### 1.1.1.3 HTML sarlavhalari
+### HTML sarlavhalari
 
 ```md
 - <h1>HTML sarlavhalari to teglari bilan belgilanadi <h6>.
@@ -77,7 +75,7 @@ Misol:
 
 <br>
 
-# 1.1.1.5 HTML havolalari
+# HTML havolalari
 
 ```html 
 HTML havolalari teg bilan belgilanadi <a>
@@ -101,7 +99,7 @@ Misol:
 
 <br/>
 
-# 1.1.1.6 HTML tasvirlar
+# HTML tasvirlar
 
 ```html
 HTML tasvirlari teg bilan belgilanadi <img>
@@ -134,14 +132,14 @@ Misol:
 
 
 
- # 1.2.1.1 HTML muharrirlari
+ # HTML muharrirlari
 
 
  - HTMLni o'rganish uchun oddiy matn muharriri kifoya qiladi.
 
 
 
-# 1.2.1.2 Notepad yoki VS Code yordamida HTML tilini o'rganing
+# Notepad yoki VS Code yordamida HTML tilini o'rganing
 
 - Professional HTML muharrirlari yordamida veb-sahifalarni yaratish va o'zgartirish mumkin.
 
@@ -248,7 +246,7 @@ Misol:
 
 
 
-# 1.3.1.1 HTML elementlari
+# HTML elementlari
 
 - HTML elementi boshlang'ich tegdan yakuniy teggacha bo'lgan hamma narsadir:
 
@@ -271,7 +269,7 @@ Start tag	Element content	End tag
 <br>none
 ```
 
-# 1.3.1.2 Ichki HTML elementlari
+# Ichki HTML elementlari
 
 ```html 
 
@@ -298,7 +296,7 @@ Start tag	Element content	End tag
 [O'zingizni sinab ko'ring👆](https://www.w3schools.com/html/tryit.asp?filename=tryhtml_elements)
 
 
-# 1.3.1.3 Misol tushuntirildi
+# Misol tushuntirildi
 
 
 - Element <html>ildiz elementidir va u butun HTML hujjatini belgilaydi.
@@ -354,7 +352,7 @@ Uning boshlang'ich yorlig'i <h1>va tugatish tegi mavjud </h1>:
 <p>My first paragraph.</p>
 ```
 
-# 1.3.1.4 Hech qachon yakuniy tegni o'tkazib yubormang
+# Hech qachon yakuniy tegni o'tkazib yubormang
 
 - Ba'zi HTML elementlari, hatto oxirgi tegni unutgan bo'lsangiz ham, to'g'ri ko'rsatiladi:
 
@@ -371,7 +369,7 @@ Uning boshlang'ich yorlig'i <h1>va tugatish tegi mavjud </h1>:
 
 [O'zingizni sinab ko'ring 👆](https://www.w3schools.com/html/tryit.asp?filename=tryhtml_no_endtag)
 
-# 1.3.1.5 Bo'sh HTML elementlari
+# Bo'sh HTML elementlari
 
 
 ```md
@@ -387,7 +385,7 @@ Teg <br>satr uzilishini belgilaydi va yopish tegi bo'lmagan bo'sh elementdir:
 [O'zingizni sinab ko'ring 👆](https://www.w3schools.com/html/tryit.asp?filename=tryhtml_elements_br)
 
 
-# 1.3.1.6 HTML katta harflarga sezgir emas
+# HTML katta harflarga sezgir emas
 
 ```md
 HTML teglari katta-kichik harflarga sezgir emas: <p>bilan bir xil degan ma'noni anglatadi <p>.
@@ -396,10 +394,10 @@ HTML standarti kichik harf teglarini talab qilmaydi, lekin W3C HTMLda kichik har
 ```
 
 
-# 1.4.1.1 HTML bilan tanishtirish
+# HTML bilan tanishtirish
 
 
-## 1.4.1.2 HTML nima?
+## HTML nima?
 
 - HTML Hyper Text Markup Language degan ma'noni anglatadi
 - HTML veb-sahifalarni yaratish uchun standart belgilash tilidir
@@ -409,7 +407,7 @@ HTML standarti kichik harf teglarini talab qilmaydi, lekin W3C HTMLda kichik har
 - HTML elementlari "bu sarlavha", "bu paragraf", "bu havola" va boshqalar kabi kontent qismlarini belgilaydi.
 
 
-# 1.4.1.2 Oddiy HTML hujjati
+# Oddiy HTML hujjati
 
 
 ```html
@@ -430,7 +428,7 @@ HTML standarti kichik harf teglarini talab qilmaydi, lekin W3C HTMLda kichik har
 
 
 
-# 1.4.1.3 Misol tushuntirildi
+# Misol tushuntirildi
 
 
 ```html
@@ -444,7 +442,7 @@ HTML standarti kichik harf teglarini talab qilmaydi, lekin W3C HTMLda kichik har
 ```
 
 
-# 1.4.1.4 HTML elementi nima?
+# HTML elementi nima?
 
 
 ```html
@@ -458,7 +456,7 @@ HTML elementi boshlang'ich tegdan yakuniy teggacha bo'lgan hamma narsadir:
 ```
 
 
-# 1.4.1.5 Veb-brauzerlar
+# Veb-brauzerlar
 
 - Veb-brauzerning (Chrome, Edge, Firefox, Safari) maqsadi HTML hujjatlarini o'qish va ularni to'g'ri ko'rsatishdir.
 
@@ -466,7 +464,7 @@ HTML elementi boshlang'ich tegdan yakuniy teggacha bo'lgan hamma narsadir:
 
 <img src="https://www.w3schools.com/html/img_chrome.png" alt="jpg"/>
 
-# 1.4.1.6 HTML sahifa tuzilishi
+# HTML sahifa tuzilishi
 
 - Quyida HTML-sahifa tuzilishining vizualizatsiyasi keltirilgan:
 
