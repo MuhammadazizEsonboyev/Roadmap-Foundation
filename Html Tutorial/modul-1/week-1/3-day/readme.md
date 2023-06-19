@@ -744,7 +744,35 @@ element,element,.. 	div, p 	Selects all <div> elements and all <p> elements
 
 ----------
 
+## Link Bookmarks
+HTML Links - Create Bookmarks: can enable users to jump to certain part of a webpage. This helps for a long webpage. 
 
+* To create bookmark, create bookmark then add link to it. Clicking the page automatically redirects to boookmarked location in the webpage
+
+-Use id attribute to create a bookmark: 
+```
+<h2 id="C4">Chapter 4</h2>
+```
+-Add link to the bookmark from within the same page.
+```
+ <a href="#C4">Jump to Chapter 4</a> 
+```
+-Add link to a bookmark on another page: 
+```
+<a href="html_demo.html#C4">Jump to Chapter 4</a>
+```
+**To remove the underline from link, remove text decoration: 
+```
+<a href="html_images.asp" style="text-decoration:none">HTML Images</a> 
+```
+Chapter Summary:
+
+Chapter Summary
+
+Use the id attribute (```id="value"```) to define bookmarks in a page
+Use the href attribute (```href="#value"```) to link to the bookmark
+
+<kbd>return</kbd>[Back to table of contents](#homepage)
 
 
 
