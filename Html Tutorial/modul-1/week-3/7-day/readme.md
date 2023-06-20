@@ -1,741 +1,737 @@
 ## HTML LAYOUT
-HTML LAYOUT--Layout Elements and Techniques
+HTML LAYOUT--Layout elementlari va texnikasi
 
-HTML has semantic elements 
+HTMLda semantik elementlar mavjud
 ```
-<header> - Defines a header for a document or a section
-<nav> - Defines a set of navigation links
-<section> - Defines a section in a document
-<article> - Defines an independent, self-contained content
-<aside> - Defines content aside from the content (like a sidebar)
-<footer> - Defines a footer for a document or a section
-<etails> - Defines additional details that the user can open and close on demand
-<summary> - Defines a heading for the <details> element
+<header> - Hujjat yoki bo'lim uchun sarlavhani belgilaydi
+<nav> - navigatsiya havolalari to'plamini belgilaydi
+<bo'lim> - Hujjatdagi bo'limni belgilaydi
+<maqola> - mustaqil, mustaqil tarkibni belgilaydi
+<chekka> - kontentdan tashqari tarkibni belgilaydi (yon panel kabi)
+<footer> - Hujjat yoki bo'lim uchun pastki ko'rsatkichni belgilaydi
+<etails> - foydalanuvchi talabiga ko'ra ochishi va yopishi mumkin bo'lgan qo'shimcha tafsilotlarni belgilaydi
+<xulosa> - <details> elementi uchun sarlavhani belgilaydi
 ```
 
-Techniques for creating HTML layouts
-CSS framework
-CSS float property
+HTML maketlarini yaratish texnikasi
+CSS ramkasi
+CSS float xususiyati
 CSS flexbox
-CSS grid
+CSS tarmog'i
 
-* CSS Frameworks: Enable you to fastly create your layout: W3.CSS and Boostrap are examples
+* CSS Frameworks: Tezda maketingizni yaratishga imkon beradi: W3.CSS va Boostrap misollardir
 
-CSS Float layout: Use CSS float property to do web layout. You just need to remember float and clear properties to use this. Its main disadvantage is the it is tied to the document flow which may harm flexibility.
+CSS Float layout: Veb-layout qilish uchun CSS float xususiyatidan foydalaning. Buni ishlatish uchun faqat float va aniq xususiyatlarni eslab qolishingiz kerak. Uning asosiy kamchiligi - bu moslashuvchanlikka zarar etkazishi mumkin bo'lgan hujjat oqimiga bog'langan.
 
-CSS Flexbox layout::Ensures that elements behave predictably when  multiple sizes of user screen must display site well. 
+CSS Flexbox layout::Foydalanuvchi ekranining bir nechta o'lchamlari saytni yaxshi ko'rsatishi kerak bo'lganda elementlarning taxminiy tarzda harakat qilishini ta'minlaydi.
 
 
-CSS Gridlayout: Offers grid-based layout system which facilitate designing webpages without floats and positioning and using rows and columns to achieve this.
+CSS Gridlayout: Veb-sahifalarni floatsiz va joylashishni aniqlashsiz loyihalash va bunga erishish uchun qatorlar va ustunlardan foydalanishni osonlashtiradigan gridga asoslangan tartib tizimini taklif qiladi.
 
-<kbd>return</kbd>[Back to table of contents](#homepage)
+<kbd>qaytish</kbd>[Mundarijaga qaytish](#homepage)
 
 
 ------
 
 ## HTML RESPONSIVE
 
-HTML RESPONSIVE--Responsive Web Design;
+HTML RESPONSIVE - javob beruvchi veb-dizayn;
 
-Responsive web looks good irrespecive of the device and it automatically adjust for different sizes and viewports.
+Qurilmadan qat'i nazar, sezgir veb-sayt yaxshi ko'rinadi va u avtomatik ravishda turli o'lchamlar va ko'rish oynalariga moslashadi.
 
-Here, HTML and CSS automatically resize, hide, shrink, or enlarge a site to make it look good on all devices (desktops, tablets, and phones)
+Bu yerda HTML va CSS barcha qurilmalarda (ish stollari, planshetlar va telefonlar) yaxshi ko‘rinishi uchun sayt o‘lchamini avtomatik ravishda o‘zgartiradi, yashiradi, kichraytiradi yoki kattalashtiradi.
 
-To create a responsive site, add the following <meta> tag to all your web pages:
+Javob beruvchi sayt yaratish uchun barcha veb-sahifalaringizga quyidagi <meta> tegini qo'shing:
 ```
 
- <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 ```
-* Responsive Images: Scale nicely to fit any browser size. To make image responsive set CSS width property to 100 % and image will become responsive according to the needs. 
-See code below for a responsive image. 
+* Ta'sirchan tasvirlar: brauzerning istalgan o'lchamiga mos keladigan darajada o'lchab ko'ring. Tasvirni sezgir qilish uchun CSS kengligi xususiyatini 100% ga o'rnating va tasvir ehtiyojlarga qarab javob beradi.
+Javob beruvchi tasvir uchun quyidagi kodga qarang.
 ```
- <img src="img_girl.jpg" style="width:100%;"> 
+  <img src="img_girl.jpg" style="width:100%;">
 ```
-To avoid image scaling up beyond original size, use max-width property instead of the width:100%. For exaMple:
+Tasvirning asl hajmidan oshib ketishining oldini olish uchun width:100% oʻrniga max-width xususiyatidan foydalaning. Masalan:
 ```
- <img src="img_girl.jpg" style="max-width:100%;height:auto;"> 
-```
-
-** To show different images depending on browser width, use <picture> element.
-
-```
-<picture>
-  <source srcset="img_smallflower.jpg" media="(max-width: 600px)">
-  <source srcset="img_flowers.jpg" media="(max-width: 1500px)">
-  <source srcset="flowers.jpg">
-  <img src="img_smallflower.jpg" alt="Flowers">
-</picture> 
+  <img src="img_girl.jpg" style="max-width:100%;height:auto;">
 ```
 
-** Responsive Text Size.
-
-The text size can be set with ```"vw"``` unit, which means the ```"viewport width"```  to enable text size to follow the size ofthe browser window
-
-* the code below enables responsive text size
-```
-<h1 style="font-size:10vw">Hello World</h1> 
-```
-* Viewport is the browser window size. 1vw = 1% of viewport width. If the viewport is 50cm wide, 1vw is 0.5cm.
-
-
-* Media queries: Enables you to define completely different styles for different browser sizes. 
+** Brauzer kengligiga qarab turli xil tasvirlarni ko'rsatish uchun <rasm> elementidan foydalaning.
 
 ```
-<style>
-.left, .right {
-  float: left;
-  width: 20%; /* The width is 20%, by default */
+<rasm>
+   <source srcset="img_smallflower.jpg" media="(maksimal kenglik: 600px)">
+   <source srcset="img_flowers.jpg" media="(maksimal kenglik: 1500px)">
+   <source srcset="flowers.jpg">
+   <img src="img_smallflower.jpg" alt="Gullar">
+</rasm>
+```
+
+** Javob beruvchi matn hajmi.
+
+Matn o'lchamini ```"vw"``` birligi bilan o'rnatish mumkin, ya'ni ```"ko'rish maydoni kengligi"``` matn o'lchamini brauzer oynasi o'lchamiga mos kelishini bildiradi.
+
+* Quyidagi kod javob beruvchi matn hajmini ta'minlaydi
+```
+<h1 style="font-size:10vw">Salom dunyo</h1>
+```
+* Viewport - bu brauzer oynasining o'lchami. 1vw = ko'rish maydoni kengligining 1%. Agar ko'rish maydoni 50 sm kengligida bo'lsa, 1vw 0,5 sm.
+
+
+* Media so'rovlari: Turli xil brauzer o'lchamlari uchun mutlaqo boshqa uslublarni aniqlash imkonini beradi.
+
+```
+<uslub>
+.chap, o'ng {
+   float: chap;
+   kengligi: 20%; /* Kengligi sukut bo'yicha 20% */
 }
 
-.main {
-  float: left;
-  width: 60%; /* The width is 60%, by default */
+.asosiy {
+   float: chap;
+   kengligi: 60%; /* Kengligi sukut bo'yicha 60% */
 }
 
-/* Use a media query to add a breakpoint at 800px: */
-@media screen and (max-width: 800px) {
-  .left, .main, .right {
-    width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
-  }
+/* 800px da toʻxtash nuqtasini qoʻshish uchun media soʻrovidan foydalaning: */
+@media ekrani va (maksimal kenglik: 800px) {
+   .chap, .asosiy, .oʻng {
+     kengligi: 100%; /* Ko‘rish oynasi 800px yoki undan kichikroq bo‘lsa, kengligi 100% */
+   }
 }
-</style> 
+</style>
 ```
 
 * W3.CSS
 
-W3.CSS is a modern CSS framework with support for desktop, tablet, and mobile design by default.
+W3.CSS ish stoli, planshet va mobil dizaynni sukut bo'yicha qo'llab-quvvatlaydigan zamonaviy CSS ramkasidir.
 
-W3.CSS is smaller and faster than similar CSS frameworks.
+W3.CSS shunga o'xshash CSS ramkalariga qaraganda kichikroq va tezroq.
 
-W3.CSS is designed to be a high quality alternative to Bootstrap.
+W3.CSS Bootstrap-ga yuqori sifatli muqobil sifatida ishlab chiqilgan.
 
-W3.CSS is designed to be independent of jQuery or any other JavaScript library.
+W3.CSS jQuery yoki boshqa JavaScript kutubxonasidan mustaqil bo'lishi uchun yaratilgan.
 
 
-** Example of a full responsive web
+** To'liq javob beruvchi vebga misol
 ```
 <!DOCTYPE html>
 <html>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<body>
+<tana>
 
-<div class="w3-container w3-green">
-  <h1>W3Schools Demo</h1>
-  <p>Resize this responsive page!</p>
+<div class="w3-konteyner w3-yashil">
+   <h1>W3Schools demosi</h1>
+   <p>Ushbu javob beruvchi sahifa hajmini o'zgartiring!</p>
 </div>
 
 <div class="w3-row-padding">
-  <div class="w3-third">
-    <h2>London</h2>
-    <p>London is the capital city of England.</p>
-    <p>It is the most populous city in the United Kingdom,
-    with a metropolitan area of over 13 million inhabitants.</p>
-  </div>
+   <div class="w3-third">
+     <h2>London</h2>
+     <p>London - Angliyaning poytaxti.</p>
+     <p>Bu Buyuk Britaniyadagi eng gavjum shahar,
+     13 milliondan ortiq aholiga ega poytaxt hududi.</p>
+   </div>
 
-  <div class="w3-third">
-    <h2>Paris</h2>
-    <p>Paris is the capital of France.</p>
-    <p>The Paris area is one of the largest population centers in Europe,
-    with more than 12 million inhabitants.</p>
-  </div>
+   <div class="w3-third">
+     <h2>Parij</h2>
+     <p>Parij - Fransiyaning poytaxti.</p>
+     <p>Parij hududi Yevropadagi eng yirik aholi markazlaridan biri,
+     12 milliondan ortiq aholiga ega.</p>
+   </div>
 
-  <div class="w3-third">
-    <h2>Tokyo</h2>
-    <p>Tokyo is the capital of Japan.</p>
-    <p>It is the center of the Greater Tokyo Area,
-    and the most populous metropolitan area in the world.</p>
-  </div>
+   <div class="w3-third">
+     <h2>Tokio</h2>
+     <p>Tokio - Yaponiya poytaxti.</p>
+     <p>Bu Katta Tokio hududining markazi,
+     va dunyodagi eng gavjum metropolitan hudud.</p>
+   </div>
 </div>
 
 </body>
-</html> 
+</html>
 ```
 
 
-** Bootstrap: another framework that uses HTML, CSS, and JQuery to make web pages:
+** Bootstrap: veb-sahifalarni yaratish uchun HTML, CSS va JQuery-dan foydalanadigan boshqa ramka:
 ```
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Bootstrap Example</title>
+<title>Bootstrap misoli</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
-<body>
+<tana>
 
 <div class="container">
-  <div class="jumbotron">
-    <h1>My First Bootstrap Page</h1>
-  </div>
-  <div class="row">
-    <div class="col-sm-4">
-      ...
-    </div>
-    <div class="col-sm-4">
-      ...
-    </div>
-    <div class="col-sm-4">
-    ...
-    </div>
-  </div>
+   <div class="jumbotron">
+     <h1>Mening birinchi yuklash sahifam</h1>
+   </div>
+   <div class="satr">
+     <div class="col-sm-4">
+       ...
+     </div>
+     <div class="col-sm-4">
+       ...
+     </div>
+     <div class="col-sm-4">
+     ...
+     </div>
+   </div>
 </div>
 
 </body>
-</html> 
+</html>
 ```
-<kbd>return</kbd>[Back to table of contents](#homepage)
+<kbd>qaytish</kbd>[Mundarijaga qaytish](#homepage)
 
 
 ------
 
 
-## HTML SEMANTICS
+## HTML SEMANTIKA
 
-HTML semantic Elements
+HTML semantik elementlari
 
-Semantic elements are the elements that have a meaning and this meaning describes the content to both browser and the developer. 
+Semantik elementlar ma'noga ega bo'lgan elementlardir va bu ma'no brauzer va ishlab chiquvchi uchun tarkibni tavsiflaydi.
 
-Non-semantic element: ```<div>``` and ```<span>```   tells nothing about the content
+Semantik bo'lmagan element: ```<div>``` va ```<span>``` kontent haqida hech narsa aytmaydi
 
-Semantic elements: ```<form>, <table>, and <article>```  defines content
-Sites usually define elements:```<div id="nav"> <div class="header"> <div id="footer">``` to indicate navigation, header, and footer.
+Semantik elementlar: ```<form>, <jadval> va <maqola>``` tarkibni belgilaydi
+Saytlar odatda elementlarni belgilaydi:```<div id="nav"> <div class="header"> <div id="footer">``` navigatsiya, sarlavha va altbilgini ko'rsatish uchun.
 
-* emantic Elements in HTML
+* HTMLdagi emantik elementlar
 ```
-<article>
-<aside>
-<details>
+<maqola>
+<chetga>
+<batafsil>
 <figcaption>
-<figure>
+<rasm>
 <footer>
-<header>
-<main>
-<mark>
+<sarlavha>
+<asosiy>
+<belgi>
 <nav>
-<section>
-<summary>
-<time>
+<bo'lim>
+<xulosa>
+<vaqt>
 ```
 
-HTML ```<section>``` Element:  A Thematic grouping of content typically with a heading. You can split a webpage into sections for introduction, content, and contact information.
+HTML ```<bo`lim>``` Element: Odatda sarlavhaga ega bo`lgan kontentni tematik guruhlash. Siz veb-sahifani kirish, tarkib va aloqa ma'lumotlari uchun bo'limlarga bo'lishingiz mumkin.
 ```
-<section>
+<bo'lim>
 <h1>WWF</h1>
-<p>The World Wide Fund for Nature (WWF) is an international organization working on issues regarding the conservation, research and restoration of the environment, formerly named the World Wildlife Fund. WWF was founded in 1961.</p>
-</section>
+<p>Butunjahon tabiatni muhofaza qilish jamg'armasi (WWF) atrof-muhitni muhofaza qilish, tadqiq qilish va qayta tiklash masalalari bilan shug'ullanuvchi xalqaro tashkilot bo'lib, ilgari Jahon yovvoyi tabiat jamg'armasi deb nomlangan. WWF 1961 yilda tashkil etilgan.</p>
+</bo'lim>
 
-<section>
-<h1>WWF's Panda symbol</h1>
-<p>The Panda has become the symbol of WWF. The well-known panda logo of WWF originated from a panda named Chi Chi that was transferred from the Beijing Zoo to the London Zoo in the same year of the establishment of WWF.</p>
-</section> 
+<bo'lim>
+<h1>WWFning Panda belgisi</h1>
+<p>Panda WWF ramziga aylandi. WWFning taniqli panda logotipi WWF tashkil etilgan yili Pekin hayvonot bog'idan London hayvonot bog'iga ko'chirilgan Chi Chi ismli pandadan kelib chiqqan.</p>
+</bo'lim>
 ```
 
 
-HTML ```<article>``` Element
+HTML ```<maqola>``` elementi
 
-The ```<article>``` element specifies independent self-contained content. Article should make sense and should be distributable independently from the rest of the site. Article element can be used in: Forum post, Blog post, Newspaper Article.
+```<article>``` elementi mustaqil mustaqil tarkibni belgilaydi. Maqola mantiqiy bo'lishi va saytning qolgan qismidan mustaqil ravishda tarqatilishi kerak. Maqola elementi quyidagilarda ishlatilishi mumkin: Forum posti, Blog posti, Gazeta maqolasi.
 
-* Example of the usage of article elements
+* Maqola elementlaridan foydalanishga misol
 ```
-<article>
+<maqola>
 <h2>Google Chrome</h2>
-<p>Google Chrome is a web browser developed by Google, released in 2008. Chrome is the world's most popular web browser today!</p>
-</article>
+<p>Google Chrome — Google tomonidan ishlab chiqilgan, 2008 yilda chiqarilgan veb-brauzer. Chrome — bugungi kunda dunyodagi eng mashhur veb-brauzer!</p>
+</maqola>
 
-<article>
+<maqola>
 <h2>Mozilla Firefox</h2>
-<p>Mozilla Firefox is an open-source web browser developed by Mozilla. Firefox has been the second most popular web browser since January, 2018.</p>
-</article>
+<p>Mozilla Firefox — Mozilla tomonidan ishlab chiqilgan ochiq manbali veb-brauzer. Firefox 2018-yil yanvar oyidan beri eng mashhur ikkinchi veb-brauzer bo‘ldi.</p>
+</maqola>
 
-<article>
+<maqola>
 <h2>Microsoft Edge</h2>
-<p>Microsoft Edge is a web browser developed by Microsoft, released in 2015. Microsoft Edge replaced Internet Explorer.</p>
-</article> 
+<p>Microsoft Edge — Microsoft tomonidan ishlab chiqilgan, 2015-yilda chiqarilgan veb-brauzer. Microsoft Edge Internet Explorer oʻrnini egalladi.</p>
+</maqola>
 ```
-
-* Use of CSS to style Article elements:
+* Maqola elementlarini uslublash uchun CSS-dan foydalanish:
 ```
 <html>
 <head>
-<style>
-.all-browsers {
-  margin: 0;
-  padding: 5px;
-  background-color: lightgray;
+<uslub>
+.all-brauzerlar {
+   chegara: 0;
+   to'ldirish: 5px;
+   fon rangi: och kulrang;
 }
 
-.all-browsers > h1, .browser {
-  margin: 10px;
-  padding: 5px;
+.all-brauzerlar > h1, .browser {
+   chegara: 10px;
+   to'ldirish: 5px;
 }
 
-.browser {
-  background: white;
+.brauzer {
+   fon: oq;
 }
 
-.browser > h2, p {
-  margin: 4px;
-  font-size: 90%;
+.brauzer > h2, p {
+   chegara: 4px;
+   shrift hajmi: 90%;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<article class="all-browsers">
-  <h1>Most Popular Browsers</h1>
-  <article class="browser">
-    <h2>Google Chrome</h2>
-    <p>Google Chrome is a web browser developed by Google, released in 2008. Chrome is the world's most popular web browser today!</p>
-  </article>
-  <article class="browser">
-    <h2>Mozilla Firefox</h2>
-    <p>Mozilla Firefox is an open-source web browser developed by Mozilla. Firefox has been the second most popular web browser since January, 2018.</p>
-  </article>
-  <article class="browser">
-    <h2>Microsoft Edge</h2>
-    <p>Microsoft Edge is a web browser developed by Microsoft, released in 2015. Microsoft Edge replaced Internet Explorer.</p>
-  </article>
-</article>
+<article class="barcha brauzerlar">
+   <h1>Eng mashhur brauzerlar</h1>
+   <article class="brauzer">
+     <h2>Google Chrome</h2>
+     <p>Google Chrome — Google tomonidan ishlab chiqilgan, 2008 yilda chiqarilgan veb-brauzer. Chrome — bugungi kunda dunyodagi eng mashhur veb-brauzer!</p>
+   </maqola>
+   <article class="brauzer">
+     <h2>Mozilla Firefox</h2>
+     <p>Mozilla Firefox — Mozilla tomonidan ishlab chiqilgan ochiq manbali veb-brauzer. Firefox 2018-yil yanvar oyidan beri eng mashhur ikkinchi veb-brauzer bo‘ldi.</p>
+   </maqola>
+   <article class="brauzer">
+     <h2>Microsoft Edge</h2>
+     <p>Microsoft Edge — Microsoft tomonidan ishlab chiqilgan, 2015-yilda chiqarilgan veb-brauzer. Microsoft Edge Internet Explorer oʻrnini egalladi.</p>
+   </maqola>
+</maqola>
 
 </body>
-</html> 
+</html>
 ```
 
-Nesting ```<article>``` in ```<section>``` or Vice Versa.
+```<maqola>``` ```<bo`lim>``` ichiga joylashtirish yoki aksincha.
 
-The ```<article>``` element specifies independent self-contained content while <section> eleemnt defines a section in a document.
+```<article>``` elementi mustaqil mustaqil tarkibni, <section> elementi esa hujjatdagi bo`limni belgilaydi.
 
-You will find HTML pages with ```<section>``` elements containing ```<article>``` element and ```<article>``` elements containing  
+Siz ```<bo'lim>``` elementlarni o'z ichiga olgan ```<maqola>``` elementi va ```<article>``` elementlarni o`z ichiga olgan HTML sahifalarini topasiz.
 
 ```
-<section>
+<bo'lim>
 ```
 
-HTML ```<header>``` Element
+HTML ```<header>``` elementi
 
-```<header>```element rep a containere for introductory content or a set of navigational links and typically contains one or more ```<h1> -<h6>```, logo or icon, authorship information etc.
+```<header>```element kirish mazmuni yoki navigatsiya havolalari to`plami uchun konteynerni ifodalaydi va odatda bir yoki bir nechta ```<h1> -<h6>```, logotip yoki belgi, mualliflik ma`lumotlari va boshqalarni o`z ichiga oladi.
 
-* Note: You can have several ```<header>``` elements in one HTML document. However, ```<header>``` cannot be placed within a ```<footer>```, ```<address>``` or another ```<header>``` element.
+* Eslatma: Bitta HTML hujjatida bir nechta ```<header>``` elementlar bo`lishi mumkin. Biroq, ```<header>``` ```<footer>```, ```<adres>``` yoki boshqa ```<header>``` elementiga joylashtirilishi mumkin emas.
 
-Example of header: 
+Sarlavhaga misol:
 ```
-<article>
-  <header>
-    <h1>What Does WWF Do?</h1>
-    <p>WWF's mission:</p>
-  </header>
-  <p>WWF's mission is to stop the degradation of our planet's natural environment,
-  and build a future in which humans live in harmony with nature.</p>
-</article> 
+<maqola>
+   <sarlavha>
+     <h1>WWF nima qiladi?</h1>
+     <p>WWF missiyasi:</p>
+   </header>
+   <p>WWF missiyasi - sayyoramizning tabiiy muhiti degradatsiyasini to'xtatish,
+   va odamlar tabiat bilan uyg'unlikda yashaydigan kelajakni qurish.</p>
+</maqola>
 ```
 
 
-* HTML ```<footer>``` Element
+* HTML ```<footer>``` elementi
 
-This element typically contains 
-authorship information
-copyright information
-contact information
-sitemap
-back to top links
-related documents
-* One document can have several ```<footer>``` elements in one document
+Ushbu element odatda o'z ichiga oladi
+mualliflik ma'lumotlari
+mualliflik huquqi haqida ma'lumot
+bog'lanish uchun ma'lumot
+sayt xaritasi
+yuqori havolalarga qaytish
+tegishli hujjatlar
+* Bitta hujjatda bir nechta ```<footer>``` element bo`lishi mumkin
 
 
-* Examples of footer section in a document
+* Hujjatdagi kolontiter bo'limiga misollar
 ```
 <footer>
-  <p>Author: Hege Refsnes</p>
-  <p><a href="mailto:hege@example.com">hege@example.com</a></p>
-</footer> 
+   <p>Muallif: Xege Refsnes</p>
+   <p><a href="mailto:hege@example.com">hege@example.com</a></p>
+</footer>
 ```
 
-HTML ```<nav>``` Element:Defines a set of navigation links.
+HTML ```<nav>``` Element: Navigatsiya havolalari to`plamini belgilaydi.
 
-```<nav>``` element define a set of navigation links which are the major  blocks of navigation links. So you should not use <nav>for all links.
+```<nav>``` elementi navigatsiya havolalarining asosiy bloklari bo`lgan navigatsiya havolalari to`plamini belgilaydi. Shunday qilib, barcha havolalar uchun <nav> dan foydalanmasligingiz kerak.
 
-Browsers, such as screen readers for disabled users, can use this element to determine whether to omit the initial rendering of this content.
+Brauzerlar, masalan, nogiron foydalanuvchilar uchun ekranni o'qiydiganlar, ushbu elementdan ushbu kontentning dastlabki ko'rsatilishini o'tkazib yuborishni aniqlash uchun foydalanishi mumkin.
 
-** A set of navigation links
+** Navigatsiya havolalari to'plami
 ```
-<nav> 
-  <a href="/html/">HTML</a> |
-  <a href="/css/">CSS</a> |
-  <a href="/js/">JavaScript</a> |
-  <a href="/jquery/">jQuery</a>
-</nav> 
-```
-
-
-HTML ```<aside>``` Element
-Defines some contents aside from the content it is placed in like sidebar. The <aside> contentshould be indirectly related to the surrounding content.
-
-```
-<p>My family and I visited The Epcot center this summer. The weather was nice, and Epcot was amazing! I had a great summer together with my family!</p>
-
-<aside>
-<h4>Epcot Center</h4>
-<p>Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks and seasonal special events.</p>
-</aside>
+<nav>
+   <a href="/html/">HTML</a> |
+   <a href="/css/">CSS</a> |
+   <a href="/js/">JavaScript</a> |
+   <a href="/jquery/">jQuery</a>
+</nav>
 ```
 
-* Using CSS to style the aside element.
+
+HTML ```<chekka>``` elementi
+Yon panel kabi joylashtirilgan kontentdan tashqari ba'zi tarkiblarni belgilaydi. <side> mazmuni atrofdagi tarkib bilan bilvosita bog'liq bo'lishi kerak.
+
+```
+<p>Men va oilam shu yozda The Epcot markaziga tashrif buyurdik. Ob-havo yaxshi edi va Epcot ajoyib edi! Men oilam bilan yozni ajoyib o'tkazdim!</p>
+
+<chetga>
+<h4>Epcot markazi</h4>
+<p>Epcot - bu Walt Disney World Resortdagi qiziqarli attraksionlar, xalqaro pavilonlar, mukofotga sazovor bo'lgan otashinlar va mavsumiy maxsus tadbirlarni o'z ichiga olgan mavzuli park.</p>
+</chetga>
+```
+
+* Yon elementni uslublash uchun CSS-dan foydalanish.
 ```
 <html>
 <head>
-<style>
-aside {
-  width: 30%;
-  padding-left: 15px;
-  margin-left: 15px;
-  float: right;
-  font-style: italic;
-  background-color: lightgray;
+<uslub>
+chetga {
+   kengligi: 30%;
+   padding-chap: 15px;
+   chap chekka: 15px;
+   suzuvchi: o'ng;
+   shrift uslubi: kursiv;
+   fon rangi: och kulrang;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<p>My family and I visited The Epcot center this summer. The weather was nice, and Epcot was amazing! I had a great summer together with my family!</p>
+<p>Men va oilam shu yozda The Epcot markaziga tashrif buyurdik. Ob-havo yaxshi edi va Epcot ajoyib edi! Men oilam bilan yozni ajoyib o'tkazdim!</p>
 
-<aside>
-<p>The Epcot center is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks and seasonal special events.</p>
-</aside>
+<chetga>
+<p>Epcot markazi - bu Walt Disney World Resortdagi qiziqarli attraksionlar, xalqaro pavilyonlar, mukofotga sazovor bo'lgan otashinlar va mavsumiy maxsus tadbirlarni o'z ichiga olgan mavzuli park.</p>
+</chetga>
 
-<p>My family and I visited The Epcot center this summer. The weather was nice, and Epcot was amazing! I had a great summer together with my family!</p>
-<p>My family and I visited The Epcot center this summer. The weather was nice, and Epcot was amazing! I had a great summer together with my family!</p>
+<p>Men va oilam shu yozda The Epcot markaziga tashrif buyurdik. Ob-havo yaxshi edi va Epcot ajoyib edi! Men oilam bilan yozni ajoyib o'tkazdim!</p>
+<p>Men va oilam shu yozda The Epcot markaziga tashrif buyurdik. Ob-havo yaxshi edi va Epcot ajoyib edi! Men oilam bilan yozni ajoyib o'tkazdim!</p>
 
 </body>
 </html>
 
 ```
 
-HTML ```<figure>``` and ```<figcaption>``` Elements
+HTML ```<figure>``` va ```<figcaption>``` elementlari
 
-The ```<figure>``` tag specifies self-contained content, like illustrations, diagrams, photos, code listings, etc.
+```<figure>``` yorlig`i rasmlar, diagrammalar, fotosuratlar, kodlar ro`yxati va boshqalar kabi o`z-o`zidan tarkib topgan tarkibni belgilaydi.
 
-The ```<figcaption>``` tag defines a caption for a ```<figure>``` element. The ```<figcaption>``` element can be placed as the first or as the last child of a ```<figure>``` element.
+```<figcaption>``` tegi ```<figure>``` elementi uchun sarlavhani belgilaydi. ```<figcaption>``` elementi ```<figure>``` elementining birinchi yoki oxirgi bolasi sifatida joylashtirilishi mumkin.
 
-The ```<img>``` element defines the actual image/illustration. 
+```<img>``` elementi haqiqiy tasvirni/illyustratsiyani belgilaydi.
 
-* Sample code for figure and figure caption
+* Rasm va rasm sarlavhasi uchun kod namunasi
 ```
-<figure>
-  <img src="pic_trulli.jpg" alt="Trulli">
-  <figcaption>Fig1. - Trulli, Puglia, Italy.</figcaption>
-</figure> 
+<rasm>
+   <img src="pic_trulli.jpg" alt="Trulli">
+   <figcaption>1-rasm. - Trulli, Puglia, Italiya.</figcaption>
+</figure>
 ```
 
-* Essence of Semantic Elements
-According to the W3C: "A semantic Web allows data to be shared and reused across applications, enterprises, and communities."
+* Semantik elementlarning mohiyati
+W3C ga ko'ra: "Semantik Internet ma'lumotlarni ilovalar, korxonalar va jamoalar bo'ylab almashish va qayta foydalanish imkonini beradi."
 
 
-Semantic Elements in HTML
+HTMLdagi semantik elementlar
 
-Below is a list of some of the semantic elements in HTML.
+Quyida HTML tilidagi ba'zi semantik elementlarning ro'yxati keltirilgan.
 ```
-Tag 	Description
-<article> 	Defines independent, self-contained content
-<aside> 	Defines content aside from the page content
-<details> 	Defines additional details that the user can view or hide
-<figcaption> 	Defines a caption for a <figure> element
-<figure> 	Specifies self-contained content, like illustrations, diagrams, photos, code listings, etc.
-<footer> 	Defines a footer for a document or section
-<header> 	Specifies a header for a document or section
-<main> 	Specifies the main content of a document
-<mark> 	Defines marked/highlighted text
-<nav> 	Defines navigation links
-<section> 	Defines a section in a document
-<summary> 	Defines a visible heading for a <details> element
-<time> 	Defines a date/time
+Teg tavsifi
+<maqola> Mustaqil, mustaqil tarkibni belgilaydi
+<aside> Sahifa mazmunidan tashqari tarkibni belgilaydi
+<details> Foydalanuvchi ko'rishi yoki yashirishi mumkin bo'lgan qo'shimcha ma'lumotlarni belgilaydi
+<figcaption> <figure> elementi uchun sarlavhani belgilaydi
+<figure> Illyustratsiyalar, diagrammalar, fotosuratlar, kodlar roʻyxati va h.k. kabi mustaqil tarkibni belgilaydi.
+<footer> Hujjat yoki bo'lim uchun pastki ko'rsatkichni belgilaydi
+<header> Hujjat yoki bo'lim uchun sarlavhani belgilaydi
+<main> Hujjatning asosiy mazmunini belgilaydi
+<belgi> Belgilangan/ta'kidlangan matnni belgilaydi
+<nav> Navigatsiya havolalarini belgilaydi
+<bo'lim> Hujjatdagi bo'limni belgilaydi
+<xulosa> <details> elementi uchun ko'rinadigan sarlavhani belgilaydi
+<time> Sana/vaqtni belgilaydi
 ```
-<kbd>return</kbd>[Back to table of contents](#homepage)
+<kbd>qaytish</kbd>[Mundarijaga qaytish](#homepage)
 
 
 --------
 
 ## HTML EMOJIS
 
-* Using Emojis in HTML
+* HTMLda kulgichlardan foydalanish
 
-Emojis are characters from UTF-8 character set:
+Emojilar UTF-8 belgilar to‘plamidagi belgilar:
 
-They look like images, or icons, but they are not. and they are letters( characters) from UTF-8 (Unicode) character set. 
+Ular tasvirlar yoki piktogrammalarga o'xshaydi, lekin unday emas. va ular UTF-8 (Unicode) belgilar to'plamidagi harflar (belgilar).
 
-UTF-8 covers almost all existing characters and symbols
+UTF-8 deyarli barcha mavjud belgilar va belgilarni qamrab oladi
 
-<kbd>return</kbd>[Back to table of contents](#homepage)
+<kbd>qaytish</kbd>[Mundarijaga qaytish](#homepage)
 
 
 ------
 
 
-## CSS Links
+## CSS havolalari
 
 
-There are multiple ways of styling links using CSS and with the aid of CSS color, font-family, and 
+CSS-dan foydalangan holda va CSS rang, shrift-familiya va shrift-familiya yordamida havolalarni shakllantirishning bir necha usullari mavjud.
 
-background properties. See example below:
+fon xususiyatlari. Quyidagi misolga qarang:
 
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
+<uslub>
 a {
-  color: hotpink;
+   rang: issiq pushti;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h2>CSS Links</h2>
-<p><b><a href="default.asp" target="_blank">This is a link</a></b></p>
+<h2>CSS havolalari</h2>
+<p><b><a href="default.asp" target="_blank">Bu havola</a></b></p>
 
 </body>
 </html>
 
 
 
-In addition, links can be styled differently depending on what state they are in.
+Bundan tashqari, havolalar qaysi holatda ekanligiga qarab turlicha uslubda bo'lishi mumkin.
 
-The four links states are:
+To'rtta havola holati quyidagilardir:
 
-    a:link - a normal, unvisited link
-    a:visited - a link the user has visited
-    a:hover - a link when the user mouses over it
-    a:active - a link the moment it is clicked
+     a:link - oddiy, tashrif buyurilmagan havola
+     a: tashrif buyurdi - foydalanuvchi tashrif buyurgan havola
+     a: hover - foydalanuvchi ustiga sichqonchani bosganda havola
+     a:faol - bosilgan paytdagi havola
 
 
-When setting the style for several link states, there are some order rules:
+Bir nechta havola holatlari uchun uslubni o'rnatishda ba'zi tartib qoidalari mavjud:
 
-    a:hover MUST come after a:link and a:visited
-    a:active MUST come after a:hover
+     a:hover a:link va a:visited dan keyin kelishi SHART
+     a:active a:hoverdan keyin kelishi KERAK
 
+<!DOCTYPE html>
+<html>
+<head>
+<uslub>
+/* tashrif buyurilmagan havola */
+a: havola {
+   rang: qizil;
+}
+
+/* tashrif buyurilgan havola */
+a: tashrif buyurgan {
+   rang: yashil;
+}
+
+/* sichqonchani havola ustiga bosing */
+a: suring {
+   rang: issiq pushti;
+}
+
+/* tanlangan havola */
+a: faol {
+   rang: ko'k;
+}
+</style>
+</head>
+<tana>
+
+<h2>CSS havolalari</h2>
+<p><b><a href="default.asp" target="_blank">Bu havola</a></b></p>
+<p><b>Eslatma:</b> a:hover CSS taʼrifida a:link va a:visiteddan keyin kelishi KERAK boʻlishi uchun
+
+samarali.</p>
+<p><b>Eslatma:</b> a:active samarali bo'lishi uchun CSS ta'rifida a: kursordan keyin kelishi KERAK.</p>
+
+</body>
+</html>
+
+
+
+Matnni bezatish:::
+Bu ko'pincha havolalardan pastki chiziqni olib tashlash uchun ishlatiladi. Quyidagi misolga qarang:
+
+<!DOCTYPE html>
+<html>
+<head>
+<uslub>
+a: havola {
+   matn-bezak: yo'q;
+}
+
+a: tashrif buyurgan {
+   matn-bezak: yo'q;
+}
+
+a: suring {
+   matnni bezash: tagiga chizish;
+}
+
+a: faol {
+   matnni bezash: tagiga chizish;
+}
+</style>
+</head>
+<tana>
+
+<h2>CSS havolalari</h2>
+<p><b><a href="default.asp" target="_blank">Bu havola</a></b></p>
+<p><b>Eslatma:</b> a:hover CSS taʼrifida a:link va a:visiteddan keyin kelishi KERAK boʻlishi uchun
+
+samarali.</p>
+<p><b>Eslatma:</b> a:active samarali bo'lishi uchun CSS ta'rifida a: kursordan keyin kelishi KERAK.</p>
+
+</body>
+</html>
+
+
+
+
+Fon rangi:::
+
+Fon rangi xususiyati havolalar uchun fon rangini belgilash uchun ishlatilishi mumkin:
+
+<!DOCTYPE html>
+<html>
+<head>
+<uslub>
+a: havola {
+   fon rangi: sariq;
+}
+
+a: tashrif buyurgan {
+   fon rangi: zangori;
+}
+
+a: suring {
+   fon rangi: och yashil;
+}
+
+a: faol {
+   fon rangi: issiq pushti;
+}
+</style>
+</head>
+<tana>
+
+<h2>CSS havolalari</h2>
+<p><b><a href="default.asp" target="_blank">Bu havola</a></b></p>
+<p><b>Eslatma:</b> a:hover CSS taʼrifida a:link va a:visiteddan keyin kelishi KERAK boʻlishi uchun
+
+samarali.</p>
+<p><b>Eslatma:</b> a:active samarali bo'lishi uchun CSS ta'rifida a: kursordan keyin kelishi KERAK.</p>
+
+</body>
+</html>
+
+
+
+Bog'lanish tugmalari:::
+
+Quyidagi misollar yanada rivojlangan, chunki ular havolalarni qutilar shaklida ko'rsatish uchun turli CSS xususiyatlarini birlashtiradi.
+
+tugmalar. Quyidagi misolga qarang:
 
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-/* unvisited link */
-a:link {
-  color: red;
+<uslub>
+a: havola, a: tashrif buyurgan {
+   fon rangi: #f44336;
+   rang: oq;
+   to'ldirish: 14px 25px;
+   matnni tekislash: markaz;
+   matn-bezak: yo'q;
+   displey: inline-block;
 }
 
-/* visited link */
-a:visited {
-  color: green;
-}
-
-/* mouse over link */
-a:hover {
-  color: hotpink;
-}
-
-/* selected link */
-a:active {
-  color: blue;
+a: suring, a: faol {
+   fon rangi: qizil;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h2>CSS Links</h2>
-<p><b><a href="default.asp" target="_blank">This is a link</a></b></p>
-<p><b>Note:</b> a:hover MUST come after a:link and a:visited in the CSS definition in order to be 
-
-effective.</p>
-<p><b>Note:</b> a:active MUST come after a:hover in the CSS definition in order to be effective.</p>
+<h2>Ulanish tugmasi</h2>
+<p>Tugma sifatida yaratilgan havola:</p>
+<a href="default.asp" target="_blank">Bu havola</a>
 
 </body>
 </html>
 
-
-
-Text Decoration:::
-This is mostly used to remove underlines from links. See example below:
+CSS havolalarini uslublashning boshqa misollari
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-a:link {
-  text-decoration: none;
-}
+<uslub>
+a.one: havola {rang:#ff0000;}
+a.one:ziyorat qilingan {rang:#0000ff;}
+a.one: hover {rang:#ffcc00;}
 
-a:visited {
-  text-decoration: none;
-}
+a.ikki: havola {rang:#ff0000;}
+a.ikki:ziyorat qilingan {rang:#0000ff;}
+a.ikki: hover {shrift o'lchami: 150%;}
 
-a:hover {
-  text-decoration: underline;
-}
+a.uch: havola {rang:#ff0000;}
+a.three:ziyorat qilingan {rang:#0000ff;}
+a.uch: suring {fon:#66ff66;}
 
-a:active {
-  text-decoration: underline;
-}
+a.four:link {rang:#ff0000;}
+a.four:ziyorat qilingan {rang:#0000ff;}
+a.four: hover {font-family: monospace;}
+
+a.five:link {rang:#ff0000;matn-bezatish:yo'q;}
+a.besh: tashrif buyurilgan {rang:#0000ff;matn-bezatish:yo'q;}
+a.five: suring {matn-bezatish: ostiga chizish;}
 </style>
 </head>
-<body>
+<tana>
 
-<h2>CSS Links</h2>
-<p><b><a href="default.asp" target="_blank">This is a link</a></b></p>
-<p><b>Note:</b> a:hover MUST come after a:link and a:visited in the CSS definition in order to be 
+<p>Sichqonchani havolalar ustiga bosing va ularning tartibini oʻzgartirishini tomosha qiling:</p>
 
-effective.</p>
-<p><b>Note:</b> a:active MUST come after a:hover in the CSS definition in order to be effective.</p>
+<p><b><a class="one" href="default.asp" target="_blank">Ushbu havola rangini o'zgartiradi</a></b></p>
+<p><b><a class="two" href="default.asp" target="_blank">Ushbu havola shrift hajmini o'zgartiradi</a></b></p>
+<p><b><a class="three" href="default.asp" target="_blank">Bu havola fon rangini o'zgartiradi</a></b></p>
+<p><b><a class="four" href="default.asp" target="_blank">Ushbu havola font-family-ni o'zgartiradi</a></b></p>
+<p><b><a class="five" href="default.asp" target="_blank">Ushbu havola matn bezaklarini o'zgartiradi</a></b></p>
 
 </body>
 </html>
 
 
-
-
-Background Color:::
-
-The background-color property can be used to specify a background color for links:
+Yana bir misol
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-a:link {
-  background-color: yellow;
+<uslub>
+a: havola, a: tashrif buyurgan {
+   fon rangi: oq;
+   rang: qora;
+   chegara: 2px qattiq yashil;
+   to'ldirish: 10px 20px;
+   matnni tekislash: markaz;
+   matn-bezak: yo'q;
+   displey: inline-block;
 }
 
-a:visited {
-  background-color: cyan;
-}
-
-a:hover {
-  background-color: lightgreen;
-}
-
-a:active {
-  background-color: hotpink;
-} 
-</style>
-</head>
-<body>
-
-<h2>CSS Links</h2>
-<p><b><a href="default.asp" target="_blank">This is a link</a></b></p>
-<p><b>Note:</b> a:hover MUST come after a:link and a:visited in the CSS definition in order to be 
-
-effective.</p>
-<p><b>Note:</b> a:active MUST come after a:hover in the CSS definition in order to be effective.</p>
-
-</body>
-</html>
-
-
-
-Link Buttons:::
-
-The examples below are more advanced as they combine different CSS properties to display links as  boxes/ 
-
-buttons. See  example below:
-
-
-<!DOCTYPE html>
-<html>
-<head>
-<style>
-a:link, a:visited {
-  background-color: #f44336;
-  color: white;
-  padding: 14px 25px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-}
-
-a:hover, a:active {
-  background-color: red;
+a: suring, a: faol {
+   fon rangi: yashil;
+   rang: oq;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h2>Link Button</h2>
-<p>A link styled as a button:</p>
-<a href="default.asp" target="_blank">This is a link</a>
-
-</body>
-</html>
-
-
-Other examples of styling CSS links
-
-<!DOCTYPE html>
-<html>
-<head>
-<style>
-a.one:link {color:#ff0000;}
-a.one:visited {color:#0000ff;}
-a.one:hover {color:#ffcc00;}
-
-a.two:link {color:#ff0000;}
-a.two:visited {color:#0000ff;}
-a.two:hover {font-size:150%;}
-
-a.three:link {color:#ff0000;}
-a.three:visited {color:#0000ff;}
-a.three:hover {background:#66ff66;}
-
-a.four:link {color:#ff0000;}
-a.four:visited {color:#0000ff;}
-a.four:hover {font-family:monospace;}
-
-a.five:link {color:#ff0000;text-decoration:none;}
-a.five:visited {color:#0000ff;text-decoration:none;}
-a.five:hover {text-decoration:underline;}
-</style>
-</head>
-<body>
-
-<p>Mouse over the links and watch them change layout:</p>
-
-<p><b><a class="one" href="default.asp" target="_blank">This link changes color</a></b></p>
-<p><b><a class="two" href="default.asp" target="_blank">This link changes font-size</a></b></p>
-<p><b><a class="three" href="default.asp" target="_blank">This link changes background-color</a></b></p>
-<p><b><a class="four" href="default.asp" target="_blank">This link changes font-family</a></b></p>
-<p><b><a class="five" href="default.asp" target="_blank">This link changes text-decoration</a></b></p>
-
-</body>
-</html>
-
-
-Another example
-
-<!DOCTYPE html>
-<html>
-<head>
-<style>
-a:link, a:visited {
-  background-color: white;
-  color: black;
-  border: 2px solid green;
-  padding: 10px 20px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-}
-
-a:hover, a:active {
-  background-color: green;
-  color: white;
-}
-</style>
-</head>
-<body>
-
-<a href="default.asp" target="_blank">This is a link</a>
+<a href="default.asp" target="_blank">Bu havola</a>
 
 </body>
 </html>
@@ -744,144 +740,144 @@ a:hover, a:active {
 
 
 
-Different types of cursors that can be used for links
+Havolalar uchun ishlatilishi mumkin bo'lgan turli xil kursorlar
 
 <!DOCTYPE html>
 <html>
-<body>
+<tana>
 
-<p>Mouse over the words to change the cursor.</p>
-<span style="cursor:auto">auto</span><br>
-<span style="cursor:crosshair">crosshair</span><br>
-<span style="cursor:default">default</span><br>
+<p>Kursorni oʻzgartirish uchun sichqonchani soʻzlar ustiga bosing.</p>
+<span style="cursor:auto">avtomatik</span><br>
+<span style="cursor:crosshair">krossshair</span><br>
+<span style="cursor:default">standart</span><br>
 <span style="cursor:e-resize">e-resize</span><br>
-<span style="cursor:help">help</span><br>
-<span style="cursor:move">move</span><br>
+<span style="cursor:help">yordam</span><br>
+<span style="cursor:move">ko'chirish</span><br>
 <span style="cursor:n-resize">n-resize</span><br>
 <span style="cursor:ne-resize">ne-resize</span><br>
 <span style="cursor:nw-resize">nw-resize</span><br>
-<span style="cursor:pointer">pointer</span><br>
+<span style="cursor:pointer">ko'rsatkich</span><br>
 <span style="cursor:progress">progress</span><br>
 <span style="cursor:s-resize">s-resize</span><br>
 <span style="cursor:se-resize">se-resize</span><br>
 <span style="cursor:sw-resize">sw-resize</span><br>
-<span style="cursor:text">text</span><br>
+<span style="cursor:text">matn</span><br>
 <span style="cursor:w-resize">w-resize</span><br>
-<span style="cursor:wait">wait</span><br>
+<span style="cursor:wait">kuting</span><br>
 
 </body>
 </html>
 
-<kbd>return</kbd>[Back to table of contents](#homepage)
+<kbd>qaytish</kbd>[Mundarijaga qaytish](#homepage)
 
 
 ---------
 
 
-## CSS Lists
+## CSS ro'yxatlari
 
-HTML Lists and CSS List properties
-
-
-The unordered lists (<ul>) and ordered (<ol>) lists are the two main types of lists in HTML. Unordered lists 
-
-are marked with bullets while ordered lists are marked with numbers or letters.
+HTML ro'yxatlari va CSS ro'yxati xususiyatlari
 
 
-The CSS list properties allow you to:
+Tartibsiz ro'yxatlar (<ul>) va tartiblangan (<ol>) ro'yxatlar HTMLda ro'yxatlarning ikkita asosiy turidir. Tartibsiz ro'yxatlar
 
-    Set different list item markers for ordered lists
-    Set different list item markers for unordered lists
-    Set an image as the list item marker
-    Add background colors to lists and list items
+o'q bilan belgilanadi, tartiblangan ro'yxatlar esa raqamlar yoki harflar bilan belgilanadi.
 
 
+CSS ro'yxati xususiyatlari sizga quyidagilarga imkon beradi:
 
-Different List Item Markers
+     Buyurtma qilingan ro'yxatlar uchun turli xil ro'yxat element belgilarini o'rnating
+     Tartibsiz ro'yxatlar uchun turli xil ro'yxat element belgilarini o'rnating
+     Rasmni ro'yxat elementi belgisi sifatida o'rnating
+     Ro'yxatlar va ro'yxat elementlariga fon ranglarini qo'shing
 
-The list-style-type property is used to specify the type of list item marker used. For example,
+
+
+Turli xil ro'yxat elementi belgilari
+
+Ro'yxat uslubi turi xususiyati ishlatiladigan ro'yxat elementi markerining turini belgilash uchun ishlatiladi. Masalan,
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
+<uslub>
 ul.a {
-  list-style-type: circle;
+   ro'yxat uslubi turi: doira;
 }
 
 ul.b {
-  list-style-type: square;
+   ro'yxat uslubi turi: kvadrat;
 }
 
 ol.c {
-  list-style-type: upper-roman;
+   ro'yxat uslubi turi: yuqori rim;
 }
 
-ol.d {
-  list-style-type: lower-alpha;
+eski {
+   ro'yxat uslubi turi: pastki alfa;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h2>Lists</h2>
-<p>Example of unordered lists:</p>
+<h2>Roʻyxatlar</h2>
+<p>Tartibsiz ro'yxatlarga misol:</p>
 <ul class="a">
-  <li>Coffee</li>
-  <li>Tea</li>
-  <li>Coca Cola</li>
+   <li>Qahva</li>
+   <li>Choy</li>
+   <li>Coca Cola</li>
 </ul>
 
 <ul class="b">
-  <li>Coffee</li>
-  <li>Tea</li>
-  <li>Coca Cola</li>
+   <li>Qahva</li>
+   <li>Choy</li>
+   <li>Coca Cola</li>
 </ul>
 
-<p>Example of ordered lists:</p>
+<p>Tartiblangan roʻyxatlarga misol:</p>
 <ol class="c">
-  <li>Coffee</li>
-  <li>Tea</li>
-  <li>Coca Cola</li>
+   <li>Qahva</li>
+   <li>Choy</li>
+   <li>Coca Cola</li>
 </ol>
 
 <ol class="d">
-  <li>Coffee</li>
-  <li>Tea</li>
-  <li>Coca Cola</li>
+   <li>Qahva</li>
+   <li>Choy</li>
+   <li>Coca Cola</li>
 </ol>
 
 </body>
 </html>
 
 
-Note: Some of the values are for unordered lists, and some for ordered lists.
+Eslatma: Ba'zi qiymatlar tartibsiz ro'yxatlar uchun, ba'zilari esa tartiblangan ro'yxatlar uchun.
 
 
 
-An Image as the List Item Marker
+Roʻyxat elementi belgisi sifatida tasvir
 
-The list-style-image property is used to spedify image as an item list marker. For instance,
+Ro'yxat uslubidagi rasm xususiyati tasvirni element ro'yxati belgisi sifatida tezlashtirish uchun ishlatiladi. Masalan; misol uchun,
 
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
+<uslub>
 ul {
-  list-style-image: url('sqpurple.gif');
+   ro'yxat uslubidagi rasm: url('sqpurple.gif');
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h2>CSS Lists</h2>
-<p>The list-style-image property specifies an image as the list item marker:</p>
+<h2>CSS ro'yxatlari</h2>
+<p>List-style-image xususiyati rasmni roʻyxat elementi belgisi sifatida belgilaydi:</p>
 
 <ul>
-  <li>Coffee</li>
-  <li>Tea</li>
-  <li>Coca Cola</li>
+   <li>Qahva</li>
+   <li>Choy</li>
+   <li>Coca Cola</li>
 </ul>
 
 </body>
@@ -889,63 +885,63 @@ ul {
 
 
 
-Position the List Item Markers
+Ro'yxat elementi belgilarini joylashtiring
 
-The position of the list-item markers (bullet points) is specified using list-style-position. 
-
-
-"list-style-position: outside;" means that the bullet points will be outside the list item. The start of 
-
-each line of a list item will be aligned vertically. This is default:
+Ro'yxat-modda belgilarining (o'q nuqtalari) joylashuvi list-style-position yordamida aniqlanadi.
 
 
-"list-style-position: inside;" means that the bullet points will be inside the list item. As it is part of 
+"list-style-position: outside;" o'q nuqtalari ro'yxat elementidan tashqarida bo'lishini anglatadi. ning boshlanishi
 
-the list item, it will be part of the text and push the text at the start:
+ro'yxat elementining har bir satri vertikal ravishda tekislanadi. Bu standart:
+
+
+"list-style-position: inside;" o'q nuqtalari ro'yxat elementi ichida bo'lishini anglatadi. Bir qismi sifatida
+
+ro'yxat elementi, u matnning bir qismi bo'ladi va matnni boshida surish:
 
 
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
+<uslub>
 ul.a {
-  list-style-position: outside;
+   ro'yxat uslubidagi pozitsiya: tashqarida;
 }
 
 ul.b {
-  list-style-position: inside;
+   ro'yxat uslubidagi pozitsiya: ichkarida;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h1>The list-style-position Property</h1>
+<h1>Ro'yxat uslubidagi joylashuv xususiyati</h1>
 
-<h2>list-style-position: outside (default):</h2>
+<h2>list-style-position: tashqarida (standart):</h2>
 <ul class="a">
-  <li>Coffee - A brewed drink prepared from roasted coffee beans, which are the seeds of berries from the 
+   <li>Qahva - qovurilgan kofe donalaridan tayyorlanadigan qaynatilgan ichimlik.
 
-Coffea plant</li>
-  <li>Tea - An aromatic beverage commonly prepared by pouring hot or boiling water over cured leaves of the 
+Kofe o'simligi</li>
+   <li>Choy - odatda o't barglari ustiga issiq yoki qaynoq suv quyib tayyorlanadigan xushbo'y ichimlik.
 
-Camellia sinensis, an evergreen shrub (bush) native to Asia</li>
-  <li>Coca Cola - A carbonated soft drink produced by The Coca-Cola Company. The drink's name refers to two 
+Camellia sinensis , vatani Osiyo</li>dan doimiy yashil buta (buta).
+   <li>Coca-Cola - The Coca-Cola kompaniyasi tomonidan ishlab chiqarilgan gazlangan alkogolsiz ichimlik. Ichimlikning nomi ikkitaga ishora qiladi
 
-of its original ingredients, which were kola nuts (a source of caffeine) and coca leaves</li>
+kola yong'og'i (kofein manbai) va koka barglari bo'lgan asl ingredientlardan</li>
 </ul>
 
-<h2>list-style-position: inside:</h2>
+<h2>ro'yxat uslubidagi pozitsiya: ichida:</h2>
 <ul class="b">
-  <li>Coffee - A brewed drink prepared from roasted coffee beans, which are the seeds of berries from the 
+   <li>Qahva - qovurilgan kofe donalaridan tayyorlanadigan qaynatilgan ichimlik.
 
-Coffea plant</li>
-  <li>Tea - An aromatic beverage commonly prepared by pouring hot or boiling water over cured leaves of the 
+Kofe o'simligi</li>
+   <li>Choy - odatda o't barglari ustiga issiq yoki qaynoq suv quyib tayyorlanadigan xushbo'y ichimlik.
 
-Camellia sinensis, an evergreen shrub (bush) native to Asia</li>
-  <li>Coca Cola - A carbonated soft drink produced by The Coca-Cola Company. The drink's name refers to two 
+Camellia sinensis , vatani Osiyo</li>dan doimiy yashil buta (buta).
+   <li>Coca-Cola - The Coca-Cola kompaniyasi tomonidan ishlab chiqarilgan gazlangan alkogolsiz ichimlik. Ichimlikning nomi ikkitaga ishora qiladi
 
-of its original ingredients, which were kola nuts (a source of caffeine) and coca leaves</li>
+kola yong'og'i (kofein manbai) va koka barglari bo'lgan asl ingredientlardan</li>
 </ul>
 
 </body>
@@ -954,47 +950,47 @@ of its original ingredients, which were kola nuts (a source of caffeine) and coc
 
 
 
-NB: Align outside is the default for list-style position and in this case, the first letter in the second 
+Eslatma: Ro'yxat uslubidagi joylashuv uchun tashqi tekislash sukut bo'yicha hisoblanadi va bu holda ikkinchi harfdagi birinchi harf
 
-line of each bullet content is directly under the first letter in the first line. However, when the list-
+Har bir o'q tarkibining satri to'g'ridan-to'g'ri birinchi qatordagi birinchi harf ostida. Biroq, ro'yxat qachon -
 
-style-position is set to inside, the First letter of the second line in a list item is directly under the 
+style-position ichkariga o'rnatiladi, ro'yxat elementidagi ikkinchi qatorning birinchi harfi to'g'ridan-to'g'ri ostidadir
 
-bullet symbol in the first line.   
+birinchi qatordagi o'q belgisi.
 
 
 
-Remove Default Settings
+Standart sozlamalarni olib tashlang
 
-The list-style-type:none property can also be used to remove the markers/bullets. Note that the list also 
+List-style-type:none xususiyatidan markerlarni/markerlarni olib tashlash uchun ham foydalanish mumkin. Ro'yxatni ham unutmang
 
-has default margin and padding. To remove this, add margin:0 and padding:0 to <ul> or <ol>:
+standart chekka va toʻldirishga ega. Buni olib tashlash uchun <ul> yoki <ol> ga margin:0 va padding:0 qo'shing:
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
+<uslub>
 ul.demo {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+   ro'yxat uslubi turi: yo'q;
+   chegara: 0;
+   to'ldirish: 0;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<p>Default list:</p>
+<p>Birlamchi roʻyxat:</p>
 <ul>
-  <li>Coffee</li>
-  <li>Tea</li>
-  <li>Coca Cola</li>
+   <li>Qahva</li>
+   <li>Choy</li>
+   <li>Coca Cola</li>
 </ul>
 
-<p>Remove bullets, margin and padding:</p>
+<p>Markalar, chekka va toʻldirishni olib tashlang:</p>
 <ul class="demo">
-  <li>Coffee</li>
-  <li>Tea</li>
-  <li>Coca Cola</li>
+   <li>Qahva</li>
+   <li>Choy</li>
+   <li>Coca Cola</li>
 </ul>
 
 </body>
@@ -1002,33 +998,33 @@ ul.demo {
 
 
 
-List - Shorthand property
+Ro'yxat - Stenografiya xususiyati
 
-The list-style property is a shorthand property. It is used to set all the list properties in one 
+Ro'yxat uslubidagi xususiyat stenografiya xususiyatidir. U barcha ro'yxat xususiyatlarini birida o'rnatish uchun ishlatiladi
 
-declaration:
+deklaratsiya:
 
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
+<uslub>
 ul {
-  list-style: square inside url("sqpurple.gif");
+   ro'yxat uslubi: url ichida kvadrat ("sqpurple.gif");
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h2>CSS Lists</h2>
-<p>The list-style property is a shorthand property, which is used to set all the list properties in one 
+<h2>CSS ro'yxatlari</h2>
+<p>Ro'yxat uslubidagi xususiyat stenografiya xususiyati bo'lib, u barcha ro'yxat xususiyatlarini bittada o'rnatish uchun ishlatiladi
 
-declaration.</p>
+deklaratsiya.</p>
 
 <ul>
-  <li>Coffee</li>
-  <li>Tea</li>
-  <li>Coca Cola</li>
+   <li>Qahva</li>
+   <li>Choy</li>
+   <li>Coca Cola</li>
 </ul>
 
 </body>
@@ -1036,71 +1032,69 @@ declaration.</p>
 
 
 
-When using the shorthand property, the order of the property values are:
+Qisqartirilgan xususiyatdan foydalanganda, xususiyat qiymatlarining tartibi quyidagicha:
 
-1. list-style-type (if a list-style-image is specified, the value of this property will be displayed if the 
+1. roʻyxat uslubi turi (agar roʻyxat uslubi tasviri koʻrsatilgan boʻlsa, ushbu xususiyat qiymati koʻrsatiladi, agar
 
-image for some reason cannot be displayed)
-2. list-style-position (specifies whether the list-item markers should appear inside or outside the content 
+Ba'zi sabablarga ko'ra tasvirni ko'rsatib bo'lmaydi)
+2. roʻyxat uslubidagi joylashuv (roʻyxat elementi belgilarining kontent ichida yoki tashqarisida koʻrinishini belgilaydi.
 
-flow)
-3. list-style-image (specifies an image as the list item marker)
+oqim)
+3. roʻyxat uslubidagi tasvir (roʻyxat elementi belgisi sifatida tasvirni belgilaydi)
 
-If one of the property values above are missing, the default value for the missing property will be 
+Yuqoridagi xususiyat qiymatlaridan biri etishmayotgan bo'lsa, etishmayotgan xususiyat uchun standart qiymat bo'ladi
 
-inserted, if any.
-
-
-Styling List With Colors
-
-We can also style lists with colors, to make them look a little more interesting.
-
-Anything added to the <ol> or <ul> tag, affects the entire list, while properties added to the <li> tag will 
-
-affect the individual list items:
+agar mavjud bo'lsa, kiritilgan.
 
 
+Ranglar bilan uslublar ro'yxati
+
+Shuningdek, biz ro'yxatlarni biroz qiziqarliroq qilish uchun ranglar bilan bezashimiz mumkin.
+
+<ol> yoki <ul> tegiga qo'shilgan har qanday narsa butun ro'yxatga ta'sir qiladi, <li> tegiga qo'shilgan xususiyatlar esa
+
+alohida ro'yxat elementlariga ta'sir qiladi:
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
+<uslub>
 ol {
-  background: #ff9999;
-  padding: 20px;
+   fon: #ff9999;
+   to'ldirish: 20px;
 }
 
 ul {
-  background: #3399ff;
-  padding: 20px;
+   fon: #3399ff;
+   to'ldirish: 20px;
 }
 
 ol li {
-  background: #ffe5e5;
-  padding: 5px;
-  margin-left: 35px;
+   fon: #ffe5e5;
+   to'ldirish: 5px;
+   chap chekka: 35px;
 }
 
 ul li {
-  background: #cce5ff;
-  margin: 5px;
+   fon: #cce5ff;
+   chegara: 5px;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h1>Styling Lists With Colors:</h1>
+<h1>Ranglar bilan uslublar roʻyxati:</h1>
 
 <ol>
-  <li>Coffee</li>
-  <li>Tea</li>
-  <li>Coca Cola</li>
+   <li>Qahva</li>
+   <li>Choy</li>
+   <li>Coca Cola</li>
 </ol>
 
 <ul>
-  <li>Coffee</li>
-  <li>Tea</li>
-  <li>Coca Cola</li>
+   <li>Qahva</li>
+   <li>Choy</li>
+   <li>Coca Cola</li>
 </ul>
 
 </body>
@@ -1108,65 +1102,65 @@ ul li {
 
 
 
-More examples:
+Ko'proq misollar:
 
-Customized list with a red left border:
+Chap qizil chegara bilan moslashtirilgan ro'yxat:
 
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
+<uslub>
 ul {
-  border-left: 5px solid red;
-  background-color: #f1f1f1;
-  list-style-type: none;
-  padding: 10px 20px;
+   chegara-chap: 5px qattiq qizil;
+   fon rangi: #f1f1f1;
+   ro'yxat uslubi turi: yo'q;
+   to'ldirish: 10px 20px;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<p>List with a red left border:</p>
+<p>Chapdagi qizil hoshiyali roʻyxat:</p>
 <ul>
-  <li>Coffee</li>
-  <li>Tea</li>
-  <li>Coca Cola</li>
+   <li>Qahva</li>
+   <li>Choy</li>
+   <li>Coca Cola</li>
 </ul>
 
 </body>
 </html>
 
 
-Full width bordered list:
+To'liq kenglikdagi chegaralangan ro'yxat:
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
+<uslub>
 ul {
-  list-style-type: none;
-  padding: 0;
-  border: 1px solid #ddd;
+   ro'yxat uslubi turi: yo'q;
+   to'ldirish: 0;
+   chegara: 1px qattiq #ddd;
 }
 
 ul li {
-  padding: 8px 16px;
-  border-bottom: 1px solid #ddd;
+   to'ldirish: 8px 16px;
+   chegara-pastki: 1px qattiq #ddd;
 }
 
-ul li:last-child {
-  border-bottom: none
+ul li:oxirgi bola {
+   chegara-pastki: yo'q
 }
 </style>
 </head>
-<body>
+<tana>
 
-<p>Full-width bordered list:</p>
+<p>Toʻliq kenglikdagi chegaralangan roʻyxat:</p>
 <ul>
-  <li>Coffee</li>
-  <li>Tea</li>
-  <li>Coca Cola</li>
+   <li>Qahva</li>
+   <li>Choy</li>
+   <li>Coca Cola</li>
 </ul>
 
 </body>
@@ -1174,276 +1168,276 @@ ul li:last-child {
 
 
 
-All the different list-item markers for lists:
+Ro'yxatlar uchun barcha turli xil ro'yxat elementlari:
 
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-ul.a {list-style-type: circle;}
-ul.b {list-style-type: disc;}
-ul.c {list-style-type: square;}
+<uslub>
+ul.a {ro'yxat uslubi turi: doira;}
+ul.b {ro'yxat uslubi turi: disk;}
+ul.c {ro'yxat uslubi turi: kvadrat;}
 
-ol.d {list-style-type: armenian;}
-ol.e {list-style-type: cjk-ideographic;}
-ol.f {list-style-type: decimal;}
-ol.g {list-style-type: decimal-leading-zero;}
-ol.h {list-style-type: georgian;}
-ol.i {list-style-type: hebrew;}
-ol.j {list-style-type: hiragana;}
-ol.k {list-style-type: hiragana-iroha;}
-ol.l {list-style-type: katakana;}
-ol.m {list-style-type: katakana-iroha;}
-ol.n {list-style-type: lower-alpha;}
-ol.o {list-style-type: lower-greek;}
-ol.p {list-style-type: lower-latin;}
-ol.q {list-style-type: lower-roman;}
-ol.r {list-style-type: upper-alpha;}
-ol.s {list-style-type: upper-latin;}
-ol.t {list-style-type: upper-roman;}
-ol.u {list-style-type: none;}
-ol.v {list-style-type: inherit;}
+ol.d {ro'yxat uslubi turi: arman;}
+ol.e {ro'yxat uslubi turi: cjk-ideografik;}
+ol.f {ro'yxat uslubi turi: kasr;}
+ol.g {ro'yxat uslubi turi: o'nlik bosh nol;}
+ol.h {ro'yxat uslubi turi: gruzin;}
+ol.i {ro'yxat uslubi turi: ibroniycha;}
+ol.j {ro'yxat uslubi turi: hiragana;}
+ol.k {ro'yxat uslubi turi: hiragana-iroha;}
+ol.l {ro'yxat uslubi turi: katakana;}
+ol.m {ro'yxat uslubi turi: katakana-iroha;}
+ol.n {ro'yxat uslubi turi: pastki alfa;}
+ol.o {ro'yxat uslubi turi: pastki yunoncha;}
+ol.p {ro'yxat uslubi turi: pastki lotin;}
+ol.q {ro'yxat uslubi turi: pastki roman;}
+ol.r {ro'yxat uslubi turi: yuqori alfa;}
+ol.s {ro'yxat uslubi turi: yuqori lotin;}
+ol.t {ro'yxat uslubi turi: yuqori rim;}
+ol.u {ro'yxat uslubi turi: yo'q;}
+ol.v {ro'yxat uslubi turi: meros;}
 </style>
 </head>
-<body>
+<tana>
 
 <ul class="a">
-  <li>Circle type</li>
-  <li>Tea</li>
-  <li>Coca Cola</li>
+   <li>Dira turi</li>
+   <li>Choy</li>
+   <li>Coca Cola</li>
 </ul>
 
 <ul class="b">
-  <li>Disc type</li>
-  <li>Tea</li>
-  <li>Coca Cola</li>
+   <li>Disk turi</li>
+   <li>Choy</li>
+   <li>Coca Cola</li>
 </ul>
 
 <ul class="c">
-  <li>Square type</li>
-  <li>Tea</li>
-  <li>Coca Cola</li>
+   <li>Kvadrat turi</li>
+   <li>Choy</li>
+   <li>Coca Cola</li>
 </ul>
 
 <ol class="d">
-  <li>Armenian type</li>
-  <li>Tea</li>
-  <li>Coca Cola</li>
+   <li>Armancha turi</li>
+   <li>Choy</li>
+   <li>Coca Cola</li>
 </ol>
 
 <ol class="e">
-  <li>Cjk-ideographic type</li>
-  <li>Tea</li>
-  <li>Coca Cola</li>
+   <li>Cjk-ideografik turi</li>
+   <li>Choy</li>
+   <li>Coca Cola</li>
 </ol>
 
 <ol class="f">
-  <li>Decimal type</li>
-  <li>Tea</li>
-  <li>Coca Cola</li>
+   <li>O'nlik sanoq turi</li>
+   <li>Choy</li>
+   <li>Coca Cola</li>
 </ol>
 
 <ol class="g">
-  <li>Decimal-leading-zero type</li>
-  <li>Tea</li>
-  <li>Coca Cola</li>
+   <li>O'nlik-boshlovchi-nol turi</li>
+   <li>Choy</li>
+   <li>Coca Cola</li>
 </ol>
 
 <ol class="h">
-  <li>Georgian type</li>
-  <li>Tea</li>
-  <li>Coca Cola</li>
+   <li>Gruziya turi</li>
+   <li>Choy</li>
+   <li>Coca Cola</li>
 </ol>
 
 <ol class="i">
-  <li>Hebrew type</li>
-  <li>Tea</li>
-  <li>Coca Cola</li>
+   <li>Ibroniycha turi</li>
+   <li>Choy</li>
+   <li>Coca Cola</li>
 </ol>
 
 <ol class="j">
-  <li>Hiragana type</li>
-  <li>Tea</li>
-  <li>Coca Cola</li>
+   <li>Hiragana turi</li>
+   <li>Choy</li>
+   <li>Coca Cola</li>
 </ol>
 
 <ol class="k">
-  <li>Hiragana-iroha type</li>
-  <li>Tea</li>
-  <li>Coca Cola</li>
+   <li>Hiragana-iroha turi</li>
+   <li>Choy</li>
+   <li>Coca Cola</li>
 </ol>
 
 <ol class="l">
-  <li>Katakana type</li>
-  <li>Tea</li>
-  <li>Coca Cola</li>
+   <li>Katakana turi</li>
+   <li>Choy</li>
+   <li>Coca Cola</li>
 </ol>
 
 <ol class="m">
-  <li>Katakana-iroha type</li>
-  <li>Tea</li>
-  <li>Coca Cola</li>
+   <li>Katakana-iroha turi</li>
+   <li>Choy</li>
+   <li>Coca Cola</li>
 </ol>
 
 <ol class="n">
-  <li>Lower-alpha type</li>
-  <li>Tea</li>
-  <li>Coca Cola</li>
+   <li>Quyi alfa turi</li>
+   <li>Choy</li>
+   <li>Coca Cola</li>
 </ol>
 
 <ol class="o">
-  <li>Lower-greek type</li>
-  <li>Tea</li>
-  <li>Coca Cola</li>
+   <li>Quyi yunoncha turi</li>
+   <li>Choy</li>
+   <li>Coca Cola</li>
 </ol>
 
 <ol class="p">
-  <li>Lower-latin type</li>
-  <li>Tea</li>
-  <li>Coca Cola</li>
+   <li>Quyi lotincha turi</li>
+   <li>Choy</li>
+   <li>Coca Cola</li>
 </ol>
 
 <ol class="q">
-  <li>Lower-roman type</li>
-  <li>Tea</li>
-  <li>Coca Cola</li>
+   <li>Quyi rim turi</li>
+   <li>Choy</li>
+   <li>Coca Cola</li>
 </ol>
 
 <ol class="r">
-  <li>Upper-alpha type</li>
-  <li>Tea</li>
-  <li>Coca Cola</li>
+   <li>Yuqori alfa turi</li>
+   <li>Choy</li>
+   <li>Coca Cola</li>
 </ol>
 
 <ol class="s">
-  <li>Upper-latin type</li>
-  <li>Tea</li>
-  <li>Coca Cola</li>
+   <li>Yuqori lotincha turi</li>
+   <li>Choy</li>
+   <li>Coca Cola</li>
 </ol>
 
 <ol class="t">
-  <li>Upper-roman type</li>
-  <li>Tea</li>
-  <li>Coca Cola</li>
+   <li>Yuqori rim turi</li>
+   <li>Choy</li>
+   <li>Coca Cola</li>
 </ol>
 
 <ol class="u">
-  <li>None type</li>
-  <li>Tea</li>
-  <li>Coca Cola</li>
+   <li>Hech qanday tur</li>
+   <li>Choy</li>
+   <li>Coca Cola</li>
 </ol>
 
 <ol class="v">
-  <li>inherit type</li>
-  <li>Tea</li>
-  <li>Coca Cola</li>
+   <li>turni meros qilib olish</li>
+   <li>Choy</li>
+   <li>Coca Cola</li>
 </ol>
 
 </body>
 </html>
 
-<kbd>return</kbd>[Back to table of contents](#homepage)
+<kbd>qaytish</kbd>[Mundarijaga qaytish](#homepage)
 
 
 -------
 
 
 
-## CSS Tables
+## CSS jadvallari
 
-CSS helps to improve the appearance of HTML tables
+CSS HTML jadvallarining ko'rinishini yaxshilashga yordam beradi
 
 
-An example of table is shown below:
+Jadvalning namunasi quyida ko'rsatilgan:
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-#customers {
-  font-family: Arial, Helvetica, sans-serif;
-  border-collapse: collapse;
-  width: 100%;
+<uslub>
+#xaridorlar {
+   shrift oilasi: Arial, Helvetica, sans-serif;
+   chegara-burilish: qulash;
+   kengligi: 100%;
 }
 
-#customers td, #customers th {
-  border: 1px solid #ddd;
-  padding: 8px;
+#mijozlar td, #mijozlar th {
+   chegara: 1px qattiq #ddd;
+   to'ldirish: 8px;
 }
 
-#customers tr:nth-child(even){background-color: #f2f2f2;}
+#mijozlar tr:n-child(hatto){fon rangi: #f2f2f2;}
 
-#customers tr:hover {background-color: #ddd;}
+#customers tr:hover {fon rangi: #ddd;}
 
-#customers th {
-  padding-top: 12px;
-  padding-bottom: 12px;
-  text-align: left;
-  background-color: #04AA6D;
-  color: white;
+#mijozlar th {
+   to'ldirish tepasi: 12px;
+   to'ldirish-pastki: 12px;
+   matnni tekislash: chapga;
+   fon rangi: #04AA6D;
+   rang: oq;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<table id="customers">
-  <tr>
-    <th>Company</th>
-    <th>Contact</th>
-    <th>Country</th>
-  </tr>
-  <tr>
-    <td>Alfreds Futterkiste</td>
-    <td>Maria Anders</td>
-    <td>Germany</td>
-  </tr>
-  <tr>
-    <td>Berglunds snabbköp</td>
-    <td>Christina Berglund</td>
-    <td>Sweden</td>
-  </tr>
-  <tr>
-    <td>Centro comercial Moctezuma</td>
-    <td>Francisco Chang</td>
-    <td>Mexico</td>
-  </tr>
-  <tr>
-    <td>Ernst Handel</td>
-    <td>Roland Mendel</td>
-    <td>Austria</td>
-  </tr>
-  <tr>
-    <td>Island Trading</td>
-    <td>Helen Bennett</td>
-    <td>UK</td>
-  </tr>
-  <tr>
-    <td>Königlich Essen</td>
-    <td>Philip Cramer</td>
-    <td>Germany</td>
-  </tr>
-  <tr>
-    <td>Laughing Bacchus Winecellars</td>
-    <td>Yoshi Tannamuri</td>
-    <td>Canada</td>
-  </tr>
-  <tr>
-    <td>Magazzini Alimentari Riuniti</td>
-    <td>Giovanni Rovelli</td>
-    <td>Italy</td>
-  </tr>
-  <tr>
-    <td>North/South</td>
-    <td>Simon Crowther</td>
-    <td>UK</td>
-  </tr>
-  <tr>
-    <td>Paris spécialités</td>
-    <td>Marie Bertrand</td>
-    <td>France</td>
-  </tr>
-</table>
+<table id="mijozlar">
+   <tr>
+     <th>Kompaniya</th>
+     <th>Aloqa</th>
+     <th>Mamlakat</th>
+   </tr>
+   <tr>
+     <td>Alfreds Futterkiste</td>
+     <td>Mariya Anders</td>
+     <td>Germaniya</td>
+   </tr>
+   <tr>
+     <td>Berglunds snabbköp</td>
+     <td>Kristina Berglund</td>
+     <td>Shvetsiya</td>
+   </tr>
+   <tr>
+     <td>Markaziy tijorat Moctezuma</td>
+     <td>Fransisko Chang</td>
+     <td>Meksika</td>
+   </tr>
+   <tr>
+     <td>Ernst Handel</td>
+     <td>Roland Mendel</td>
+     <td>Avstriya</td>
+   </tr>
+   <tr>
+     <td>Orol savdosi</td>
+     <td>Xelen Bennet</td>
+     <td>Buyuk Britaniya</td>
+   </tr>
+   <tr>
+     <td>Königlich Essen</td>
+     <td>Filip Kramer</td>
+     <td>Germaniya</td>
+   </tr>
+   <tr>
+     <td>Kulayotgan Bacchus vinocellars</td>
+     <td>Yoshi Tannamuri</td>
+     <td>Kanada</td>
+   </tr>
+   <tr>
+     <td>Magazzini Alimentari Riuniti</td>
+     <td>Jiovanni Rovelli</td>
+     <td>Italiya</td>
+   </tr>
+   <tr>
+     <td>Shimoliy/Janubiy</td>
+     <td>Simon Krouter</td>
+     <td>Buyuk Britaniya</td>
+   </tr>
+   <tr>
+     <td>Paris spécialités</td>
+     <td>Mari Bertran</td>
+     <td>Frantsiya</td>
+   </tr>
+</jadval>
 
 </body>
 </html>
@@ -1451,88 +1445,88 @@ An example of table is shown below:
 
 
 
-Table Borders
+Jadval chegaralari
 
 
-Table Borders
+Jadval chegaralari
 
-To specify table borders in CSS, use the border property.
+CSS-da jadval chegaralarini belgilash uchun border xususiyatidan foydalaning.
 
-The example below specifies a black border for <table>, <th>, and <td> elements:
+Quyidagi misol <table>, <th> va <td> elementlari uchun qora chegarani belgilaydi:
 
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-table, th, td {
-  border: 1px solid black;
+<uslub>
+jadval, th, td {
+   chegara: 1px qattiq qora;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h2>Add a border to a table:</h2>
+<h2>Jadvalga chegara qo'shish:</h2>
 
-<table>
-  <tr>
-    <th>Firstname</th>
-    <th>Lastname</th>
-  </tr>
-  <tr>
-    <td>Peter</td>
-    <td>Griffin</td>
-  </tr>
-  <tr>
-    <td>Lois</td>
-    <td>Griffin</td>
-  </tr>
-</table>
+<jadval>
+   <tr>
+     <th>Ism</th>
+     <th>Familiya</th>
+   </tr>
+   <tr>
+     <td>Piter</td>
+     <td>Griffin</td>
+   </tr>
+   <tr>
+     <td>Lois</td>
+     <td>Griffin</td>
+   </tr>
+</jadval>
 
 </body>
 </html>
 
 
 
-Full-Width Table:
+To'liq kenglik jadvali:
 
 
-If you wish to create a table that will span the entire screen (full-width), add width:100% to the <table>
- elemnt as shown below:
+Agar siz butun ekranni qamrab oladigan jadval yaratmoqchi bo'lsangiz (to'liq kenglik), <jadval> ga kenglik:100% qo'shing.
+  element quyida ko'rsatilganidek:
 
 
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-table, th, td {
-  border: 1px solid black;
+<uslub>
+jadval, th, td {
+   chegara: 1px qattiq qora;
 }
 
-table {
-  width: 100%;
+stol {
+   kengligi: 100%;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h2>Full-width Table</h2>
+<h2>To'liq kenglikdagi jadval</h2>
 
-<table>
-  <tr>
-    <th>Firstname</th>
-    <th>Lastname</th>
-  </tr>
-  <tr>
-    <td>Peter</td>
-    <td>Griffin</td>
-  </tr>
-  <tr>
-    <td>Lois</td>
-    <td>Griffin</td>
-  </tr>
-</table>
+<jadval>
+   <tr>
+     <th>Ism</th>
+     <th>Familiya</th>
+   </tr>
+   <tr>
+     <td>Piter</td>
+     <td>Griffin</td>
+   </tr>
+   <tr>
+     <td>Lois</td>
+     <td>Griffin</td>
+   </tr>
+</jadval>
 
 </body>
 </html>
@@ -1540,13 +1534,13 @@ table {
 
 
 
-Double Borders
+Ikki tomonlama chegaralar
 
-Notice that the table in the examples above have double borders. This is because both the table and the <th> 
+E'tibor bering, yuqoridagi misollardagi jadval ikkita chegaraga ega. Buning sababi ham jadval, ham <th>
 
-and <td> elements have separate borders.
+va <td> elementlari alohida chegaralarga ega.
 
-To remove double borders, take a look at the example below.
+Ikki tomonlama chegaralarni olib tashlash uchun quyidagi misolni ko'rib chiqing.
 
 
 
@@ -1554,653 +1548,522 @@ To remove double borders, take a look at the example below.
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-table, td, th {
-  border: 1px solid black;
+<uslub>
+jadval, td, th {
+   chegara: 1px qattiq qora;
 }
 
-table {
-  width: 100%;
-  border-collapse: collapse;
+stol {
+   kengligi: 100%;
+   chegara-burilish: qulash;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h2>Let the borders collapse</h2>
+<h2>Chegaralar siqilsin</h2>
 
-<table>
-  <tr>
-    <th>Firstname</th>
-    <th>Lastname</th>
-  </tr>
-  <tr>
-    <td>Peter</td>
-    <td>Griffin</td>
-  </tr>
-  <tr>
-    <td>Lois</td>
-    <td>Griffin</td>
-  </tr>
-</table>
+<jadval>
+   <tr>
+     <th>Ism</th>
+     <th>Familiya</th>
+   </tr>
+   <tr>
+     <td>Piter</td>
+     <td>Griffin</td>
+   </tr>
+   <tr>
+     <td>Lois</td>
+     <td>Griffin</td>
+   </tr>
+</jadval>
 
 </body>
 </html>
 
 
 
-To create a table with just border around the table, only specify border property for <table> 
+Jadval atrofida faqat chegarasi bo'lgan jadval yaratish uchun faqat <table> uchun chegara xususiyatini belgilang
 
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-table {
-  width: 100%;
-  border-collapse: collapse;
-  border: 1px solid black;
+<uslub>
+stol {
+   kengligi: 100%;
+   chegara-burilish: qulash;
+   chegara: 1px qattiq qora;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h2>Single Border Around The Table</h2>
+<h2>Stol atrofidagi yagona chegara</h2>
 
-<table>
-  <tr>
-    <th>Firstname</th>
-    <th>Lastname</th>
-  </tr>
-  <tr>
-    <td>Peter</td>
-    <td>Griffin</td>
-  </tr>
-  <tr>
-    <td>Lois</td>
-    <td>Griffin</td>
-  </tr>
-</table>
+<jadval>
+   <tr>
+     <th>Ism</th>
+     <th>Familiya</th>
+   </tr>
+   <tr>
+     <td>Piter</td>
+     <td>Griffin</td>
+   </tr>
+   <tr>
+     <td>Lois</td>
+     <td>Griffin</td>
+   </tr>
+</jadval>
 
 </body>
 </html>
 
 
 
-Table Size
+Jadval hajmi
 
-Table Width and Height
+Jadvalning kengligi va balandligi
 
-The width and height of a table are defined by the width and height properties.
+Jadvalning kengligi va balandligi kenglik va balandlik xususiyatlari bilan belgilanadi.
 
-The example below sets the width of the table to 100%, and the height of the <th> elements to 70px:
+Quyidagi misol jadvalning kengligini 100% va <th> elementlarning balandligini 70px ga o'rnatadi:
 
 
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-table, td, th {
-  border: 1px solid black;
+<uslub>
+jadval, td, th {
+   chegara: 1px qattiq qora;
 }
 
-table {
-  border-collapse: collapse;
-  width: 100%;
+stol {
+   chegara-burilish: qulash;
+   kengligi: 100%;
 }
 
-th {
-  height: 70px;
+n {
+   balandligi: 70px;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h2>The width and height Properties</h2>
-<p>Set the width of the table, and the height of the table header row:</p>
+<h2>Keniklik va balandlik xususiyatlari</h2>
+<p>Jadvalning kengligi va sarlavha satrining balandligini belgilang:</p>
 
-<table>
-  <tr>
-    <th>Firstname</th>
-    <th>Lastname</th>
-    <th>Savings</th>
-  </tr>
-  <tr>
-    <td>Peter</td>
-    <td>Griffin</td>
-    <td>$100</td>
-  </tr>
-  <tr>
-    <td>Lois</td>
-    <td>Griffin</td>
-    <td>$150</td>
-  </tr>
-  <tr>
-    <td>Joe</td>
-    <td>Swanson</td>
-    <td>$300</td>
-  </tr>
-  <tr>
-    <td>Cleveland</td>
-    <td>Brown</td>
-    <td>$250</td>
-  </tr>
-</table>
+<jadval>
+   <tr>
+     <th>Ism</th>
+     <th>Familiya</th>
+     <th>Tejamkorlik</th>
+   </tr>
+   <tr>
+     <td>Piter</td>
+     <td>Griffin</td>
+     <td>$100</td>
+   </tr>
+   <tr>
+     <td>Lois</td>
+     <td>Griffin</td>
+     <td>$150</td>
+   </tr>
+   <tr>
+     <td>Jo</td>
+     <td>Swanson</td>
+     <td>300$</td>
+   </tr>
+   <tr>
+     <td>Klivlend</td>
+     <td>Jigarrang</td>
+     <td>$250</td>
+   </tr>
+</jadval>
 
 </body>
 </html>
 
 
 
-To create a table that should only span half of the page, use the width:50% specification.  See illustration 
+Sahifaning faqat yarmini qamrab oladigan jadval yaratish uchun width:50% spetsifikatsiyasidan foydalaning. Rasmga qarang
 
-below:
+quyida:
 
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-table, td, th {
-  border: 1px solid black;
+<uslub>
+jadval, td, th {
+   chegara: 1px qattiq qora;
 }
 
-table {
-  border-collapse: collapse;
-  width: 50%;
+stol {
+   chegara-burilish: qulash;
+   kengligi: 50%;
 }
 
-th {
-  height: 70px;
+n {
+   balandligi: 70px;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h2>The width and height Properties</h2>
-<p>Set the width of the table, and the height of the table header row:</p>
+<h2>Keniklik va balandlik xususiyatlari</h2>
+<p>Jadvalning kengligi va sarlavha satrining balandligini belgilang:</p>
 
-<table>
-  <tr>
-    <th>Firstname</th>
-    <th>Lastname</th>
-    <th>Savings</th>
-  </tr>
-  <tr>
-    <td>Peter</td>
-    <td>Griffin</td>
-    <td>$100</td>
-  </tr>
-  <tr>
-    <td>Lois</td>
-    <td>Griffin</td>
-    <td>$150</td>
-  </tr>
-  <tr>
-    <td>Joe</td>
-    <td>Swanson</td>
-    <td>$300</td>
-  </tr>
-  <tr>
-    <td>Cleveland</td>
-    <td>Brown</td>
-    <td>$250</td>
-  </tr>
-</table>
+<jadval>
+   <tr>
+     <th>Ism</th>
+     <th>Familiya</th>
+     <th>Tejamkorlik</th>
+   </tr>
+   <tr>
+     <td>Piter</td>
+     <td>Griffin</td>
+     <td>$100</td>
+   </tr>
+   <tr>
+     <td>Lois</td>
+     <td>Griffin</td>
+     <td>$150</td>
+   </tr>
+   <tr>
+     <td>Jo</td>
+     <td>Swanson</td>
+     <td>300$</td>
+   </tr>
+   <tr>
+     <td>Klivlend</td>
+     <td>Jigarrang</td>
+     <td>$250</td>
+   </tr>
+</jadval>
 
 </body>
 </html>
 
 
-CSS Table Alignment::
+CSS jadvalini tekislash::
 
-Horizontal Alignment
+Gorizontal tekislash
 
-The text-align property sets the horizontal alignment (like left, right, or center) of the content in <th> 
+Matnni tekislash xususiyati <th>-dagi kontentning gorizontal tekislanishini (masalan, chap, o'ng yoki markaz) o'rnatadi.
 
-or <td>.
+yoki <td>.
 
-By default, the content of <th> elements are center-aligned and the content of <td> elements are left-
+Odatiy bo'lib, <th> elementlarning mazmuni markazga hizalanadi va <td> elementlarning mazmuni chap-
 
-aligned.
+tekislangan.
 
-To center-align the content of  <td> elements as well, use text-align: center:
+<td> elementlari tarkibini ham markazga tekislash uchun text-align: center dan foydalaning:
 
 
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-table, td, th {
-  border: 1px solid black;
+<uslub>
+jadval, td, th {
+   chegara: 1px qattiq qora;
 }
 
-table {
-  border-collapse: collapse;
-  width: 100%;
+stol {
+   chegara-burilish: qulash;
+   kengligi: 100%;
 }
 
 td {
-  text-align: center;
+   matnni tekislash: markaz;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h2>The text-align Property</h2>
-<p>This property sets the horizontal alignment (like left, right, or center) of the content in th or td.</p>
+<h2>Matnni tekislash xususiyati</h2>
+<p>Bu xususiyat th yoki td.dagi kontentning gorizontal tekislanishini (masalan, chap, oʻng yoki markaz) oʻrnatadi.</p>
 
-<table>
-  <tr>
-    <th>Firstname</th>
-    <th>Lastname</th>
-    <th>Savings</th>
-  </tr>
-  <tr>
-    <td>Peter</td>
-    <td>Griffin</td>
-    <td>$100</td>
-  </tr>
-  <tr>
-    <td>Lois</td>
-    <td>Griffin</td>
-    <td>$150</td>
-  </tr>
-  <tr>
-    <td>Joe</td>
-    <td>Swanson</td>
-    <td>$300</td>
-  </tr>
-  <tr>
-    <td>Cleveland</td>
-    <td>Brown</td>
-    <td>$250</td>
-  </tr>
-</table>
+<jadval>
+   <tr>
+     <th>Ism</th>
+     <th>Familiya</th>
+     <th>Tejamkorlik</th>
+   </tr>
+   <tr>
+     <td>Piter</td>
+     <td>Griffin</td>
+     <td>$100</td>
+   </tr>
+   <tr>
+     <td>Lois</td>
+     <td>Griffin</td>
+     <td>$150</td>
+   </tr>
+   <tr>
+     <td>Jo</td>
+     <td>Swanson</td>
+     <td>300$</td>
+   </tr>
+   <tr>
+     <td>Klivlend</td>
+     <td>Jigarrang</td>
+     <td>$250</td>
+   </tr>
+</jadval>
 
 </body>
 </html>
 
 
 
-To left-align the content, force the alignment of <th> elements to be left-aligned, with the text-align: 
+Kontentni chap tomonga tekislash uchun <th> elementlarni matnni tekislash bilan chapga tekislashni majburlang:
 
-left property:
+chap mulk:
 
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-table, td, th {
-  border: 1px solid black;
+<uslub>
+jadval, td, th {
+   chegara: 1px qattiq qora;
 }
 
-table {
-  border-collapse: collapse;
-  width: 100%;
+stol {
+   chegara-burilish: qulash;
+   kengligi: 100%;
 }
 
-th {
-  text-align: left;
+n {
+   matnni tekislash: chapga;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h2>The text-align Property</h2>
-<p>This property sets the horizontal alignment (like left, right, or center) of the content in th or td.</p>
+<h2>Matnni tekislash xususiyati</h2>
+<p>Bu xususiyat th yoki td.dagi kontentning gorizontal tekislanishini (masalan, chap, oʻng yoki markaz) oʻrnatadi.</p>
 
-<table>
-  <tr>
-    <th>Firstname</th>
-    <th>Lastname</th>
-    <th>Savings</th>
-  </tr>
-  <tr>
-    <td>Peter</td>
-    <td>Griffin</td>
-    <td>$100</td>
-  </tr>
-  <tr>
-    <td>Lois</td>
-    <td>Griffin</td>
-    <td>$150</td>
-  </tr>
-  <tr>
-    <td>Joe</td>
-    <td>Swanson</td>
-    <td>$300</td>
-  </tr>
-  <tr>
-    <td>Cleveland</td>
-    <td>Brown</td>
-    <td>$250</td>
-  </tr>
-</table>
+<jadval>
+   <tr>
+     <th>Ism</th>
+     <th>Familiya</th>
+     <th>Tejamkorlik</th>
+   </tr>
+   <tr>
+     <td>Piter</td>
+     <td>Griffin</td>
+     <td>$100</td>
+   </tr>
+   <tr>
+     <td>Lois</td>
+     <td>Griffin</td>
+     <td>$150</td>
+   </tr>
+   <tr>
+     <td>Jo</td>
+     <td>Swanson</td>
+     <td>300$</td>
+   </tr>
+   <tr>
+     <td>Klivlend</td>
+     <td>Jigarrang</td>
+     <td>$250</td>
+   </tr>
+</jadval>
 
 </body>
 </html>
 
 
 
-Vertical Alignment
+Vertikal tekislash
 
 
-The vertical-align property sets the vertical alignment (like top, bottom, or middle) of the content in <th> 
+Vertical-align xususiyati <th>-dagi kontentning vertikal tekislanishini (masalan, yuqori, pastki yoki o'rta) o'rnatadi.
 
-or <td>. By default, the vertical alignment of the content in a table is middle (for both <th> and <td> 
+yoki <td>. Odatiy bo'lib, jadvaldagi tarkibning vertikal hizalanishi o'rtada (<th> va <td> uchun).
 
-elements).
+elementlar).
 
-The following example sets the vertical text alignment to bottom for <td> elements:
+Quyidagi misol <td> elementlari uchun vertikal matnni pastga tekislashni o'rnatadi:
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-table, td, th {
-  border: 1px solid black;
+<uslub>
+jadval, td, th {
+   chegara: 1px qattiq qora;
 }
 
-table {
-  border-collapse: collapse;
-  width: 100%;
+stol {
+   chegara-burilish: qulash;
+   kengligi: 100%;
 }
 
 td {
-  height: 50px;
-  vertical-align: bottom;
+   balandligi: 50px;
+   vertikal tekislash: pastki;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h2>The vertical-align Property</h2>
-<p>This property sets the vertical alignment (like top, bottom, or middle) of the content in th or td.</p>
-<table>
-  <tr>
-    <th>Firstname</th>
-    <th>Lastname</th>
-    <th>Savings</th>
-  </tr>
-  <tr>
-    <td>Peter</td>
-    <td>Griffin</td>
-    <td>$100</td>
-  </tr>
-  <tr>
-    <td>Lois</td>
-    <td>Griffin</td>
-    <td>$150</td>
-  </tr>
-  <tr>
-    <td>Joe</td>
-    <td>Swanson</td>
-    <td>$300</td>
-  </tr>
-  <tr>
-    <td>Cleveland</td>
-    <td>Brown</td>
-    <td>$250</td>
-  </tr>
-</table>
+<h2>Vertikal tekislash xususiyati</h2>
+<p>Bu xususiyat th yoki td.dagi kontentning vertikal tekislanishini (masalan, yuqori, pastki yoki oʻrta) oʻrnatadi.</p>
+<jadval>
+   <tr>
+     <th>Ism</th>
+     <th>Familiya</th>
+     <th>Tejamkorlik</th>
+   </tr>
+   <tr>
+     <td>Piter</td>
+     <td>Griffin</td>
+     <td>$100</td>
+   </tr>
+   <tr>
+     <td>Lois</td>
+     <td>Griffin</td>
+     <td>$150</td>
+   </tr>
+   <tr>
+     <td>Jo</td>
+     <td>Swanson</td>
+     <td>300$</td>
+   </tr>
+   <tr>
+     <td>Klivlend</td>
+     <td>Jigarrang</td>
+     <td>$250</td>
+   </tr>
+</jadval>
 
 </body>
 </html>
 
 
-CSS Table Style
+CSS jadval uslubi
 
-Table Padding
+Jadvalni to'ldirish
 
-To control the space between the border and the content in a table, use the padding property on <td> and 
+Jadvaldagi chegara va tarkib o'rtasidagi bo'shliqni boshqarish uchun <td> va padding xususiyatidan foydalaning
 
-<th> elements:
-
-<!DOCTYPE html>
-<html>
-<head>
-<style>
-table, td, th {  
-  border: 1px solid #ddd;
-  text-align: left;
-}
-
-table {
-  border-collapse: collapse;
-  width: 100%;
-}
-
-th, td {
-  padding: 15px;
-}
-</style>
-</head>
-<body>
-
-<h2>The padding Property</h2>
-<p>This property adds space between the border and the content in a table.</p>
-
-<table>
-  <tr>
-    <th>Firstname</th>
-    <th>Lastname</th>
-    <th>Savings</th>
-  </tr>
-  <tr>
-    <td>Peter</td>
-    <td>Griffin</td>
-    <td>$100</td>
-  </tr>
-  <tr>
-    <td>Lois</td>
-    <td>Griffin</td>
-    <td>$150</td>
-  </tr>
-  <tr>
-    <td>Joe</td>
-    <td>Swanson</td>
-    <td>$300</td>
-  </tr>
-  <tr>
-    <td>Cleveland</td>
-    <td>Brown</td>
-    <td>$250</td>
-  </tr>
-</table>
-
-</body>
-</html>
-
-
-
-Horizontal Dividers
-
-Add the border-bottom property to <th> and <td> for horizontal dividers:
-
+<th> elementlar:
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-table {
-  border-collapse: collapse;
-  width: 100%;
+<uslub>
+jadval, td, th {
+   chegara: 1px qattiq #ddd;
+   matnni tekislash: chapga;
+}
+
+stol {
+   chegara-burilish: qulash;
+   kengligi: 100%;
 }
 
 th, td {
-  padding: 8px;
-  text-align: left;
-  border-bottom: 1px solid #ddd;
+   to'ldirish: 15px;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h2>Bordered Table Dividers</h2>
-<p>Add the border-bottom property to th and td for horizontal dividers:</p>
+<h2>To'ldirish xususiyati</h2>
+<p>Bu xususiyat chegara va jadval tarkibi oʻrtasida boʻsh joy qoʻshadi.</p>
 
-<table>
-  <tr>
-    <th>Firstname</th>
-    <th>Lastname</th>
-  <th>Savings</th>
-  </tr>
-  <tr>
-    <td>Peter</td>
-    <td>Griffin</td>
-    <td>$100</td>
-  </tr>
-  <tr>
-    <td>Lois</td>
-    <td>Griffin</td>
-    <td>$150</td>
-  </tr>
-  <tr>
-    <td>Joe</td>
-    <td>Swanson</td>
-    <td>$300</td>
-  </tr>
-  <tr>
-    <td>Cleveland</td>
-    <td>Brown</td>
-    <td>$250</td>
-  </tr>
-</table>
+<jadval>
+   <tr>
+     <th>Ism</th>
+     <th>Familiya</th>
+     <th>Tejamkorlik</th>
+   </tr>
+   <tr>
+     <td>Piter</td>
+     <td>Griffin</td>
+     <td>$100</td>
+   </tr>
+   <tr>
+     <td>Lois</td>
+     <td>Griffin</td>
+     <td>$150</td>
+   </tr>
+   <tr>
+     <td>Jo</td>
+     <td>Swanson</td>
+     <td>300$</td>
+   </tr>
+   <tr>
+     <td>Klivlend</td>
+     <td>Jigarrang</td>
+     <td>$250</td>
+   </tr>
+</jadval>
 
 </body>
 </html>
 
 
 
+Gorizontal ajratgichlar
 
-
-Hoverable Table
-
-Use the :hover selector on <tr> to highlight table rows on mouse over:
-
+Gorizontal bo'linishlar uchun border-bottom xususiyatini <th> va <td> ga qo'shing:
 
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-table {
-  border-collapse: collapse;
-  width: 100%;
+<uslub>
+stol {
+   chegara-burilish: qulash;
+   kengligi: 100%;
 }
 
 th, td {
-  padding: 8px;
-  text-align: left;
-  border-bottom: 1px solid #ddd;
+   to'ldirish: 8px;
+   matnni tekislash: chapga;
+   chegara-pastki: 1px qattiq #ddd;
 }
-
-tr:hover {background-color: yellow;}
 </style>
 </head>
-<body>
+<tana>
 
-<h2>Hoverable Table</h2>
-<p>Move the mouse over the table rows to see the effect.</p>
+<h2>Chegaralangan jadval bo'linuvchilari</h2>
+<p>Gorizontal ajratuvchilar uchun th va td ga border-bottom xususiyatini qo'shing:</p>
 
-<table>
-  <tr>
-    <th>First Name</th>
-    <th>Last Name</th>
-    <th>Points</th>
-  </tr>
-  <tr>
-    <td>Peter</td>
-    <td>Griffin</td>
-    <td>$100</td>
-  </tr>
-  <tr>
-    <td>Lois</td>
-    <td>Griffin</td>
-    <td>$150</td>
-  </tr>
-  <tr>
-    <td>Joe</td>
-    <td>Swanson</td>
-    <td>$300</td>
-  </tr>
-  <tr>
-    <td>Cleveland</td>
-    <td>Brown</td>
-    <td>$250</td>
-  </tr>
-</table>
-
-</body>
-</html>
-
-
-
-Striped Tables
-
-For zebra-striped tables, use the nth-child() selector and add a background-color to all even (or odd) table 
-
-rows:
-
-first row is the heading (odd beginning with <th>)
-
-
-
-<!DOCTYPE html>
-<html>
-<head>
-<style>
-table {
-  border-collapse: collapse;
-  width: 100%;
-}
-
-th, td {
-  text-align: left;
-  padding: 8px;
-}
-
-tr:nth-child(even) {background-color: #f2f2f2;}
-</style>
-</head>
-<body>
-
-<h2>Striped Table</h2>
-<p>For zebra-striped tables, use the nth-child() selector and add a background-color to all even (or odd) 
-
-table rows:</p>
-
-<table>
-  <tr>
-  <th>First Name</th>
-  <th>Last Name</th>
-  <th>Points</th>
-  </tr>
-  <tr>
-  <td>Peter</td>
-  <td>Griffin</td>
-  <td>$100</td>
-  </tr>
-  <tr>
-  <td>Lois</td>
-  <td>Griffin</td>
-  <td>$150</td>
-  </tr>
-  <tr>
-  <td>Joe</td>
-  <td>Swanson</td>
-  <td>$300</td>
-  </tr>
-  <tr>
-  <td>Cleveland</td>
-  <td>Brown</td>
-  <td>$250</td>
-  </tr>
-</table>
+<jadval>
+   <tr>
+     <th>Ism</th>
+     <th>Familiya</th>
+   <th>Tejamkorlik</th>
+   </tr>
+   <tr>
+     <td>Piter</td>
+     <td>Griffin</td>
+     <td>$100</td>
+   </tr>
+   <tr>
+     <td>Lois</td>
+     <td>Griffin</td>
+     <td>$150</td>
+   </tr>
+   <tr>
+     <td>Jo</td>
+     <td>Swanson</td>
+     <td>300$</td>
+   </tr>
+   <tr>
+     <td>Klivlend</td>
+     <td>Jigarrang</td>
+     <td>$250</td>
+   </tr>
+</jadval>
 
 </body>
 </html>
@@ -2208,63 +2071,194 @@ table rows:</p>
 
 
 
-Table Color
 
-The example below specifies the background color and text color of <th> elements:
+Harakatlanuvchi stol
+
+Sichqoncha ustidagi jadval qatorlarini ajratib ko'rsatish uchun <tr> da :hover selektoridan foydalaning:
+
+
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-table {
-  border-collapse: collapse;
-  width: 100%;
+<uslub>
+stol {
+   chegara-burilish: qulash;
+   kengligi: 100%;
 }
 
 th, td {
-  text-align: left;
-  padding: 8px;
+   to'ldirish: 8px;
+   matnni tekislash: chapga;
+   chegara-pastki: 1px qattiq #ddd;
 }
 
-tr:nth-child(even){background-color: #f2f2f2}
+tr: hover {fon rangi: sariq;}
+</style>
+</head>
+<tana>
 
-th {
-  background-color: #04AA6D;
-  color: white;
+<h2>Ko'chma jadval</h2>
+<p>Effektni ko'rish uchun sichqonchani jadval qatorlari ustiga olib boring.</p>
+
+<jadval>
+   <tr>
+     <th>Ism</th>
+     <th>Familiya</th>
+     <th>Bollar</th>
+   </tr>
+   <tr>
+     <td>Piter</td>
+     <td>Griffin</td>
+     <td>$100</td>
+   </tr>
+   <tr>
+     <td>Lois</td>
+     <td>Griffin</td>
+     <td>$150</td>
+   </tr>
+   <tr>
+     <td>Jo</td>
+     <td>Swanson</td>
+     <td>300$</td>
+   </tr>
+   <tr>
+     <td>Klivlend</td>
+     <td>Jigarrang</td>
+     <td>$250</td>
+   </tr>
+</jadval>
+
+</body>
+</html>
+
+
+
+Chiziqli stollar
+
+Zebra chiziqli jadvallar uchun nth-child() selektoridan foydalaning va barcha juft (yoki toq) jadvalga fon rangini qo'shing.
+
+qatorlar:
+
+birinchi qator sarlavha (<th> bilan toq boshlanuvchi)
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<uslub>
+stol {
+   chegara-burilish: qulash;
+   kengligi: 100%;
+}
+
+th, td {
+   matnni tekislash: chapga;
+   to'ldirish: 8px;
+}
+
+tr:nth-child(juft) {fon rangi: #f2f2f2;}
+</style>
+</head>
+<tana>
+
+<h2>Chiziqli stol</h2>
+<p>Zebra chiziqli jadvallar uchun nth-child() selektoridan foydalaning va barcha juft (yoki toq) uchun fon rangini qo'shing.
+
+jadval qatorlari:</p>
+
+<jadval>
+   <tr>
+   <th>Ism</th>
+   <th>Familiya</th>
+   <th>Bollar</th>
+   </tr>
+   <tr>
+   <td>Piter</td>
+   <td>Griffin</td>
+   <td>$100</td>
+   </tr>
+   <tr>
+   <td>Lois</td>
+   <td>Griffin</td>
+   <td>$150</td>
+   </tr>
+   <tr>
+   <td>Jo</td>
+   <td>Swanson</td>
+   <td>300$</td>
+   </tr>
+   <tr>
+   <td>Klivlend</td>
+   <td>Jigarrang</td>
+   <td>$250</td>
+   </tr>
+</jadval>
+
+</body>
+</html>
+
+
+
+
+Jadval rangi
+
+Quyidagi misol <th> elementlarning fon rangi va matn rangini belgilaydi:
+
+<!DOCTYPE html>
+<html>
+<head>
+<uslub>
+stol {
+   chegara-burilish: qulash;
+   kengligi: 100%;
+}
+
+th, td {
+   matnni tekislash: chapga;
+   to'ldirish: 8px;
+}
+
+tr:nth-child(juft){fon rangi: #f2f2f2}
+
+n {
+   fon rangi: #04AA6D;
+   rang: oq;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h2>Colored Table Header</h2>
+<h2>Rangli jadval sarlavhasi</h2>
 
-<table>
-  <tr>
-    <th>Firstname</th>
-    <th>Lastname</th>
-    <th>Savings</th>
-  </tr>
-  <tr>
-    <td>Peter</td>
-    <td>Griffin</td>
-    <td>$100</td>
-  </tr>
-  <tr>
-    <td>Lois</td>
-    <td>Griffin</td>
-    <td>$150</td>
-  </tr>
-  <tr>
-    <td>Joe</td>
-    <td>Swanson</td>
-    <td>$300</td>
-  </tr>
-  <tr>
-    <td>Cleveland</td>
-    <td>Brown</td>
-    <td>$250</td>
+<jadval>
+   <tr>
+     <th>Ism</th>
+     <th>Familiya</th>
+     <th>Tejamkorlik</th>
+   </tr>
+   <tr>
+     <td>Piter</td>
+     <td>Griffin</td>
+     <td>$100</td>
+   </tr>
+   <tr>
+     <td>Lois</td>
+     <td>Griffin</td>
+     <td>$150</td>
+   </tr>
+   <tr>
+     <td>Jo</td>
+     <td>Swanson</td>
+     <td>300$</td>
+   </tr>
+   <tr>
+     <td>Klivlend</td>
+     <td>Jigarrang</td>
+     <td>$250</td>
 </tr>
-</table>
+</jadval>
 
 </body>
 </html>
@@ -2272,106 +2266,106 @@ th {
 
 
 
-CSS Responsive Table
+CSS javob beruvchi jadvali
 
-Responsive Table
+Javob beruvchi jadval
 
-A responsive table will display a horizontal scroll bar if the screen is too small to display the full 
+Agar ekran to'liq ko'rsatish uchun juda kichik bo'lsa, sezgir jadval gorizontal aylantirish panelini ko'rsatadi
 
-content:
+tarkibi:
 
-Add a container element (like <div>) with overflow-x:auto around the <table> element to make it responsive:
+Konteyner elementini (masalan, <div>) sezgir qilish uchun <table> elementi atrofida overflow-x:auto bilan qo'shing:
 
 
-Note: In OS X Lion (on Mac), scrollbars are hidden by default and only shown when being used (even though 
+Eslatma: OS X Lion-da (Mac-da) aylantirish panellari sukut bo'yicha yashiriladi va faqat foydalanilganda ko'rsatiladi (garchi bo'lsa ham)
 
-"overflow:scroll" is set).
+"overflow: scroll" o'rnatilgan).
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-table {
-  border-collapse: collapse;
-  width: 100%;
+<uslub>
+stol {
+   chegara-burilish: qulash;
+   kengligi: 100%;
 }
 
 th, td {
-  text-align: left;
-  padding: 8px;
+   matnni tekislash: chapga;
+   to'ldirish: 8px;
 }
 
-tr:nth-child(even) {background-color: #f2f2f2;}
+tr:nth-child(juft) {fon rangi: #f2f2f2;}
 </style>
 </head>
-<body>
+<tana>
 
-<h2>Responsive Table</h2>
-<p>A responsive table will display a horizontal scroll bar if the screen is too 
-small to display the full content. Resize the browser window to see the effect:</p>
-<p>To create a responsive table, add a container element (like div) with <strong>overflow-x:auto</strong> 
+<h2>Javob beruvchi jadval</h2>
+<p>Agar ekran ham bo'lsa, javob beruvchi jadval gorizontal aylantirish panelini ko'rsatadi
+to'liq tarkibni ko'rsatish uchun kichik. Effektni ko'rish uchun brauzer oynasining o'lchamini o'zgartiring:</p>
+<p>Restiv jadval yaratish uchun <strong>overflow-x:auto</strong> bilan konteyner elementini (masalan, div) qo‘shing.
 
-around the table element:</p>
+jadval elementi atrofida:</p>
 
 <div style="overflow-x:auto;">
-  <table>
-    <tr>
-      <th>First Name</th>
-      <th>Last Name</th>
-      <th>Points</th>
-      <th>Points</th>
-      <th>Points</th>
-      <th>Points</th>
-      <th>Points</th>
-      <th>Points</th>
-      <th>Points</th>
-      <th>Points</th>
-      <th>Points</th>
-      <th>Points</th>
-    </tr>
-    <tr>
-      <td>Jill</td>
-      <td>Smith</td>
-      <td>50</td>
-      <td>50</td>
-      <td>50</td>
-      <td>50</td>
-      <td>50</td>
-      <td>50</td>
-      <td>50</td>
-      <td>50</td>
-      <td>50</td>
-      <td>50</td>
-    </tr>
-    <tr>
-      <td>Eve</td>
-      <td>Jackson</td>
-      <td>94</td>
-      <td>94</td>
-      <td>94</td>
-      <td>94</td>
-      <td>94</td>
-      <td>94</td>
-      <td>94</td>
-      <td>94</td>
-      <td>94</td>
-      <td>94</td>
-    </tr>
-    <tr>
-      <td>Adam</td>
-      <td>Johnson</td>
-      <td>67</td>
-      <td>67</td>
-      <td>67</td>
-      <td>67</td>
-      <td>67</td>
-      <td>67</td>
-      <td>67</td>
-      <td>67</td>
-      <td>67</td>
-      <td>67</td>
-    </tr>
-  </table>
+   <jadval>
+     <tr>
+       <th>Ism</th>
+       <th>Familiya</th>
+       <th>Bollar</th>
+       <th>Bollar</th>
+       <th>Bollar</th>
+       <th>Bollar</th>
+       <th>Bollar</th>
+       <th>Bollar</th>
+       <th>Bollar</th>
+       <th>Bollar</th>
+       <th>Bollar</th>
+       <th>Bollar</th>
+     </tr>
+     <tr>
+       <td>Jill</td>
+       <td>Smit</td>
+       <td>50</td>
+       <td>50</td>
+       <td>50</td>
+       <td>50</td>
+       <td>50</td>
+       <td>50</td>
+       <td>50</td>
+       <td>50</td>
+       <td>50</td>
+       <td>50</td>
+     </tr>
+     <tr>
+       <td>Havo</td>
+       <td>Jekson</td>
+       <td>94</td>
+       <td>94</td>
+       <td>94</td>
+       <td>94</td>
+       <td>94</td>
+       <td>94</td>
+       <td>94</td>
+       <td>94</td>
+       <td>94</td>
+       <td>94</td>
+     </tr>
+     <tr>
+       <td>Odam</td>
+       <td>Jonson</td>
+       <td>67</td>
+       <td>67</td>
+       <td>67</td>
+       <td>67</td>
+       <td>67</td>
+       <td>67</td>
+       <td>67</td>
+       <td>67</td>
+       <td>67</td>
+       <td>67</td>
+     </tr>
+   </jadval>
 </div>
 
 </body>
@@ -2379,99 +2373,99 @@ around the table element:</p>
 
 
 
-More table examples:
+Ko'proq jadval misollari:
 
 
-To make a fancy table
+Chiroyli stol yasash uchun
 
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-#customers {
-  font-family: Arial, Helvetica, sans-serif;
-  border-collapse: collapse;
-  width: 100%;
+<uslub>
+#xaridorlar {
+   shrift oilasi: Arial, Helvetica, sans-serif;
+   chegara-burilish: qulash;
+   kengligi: 100%;
 }
 
-#customers td, #customers th {
-  border: 1px solid #ddd;
-  padding: 8px;
+#mijozlar td, #mijozlar th {
+   chegara: 1px qattiq #ddd;
+   to'ldirish: 8px;
 }
 
-#customers tr:nth-child(even){background-color: #f2f2f2;}
+#mijozlar tr:n-child(hatto){fon rangi: #f2f2f2;}
 
-#customers tr:hover {background-color: #ddd;}
+#customers tr:hover {fon rangi: #ddd;}
 
-#customers th {
-  padding-top: 12px;
-  padding-bottom: 12px;
-  text-align: left;
-  background-color: #04AA6D;
-  color: white;
+#mijozlar th {
+   to'ldirish tepasi: 12px;
+   to'ldirish-pastki: 12px;
+   matnni tekislash: chapga;
+   fon rangi: #04AA6D;
+   rang: oq;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<table id="customers">
-  <tr>
-    <th>Company</th>
-    <th>Contact</th>
-    <th>Country</th>
-  </tr>
-  <tr>
-    <td>Alfreds Futterkiste</td>
-    <td>Maria Anders</td>
-    <td>Germany</td>
-  </tr>
-  <tr>
-    <td>Berglunds snabbköp</td>
-    <td>Christina Berglund</td>
-    <td>Sweden</td>
-  </tr>
-  <tr>
-    <td>Centro comercial Moctezuma</td>
-    <td>Francisco Chang</td>
-    <td>Mexico</td>
-  </tr>
-  <tr>
-    <td>Ernst Handel</td>
-    <td>Roland Mendel</td>
-    <td>Austria</td>
-  </tr>
-  <tr>
-    <td>Island Trading</td>
-    <td>Helen Bennett</td>
-    <td>UK</td>
-  </tr>
-  <tr>
-    <td>Königlich Essen</td>
-    <td>Philip Cramer</td>
-    <td>Germany</td>
-  </tr>
-  <tr>
-    <td>Laughing Bacchus Winecellars</td>
-    <td>Yoshi Tannamuri</td>
-    <td>Canada</td>
-  </tr>
-  <tr>
-    <td>Magazzini Alimentari Riuniti</td>
-    <td>Giovanni Rovelli</td>
-    <td>Italy</td>
-  </tr>
-  <tr>
-    <td>North/South</td>
-    <td>Simon Crowther</td>
-    <td>UK</td>
-  </tr>
-  <tr>
-    <td>Paris spécialités</td>
-    <td>Marie Bertrand</td>
-    <td>France</td>
-  </tr>
-</table>
+<table id="mijozlar">
+   <tr>
+     <th>Kompaniya</th>
+     <th>Aloqa</th>
+     <th>Mamlakat</th>
+   </tr>
+   <tr>
+     <td>Alfreds Futterkiste</td>
+     <td>Mariya Anders</td>
+     <td>Germaniya</td>
+   </tr>
+   <tr>
+     <td>Berglunds snabbköp</td>
+     <td>Kristina Berglund</td>
+     <td>Shvetsiya</td>
+   </tr>
+   <tr>
+     <td>Markaziy tijorat Moctezuma</td>
+     <td>Fransisko Chang</td>
+     <td>Meksika</td>
+   </tr>
+   <tr>
+     <td>Ernst Handel</td>
+     <td>Roland Mendel</td>
+     <td>Avstriya</td>
+   </tr>
+   <tr>
+     <td>Orol savdosi</td>
+     <td>Xelen Bennet</td>
+     <td>Buyuk Britaniya</td>
+   </tr>
+   <tr>
+     <td>Königlich Essen</td>
+     <td>Filip Kramer</td>
+     <td>Germaniya</td>
+   </tr>
+   <tr>
+     <td>Kulayotgan Bacchus vinocellars</td>
+     <td>Yoshi Tannamuri</td>
+     <td>Kanada</td>
+   </tr>
+   <tr>
+     <td>Magazzini Alimentari Riuniti</td>
+     <td>Jiovanni Rovelli</td>
+     <td>Italiya</td>
+   </tr>
+   <tr>
+     <td>Shimoliy/Janubiy</td>
+     <td>Simon Krouter</td>
+     <td>Buyuk Britaniya</td>
+   </tr>
+   <tr>
+     <td>Paris spécialités</td>
+     <td>Mari Bertran</td>
+     <td>Frantsiya</td>
+   </tr>
+</jadval>
 
 </body>
 </html>
@@ -2479,61 +2473,61 @@ To make a fancy table
 
 
 
-To set the position of table caption
+Jadval sarlavhasi o'rnini o'rnatish uchun
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-table, td, th {
-  border: 1px solid black;
+<uslub>
+jadval, td, th {
+   chegara: 1px qattiq qora;
 }
 
-caption {
-  caption-side: bottom;
+sarlavha {
+   sarlavha tomoni: pastki;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<table>
-<caption>Table 1.1 Customers</caption>
-  <tr>
-    <th>Company</th>
-    <th>Contact</th>
-    <th>Country</th>
-  </tr>
-  <tr>
-    <td>Alfreds Futterkiste</td>
-    <td>Maria Anders</td>
-    <td>Germany</td>
-  </tr>
-  <tr class="alt">
-    <td>Berglunds snabbköp</td>
-    <td>Christina Berglund</td>
-    <td>Sweden</td>
-  </tr>
-  <tr>
-    <td>Centro comercial Moctezuma</td>
-    <td>Francisco Chang</td>
-    <td>Mexico</td>
-  </tr>
-  <tr class="alt">
-    <td>Ernst Handel</td>
-    <td>Roland Mendel</td>
-    <td>Austria</td>
-  </tr>
-  <tr>
-    <td>Island Trading</td>
-    <td>Helen Bennett</td>
-    <td>UK</td>
-  </tr>
-</table>
+<jadval>
+<caption>1.1-jadval mijozlar</caption>
+   <tr>
+     <th>Kompaniya</th>
+     <th>Aloqa</th>
+     <th>Mamlakat</th>
+   </tr>
+   <tr>
+     <td>Alfreds Futterkiste</td>
+     <td>Mariya Anders</td>
+     <td>Germaniya</td>
+   </tr>
+   <tr class="alt">
+     <td>Berglunds snabbköp</td>
+     <td>Kristina Berglund</td>
+     <td>Shvetsiya</td>
+   </tr>
+   <tr>
+     <td>Markaziy tijorat Moctezuma</td>
+     <td>Fransisko Chang</td>
+     <td>Meksika</td>
+   </tr>
+   <tr class="alt">
+     <td>Ernst Handel</td>
+     <td>Roland Mendel</td>
+     <td>Avstriya</td>
+   </tr>
+   <tr>
+     <td>Orol savdosi</td>
+     <td>Xelen Bennet</td>
+     <td>Buyuk Britaniya</td>
+   </tr>
+</jadval>
 
 </body>
 </html>
 
-<kbd>return</kbd>[Back to table of contents](#homepage)
+<kbd>qaytish</kbd>[Mundarijaga qaytish](#homepage)
 
 
 --------
@@ -2542,47 +2536,47 @@ caption {
 
 
 
-## CSS Position
+## CSS pozitsiyasi
 
-CSS Layout - The position Property
+CSS Layout - joylashuv xususiyati
 
-The position property is used to specify whether the positioning of an element is static, relative, fixed, 
+Pozitsiya xususiyati elementning joylashuvi statik, nisbiy, sobit,
 
-absolute, or sticky. The elements are then positioned using top, bottom, left, and right properties (these 
+mutlaq yoki yopishqoq. Keyin elementlar yuqori, pastki, chap va o'ng xususiyatlaridan foydalangan holda joylashtiriladi (bular
 
-properties only work after position property is first set). These properties work differently depending on 
+xususiyatlar faqat pozitsiya xususiyati birinchi marta o'rnatilgandan keyin ishlaydi). Bu xususiyatlar qarab har xil ishlaydi
 
-the CSS position set.
+CSS pozitsiyasi o'rnatilgan.
 
 
 
-position: static;  ::
+pozitsiyasi: statik; ::
 
-Static position is the default for all html elements. Static positioned element are not affected by top 
+Statik joylashuv barcha HTML elementlari uchun standart hisoblanadi. Statik joylashtirilgan element yuqoridan ta'sirlanmaydi
 
-bottom, left, and right properties. They are not positioned in a special way but rather follow the normal 
+pastki, chap va o'ng xususiyatlari. Ular maxsus tarzda joylashtirilmaydi, balki odatdagiga amal qiladi
 
-flow of the page. See the illustration of the usage of position;static; below. 
+sahifa oqimi. Pozitsiyadan foydalanish tasviriga qarang;statik; quyida.
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
+<uslub>
 div.static {
-  position: static;
-  border: 3px solid #73AD21;
+   pozitsiyasi: statik;
+   chegara: 3px qattiq #73AD21;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h2>position: static;</h2>
+<h2>pozitsiya: statik;</h2>
 
-<p>An element with position: static; is not positioned in any special way; it is 
-always positioned according to the normal flow of the page:</p>
+<p>Pozitsiyaga ega element: statik; hech qanday maxsus tarzda joylashtirilmaydi; bu
+har doim sahifaning normal oqimiga ko'ra joylashtirilgan:</p>
 
-<div class="static">
-  This div element has position: static;
+<div class="statik">
+   Ushbu div elementi pozitsiyasiga ega: statik;
 </div>
 
 </body>
@@ -2590,37 +2584,36 @@ always positioned according to the normal flow of the page:</p>
 
 
 
+pozitsiya: nisbiy; ::
 
-position:relative;  ::
+Nisbatan joylashuv xususiyati elementni normal holatiga nisbatan joylashtirish imkonini beradi. Sozlama
 
-The relative position property enables an element to be positioned relative to its normal position. Settng 
+joylashuvi bilan elementning yuqori, o'ng, pastki va chap xususiyatlari: nisbiy; dan bunday elementni rostlaydi
 
-the top,right, bottom, and left properties of an element with position: relative; adjusts such element from 
+uning normal holati. Qolgan tarkib element tomonidan qoldirilgan bo'shliqni egallamaydi. Rasmga qarang
 
-its normal position. The rest of the contents do not occupy any gap left by the element. See an illustration 
-
-below:
+quyida:
 
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-div.relative {
-  position: relative;
-  left: 30px;
-  border: 3px solid #73AD21;
+<uslub>
+div.nisbiy {
+   pozitsiya: nisbiy;
+   chap: 30px;
+   chegara: 3px qattiq #73AD21;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h2>position: relative;</h2>
+<h2>pozitsiya: nisbiy;</h2>
 
-<p>An element with position: relative; is positioned relative to its normal position:</p>
+<p>Pozitsiyaga ega element: nisbiy; normal holatiga nisbatan joylashtirilgan:</p>
 
 <div class="relative">
-This div element has position: relative;
+Ushbu div elementi pozitsiyaga ega: nisbiy;
 </div>
 
 </body>
@@ -2629,102 +2622,102 @@ This div element has position: relative;
 
 
 
-NB: left: 30px;  position the element 30px away from its original position (moved to the right by 30px).
+Eslatma: chap: 30px; elementni asl joyidan 30px uzoqda joylashtiring (30px oʻngga siljiydi).
 
 
 
 
-position: fixed; ::
+pozitsiyasi: qattiq; ::
 
-This enables an element positioning relative to the viewport; element stays in the same place even if page 
+Bu ko'rish oynasiga nisbatan elementni joylashtirish imkonini beradi; element sahifa bo'lsa ham bir joyda qoladi
 
-is scrolled. A fixed element does not leave a gap in the page where it would normally have been located.
+aylantiriladi. Ruxsat etilgan element sahifada odatda joylashgan joyda bo'sh joy qoldirmaydi.
 
-The top, right, bottom, and left properties are used to position the element.
+Yuqori, o'ng, pastki va chap xususiyatlar elementni joylashtirish uchun ishlatiladi.
 
 
-See example below:
+Quyidagi misolga qarang:
 
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
+<uslub>
 div.fixed {
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  width: 300px;
-  border: 3px solid #73AD21;
+   pozitsiyasi: qattiq;
+   pastki: 0;
+   o'ng: 0;
+   kengligi: 300px;
+   chegara: 3px qattiq #73AD21;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h2>position: fixed;</h2>
+<h2>pozitsiya: belgilangan;</h2>
 
-<p>An element with position: fixed; is positioned relative to the viewport, which means it always stays in 
+<p>Pozitsiyaga ega element: belgilangan; ko'rish oynasiga nisbatan joylashtirilgan, ya'ni u doimo ichida qoladi
 
-the same place even if the page is scrolled:</p>
+sahifa aylantirilsa ham bir xil joy:</p>
 
-<div class="fixed">
-This div element has position: fixed;
+<div class="tuzatildi">
+Ushbu div elementi pozitsiyaga ega: fixed;
 </div>
 
 </body>
 </html>
 
-NB: bottom:0; right:0; means that the element is positioned in the right bottom corner exactly without any 
+Eslatma: pastki: 0; o'ng: 0; elementning o'ng pastki burchakda aniq joylashuvini bildiradi
 
-gap between the element borders and the viewport.
-
-
+element chegaralari va ko'rish oynasi orasidagi bo'shliq.
 
 
-position: absolute; ::
-
-An element with position:absolute; is positioned relative to its closest ancestor, rather than position 
-
-relative to the viewport. The absolute positioned element uses the document body as ancestor if it has no 
-
-positioned ancestor, and they move along with page scrolling. See example below:
 
 
-Note: Absolute positioned elements are removed from the normal flow, and can overlap elements.
+pozitsiyasi: mutlaq; ::
+
+Pozitsiyali element:mutlaq; pozitsiyasiga emas, balki eng yaqin ajdodiga nisbatan joylashtirilgan
+
+ko'rish oynasiga nisbatan. Mutlaq joylashtirilgan element, agar u bo'lmasa, hujjat tanasidan ajdod sifatida foydalanadi
+
+joylangan ajdod va ular sahifani aylantirish bilan birga harakatlanadi. Quyidagi misolga qarang:
+
+
+Eslatma: Mutlaq joylashtirilgan elementlar oddiy oqimdan olib tashlanadi va elementlarning ustiga chiqishi mumkin.
 
 
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-div.relative {
-  position: relative;
-  width: 400px;
-  height: 200px;
-  border: 3px solid #73AD21;
-} 
+<uslub>
+div.nisbiy {
+   pozitsiya: nisbiy;
+   kengligi: 400px;
+   balandligi: 200px;
+   chegara: 3px qattiq #73AD21;
+}
 
 div.absolute {
-  position: absolute;
-  top: 80px;
-  right: 0;
-  width: 200px;
-  height: 100px;
-  border: 3px solid #73AD21;
+   pozitsiyasi: mutlaq;
+   yuqori: 80px;
+   o'ng: 0;
+   kengligi: 200px;
+   balandligi: 100px;
+   chegara: 3px qattiq #73AD21;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h2>position: absolute;</h2>
+<h2>pozitsiya: mutlaq;</h2>
 
-<p>An element with position: absolute; is positioned relative to the nearest positioned ancestor (instead of 
+<p>Pozitsiyaga ega element: mutlaq; eng yaqin joylashgan ajdodga nisbatan joylashtirilgan (o'rniga
 
-positioned relative to the viewport, like fixed):</p>
+ko'rish oynasiga nisbatan o'rnatilgan, mahkamlangan kabi):</p>
 
-<div class="relative">This div element has position: relative;
-  <div class="absolute">This div element has position: absolute;</div>
+<div class="relative">Ushbu div elementi pozitsiyaga ega: nisbatan;
+   <div class="absolute">Ushbu div elementi pozitsiyasiga ega: mutlaq;</div>
 </div>
 
 </body>
@@ -2732,318 +2725,317 @@ positioned relative to the viewport, like fixed):</p>
 
 
 
-Position: sticky; :::
+Lavozim: yopishqoq; :::
 
-An element positioned as sticky is positioned relative the the user's position during scrolling. The stick 
+Yopishqoq sifatida joylashtirilgan element aylantirish vaqtida foydalanuvchining joylashuviga nisbatan joylashtirilgan. Tayoq
 
-element position is toggled between relative and fixed depending on the scroll position. It is positioned 
+element pozitsiyasi aylantirish holatiga qarab nisbiy va sobit o'rtasida almashtiriladi. U joylashtirilgan
 
-relative until a given offset position is met in the viewport - then it "sticks" in place (like 
+ko'rish oynasida ma'lum bir ofset pozitsiyasi bajarilmaguncha nisbiy - keyin u joyida "yopishadi" (masalan
 
-position:fixed). You must also specify top, right, bottom, or left position for sticky position to work. 
+pozitsiyasi: belgilangan). Yopishqoq pozitsiyaning ishlashi uchun yuqori, o'ng, pastki yoki chap pozitsiyani ham belgilashingiz kerak.
 
 
-To  make the sticky elemnt sticks to the top of the page (top: 0) when you reach its scroll position, see 
+Yopishqoq element sahifaning yuqori qismiga (yuqori: 0) yopishib qolishi uchun aylantirish holatiga kelganingizda qarang.
 
-how to do it below:
+quyida buni qanday qilish kerak:
 
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
+<uslub>
 div.sticky {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-  padding: 5px;
-  background-color: #cae8ca;
-  border: 2px solid #4CAF50;
+   pozitsiyasi: -webkit-yopishqoq;
+   pozitsiyasi: yopishqoq;
+   yuqori: 0;
+   to'ldirish: 5px;
+   fon rangi: #cae8ca;
+   chegara: 2px qattiq #4CAF50;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<p>Try to <b>scroll</b> inside this frame to understand how sticky positioning works.</p>
+<p>Yopishqoq joylashishni aniqlash qanday ishlashini tushunish uchun ushbu ramka ichida <b>aylanishga</b> harakat qiling.</p>
 
-<div class="sticky">I am sticky!</div>
+<div class="sticky">Men yopishqoqman!</div>
 
 <div style="padding-bottom:2000px">
-  <p>In this example, the sticky element sticks to the top of the page (top: 0), when you reach its scroll 
+   <p>Ushbu misolda yopishqoq element sahifaning yuqori qismiga yopishib qoladi (yuqori: 0), varaqlash nuqtasiga yetganda
 
-position.</p>
-  <p>Scroll back up to remove the stickyness.</p>
-  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset 
+pozitsiyasi.</p>
+   <p>Yopishqoqlikni olib tashlash uchun yuqoriga aylantiring.</p>
+   <p>O'tkazishni yoqish uchun ba'zi matn.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
 
-concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. 
+concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum.
 
-Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset 
+Affert laboramus repudiandae nec et. Inciderint uning reklamasi samarali. Eum no molestiae voluptatibus.</p>
+   <p>O'tkazishni yoqish uchun ba'zi matn.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
 
-concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. 
+concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum.
 
-Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+Affert laboramus repudiandae nec et. Inciderint uning reklamasi samarali. Eum no molestiae voluptatibus.</p>
 </div>
 
 </body>
 </html>
 
 
+Bir-biriga yopishgan elementlar::
 
-Overlapping elements::
+Joylashtirilgan elementlar boshqa elementlarning ustiga chiqishi mumkin. Z-index xususiyati stacking tartibini belgilaydi
 
-The positioned elements can overlap other elements.  The z-index property specifies the order of stacking 
+element (qaysi element oldida (z musbat) yoki orqasida (z salbiy) joylashtirilishi kerak
 
-the element (which element should be placed in front of (z is positive) or behind (z is negative) the 
-
-others). The z-index can be positive or negative.
+boshqalar). Z-indeks ijobiy yoki salbiy bo'lishi mumkin.
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
+<uslub>
 img {
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  z-index: -1;
+   pozitsiyasi: mutlaq;
+   chap: 0px;
+   yuqori: 0px;
+   z-indeks: -1;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h1>This is a heading</h1>
+<h1>Bu sarlavha</h1>
 <img src="w3css.gif" width="100" height="140">
-<p>Because the image has a z-index of -1, it will be placed behind the text.</p>
+<p>Rasmning z-indeksi -1 bo'lgani uchun u matn orqasiga joylashtiriladi.</p>
 
 </body>
 </html>
 
 
 
-An element with greater stack order is always in front of an element with a lower stack order.
+Kattaroq stek tartibiga ega element har doim pastroq stek tartibiga ega element oldida turadi.
 
-Note: If two positioned elements overlap without a z-index specified, the element positioned last in the 
+Eslatma: Agar ikkita joylashtirilgan element z-indeksi ko'rsatilmagan holda bir-birining ustiga tushsa, element eng so'nggida joylashgan
 
-HTML code will be shown on top.
-
-
-
-Positioning Text In an Image.
-
-
-Top left:
-
-
-<!DOCTYPE html>
-<html>
-<head>
-<style>
-.container {
-  position: relative;
-}
-
-.topleft {
-  position: absolute;
-  top: 8px;
-  left: 16px;
-  font-size: 18px;
-}
-
-img { 
-  width: 100%;
-  height: auto;
-  opacity: 0.3;
-}
-</style>
-</head>
-<body>
-
-<h2>Image Text</h2>
-<p>Add some text to an image in the top left corner:</p>
-
-<div class="container">
-  <img src="img_5terre_wide.jpg" alt="Cinque Terre" width="1000" height="300">
-  <div class="topleft">Top Left</div>
-</div>
-
-</body>
-</html>
-
-
-Top right:
-
-<!DOCTYPE html>
-<html>
-<head>
-<style>
-.container {
-  position: relative;
-}
-
-.topright {
-  position: absolute;
-  top: 8px;
-  right: 16px;
-  font-size: 18px;
-}
-
-img { 
-  width: 100%;
-  height: auto;
-  opacity: 0.3;
-}
-</style>
-</head>
-<body>
-
-<h2>Image Text</h2>
-<p>Add some text to an image in the top right corner:</p>
-
-<div class="container">
-  <img src="img_5terre_wide.jpg" alt="Cinque Terre" width="1000" height="300">
-  <div class="topright">Top Right</div>
-</div>
-
-</body>
-</html>
+Yuqorida HTML kodi ko'rsatiladi.
 
 
 
-
-Bottom left:
-
-<!DOCTYPE html>
-<html>
-<head>
-<style>
-.container {
-  position: relative;
-}
-
-.bottomleft {
-  position: absolute;
-  bottom: 8px;
-  left: 16px;
-  font-size: 18px;
-}
-
-img { 
-  width: 100%;
-  height: auto;
-  opacity: 0.3;
-}
-</style>
-</head>
-<body>
-
-<h2>Image Text</h2>
-<p>Add some text to an image in the bottom left corner:</p>
-
-<div class="container">
-  <img src="img_5terre_wide.jpg" alt="Cinque Terre" width="1000" height="300">
-  <div class="bottomleft">Bottom Left</div>
-</div>
-
-</body>
-</html>
+Rasmdagi matnni joylashtirish.
 
 
-
-Bottom Right:
+Yuqori chap:
 
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-.container {
-  position: relative;
+<uslub>
+.idish {
+   pozitsiya: nisbiy;
 }
 
-.bottomright {
-  position: absolute;
-  bottom: 8px;
-  right: 16px;
-  font-size: 18px;
+.toleft {
+   pozitsiyasi: mutlaq;
+   yuqori: 8px;
+   chap: 16px;
+   shrift o'lchami: 18px;
 }
 
-img { 
-  width: 100%;
-  height: auto;
-  opacity: 0.3;
-}
-</style>
-</head>
-<body>
-
-<h2>Image Text</h2>
-<p>Add some text to an image in the bottom right corner:</p>
-
-<div class="container">
-  <img src="img_5terre_wide.jpg" alt="Cinque Terre" width="1000" height="300">
-  <div class="bottomright">Bottom Right</div>
-</div>
-
-</body>
-</html>
-
-
-
-
-Centered::
-
-<!DOCTYPE html>
-<html>
-<head>
-<style>
-.container {
-  position: relative;
-}
-
-.center {
-  position: absolute;
-  top: 50%;
-  width: 100%;
-  text-align: center;
-  font-size: 18px;
-}
-
-img { 
-  width: 100%;
-  height: auto;
-  opacity: 0.3;
-}
-</style>
-</head>
-<body>
-
-<h2>Image Text</h2>
-<p>Center text in image:</p>
-
-<div class="container">
-  <img src="img_5terre_wide.jpg" alt="Cinque Terre" width="1000" height="300">
-  <div class="center">Centered</div>
-</div>
-
-</body>
-</html>
-
-
-
-To set the shape of an element::
-
-<!DOCTYPE html>
-<html>
-<head>
-<style>
 img {
-  position: absolute;
-  clip: rect(0px,60px,200px,0px);
+   kengligi: 100%;
+   balandligi: avtomatik;
+   shaffoflik: 0,3;
 }
 </style>
 </head>
-<body>
+<tana>
+
+<h2>Rasm matni</h2>
+<p>Yuqori chap burchakdagi rasmga matn qo'shing:</p>
+
+<div class="container">
+   <img src="img_5terre_wide.jpg" alt="Cinque Terre" kengligi="1000" balandligi="300">
+   <div class="topleft">Yuqori chap</div>
+</div>
+
+</body>
+</html>
+
+
+Yuqori o'ng:
+
+<!DOCTYPE html>
+<html>
+<head>
+<uslub>
+.idish {
+   pozitsiya: nisbiy;
+}
+
+.to'g'ri {
+   pozitsiyasi: mutlaq;
+   yuqori: 8px;
+   o'ng: 16px;
+   shrift o'lchami: 18px;
+}
+
+img {
+   kengligi: 100%;
+   balandligi: avtomatik;
+   shaffoflik: 0,3;
+}
+</style>
+</head>
+<tana>
+
+<h2>Rasm matni</h2>
+<p>Yuqori oʻng burchakdagi rasmga matn qoʻshing:</p>
+
+<div class="container">
+   <img src="img_5terre_wide.jpg" alt="Cinque Terre" kengligi="1000" balandligi="300">
+   <div class="topright">Yuqori o‘ng</div>
+</div>
+
+</body>
+</html>
+
+
+
+
+Pastki chap:
+
+<!DOCTYPE html>
+<html>
+<head>
+<uslub>
+.idish {
+   pozitsiya: nisbiy;
+}
+
+.pastki chap {
+   pozitsiyasi: mutlaq;
+   pastki: 8px;
+   chap: 16px;
+   shrift o'lchami: 18px;
+}
+
+img {
+   kengligi: 100%;
+   balandligi: avtomatik;
+   shaffoflik: 0,3;
+}
+</style>
+</head>
+<tana>
+
+<h2>Rasm matni</h2>
+<p>pastki chap burchakdagi rasmga bir oz matn qo'shing:</p>
+
+<div class="container">
+   <img src="img_5terre_wide.jpg" alt="Cinque Terre" kengligi="1000" balandligi="300">
+   <div class="bottomleft">Pastki chap</div>
+</div>
+
+</body>
+</html>
+
+
+
+Pastki o'ng:
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<uslub>
+.idish {
+   pozitsiya: nisbiy;
+}
+
+.pastki o'ng {
+   pozitsiyasi: mutlaq;
+   pastki: 8px;
+   o'ng: 16px;
+   shrift o'lchami: 18px;
+}
+
+img {
+   kengligi: 100%;
+   balandligi: avtomatik;
+   shaffoflik: 0,3;
+}
+</style>
+</head>
+<tana>
+
+<h2>Rasm matni</h2>
+<p>Quyi oʻng burchakdagi rasmga matn qoʻshing:</p>
+
+<div class="container">
+   <img src="img_5terre_wide.jpg" alt="Cinque Terre" kengligi="1000" balandligi="300">
+   <div class="bottomright">O'ng pastki</div>
+</div>
+
+</body>
+</html>
+
+
+
+
+Markazlashtirilgan::
+
+<!DOCTYPE html>
+<html>
+<head>
+<uslub>
+.idish {
+   pozitsiya: nisbiy;
+}
+
+.markaz {
+   pozitsiyasi: mutlaq;
+   yuqori: 50%;
+   kengligi: 100%;
+   matnni tekislash: markaz;
+   shrift o'lchami: 18px;
+}
+
+img {
+   kengligi: 100%;
+   balandligi: avtomatik;
+   shaffoflik: 0,3;
+}
+</style>
+</head>
+<tana>
+
+<h2>Rasm matni</h2>
+<p>Rasmdagi markaziy matn:</p>
+
+<div class="container">
+   <img src="img_5terre_wide.jpg" alt="Cinque Terre" kengligi="1000" balandligi="300">
+   <div class="center">Markazlangan</div>
+</div>
+
+</body>
+</html>
+
+
+
+Element shaklini o'rnatish uchun::
+
+<!DOCTYPE html>
+<html>
+<head>
+<uslub>
+img {
+   pozitsiyasi: mutlaq;
+   klip: rect (0px, 60px, 200px, 0px);
+}
+</style>
+</head>
+<tana>
 
 <img src="w3css.gif" width="100" height="140">
 
@@ -3052,21 +3044,20 @@ img {
 
 
 
+Barcha CSS joylashishni aniqlash xususiyatlari
+Mulk tavsifi
+pastki O'rnatilgan quti uchun pastki chetini o'rnatadi
+clip Mutlaqo joylashtirilgan elementni qirqadi
+chap Joylashtirilgan quti uchun chap chekka chekkasini o'rnatadi
+pozitsiya Element uchun joylashishni aniqlash turini belgilaydi
+o‘ng O‘rnatilgan quti uchun o‘ng chekka chekkasini o‘rnatadi
+top Joylashtirilgan quti uchun yuqori chekka chetini o'rnatadi
+z-index Elementning stek tartibini o'rnatadi
 
-All CSS Positioning Properties
-Property 	Description
-bottom 	Sets the bottom margin edge for a positioned box
-clip 	Clips an absolutely positioned element
-left 	Sets the left margin edge for a positioned box
-position 	Specifies the type of positioning for an element
-right 	Sets the right margin edge for a positioned box
-top 	Sets the top margin edge for a positioned box
-z-index 	Sets the stack order of an element
 
-
-NB: position, left:-20px; means that the element is moved 20px left away from its normal position.
+Eslatma: pozitsiya, chap: -20px; element normal holatidan 20px chapga siljiganligini bildiradi.
       
-<kbd>return</kbd>[Back to table of contents](#homepage)
+<kbd>qaytish</kbd>[Mundarijaga qaytish](#homepage)
 
 
 ------
@@ -3074,157 +3065,157 @@ NB: position, left:-20px; means that the element is moved 20px left away from it
 
 
 
-## CSS Z-index
-CSS Layout - The z-index Property
+## CSS Z-indeks
+CSS Layout - z-index xususiyati
 
-The z-index Property
+z-indeks xususiyati
 
-When elements are positioned, they can overlap other elements.
+Elementlar joylashtirilganda, ular boshqa elementlarning ustiga chiqishi mumkin.
 
-The z-index property specifies the stack order of an element (which element should be placed in front of, or behind, the others). See the illustration of CSS z-index below:
+z-index xususiyati elementning stek tartibini belgilaydi (qaysi element boshqalarning oldiga yoki orqasiga joylashtirilishi kerak). Quyidagi CSS z-index rasmiga qarang:
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
+<uslub>
 img {
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  z-index: -1;
+   pozitsiyasi: mutlaq;
+   chap: 0px;
+   yuqori: 0px;
+   z-indeks: -1;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h1>This is a heading</h1>
+<h1>Bu sarlavha</h1>
 <img src="w3css.gif" width="100" height="140">
-<p>Because the image has a z-index of -1, it will be placed behind the text.</p>
+<p>Rasmning z-indeksi -1 bo'lgani uchun u matn orqasiga joylashtiriladi.</p>
 
 </body>
 </html>
 
-Note: z-index only works on positioned elements (position: absolute, position: relative, position: fixed, or position: sticky) and flex items (elements that are direct children of display: flex elements).   
+Eslatma: z-indeks faqat joylashtirilgan elementlarda (pozitsiya: mutlaq, pozitsiya: nisbiy, pozitsiya: qattiq yoki pozitsiya: yopishqoq) va moslashuvchan elementlarda (ekspleyning bevosita bolalari bo'lgan elementlar: moslashuvchan elementlar) ishlaydi.
       
-Another z-index Example
-Example
+Boshqa z-indeks misoli
+Misol
 
-Here we see that an element with greater stack order is always above an element with a lower stack order:
+Bu erda biz kattaroq stek tartibiga ega element har doim pastroq stek tartibiga ega elementdan yuqori ekanligini ko'ramiz:
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-.container {
-  position: relative;
+<uslub>
+.idish {
+   pozitsiya: nisbiy;
 }
 
-.black-box {
-  position: relative;
-  z-index: 1;
-  border: 2px solid black;
-  height: 100px;
-  margin: 30px;
+.qora quti {
+   pozitsiya: nisbiy;
+   z-indeks: 1;
+   chegara: 2px qattiq qora;
+   balandligi: 100px;
+   chegara: 30px;
 }
 
 .gray-box {
-  position: absolute;
-  z-index: 3; /* gray box will be above both green and black box */
-  background: lightgray;
-  height: 60px;  
-  width: 70%;
-  left: 50px;
-  top: 50px;
+   pozitsiyasi: mutlaq;
+   z-indeks: 3; /* kulrang quti yashil va qora qutining tepasida bo'ladi */
+   fon: och kulrang;
+   balandligi: 60px;
+   kengligi: 70%;
+   chap: 50px;
+   yuqori: 50px;
 }
 
-.green-box {
-  position: absolute;
-  z-index: 2; /* green box will be above black box */
-  background: lightgreen;
-  width: 35%;
-  left: 270px;
-  top: -15px;
-  height: 100px;
+.yashil quti {
+   pozitsiyasi: mutlaq;
+   z-indeks: 2; /* yashil quti qora qutining tepasida bo'ladi */
+   fon: och yashil;
+   kengligi: 35%;
+   chap: 270px;
+   yuqori: -15px;
+   balandligi: 100px;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h1>Z-index Example</h1>
+<h1>Z-indeks misoli</h1>
 
-<p>An element with greater stack order is always above an element with a lower stack order.</p>
+<p>Yuqorroq stek tartibiga ega element har doim pastroq stek tartibiga ega elementning ustida turadi.</p>
 
 <div class="container">
-  <div class="black-box">Black box (z-index: 1)</div>
-  <div class="gray-box">Gray box (z-index: 3)</div>
-  <div class="green-box">Green box (z-index: 2)</div>
+   <div class="black-box">Qora quti (z-index: 1)</div>
+   <div class="gray-box">Kulrang quti (z-index: 3)</div>
+   <div class="green-box">Yashil quti (z-index: 2)</div>
 </div>
 
 </body>
 </html>
 
-Without z-index
+Z-indekssiz
 
-If two positioned elements overlap each other without a z-index specified, the element defined last in the HTML code will be shown on top.
-Example
+Agar ikkita joylashtirilgan element z-indeks ko'rsatilmagan holda bir-birining ustiga tushsa, HTML kodida oxirgi belgilangan element tepada ko'rsatiladi.
+Misol
 
-Same example as above, but here with no z-index specified:
+Yuqoridagi misol, lekin bu erda z-indeks ko'rsatilmagan:
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-.container {
-  position: relative;
+<uslub>
+.idish {
+   pozitsiya: nisbiy;
 }
 
-.black-box {
-  position: relative;
-  border: 2px solid black;
-  height: 100px;
-  margin: 30px;
+.qora quti {
+   pozitsiya: nisbiy;
+   chegara: 2px qattiq qora;
+   balandligi: 100px;
+   chegara: 30px;
 }
 
 .gray-box {
-  position: absolute;
-  background: lightgray;
-  height: 60px;  
-  width: 70%;
-  left: 50px;
-  top: 50px;
+   pozitsiyasi: mutlaq;
+   fon: och kulrang;
+   balandligi: 60px;
+   kengligi: 70%;
+   chap: 50px;
+   yuqori: 50px;
 }
 
-.green-box {
-  position: absolute;
-  background: lightgreen;
-  width: 35%;
-  left: 270px;
-  top: -15px;
-  height: 100px;
+.yashil quti {
+   pozitsiyasi: mutlaq;
+   fon: och yashil;
+   kengligi: 35%;
+   chap: 270px;
+   yuqori: -15px;
+   balandligi: 100px;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h1>Overlapping elements</h1>
+<h1>Bir-biriga yopishgan elementlar</h1>
 
-<p>If two positioned elements overlap each other without a z-index specified,
-the element defined last in the HTML code will be shown on top:</p>
+<p>Agar ikkita joylashtirilgan element z-indeksi belgilanmagan holda bir-birining ustiga tushsa,
+HTML kodida oxirgi belgilangan element tepada ko'rsatiladi:</p>
 
 <div class="container">
-  <div class="black-box">Black box</div>
-  <div class="gray-box">Gray box</div>
-  <div class="green-box">Green box</div>
+   <div class="black-box">Qora quti</div>
+   <div class="gray-box">Kulrang quti</div>
+   <div class="green-box">Yashil quti</div>
 </div>
 
 </body>
 </html>
 
-CSS Property
-Property 	Description
-z-index 	Sets the stack order of an element
+CSS xususiyati
+Mulk tavsifi
+z-index Elementning stek tartibini o'rnatadi
       
       
-<kbd>return</kbd>[Back to table of contents](#homepage)
+<kbd>qaytish</kbd>[Mundarijaga qaytish](#homepage)
 
 
 
@@ -3232,47 +3223,47 @@ z-index 	Sets the stack order of an element
 ## CSS Overflow
 CSS Layout - Overflow
 
-States what happens if text exceed the space provided for it to occcupy.
+Agar matn egallash uchun ajratilgan joydan oshsa nima bo'lishini bildiradi.
 
-An illustration of this property is shown below:
+Ushbu mulkning tasviri quyida ko'rsatilgan:
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
+<uslub>
 #overflowTest {
-  background: #4CAF50;
-  color: white;
-  padding: 15px;
-  width: 50%;
-  height: 100px;
-  overflow: scroll;
-  border: 1px solid #ccc;
+   fon: #4CAF50;
+   rang: oq;
+   to'ldirish: 15px;
+   kengligi: 50%;
+   balandligi: 100px;
+   to'lib-toshgan: aylantirish;
+   chegara: 1px qattiq #ccc;
 }
 </style>
 </head>
-<body>
+<tana>
 
 <h2>CSS Overflow</h2>
-<p>The overflow property controls what happens to content that is too big to fit into an area.</p>
+<p>Toshib ketish xususiyati hududga sig‘maydigan darajada katta bo‘lgan kontentga nima bo‘lishini nazorat qiladi.</p>
 
-<div id="overflowTest">This text is really long and the height of its container is only 100 pixels. 
+<div id="overflowTest">Ushbu matn haqiqatan ham uzun va uning konteyner balandligi atigi 100 piksel.
 
-Therefore, a scrollbar is added to help the reader to scroll the content. Lorem ipsum dolor sit amet, 
+Shuning uchun, o'quvchiga tarkibni aylantirishga yordam berish uchun aylantirish paneli qo'shiladi. Lorem ipsum dolor sit amet,
 
-consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat 
+consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
 
-volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut 
+volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut
 
-aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse 
+aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse
 
-molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio 
+molestie consequat, vel illum doore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio
 
-dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber 
+dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam ozod
 
-tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim 
+tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim
 
-assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem.</div>
+faraz qilmoq. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem.</div>
 
 </body>
 </html>
@@ -3282,222 +3273,222 @@ assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eo
 
 CSS Overflow
 
-Specifies whether the introduction of scroll bars or clipping content will occur when content of  an element 
+Element tarkibiga o'tish satri yoki qirqish tarkibi kiritilishini belgilaydi
 
-is too big to fit in the specified area.
-
-
-Properties of overflow property:
-visible:This is the default, and ensures that the overflow is not clipped. Content appears outside the 
-
-element's box. 
-
-hidden: clips the overflow, making the remaining content of the element visible
-scroll: clips the overflow, adding scrollbars with which the rest of the content of the element would be 
-
-seen. 
-auto: Works similar to scroll, just that it adds scroll bars only when necessary. 
-
-NB: Overflow property works for block elements which has specified height. Also,
-
-In OS X Lion (on Mac), scrollbars are hidden by default and only shown when being used (even though 
-
-"overflow:scroll" is set).
+belgilangan hududga sig'ish uchun juda katta.
 
 
+Overflow xususiyatining xususiyatlari:
+ko'rinadigan: Bu sukut bo'lib, toshib ketish kesilmasligini ta'minlaydi. Kontent tashqarida paydo bo'ladi
 
-overflow: visible;  ::
+element qutisi.
 
-this is the default value for overflow. It is not clipped and renders outside the element's box. See the 
+yashirin: elementning qolgan tarkibini ko'rinadigan qilib, to'ldirishni qirqadi
+aylantirish: elementning qolgan qismi bo'lishi mumkin bo'lgan aylantirish panellarini qo'shib, to'lib-toshganni kesib tashlaydi
 
-illustration of overflow: visible below:
+ko'rgan.
+auto: aylantirishga o'xshash ishlaydi, faqat kerak bo'lganda aylantirish satrlarini qo'shadi.
+
+Eslatma: Overflow xususiyati belgilangan balandlikdagi blok elementlari uchun ishlaydi. Shuningdek,
+
+OS X Lion-da (Mac-da) aylantirish panellari sukut bo'yicha yashiriladi va faqat foydalanilganda ko'rsatiladi (garchi bo'lsa ham)
+
+"overflow: scroll" o'rnatilgan).
+
+
+
+toshib ketish: ko'rinadigan; ::
+
+bu toshib ketish uchun standart qiymatdir. U kesilmaydi va element qutisidan tashqarida ko'rsatiladi. ga qarang
+
+toshib ketish tasviri: quyida ko'rinadi:
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
+<uslub>
 div {
-  background-color: #eee;
-  width: 200px;
-  height: 50px;
-  border: 1px dotted black;
-  overflow: visible;
+   fon rangi: #eee;
+   kengligi: 200px;
+   balandligi: 50px;
+   chegara: 1px nuqtali qora;
+   toshib ketish: ko'rinadigan;
 }
 </style>
 </head>
-<body>
+<tana>
 
 <h2>CSS Overflow</h2>
-<p>By default, the overflow is visible, meaning that it is not clipped and it renders outside the element's 
+<p>Sukut bo'yicha, to'lib ketish ko'rinadi, ya'ni u kesilmaydi va elementdan tashqarida ko'rsatiladi.
 
-box:</p>
+quti:</p>
 
-<div>You can use the overflow property when you want to have better control of the layout. The overflow 
+<div>Tuzilishni yaxshiroq boshqarishni istasangiz, overflow xususiyatidan foydalanishingiz mumkin. Toshib ketish
 
-property specifies what happens if content overflows an element's box.</div>
+xususiyat, agar kontent elementning qutisiga to‘lib ketgan bo‘lsa, nima bo‘lishini belgilaydi.</div>
 
 </body>
 </html>
 
 
-overflow: hidden; ::
+toshib ketish: yashirin; ::
 
-The hidden overflow property value is clipped (fits inside the provided box), and the rest of the content is 
+Yashirin toshib ketish xususiyatining qiymati kesiladi (berilgan qutiga mos keladi), qolgan qismi esa
 
-hidden. See illustration of overflow: hidden; below:
+yashirin. To'lib-toshgan rasmga qarang: yashirin; quyida:
 
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
+<uslub>
 div {
-  background-color: #eee;
-  width: 200px;
-  height: 50px;
-  border: 1px dotted black;
-  overflow: hidden;
+   fon rangi: #eee;
+   kengligi: 200px;
+   balandligi: 50px;
+   chegara: 1px nuqtali qora;
+   toshib ketish: yashirin;
 }
 </style>
 </head>
-<body>
+<tana>
 
 <h2>CSS Overflow</h2>
-<p>With the hidden value, the overflow is clipped, and the rest of the content is hidden:</p>
-<p>Try to remove the overflow property to understand how it works.</p>
+<p>Yashirin qiymat bilan to‘lib-tosh qirqib olinadi, qolgan tarkib esa berkitiladi:</p>
+<p>Uning qanday ishlashini tushunish uchun overflow xususiyatini olib tashlashga harakat qiling.</p>
 
-<div>You can use the overflow property when you want to have better control of the layout. The overflow 
+<div>Tuzilishni yaxshiroq boshqarishni istasangiz, overflow xususiyatidan foydalanishingiz mumkin. Toshib ketish
 
-property specifies what happens if content overflows an element's box.</div>
-
-</body>
-</html>
-
-
-
-overflow: scroll; ::
-
-When the overflow is set to scroll, such overflow is clipped and a scrollbar is added inside the box. This 
-
-option adds both horizontal and vertical scroll bars, even in circumstances where they are not needed. See 
-
-an illustration of overflow: scroll; below:
-
-<!DOCTYPE html>
-<html>
-<head>
-<style>
-div {
-  background-color: #eee;
-  width: 200px;
-  height: 100px;
-  border: 1px dotted black;
-  overflow: scroll;
-}
-</style>
-</head>
-<body>
-
-<h2>CSS Overflow</h2>
-<p>Setting the overflow value to scroll, the overflow is clipped and a scrollbar is added to scroll inside 
-
-the box. Note that this will add a scrollbar both horizontally and vertically (even if you do not need 
-
-it):</p>
-
-<div>You can use the overflow property when you want to have better control of the layout. The overflow 
-
-property specifies what happens if content overflows an element's box.</div>
+xususiyat, agar kontent elementning qutisiga to‘lib ketgan bo‘lsa, nima bo‘lishini belgilaydi.</div>
 
 </body>
 </html>
 
 
 
-overflow: auto; ::
+to'lib-toshgan: aylantirish; ::
 
-The overflow:auto; is similar to scroll, but only add scrollbars only when it is necessary. In essence, it 
+To'lib-tosh o'tishga o'rnatilgan bo'lsa, bunday to'lib ketish kesiladi va quti ichiga aylantirish paneli qo'shiladi. Bu
 
-resolves issues of useless scrollbars that arise when overflow:scroll; is used. See illustration of 
+parametr, hatto kerak bo'lmagan holatlarda ham gorizontal va vertikal aylantirish chiziqlarini qo'shadi. Qarang
 
-overflow:auto; below:
+toshib ketishning tasviri: aylantirish; quyida:
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
+<uslub>
 div {
-  background-color: #eee;
-  width: 200px;
-  height: 50px;
-  border: 1px dotted black;
-  overflow: auto;
+   fon rangi: #eee;
+   kengligi: 200px;
+   balandligi: 100px;
+   chegara: 1px nuqtali qora;
+   to'lib-toshgan: aylantirish;
 }
 </style>
 </head>
-<body>
+<tana>
 
 <h2>CSS Overflow</h2>
-<p>The auto value is similar to scroll, only it add scrollbars when necessary:</p>
+<p>O'tish uchun to'ldirish qiymatini o'rnatish, to'ldirish kesiladi va ichkarida aylantirish uchun aylantirish paneli qo'shiladi
 
-<div>You can use the overflow property when you want to have better control of the layout. The overflow 
+quti. E'tibor bering, bu gorizontal va vertikal ravishda aylantirish paneli qo'shadi (hatto kerak bo'lmasa ham
 
-property specifies what happens if content overflows an element's box.</div>
+u):</p>
+
+<div>Tuzilishni yaxshiroq boshqarishni istasangiz, overflow xususiyatidan foydalanishingiz mumkin. Toshib ketish
+
+xususiyat, agar kontent elementning qutisiga to‘lib ketgan bo‘lsa, nima bo‘lishini belgilaydi.</div>
 
 </body>
 </html>
 
 
 
-overflow-x and overflow-y; ::
+toshib ketish: avtomatik; ::
 
-overflow-x and overflow-y property enable setting overflow of content to only horizontal, just vertical, or 
+Overflow: auto; aylantirishga o'xshaydi, lekin faqat kerak bo'lganda aylantirish panellarini qo'shing. Aslida, u
 
-both. This can give similar advantage given by overflow: auto: over overflow:scroll;
-See illustration of overflow-x and overflow-y below:
+toshib ketganda paydo bo'ladigan foydasiz siljishlar masalalarini hal qiladi:scroll; ishlatilgan. Rasmga qarang
 
+toshib ketish:avto; quyida:
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
+<uslub>
 div {
-  background-color: #eee;
-  width: 200px;
-  height: 50px;
-  border: 1px dotted black;
-  overflow-x: hidden;
-  overflow-y: scroll;
+   fon rangi: #eee;
+   kengligi: 200px;
+   balandligi: 50px;
+   chegara: 1px nuqtali qora;
+   toshib ketish: avtomatik;
 }
 </style>
 </head>
-<body>
+<tana>
 
 <h2>CSS Overflow</h2>
-<p>You can also change the overflow of content horizontally or vertically.</p>
-<p>overflow-x specifies what to do with the left/right edges of the content.<br>
-overflow-y specifies what to do with the top/bottom edges of the content.</p>
+<p>Avtomatik qiymat aylantirishga o'xshaydi, faqat kerak bo'lganda aylantirish panellarini qo'shadi:</p>
 
-<div>You can use the overflow property when you want to have better control of the layout. The overflow 
+<div>Tuzilishni yaxshiroq boshqarishni istasangiz, overflow xususiyatidan foydalanishingiz mumkin. Toshib ketish
 
-property specifies what happens if content overflows an element's box.</div>
+xususiyat, agar kontent elementning qutisiga to‘lib ketgan bo‘lsa, nima bo‘lishini belgilaydi.</div>
 
 </body>
 </html>
 
 
 
-All CSS Overflow Properties
-Property 	Description
-overflow 	Specifies what happens if content overflows an element's box
-overflow-x 	Specifies what to do with the left/right edges of the content if it overflows the element's 
+to'lib-toshgan-x va to'lib-toshgan-y; ::
 
-content area
-overflow-y 	Specifies what to do with the top/bottom edges of the content if it overflows the element's 
+overflow-x va overflow-y xossalari kontentning toʻlib ketishini faqat gorizontal, faqat vertikal yoki
 
-content area
+ikkalasi ham. Bu overflow tomonidan berilgan o'xshash afzalliklarni berishi mumkin: auto: overflow: scroll;
+Quyida overflow-x va overflow-y rasmlariga qarang:
 
-<kbd>return</kbd>[Back to table of contents](#homepage)
+
+<!DOCTYPE html>
+<html>
+<head>
+<uslub>
+div {
+   fon rangi: #eee;
+   kengligi: 200px;
+   balandligi: 50px;
+   chegara: 1px nuqtali qora;
+   overflow-x: yashirin;
+   overflow-y: aylantirish;
+}
+</style>
+</head>
+<tana>
+
+<h2>CSS Overflow</h2>
+<p>Shuningdek, kontentning toʻlib ketishini gorizontal yoki vertikal ravishda oʻzgartirishingiz mumkin.</p>
+<p>overflow-x kontentning chap/o‘ng qirralari bilan nima qilish kerakligini belgilaydi.<br>
+overflow-y kontentning yuqori/pastki qirralari bilan nima qilish kerakligini belgilaydi.</p>
+
+<div>Tuzilishni yaxshiroq boshqarishni istasangiz, overflow xususiyatidan foydalanishingiz mumkin. Toshib ketish
+
+xususiyat, agar kontent elementning qutisiga to‘lib ketgan bo‘lsa, nima bo‘lishini belgilaydi.</div>
+
+</body>
+</html>
+
+
+
+Barcha CSS Overflow xususiyatlari
+Mulk tavsifi
+Overflow Agar kontent elementning qutisiga toʻlib ketgan boʻlsa, nima boʻlishini belgilaydi
+overflow-x Agar kontentning chap/o'ng qirralari elementning chegarasidan oshib ketsa, nima qilish kerakligini belgilaydi.
+
+tarkib maydoni
+overflow-y Agar kontent elementning yuqori/pastki qirralari bilan nima qilish kerakligini belgilaydi.
+
+tarkib maydoni
+
+<kbd>qaytish</kbd>[Mundarijaga qaytish](#homepage)
 
 
 ------------

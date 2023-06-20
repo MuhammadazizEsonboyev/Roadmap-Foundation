@@ -79,69 +79,69 @@ MP4 	.mp4 	MP4 is a video format, but can also be used for audio. Supported by a
 
 ## HTML VIDEO
 
-The ```<video>``` element is used to shows a video on a page. 
+```<video>``` elementi videoni sahifada ko`rsatish uchun ishlatiladi.
 
 ```
-<video width="320" height="240" controls>
-  <source src="movie.mp4" type="video/mp4">
-  <source src="movie.ogg" type="video/ogg">
-  Your browser does not support the video tag.
+<video kengligi="320" balandligi="240" boshqaruv elementlari>
+   <source src="movie.mp4" type="video/mp4">
+   <source src="movie.ogg" type="video/ogg">
+   Brauzeringiz video tegini qo'llab-quvvatlamaydi.
 </video>
 ```
 
-"controls" attribute adds video controls like play, pause, and volume. It is good to include width and height attributes. Without setting these, the page may move irregularly or unsteadily as the video loads. 
+"nazorat" atributi o'ynash, to'xtatib turish va ovoz balandligi kabi video boshqaruvlarini qo'shadi. Kenglik va balandlik atributlarini kiritish yaxshidir. Bularni o‘rnatmasdan turib, video yuklanganda sahifa tartibsiz yoki beqaror harakatlanishi mumkin.
 
-The ```<source>``` element allows specifying alternative video files that the browser may choose from. The browser by default chooses the first recognized format. The text between video tags will only be displayed if browser does not support the <video> element. 
+```<source>``` elementi brauzer tanlashi mumkin bo`lgan muqobil video fayllarni belgilash imkonini beradi. Brauzer sukut bo'yicha birinchi tan olingan formatni tanlaydi. Video teglari orasidagi matn, agar brauzer <video> elementini qo'llab-quvvatlamasagina ko'rsatiladi.
 
-* HTML ```<video>``` Autoplay
+* HTML ```<video>``` Avtomatik ijro
 
-* Autoplay attribute starts video automatically. 
+* Avtomatik ijro atributi videoni avtomatik ravishda boshlaydi.
 ```
-<video width="320" height="240" autoplay>
-  <source src="movie.mp4" type="video/mp4">
-  <source src="movie.ogg" type="video/ogg">
-  Your browser does not support the video tag.
+<video kengligi="320" balandligi="240" avtomatik ijro>
+   <source src="movie.mp4" type="video/mp4">
+   <source src="movie.ogg" type="video/ogg">
+   Brauzeringiz video tegini qo'llab-quvvatlamaydi.
 </video>
 ```
-The autoplay attribute does not work in mobile devices like iPad and iPhone.
+Autoplay atributi iPad va iPhone kabi mobil qurilmalarda ishlamaydi.
 
-* HTML Video Formats
+* HTML video formatlari
 
-There are three supported video formats: MP4, WebM, and Ogg. The browser support for the different formats is:
-Browser 	MP4 	WebM 	Ogg
-Edge 	YES 	YES 	YES
-Chrome 	YES 	YES 	YES
-Firefox 	YES 	YES 	YES
-Safari 	YES 	YES 	NO
-Opera 	YES 	YES 	YES
-
-
-* HTML Video - Media Types
-File Format 	Media Type
-MP4 	video/mp4
-WebM 	video/webm
-Ogg 	video/ogg
-
-* HTML Video - Methods, Properties, and Events
-
-The HTML DOM defines methods, properties, and events for the <video> element.
-
-This allows you to load, play, and pause videos, as well as setting duration and volume.
-
-There are also DOM events that can notify you when a video begins to play, is paused, etc.
+Uchta qo'llab-quvvatlanadigan video formatlari mavjud: MP4, WebM va Ogg. Turli formatlar uchun brauzerni qo'llab-quvvatlash:
+Brauzer MP4 WebM Ogg
+Edge HA HA HA
+Chrome HA HA HA
+Firefox HA HA HA
+Safari HA HA YO'Q
+Opera HA HA HA
 
 
-* See HTML video audio DOM reference for details of how to customize video in HTML
+* HTML video - Media turlari
+Fayl formati media turi
+MP4 video/mp4
+WebM video/webm
+Ogg video/ogg
 
-Summary
-HTML Video Tags
-Tag 	Description
+* HTML video - usullar, xususiyatlar va hodisalar
+
+HTML DOM <video> elementi uchun usullar, xususiyatlar va hodisalarni belgilaydi.
+
+Bu sizga videolarni yuklash, ijro etish va to‘xtatib turish, shuningdek, davomiylik va ovoz balandligini sozlash imkonini beradi.
+
+Shuningdek, video o'ynay boshlaganda, to'xtatilganda va hokazolarda sizni xabardor qiladigan DOM hodisalari mavjud.
+
+
+* HTML-da videoni qanday sozlash haqida batafsil ma'lumot uchun HTML video audio DOM ma'lumotnomasiga qarang
+
+Xulosa
+HTML video teglar
+Teg tavsifi
 ```
-<video> 	Defines a video or movie
-<source> 	Defines multiple media resources for media elements, such as <video> and <audio>
-<track> 	Defines text tracks in media players
+<video> Video yoki filmni belgilaydi
+<source> <video> va <audio> kabi media elementlari uchun bir nechta media resurslarini belgilaydi
+<track> Media pleerlardagi matn treklarini belgilaydi
 ```
-<kbd>return</kbd>[Back to table of contents](#homepage)
+<kbd>qaytish</kbd>[Mundarijaga qaytish](#homepage)
 
 ------
 
@@ -149,54 +149,54 @@ Tag 	Description
 
 ## HTML AUDIO
 
-HTML ```<audio>``` element
+HTML ```<audio>``` elementi
 
-The ```<audio>``` element is used to play an audio file. 
+```<audio>``` elementi audio faylni ijro etish uchun ishlatiladi.
 ```
-<audio controls>
-  <source src="horse.ogg" type="audio/ogg">
-  <source src="horse.mp3" type="audio/mpeg">
-Your browser does not support the audio element.
-</audio> 
+<audio boshqaruvlari>
+   <source src="horse.ogg" type="audio/ogg">
+   <source src="horse.mp3" type="audio/mpeg">
+Brauzeringiz audio elementni qo'llab-quvvatlamaydi.
+</audio>
 ```
 
-* HTML Audio - How It Works
+* HTML Audio - u qanday ishlaydi
 
-The controls attribute adds audio controls, like play, pause, and volume.
+Controls atributi ijro, pauza va ovoz balandligi kabi audio boshqaruv elementlarini qo‘shadi.
 
-The ```<source>``` element allows you to specify alternative audio files which the browser may choose from. The browser will use the first recognized format.
+```<source>``` elementi brauzer tanlashi mumkin bo`lgan muqobil audio fayllarni belgilash imkonini beradi. Brauzer birinchi tan olingan formatdan foydalanadi.
 
-The text between the ```<audio>``` and ```</audio>``` tags will only be displayed in browsers that do not support the ```<audio>``` element.
-
-
-There are three supported audio format: MP3, WAV, OGG. 
+```<audio>``` va ```</audio>``` teglari orasidagi matn faqat ```<audio>``` elementini qo`llab-quvvatlamaydigan brauzerlarda ko`rsatiladi.
 
 
-Opera, Firefox and Chrome support all audio formats. Edge/Internet explorer supports only MP3 while Safari supports only MP3 and WAV.
+Qo'llab-quvvatlanadigan uchta audio format mavjud: MP3, WAV, OGG.
 
 
-HTML Audio - Media Types
-File Format 	Media Type
-MP3 	audio/mpeg
-OGG 	audio/ogg
-WAV 	audio/wav
+Opera, Firefox va Chrome barcha audio formatlarini qo'llab-quvvatlaydi. Edge/Internet Explorer faqat MP3-ni, Safari esa faqat MP3 va WAV-ni qo'llab-quvvatlaydi.
 
 
-* HTML Audio - Methods, Properties, and Events
+HTML Audio - Media turlari
+Fayl formati media turi
+MP3 audio/mpeg
+OGG audio/ogg
+WAV audio/wav
 
-The HTML DOM defines methods, properties, and events for the ```<audio>``` element.
 
-This allows you to load, play, and pause audios, as well as set duration and volume.
+* HTML Audio - usullar, xususiyatlar va hodisalar
 
-There are also DOM events that can notify you when an audio begins to play, is paused, etc.
+HTML DOM ```<audio>``` elementi uchun usullar, xususiyatlar va hodisalarni belgilaydi.
 
-For a full DOM reference, go to w3c HTML Audio/Video DOM Reference.
+Bu sizga audiolarni yuklash, ijro etish va pauza qilish, shuningdek, davomiylik va ovoz balandligini belgilash imkonini beradi.
 
-HTML Audio Tags
-Tag 	Description
-```<audio>``` 	Defines sound content
-```<source>``` 	Defines multiple media resources for media elements, such as <video> and <audio>
-<kbd>return</kbd>[Back to table of contents](#homepage)
+Bundan tashqari, audio o'ynay boshlaganda, to'xtatilganda va hokazolarda sizga xabar beradigan DOM hodisalari mavjud.
+
+Toʻliq DOM maʼlumotnomasi uchun w3c HTML Audio/Video DOM maʼlumotnomasiga oʻting.
+
+HTML audio teglar
+Teg tavsifi
+```<audio>``` Ovoz tarkibini belgilaydi
+```<manba>``` <video> va <audio> kabi media elementlari uchun bir nechta media resurslarini belgilaydi
+<kbd>qaytish</kbd>[Mundarijaga qaytish](#homepage)
 
 
 -------
@@ -204,48 +204,48 @@ Tag 	Description
 
 ## HTML YOUTUBE
 
-HTML YouTube Videos
+HTML YouTube videolari
 
-This is the easiest way to play videos in HTML because it removes the necessity of converting to different formats. YouTube can be allowed to play videos on your website to avoid the conversion problem. 
+Bu HTML-da videolarni o'ynashning eng oson usuli, chunki u turli formatlarga o'tkazish zaruriyatini yo'q qiladi. Konvertatsiya muammosini bartaraf qilish uchun YouTube-ga veb-saytingizda videolarni o'ynashga ruxsat berilishi mumkin.
 
 
-* YouTube Video Id
+* YouTube video identifikatori
 
-YouTube will display an id (like tgbNymZ7vqY), when you save (or play) a video.
+Videoni saqlaganingizda (yoki o'ynaganingizda) YouTube identifikatorni (masalan, tgbNymZ7vqY) ko'rsatadi.
 
-You can use this id, and refer to your video in the HTML code.
+Siz ushbu identifikatordan foydalanishingiz va HTML kodidagi videongizga murojaat qilishingiz mumkin.
 
-* Playing YouTube in HTML
+* YouTube'ni HTML formatida o'ynatish
 
-To play your video on a web page, do the following:
-Upload the video to YouTube
-Take a note of the video id
-Define an <iframe> element in your web page
-Let the src attribute point to the video URL
-Use the width and height attributes to specify the dimension of the player
-Add any other parameters to the URL (see below)
+Videongizni veb-sahifada ijro etish uchun quyidagilarni bajaring:
+Videoni YouTube-ga yuklang
+Video identifikatoriga e'tibor bering
+Veb-sahifangizda <iframe> elementini aniqlang
+src atributi video URL manziliga ishora qilsin
+Pleyerning o'lchamini belgilash uchun kenglik va balandlik atributlaridan foydalaning
+URL manziliga boshqa parametrlarni qo'shing (pastga qarang)
 
 ```
-<iframe width="420" height="345" src="https://www.youtube.com/embed/tgbNymZ7vqY">
+<iframe kengligi="420" balandligi="345" src="https://www.youtube.com/embed/tgbNymZ7vqY">
 </iframe>
 ```
 
-* YouTube Autoplay + Mute
+* YouTube avtomatik ijro + ovozsiz
 
-You can let your video start playing automatically when a user visits the page, by adding autoplay=1 to the YouTube URL.
+YouTube URL manziliga autoplay=1 qo‘shish orqali foydalanuvchi sahifaga tashrif buyurganida videongizni avtomatik o‘ynay boshlashiga ruxsat berishingiz mumkin.
 
-Note: Automatically starting a video can annoy your visitor and end up causing more harm than good!
+Eslatma: Videoni avtomatik boshlash tashrif buyuruvchini bezovta qilishi va natijada foydadan ko'ra ko'proq zarar keltirishi mumkin!
 
-Chrome added stricter autoplay policies in 2018. Chromium browsers do not allow autoplay in all cases. However, muted autoplay is always allowed.
+Chrome 2018-yilda qattiqroq avtomatik ijro qilish siyosatlarini qo‘shdi. Chromium brauzerlari hamma hollarda avtomatik ijro qilishga ruxsat bermaydi. Biroq, ovozsiz avtomatik ijroga har doim ruxsat beriladi.
 
-Add mute=1 after autoplay=1 to let your video start playing automatically (but muted).
+Videongiz avtomatik ijro etilishi uchun (lekin ovozi oʻchirilgan) uchun avtomatik ijro=1dan keyin ovozni oʻchirish=1 qoʻshing.
 
 ```
 <iframe width="420" height="345" src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&mute=1">
 </iframe>
 ```
 ```
- <iframe width="420" height="345" src="https://www.youtube.com/embed/tgbNymZ7vqY?playlist=tgbNymZ7vqY&loop=1">
+  <iframe width="420" height="345" src="https://www.youtube.com/embed/tgbNymZ7vqY?playlist=tgbNymZ7vqY&loop=1">
 </iframe>
 ```
 
@@ -254,95 +254,95 @@ Add mute=1 after autoplay=1 to let your video start playing automatically (but m
 </iframe>
 ```
 
-* YouTube Controls
+* YouTube boshqaruvlari
 
-Add controls=0 to display controls in the video player.
+Video pleerda boshqaruv elementlarini ko‘rsatish uchun boshqaruv elementlarini qo‘shing=0.
 
-Value 0: Player controls does not display.
+Qiymat 0: Pleyer boshqaruvlari ko'rsatilmaydi.
 
-Value 1 (default): Player controls display.
+Qiymat 1 (standart): Pleyer boshqaruvlari ekrani.
 
 ```
 <iframe width="420" height="345" src="https://www.youtube.com/embed/tgbNymZ7vqY?controls=0">
 </iframe>
 ```
-<kbd>return</kbd>[Back to table of contents](#homepage)
+<kbd>qaytish</kbd>[Mundarijaga qaytish](#homepage)
 
 
 ---------
 
 
-## CSS Inline-block
+## CSS Inline-blok
 
-CSS Layout - display: inline-block;
+CSS Layout - displey: inline-block;
 
-The display: inline-block Value:
+Displey: inline-block Qiymat:
 
-Unlike display:inline; which does not respect the top and bottom margins/ paddings, display:inline-block 
+Displeydan farqli o'laroq:inline; yuqori va pastki chekkalarga/to'ldirishlarga rioya qilmaydi, displey: inline-block
 
-respects the top and bottom margins/ paddings and also allows one to set a width and height on the element. 
+yuqori va pastki chetlariga/to'ldiruvchiga hurmat ko'rsatadi, shuningdek, elementga kenglik va balandlikni o'rnatish imkonini beradi.
 
-Compared to display:block; the display:inline-block does not add a line-break after the element, so the 
+Displey bilan solishtirganda:blok; displey:inline-blok elementdan keyin qator uzilishini qo'shmaydi, shuning uchun
 
-element can sit next to other elements.Note that display:inline; is the default for span. See the 
+element boshqa elementlarning yonida joylashishi mumkin. E'tibor bering, displey:inline; oraliq uchun standart hisoblanadi. ga qarang
 
-illustration of the difference between display: inline; , display: inline-block; , and display:block;
+displey orasidagi farqning tasviri: inline; , displey: inline-block; , va displey:blok;
 
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
+<uslub>
 span.a {
-  display: inline; /* the default for span */
-  width: 100px;
-  height: 100px;
-  padding: 5px;
-  border: 1px solid blue;  
-  background-color: yellow; 
+   displey: inline; /* oraliq uchun standart */
+   kengligi: 100px;
+   balandligi: 100px;
+   to'ldirish: 5px;
+   chegara: 1px to'liq ko'k;
+   fon rangi: sariq;
 }
 
 span.b {
-  display: inline-block;
-  width: 100px;
-  height: 100px;
-  padding: 5px;
-  border: 1px solid blue;    
-  background-color: yellow; 
+   displey: inline-block;
+   kengligi: 100px;
+   balandligi: 100px;
+   to'ldirish: 5px;
+   chegara: 1px to'liq ko'k;
+   fon rangi: sariq;
 }
 
 span.c {
-  display: block;
-  width: 100px;
-  height: 100px;
-  padding: 5px;
-  border: 1px solid blue;    
-  background-color: yellow; 
+   displey: blok;
+   kengligi: 100px;
+   balandligi: 100px;
+   to'ldirish: 5px;
+   chegara: 1px to'liq ko'k;
+   fon rangi: sariq;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h1>The display Property</h1>
+<h1>Displey xususiyati</h1>
 
-<h2>display: inline</h2>
-<div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum consequat scelerisque elit sit amet 
+<h2>displey: inline</h2>
+<div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum consequat scelerisque elit sit amet
 
-consequat. Aliquam erat volutpat. <span class="a">Aliquam</span> <span class="a">venenatis</span> gravida 
-
-nisl sit amet facilisis. Nullam cursus fermentum velit sed laoreet. </div>
-
-<h2>display: inline-block</h2>
-<div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum consequat scelerisque elit sit amet 
-
-consequat. Aliquam erat volutpat. <span class="b">Aliquam</span> <span class="b">venenatis</span> gravida 
+natija. To'g'ri keladi. <span class="a">Aliquam</span> <span class="a">venenatis</span> gravida
 
 nisl sit amet facilisis. Nullam cursus fermentum velit sed laoreet. </div>
 
-<h2>display: block</h2>
-<div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum consequat scelerisque elit sit amet 
+<h2>displey: inline-block</h2>
+<div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum consequat scelerisque elit sit amet
 
-consequat. Aliquam erat volutpat. <span class="c">Aliquam</span> <span class="c">venenatis</span> gravida 
+natija. To'g'ri keladi. <span class="b">Aliquam</span> <span class="b">venenatis</span> gravida
+
+nisl sit amet facilisis. Nullam cursus fermentum velit sed laoreet. </div>
+
+<h2>displey: blokirovka</h2>
+<div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum consequat scelerisque elit sit amet
+
+natija. To'g'ri keladi. <span class="c">Aliquam</span> <span class="c">venenatis</span> gravida
 
 nisl sit amet facilisis. Nullam cursus fermentum velit sed laoreet. </div>
 
@@ -350,360 +350,359 @@ nisl sit amet facilisis. Nullam cursus fermentum velit sed laoreet. </div>
 </html>
 
 
-Using inline-block to create navigation links;
+Navigatsiya havolalarini yaratish uchun inline-blokdan foydalanish;
 
-A common application of display:inline-block is displaying list items horizontally instead of vertically. 
+Display:inline-block ning keng tarqalgan qo'llanilishi ro'yxat elementlarini vertikal emas, balki gorizontal ravishda ko'rsatishdir.
 
-See below for an example of a horizontal navigation links:
+Gorizontal navigatsiya havolalariga misol uchun quyida ko'ring:
 
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
+<uslub>
 .nav {
-  background-color: yellow; 
-  list-style-type: none;
-  text-align: center;
-  margin: 0;
-  padding: 0;
+   fon rangi: sariq;
+   ro'yxat uslubi turi: yo'q;
+   matnni tekislash: markaz;
+   chegara: 0;
+   to'ldirish: 0;
 }
 
 .nav li {
-  display: inline-block;
-  font-size: 20px;
-  padding: 20px;
+   displey: inline-block;
+   shrift o'lchami: 20px;
+   to'ldirish: 20px;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h1>Horizontal Navigation Links</h1>
-<p>By default, list items are displayed vertically. In this example we use display: inline-block to display 
+<h1>Gorizontal navigatsiya havolalari</h1>
+<p>Sukut bo'yicha ro'yxat elementlari vertikal ravishda ko'rsatiladi. Ushbu misolda biz ko'rsatish uchun displey: inline-block dan foydalanamiz
 
-them horizontally (side by side).</p>
-<p>Note: If you resize the browser window, the links will automatically break when it becomes too 
+ularni gorizontal (yonma-yon).</p>
+<p>Eslatma: Agar brauzer oynasining oʻlchamini oʻzgartirsangiz, u ham oʻzgarganda havolalar avtomatik ravishda buziladi
 
-crowded.</p>
+gavjum.</p>
 
 <ul class="nav">
-  <li><a href="#home">Home</a></li>
-  <li><a href="#about">About Us</a></li>
-  <li><a href="#clients">Our Clients</a></li>  
-  <li><a href="#contact">Contact Us</a></li>
+   <li><a href="#home">Uy</a></li>
+   <li><a href="#about">Biz haqimizda</a></li>
+   <li><a href="#clients">Bizning mijozlarimiz</a></li>
+   <li><a href="#contact">Biz bilan bog‘laning</a></li>
 </ul>
 
 </body>
 </html>
 
-<kbd>return</kbd>[Back to table of contents](#homepage)
+<kbd>qaytish</kbd>[Mundarijaga qaytish](#homepage)
 
 
 --------
 
 
-## CSS Combinators
+## CSS kombinatorlari
 
-The relationship between the selectors in an HTML page is explained by combinators.
+HTML-sahifadagi selektorlar orasidagi munosabat kombinatorlar orqali tushuntiriladi.
 
-More than one single selector can be contained in a CSS selector, and we can include a combinator between 
+CSS selektorida bir nechta bitta selektor bo'lishi mumkin va biz ularning orasiga kombinatorni kiritishimiz mumkin
 
-simple selectors. The four unique combinators, and their representation (in parenthesis) in CSS include:
-
-
-
-    descendant selector (space)
-    child selector (>)
-    adjacent sibling selector (+)
-    general sibling selector (~)
+oddiy selektorlar. To'rtta noyob kombinator va ularning CSS-dagi ko'rinishi (qavslar ichida) quyidagilarni o'z ichiga oladi:
 
 
 
-Descendant Selector  ( );
+     avlod selektori (bo'sh joy)
+     bola tanlagichi (>)
+     qo'shni aka-uka selektori (+)
+     umumiy aka-uka selektori (~)
 
-Descendant selector matches all the elements that are descendants of the same specified element. It is 
 
-specified using empty space. For example, in the code below, the <p> elements that are inside the <div> 
 
-elements are selected:
+Nasl selektori ( );
+
+Nasl selektori bir xil ko'rsatilgan elementning avlodlari bo'lgan barcha elementlarga mos keladi. Bu
+
+bo'sh joy yordamida belgilangan. Masalan, quyidagi kodda <div> ichidagi <p> elementlari
+
+elementlar tanlanadi:
 
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
+<uslub>
 div p {
-  background-color: yellow;
+   fon rangi: sariq;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h2>Descendant Selector</h2>
-<p>The descendant selector matches all elements that are descendants of a specified element.</p>
+<h2>Nasl selektori</h2>
+<p>Asl selektor belgilangan elementning avlodi boʻlgan barcha elementlarga mos keladi.</p>
 
 <div>
-  <p>Paragraph 1 in the div.</p>
-  <p>Paragraph 2 in the div.</p>
-  <section><p>Paragraph 3 in the div.</p></section>
+   <p>Div.dagi 1-xat.</p>
+   <p>Div.dagi 2-xatboshi.</p>
+   <section><p>3-banddagi boʻlim.</p></section>
 </div>
 
-<p>Paragraph 4. Not in a div.</p>
-<p>Paragraph 5. Not in a div.</p>
+<p>4-paragraf. Bo'limda emas.</p>
+<p>5-paragraf. Bo'linmada emas.</p>
 
 </body>
 </html>
 
 
-Child Selector (>)
+Bolalar tanlovchisi (>)
 
-Child selector selects all elements that are the children of a specified element. It is denoted using the 
+Child selektor belgilangan elementning bolalari bo'lgan barcha elementlarni tanlaydi. yordamida belgilanadi
 
-greater than symbol. In the code below for example, all the <p> elements that are children of a <div> 
+belgisidan kattaroqdir. Quyidagi kodda, masalan, <div> ning bolalari bo'lgan barcha <p> elementlari
 
-element are selected:
+element tanlangan:
 
 
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
+<uslub>
 div > p {
-  background-color: yellow;
+   fon rangi: sariq;
 }
 </style>
 </head>
-<body>
+<tana>
 
 <h2>Child Selector</h2>
-<p>The child selector (>) selects all elements that are the children of a specified element.</p>
+<p>Bola tanlovchi (>) belgilangan elementning bolalari bo'lgan barcha elementlarni tanlaydi.</p>
 
 <div>
-  <p>Paragraph 1 in the div.</p>
-  <p>Paragraph 2 in the div.</p>
-  <section><p>Paragraph 3 in the div.</p></section> <!-- not Child but Descendant -->
-  <p>Paragraph 4 in the div.</p>
+   <p>Div.dagi 1-xat.</p>
+   <p>Div.dagi 2-xatboshi.</p>
+   <section><p>3-paragraf bo'limda.</p></section> <!-- Bola emas, balki avlod -->
+   <p>Div.dagi 4-band.</p>
 </div>
 
-<p>Paragraph 5. Not in a div.</p>
-<p>Paragraph 6. Not in a div.</p>
+<p>5-paragraf. Bo'linmada emas.</p>
+<p>6-paragraf. Bo'linmada emas.</p>
 
 </body>
 </html>
 
 
 
-Note that elements not directly under a parent but have a sub-parent is a descendant not a child of another.
+E'tibor bering, to'g'ridan-to'g'ri ota-ona ostida bo'lmagan, lekin sub-ota-onaga ega bo'lgan elementlar boshqasining farzandi emas, balki avloddir.
 
 
 
 
-Adjacent Sibling Selector (+);
+Qo'shni birodarlar selektori (+);
 
 
-The adjacent sibling selector is used to select an element that is located after another specific element. 
+Qo'shni birodar selektori boshqa muayyan elementdan keyin joylashgan elementni tanlash uchun ishlatiladi.
 
-Here adjacent means "immediately following". Sibling elements must have same parent. The adjacent sibling 
+Bu erda qo'shni "darhol ergash" degan ma'noni anglatadi. Qardosh elementlar bir xil ota-onaga ega bo'lishi kerak. Qo'shni uka
 
-selector is denoted with the plus (+) sign. In the example below, only the first <p> elements that are 
+selektor ortiqcha (+) belgisi bilan belgilanadi. Quyidagi misolda faqat birinchi <p> elementlar mavjud
 
-placed "immediately" after <div> elements are selected.
+<div> elementlari tanlanganidan keyin "darhol" joylashtiriladi.
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
+<uslub>
 div + p {
-  background-color: yellow;
+   fon rangi: sariq;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h2>Adjacent Sibling Selector</h2>
+<h2>Qoʻshni aka-uka selektori</h2>
 
-<p>The + selector is used to select an element that is directly after another specific element.</p>
-<p>The following example selects the first p element that are placed immediately after div elements:</p>
-
-<div>
-  <p>Paragraph 1 in the div.</p>
-  <p>Paragraph 2 in the div.</p>
-</div>
-
-<p>Paragraph 3. After a div.</p>
-<p>Paragraph 4. After a div.</p>
+<p>+ selektori toʻgʻridan-toʻgʻri boshqa muayyan elementdan keyin keladigan elementni tanlash uchun ishlatiladi.</p>
+<p>Quyidagi misol div elementlaridan keyin darhol joylashtirilgan birinchi p elementni tanlaydi:</p>
 
 <div>
-  <p>Paragraph 5 in the div.</p>
-  <p>Paragraph 6 in the div.</p>
+   <p>Div.dagi 1-xat.</p>
+   <p>Div.dagi 2-xatboshi.</p>
 </div>
 
-<p>Paragraph 7. After a div.</p>
-<p>Paragraph 8. After a div.</p>
+<p>3-xatboshi. Bo'limdan keyin.</p>
+<p>4-paragraf. Bo'limdan keyin.</p>
+
+<div>
+   <p>Bo'limdagi 5-band.</p>
+   <p>Bo'limdagi 6-band.</p>
+</div>
+
+<p>7-xatboshi. Bo'limdan keyin.</p>
+<p>8-paragraf. Bo'limdan keyin.</p>
 
 </body>
 </html>
 
 
-General Sibling Selector (~);
+Umumiy birodarlar selektori (~);
 
-The general sibling selector selects 'all' elements that are "next siblings" of a specified element. It is 
+Umumiy aka-uka selektori belgilangan elementning “keyingi birodarlari” bo‘lgan “barcha” elementlarni tanlaydi. Bu
 
-denoted by tilda sign (~). Remember that all elements in the body are siblings of <html>. In the example 
+tilda belgisi (~) bilan belgilanadi. Tanadagi barcha elementlar <html> ning birodarlari ekanligini unutmang. Misolda
 
-below, all the <p> elements that are next siblings of <div> elements are selected:
+quyida, <div> elementlarining keyingi birodarlari bo'lgan barcha <p> elementlar tanlangan:
 
 
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
+<uslub>
 div ~ p {
-  background-color: yellow;
+   fon rangi: sariq;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h2>General Sibling Selector</h2>
-<p>The general sibling selector (~) selects all elements that are next siblings of a specified element.</p>
+<h2>Umumiy birodarlar selektori</h2>
+<p>Umumiy selektor (~) belgilangan elementning keyingi birodarlari bo‘lgan barcha elementlarni tanlaydi.</p>
 
-<p>Paragraph 1.</p>
+<p>1-xatboshi.</p>
 
 <div>
-  <p>Paragraph 2.</p>
+   <p>2-xatboshi.</p>
 </div>
 
-<p>Paragraph 3.</p>
-<code>Some code.</code>
-<p>Paragraph 4.</p>
+<p>3-xatboshi.</p>
+<code>Ba'zi kodlar.</code>
+<p>4-xatboshi.</p>
 
 </body>
 </html>
 
+Barcha CSS Combinator selektorlari
+Selektor misoli Misol tavsifi
+element elementi div p <div> elementlari ichidagi barcha <p> elementlarni tanlaydi
+element>element div > p Asosiy element <div> element bo'lgan barcha <p> elementlarni tanlaydi
+element+element div + p Darhol joylashtirilgan birinchi <p> elementni tanlaydi
 
-All CSS Combinator Selectors
-Selector 	Example 	Example description
-element element 	div p 	Selects all <p> elements inside <div> elements
-element>element 	div > p 	Selects all <p> elements where the parent is a <div> element
-element+element 	div + p 	Selects the first <p> element that are placed immediately after 
-
-<div> elements
-element1~element2 	p ~ ul 	Selects every <ul> element that are preceded by a <p> element
+<div> elementlari
+element1~element2 p ~ ul Oldindan <p> elementi joylashgan har bir <ul> elementni tanlaydi
 
 
-<kbd>return</kbd>[Back to table of contents](#homepage)
+<kbd>qaytish</kbd>[Mundarijaga qaytish](#homepage)
 
 
 -------
 
 
 
-## CSS Pseudo-class
+## CSS psevdo-sinfi
 
-A pseudo-class is used to define a special state of an element. For instance, you can use psedo-class to 
+Pseudo-klass elementning maxsus holatini aniqlash uchun ishlatiladi. Masalan, siz psedo-klassdan foydalanishingiz mumkin
 
-style:
+uslub:
 
--an element when a user mouses over it
--visited and unvisited links differently
--an element when it gets focus
+-foydalanuvchi uning ustiga sichqonchani bosganda element
+- tashrif buyurilgan va tashrif buyurilmagan havolalar boshqacha
+-fokusni oladigan element
 
 
-The general syntax for pseudo-classes is:
+Pseudo-klasslar uchun umumiy sintaksis:
 
-selector:pseudo-class {
-  property: value;
+selektor: psevdo-sinf {
+   mulk: qiymat;
 }
 
-alternatively, you can specify the class of the selector.
+muqobil ravishda selektor sinfini belgilashingiz mumkin.
 
-selector.class:pseudo-class {
-  property: value;
+selector.class:psevdo-sinf {
+   mulk: qiymat;
 }
 
 
 
 
 
-Anchor Pseudo-classes;
+Anchor psevdo-sinflari;
 
-They are used to display links in different ways.See illustration below for some ways links can be displayed 
+Ular havolalarni turli yo'llar bilan ko'rsatish uchun ishlatiladi. Havolalarni ko'rsatishning ba'zi usullari uchun quyidagi rasmga qarang
 
-based on the action of mouse on it (visited, hovered on, unvisited, during click):
+sichqonchaning harakatiga asoslanib (tashrif buyurilgan, sichqonchaning ustiga turgan, tashrif buyurilmagan, bosish paytida):
 
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-/* unvisited link */
-a:link {
-  color: red;
+<uslub>
+/* tashrif buyurilmagan havola */
+a: havola {
+   rang: qizil;
 }
 
-/* visited link */
-a:visited {
-  color: green;
+/* tashrif buyurilgan havola */
+a: tashrif buyurgan {
+   rang: yashil;
 }
 
-/* mouse over link */
-a:hover {
-  color: hotpink;
+/* sichqonchani havola ustiga bosing */
+a: suring {
+   rang: issiq pushti;
 }
 
-/* selected link */
-a:active {
-  color: blue;
+/* tanlangan havola */
+a: faol {
+   rang: ko'k;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h2>CSS Links</h2>
-<p><b><a href="default.asp" target="_blank">This is a link</a></b></p>
-<p><b>Note:</b> a:hover MUST come after a:link and a:visited in the CSS definition in order to be 
+<h2>CSS havolalari</h2>
+<p><b><a href="default.asp" target="_blank">Bu havola</a></b></p>
+<p><b>Eslatma:</b> a:hover CSS taʼrifida a:link va a:visiteddan keyin kelishi KERAK boʻlishi uchun
 
-effective.</p>
-<p><b>Note:</b> a:active MUST come after a:hover in the CSS definition in order to be effective.</p>
+samarali.</p>
+<p><b>Eslatma:</b> a:active samarali bo'lishi uchun CSS ta'rifida a: kursordan keyin kelishi KERAK.</p>
 
 </body>
 </html>
 
 
-Note: a:hover MUST come after a:link and a:visited in the CSS definition in order to be effective! a:active 
+Eslatma: a:hover samarali bo'lishi uchun CSS ta'rifida a:link va a:visited dan keyin kelishi KERAK! a: faol
 
-MUST come after a:hover in the CSS definition in order to be effective! Pseudo-class names are not case-
+Samarali bo'lishi uchun CSS ta'rifida a: hoverdan keyin kelishi KERAK! Pseudo-sinf nomlari katta emas-
 
-sensitive.
+sezgir.
 
 
 
-Pseudo-classes and CSS Classes;
+Pseudo-sinflar va CSS sinflari;
 
-Pseudo-classes can be combined with CSS classes. This enables a specific application of pseudo classes to 
+Pseudo-sinflar CSS sinflari bilan birlashtirilishi mumkin. Bu psevdo sinflarni maxsus qo'llash imkonini beradi
 
-elements. In the example below, hovering over the link will make the link change color:
+elementlar. Quyidagi misolda kursorni havola ustiga olib borib, havola rangini o‘zgartiradi:
 
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-a.highlight:hover {
-  color: #ff0000;
-} 
+<uslub>
+a. ta'kidlash: suring {
+   rang: #ff0000;
+}
 </style>
 </head>
-<body>
+<tana>
 
-<h2>Pseudo-classes and CSS Classes</h2>
-<p>When you hover over the first link below, it will change color:</p>
+<h2>Pseudo-sinflar va CSS sinflari</h2>
+<p>Quyidagi birinchi havola ustiga kursorni olib kelsangiz, uning rangi o‘zgaradi:</p>
 
-<p><a class="highlight" href="css_syntax.asp">CSS Syntax</a></p>
-<p><a href="default.asp">CSS Tutorial</a></p>
+<p><a class="highlight" href="css_syntax.asp">CSS sintaksisi</a></p>
+<p><a href="default.asp">CSS qo‘llanmasi</a></p>
 
 </body>
 </html>
@@ -711,31 +710,31 @@ a.highlight:hover {
 
 
 
-Hover on <div>;
+Kursorni <div> ustiga olib boring;
 
-The example below shows how to use :hover pseudo-class on a <div> element:
+Quyidagi misolda <div> elementida :hover pseudo-classdan qanday foydalanish ko'rsatilgan:
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
+<uslub>
 div {
-  background-color: green;
-  color: white;
-  padding: 25px;
-  text-align: center;
+   fon rangi: yashil;
+   rang: oq;
+   to'ldirish: 25px;
+   matnni tekislash: markaz;
 }
 
-div:hover {
-  background-color: blue;
+div: suring {
+   fon rangi: ko'k;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<p>Mouse over the div element below to change its background color:</p>
+<p>Fon rangini oʻzgartirish uchun sichqonchani quyidagi div elementi ustiga bosing:</p>
 
-<div>Mouse Over Me</div>
+<div>Sichqoncha ustimda</div>
 
 </body>
 </html>
@@ -744,29 +743,29 @@ div:hover {
 
 Simple Tooltip Hover;
 
-This enables you to show a <p> element(like a tooltip) by hovering over a <div> element. You can also use it 
+Bu sizga <div> elementi ustiga olib borish orqali <p> elementini (masalan, asboblar maslahati) ko'rsatish imkonini beradi. Siz ham foydalanishingiz mumkin
 
-for other selectors. See illustration below:
+boshqa tanlovchilar uchun. Quyidagi rasmga qarang:
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
+<uslub>
 p {
-  display: none;
-  background-color: yellow;
-  padding: 20px;
+   ko'rsatish: yo'q;
+   fon rangi: sariq;
+   to'ldirish: 20px;
 }
 
-div:hover p {
-  display: block;
+div: hover p {
+   displey: blok;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<div>Hover over me to show the p element
-  <p>Tada! Here I am!</p>
+<div>P elementini ko'rsatish uchun kursorni mening ustimga olib boring
+   <p>Tada! Mana men!</p>
 </div>
 
 </body>
@@ -774,62 +773,62 @@ div:hover p {
 
 
 
-CSS - The :first-child Pseudo-class
+CSS - :birinchi bola psevdo-sinfi
 
-The :first-child pseudo-class matches a specified element that is the first child of another element. 
+:first-child psevdo-sinfi boshqa elementning birinchi bolasi bo'lgan belgilangan elementga mos keladi.
 
 
-Match the first <p> element::
+Birinchi <p> elementni moslang::
 
-In the example below, the selector matches any <p> element that is the first child of any element:
+Quyidagi misolda selektor har qanday elementning birinchi bolasi bo'lgan har qanday <p> elementga mos keladi:
 
 
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-p:first-child {
-  color: blue;
-} 
+<uslub>
+p: birinchi farzand {
+   rang: ko'k;
+}
 </style>
 </head>
-<body>
+<tana>
 
-<p>This is some text.</p>
-<p>This is some text.</p>
+<p>Bu qandaydir matn.</p>
+<p>Bu qandaydir matn.</p>
 
 </body>
 </html>
 
 
 
-Match the first <i> element in all <p> elements::
+Barcha <p> elementlardagi birinchi <i> elementni moslang::
 
-In the example below, the selector matches the first <i> element in all <p> elements:
+Quyidagi misolda selektor barcha <p> elementlardagi birinchi <i> elementga mos keladi:
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-p i:first-child {
-  color: blue;
-} 
+<uslub>
+p i:birinchi farzand {
+   rang: ko'k;
+}
 </style>
 </head>
-<body>
+<tana>
 
-<p>I am a <i>strong</i> person. I am a <i>strong</i> person.</p>
-<p>I am a <i>strong</i> person. I am a <i>strong</i> person.</p>
+<p>Men <i>kuchli</i> odamman. Men <i>kuchli</i> odamman.</p>
+<p>Men <i>kuchli</i> odamman. Men <i>kuchli</i> odamman.</p>
 
 </body>
 </html>
 
 
 
-Match all <i> elements in all first child <p> elements::
+Barcha birinchi kichik <p> elementlardagi barcha <i> elementlarni moslang::
 
-In the example below, the selector matches all <i> elements in <p> elements which are first child of another 
+Quyidagi misolda selektor boshqa elementning birinchi farzandi bo'lgan <p> elementlardagi barcha <i> elementlarga mos keladi.
 
 element:
 
@@ -837,116 +836,116 @@ element:
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-p:first-child i {
-  color: blue;
-} 
-</style>
-</head>
-<body>
-
-<p>I am a <i>strong</i> person. I am a <i>strong</i> person.</p>
-<p>I am a <i>strong</i> person. I am a <i>strong</i> person.</p>
-
-</body>
-</html>
-
-
-CSS - The :lang Pseudo-class::
-
-The :lang pseudo class allows you to define special rules for different languages. The :lang in the example 
-
-below defines the quotations marks for <q> elements with lang= "no" (the quotation mark used in this case is 
-
-~text here~:
-
-
-<!DOCTYPE html>
-<html>
-<head>
-<style>
-q:lang(no) {
-  quotes: "~" "~";
+<uslub>
+p:birinchi farzand men {
+   rang: ko'k;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<p>Some text <q lang="no">A quote in a paragraph</q> Some text.</p>
-<p>In this example, :lang defines the quotation marks for q elements with lang="no":</p>
-
-</body>
-</html>
-
-
-Some Additional Examples of Pseudo Class::
-
-Adding different styles to hyperlinks:::
-
-<!DOCTYPE html>
-<html>
-<head>
-<style>
-a.one:link {color:#ff0000;}
-a.one:visited {color:#0000ff;}
-a.one:hover {color:#ffcc00;}
-
-a.two:link {color:#ff0000;}
-a.two:visited {color:#0000ff;}
-a.two:hover {font-size:150%;}
-
-a.three:link {color:#ff0000;}
-a.three:visited {color:#0000ff;}
-a.three:hover {background:#66ff66;}
-
-a.four:link {color:#ff0000;}
-a.four:visited {color:#0000ff;}
-a.four:hover {font-family:monospace;}
-
-a.five:link {color:#ff0000;text-decoration:none;}
-a.five:visited {color:#0000ff;text-decoration:none;}
-a.five:hover {text-decoration:underline;}
-</style>
-</head>
-<body>
-
-<h2>Styling Links</h2>
-
-<p>Mouse over the links and watch them change layout:</p>
-
-<p><b><a class="one" href="default.asp" target="_blank">This link changes color</a></b></p>
-<p><b><a class="two" href="default.asp" target="_blank">This link changes font-size</a></b></p>
-<p><b><a class="three" href="default.asp" target="_blank">This link changes background-color</a></b></p>
-<p><b><a class="four" href="default.asp" target="_blank">This link changes font-family</a></b></p>
-<p><b><a class="five" href="default.asp" target="_blank">This link changes text-decoration</a></b></p>
+<p>Men <i>kuchli</i> odamman. Men <i>kuchli</i> odamman.</p>
+<p>Men <i>kuchli</i> odamman. Men <i>kuchli</i> odamman.</p>
 
 </body>
 </html>
 
 
+CSS - :lang psevdo-sinfi::
 
-Use of focus:::
+:lang pseudo klassi turli tillar uchun maxsus qoidalarni belgilash imkonini beradi. Misoldagi :lang
 
-The :focus pseudo-class is used to style the part of a page while work is being done on it. For example, you 
+quyida lang= "yo'q" bo'lgan <q> elementlar uchun tirnoq belgilari aniqlanadi (bu holatda qo'shtirnoq ishlatiladi
 
-may define a specific style, using pseudo-class, for a Form bar in focus (currently being filled):
+~Matn bu yerda~:
 
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-input:focus {
-  background-color: yellow;
+<uslub>
+q:lang (yo'q) {
+   tirnoq: "~" "~";
 }
 </style>
 </head>
-<body>
+<tana>
+
+<p>Ba'zi matn <q lang="no">Xatboshidagi iqtibos</q> Ba'zi matn.</p>
+<p>Ushbu misolda :lang q element uchun qo'shtirnoqlarni lang="no" bilan belgilaydi:</p>
+
+</body>
+</html>
+
+
+Pseudo-klassning ba'zi qo'shimcha misollari:
+
+Giperhavolalarga turli uslublar qo'shish:::
+
+<!DOCTYPE html>
+<html>
+<head>
+<uslub>
+a.one: havola {rang:#ff0000;}
+a.one:ziyorat qilingan {rang:#0000ff;}
+a.one: hover {rang:#ffcc00;}
+
+a.ikki: havola {rang:#ff0000;}
+a.ikki:ziyorat qilingan {rang:#0000ff;}
+a.ikki: hover {shrift o'lchami: 150%;}
+
+a.uch: havola {rang:#ff0000;}
+a.three:ziyorat qilingan {rang:#0000ff;}
+a.uch: suring {fon:#66ff66;}
+
+a.four:link {rang:#ff0000;}
+a.four:ziyorat qilingan {rang:#0000ff;}
+a.four: hover {font-family: monospace;}
+
+a.five:link {rang:#ff0000;matn-bezatish:yo'q;}
+a.besh: tashrif buyurilgan {rang:#0000ff;matn-bezatish:yo'q;}
+a.five: suring {matn-bezatish: ostiga chizish;}
+</style>
+</head>
+<tana>
+
+<h2>Stillash havolalari</h2>
+
+<p>Sichqonchani havolalar ustiga bosing va ularning tartibini oʻzgartirishini tomosha qiling:</p>
+
+<p><b><a class="one" href="default.asp" target="_blank">Ushbu havola rangini o'zgartiradi</a></b></p>
+<p><b><a class="two" href="default.asp" target="_blank">Ushbu havola shrift hajmini o'zgartiradi</a></b></p>
+<p><b><a class="three" href="default.asp" target="_blank">Bu havola fon rangini o'zgartiradi</a></b></p>
+<p><b><a class="four" href="default.asp" target="_blank">Ushbu havola font-family-ni o'zgartiradi</a></b></p>
+<p><b><a class="five" href="default.asp" target="_blank">Ushbu havola matn bezaklarini o'zgartiradi</a></b></p>
+
+</body>
+</html>
+
+
+
+Fokusdan foydalanish:::
+
+:focus pseudo-klassi sahifada ish olib borilayotgan vaqtda uning qismini uslublash uchun ishlatiladi. Masalan, siz
+
+Fokusdagi shakllar paneli uchun psevdo-sinfdan foydalangan holda ma'lum uslubni belgilashi mumkin (hozirda to'ldirilmoqda):
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<uslub>
+kiritish: fokus {
+   fon rangi: sariq;
+}
+</style>
+</head>
+<tana>
 
 <form action="/action_page.php" method="get">
-  First name: <input type="text" name="fname"><br>
-  Last name: <input type="text" name="lname"><br>
-  <input type="submit" value="Submit">
+   Ism: <input type="text" name="fname"><br>
+   Familiya: <input type="text" name="lname"><br>
+   <input type="submit" value="yuborish">
 </form>
 
 </body>
@@ -956,159 +955,159 @@ input:focus {
 
 
 
-Here are additional Pseudo-classes and tips to help in their usage:
+Bu erda qo'shimcha Pseudo-sinflar va ulardan foydalanishga yordam beradigan maslahatlar:
 
 
 
-All CSS Pseudo Classes
+Barcha CSS psevdo sinflari
 
-Selector 	Example 	Example description
-:active 	a:active 	Selects the active link
-:checked 	input:checked 	Selects every checked <input> element
-:disabled 	input:disabled 	Selects every disabled <input> element
-:empty 	p:empty 	Selects every <p> element that has no children
-:enabled 	input:enabled 	Selects every enabled <input> element
-:first-child 	p:first-child 	Selects every <p> elements that is the first child of its parent
-:first-of-type 	p:first-of-type 	Selects every <p> element that is the first <p> element of its 
+Selektor misoli Misol tavsifi
+:active a:active Faol havolani tanlaydi
+:checked input:checked Har bir belgilangan <input> elementini tanlaydi
+:disabled input:disabled Har bir o'chirilgan <input> elementini tanlaydi
+:empty p:empty Bolalari bo'lmagan har bir <p> elementni tanlaydi
+:enabled input:enabled Har bir yoqilgan <input> elementini tanlaydi
+:first-child p:first-child Ota-onasining birinchi farzandi bo'lgan har bir <p> elementni tanlaydi
+:birinchi turdagi p:birinchi turi o'zining birinchi <p> elementi bo'lgan har bir <p> elementni tanlaydi.
 
-parent
-:focus 	input:focus 	Selects the <input> element that has focus
-:hover 	a:hover 	Selects links on mouse over
-:in-range 	input:in-range 	Selects <input> elements with a value within a specified range
-:invalid 	input:invalid 	Selects all <input> elements with an invalid value
-:lang(language) 	p:lang(it) 	Selects every <p> element with a lang attribute value starting with 
+ota-ona
+:focus input:focus Fokusga ega <input> elementini tanlaydi
+:hover a:hover Sichqoncha ustidagi havolalarni tanlaydi
+:in-range input:in-range Belgilangan diapazondagi qiymatga ega <input> elementlarini tanlaydi
+:invalid input:invalid Noto'g'ri qiymatga ega barcha <input> elementlarini tanlaydi
+:lang(language) p:lang(it) bilan boshlanadigan lang atribut qiymatiga ega har bir <p> elementni tanlaydi.
 
-"it"
-:last-child 	p:last-child 	Selects every <p> elements that is the last child of its parent
-:last-of-type 	p:last-of-type 	Selects every <p> element that is the last <p> element of its parent
-:link 	a:link 	Selects all unvisited links
-:not(selector) 	:not(p) 	Selects every element that is not a <p> element
-:nth-child(n) 	p:nth-child(2) 	Selects every <p> element that is the second child of its parent
-:nth-last-child(n) 	p:nth-last-child(2) 	Selects every <p> element that is the second child of its 
+"bu"
+:last-child p:last-child Ota-onasining oxirgi bolasi bo'lgan har bir <p> elementni tanlaydi
+:last-of-type p:last-of-pe ota-onasining oxirgi <p> elementi bo'lgan har bir <p> elementni tanlaydi.
+:link a:link Barcha tashrif buyurilmagan havolalarni tanlaydi
+:not(selektor) :not(p) <p> elementi boʻlmagan har bir elementni tanlaydi
+:nth-child(n) p:nth-child(2) ota-onasining ikkinchi farzandi bo'lgan har bir <p> elementni tanlaydi
+:nth-so'nggi-child(n) p:nth-last-child(2) O'zining ikkinchi bolasi bo'lgan har bir <p> elementni tanlaydi
 
-parent, counting from the last child
-:nth-last-of-type(n) 	p:nth-last-of-type(2) 	Selects every <p> element that is the second <p> element of 
-
-its parent, counting from the last child
-:nth-of-type(n) 	p:nth-of-type(2) 	Selects every <p> element that is the second <p> element of 
-
-its parent
-:only-of-type 	p:only-of-type 	Selects every <p> element that is the only <p> element of its parent
-:only-child 	p:only-child 	Selects every <p> element that is the only child of its parent
-:optional 	input:optional 	Selects <input> elements with no "required" attribute
-:out-of-range 	input:out-of-range 	Selects <input> elements with a value outside a specified range
-:read-only 	input:read-only 	Selects <input> elements with a "readonly" attribute specified
-:read-write 	input:read-write 	Selects <input> elements with no "readonly" attribute
-:required 	input:required 	Selects <input> elements with a "required" attribute specified
-:root 	root 	Selects the document's root element
-:target 	#news:target 	Selects the current active #news element (clicked on a URL containing that 
-
-anchor name)
-:valid 	input:valid 	Selects all <input> elements with a valid value
-:visited 	a:visited 	Selects all visited links
+ota-ona, oxirgi boladan hisoblash
+:nth-oxirgi-tur(n) p:nth-oxirgi-tur(2) Ikkinchi <p> elementi boʻlgan har bir <p> elementni tanlaydi.
 
 
+uning ota-onasi, oxirgi bolasidan boshlab hisoblash
+:nth-of-type(n) p:nth-of-type(2) ikkinchi <p> elementi bo‘lgan har bir <p> elementni tanlaydi.
 
-All CSS Pseudo Elements
+uning ota-onasi
+: only-of-type p: only-of-type ota-onasining yagona <p> elementi bo‘lgan har bir <p> elementni tanlaydi.
+:only-child p:only-child Ota-onasining yagona farzandi bo'lgan har bir <p> elementni tanlaydi
+:ixtiyoriy kiritish:ixtiyoriy “kerakli” atributsiz <input> elementlarini tanlaydi
+:out-of-range input:out-of-range Belgilangan diapazondan tashqaridagi qiymatga ega <input> elementlarini tanlaydi.
+:faqat o‘qish uchun kiritish:faqat o‘qish uchun “faqat o‘qish” atributi ko‘rsatilgan <input> elementlarini tanlaydi.
+:o'qish-yozish kiritish:o'qish-yozish "faqat o'qish" atributiga ega bo'lmagan <input> elementlarini tanlaydi
+:required input:required "kerakli" atributi ko'rsatilgan <input> elementlarini tanlaydi
+:root root Hujjatning ildiz elementini tanlaydi
+:target #news:target Joriy faol #news elementini tanlaydi (uni o'z ichiga olgan URL manziliga bosing)
 
-Selector 	Example 	Example description
-::after 	p::after 	Insert content after every <p> element
-::before 	p::before 	Insert content before every <p> element
-::first-letter 	p::first-letter 	Selects the first letter of every <p> element
-::first-line 	p::first-line 	Selects the first line of every <p> element
-::selection 	p::selection 	Selects the portion of an element that is selected by a user
+langar nomi)
+:valid input:valid To'g'ri qiymatga ega barcha <input> elementlarini tanlaydi
+:visited a:visited Barcha tashrif buyurilgan havolalarni tanlaydi
 
-<kbd>return</kbd>[Back to table of contents](#homepage)
+
+
+Barcha CSS psevdo elementlari
+
+Selektor misoli Misol tavsifi
+::so'ng p::after Har bir <p> elementdan keyin tarkibni kiriting
+:: p::befor dan oldin Har bir <p> elementdan oldin tarkibni kiriting
+::birinchi harf p::birinchi harf Har bir <p> elementining birinchi harfini tanlaydi
+::first-line p::first-line Har bir <p> elementining birinchi qatorini tanlaydi
+::selection p::selection Elementning foydalanuvchi tomonidan tanlangan qismini tanlaydi
+
+<kbd>qaytish</kbd>[Mundarijaga qaytish](#homepage)
 
 
 
 ----------
 
 
-## CSS Pseudo-element
+## CSS psevdoelementi
 
-A CSS pseudo-element is used to style specific parts of an element such as: 
-Styling the first letter, or line of an element; or 
-Inserting content befor, or after, the content of another element. 
+CSS pseudo-elementi elementning muayyan qismlarini uslublash uchun ishlatiladi, masalan:
+Elementning birinchi harfi yoki satrini shakllantirish; yoki
+Kontentni boshqa element tarkibidan oldin yoki keyin kiritish.
 
 
 
-The syntax of pseudo-elements is:
+Pseudoelementlarning sintaksisi:
 
-selector::pseudo-element {
-  property: value;
+selektor :: pseudo-element {
+   mulk: qiymat;
 }
 
 
 
 
-The ::first-line Pseudo-element ;;
+::birinchi qator psevdoelement ;;
 
-The ::first-line pseudo-element is used to add a special style to the first line of a text. In the example 
+::birinchi qator psevdoelementi matnning birinchi qatoriga maxsus uslub qo‘shish uchun ishlatiladi. Misolda
 
-below, the first line of text in all <p> elements is formatted:
+quyida barcha <p> elementlardagi matnning birinchi qatori formatlanadi:
 
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-p::first-line {
-  color: #ff0000;
-  font-variant: small-caps;
+<uslub>
+p :: birinchi qator {
+   rang: #ff0000;
+   shrift-variant: kichik bosh harflar;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<p>You can use the ::first-line pseudo-element to add a special effect to the first line of a text. Some 
+<p>Matnning birinchi qatoriga maxsus effekt qoʻshish uchun ::birinchi qator psevdoelementidan foydalanishingiz mumkin. Biroz
 
-more text. And even more, and more, and more, and more, and more, and more, and more, and more, and more, 
+ko'proq matn. Va bundan ham ko'proq va ko'proq va ko'proq va ko'proq va ko'proq va ko'proq va ko'proq va yana ko'proq va yana ko'proq va yana ko'proq va ko'proq
 
-and more, and more, and more.</p>
+va boshqalar, va yana koʻp va boshqalar.</p>
 
 </body>
 </html>
 
 
-Please note that the ::first-line  pseudo-element can only be applied to block level elements. The following 
+E'tibor bering, ::birinchi qator psevdoelementi faqat blok darajasidagi elementlarga qo'llanilishi mumkin. Quyidagi
 
-properties apply to the ::first-line pseudo-element:font properties, color properties, background 
+xossalari ::birinchi qator pseudoelement:shrift xususiyatlari, rang xususiyatlari, fon uchun amal qiladi
 
-properties, word-spacing, letter-spacing, text-decoration, vertical-align, text-transform, and line-height, 
+xususiyatlar, so‘z oralig‘i, harflar oralig‘i, matnni bezash, vertikal tekislash, matnni o‘zgartirish va satr balandligi;
 
-clear.
+aniq.
 
-The double colon notation of ::first-line is the standard used in CSS3 (unlike CSS 1 and 2 where single 
+::birinchi qatorning qo'sh nuqta belgisi CSS3 da qo'llaniladigan standartdir (CSS 1 va 2 dan farqli o'laroq, bu erda bitta
 
-colon was used i.e. :first-line). This helps distinguish between pseudo-elements and pseudo-classes. For 
+yo'g'on ichak ishlatilgan, ya'ni: birinchi qator). Bu psevdoelementlar va psevdosinflarni ajratishga yordam beradi. Uchun
 
-backward compatibility, the single-color syntax is acceptable in CSS2 and CSS1 pseudo-elements. 
-
-
+orqaga qarab muvofiqlik, bitta rangli sintaksis CSS2 va CSS1 psevdo-elementlarida qabul qilinadi.
 
 
-The ::first-letter Pseudo-element ;;
 
-The ::first-letter pseudo-element is used to add a special style to the first letter of a text. The example 
+The ::birinchi harf Pseudo-element ;;
 
-below shows how to use ::first-letter pseudo element to format the first letter of the text in all <p> 
+::birinchi harf psevdoelementi matnning birinchi harfiga maxsus uslub qo'shish uchun ishlatiladi. Misol
 
-elements:
+quyida barcha <p> matnning birinchi harfini formatlash uchun ::birinchi harf psevdo elementidan qanday foydalanish ko'rsatilgan.
+
+elementlar:
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-p::first-letter {
-  color: #ff0000;
-  font-size: xx-large;
+<uslub>
+p :: birinchi harf {
+   rang: #ff0000;
+   shrift o'lchami: xx-katta;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<p>You can use the ::first-letter pseudo-element to add a special effect to the first character of a text!
+<p>Matnning birinchi belgisiga maxsus effekt qo'shish uchun ::birinchi harf psevdoelementidan foydalanishingiz mumkin!
 
 </p>
 
@@ -1117,209 +1116,208 @@ p::first-letter {
 
 
 
-Note that: The ::first-letter pseudo element can only be applied to block-level elements. The following 
+Esda tuting: ::birinchi harfli psevdo element faqat blok darajasidagi elementlarga qo'llanilishi mumkin. Quyidagi
 
-properties apply to the ::first-letter pseudo-element:font properties, color properties, background 
+xususiyatlar ::birinchi harf psevdoelement:shrift xususiyatlari, rang xususiyatlari, fonga tegishli
 
-properties, margin properties, padding properties, border properties, text-decoration, vertical-align (only 
+xususiyatlar, chekka xossalari, to‘ldirish xususiyatlari, chegara xususiyatlari, matnni bezash, vertikal tekislash (faqat
 
-if "float" is "none"), text-transform, line-height, float, and clear.
+agar "float" "yo'q" bo'lsa), matnni o'zgartirish, chiziq balandligi, float va aniq.
 
 
 
-Pseudo-elements and CSS Classes::
+Pseudo-elementlar va CSS sinflari::
 
-The Pseudo-elements can also be combined with CSS classes. This ensures that you can select a specific <p> 
+Pseudo-elementlar CSS sinflari bilan ham birlashtirilishi mumkin. Bu ma'lum bir <p> ni tanlashingizni ta'minlaydi
 
-element rather than apply pseudo-element styling to all <p> elements. In this case, the first letter of 
+barcha <p> elementlarga psevdo-element uslubini qo'llash o'rniga element. Bu holda, birinchi harfi
 
-paragraphs with class="intro" will be displayed in red and in larger size. See illustration below:
+class="intro" yozilgan paragraflar qizil rangda va kattaroq hajmda ko'rsatiladi. Quyidagi rasmga qarang:
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-p.intro::first-letter {
-  color: #ff0000;
-  font-size: 200%;
-}  
+<uslub>
+p.intro::birinchi harf {
+   rang: #ff0000;
+   shrift hajmi: 200%;
+}
 </style>
 </head>
-<body>
+<tana>
 
-<p class="intro">This is an introduction.</p>
-<p>This is a paragraph with some text. A bit more text even.</p>
+<p class="intro">Bu kirish.</p>
+<p>Bu biroz matnli paragraf. Hatto biroz ko'proq matn.</p>
 
 </body>
 </html>
 
 
-Multiple Pseudo-elements::
+Bir nechta psevdoelementlar::
 
-Several pseudo-elements can also be combined. In the example below, the first letter of a paragraph will be 
+Bir nechta psevdoelementlar ham birlashtirilishi mumkin. Quyidagi misolda paragrafning birinchi harfi bo'ladi
 
-red, in an XX-large font size. The rest of the first line will be blue, and in small-caps. The rest of the 
+qizil, XX-katta shrift o'lchamida. Birinchi qatorning qolgan qismi ko'k va kichik harflarda bo'ladi. Qolganlari
 
-paragraph will be the default font size and color. See illustration below:
-
-
-<!DOCTYPE html>
-<html>
-<head>
-<style>
-p::first-letter {
-  color: #ff0000;
-  font-size: xx-large;
-}
-
-p::first-line {
-  color: #0000ff;
-  font-variant: small-caps;
-}
-</style>
-</head>
-<body>
-
-<p>You can combine the ::first-letter and ::first-line pseudo-elements to add a special effect to the first 
-
-letter and the first line of a text!</p>
-
-</body>
-</html>
-
-
-
-CSS - The ::before Pseudo-element::
-
-The ::before pseudo-element can be used to insert some content before the content of an element. In the 
-
-example below, and image (smiley.gif) is inserted before the content of each <h1> element:
+paragraf standart shrift hajmi va rangi bo'ladi. Quyidagi rasmga qarang:
 
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-h1::before {
-  content: url(smiley.gif);
+<uslub>
+p :: birinchi harf {
+   rang: #ff0000;
+   shrift o'lchami: xx-katta;
+}
+
+p :: birinchi qator {
+   rang: #0000ff;
+   shrift-variant: kichik bosh harflar;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h1>This is a heading</h1>
-<p>The ::before pseudo-element inserts content before the content of an element.</p>
+<p>Birinchi harfga maxsus effekt qo'shish uchun ::birinchi harf va ::birinchi qator psevdoelementlarini birlashtira olasiz.
 
-<h1>This is a heading</h1>
+harf va matnning birinchi qatori!</p>
 
 </body>
 </html>
 
 
 
+CSS - Pseudo-element:: dan oldingi ::
 
-CSS - The ::after Pseudo-element
+Pseudo-elementdan oldin :: element mazmunidan oldin ba'zi tarkibni kiritish uchun ishlatilishi mumkin. In
 
-
-The ::after pseudo-element can be used to insert some content after the content of an element. The example 
-
-below shows the insertion of an image after the content of each <h1> element:
+quyidagi misol va rasm (smiley.gif) har bir <h1> elementi mazmunidan oldin kiritiladi:
 
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-h1::after {
-  content: url(smiley.gif);
+<uslub>
+h1 :: oldin {
+   kontent: url (smiley.gif);
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h1>This is a heading</h1>
-<p>The ::after pseudo-element inserts content after the content of an element.</p>
+<h1>Bu sarlavha</h1>
+<p>::befor psevdoelement kontentni element mazmunidan oldin kiritadi.</p>
 
-<h1>This is a heading</h1>
+<h1>Bu sarlavha</h1>
 
 </body>
 </html>
 
 
 
-CSS - The ::marker Pseudo-element
 
-The ::marker pseudo-element selects (styles) the markers of list of items. The example below shows styling 
+CSS - Pseudo-elementdan keyin ::
 
-of markers of list of items using ::marker pseudo-element:
+
+::after pseudo-element element mazmunidan keyin ba'zi tarkibni kiritish uchun ishlatilishi mumkin. Misol
+
+quyida har bir <h1> elementidan keyin rasm qo'shilishi ko'rsatilgan:
 
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-::marker { 
-  color: red;
-  font-size: 23px;
+<uslub>
+h1 :: keyin {
+   kontent: url (smiley.gif);
 }
 </style>
 </head>
-<body>
+<tana>
+
+<h1>Bu sarlavha</h1>
+<p>::after pseudo-element element mazmunidan keyin tarkibni kiritadi.</p>
+
+<h1>Bu sarlavha</h1>
+
+</body>
+</html>
+
+
+CSS - :: marker Pseudo-element
+
+::marker psevdoelementi elementlar roʻyxati markerlarini tanlaydi (uslublar). Quyidagi misol uslubni ko'rsatadi
+
+::marker pseudo-elementdan foydalangan holda elementlar ro'yxati markerlari:
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<uslub>
+:: marker {
+   rang: qizil;
+   shrift o'lchami: 23px;
+}
+</style>
+</head>
+<tana>
 
 <ul>
-  <li>Coffee</li>
-  <li>Tea</li>
-  <li>Milk</li>
+   <li>Qahva</li>
+   <li>Choy</li>
+   <li>Sut</li>
 </ul>
 
 <ol>
-  <li>First</li>
-  <li>Second</li>
-  <li>Third</li>
+   <li>Birinchi</li>
+   <li>Ikkinchi</li>
+   <li>Uchinchi</li>
 </ol>
 
 </body>
 </html>
 
 
-NB: You don't have to style based on class here, the ::marker style will apply to all markers. 
+Eslatma: Bu yerda sinfga qarab uslub yaratishingiz shart emas, :: marker uslubi barcha markerlarga qo'llaniladi.
 
 
 
 
-CSS - The ::selection Pseudo-element::
+CSS - ::selection Pseudo-element::
 
 
-The ::selection pseudo-element matches the portion of an element that is selected by a user. The properties 
+:: tanlov psevdo-elementi foydalanuvchi tomonidan tanlangan element qismiga mos keladi. Xususiyatlari
 
-that can be applied to ::selection include: color, background, cursor, and outline. The styling in the 
+::tanlovga qo'llanilishi mumkin bo'lganlar quyidagilardan iborat: rang, fon, kursor va kontur. dagi uslublar
 
-example below makes a selected text red on a yellow background:
+Quyidagi misol tanlangan matnni sariq fonda qizil qiladi:
 
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-::-moz-selection { /* Code for Firefox */
-  color: red;
-  background: yellow;
+<uslub>
+::-moz-selection { /* Firefox uchun kod */
+   rang: qizil;
+   fon: sariq;
 }
 
-::selection {
-  color: red;
-  background: yellow;
+:: tanlash {
+   rang: qizil;
+   fon: sariq;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h1>Select some text on this page:</h1>
+<h1>Ushbu sahifadagi matnni tanlang:</h1>
 
-<p>This is a paragraph.</p>
-<div>This is some text in a div element.</div>
+<p>Bu paragraf.</p>
+<div>Bu div elementidagi ba'zi matn.</div>
 
-<p><strong>Note:</strong> Firefox supports an alternative, the ::-moz-selection property.</p>
+<p><strong>Eslatma:</strong> Firefox muqobil ::-moz-selection xususiyatini qo‘llab-quvvatlaydi.</p>
 
 </body>
 </html>
@@ -1327,293 +1325,291 @@ example below makes a selected text red on a yellow background:
 
 
 
-All CSS Pseudo Elements
-Selector 	Example 	Example description
-::after 	p::after 	Insert something after the content of each <p> element
-::before 	p::before 	Insert something before the content of each <p> element
-::first-letter 	p::first-letter 	Selects the first letter of each <p> element
-::first-line 	p::first-line 	Selects the first line of each <p> element
-::marker 	::marker 	Selects the markers of list items
-::selection 	p::selection 	Selects the portion of an element that is selected by a user
-All CSS Pseudo Classes
-Selector 	Example 	Example description
-:active 	a:active 	Selects the active link
-:checked 	input:checked 	Selects every checked <input> element
-:disabled 	input:disabled 	Selects every disabled <input> element
-:empty 	p:empty 	Selects every <p> element that has no children
-:enabled 	input:enabled 	Selects every enabled <input> element
-:first-child 	p:first-child 	Selects every <p> elements that is the first child of its parent
-:first-of-type 	p:first-of-type 	Selects every <p> element that is the first <p> element of its 
+Barcha CSS psevdo elementlari
+Selektor misoli Misol tavsifi
+::after p::after Har bir <p> elementi mazmunidan keyin biror narsa kiriting
+:: p::befor dan oldin Har bir <p> elementi mazmunidan oldin biror narsani kiriting
+::birinchi harf p::birinchi harf Har bir <p> elementining birinchi harfini tanlaydi
+::first-line p::first-line Har bir <p> elementining birinchi qatorini tanlaydi
+::marker ::marker Ro'yxat elementlarining markerlarini tanlaydi
+::selection p::selection Elementning foydalanuvchi tomonidan tanlangan qismini tanlaydi
+Barcha CSS psevdo sinflari
+Selektor misoli Misol tavsifi
+:active a:active Faol havolani tanlaydi
+:checked input:checked Har bir belgilangan <input> elementini tanlaydi
+:disabled input:disabled Har bir o'chirilgan <input> elementini tanlaydi
+:empty p:empty Bolalari bo'lmagan har bir <p> elementni tanlaydi
+:enabled input:enabled Har bir yoqilgan <input> elementini tanlaydi
+:first-child p:first-child Ota-onasining birinchi farzandi bo'lgan har bir <p> elementni tanlaydi
+:birinchi turdagi p:birinchi turi o'zining birinchi <p> elementi bo'lgan har bir <p> elementni tanlaydi.
 
-parent
-:focus 	input:focus 	Selects the <input> element that has focus
-:hover 	a:hover 	Selects links on mouse over
-:in-range 	input:in-range 	Selects <input> elements with a value within a specified range
-:invalid 	input:invalid 	Selects all <input> elements with an invalid value
-:lang(language) 	p:lang(it) 	Selects every <p> element with a lang attribute value starting with 
+ota-ona
+:focus input:focus Fokusga ega <input> elementini tanlaydi
+:hover a:hover Sichqoncha ustidagi havolalarni tanlaydi
+:in-range input:in-range Belgilangan diapazondagi qiymatga ega <input> elementlarini tanlaydi
+:invalid input:invalid Noto'g'ri qiymatga ega barcha <input> elementlarini tanlaydi
+:lang(language) p:lang(it) bilan boshlanadigan lang atribut qiymatiga ega har bir <p> elementni tanlaydi.
 
-"it"
-:last-child 	p:last-child 	Selects every <p> elements that is the last child of its parent
-:last-of-type 	p:last-of-type 	Selects every <p> element that is the last <p> element of its parent
-:link 	a:link 	Selects all unvisited links
-:not(selector) 	:not(p) 	Selects every element that is not a <p> element
-:nth-child(n) 	p:nth-child(2) 	Selects every <p> element that is the second child of its parent
-:nth-last-child(n) 	p:nth-last-child(2) 	Selects every <p> element that is the second child of its 
+"bu"
+:last-child p:last-child Ota-onasining oxirgi bolasi bo'lgan har bir <p> elementni tanlaydi
+:last-of-type p:last-of-pe ota-onasining oxirgi <p> elementi bo'lgan har bir <p> elementni tanlaydi.
+:link a:link Barcha tashrif buyurilmagan havolalarni tanlaydi
+:not(selektor) :not(p) <p> elementi boʻlmagan har bir elementni tanlaydi
+:nth-child(n) p:nth-child(2) ota-onasining ikkinchi farzandi bo'lgan har bir <p> elementni tanlaydi
+:nth-so'nggi-child(n) p:nth-last-child(2) O'zining ikkinchi bolasi bo'lgan har bir <p> elementni tanlaydi
 
-parent, counting from the last child
-:nth-last-of-type(n) 	p:nth-last-of-type(2) 	Selects every <p> element that is the second <p> element of 
+ota-ona, oxirgi boladan hisoblash
+:nth-oxirgi-tur(n) p:nth-oxirgi-tur(2) Ikkinchi <p> elementi boʻlgan har bir <p> elementni tanlaydi.
 
-its parent, counting from the last child
-:nth-of-type(n) 	p:nth-of-type(2) 	Selects every <p> element that is the second <p> element of 
+uning ota-onasi, oxirgi bolasidan boshlab hisoblash
+:nth-of-type(n) p:nth-of-type(2) ikkinchi <p> elementi bo‘lgan har bir <p> elementni tanlaydi.
 
-its parent
-:only-of-type 	p:only-of-type 	Selects every <p> element that is the only <p> element of its parent
-:only-child 	p:only-child 	Selects every <p> element that is the only child of its parent
-:optional 	input:optional 	Selects <input> elements with no "required" attribute
-:out-of-range 	input:out-of-range 	Selects <input> elements with a value outside a specified range
-:read-only 	input:read-only 	Selects <input> elements with a "readonly" attribute specified
-:read-write 	input:read-write 	Selects <input> elements with no "readonly" attribute
-:required 	input:required 	Selects <input> elements with a "required" attribute specified
-:root 	root 	Selects the document's root element
-:target 	#news:target 	Selects the current active #news element (clicked on a URL containing that 
+uning ota-onasi
+: only-of-type p: only-of-type ota-onasining yagona <p> elementi bo‘lgan har bir <p> elementni tanlaydi.
+:only-child p:only-child Ota-onasining yagona farzandi bo'lgan har bir <p> elementni tanlaydi
+:ixtiyoriy kiritish:ixtiyoriy “kerakli” atributsiz <input> elementlarini tanlaydi
+:out-of-range input:out-of-range Belgilangan diapazondan tashqaridagi qiymatga ega <input> elementlarini tanlaydi.
+:faqat o‘qish uchun kiritish:faqat o‘qish uchun “faqat o‘qish” atributi ko‘rsatilgan <input> elementlarini tanlaydi.
+:o'qish-yozish kiritish:o'qish-yozish "faqat o'qish" atributiga ega bo'lmagan <input> elementlarini tanlaydi
+:required input:required "kerakli" atributi ko'rsatilgan <input> elementlarini tanlaydi
+:root root Hujjatning ildiz elementini tanlaydi
+:target #news:target Joriy faol #news elementini tanlaydi (uni o'z ichiga olgan URL manziliga bosing)
 
-anchor name)
-:valid 	input:valid 	Selects all <input> elements with a valid value
-:visited 	a:visited 	Selects all visited links
+langar nomi)
+:valid input:valid To'g'ri qiymatga ega barcha <input> elementlarini tanlaydi
+:visited a:visited Barcha tashrif buyurilgan havolalarni tanlaydi
 
 
-<kbd>return</kbd>[Back to table of contents](#homepage)
-
+<kbd>qaytish</kbd>[Mundarijaga qaytish](#homepage)
 
 
 ----------
 
 
 
-## CSS Opacity
+## CSS shaffofligi
 
 
-The opacity property quantifies the opacity or trasparency of an element.\
+Shaffoflik xususiyati elementning shaffofligi yoki shaffofligini aniqlaydi.\
 
 
-Transparent Image
-Opacity of an image ranges from 0 to 1, with 0 being fully transparent and 1.0 meaning fully opaque. See 
+Shaffof rasm
+Tasvirning shaffofligi 0 dan 1 gacha, 0 esa to'liq shaffof, 1,0 esa to'liq shaffof emas. Qarang
 
-example code below:
+quyidagi misol kodi:
 
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
+<uslub>
 img {
-  opacity: 0.5;
+   shaffoflik: 0,5;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h1>Image Transparency</h1>
-<p>The opacity property specifies the transparency of an element. The lower the value, the more 
+<h1>Tasvir shaffofligi</h1>
+<p>Opaklik xususiyati elementning shaffofligini belgilaydi. Qiymat qanchalik past bo'lsa, shuncha ko'p
 
-transparent:</p>
+shaffof:</p>
 
-<p>Image with 50% opacity:</p>
-<img src="img_forest.jpg" alt="Forest" width="170" height="100">
+<p>50% shaffoflikdagi rasm:</p>
+<img src="img_forest.jpg" alt="O'rmon" kengligi="170" balandligi="100">
 
 </body>
 </html>
 
 
 
-Transparent Hover Effect
+Shaffof Hover effekti
 
-It is common for opacity property to be used alongside :hover selector to change the opacity of an image on 
+Rasmning shaffofligini o'zgartirish uchun :hover selektori bilan birga shaffoflik xususiyatidan foydalanish odatiy holdir.
 
-mouse-over. See illustration of how to modify opacity of an image on mouseover below:
+sichqoncha ustiga o'tish. Sichqonchani bosish orqali tasvirning shaffofligini qanday o'zgartirish mumkinligi haqidagi rasmga qarang:
 
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
+<uslub>
 img {
-  opacity: 0.5;
+   shaffoflik: 0,5;
 }
 
-img:hover {
-  opacity: 1.0;
+img: suring {
+   shaffoflik: 1,0;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h1>Image Transparency</h1>
-<p>The opacity property is often used together with the :hover selector to change the opacity on mouse-
+<h1>Tasvir shaffofligi</h1>
+<p>Opaklik xususiyati ko'pincha sichqonchaning shaffofligini o'zgartirish uchun :hover selektori bilan birga ishlatiladi.
 
-over:</p>
-<img src="img_forest.jpg" alt="Forest" width="170" height="100">
-<img src="img_mountains.jpg" alt="Mountains" width="170" height="100">
-<img src="img_5terre.jpg" alt="Italy" width="170" height="100">
+ustidan:</p>
+<img src="img_forest.jpg" alt="O'rmon" kengligi="170" balandligi="100">
+<img src="img_mountains.jpg" alt="Tog'lar" kengligi="170" balandligi="100">
+<img src="img_5terre.jpg" alt="Italiya" kengligi="170" balandligi="100">
 
 </body>
 </html>
 
 
 
-Note on example above: The CSS style shows what happens when a user hovers over one of the images. And in 
+Yuqoridagi misolga e'tibor bering: CSS uslubi foydalanuvchi sichqonchani suratlardan birining ustiga olib kelganida nima sodir bo'lishini ko'rsatadi. Va ichida
 
-this example, we want the image to NOT be transparent when user mouses-over it. The CSS for this is thus 
+Ushbu misolda, foydalanuvchi sichqonchani uning ustiga bosganda tasvir shaffof bo'lmasligini xohlaymiz. Buning uchun CSS shunday
 
-opacity:1; upon hovering, and the pseudo class is set accordingly. 
-
-
+shaffoflik: 1; kursorni o'rnatgandan so'ng va pseudo-klass mos ravishda o'rnatiladi.
 
 
-Transparent Box
 
-The opacity property used in adding transparency to an element is also inherited by the child elements. This 
 
-can make text too transparent to be readable. See illustration below:
+Shaffof quti
+
+Elementga shaffoflikni qo'shishda foydalaniladigan shaffoflik xususiyati ham asosiy elementlar tomonidan meros qilib olinadi. Bu
+
+matnni o'qish uchun juda shaffof qilishi mumkin. Quyidagi rasmga qarang:
 
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
+<uslub>
 div {
-  background-color: #4CAF50;
-  padding: 10px;
+   fon rangi: #4CAF50;
+   to'ldirish: 10px;
 }
 
 div.first {
-  opacity: 0.1;
+   shaffoflik: 0,1;
 }
 
 div.second {
-  opacity: 0.3;
+   shaffoflik: 0,3;
 }
 
-div.third {
-  opacity: 0.6;
+div.uchinchi {
+   shaffoflik: 0,6;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h1>Transparent Box</h1>
-<p>When using the opacity property to add transparency to the background of an element, all of its child 
+<h1>Shaffof quti</h1>
+<p>Element foniga shaffoflik qoʻshish uchun shaffoflik xususiyatidan foydalanilganda, uning barcha asosiy qismi
 
-elements become transparent as well. This can make the text inside a fully transparent element hard to 
+elementlar ham shaffof bo'ladi. Bu to'liq shaffof element ichidagi matnni qiyinlashtirishi mumkin
 
-read:</p>
+o'qing:</p>
 
-<div class="first"><p>opacity 0.1</p></div>
-<div class="second"><p>opacity 0.3</p></div>
-<div class="third"><p>opacity 0.6</p></div>
-<div><p>opacity 1 (default)</p></div>
+<div class="first"><p>shaffoflik 0,1</p></div>
+<div class="second"><p>shaffoflik 0,3</p></div>
+<div class="third"><p>shaffoflik 0,6</p></div>
+<div><p>shaffoflik 1 (standart)</p></div>
 
 </body>
 </html>
 
 
-Transparency using RGBA:::
+RGBA yordamida shaffoflik:::
 
-The use of RGBA prevents the application of opacity to child elements. Once you specify color as RGBA, the 
+RGBA dan foydalanish noshaffoflikni pastki elementlarga qo'llashni oldini oladi. Rangni RGBA sifatida belgilaganingizdan so'ng,
 
-opacity is only set for the background color and not the text. 
+shaffoflik faqat fon rangi uchun o'rnatiladi, matn uchun emas.
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
+<uslub>
 div {
-  background: rgb(76, 175, 80);
-  padding: 10px;
+   fon: rgb(76, 175, 80);
+   to'ldirish: 10px;
 }
 
 div.first {
-  background: rgba(76, 175, 80, 0.1);
+   fon: rgba(76, 175, 80, 0,1);
 }
 
 div.second {
-  background: rgba(76, 175, 80, 0.3);
+   fon: rgba(76, 175, 80, 0,3);
 }
 
-div.third {
-  background: rgba(76, 175, 80, 0.6);
+div.uchinchi {
+   fon: rgba(76, 175, 80, 0,6);
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h1>Transparent Box</h1>
-<p>With opacity:</p>
-<div style="opacity:0.1;"><p>10% opacity</p></div>
-<div style="opacity:0.3;"><p>30% opacity</p></div>
-<div style="opacity:0.6;"><p>60% opacity</p></div>
-<div><p>opacity 1</p></div>
+<h1>Shaffof quti</h1>
+<p>Opaklik bilan:</p>
+<div style="opacity:0.1;"><p>10% shaffoflik</p></div>
+<div style="opacity:0.3;"><p>30% shaffoflik</p></div>
+<div style="opacity:0.6;"><p>60% shaffoflik</p></div>
+<div><p>shaffoflik 1</p></div>
 
-<p>With RGBA color values:</p>
-<div class="first"><p>10% opacity</p></div>
-<div class="second"><p>30% opacity</p></div>
-<div class="third"><p>60% opacity</p></div>
-<div><p>default</p></div>
+<p>RGBA rang qiymatlari bilan:</p>
+<div class="first"><p>10% shaffoflik</p></div>
+<div class="second"><p>30% shaffoflik</p></div>
+<div class="third"><p>60% shaffoflik</p></div>
+<div><p>standart</p></div>
 
-<p>Notice how the text gets transparent as well as the background color when using the opacity property.</p>
+<p>Opaklik xususiyatidan foydalanganda matn qanday shaffof boʻlishiga, shuningdek fon rangiga eʼtibor bering.</p>
 
 </body>
 </html>
 
+Shaffof qutidagi matn :::
 
-Text in Transparent Box:::
+CSS-da biz shaffof qutida ham matn yaratishimiz mumkin. Jarayon quyidagilarni o'z ichiga oladi: Birinchidan, <div> elementini yaratish
 
-In CSS, we can also create text in transparent box. The process involves: First, creating a <div> element 
+(sinf = "fon") fon tasviri va chegara bilan.
 
-(class="background") with a background image, and a border.
+Keyin birinchi <div> ichida yana bir <div> (class="transbox") yaratamiz.
 
-Then we create another <div> (class="transbox") inside the first <div>.
+<div class="transbox"> fon rangiga ega va chegarasi - div shaffof.
 
-The <div class="transbox"> have a background color, and a border - the div is transparent.
+Shaffof <div> ichida biz <p> elementiga bir oz matn qo'shamiz. Quyidagi misolda qanday kiritish kerakligi ko'rsatilgan
 
-Inside the transparent <div>, we add some text inside a <p> element. The example below shows how to insert 
-
-text inside a transparent box:
+shaffof quti ichidagi matn:
  
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-div.background {
-  background: url(klematis.jpg) repeat;
-  border: 2px solid black;
+<uslub>
+div.fon {
+   fon: url(klematis.jpg) takrorlash;
+   chegara: 2px qattiq qora;
 }
 
 div.transbox {
-  margin: 30px;
-  background-color: #ffffff;
-  border: 1px solid black;
-  opacity: 0.6;
+   chegara: 30px;
+   fon rangi: #ffffff;
+   chegara: 1px qattiq qora;
+   shaffoflik: 0,6;
 }
 
 div.transbox p {
-  margin: 5%;
-  font-weight: bold;
-  color: #000000;
+   marja: 5%;
+   shrift vazni: qalin;
+   rang: #000000;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<div class="background">
-  <div class="transbox">
-    <p>This is some text that is placed in the transparent box.</p>
-  </div>
+<div class="fon">
+   <div class="transbox">
+     <p>Bu shaffof qutiga joylashtirilgan matn.</p>
+   </div>
 </div>
 
 </body>
 </html>
 
 
-<kbd>return</kbd>[Back to table of contents](#homepage)
+<kbd>qaytish</kbd>[Mundarijaga qaytish](#homepage)

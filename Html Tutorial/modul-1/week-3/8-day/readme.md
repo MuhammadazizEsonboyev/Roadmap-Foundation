@@ -1,131 +1,129 @@
-## HTML CHARSET
-HTML charset attribute:
-To display an HTML page correctly, a web browser must know the character set used in the page. 
+## HTML CHARSE
+HTML belgilar to'plami atributi:
+HTML sahifani to'g'ri ko'rsatish uchun veb-brauzer sahifada ishlatiladigan belgilar to'plamini bilishi kerak.
 
 ```
 <meta charset="UTF-8">
 ```
-if you do not specify the charset, "UTF-8" is the default in HTML.
+agar siz belgilar to'plamini ko'rsatmasangiz, "UTF-8" HTMLda standart hisoblanadi.
 
 
-UTF-8 Characters: You can't type them on the keyboard but they can always be displayed using numbers ( entity numbers)
+UTF-8 belgilar: Siz ularni klaviaturada yoza olmaysiz, lekin ular har doim raqamlar (shaxs raqamlari) yordamida ko'rsatilishi mumkin.
 
-* Both ```<p>``` in the paragraph below are the same
+* Quyidagi xatboshidagi ```<p>``` ikkalasi ham bir xil
 ```
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 </head>
-<body>
+<tana>
 
-<p>I will display A B C</p>
-<p>I will display &#65; &#66; &#67;</p>
+<p>Men A B C</p> ko'rsataman
+<p>Men &#65; &#66; &#67;</p>
 
 </body>
-</html> 
+</html>
 ```
-* A, B, C are 65, 66, and 67 respectively
+* A, B, C mos ravishda 65, 66 va 67
 
-To let browser recognize that you are displaying a utf-8 character, you must start with &# and end it with a semi-colon (;)
+Brauzerga utf-8 belgisini ko'rsatayotganingizni tan olishi uchun &# dan boshlashingiz va uni nuqtali vergul (;) bilan tugatishingiz kerak.
 
-Emojis are also characters from utf-8.
+Emojilar ham utf-8 belgilaridir.
 
-* You can size emojis like other characters
+* Siz boshqa belgilar kabi kulgichlarni oʻlchashingiz mumkin
 ```
 <p style="font-size:48px">
 &#128512; &#128516; &#128525; &#128151;
 </p>
 ```
-* HTML Encoding ( Character sets)
+* HTML kodlash (belgilar to'plami)
 
-A browser must know the character set to use to display it correctly. 
+Brauzer uni to'g'ri ko'rsatish uchun foydalanadigan belgilar to'plamini bilishi kerak.
 
-** Excerpts from the HTML ENCODING CHAPTER
-From ASCII to UTF-8
+** HTML kodlash bobidan parchalar
+ASCII dan UTF-8 ga
 
-ASCII was the first character encoding standard. ASCII defined 128 different characters that could be used on the internet: numbers (0-9), English letters (A-Z), and some special characters like ! $ + - ( ) @ < > .
+ASCII belgilarni kodlashning birinchi standarti edi. ASCII Internetda ishlatilishi mumkin bo'lgan 128 xil belgini aniqladi: raqamlar (0-9), ingliz harflari (A-Z) va ba'zi maxsus belgilar kabi ! $ + - ( ) @ < > .
 
-ISO-8859-1 was the default character set for HTML 4. This character set supported 256 different character codes. HTML 4 also supported UTF-8.
+ISO-8859-1 HTML 4 uchun standart belgilar toʻplami edi. Bu belgilar toʻplami 256 xil belgilar kodini qoʻllab-quvvatlagan. HTML 4 ham UTF-8 ni qo'llab-quvvatladi.
 
-ANSI (Windows-1252) was the original Windows character set. ANSI is identical to ISO-8859-1, except that ANSI has 32 extra characters.
+ANSI (Windows-1252) asl Windows belgilar to'plami edi. ANSI ISO-8859-1 bilan bir xil, faqat ANSIda 32 ta qoʻshimcha belgilar mavjud.
 
-The HTML5 specification encourages web developers to use the UTF-8 character set, which covers almost all of the characters and symbols in the world!
+HTML5 spetsifikatsiyasi veb-ishlab chiquvchilarni dunyodagi deyarli barcha belgilar va belgilarni qamrab oluvchi UTF-8 belgilar to'plamidan foydalanishga undaydi!
 
-** HTML charset attribute
-you specify it in the <meta> tag of the HTML page.
+** HTML belgilar to'plami atributi
+uni HTML sahifasining <meta> tegida ko'rsatasiz.
 
 ```
 <meta charset="UTF-8">
 ```
-<kbd>return</kbd>[Back to table of contents](#homepage)
+<kbd>qaytish</kbd>[Mundarijaga qaytish](#homepage)
 
 
 -------
 
 
 
-## HTML Forms
+## HTML shakllari
 
-* Filling a form that contains user name and password and that redirects the form to a specific page after servers process the input.
+* Foydalanuvchi nomi va parolni o'z ichiga olgan va serverlar kiritilgan ma'lumotlarni qayta ishlagandan so'ng shaklni ma'lum bir sahifaga yo'naltiruvchi shaklni to'ldirish.
 ```
-<h2>HTML Forms</h2>
+<h2>HTML shakllari</h2>
 
 <form action="/action_page.php">
-  <label for="fname">First name:</label><br>
-  <input type="text" id="fname" name="fname" value="John"><br>
-  <label for="lname">Last name:</label><br>
-  <input type="text" id="lname" name="lname" value="Doe"><br><br>
-  <input type="submit" value="Submit">
-</form> 
+   <label for="fname">Ism:</label><br>
+   <input type="text" id="fname" name="fname" value="Jon"><br>
+   <label for="lname">Familiya:</label><br>
+   <input type="text" id="lname" name="lname" value="Doe"><br><br>
+   <input type="submit" value="yuborish">
+</form>
 
-<p>If you click the "Submit" button, the form-data will be sent to a page called "/action_page.php".</p>
+<p>Agar siz “Yuborish” tugmasini bossangiz, forma maʼlumotlari “/action_page.php” deb nomlangan sahifaga yuboriladi.</p>
 ```
 
-* The ```<form>``` Element
+* ```<form>``` elementi
 
-The HTML ```<form>``` element is used to create an HTML form for user input:
+HTML ```<form>``` elementi foydalanuvchi kiritishi uchun HTML formasini yaratish uchun ishlatiladi:
 ```
 <form>
 
-form elements
+shakl elementlari
 
 </form>
 ```
 
-The form element is like a container for all kinds of  input elements like: text fields, checkboxes, radio buttons, submit buttons, etc.
+Shakl elementi barcha turdagi kiritish elementlari uchun konteynerga o'xshaydi, masalan: matn maydonlari, tasdiqlash qutilari, radio tugmalari, yuborish tugmalari va boshqalar.
 
 
-* The ```<input>``` element: is the most used form element and can be displayed on the 'type' attribute. 
+* ```<input>``` elementi: eng ko`p qo`llaniladigan shakl elementi bo`lib, uni 'type' atributida ko`rsatish mumkin.
 ```
-Type 	Description
-<input type="text"> 	Displays a single-line text input field
-<input type="radio"> 	Displays a radio button (for selecting one of many choices)
-<input type="checkbox"> 	Displays a checkbox (for selecting zero or more of many choices)
-<input type="submit"> 	Displays a submit button (for submitting the form)
-<input type="button"> 	Displays a clickable button
+Turi Tavsif
+<input type="text"> Bir qatorli matn kiritish maydonini ko'rsatadi
+<input type="radio"> Radio tugmani ko'rsatadi (ko'p variantlardan birini tanlash uchun)
+<input type="checkbox"> Belgilash katakchasini ko'rsatadi (ko'p variantlardan nol yoki undan ko'pni tanlash uchun)
+<input type="submit"> Yuborish tugmachasini ko'rsatadi (shaklni yuborish uchun)
+<input type="button"> Bosiladigan tugmani ko'rsatadi
 ```
 
-* Text Fields: ```<input type="text"> ```
+* Matn maydonlari: ```<kiritish turi="matn"> ```
 
-This defines a single-line input field for text input. The form itself is not visible and the number of characters is by default 20 characters. 
+Bu matn kiritish uchun bitta qatorli kiritish maydonini belgilaydi. Shaklning o'zi ko'rinmaydi va belgilar soni sukut bo'yicha 20 belgidan iborat.
 ```
 <form>
-  <label for="fname">First name:</label><br>
-  <input type="text" id="fname" name="fname"><br>
-  <label for="lname">Last name:</label><br>
-  <input type="text" id="lname" name="lname">
-</form> 
+   <label for="fname">Ism:</label><br>
+   <input type="text" id="fname" name="fname"><br>
+   <label for="lname">Familiya:</label><br>
+   <input type="text" id="lname" name="lname">
+</form>
 ```
-The ```<label>``` tag defines a label for many form elements.
+```<label>``` tegi ko`p shakl elementlari uchun yorliqni belgilaydi.
 
-The ```<label>``` element is useful for screen-reader users, because the screen-reader will read out loud the label when the user focus on the input element.
+```<label>``` elementi ekranni o`qiydigan foydalanuvchilar uchun foydalidir, chunki foydalanuvchi asosiy e`tiborni kiritish elementiga qaratganda ekran o`quvchi yorliqni baland ovozda o`qiydi.
 
-The ```<label>``` element also help users who have difficulty clicking on very small regions (such as radio buttons or checkboxes) - because when the user clicks the text within the ```<label>``` element, it toggles the radio button/checkbox.
+```<label>``` elementi juda kichik hududlarni (masalan, radio tugmalar yoki belgilash katakchalari) bosishda qiynalayotgan foydalanuvchilarga ham yordam beradi - chunki foydalanuvchi ```<label>``` elementidagi matnni bosganda , u radio tugmachasini/tasdiqlash qutisini almashtiradi.
 
-The for attribute of the ```<label>``` tag should be equal to the id attribute of the <input> element to bind them together. 
-
-
+```<label>``` tegining for atributi ularni bir-biriga bog`lash uchun <input> elementining id atributiga teng bo`lishi kerak.
 * Radio Buttons
 ```
 <input type="radio"> defines the radio button which lets use select ONLY one among a few choices.
@@ -180,1319 +178,1312 @@ Example of a form with a submit button below:
 
 <kbd>return</kbd>[Back to table of contents](#homepage)
 
-## HTML Form Attributes
+## HTML formasi atributlari
 
-* The HTML Form Attribute: A discussion of different attributes
+* HTML formasi atributi: turli atributlar muhokamasi
 
-The Action Attribute: defines action to be performed when form is submitted.  Form data is usually sent to a file on  server when submit button is clicked. If you omit action attribute, the action is set to the current page.
+Harakat atributi: ariza topshirilganda bajarilishi kerak bo'lgan harakatni belgilaydi. Shakl ma'lumotlari odatda yuborish tugmasi bosilganda serverdagi faylga yuboriladi. Agar harakat atributini o'tkazib yuborsangiz, amal joriy sahifaga o'rnatiladi.
 
-* To send form data to a file called action_page.php containing a server-side script that handles the form data:
+* Shakl ma'lumotlarini forma ma'lumotlarini boshqaradigan server tomonidagi skriptni o'z ichiga olgan action_page.php nomli faylga yuborish uchun:
 ```
 <form action="/action_page.php">
-  <label for="fname">First name:</label><br>
-  <input type="text" id="fname" name="fname" value="John"><br>
-  <label for="lname">Last name:</label><br>
-  <input type="text" id="lname" name="lname" value="Doe"><br><br>
-  <input type="submit" value="Submit">
-</form> 
+   <label for="fname">Ism:</label><br>
+   <input type="text" id="fname" name="fname" value="Jon"><br>
+   <label for="lname">Familiya:</label><br>
+   <input type="text" id="lname" name="lname" value="Doe"><br><br>
+   <input type="submit" value="yuborish">
+</form>
 ```
 
-* The Target Attribute
-This specified where to display response received after submitting the form. 
+* Maqsad atributi
+Bu shaklni yuborgandan so'ng olingan javobni qayerda ko'rsatishni ko'rsatdi.
 
-See below for the possible values of the target attribute
+Maqsad atributining mumkin bo'lgan qiymatlari uchun pastga qarang
 
-Value 	Description
+Qiymat tavsifi
 ```
-_blank 	The response is displayed in a new window or tab
-_self 	The response is displayed in the current window (default)
-_parent 	The response is displayed in the parent frame
-_top 	The response is displayed in the full body of the window
-framename 	The response is displayed in a named iframe
+_blank Javob yangi oyna yoki yorliqda ko'rsatiladi
+_self Javob joriy oynada ko'rsatiladi (standart)
+_parent Javob ota-ramada ko'rsatiladi
+_top Javob oynaning to'liq qismida ko'rsatiladi
+framename Javob nomli iframe-da ko'rsatiladi
 ```
-* Example of the use of target attribute:
+* Maqsad atributidan foydalanishga misol:
 ```
-<p>When submitting this form, the result will be opened in a new browser tab:</p>
+<p>Ushbu shaklni yuborishda natija brauzerning yangi sahifasida ochiladi:</p>
 
 <form action="/action_page.php" target="_blank">
-  <label for="fname">First name:</label><br>
-  <input type="text" id="fname" name="fname" value="John"><br>
-  <label for="lname">Last name:</label><br>
-  <input type="text" id="lname" name="lname" value="Doe"><br><br>
-  <input type="submit" value="Submit">
-</form> 
+   <label for="fname">Ism:</label><br>
+   <input type="text" id="fname" name="fname" value="Jon"><br>
+   <label for="lname">Familiya:</label><br>
+   <input type="text" id="lname" name="lname" value="Doe"><br><br>
+   <input type="submit" value="yuborish">
+</form>
 ```
 
-* The Method Attribute
+* Metod atributi
 
-This specifies the method attribute specifies HTTP method used when submitting form data. 
+Bu usul atributi shakl ma'lumotlarini yuborishda ishlatiladigan HTTP usulini belgilaydi.
 
-* The get method: ```<form action="/action_page.php" method="get"> ```
-* The post method:  ```<form action="/action_page.php" method="post"> ```
+* Get usuli: ```<form action="/action_page.php" method="get"> ```
+* Xabar berish usuli: ```<form action="/action_page.php" method="post"> ```
 
-* Tip: Always use POST if the form data contains sensitive or personal information!
+* Maslahat: Agar forma maʼlumotlarida maxfiy yoki shaxsiy maʼlumotlar boʻlsa, har doim POST-dan foydalaning!
 
-Notes on GET:
-Appends the form data to the URL, in name/value pairs
-NEVER use GET to send sensitive data! (the submitted form data is visible in the URL!)
-The length of a URL is limited (2048 characters)
-Useful for form submissions where a user wants to bookmark the result
-GET is good for non-secure data, like query strings in Google
+GET bo'yicha eslatmalar:
+Shakl ma'lumotlarini URL manziliga nom/qiymat juftliklarida qo'shadi
+Nozik ma'lumotlarni yuborish uchun HECH QACHON GET dan foydalanmang! (yuborilgan shakl ma'lumotlari URL manzilida ko'rinadi!)
+URL uzunligi cheklangan (2048 belgi)
+Foydalanuvchi natijani belgilamoqchi bo'lgan shakllarni yuborish uchun foydalidir
+GET xavfsiz bo'lmagan ma'lumotlar uchun yaxshi, masalan, Google so'rovlari qatorlari
 
-Notes on POST:
-Appends the form data inside the body of the HTTP request (the submitted form data is not shown in the URL)
-POST has no size limitations, and can be used to send large amounts of data.
-Form submissions with POST cannot be bookmarked
+POST haqida eslatmalar:
+Form ma'lumotlarini HTTP so'rovining asosiy qismiga qo'shadi (yuborilgan shakl ma'lumotlari URLda ko'rsatilmaydi)
+POST-da o'lcham cheklovlari yo'q va katta hajmdagi ma'lumotlarni yuborish uchun ishlatilishi mumkin.
+POST bilan yuborilgan arizalarni xatcho‘p qilib bo‘lmaydi
 
-Tip: Always use POST if the form data contains sensitive or personal information!
+Maslahat: Agar forma ma'lumotlarida maxfiy yoki shaxsiy ma'lumotlar bo'lsa, har doim POST dan foydalaning!
 
-* The Autocomplete Attribute
-Specifies whether a form should have autocomplete on or off. Autocomplete when left on enables browser automatically complete values based on previously entered values in the same browser. 
+* Avtomatik to'ldirish atributi
+Shaklda avtomatik toʻldirishni yoqish yoki oʻchirish kerakligini belgilaydi. Avtomatik to‘ldirish yoqilgan bo‘lsa, brauzerda bir xil brauzerda avval kiritilgan qiymatlar asosida qiymatlarni avtomatik ravishda to‘ldirish imkonini beradi.
 ```
-<form action="/action_page.php" autocomplete="on"> 
+<form action="/action_page.php" autocomplete="on">
 ```
 
-The Novalidate Attribute
-This is a boolean attribute which specifies form-data (input) should not be validated when submitted. 
+Novalidate atributi
+Bu mantiqiy atribut bo'lib, ariza ma'lumotlari (kiritish) yuborilganda tasdiqlanmasligi kerak.
 ```
-<form action="/action_page.php" novalidate> 
+<form action="/action_page.php" novalidate>
 ```
-* List of All <form> Attributes
+* Barcha <form> atributlari ro'yxati
 
 ```
-Attribute 	Description
-accept-charset 	Specifies the character encodings used for form submission
-action 	Specifies where to send the form-data when a form is submitted
-autocomplete 	Specifies whether a form should have autocomplete on or off
-enctype 	Specifies how the form-data should be encoded when submitting it to the server (only for method="post")
-method 	Specifies the HTTP method to use when sending form-data
-name 	Specifies the name of the form
-novalidate 	Specifies that the form should not be validated when submitted
-rel 	Specifies the relationship between a linked resource and the current document
-target 	Specifies where to display the response that is received after submitting the form
+Atribut tavsifi
+accept-charset Shaklni yuborish uchun ishlatiladigan belgilar kodlashlarini belgilaydi
+harakat Shakl topshirilganda forma ma'lumotlarini qaerga yuborish kerakligini belgilaydi
+avtoto'ldirish Shaklda avtomatik to'ldirishni yoqish yoki o'chirish kerakligini belgilaydi
+enctype Form ma'lumotlarini serverga yuborishda qanday kodlash kerakligini belgilaydi (faqat method="post" uchun)
+Metod Form ma'lumotlarini yuborishda foydalanish uchun HTTP usulini belgilaydi
+nom Shakl nomini bildiradi
+novalidate Shakl topshirilganda tasdiqlanmasligi kerakligini bildiradi
+rel Bog'langan manba va joriy hujjat o'rtasidagi munosabatni belgilaydi
+maqsad Shaklni yuborgandan so'ng olingan javobni qayerda ko'rsatishni belgilaydi
 ```
-<kbd>return</kbd>[Back to table of contents](#homepage)
+<kbd>qaytish</kbd>[Mundarijaga qaytish](#homepage)
 
 
 ------
+## HTML formasi atributlari
 
+* HTML formasi atributi: turli atributlar muhokamasi
 
+Harakat atributi: ariza topshirilganda bajarilishi kerak bo'lgan harakatni belgilaydi. Shakl ma'lumotlari odatda yuborish tugmasi bosilganda serverdagi faylga yuboriladi. Agar harakat atributini o'tkazib yuborsangiz, amal joriy sahifaga o'rnatiladi.
 
-## HTML Form Attributes
-
-* The HTML Form Attribute: A discussion of different attributes
-
-The Action Attribute: defines action to be performed when form is submitted.  Form data is usually sent to a file on  server when submit button is clicked. If you omit action attribute, the action is set to the current page.
-
-* To send form data to a file called action_page.php containing a server-side script that handles the form data:
+* Shakl ma'lumotlarini forma ma'lumotlarini boshqaradigan server tomonidagi skriptni o'z ichiga olgan action_page.php nomli faylga yuborish uchun:
 ```
 <form action="/action_page.php">
-  <label for="fname">First name:</label><br>
-  <input type="text" id="fname" name="fname" value="John"><br>
-  <label for="lname">Last name:</label><br>
-  <input type="text" id="lname" name="lname" value="Doe"><br><br>
-  <input type="submit" value="Submit">
-</form> 
+   <label for="fname">Ism:</label><br>
+   <input type="text" id="fname" name="fname" value="Jon"><br>
+   <label for="lname">Familiya:</label><br>
+   <input type="text" id="lname" name="lname" value="Doe"><br><br>
+   <input type="submit" value="yuborish">
+</form>
 ```
 
-* The Target Attribute
-This specified where to display response received after submitting the form. 
+* Maqsad atributi
+Bu shaklni yuborgandan so'ng olingan javobni qayerda ko'rsatishni ko'rsatdi.
 
-See below for the possible values of the target attribute
+Maqsad atributining mumkin bo'lgan qiymatlari uchun pastga qarang
 
-Value 	Description
+Qiymat tavsifi
 ```
-_blank 	The response is displayed in a new window or tab
-_self 	The response is displayed in the current window (default)
-_parent 	The response is displayed in the parent frame
-_top 	The response is displayed in the full body of the window
-framename 	The response is displayed in a named iframe
+_blank Javob yangi oyna yoki yorliqda ko'rsatiladi
+_self Javob joriy oynada ko'rsatiladi (standart)
+_parent Javob ota-ramada ko'rsatiladi
+_top Javob oynaning to'liq qismida ko'rsatiladi
+framename Javob nomli iframe-da ko'rsatiladi
 ```
-* Example of the use of target attribute:
+* Maqsad atributidan foydalanishga misol:
 ```
-<p>When submitting this form, the result will be opened in a new browser tab:</p>
+<p>Ushbu shaklni yuborishda natija brauzerning yangi sahifasida ochiladi:</p>
 
 <form action="/action_page.php" target="_blank">
-  <label for="fname">First name:</label><br>
-  <input type="text" id="fname" name="fname" value="John"><br>
-  <label for="lname">Last name:</label><br>
-  <input type="text" id="lname" name="lname" value="Doe"><br><br>
-  <input type="submit" value="Submit">
-</form> 
+   <label for="fname">Ism:</label><br>
+   <input type="text" id="fname" name="fname" value="Jon"><br>
+   <label for="lname">Familiya:</label><br>
+   <input type="text" id="lname" name="lname" value="Doe"><br><br>
+   <input type="submit" value="yuborish">
+</form>
 ```
 
-* The Method Attribute
+* Metod atributi
 
-This specifies the method attribute specifies HTTP method used when submitting form data. 
+Bu usul atributi shakl ma'lumotlarini yuborishda ishlatiladigan HTTP usulini belgilaydi.
 
-* The get method: ```<form action="/action_page.php" method="get"> ```
-* The post method:  ```<form action="/action_page.php" method="post"> ```
+* Get usuli: ```<form action="/action_page.php" method="get"> ```
+* Xabar berish usuli: ```<form action="/action_page.php" method="post"> ```
 
-* Tip: Always use POST if the form data contains sensitive or personal information!
+* Maslahat: Agar forma maʼlumotlarida maxfiy yoki shaxsiy maʼlumotlar boʻlsa, har doim POST-dan foydalaning!
 
-Notes on GET:
-Appends the form data to the URL, in name/value pairs
-NEVER use GET to send sensitive data! (the submitted form data is visible in the URL!)
-The length of a URL is limited (2048 characters)
-Useful for form submissions where a user wants to bookmark the result
-GET is good for non-secure data, like query strings in Google
+GET bo'yicha eslatmalar:
+Shakl ma'lumotlarini URL manziliga nom/qiymat juftliklarida qo'shadi
+Nozik ma'lumotlarni yuborish uchun HECH QACHON GET dan foydalanmang! (yuborilgan shakl ma'lumotlari URL manzilida ko'rinadi!)
+URL uzunligi cheklangan (2048 belgi)
+Foydalanuvchi natijani belgilamoqchi bo'lgan shakllarni yuborish uchun foydalidir
+GET xavfsiz bo'lmagan ma'lumotlar uchun yaxshi, masalan, Google so'rovlari qatorlari
 
-Notes on POST:
-Appends the form data inside the body of the HTTP request (the submitted form data is not shown in the URL)
-POST has no size limitations, and can be used to send large amounts of data.
-Form submissions with POST cannot be bookmarked
+POST haqida eslatmalar:
+Form ma'lumotlarini HTTP so'rovining asosiy qismiga qo'shadi (yuborilgan shakl ma'lumotlari URLda ko'rsatilmaydi)
+POST-da o'lcham cheklovlari yo'q va katta hajmdagi ma'lumotlarni yuborish uchun ishlatilishi mumkin.
+POST bilan yuborilgan arizalarni xatcho‘p qilib bo‘lmaydi
 
-Tip: Always use POST if the form data contains sensitive or personal information!
+Maslahat: Agar forma ma'lumotlarida maxfiy yoki shaxsiy ma'lumotlar bo'lsa, har doim POST dan foydalaning!
 
-* The Autocomplete Attribute
-Specifies whether a form should have autocomplete on or off. Autocomplete when left on enables browser automatically complete values based on previously entered values in the same browser. 
+* Avtomatik to'ldirish atributi
+Shaklda avtomatik toʻldirishni yoqish yoki oʻchirish kerakligini belgilaydi. Avtomatik to‘ldirish yoqilgan bo‘lsa, brauzerda bir xil brauzerda avval kiritilgan qiymatlar asosida qiymatlarni avtomatik ravishda to‘ldirish imkonini beradi.
 ```
-<form action="/action_page.php" autocomplete="on"> 
+<form action="/action_page.php" autocomplete="on">
 ```
 
-The Novalidate Attribute
-This is a boolean attribute which specifies form-data (input) should not be validated when submitted. 
+Novalidate atributi
+Bu mantiqiy atribut bo'lib, ariza ma'lumotlari (kiritish) yuborilganda tasdiqlanmasligi kerak.
 ```
-<form action="/action_page.php" novalidate> 
+<form action="/action_page.php" novalidate>
 ```
-* List of All <form> Attributes
+* Barcha <form> atributlari ro'yxati
 
 ```
-Attribute 	Description
-accept-charset 	Specifies the character encodings used for form submission
-action 	Specifies where to send the form-data when a form is submitted
-autocomplete 	Specifies whether a form should have autocomplete on or off
-enctype 	Specifies how the form-data should be encoded when submitting it to the server (only for method="post")
-method 	Specifies the HTTP method to use when sending form-data
-name 	Specifies the name of the form
-novalidate 	Specifies that the form should not be validated when submitted
-rel 	Specifies the relationship between a linked resource and the current document
-target 	Specifies where to display the response that is received after submitting the form
+Atribut tavsifi
+accept-charset Shaklni yuborish uchun ishlatiladigan belgilar kodlashlarini belgilaydi
+harakat Shakl topshirilganda forma ma'lumotlarini qaerga yuborish kerakligini belgilaydi
+avtoto'ldirish Shaklda avtomatik to'ldirishni yoqish yoki o'chirish kerakligini belgilaydi
+enctype Form ma'lumotlarini serverga yuborishda qanday kodlash kerakligini belgilaydi (faqat method="post" uchun)
+Metod Form ma'lumotlarini yuborishda foydalanish uchun HTTP usulini belgilaydi
+nom Shakl nomini bildiradi
+novalidate Shakl topshirilganda tasdiqlanmasligi kerakligini bildiradi
+rel Bog'langan manba va joriy hujjat o'rtasidagi munosabatni belgilaydi
+maqsad Shaklni yuborgandan so'ng olingan javobni qayerda ko'rsatishni belgilaydi
 ```
-<kbd>return</kbd>[Back to table of contents](#homepage)
+<kbd>qaytish</kbd>[Mundarijaga qaytish](#homepage)
 
 
 --------
+## HTML forma elementlari
+HTML ```<form>``` elementlari
 
-
-## HTML Form Elements
-HTML ```<form>``` Elements
-
-The HTML <form> element can contain one or more of the following form elements:
+HTML <form> elementi quyidagi shakl elementlaridan bir yoki bir nechtasini o'z ichiga olishi mumkin:
 
 ```
-<input>
+<kiritish>
 <label>
-<select>
+<tanlash>
 <textarea>
-<button>
-<fieldset>
+<tugmasi>
+<maydon to'plami>
 <legend>
 <datalist>
-<output>
-<option>
+<chiqish>
+<opsiya>
 <optgroup>
 ```
 
-* The ```<input>``` Element
-Input element is one of the most used form element. Can be displayed in varying ways depending on the type attribute
+* ```<input>``` elementi
+Kirish elementi eng ko'p ishlatiladigan shakl elementlaridan biridir. Tur atributiga qarab turli yo'llar bilan ko'rsatilishi mumkin
 ```
-<label for="fname">First name:</label>
-<input type="text" id="fname" name="fname"> 
+<label for="fname">Ism:</label>
+<input type="text" id="fname" name="fname">
 ```
-* The ```<label>``` Element
+* ```<label>``` elementi
 
-```<label>``` element defines a label for several form elements. Helps screen-readers  read out the label when the user focus on the input. 
-It also helps users click on text next to small regions ( like checkboxes and buttons)  to click those small areas. 
+```<label>``` elementi bir nechta forma elementlari uchun tegni belgilaydi. Foydalanuvchi kirishga e'tibor qaratganda ekranni o'qiydiganlarga yorliqni o'qishga yordam beradi.
+Shuningdek, u foydalanuvchilarga kichik hududlar yonidagi matnni (masalan, belgilash katakchalari va tugmalar) bosishda yordam beradi.
 
-The 'for' attribute of the```<label>``` tag should equal to the 'id' attribute of the <input> element to bind them together.
+```<label>``` tegining 'for' atributi ularni birlashtirish uchun <input> elementining 'id' atributiga teng bo'lishi kerak.
 
-* The ```<select>``` Element 
+* ```<select>``` elementi
 
-This element defvines a drop-down list:
+Ushbu element ochiladigan ro'yxatni belgilaydi:
 ```
-<label for="cars">Choose a car:</label>
+<label for="cars">Mashinani tanlang:</label>
 <select id="cars" name="cars">
-  <option value="volvo">Volvo</option>
-  <option value="saab">Saab</option>
-  <option value="fiat">Fiat</option>
-  <option value="audi">Audi</option>
-</select> 
+   <option value="volvo">Volvo</option>
+   <option value="saab">Saab</option>
+   <option value="fiat">Fiat</option>
+   <option value="audi">Audi</option>
+</select>
 ```
-* The option elements defines an option that can be selected. The first item is selected by default. Add the 'selected' attribute to an option to make it pre-selected. 
+* Variant elementlari tanlanishi mumkin bo'lgan variantni belgilaydi. Birinchi element sukut bo'yicha tanlanadi. Oldindan tanlangan qilish uchun opsiyaga "tanlangan" atributini qo'shing.
 ```
-<option value="fiat" selected>Fiat</option> 
+<option value="fiat" selected>Fiat</option>
 ```
-* Visible Values: Use size attribute to specify the number of visible values (a small scroll bar is inserted if you have more than the visible value set)
+* Ko'rinadigan qiymatlar: ko'rinadigan qiymatlar sonini belgilash uchun o'lcham atributidan foydalaning (agar sizda ko'rinadigan qiymatdan ko'proq bo'lsa, kichik aylantirish paneli kiritiladi)
 ```
-<label for="cars">Choose a car:</label>
+<label for="cars">Mashinani tanlang:</label>
 <select id="cars" name="cars" size="3">
-  <option value="volvo">Volvo</option>
-  <option value="saab">Saab</option>
-  <option value="fiat">Fiat</option>
-  <option value="audi">Audi</option>
-</select> 
+   <option value="volvo">Volvo</option>
+   <option value="saab">Saab</option>
+   <option value="fiat">Fiat</option>
+   <option value="audi">Audi</option>
+</select>
 ```
 
-* Allow Multiple Selections: 'multiple' attribute allow user to select more than one value. To use this, you have to Hold down the Ctrl (windows) / Command (Mac) button to select multiple options
+* Bir nechta tanlovga ruxsat berish: "bir nechta" atributi foydalanuvchiga bir nechta qiymatlarni tanlash imkonini beradi. Buni ishlatish uchun bir nechta variantni tanlash uchun Ctrl (Windows) / Buyruq (Mac) tugmasini bosib ushlab turishingiz kerak.
 ```
-<label for="cars">Choose a car:</label>
-<select id="cars" name="cars" size="4" multiple>
-  <option value="volvo">Volvo</option>
-  <option value="saab">Saab</option>
-  <option value="fiat">Fiat</option>
-  <option value="audi">Audi</option>
-</select> 
+<label for="cars">Mashinani tanlang:</label>
+<select id="cars" name="cars" size="4" bir nechta>
+   <option value="volvo">Volvo</option>
+   <option value="saab">Saab</option>
+   <option value="fiat">Fiat</option>
+   <option value="audi">Audi</option>
+</select>
 ```
 
-* The ```<textarea>``` Element
-The ```<textarea>``` element defines a multi-line input field (a text area):
-The rows attribute specifies the visible number of lines in a text area.
+* ```<textarea>``` elementi
+```<textarea>``` elementi ko`p qatorli kiritish maydonini (matn maydoni) belgilaydi:
+Satrlar atributi matn maydonidagi satrlarning ko'rinadigan sonini belgilaydi.
 
-The cols attribute specifies the visible width of a text area.
+Cols atributi matn maydonining ko'rinadigan kengligini belgilaydi.
 
-This is how the HTML code above will be displayed in a browser:
+Yuqoridagi HTML kodi brauzerda shunday ko'rsatiladi:
 ```
-<textarea name="message" rows="10" cols="30">
-The cat was playing in the garden.
-</textarea> 
-``` 
-CSS can also be used to define the size of the text area. 
+<textarea name="xabar" rows="10" cols="30">
+Mushuk bog'da o'ynadi.
+</textarea>
+```
+CSS-dan matn maydoni hajmini aniqlash uchun ham foydalanish mumkin.
 ```
 <textarea name="message" style="width:200px; height:600px;">
-The cat was playing in the garden.
-</textarea> 
+Mushuk bog'da o'ynadi.
+</textarea>
 ```
 
-* The ```<button>``` Element
-Defines a clickable button.
-```	
-<button type="button" onclick="alert('Hello World!')">Click Me!</button>
+* ```<tugmasi>``` elementi
+Bosiladigan tugmani belgilaydi.
 ```
-Note: Always specify the type attribute for the button element. Different browsers may use different default types for the button element.
-
-* The ```<fieldset>``` and ```<legend>``` Elements
-
-The ```<fieldset>``` element is used to group related data in a form.
-
-The ```<legend>``` element defines a caption for the <fieldset> element.
-
+<button type="button" onclick="alert('Salom Dunyo!')">Menga bosing!</button>
 ```
-<form action="/action_page.php">
-  <fieldset>
-    <legend>Personalia:</legend>
-    <label for="fname">First name:</label><br>
-    <input type="text" id="fname" name="fname" value="John"><br>
-    <label for="lname">Last name:</label><br>
-    <input type="text" id="lname" name="lname" value="Doe"><br><br>
-    <input type="submit" value="Submit">
-  </fieldset>
-</form> 
-```
+Eslatma: Har doim tugma elementi uchun type atributini belgilang. Turli xil brauzerlar tugma elementi uchun har xil standart turlardan foydalanishi mumkin.
 
-* The ```<datalist>``` Element
-Specifies a list of pre-defined options for an ```<input>``` element (works like a kind of autocomplete which list options you can select from once you type a text) This should be usable with the normal form input element--experiment.
+* ```<fieldset>``` va ```<legend>``` elementlari
 
-Users will see a drop-down list of the pre-defined options as they input data.
+```<fieldset>``` elementi formadagi bog`liq ma`lumotlarni guruhlash uchun ishlatiladi.
 
-The list attribute of the ```<input>``` element, must refer to the id attribute of the <datalist> element
+```<legend>``` elementi <fieldset> elementi uchun sarlavhani belgilaydi.
 
-The datalist tag is not supported in Safari prior version 12.1
 ```
 <form action="/action_page.php">
-  <input list="browsers">
-  <datalist id="browsers">
-    <option value="Internet Explorer">
-    <option value="Firefox">
-    <option value="Chrome">
-    <option value="Opera">
-    <option value="Safari">
-  </datalist>
-</form> 
+   <maydon to'plami>
+     <legend>Shaxsiy:</legend>
+     <label for="fname">Ism:</label><br>
+     <input type="text" id="fname" name="fname" value="Jon"><br>
+     <label for="lname">Familiya:</label><br>
+     <input type="text" id="lname" name="lname" value="Doe"><br><br>
+     <input type="submit" value="yuborish">
+   </fieldset>
+</form>
 ```
 
-* The ```<output>``` Element
-Rep the result of a calculation ( such as one performed by a script)
-	
+* ```<datalist>``` elementi
+```<input>``` elementi uchun oldindan belgilangan variantlar ro`yxatini belgilaydi (matnni kiritganingizdan so`ng tanlashingiz mumkin bo`lgan ro`yxat opsiyalarini avtomatik to`ldirish kabi ishlaydi) Bu oddiy shakl kiritish elementi bilan ishlatilishi mumkin --tajriba.
+
+Foydalanuvchilar ma'lumotlarni kiritishda oldindan belgilangan variantlarning ochiladigan ro'yxatini ko'radilar.
+
+```<input>``` elementining ro`yxat atributi <datalist> elementining id atributiga murojaat qilishi kerak
+
+Safari ning oldingi 12.1 versiyasida maʼlumotlar roʻyxati tegi qoʻllab-quvvatlanmaydi
+```
+<form action="/action_page.php">
+   <input list="brauzerlar">
+   <datalist id="brauzerlar">
+     <option value="Internet Explorer">
+     <option value="Firefox">
+     <option value="Chrome">
+     <option value="Opera">
+     <option value="Safari">
+   </datalist>
+</form>
+```
+
+* ```<output>``` elementi
+Hisoblash natijasini takrorlang (masalan, skript tomonidan bajarilgan)
+
 ```
 <form action="/action_page.php"
-  oninput="x.value=parseInt(a.value)+parseInt(b.value)">
-  0
-  <input type="range"  id="a" name="a" value="50">
-  100 +
-  <input type="number" id="b" name="b" value="50">
-  =
-  <output name="x" for="a b"></output>
-  <br><br>
-  <input type="submit">
-</form> 
+   oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+   0
+   <kiritish turi="diapazon" id="a" nomi="a" qiymati="50">
+   100+
+   <kiritish turi="raqam" id="b" nomi="b" qiymati="50">
+   =
+   <output name="x" for="a b"></output>
+   <br><br>
+   <kiritish turi="yuborish">
+</form>
 ```
 
-** HTML Form Elements
+** HTML forma elementlari
 ```
-Tag 	Description
-<form> 	Defines an HTML form for user input
-<input> 	Defines an input control
-<textarea> 	Defines a multiline input control (text area)
-<label> 	Defines a label for an <input> element
-<fieldset> 	Groups related elements in a form
-<legend> 	Defines a caption for a <fieldset> element
-<select> 	Defines a drop-down list
-<optgroup> 	Defines a group of related options in a drop-down list
-<option> 	Defines an option in a drop-down list
-<button> 	Defines a clickable button
-<datalist> 	Specifies a list of pre-defined options for input controls
-<output> 	Defines the result of a calculation
+Teg tavsifi
+<form> Foydalanuvchi kiritish uchun HTML formasini belgilaydi
+<input> Kirish boshqaruvini belgilaydi
+<textarea> Ko'p qatorli kiritish boshqaruvini belgilaydi (matn maydoni)
+<label> <input> elementi uchun tegni belgilaydi
+<fieldset> Shakldagi tegishli elementlarni guruhlaydi
+<legend> <fieldset> elementi uchun sarlavhani belgilaydi
+<tanlash> Ochiladigan ro'yxatni belgilaydi
+<optgroup> Ochiladigan ro'yxatda tegishli variantlar guruhini belgilaydi
+<option> Ochiladigan roʻyxatdagi variantni belgilaydi
+<button> Bosiladigan tugmani belgilaydi
+<datalist> Kirish boshqaruvlari uchun oldindan belgilangan variantlar ro'yxatini belgilaydi
+<output> Hisoblash natijasini aniqlaydi
 ```
-<kbd>return</kbd>[Back to table of contents](#homepage)
+<kbd>qaytish</kbd>[Mundarijaga qaytish](#homepage)
 
 
 ------
 
 
-## HTML Input Types
-* HTML Input Types
-The default is 'text'
+## HTML kiritish turlari
+* HTML kiritish turlari
+Standart "matn"
 ```
-<input type="button">
-<input type="checkbox">
-<input type="color">
-<input type="date">
+<kiritish turi="tugma">
+<kiritish turi="checkbox">
+<kiritish turi="rang">
+<kiritish turi="sana">
 <input type="datetime-local">
-<input type="email">
-<input type="file">
-<input type="hidden">
-<input type="image">
-<input type="month">
-<input type="number">
-<input type="password">
-<input type="radio">
-<input type="range">
-<input type="reset">
-<input type="search">
-<input type="submit">
-<input type="tel">
-<input type="text">
-<input type="time">
-<input type="url">
-<input type="week">
+<kiritish turi="elektron pochta">
+<kiritish turi="fayl">
+<kiritish turi="yashirin">
+<kiritish turi="tasvir">
+<kiritish turi="oy">
+<kiritish turi="raqam">
+<kiritish turi="parol">
+<kirish turi="radio">
+<kiritish turi="diapazon">
+<kiritish turi="qayta tiklash">
+<kiritish turi="qidiruv">
+<kiritish turi="yuborish">
+<kiritish turi="tel">
+<kiritish turi="matn">
+<kiritish turi="vaqt">
+<kiritish turi="url">
+<kiritish turi="hafta">
 ```
-Tip: The default value of the type attribute is "text".
+Maslahat: type atributining standart qiymati "matn" dir.
 
 
-* Input Type Text(default width=20 characters)
-```<input type="text">``` defines a single-line text input field:
+* Matnni kiritish turi (standart kenglik = 20 belgi)
+```<input type="matn">``` bir qatorli matn kiritish maydonini belgilaydi:
 
 ```
 <form>
-  <label for="fname">First name:</label><br>
-  <input type="text" id="fname" name="fname"><br>
-  <label for="lname">Last name:</label><br>
-  <input type="text" id="lname" name="lname">
-</form> 
+   <label for="fname">Ism:</label><br>
+   <input type="text" id="fname" name="fname"><br>
+   <label for="lname">Familiya:</label><br>
+   <input type="text" id="lname" name="lname">
+</form>
 ```
 
-* Input Type Password
+* Parolni kiritish turi
 ```
-<input type="password"> defines a password field.The characters in a password field are masked (shown as asterisks or circles)
+<input type="password"> parol maydonini belgilaydi.Parol maydonidagi belgilar niqoblangan (yulduzcha yoki doira shaklida ko'rsatilgan)
 
- <form>
-  <label for="username">Username:</label><br>
-  <input type="text" id="username" name="username"><br>
-  <label for="pwd">Password:</label><br>
-  <input type="password" id="pwd" name="pwd">
-</form> 
-```
-
-
-* input  Type Submit
-```<input type="submit">``` defines a button for submitting form data to a form-handler.
-
-The form-handler is typically a server page with a script for processing input data.
-
-The form-handler is specified in the form's action attribute:
-
-If you omit the submit button's value attribute, the button will get a default text (typically 'Submit Query')
-```
- <form action="/action_page.php">
-  <label for="fname">First name:</label><br>
-  <input type="text" id="fname" name="fname" value="John"><br>
-  <label for="lname">Last name:</label><br>
-  <input type="text" id="lname" name="lname" value="Doe"><br><br>
-  <input type="submit" value="Submit">
-</form> 
+  <form>
+   <label for="username">Foydalanuvchi nomi:</label><br>
+   <input type="text" id="username" name="foydalanuvchi nomi"><br>
+   <label for="pwd">Parol:</label><br>
+   <input type="parol" id="pwd" name="pwd">
+</form>
 ```
 
-* Input Type Reset
 
-```<input type="reset">``` defines a reset button that will reset all form values to their default values.: YOu can also add value attribute to the reset button to customize what shows up on the button.
+* kiritish turi Yuborish
+```<input type="submit">``` forma ma`lumotlarini forma ishlov beruvchisiga yuborish tugmachasini belgilaydi.
+
+Shakl ishlov beruvchisi odatda kiritilgan ma'lumotlarni qayta ishlash uchun skriptga ega bo'lgan server sahifasidir.
+
+Shakl ishlovchisi shaklning harakat atributida ko'rsatilgan:
+
+Yuborish tugmasining qiymat atributini o‘tkazib yuborsangiz, tugma standart matnni oladi (odatda “So‘rovni yuborish”)
+```
+  <form action="/action_page.php">
+   <label for="fname">Ism:</label><br>
+   <input type="text" id="fname" name="fname" value="Jon"><br>
+   <label for="lname">Familiya:</label><br>
+   <input type="text" id="lname" name="lname" value="Doe"><br><br>
+   <input type="submit" value="yuborish">
+</form>
+```
+
+* Kirish turini tiklash
+
+```<input type="reset">``` barcha shakl qiymatlarini standart qiymatlariga qaytaradigan qayta o'rnatish tugmachasini belgilaydi.: Shuningdek, tugmada ko'rinadigan narsalarni sozlash uchun siz qayta o'rnatish tugmasiga qiymat atributini qo'shishingiz mumkin.
 ```
 <form action="/action_page.php">
-  <label for="fname">First name:</label><br>
-  <input type="text" id="fname" name="fname" value="John"><br>
-  <label for="lname">Last name:</label><br>
-  <input type="text" id="lname" name="lname" value="Doe"><br><br>
-  <input type="submit" value="Submit">
-  <input type="reset">
-</form> 
+   <label for="fname">Ism:</label><br>
+   <input type="text" id="fname" name="fname" value="Jon"><br>
+   <label for="lname">Familiya:</label><br>
+   <input type="text" id="lname" name="lname" value="Doe"><br><br>
+   <input type="submit" value="yuborish">
+   <kiritish turi="qayta tiklash">
+</form>
 ```
 
-* Input Type Radio
--Defines a radio button which lets a user select one of a limited number of choices:
-```
-<form>
-  <input type="radio" id="male" name="gender" value="male">
-  <label for="male">Male</label><br>
-  <input type="radio" id="female" name="gender" value="female">
-  <label for="female">Female</label><br>
-  <input type="radio" id="other" name="gender" value="other">
-  <label for="other">Other</label>
-</form> 
-```
-
-* Input Type Checkbox
-
-```<input type="checkbox">``` defines a checkbox.
-
-Checkboxes let a user select ZERO or MORE options of a limited number of choices.
+* Kirish turi radio
+-Foydalanuvchiga cheklangan miqdordagi tanlovlardan birini tanlash imkonini beruvchi radio tugmani belgilaydi:
 ```
 <form>
-  <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
-  <label for="vehicle1"> I have a bike</label><br>
-  <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
-  <label for="vehicle2"> I have a car</label><br>
-  <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
-  <label for="vehicle3"> I have a boat</label>
-</form> 
+   <input type="radio" id="erkak" nomi="jins" qiymati="erkak">
+   <label for="male">Erkak</label><br>
+   <input type="radio" id="ayol" nomi="jins" qiymati="ayol">
+   <label for="female">Ayol</label><br>
+   <input type="radio" id="other" name="gender" value="boshqa">
+   <label for="other">Boshqa</label>
+</form>
 ```
 
-* Input Type Button
-```<input type="button">``` defines a button:
+* Kirish turini belgilash katagi
 
- ```<input type="button" onclick="alert('Hello World!')" value="Click Me!">``` 
+```<input type="checkbox">``` belgilash katakchasini belgilaydi.
 
-
-
-* Input Type Color
-The ```<input type="color">``` is used for input fields that should contain a color.
-
-Depending on browser support, a color picker can show up in the input field.
-
-type="color" is not supported in Internet Explorer 11 or Safari 9.1 (or earlier)
-
-The value attribute defines a preselected value for the color.
+Belgilash katakchalari foydalanuvchiga cheklangan miqdordagi tanlovdan NO yoki KO'PROQ variantlarni tanlash imkonini beradi.
 ```
 <form>
-  <label for="favcolor">Select your favorite color:</label>
-  <input type="color" id="favcolor" name="favcolor" value="#ff0000">
-  <input type="submit" value="Submit">
-</form> 
+   <input type="checkbox" id="vehicle1" name="vehicle1" value="velosiped">
+   <label for="vehicle1"> Mening velosipedim bor</label><br>
+   <input type="checkbox" id="vehicle2" name="vehicle2" value="Avtomobil">
+   <label for="vehicle2"> Mening mashinam bor</label><br>
+   <input type="checkbox" id="vehicle3" name="vehicle3" value="qayiq">
+   <label for="vehicle3"> Mening qayig‘im bor</label>
+</form>
 ```
+* Kirish turi tugmasi
+```<input type="button">``` tugmani belgilaydi:
+
+  ```<input type="button" onclick="alert('Salom Dunyo!')" value="Menga bosing!">```
 
 
-* Input Type Date
 
-The ```<input type="date">``` is used for input fields that should contain a date.
+* Kirish turi Rang
+```<input type="color">``` rang bo`lishi kerak bo`lgan kiritish maydonlari uchun ishlatiladi.
 
-Depending on browser support, a date picker can show up in the input field.
+Brauzer qo'llab-quvvatlashiga qarab, kiritish maydonida rang tanlash vositasi paydo bo'lishi mumkin.
 
-type="date" is not supported in Safari or Internet Explorer 11 (or earlier)
+type="color" Internet Explorer 11 yoki Safari 9.1 (yoki undan oldingi) da qo'llab-quvvatlanmaydi.
+
+Qiymat atributi rang uchun oldindan tanlangan qiymatni belgilaydi.
 ```
 <form>
-  <label for="birthday">Birthday:</label>
-  <input type="date" id="birthday" name="birthday">
-  <input type="submit" value="Submit">
-</form> 
+   <label for="favcolor">Sevimli rangingizni tanlang:</label>
+   <input type="color" id="favcolor" name="favcolor" value="#ff0000">
+   <input type="submit" value="yuborish">
+</form>
 ```
 
-You can also add 'min' and 'max' attributes to add restrictions to dates
+
+* Kirish turi sanasi
+
+```<input type="date">``` sanani o`z ichiga olishi kerak bo`lgan kiritish maydonlari uchun ishlatiladi.
+
+Brauzer qo'llab-quvvatlashiga qarab, sanani tanlagich kiritish maydonida paydo bo'lishi mumkin.
+
+type="date" Safari yoki Internet Explorer 11 (yoki undan oldingi) da qo'llab-quvvatlanmaydi
+```
+<form>
+   <label for="birthday">Tug'ilgan kun:</label>
+   <input type="sana" id="tug'ilgan kun" name="tug'ilgan kun">
+   <input type="submit" value="yuborish">
+</form>
+```
+
+Shuningdek, sanalarga cheklovlar qo'shish uchun "min" va "maks" atributlarini qo'shishingiz mumkin
 ```
 <form action="/action_page.php">
-  <label for="datemax">Enter a date before 1980-01-01:</label>
-  <input type="date" id="datemax" name="datemax" max="1979-12-31"><br><br>
+   <label for="datemax">1980-01-01 dan oldingi sanani kiriting:</label>
+   <input type="date" id="datemax" name="datemax" max="1979-12-31"><br><br>
 
-  <label for="datemin">Enter a date after 2000-01-01:</label>
-  <input type="date" id="datemin" name="datemin" min="2000-01-02"><br><br>
+   <label for="datemin">2000-01-01 dan keyingi sanani kiriting:</label>
+   <input type="date" id="datemin" name="datemin" min="2000-01-02"><br><br>
   
-  <input type="submit" value="Submit">
+   <input type="submit" value="yuborish">
 </form>
 ```
 
 
-* Input Type Datetime-local
+* Kirish turi Datetime-mahalliy
 
-The ```<input type="datetime-local">``` specifies a date and time input field, with no time zone.
+```<input type="datetime-local">``` vaqt mintaqasisiz sana va vaqtni kiritish maydonini belgilaydi.
 
-Depending on browser support, a date picker can show up in the input field.
+Brauzer qo'llab-quvvatlashiga qarab, sanani tanlagich kiritish maydonida paydo bo'lishi mumkin.
 ```
 <form action="/action_page.php">
-  <label for="birthdaytime">Birthday (date and time):</label>
-  <input type="datetime-local" id="birthdaytime" name="birthdaytime">
-  <input type="submit" value="Submit">
+   <label for="birthdaytime">Tug'ilgan kun (sana va vaqt):</label>
+   <input type="datetime-local" id="birthdaytime" name="birthdaytime">
+   <input type="submit" value="yuborish">
 </form>
 ```
 
-* Input Type Email
+* Elektron pochtani kiritish turi
 
-The ```<input type="email">``` is used for input fields that should contain an e-mail address.
+```<input type="email">``` elektron pochta manzili bo`lishi kerak bo`lgan kiritish maydonlari uchun ishlatiladi.
 
-Depending on browser support, the e-mail address can be automatically validated when submitted.
+Brauzer qo'llab-quvvatlashiga qarab, elektron pochta manzili yuborilganda avtomatik ravishda tasdiqlanishi mumkin.
 
-Some smartphones recognize the email type, and add ".com" to the keyboard to match email input
+Ba'zi smartfonlar elektron pochta turini taniydi va elektron pochta kiritishiga mos kelish uchun klaviaturaga ".com" ni qo'shadi
 
 ```
 <form action="/action_page.php">
-  <label for="email">Enter your email:</label>
-  <input type="email" id="email" name="email">
-  <input type="submit" value="Submit">
+   <label for="email">E-pochta manzilingizni kiriting:</label>
+   <input type="email" id="email" name="email">
+   <input type="submit" value="yuborish">
 </form>
 ```
 
-* Input Type File
-The ```<input type="file">``` defines a file-select field and a "Browse" button for file uploads.
+* Kirish turi fayli
+```<input type="file">``` faylni tanlash maydonini va fayllarni yuklash uchun "Browse" tugmasini belgilaydi.
 ```
 <form action="/action_page.php">
-  <label for="myfile">Select a file:</label>
-  <input type="file" id="myfile" name="myfile"><br><br>
-  <input type="submit" value="Submit">
+   <label for="myfile">Faylni tanlang:</label>
+   <input type="file" id="myfile" name="mening fayl"><br><br>
+   <input type="submit" value="yuborish">
 </form>
 ```
 
-* Input Type Month
-The ```<input type="month">``` allows the user to select a month and year.
+* Kirish turi oy
+```<input type="month">``` foydalanuvchiga oy va yilni tanlash imkonini beradi.
 
-Depending on browser support, a date picker can show up in the input field.
+Brauzer qo'llab-quvvatlashiga qarab, sanani tanlagich kiritish maydonida paydo bo'lishi mumkin.
 ```
 <form action="/action_page.php">
-  <label for="bdaymonth">Birthday (month and year):</label>
-  <input type="month" id="bdaymonth" name="bdaymonth">
-  <input type="submit" value="Submit">
+   <label for="bdaymonth">Tug‘ilgan kun (oy va yil):</label>
+   <input type="oy" id="bdaymonth" name="bdaymonth">
+   <input type="submit" value="yuborish">
 </form>
 ```
 
-* Input type Number
-The ```<input type="number">``` defines a numeric input field.
+* Kirish turi Raqam
+```<input type="raqam">``` raqamli kiritish maydonini belgilaydi.
 
-You can also set restrictions on what numbers are accepted.
+Shuningdek, qanday raqamlar qabul qilinishiga cheklovlar o'rnatishingiz mumkin.
 
-Typically adds up and down button to decrease and increase the values between the ranges
+Odatda diapazonlar orasidagi qiymatlarni kamaytirish va oshirish uchun yuqoriga va pastga tugmalarini qo'shadi
 
-The following example displays a numeric input field, where you can enter a value from 1 to 5:
+Quyidagi misolda 1 dan 5 gacha qiymat kiritishingiz mumkin bo'lgan raqamli kiritish maydoni ko'rsatilgan:
 ```
 <form action="/action_page.php">
-  <label for="quantity">Quantity (between 1 and 5):</label>
-  <input type="number" id="quantity" name="quantity" min="1" max="5">
-  <input type="submit" value="Submit">
+   <label for="quantity">Miqdor (1 va 5 orasida):</label>
+   <kiritish turi="raqam" id="miqdori" nomi="miqdori" min="1" maksimal="5">
+   <input type="submit" value="yuborish">
 </form>
 ```
 
 
-Input Restrictions
+Kirish cheklovlari
 
-Here is a list of some common input restrictions:
-Attribute 	Description
-checked 	Specifies that an input field should be pre-selected when the page loads (for type="checkbox" or type="radio")
-disabled 	Specifies that an input field should be disabled
-max 	Specifies the maximum value for an input field
-maxlength 	Specifies the maximum number of character for an input field
-min 	Specifies the minimum value for an input field
-pattern 	Specifies a regular expression to check the input value against
-readonly 	Specifies that an input field is read only (cannot be changed)
-required 	Specifies that an input field is required (must be filled out)
-size 	Specifies the width (in characters) of an input field
-step 	Specifies the legal number intervals for an input field
-value 	Specifies the default value for an input field
+Quyida ba'zi umumiy kirish cheklovlari ro'yxati keltirilgan:
+Atribut tavsifi
+Belgilangan Sahifa yuklanganda kiritish maydoni oldindan tanlanishi kerakligini bildiradi ( type="checkbox" yoki type="radio" uchun)
+disabled Kirish maydonini o'chirib qo'yish kerakligini bildiradi
+max Kirish maydoni uchun maksimal qiymatni belgilaydi
+maxlength Kirish maydoni uchun belgilarning maksimal sonini belgilaydi
+min Kirish maydoni uchun minimal qiymatni belgilaydi
+naqsh Kirish qiymatini tekshirish uchun muntazam ifodani belgilaydi
+faqat o'qish Kirish maydoni faqat o'qilishini bildiradi (o'zgartirib bo'lmaydi)
+zarur Kirish maydoni zarurligini bildiradi (to'ldirilishi kerak)
+size Kirish maydonining kengligini (belgilarda) belgilaydi
+qadam Kirish maydoni uchun qonuniy raqamlar oralig'ini belgilaydi
+qiymat Kirish maydoni uchun standart qiymatni belgilaydi
 
-You will learn more about input restrictions in the next chapter.
+Keyingi bobda kirish cheklovlari haqida ko'proq bilib olasiz.
 
-The following example displays a numeric input field, where you can enter a value from 0 to 100, in steps of 10. The default value is 30:
+Quyidagi misolda siz 0 dan 100 gacha qiymatni 10 bosqichda kiritishingiz mumkin bo'lgan raqamli kiritish maydonini ko'rsatadi. Standart qiymat 30:
 ```
 <form action="/action_page.php">
-  <label for="quantity">Quantity:</label>
-  <input type="number" id="quantity" name="quantity" min="0" max="100" step="10" value="30">
-  <input type="submit" value="Submit">
+   <label for="quantity">Miqdor:</label>
+   <kiritish turi="raqam" id="miqdori" nomi="miqdori" min="0" max="100" qadam="10" qiymati="30">
+   <input type="submit" value="yuborish">
 </form>
 ```
 
-* Input Type Range
-The ```<input type="range">``` defines a control for entering a number whose exact value is not important (like a slider control). Default range is 0 to 100. However, you can set restrictions on what numbers are accepted with the min, max, and step attributes:
+* Kirish turi diapazoni
+```<input type="diapazon">``` aniq qiymati muhim bo`lmagan raqamni kiritish uchun boshqaruvni belgilaydi (slayder boshqaruvi kabi). Standart diapazon 0 dan 100 gacha. Biroq min, maks va qadam atributlari bilan qanday raqamlar qabul qilinishiga cheklovlar o‘rnatishingiz mumkin:
 ```
 <form action="/action_page.php" method="get">
-  <label for="vol">Volume (between 0 and 50):</label>
-  <input type="range" id="vol" name="vol" min="0" max="50">
-  <input type="submit" value="Submit">
+   <label for="vol">Ovoz balandligi (0 dan 50 gacha):</label>
+   <input type="diapazon" id="vol" name="vol" min="0" max="50">
+   <input type="submit" value="yuborish">
 </form>
 ```
 
-* Input Type Search
+* Kirish turini qidirish
 ```
 <form action="/action_page.php">
-  <label for="gsearch">Search Google:</label>
-  <input type="search" id="gsearch" name="gsearch">
-  <input type="submit" value="Submit">
+   <label for="gsearch">Google orqali qidirish:</label>
+   <input type="search" id="gsearch" name="gsearch">
+   <input type="submit" value="yuborish">
 </form>
 ```
-* Input Type Search
-The ```<input type="tel">``` is used for input fields that should contain a telephone number.
+* Kirish turini qidirish
+```<input type="tel">``` telefon raqami bo`lishi kerak bo`lgan kiritish maydonlari uchun ishlatiladi.
 ```
 <form action="/action_page.php">
-  <label for="phone">Enter a phone number:</label><br><br>
-  <input type="tel" id="phone" name="phone" placeholder="123-45-678" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required><br><br>
-  <small>Format: 123-45-678</small><br><br>
-  <input type="submit" value="Submit">
-</form>
-```
-
-* Input Type Time
-
-The ```<input type="time">``` allows the user to select a time (no time zone).
-
-Depending on browser support, a time picker can show up in the input field.If the browser supports it, a time picker pops up when entering the input field.
-```
-<form action="/action_page.php">
-  <label for="appt">Select a time:</label>
-  <input type="time" id="appt" name="appt">
-  <input type="submit" value="Submit">
+   <label for="phone">Telefon raqamini kiriting:</label><br><br>
+   <input type="tel" id="telefon" nomi="telefon" to'ldiruvchisi="123-45-678" naqsh="[0-9]{3}-[0-9]{2}-[0- 9]{3}" kerak <br><br>
+   <small>Format: 123-45-678</small><br><br>
+   <input type="submit" value="yuborish">
 </form>
 ```
 
-* Input Type Url
+* Kirish turi vaqti
 
-The ```<input type="url">``` is used for input fields that should contain a URL address.
+```<input type="time">``` foydalanuvchiga vaqtni tanlash imkonini beradi (vaqt zonasi yo'q).
 
-Depending on browser support, the url field can be automatically validated when submitted.
-
-Some smartphones recognize the url type, and adds ".com" to the keyboard to match url input.
-
+Brauzer qo'llab-quvvatlashiga qarab, vaqt tanlagichi kiritish maydonida ko'rinishi mumkin.Agar brauzer uni qo'llab-quvvatlasa, kiritish maydoniga kirishda vaqt tanlagichi paydo bo'ladi.
 ```
 <form action="/action_page.php">
-  <label for="homepage">Add your homepage:</label>
-  <input type="url" id="homepage" name="homepage">
-  <input type="submit" value="Submit">
-</form>
-```
-* Input Type Week
-The ```<input type="week">``` allows the user to select a week and year.
-
-Depending on browser support, a date picker can show up in the input field.If the browser supports it, a date picker pops up when entering the input field
-```
-<form action="/action_page.php">
-  <label for="week">Select a week:</label>
-  <input type="week" id="week" name="week">
-  <input type="submit" value="Submit">
-</form>
-```
-<kbd>return</kbd>[Back to table of contents](#homepage)
-
-## HTML Input Attributes
-
-HTML Input Type Attribute
-Tag 	Description
-```<input type="">``` 	Specifies the input type to display
-
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-HTML Input Attributes: Attributes of input element
-
-* The value attribute
-Specifies the initial(default) value for the imput field
-```
-<form action="/action_page.php">
-  <label for="fname">First name:</label><br>
-  <input type="text" id="fname" name="fname" value="John"><br>
-  <label for="lname">Last name:</label><br>
-  <input type="text" id="lname" name="lname" value="Doe"><br><br>
-  <input type="submit" value="Submit">
+   <label for="appt">Vaqtni tanlang:</label>
+   <input type="time" id="appt" name="appt">
+   <input type="submit" value="yuborish">
 </form>
 ```
 
-* The readonly Attribute
-Specifies an input field to be read-only. This input field cannot be modified  but user can tab into it, highlight, and copy text from it. The value is sent when submitting the form. 
+* Url kiritish turi
+
+```<input type="url">``` URL manzili bo`lishi kerak bo`lgan kiritish maydonlari uchun ishlatiladi.
+
+Brauzer qo'llab-quvvatlashiga qarab, url maydoni yuborilganda avtomatik ravishda tasdiqlanishi mumkin.
+
+Ba'zi smartfonlar url turini taniydi va url kiritishiga mos kelish uchun klaviaturaga ".com" ni qo'shadi.
+
 ```
 <form action="/action_page.php">
-  <label for="fname">First name:</label><br>
-  <input type="text" id="fname" name="fname" value="John" readonly><br>
-  <label for="lname">Last name:</label><br>
-  <input type="text" id="lname" name="lname" value="Doe"><br><br>
-  <input type="submit" value="Submit">
+   <label for="homepage">Bosh sahifangizni qo'shing:</label>
+   <input type="url" id="homepage" name="homepage">
+   <input type="submit" value="yuborish">
+</form>
+```
+* Kirish turi haftasi
+```<input type="hafta">``` foydalanuvchiga hafta va yilni tanlash imkonini beradi.
+
+Brauzer qo'llab-quvvatlashiga qarab, sanani tanlash vositasi kiritish maydonida paydo bo'lishi mumkin.Agar brauzer uni qo'llab-quvvatlasa, kiritish maydoniga kirganda sana tanlagich paydo bo'ladi.
+```
+<form action="/action_page.php">
+   <label for="week">Haftani tanlang:</label>
+   <input type="hafta" id="hafta" nomi="hafta">
+   <input type="submit" value="yuborish">
+</form>
+```
+<kbd>qaytish</kbd>[Mundarijaga qaytish](#homepage)
+
+## HTML kiritish atributlari
+
+HTML kiritish turi atributi
+Teg tavsifi
+```<input type="">``` Ko`rsatish uchun kiritish turini belgilaydi
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+HTML kiritish atributlari: kiritish elementining atributlari
+
+* Qiymat atributi
+Import maydoni uchun boshlang'ich (standart) qiymatni belgilaydi
+```
+<form action="/action_page.php">
+   <label for="fname">Ism:</label><br>
+   <input type="text" id="fname" name="fname" value="Jon"><br>
+   <label for="lname">Familiya:</label><br>
+   <input type="text" id="lname" name="lname" value="Doe"><br><br>
+   <input type="submit" value="yuborish">
 </form>
 ```
 
-* The disabled attribute
-Specified that an input field is disabled, and such field is unusable and unclickable. Value will not be sent when submitting the form.
+* Faqat o'qish uchun atribut
+Faqat o'qish uchun kiritish maydonini belgilaydi. Ushbu kiritish maydonini o'zgartirib bo'lmaydi, lekin foydalanuvchi unga kirishi, matnni ajratib ko'rsatishi va undan nusxa ko'chirishi mumkin. Qiymat shaklni yuborishda yuboriladi.
 ```
 <form action="/action_page.php">
-  <label for="fname">First name:</label><br>
-  <input type="text" id="fname" name="fname" value="John" disabled><br>
-  <label for="lname">Last name:</label><br>
-  <input type="text" id="lname" name="lname" value="Doe"><br><br>
-  <input type="submit" value="Submit">
+   <label for="fname">Ism:</label><br>
+   <input type="text" id="fname" name="fname" value="Jon" faqat o'qish uchun<br>
+   <label for="lname">Familiya:</label><br>
+   <input type="text" id="lname" name="lname" value="Doe"><br><br>
+   <input type="submit" value="yuborish">
 </form>
 ```
 
-* The size Attribute
-
-Specifies the visible width, in characters, of an input field. Default value is size 20. This attribute works with Text, search, tel, url, email, and password. 
+* Disabled atributi
+Kirish maydoni o'chirilganligi va bunday maydonni ishlatish mumkin emasligi va bosish mumkin emasligi ko'rsatilgan. Shaklni yuborishda qiymat yuborilmaydi.
 ```
 <form action="/action_page.php">
-  <label for="fname">First name:</label><br>
-  <input type="text" id="fname" name="fname" size="50"><br>
-  <label for="pin">PIN:</label><br>
-  <input type="text" id="pin" name="pin" size="4"><br><br>
-  <input type="submit" value="Submit">
+   <label for="fname">Ism:</label><br>
+   <input type="text" id="fname" name="fname" value="Jon" o'chirilgan><br>
+   <label for="lname">Familiya:</label><br>
+   <input type="text" id="lname" name="lname" value="Doe"><br><br>
+   <input type="submit" value="yuborish">
 </form>
 ```
 
-* The maxlength Attribute
+* Hajmi atributi
 
-Specifies the maximum number of characters allowed in an input field. 
+Kirish maydonining belgilar bilan ko'rinadigan kengligini belgilaydi. Standart qiymat 20 oʻlchamdir. Bu atribut Matn, qidiruv, tel, url, elektron pochta va parol bilan ishlaydi.
+```
+<form action="/action_page.php">
+   <label for="fname">Ism:</label><br>
+   <input type="text" id="fname" name="fname" size="50"><br>
+   <label for="pin">PIN:</label><br>
+   <input type="text" id="pin" name="pin" size="4"><br><br>
+   <input type="submit" value="yuborish">
+</form>
+```
+* Maksimal uzunlik atributi
 
-Note: When a maxlength is set, the input field will not accept more than the specified number of characters. However, this attribute does not provide any feedback. So, if you want to alert the user, you must write JavaScript code.
+Kirish maydonida ruxsat etilgan belgilarning maksimal sonini belgilaydi.
+
+Eslatma: Maksimal uzunlik o'rnatilganda, kiritish maydoni belgilangan belgilar sonidan ko'pini qabul qilmaydi. Biroq, bu atribut hech qanday fikr bildirmaydi. Shunday qilib, agar siz foydalanuvchini ogohlantirmoqchi bo'lsangiz, JavaScript kodini yozishingiz kerak.
 
 ```
 <form action="/action_page.php">
-  <label for="fname">First name:</label><br>
-  <input type="text" id="fname" name="fname" size="50"><br>
-  <label for="pin">PIN:</label><br>
-  <input type="text" id="pin" name="pin" maxlength="4" size="4"><br><br>
-  <input type="submit" value="Submit">
+   <label for="fname">Ism:</label><br>
+   <input type="text" id="fname" name="fname" size="50"><br>
+   <label for="pin">PIN:</label><br>
+   <input type="text" id="pin" name="pin" maxlength="4" size="4"><br><br>
+   <input type="submit" value="yuborish">
 </form>
 ```
 
-* Min and Max Attribute
-Specifies the min and max values for an input field. Works with number, range, date, datetime-local,month, time, and week. 
+* Min va Maks atributi
+Kirish maydoni uchun minimal va maksimal qiymatlarni belgilaydi. Raqam, diapazon, sana, sana-mahalliy, oy, vaqt va hafta bilan ishlaydi.
 
-Tip: Use the max and min attributes together to create a range of legal values.
+Maslahat: Bir qator qonuniy qiymatlarni yaratish uchun maksimal va min atributlaridan birgalikda foydalaning.
 ```
 <form action="/action_page.php">
-  <label for="datemax">Enter a date before 1980-01-01:</label>
-  <input type="date" id="datemax" name="datemax" max="1979-12-31"><br><br>
+   <label for="datemax">1980-01-01 dan oldingi sanani kiriting:</label>
+   <input type="date" id="datemax" name="datemax" max="1979-12-31"><br><br>
 
-  <label for="datemin">Enter a date after 2000-01-01:</label>
-  <input type="date" id="datemin" name="datemin" min="2000-01-02"><br><br>
+   <label for="datemin">2000-01-01 dan keyingi sanani kiriting:</label>
+   <input type="date" id="datemin" name="datemin" min="2000-01-02"><br><br>
   
-  <label for="quantity">Quantity (between 1 and 5):</label>
-  <input type="number" id="quantity" name="quantity" min="1" max="5"><br><br>
+   <label for="quantity">Miqdor (1 va 5 orasida):</label>
+   <kiritish turi="raqam" id="miqdori" nomi="miqdori" min="1" max="5"><br><br>
 
-  <input type="submit" value="Submit">
+   <input type="submit" value="yuborish">
 </form>
 ```
 
-* The multiple Attribute
-Specifies that the user is allowed to enter more than one value in an input field. multiple attribute works well with email and file types
+* Bir nechta atribut
+Foydalanuvchiga kirish maydoniga bir nechta qiymat kiritishga ruxsat berilganligini bildiradi. bir nechta atribut elektron pochta va fayl turlari bilan yaxshi ishlaydi
 ```
 <form action="/action_page.php">
-  <label for="files">Select files:</label>
-  <input type="file" id="files" name="files" multiple><br><br>
-  <input type="submit" value="Submit">
+   <label for="files">Fayllarni tanlang:</label>
+   <input type="file" id="files" name="fayllar" bir nechta><br><br>
+   <input type="submit" value="yuborish">
 </form>
 ```
 
-* The pattern attribute
+* Naqsh atributi
 
-Specifies regular expressions that the input field's value is checked against when form is submitted. Pattern attribute works with text, date, search, url, tel, email, and password.
+Shakl yuborilganda kirish maydonining qiymati tekshiriladigan muntazam ifodalarni belgilaydi. Pattern atributi matn, sana, qidiruv, url, tel, elektron pochta va parol bilan ishlaydi.
 
-Tip: Use the global title attribute to describe the pattern to help the user.
+Maslahat: foydalanuvchiga yordam berish uchun naqshni tasvirlash uchun global sarlavha atributidan foydalaning.
 
-Tip: Learn more about regular expressions in our JavaScript tutorial.
-
-```
-<form action="/action_page.php">
-  <label for="country_code">Country code:</label>
-  <input type="text" id="country_code" name="country_code" pattern="[A-Za-z]{3}" title="Three letter country code"><br><br>
-  <input type="submit" value="Submit">
-</form>
-```
-
-* The Placeholder Attribute
-The input placeholder attribute specifies a short hint that describes the expected value of an input field (a sample value or a short description of the expected format).
-
-The short hint is displayed in the input field before the user enters a value.
-
-The placeholder attribute works with the following input types: text, search, url, tel, email, and password.
-```
-<form action="/action_page.php">
-  <label for="phone">Enter a phone number:</label>
-  <input type="tel" id="phone" name="phone" placeholder="123-45-678" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"><br><br>
-  <input type="submit" value="Submit">
-</form>
-```
-
-* The required Attribute
-
-Specifies that in input must be filled out before submitting the form. It works with the following input types: text, search, url, tel, email, passwork, date pickers, number, checkbox, radio, and file. 
-```
-<form action="/action_page.php">
-  <label for="username">Username:</label>
-  <input type="text" id="username" name="username" required>
-  <input type="submit" value="Submit">
-</form>
-```
-
-
-* he Step Attribute
-
-Specifies legal number intervals for an input field (e.g. step="3" means that legal numbers could be -3, 0, 3, 6, etc.)
-
-Tip: This attribute can be used together with the max and min attributes to create a range of legal values.
-
-The step attribute works with the following input types: number, range, date, datetime-local, month, time and week.
+Maslahat: Muntazam iboralar haqida koʻproq maʼlumotni JavaScript qoʻllanmamizda oʻrganing.
 
 ```
 <form action="/action_page.php">
-  <label for="points">Points:</label>
-  <input type="number" id="points" name="points" step="3">
-  <input type="submit" value="Submit">
+   <label for="country_code">Mamlakat kodi:</label>
+   <input type="text" id="mamlakat_kodi" nomi="mamlakat_kodi" naqsh="[A-Za-z]{3}" title="Uch harfli mamlakat kodi"><br><br>
+   <input type="submit" value="yuborish">
 </form>
 ```
-Note: Input restrictions are not foolproof, and JavaScript provides many ways to add illegal input. To safely restrict input, it must also be checked by the receiver (the server)!
 
-* The Autofocus Attribute
-The input autofocus attribute specifies the an input field automatically get focus when page loads.
+* To'ldiruvchi atributi
+Input placeholder atributi kiritish maydonining kutilgan qiymatini tavsiflovchi qisqa maslahatni bildiradi (namuna qiymati yoki kutilgan formatning qisqa tavsifi).
+
+Qisqa ko'rsatma foydalanuvchi qiymat kiritishdan oldin kirish maydonida ko'rsatiladi.
+
+To'ldiruvchi atributi quyidagi kiritish turlari bilan ishlaydi: matn, qidiruv, url, tel, elektron pochta va parol.
 ```
 <form action="/action_page.php">
-  <label for="fname">First name:</label><br>
-  <input type="text" id="fname" name="fname" autofocus><br>
-  <label for="lname">Last name:</label><br>
-  <input type="text" id="lname" name="lname"><br><br>
-  <input type="submit" value="Submit">
+   <label for="phone">Telefon raqamini kiriting:</label>
+   <input type="tel" id="telefon" nomi="telefon" to'ldiruvchisi="123-45-678" naqsh="[0-9]{3}-[0-9]{2}-[0- 9]{3}"><br><br>
+   <input type="submit" value="yuborish">
 </form>
 ```
 
-* The height and width Attributes
+* Kerakli atribut
 
-The input height and width attributes specify the height and width of an ```<input type="image">``` element.
-
-Tip: Always specify both the height and width attributes for images. If height and width are set, the space required for the image is reserved when the page is loaded. Without these attributes, the browser does not know the size of the image, and cannot reserve the appropriate space to it. The effect will be that the page layout will change during loading (while the images load).
+Shaklni yuborishdan oldin kiritilgan ma'lumotlar to'ldirilishi kerakligini bildiradi. U quyidagi kiritish turlari bilan ishlaydi: matn, qidiruv, url, tel, elektron pochta, parol, sana tanlash, raqam, tasdiqlash qutisi, radio va fayl.
 ```
 <form action="/action_page.php">
-  <label for="fname">First name:</label>
-  <input type="text" id="fname" name="fname"><br><br>
-  <label for="lname">Last name:</label>
-  <input type="text" id="lname" name="lname"><br><br>
-  <input type="image" src="img_submit.gif" alt="Submit" width="48" height="48">
+   <label for="username">Foydalanuvchi nomi:</label>
+   <input type="text" id="foydalanuvchi nomi" name="foydalanuvchi nomi" kerak>
+   <input type="submit" value="yuborish">
 </form>
 ```
-NB: The input ```type="image"``` sends the X and Y coordinates of the click that activated the image button
 
 
-* The List Attribute
-The input list attribute refers to a <datalist> element that contains pre-defined options for an <input> element.
+* u qadam atributi
+
+Kirish maydoni uchun qonuniy raqamlar oralig'ini belgilaydi (masalan, qadam="3" yuridik raqamlar -3, 0, 3, 6 va hokazo bo'lishi mumkinligini anglatadi)
+
+Maslahat: Bu atributdan maksimal va min atributlar bilan birgalikda bir qator qonuniy qiymatlarni yaratish uchun foydalanish mumkin.
+
+Step atributi quyidagi kiritish turlari bilan ishlaydi: raqam, diapazon, sana, sana-mahalliy, oy, vaqt va hafta.
 
 ```
 <form action="/action_page.php">
-  <input list="browsers" name="browser">
-  <datalist id="browsers">
-    <option value="Internet Explorer">
-    <option value="Firefox">
-    <option value="Chrome">
-    <option value="Opera">
-    <option value="Safari">
-  </datalist>
-  <input type="submit" value="Submit">
+   <label for="points">Bollar:</label>
+   <kiritish turi="raqam" id="nuqta" nomi="nuqta" qadam="3">
+   <input type="submit" value="yuborish">
+</form>
+```
+Eslatma: Kirish cheklovlari ishonchli emas va JavaScript noqonuniy kiritishning ko'plab usullarini taqdim etadi. Kirishni xavfsiz cheklash uchun uni qabul qiluvchi (server) ham tekshirishi kerak!
+
+* Avtofokus atributi
+Kirish avtofokus atributi sahifa yuklanganda avtomatik ravishda fokus olinadigan kirish maydonini belgilaydi.
+```
+<form action="/action_page.php">
+   <label for="fname">Ism:</label><br>
+   <input type="text" id="fname" name="fname" autofocus><br>
+   <label for="lname">Familiya:</label><br>
+   <input type="text" id="lname" name="lname"><br><br>
+   <input type="submit" value="yuborish">
 </form>
 ```
 
-* The Autocomplete Attribute
+* Balandlik va kenglik atributlari
 
-The input autocomplete attribute specifies whether a form or an input field should have autocomplete on or off.
+Kirish balandligi va kengligi atributlari ```<input type="image">``` elementining balandligi va kengligini belgilaydi.
 
-Autocomplete allows the browser to predict the value. When a user starts to type in a field, the browser should display options to fill in the field, based on earlier typed values.
+Maslahat: Har doim tasvirlar uchun balandlik va kenglik atributlarini belgilang. Agar balandlik va kenglik o'rnatilgan bo'lsa, sahifa yuklanganda rasm uchun zarur bo'sh joy ajratiladi. Ushbu atributlarsiz brauzer tasvir hajmini bilmaydi va unga tegishli joy ajrata olmaydi. Buning ta'siri shundaki, yuklash paytida sahifa tartibi o'zgaradi (tasvirlar yuklanganda).
+```
+<form action="/action_page.php">
+   <label for="fname">Ism:</label>
+   <input type="text" id="fname" name="fname"><br><br>
+   <label for="lname">Familiya:</label>
+   <input type="text" id="lname" name="lname"><br><br>
+   <input type="image" src="img_submit.gif" alt="Yuborish" kengligi="48" balandligi="48">
+</form>
+```
+Eslatma: ```type="image"``` kiritish rasm tugmasini faollashtirgan bosishning X va Y koordinatalarini yuboradi.
 
-The autocomplete attribute works with <form> and the following <input> types: text, search, url, tel, email, password, datepickers, range, and color.
 
-In the case below, the autocomplete is on for the form but off for the email field. Fill in the form and reload to see the effect. 
+* Ro'yxat atributi
+Kirish ro'yxati atributi <input> elementi uchun oldindan belgilangan variantlarni o'z ichiga olgan <datalist> elementiga ishora qiladi.
+
+```
+<form action="/action_page.php">
+   <input list="brauzerlar" name="brauzer">
+   <datalist id="brauzerlar">
+     <option value="Internet Explorer">
+     <option value="Firefox">
+     <option value="Chrome">
+     <option value="Opera">
+     <option value="Safari">
+   </datalist>
+   <input type="submit" value="yuborish">
+</form>
+```
+
+* Avtomatik to'ldirish atributi
+
+Input autocomplete atributi shakl yoki kiritish maydonida avtomatik toʻldirishni yoqish yoki oʻchirish kerakligini belgilaydi.
+
+Avtomatik to'ldirish brauzerga qiymatni taxmin qilish imkonini beradi. Agar foydalanuvchi maydonga yozishni boshlaganida, brauzer oldingi kiritilgan qiymatlar asosida maydonni to'ldirish variantlarini ko'rsatishi kerak.
+
+Avtoto'ldirish atributi <form> va quyidagi <input> turlari bilan ishlaydi: matn, qidiruv, url, tel, elektron pochta, parol, sana tanlash, diapazon va rang.
+
+Quyidagi holatda avtomatik to‘ldirish ariza uchun yoqilgan, lekin elektron pochta maydoni uchun o‘chirilgan. Effektni ko'rish uchun shaklni to'ldiring va qayta yuklang.
 ```
 <form action="/action_page.php" autocomplete="on">
-  <label for="fname">First name:</label>
-  <input type="text" id="fname" name="fname"><br><br>
-  <label for="lname">Last name:</label>
-  <input type="text" id="lname" name="lname"><br><br>
-  <label for="email">Email:</label>
-  <input type="email" id="email" name="email" autocomplete="off"><br><br>
-  <input type="submit" value="Submit">
+   <label for="fname">Ism:</label>
+   <input type="text" id="fname" name="fname"><br><br>
+   <label for="lname">Familiya:</label>
+   <input type="text" id="lname" name="lname"><br><br>
+   <label for="email">E-pochta:</label>
+   <input type="email" id="email" name="email" autocomplete="off"><br><br>
+   <input type="submit" value="yuborish">
 </form>
 ```
 
-* Use maxlength for no of characters: ```maxlength="40"``` 
-And use max for numeric value, use max: ```max=40```
+* Belgilar soni uchun maxlengthdan foydalaning: ```maxlength="40"```
+Raqamli qiymat uchun max dan foydalaning, maksimaldan foydalaning: ```max=40```
 
-<kbd>return</kbd>[Back to table of contents](#homepage)
+<kbd>qaytish</kbd>[Mundarijaga qaytish](#homepage)
 
 
 ---------
 
 
 
-## HTML Input Attributes
+## HTML kiritish atributlari
 
-HTML Input Type Attribute
-Tag 	Description
-```<input type="">``` 	Specifies the input type to display
+HTML kiritish turi atributi
+Teg tavsifi
+```<input type="">``` Ko`rsatish uchun kiritish turini belgilaydi
 
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-HTML Input Attributes: Attributes of input element
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+HTML kiritish atributlari: kiritish elementining atributlari
 
-* The value attribute
-Specifies the initial(default) value for the imput field
+* Qiymat atributi
+Import maydoni uchun boshlang'ich (standart) qiymatni belgilaydi
 ```
 <form action="/action_page.php">
-  <label for="fname">First name:</label><br>
-  <input type="text" id="fname" name="fname" value="John"><br>
-  <label for="lname">Last name:</label><br>
-  <input type="text" id="lname" name="lname" value="Doe"><br><br>
-  <input type="submit" value="Submit">
+   <label for="fname">Ism:</label><br>
+   <input type="text" id="fname" name="fname" value="Jon"><br>
+   <label for="lname">Familiya:</label><br>
+   <input type="text" id="lname" name="lname" value="Doe"><br><br>
+   <input type="submit" value="yuborish">
 </form>
 ```
 
-* The readonly Attribute
-Specifies an input field to be read-only. This input field cannot be modified  but user can tab into it, highlight, and copy text from it. The value is sent when submitting the form. 
+* Faqat o'qish uchun atribut
+Faqat o'qish uchun kiritish maydonini belgilaydi. Ushbu kiritish maydonini o'zgartirib bo'lmaydi, lekin foydalanuvchi unga kirishi, matnni ajratib ko'rsatishi va undan nusxa ko'chirishi mumkin. Qiymat shaklni yuborishda yuboriladi.
 ```
 <form action="/action_page.php">
-  <label for="fname">First name:</label><br>
-  <input type="text" id="fname" name="fname" value="John" readonly><br>
-  <label for="lname">Last name:</label><br>
-  <input type="text" id="lname" name="lname" value="Doe"><br><br>
-  <input type="submit" value="Submit">
+   <label for="fname">Ism:</label><br>
+   <input type="text" id="fname" name="fname" value="Jon" faqat o'qish uchun<br>
+   <label for="lname">Familiya:</label><br>
+   <input type="text" id="lname" name="lname" value="Doe"><br><br>
+   <input type="submit" value="yuborish">
 </form>
 ```
 
-* The disabled attribute
-Specified that an input field is disabled, and such field is unusable and unclickable. Value will not be sent when submitting the form.
+* Disabled atributi
+Kirish maydoni o'chirilganligi va bunday maydonni ishlatish mumkin emasligi va bosish mumkin emasligi ko'rsatilgan. Shaklni yuborishda qiymat yuborilmaydi.
 ```
 <form action="/action_page.php">
-  <label for="fname">First name:</label><br>
-  <input type="text" id="fname" name="fname" value="John" disabled><br>
-  <label for="lname">Last name:</label><br>
-  <input type="text" id="lname" name="lname" value="Doe"><br><br>
-  <input type="submit" value="Submit">
+   <label for="fname">Ism:</label><br>
+   <input type="text" id="fname" name="fname" value="Jon" o'chirilgan><br>
+   <label for="lname">Familiya:</label><br>
+   <input type="text" id="lname" name="lname" value="Doe"><br><br>
+   <input type="submit" value="yuborish">
 </form>
 ```
 
-* The size Attribute
+* Hajmi atributi
 
-Specifies the visible width, in characters, of an input field. Default value is size 20. This attribute works with Text, search, tel, url, email, and password. 
+Kirish maydonining belgilar bilan ko'rinadigan kengligini belgilaydi. Standart qiymat 20 oʻlchamdir. Bu atribut Matn, qidiruv, tel, url, elektron pochta va parol bilan ishlaydi.
 ```
 <form action="/action_page.php">
-  <label for="fname">First name:</label><br>
-  <input type="text" id="fname" name="fname" size="50"><br>
-  <label for="pin">PIN:</label><br>
-  <input type="text" id="pin" name="pin" size="4"><br><br>
-  <input type="submit" value="Submit">
+   <label for="fname">Ism:</label><br>
+   <input type="text" id="fname" name="fname" size="50"><br>
+   <label for="pin">PIN:</label><br>
+   <input type="text" id="pin" name="pin" size="4"><br><br>
+   <input type="submit" value="yuborish">
 </form>
 ```
 
-* The maxlength Attribute
+* Maksimal uzunlik atributi
 
-Specifies the maximum number of characters allowed in an input field. 
+Kirish maydonida ruxsat etilgan belgilarning maksimal sonini belgilaydi.
 
-Note: When a maxlength is set, the input field will not accept more than the specified number of characters. However, this attribute does not provide any feedback. So, if you want to alert the user, you must write JavaScript code.
+Eslatma: Maksimal uzunlik o'rnatilganda, kiritish maydoni belgilangan belgilar sonidan ko'pini qabul qilmaydi. Biroq, bu atribut hech qanday fikr bildirmaydi. Shunday qilib, agar siz foydalanuvchini ogohlantirmoqchi bo'lsangiz, JavaScript kodini yozishingiz kerak.
 
 ```
 <form action="/action_page.php">
-  <label for="fname">First name:</label><br>
-  <input type="text" id="fname" name="fname" size="50"><br>
-  <label for="pin">PIN:</label><br>
-  <input type="text" id="pin" name="pin" maxlength="4" size="4"><br><br>
-  <input type="submit" value="Submit">
+   <label for="fname">Ism:</label><br>
+   <input type="text" id="fname" name="fname" size="50"><br>
+   <label for="pin">PIN:</label><br>
+   <input type="text" id="pin" name="pin" maxlength="4" size="4"><br><br>
+   <input type="submit" value="yuborish">
 </form>
 ```
 
-* Min and Max Attribute
-Specifies the min and max values for an input field. Works with number, range, date, datetime-local,month, time, and week. 
+* Min va Maks atributi
+Kirish maydoni uchun minimal va maksimal qiymatlarni belgilaydi. Raqam, diapazon, sana, sana-mahalliy, oy, vaqt va hafta bilan ishlaydi.
 
-Tip: Use the max and min attributes together to create a range of legal values.
+Maslahat: Bir qator qonuniy qiymatlarni yaratish uchun maksimal va min atributlaridan birgalikda foydalaning.
 ```
 <form action="/action_page.php">
-  <label for="datemax">Enter a date before 1980-01-01:</label>
-  <input type="date" id="datemax" name="datemax" max="1979-12-31"><br><br>
+   <label for="datemax">1980-01-01 dan oldingi sanani kiriting:</label>
+   <input type="date" id="datemax" name="datemax" max="1979-12-31"><br><br>
 
-  <label for="datemin">Enter a date after 2000-01-01:</label>
-  <input type="date" id="datemin" name="datemin" min="2000-01-02"><br><br>
+   <label for="datemin">2000-01-01 dan keyingi sanani kiriting:</label>
+   <input type="date" id="datemin" name="datemin" min="2000-01-02"><br><br>
   
-  <label for="quantity">Quantity (between 1 and 5):</label>
-  <input type="number" id="quantity" name="quantity" min="1" max="5"><br><br>
+   <label for="quantity">Miqdor (1 va 5 orasida):</label>
+   <kiritish turi="raqam" id="miqdori" nomi="miqdori" min="1" max="5"><br><br>
 
-  <input type="submit" value="Submit">
+   <input type="submit" value="yuborish">
 </form>
 ```
 
-* The multiple Attribute
-Specifies that the user is allowed to enter more than one value in an input field. multiple attribute works well with email and file types
+* Bir nechta atribut
+Foydalanuvchiga kirish maydoniga bir nechta qiymat kiritishga ruxsat berilganligini bildiradi. bir nechta atribut elektron pochta va fayl turlari bilan yaxshi ishlaydi
 ```
 <form action="/action_page.php">
-  <label for="files">Select files:</label>
-  <input type="file" id="files" name="files" multiple><br><br>
-  <input type="submit" value="Submit">
+   <label for="files">Fayllarni tanlang:</label>
+   <input type="file" id="files" name="fayllar" bir nechta><br><br>
+   <input type="submit" value="yuborish">
 </form>
 ```
 
-* The pattern attribute
+* Naqsh atributi
 
-Specifies regular expressions that the input field's value is checked against when form is submitted. Pattern attribute works with text, date, search, url, tel, email, and password.
+Shakl yuborilganda kirish maydonining qiymati tekshiriladigan muntazam ifodalarni belgilaydi. Pattern atributi matn, sana, qidiruv, url, tel, elektron pochta va parol bilan ishlaydi.
 
-Tip: Use the global title attribute to describe the pattern to help the user.
+Maslahat: foydalanuvchiga yordam berish uchun naqshni tasvirlash uchun global sarlavha atributidan foydalaning.
 
-Tip: Learn more about regular expressions in our JavaScript tutorial.
-
-```
-<form action="/action_page.php">
-  <label for="country_code">Country code:</label>
-  <input type="text" id="country_code" name="country_code" pattern="[A-Za-z]{3}" title="Three letter country code"><br><br>
-  <input type="submit" value="Submit">
-</form>
-```
-
-* The Placeholder Attribute
-The input placeholder attribute specifies a short hint that describes the expected value of an input field (a sample value or a short description of the expected format).
-
-The short hint is displayed in the input field before the user enters a value.
-
-The placeholder attribute works with the following input types: text, search, url, tel, email, and password.
-```
-<form action="/action_page.php">
-  <label for="phone">Enter a phone number:</label>
-  <input type="tel" id="phone" name="phone" placeholder="123-45-678" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"><br><br>
-  <input type="submit" value="Submit">
-</form>
-```
-
-* The required Attribute
-
-Specifies that in input must be filled out before submitting the form. It works with the following input types: text, search, url, tel, email, passwork, date pickers, number, checkbox, radio, and file. 
-```
-<form action="/action_page.php">
-  <label for="username">Username:</label>
-  <input type="text" id="username" name="username" required>
-  <input type="submit" value="Submit">
-</form>
-```
-
-
-* he Step Attribute
-
-Specifies legal number intervals for an input field (e.g. step="3" means that legal numbers could be -3, 0, 3, 6, etc.)
-
-Tip: This attribute can be used together with the max and min attributes to create a range of legal values.
-
-The step attribute works with the following input types: number, range, date, datetime-local, month, time and week.
+Maslahat: Muntazam iboralar haqida koʻproq maʼlumotni JavaScript qoʻllanmamizda oʻrganing.
 
 ```
 <form action="/action_page.php">
-  <label for="points">Points:</label>
-  <input type="number" id="points" name="points" step="3">
-  <input type="submit" value="Submit">
+   <label for="country_code">Mamlakat kodi:</label>
+   <input type="text" id="mamlakat_kodi" nomi="mamlakat_kodi" naqsh="[A-Za-z]{3}" title="Uch harfli mamlakat kodi"><br><br>
+   <input type="submit" value="yuborish">
 </form>
 ```
-Note: Input restrictions are not foolproof, and JavaScript provides many ways to add illegal input. To safely restrict input, it must also be checked by the receiver (the server)!
 
-* The Autofocus Attribute
-The input autofocus attribute specifies the an input field automatically get focus when page loads.
+* To'ldiruvchi atributi
+Input placeholder atributi kiritish maydonining kutilgan qiymatini tavsiflovchi qisqa maslahatni bildiradi (namuna qiymati yoki kutilgan formatning qisqa tavsifi).
+
+Qisqa ko'rsatma foydalanuvchi qiymat kiritishdan oldin kirish maydonida ko'rsatiladi.
+
+To'ldiruvchi atributi quyidagi kiritish turlari bilan ishlaydi: matn, qidiruv, url, tel, elektron pochta va parol.
 ```
 <form action="/action_page.php">
-  <label for="fname">First name:</label><br>
-  <input type="text" id="fname" name="fname" autofocus><br>
-  <label for="lname">Last name:</label><br>
-  <input type="text" id="lname" name="lname"><br><br>
-  <input type="submit" value="Submit">
+   <label for="phone">Telefon raqamini kiriting:</label>
+   <input type="tel" id="telefon" nomi="telefon" to'ldiruvchisi="123-45-678" naqsh="[0-9]{3}-[0-9]{2}-[0- 9]{3}"><br><br>
+   <input type="submit" value="yuborish">
 </form>
 ```
 
-* The height and width Attributes
+* Kerakli atribut
 
-The input height and width attributes specify the height and width of an ```<input type="image">``` element.
-
-Tip: Always specify both the height and width attributes for images. If height and width are set, the space required for the image is reserved when the page is loaded. Without these attributes, the browser does not know the size of the image, and cannot reserve the appropriate space to it. The effect will be that the page layout will change during loading (while the images load).
+Shaklni yuborishdan oldin kiritilgan ma'lumotlar to'ldirilishi kerakligini bildiradi. U quyidagi kiritish turlari bilan ishlaydi: matn, qidiruv, url, tel, elektron pochta, parol, sana tanlash, raqam, tasdiqlash qutisi, radio va fayl.
 ```
 <form action="/action_page.php">
-  <label for="fname">First name:</label>
-  <input type="text" id="fname" name="fname"><br><br>
-  <label for="lname">Last name:</label>
-  <input type="text" id="lname" name="lname"><br><br>
-  <input type="image" src="img_submit.gif" alt="Submit" width="48" height="48">
+   <label for="username">Foydalanuvchi nomi:</label>
+   <input type="text" id="foydalanuvchi nomi" name="foydalanuvchi nomi" kerak>
+   <input type="submit" value="yuborish">
 </form>
 ```
-NB: The input ```type="image"``` sends the X and Y coordinates of the click that activated the image button
 
 
-* The List Attribute
-The input list attribute refers to a <datalist> element that contains pre-defined options for an <input> element.
+* u qadam atributi
+
+Kirish maydoni uchun qonuniy raqamlar oralig'ini belgilaydi (masalan, qadam="3" yuridik raqamlar -3, 0, 3, 6 va hokazo bo'lishi mumkinligini anglatadi)
+
+Maslahat: Bu atributdan maksimal va min atributlar bilan birgalikda bir qator qonuniy qiymatlarni yaratish uchun foydalanish mumkin.
+
+Step atributi quyidagi kiritish turlari bilan ishlaydi: raqam, diapazon, sana, sana-mahalliy, oy, vaqt va hafta.
 
 ```
 <form action="/action_page.php">
-  <input list="browsers" name="browser">
-  <datalist id="browsers">
-    <option value="Internet Explorer">
-    <option value="Firefox">
-    <option value="Chrome">
-    <option value="Opera">
-    <option value="Safari">
-  </datalist>
-  <input type="submit" value="Submit">
+   <label for="points">Bollar:</label>
+   <kiritish turi="raqam" id="nuqta" nomi="nuqta" qadam="3">
+   <input type="submit" value="yuborish">
+</form>
+```
+Eslatma: Kirish cheklovlari ishonchli emas va JavaScript noqonuniy kiritishning ko'plab usullarini taqdim etadi. Kirishni xavfsiz cheklash uchun uni qabul qiluvchi (server) ham tekshirishi kerak!
+
+* Avtofokus atributi
+Kirish avtofokus atributi sahifa yuklanganda avtomatik ravishda fokus olinadigan kirish maydonini belgilaydi.
+```
+<form action="/action_page.php">
+   <label for="fname">Ism:</label><br>
+   <input type="text" id="fname" name="fname" autofocus><br>
+   <label for="lname">Familiya:</label><br>
+   <input type="text" id="lname" name="lname"><br><br>
+   <input type="submit" value="yuborish">
 </form>
 ```
 
-* The Autocomplete Attribute
+* Balandlik va kenglik atributlari
 
-The input autocomplete attribute specifies whether a form or an input field should have autocomplete on or off.
+Kirish balandligi va kengligi atributlari ```<input type="image">``` elementining balandligi va kengligini belgilaydi.
 
-Autocomplete allows the browser to predict the value. When a user starts to type in a field, the browser should display options to fill in the field, based on earlier typed values.
+Maslahat: Har doim tasvirlar uchun balandlik va kenglik atributlarini belgilang. Agar balandlik va kenglik o'rnatilgan bo'lsa, sahifa yuklanganda rasm uchun zarur bo'sh joy ajratiladi. Ushbu atributlarsiz brauzer tasvir hajmini bilmaydi va unga tegishli joy ajrata olmaydi. Buning ta'siri shundaki, yuklash paytida sahifa tartibi o'zgaradi (tasvirlar yuklanganda).
+```
+<form action="/action_page.php">
+   <label for="fname">Ism:</label>
+   <input type="text" id="fname" name="fname"><br><br>
+   <label for="lname">Familiya:</label>
+   <input type="text" id="lname" name="lname"><br><br>
+   <input type="image" src="img_submit.gif" alt="Yuborish" kengligi="48" balandligi="48">
+</form>
+```
+Eslatma: ```type="image"``` kiritish rasm tugmasini faollashtirgan bosishning X va Y koordinatalarini yuboradi.
 
-The autocomplete attribute works with <form> and the following <input> types: text, search, url, tel, email, password, datepickers, range, and color.
 
-In the case below, the autocomplete is on for the form but off for the email field. Fill in the form and reload to see the effect. 
+* Ro'yxat atributi
+Kirish ro'yxati atributi <input> elementi uchun oldindan belgilangan variantlarni o'z ichiga olgan <datalist> elementiga ishora qiladi.
+
+```
+<form action="/action_page.php">
+   <input list="brauzerlar" name="brauzer">
+   <datalist id="brauzerlar">
+     <option value="Internet Explorer">
+     <option value="Firefox">
+     <option value="Chrome">
+     <option value="Opera">
+     <option value="Safari">
+   </datalist>
+   <input type="submit" value="yuborish">
+</form>
+```
+
+* Avtomatik to'ldirish atributi
+
+Input autocomplete atributi shakl yoki kiritish maydonida avtomatik toʻldirishni yoqish yoki oʻchirish kerakligini belgilaydi.
+
+Avtomatik to'ldirish brauzerga qiymatni taxmin qilish imkonini beradi. Agar foydalanuvchi maydonga yozishni boshlaganida, brauzer oldingi kiritilgan qiymatlar asosida maydonni to'ldirish variantlarini ko'rsatishi kerak.
+
+Avtoto'ldirish atributi <form> va quyidagi <input> turlari bilan ishlaydi: matn, qidiruv, url, tel, elektron pochta, parol, sana tanlash, diapazon va rang.
+
+Quyidagi holatda avtomatik to‘ldirish ariza uchun yoqilgan, lekin elektron pochta maydoni uchun o‘chirilgan. Effektni ko'rish uchun shaklni to'ldiring va qayta yuklang.
 ```
 <form action="/action_page.php" autocomplete="on">
-  <label for="fname">First name:</label>
-  <input type="text" id="fname" name="fname"><br><br>
-  <label for="lname">Last name:</label>
-  <input type="text" id="lname" name="lname"><br><br>
-  <label for="email">Email:</label>
-  <input type="email" id="email" name="email" autocomplete="off"><br><br>
-  <input type="submit" value="Submit">
+   <label for="fname">Ism:</label>
+   <input type="text" id="fname" name="fname"><br><br>
+   <label for="lname">Familiya:</label>
+   <input type="text" id="lname" name="lname"><br><br>
+   <label for="email">E-pochta:</label>
+   <input type="email" id="email" name="email" autocomplete="off"><br><br>
+   <input type="submit" value="yuborish">
 </form>
 ```
 
-* Use maxlength for no of characters: ```maxlength="40"``` 
-And use max for numeric value, use max: ```max=40```
+* Belgilar soni uchun maxlengthdan foydalaning: ```maxlength="40"```
+Raqamli qiymat uchun max dan foydalaning, maksimaldan foydalaning: ```max=40```
 
-<kbd>return</kbd>[Back to table of contents](#homepage)
+<kbd>qaytish</kbd>[Mundarijaga qaytish](#homepage)
 
 
 ----------
 
 
-## HTML Input Form Attributes
+## HTML kiritish formasi atributlari
 
-HTML Input form* Attributes
+HTML kiritish shakli* Atributlar
 
-The form attribute: The input form attribute Specifies the form <input> element element belongs to. It's value must be equal to the id attribute of the <form> element it belongs to. 
+Form atributi: Input form atributi Formaning <input> element elementiga tegishli ekanligini bildiradi. Uning qiymati u tegishli <form> elementining id atributiga teng bo'lishi kerak.
 
 ```
-<p>The form attribute specifies the form an input element belongs to.</p>
+<p>Forma atributi kiritish elementi tegishli shaklni bildiradi.</p>
 
 <form action="/action_page.php" id="form1">
-  <label for="fname">First name:</label>
-  <input type="text" id="fname" name="fname"><br><br>
-  <input type="submit" value="Submit">
+   <label for="fname">Ism:</label>
+   <input type="text" id="fname" name="fname"><br><br>
+   <input type="submit" value="yuborish">
 </form>
 ```
 ```
-<p>The "Last name" field below is outside the form element, but still part of the form.</p>
+<p>Quyidagi "Familiya" maydoni shakl elementidan tashqarida, ammo shaklning bir qismidir.</p>
 
-<label for="lname">Last name:</label>
+<label for="lname">Familiya:</label>
 <input type="text" id="lname" name="lname" form="form1">
 ```
 
-* The formaction Attribute
-The input to formaction attribute specifies the URL of the file that will process the input when the form is submitted. 
+* Shakllanish atributi
+Input to formation atributi forma yuborilganda kirishni qayta ishlovchi faylning URL manzilini belgilaydi.
 
-Note: This attribute overrides the action attribute of the ```<form>``` element.
+Eslatma: Bu atribut ```<form>``` elementining harakat atributini bekor qiladi.
 
-The formaction attribute works with the following input types: submit and image.
+Shakllanish atributi quyidagi kiritish turlari bilan ishlaydi: yuborish va tasvir.
 
 ```
 <form action="/action_page.php">
-  <label for="fname">First name:</label>
-  <input type="text" id="fname" name="fname"><br><br>
-  <label for="lname">Last name:</label>
-  <input type="text" id="lname" name="lname"><br><br>
-  <input type="submit" value="Submit">
-  <input type="submit" formaction="/action_page2.php" value="Submit as Admin">
+   <label for="fname">Ism:</label>
+   <input type="text" id="fname" name="fname"><br><br>
+   <label for="lname">Familiya:</label>
+   <input type="text" id="lname" name="lname"><br><br>
+   <input type="submit" value="yuborish">
+   <input type="submit" formation="/action_page2.php" value="Administrator sifatida yuborish">
 </form>
 ```
 
-* The forenctype Attribute
-The input formenctype attribute specifies how the form-data should be encoded when submitted (only for forms with method="post").
+* Forencttype atributi
+Input formenctype atributi shakl ma'lumotlari yuborilganda qanday kodlanishi kerakligini belgilaydi (faqat method="post" bilan shakllar uchun).
 
-Note: This attribute overrides the enctype attribute of the ```<form>``` element.
+Eslatma: Bu atribut ```<form>``` elementining enctype atributini bekor qiladi.
 
-The formenctype attribute works with the following input types: submit and image.
+Formenctype atributi quyidagi kiritish turlari bilan ishlaydi: yuborish va tasvir.
 ```
 <form action="/action_page_binary.asp" method="post">
-  <label for="fname">First name:</label>
-  <input type="text" id="fname" name="fname"><br><br>
-  <input type="submit" value="Submit">
-  <input type="submit" formenctype="multipart/form-data" value="Submit as Multipart/form-data">
+   <label for="fname">Ism:</label>
+   <input type="text" id="fname" name="fname"><br><br>
+   <input type="submit" value="yuborish">
+   <input type="submit" formenctype="multipart/form-data" value="Ko'p qismli/form-ma'lumotlar sifatida yuborish">
 </form>
 ```
 
-* The formmethod Attribute
+* Formmethod atributi
 
-The input formmethod attribute defines the HTTP method for sending form-data to the action URL.
+Input formmethod atributi amal URL manziliga forma ma'lumotlarini yuborish uchun HTTP usulini belgilaydi.
 
-Note: This attribute overrides the method attribute of the ```<form>``` element.
+Eslatma: Bu atribut ```<form>``` elementining metod atributini bekor qiladi.
 
-The formmethod attribute works with the following input types: submit and image.
+Formmethod atributi quyidagi kiritish turlari bilan ishlaydi: yuborish va tasvir.
 
-The form-data can be sent as URL variables (method="get") or as an HTTP post transaction (method="post").
+Shakl-ma'lumotlar URL o'zgaruvchilari (method="get") yoki HTTP post tranzaksiyasi (metod="post") sifatida yuborilishi mumkin.
 
-Notes on the "get" method:
+"Get" usuli bo'yicha eslatmalar:
 
-    This method appends the form-data to the URL in name/value pairs
-    This method is useful for form submissions where a user want to bookmark the result
-    There is a limit to how much data you can place in a URL (varies between browsers), therefore, you cannot be sure that all of the form-data will be correctly transferred
-    Never use the "get" method to pass sensitive information! (password or other sensitive information will be visible in the browser's address bar)
+     Ushbu usul forma ma'lumotlarini URL manziliga nom/qiymat juftliklarida qo'shadi
+     Bu usul foydalanuvchi natijani belgilamoqchi bo'lgan shakllarni yuborish uchun foydalidir
+     URL manziliga qancha maʼlumot joylashtirishingiz mumkin boʻlgan chegara mavjud (brauzerlar orasida farq qiladi), shuning uchun barcha shakl maʼlumotlari toʻgʻri uzatilishiga ishonchingiz komil emas.
+     Nozik ma'lumotlarni uzatish uchun hech qachon "olish" usulidan foydalanmang! (parol yoki boshqa maxfiy ma'lumotlar brauzerning manzil satrida ko'rinadi)
 
-Notes on the "post" method:
+"Post" usuli bo'yicha eslatmalar:
 
-    This method sends the form-data as an HTTP post transaction
-    Form submissions with the "post" method cannot be bookmarked
-    The "post" method is more robust and secure than "get", and "post" does not have size limitations
+     Ushbu usul forma ma'lumotlarini HTTP post tranzaksiyasi sifatida yuboradi
+     “Post” usuli bilan yuborilgan arizalarni xatcho‘p qilib bo‘lmaydi
+     "Post" usuli "olish" dan ko'ra mustahkamroq va xavfsizroqdir va "post" o'lchamida cheklovlarga ega emas.
 
 ```
 <form action="/action_page.php" method="get" target="_blank">
-  <label for="fname">First name:</label>
-  <input type="text" id="fname" name="fname"><br><br>
-  <label for="lname">Last name:</label>
-  <input type="text" id="lname" name="lname"><br><br>
-  <input type="submit" value="Submit using GET">
-  <input type="submit" formmethod="post" value="Submit using POST">
+   <label for="fname">Ism:</label>
+   <input type="text" id="fname" name="fname"><br><br>
+   <label for="lname">Familiya:</label>
+   <input type="text" id="lname" name="lname"><br><br>
+   <input type="submit" value="GET-dan foydalanib yuborish">
+   <input type="submit" formmethod="post" value="POST yordamida yuborish">
 </form>
 ```
 
-* The formtarget Attribute
+* Formtarget atributi
 
-The input formtarget attribute specifies a name or a keyword that indicates where to display the response that is received after submitting the form.
+Input formattarget atributi forma yuborilgandan so'ng olingan javobni qayerda ko'rsatishni ko'rsatadigan nom yoki kalit so'zni belgilaydi.
 
-Note: This attribute overrides the target attribute of the ```<form>``` element.
+Eslatma: Bu atribut ```<form>``` elementining maqsad atributini bekor qiladi.
 
-The formtarget attribute works with the following input types: submit and image.
+Formtarget atributi quyidagi kiritish turlari bilan ishlaydi: yuborish va tasvir.
 ```
 <form action="/action_page.php">
-  <label for="fname">First name:</label>
-  <input type="text" id="fname" name="fname"><br><br>
-  <label for="lname">Last name:</label>
-  <input type="text" id="lname" name="lname"><br><br>
-  <input type="submit" value="Submit">
-  <input type="submit" formtarget="_blank" value="Submit to a new window/tab">
+   <label for="fname">Ism:</label>
+   <input type="text" id="fname" name="fname"><br><br>
+   <label for="lname">Familiya:</label>
+   <input type="text" id="lname" name="lname"><br><br>
+   <input type="submit" value="yuborish">
+   <input type="submit" formtarget="_blank" value="Yangi oynaga/tabga yuborish">
 </form>
 ```
 
-* The formnovalidate Attribute
-The input formnovalidate attribute specifies that an <input> element should not be validated when submitted.
+* Formnovalidate atributi
+Input formnovalidate atributi <input> elementi yuborilganda tasdiqlanmasligi kerakligini bildiradi.
 
-Note: This attribute overrides the novalidate attribute of the ```<form>``` element.
+Eslatma: Bu atribut ```<form>``` elementining novalidate atributini bekor qiladi.
 
-The formnovalidate attribute works with the following input types: submit.
+Formnovalidate atributi quyidagi kiritish turlari bilan ishlaydi: yuborish.
 
 ```
 <form action="/action_page.php">
-  <label for="email">Enter your email:</label>
-  <input type="email" id="email" name="email" required><br><br>
-  <input type="submit" value="Submit">
-  <input type="submit" formnovalidate="formnovalidate" value="Submit without validation">
+   <label for="email">E-pochta manzilingizni kiriting:</label>
+   <input type="email" id="email" name="email" kerak><br><br>
+   <input type="submit" value="yuborish">
+   <input type="submit" formnovalidate="formnovalidate" value="Tasdiqlanmagan holda yuborish">
 </form>
 ```
 
-* The novalidate attribute
-The novalidate attribute is a <form> attribute.
+* Novalidate atributi
+Novalidate atributi <form> atributidir.
 
-When present, novalidate specifies that all of the form-data should not be validated when submitted.
+Agar mavjud bo'lsa, novalidate barcha shakl ma'lumotlari yuborilganda tasdiqlanmasligi kerakligini bildiradi.
 ```
 <form action="/action_page.php" novalidate>
-  <label for="email">Enter your email:</label>
-  <input type="email" id="email" name="email" required><br><br>
-  <input type="submit" value="Submit">
+   <label for="email">E-pochta manzilingizni kiriting:</label>
+   <input type="email" id="email" name="email" kerak><br><br>
+   <input type="submit" value="yuborish">
 </form>
 ```
 
@@ -1648,109 +1639,71 @@ input[type=text] {
 
 
 
-Note that we have set the box-sizing property to border-box. This makes sure that the padding and eventually 
+E'tibor bering, biz box-sizing xususiyatini border-box-ga o'rnatdik. Bu plomba va oxir-oqibat ishonch hosil qiladi
 
-borders are included in the total width and height of the elements. 
+chegaralar elementlarning umumiy kengligi va balandligiga kiritilgan.
 
 
-Bordered Inputs
+Chegaralangan kirishlar
 
-Use the border property to change the border size and color, and use the border-radius property to add 
+Chegara o'lchami va rangini o'zgartirish uchun border xususiyatidan foydalaning va qo'shish uchun border-radius xususiyatidan foydalaning
 
-rounded corners:
+yumaloq burchaklar:
 
 <!DOCTYPE html>
 <html>
 <head>
-<style> 
-input[type=text] {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  box-sizing: border-box;
-  border: 2px solid red;
-  border-radius: 4px;
+<uslub>
+kiritish[type=matn] {
+   kengligi: 100%;
+   to'ldirish: 12px 20px;
+   chegara: 8px 0;
+   quti o'lchami: chegara qutisi;
+   chegara: 2px qattiq qizil;
+   chegara radiusi: 4px;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h2>Input fields with borders</h2>
+<h2>Chegarali kiritish maydonlari</h2>
 
 <form>
-  <label for="fname">First Name</label>
-  <input type="text" id="fname" name="fname">
-  <label for="lname">Last Name</label>
-  <input type="text" id="lname" name="lname">
+   <label for="fname">Ism</label>
+   <input type="text" id="fname" name="fname">
+   <label for="lname">Familiya</label>
+   <input type="text" id="lname" name="lname">
 </form>
 
 </body>
 </html>
 
 
-use border-bottom property is you only want a bottom border, as shown below:
+border-bottom xususiyatidan foydalaning, siz quyida ko'rsatilganidek, faqat pastki chegarani xohlaysiz:
 
 <!DOCTYPE html>
 <html>
 <head>
-<style> 
-input[type=text] {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  box-sizing: border-box;
-  border: none;
-  border-bottom: 2px solid red;
+<uslub>
+kiritish[type=matn] {
+   kengligi: 100%;
+   to'ldirish: 12px 20px;
+   chegara: 8px 0;
+   quti o'lchami: chegara qutisi;
+   chegara: yo'q;
+   chegara-pastki: 2px qattiq qizil;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h2>Input fields with bottom border</h2>
-
-<form>
-  <label for="fname">First Name</label>
-  <input type="text" id="fname" name="fname">
-  <label for="lname">Last Name</label>
-  <input type="text" id="lname" name="lname">
-</form>
-
-</body>
-</html>
-
-
-
-
-Colored Inputs
-
-Use the background-color property to add a background color to the input, and the color property to change 
-
-the text color: 
-
-<!DOCTYPE html>
-<html>
-<head>
-<style> 
-input[type=text] {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  box-sizing: border-box;
-  border: none;
-  background-color: #3CBC8D;
-  color: white;
-}
-</style>
-</head>
-<body>
-
-<h2>Input fields with color</h2>
+<h2>Kirish maydonlari pastki chegarasi</h2>
 
 <form>
-  <label for="fname">First Name</label>
-  <input type="text" id="fname" name="fname" value="John">
-  <label for="lname">Last Name</label>
-  <input type="text" id="lname" name="lname" value="Doe">
+   <label for="fname">Ism</label>
+   <input type="text" id="fname" name="fname">
+   <label for="lname">Familiya</label>
+   <input type="text" id="lname" name="lname">
 </form>
 
 </body>
@@ -1759,206 +1712,36 @@ input[type=text] {
 
 
 
-Focused Inputs
+Rangli kirishlar
 
-By default, some browsers will add a blue outline around the input when it gets focus (clicked on). You can 
+Kirish uchun fon rangini qo'shish uchun fon rangi xususiyatidan foydalaning va o'zgartirish uchun rang xususiyatidan foydalaning
 
-remove this behavior by adding outline: none; to the input.
-
-Use the :focus selector to do something with the input field when it gets focus:
-
+matn rangi:
 
 <!DOCTYPE html>
 <html>
 <head>
-<style> 
-input[type=text] {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  box-sizing: border-box;
-  border: 1px solid #555;
-  outline: none;
-}
-
-input[type=text]:focus {
-  background-color: lightblue;
+<uslub>
+kiritish[type=matn] {
+   kengligi: 100%;
+   to'ldirish: 12px 20px;
+   chegara: 8px 0;
+   quti o'lchami: chegara qutisi;
+   chegara: yo'q;
+   fon rangi: #3CBC8D;
+   rang: oq;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h2>Input fields with color on :focus</h2>
-
-<p>Here, the input field gets a color when it gets focus (clicked on):</p>
+<h2>Rangli kiritish maydonlari</h2>
 
 <form>
-  <label for="fname">First Name</label>
-  <input type="text" id="fname" name="fname" value="John">
-  <label for="lname">Last Name</label>
-  <input type="text" id="lname" name="lname" value="Doe">
-</form>
-
-</body>
-</html>
-
-
-
-To change to a lightblue line during focus:
-
-
-<!DOCTYPE html>
-<html>
-<head>
-<style> 
-input[type=text] {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  box-sizing: border-box;
-  border: 3px solid #ccc;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-  outline: none;
-}
-
-input[type=text]:focus {
-  border: 3px solid #555;
-}
-</style>
-</head>
-<body>
-
-<h2>Input fields with black border on :focus</h2>
-
-<p>Here, the input field gets a black border color when it gets focus (clicked on). We have also added the 
-
-CSS transition property to animate the border color (takes 0.5 seconds to change the color on focus):</p>
-
-<form>
-  <label for="fname">First Name</label>
-  <input type="text" id="fname" name="fname" value="John">
-  <label for="lname">Last Name</label>
-  <input type="text" id="lname" name="lname" value="Doe">
-</form>
-
-</body>
-</html>
-
-
-
-Input with icon/image
-
-If you want an icon inside the input, use the background-image property and position it with the 
-
-background-position property. Also notice that we add a large left padding to reserve the space of the icon:
-
-<!DOCTYPE html>
-<html>
-<head>
-<style> 
-input[type=text] {
-  width: 100%;
-  box-sizing: border-box;
-  border: 2px solid #ccc;
-  border-radius: 4px;
-  font-size: 16px;
-  background-color: white;
-  background-image: url('searchicon.png');
-  background-position: 10px 10px; 
-  background-repeat: no-repeat;
-  padding: 12px 20px 12px 40px;
-}
-</style>
-</head>
-<body>
-
-<h2>Input field with an icon inside</h2>
-
-<form>
-  <input type="text" name="search" placeholder="Search..">
-</form>
-
-</body>
-</html>
-
-
-
-Animated Search Input
-
-In this example we use the CSS transition property to animate the width of the search input when it gets 
-
-focus. You will learn more about the transition property later, in our CSS Transitions chapter.
-
-<!DOCTYPE html>
-<html>
-<head>
-<style> 
-input[type=text] {
-  width: 130px;
-  box-sizing: border-box;
-  border: 2px solid #ccc;
-  border-radius: 4px;
-  font-size: 16px;
-  background-color: white;
-  background-image: url('searchicon.png');
-  background-position: 10px 10px; 
-  background-repeat: no-repeat;
-  padding: 12px 20px 12px 40px;
-  transition: width 0.4s ease-in-out;
-}
-
-input[type=text]:focus {
-  width: 100%;
-}
-</style>
-</head>
-<body>
-
-<h2>Animate width of search input</h2>
-
-<form>
-  <input type="text" name="search" placeholder="Search..">
-</form>
-
-</body>
-</html>
-
-
-
-Styling Textareas
-
-Tip: Use the resize property to prevent textareas from being resized (disable the "grabber" in the bottom 
-
-right corner):
-
-<!DOCTYPE html>
-<html>
-<head>
-<style> 
-textarea {
-  width: 100%;
-  height: 150px;
-  padding: 12px 20px;
-  box-sizing: border-box;
-  border: 2px solid #ccc;
-  border-radius: 4px;
-  background-color: #f8f8f8;
-  font-size: 16px;
-  resize: none;
-}
-</style>
-</head>
-<body>
-
-<h2>Styling textarea</h2>
-
-<p><strong>Tip:</strong> Use the resize property to prevent textareas from being resized (disable the 
-
-"grabber" in the bottom right corner):</p>
-
-<form>
-  <textarea>Some text...</textarea>
+   <label for="fname">Ism</label>
+   <input type="text" id="fname" name="fname" value="Jon">
+   <label for="lname">Familiya</label>
+   <input type="text" id="lname" name="lname" value="Doe">
 </form>
 
 </body>
@@ -1967,34 +1750,44 @@ textarea {
 
 
 
-Styling Select Menus
+Fokuslangan kirishlar
 
-See illustration below:
+Odatiy bo'lib, ba'zi brauzerlar diqqat markazida bo'lganda (bosilganda) kiritish atrofida ko'k kontur qo'shadi. Siz .. qila olasiz; siz ... mumkin
+
+konturni qo'shish orqali ushbu xatti-harakatni olib tashlang: none; kirishga.
+
+Fokus olinganda kiritish maydoni bilan biror narsa qilish uchun :focus selektoridan foydalaning:
 
 
 <!DOCTYPE html>
 <html>
 <head>
-<style> 
-select {
-  width: 100%;
-  padding: 16px 20px;
-  border: none;
-  border-radius: 4px;
-  background-color: #f1f1f1;
+<uslub>
+kiritish[type=matn] {
+   kengligi: 100%;
+   to'ldirish: 12px 20px;
+   chegara: 8px 0;
+   quti o'lchami: chegara qutisi;
+   chegara: 1px qattiq #555;
+   kontur: yo'q;
+}
+
+kiritish[type=matn]:fokus {
+   fon rangi: ochiq ko'k;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h2>Styling a select menu</h2>
+<h2>Rangli kiritish maydonlari:fokus</h2>
+
+<p>Bu yerda, kiritish maydoni diqqat markazida boʻlganda (bosilganda) rangga ega boʻladi:</p>
 
 <form>
-  <select id="country" name="country">
-  <option value="au">Australia</option>
-  <option value="ca">Canada</option>
-  <option value="usa">USA</option>
-  </select>
+   <label for="fname">Ism</label>
+   <input type="text" id="fname" name="fname" value="Jon">
+   <label for="lname">Familiya</label>
+   <input type="text" id="lname" name="lname" value="Doe">
 </form>
 
 </body>
@@ -2002,174 +1795,369 @@ select {
 
 
 
-Styling Input Buttons
+Fokus paytida ochiq ko'k chiziqqa o'tish uchun:
+
 
 <!DOCTYPE html>
 <html>
 <head>
-<style> 
-input[type=button], input[type=submit], input[type=reset] {
-  background-color: #4CAF50;
-  border: none;
-  color: white;
-  padding: 16px 32px;
-  text-decoration: none;
-  margin: 4px 2px;
-  cursor: pointer;
+<uslub>
+kiritish[type=matn] {
+   kengligi: 100%;
+   to'ldirish: 12px 20px;
+   chegara: 8px 0;
+   quti o'lchami: chegara qutisi;
+   chegara: 3px qattiq #ccc;
+   -webkit-o'tish: 0,5s;
+   o'tish: 0,5 s;
+   kontur: yo'q;
+}
+
+kiritish[type=matn]:fokus {
+   chegara: 3px qattiq #555;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h2>Styling form buttons</h2>
+<h2>Qora hoshiyali kiritish maydonlari:fokus</h2>
 
-<input type="button" value="Button">
+<p>Bu yerda kiritish maydoni diqqat markazida boʻlganda (bosilganda) qora hoshiya rangiga ega boʻladi. Biz ham qo'shdik
+
+Chegara rangini jonlantirish uchun CSS oʻtish xususiyati (fokusdagi rangni oʻzgartirish uchun 0,5 soniya ketadi):</p>
+
+<form>
+   <label for="fname">Ism</label>
+   <input type="text" id="fname" name="fname" value="Jon">
+   <label for="lname">Familiya</label>
+   <input type="text" id="lname" name="lname" value="Doe">
+</form>
+
+</body>
+</html>
+
+
+
+Belgi/tasvir bilan kiriting
+
+Agar siz kiritishda belgi bo'lishini istasangiz, background-image xususiyatidan foydalaning va uni bilan joylashtiring
+
+fon-pozitsiya xususiyati. Shuningdek, belgining bo'sh joyini zaxiralash uchun katta chap to'ldirishni qo'shayotganimizga e'tibor bering:
+
+<!DOCTYPE html>
+<html>
+<head>
+<uslub>
+kiritish[type=matn] {
+   kengligi: 100%;
+   quti o'lchami: chegara qutisi;
+   chegara: 2px qattiq #ccc;
+   chegara radiusi: 4px;
+   shrift o'lchami: 16px;
+   fon rangi: oq;
+   fon rasmi: url('searchicon.png');
+   fon holati: 10px 10px;
+   fon-takrorlash: takrorlanmaslik;
+   to'ldirish: 12px 20px 12px 40px;
+}
+</style>
+</head>
+<tana>
+
+<h2>Ichkarida belgi bo'lgan kiritish maydoni</h2>
+
+<form>
+   <input type="text" name="search" placeholder="Search..">
+</form>
+
+</body>
+</html>
+
+
+
+Animatsiyalangan qidiruv kiritish
+
+Ushbu misolda biz CSS-ga o'tish xususiyatidan foydalanib, qidiruv kiritish kengligi kelganda uni jonlantiramiz
+
+diqqat. O'tish xususiyati haqida keyinroq, CSS Transitions bo'limida bilib olasiz.
+
+<!DOCTYPE html>
+<html>
+<head>
+<uslub>
+kiritish[type=matn] {
+   kengligi: 130px;
+   quti o'lchami: chegara qutisi;
+   chegara: 2px qattiq #ccc;
+   chegara radiusi: 4px;
+   shrift o'lchami: 16px;
+   fon rangi: oq;
+   fon rasmi: url('searchicon.png');
+   fon holati: 10px 10px;
+   fon-takrorlash: takrorlanmaslik;
+   to'ldirish: 12px 20px 12px 40px;
+   o'tish: kengligi 0,4 s qulaylik;
+}
+
+kiritish[type=matn]:fokus {
+   kengligi: 100%;
+}
+</style>
+</head>
+<tana>
+
+<h2>Qidiruv kiritish kengligini jonlantiring</h2>
+
+<form>
+   <input type="text" name="search" placeholder="Search..">
+</form>
+
+</body>
+</html>
+
+
+
+Styling Textreas
+
+Maslahat: Matn maydonlarining oʻlchamini oʻzgartirishga yoʻl qoʻymaslik uchun oʻlchamini oʻzgartirish xususiyatidan foydalaning (pastki qismdagi “grabber”ni oʻchiring.
+
+o'ng burchak):
+
+<!DOCTYPE html>
+<html>
+<head>
+<uslub>
+matn maydoni {
+   kengligi: 100%;
+   balandligi: 150px;
+   to'ldirish: 12px 20px;
+   quti o'lchami: chegara qutisi;
+   chegara: 2px qattiq #ccc;
+   chegara radiusi: 4px;
+   fon rangi: #f8f8f8;
+   shrift o'lchami: 16px;
+   o'lchamini o'zgartirish: yo'q;
+}
+</style>
+</head>
+<tana>
+
+<h2>Matn maydonini uslublash</h2>
+
+<p><strong>Maslahat:</strong> Matn maydonlarining oʻlchamini oʻzgartirishning oldini olish uchun oʻlchamini oʻzgartirish xususiyatidan foydalaning (oʻchiring
+
+Pastki o'ng burchakdagi "grabber"):</p>
+
+<form>
+   <textarea>Ba'zi matn...</textarea>
+</form>
+
+</body>
+</html>
+
+
+
+Styling Menyularni tanlang
+
+Quyidagi rasmga qarang:
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<uslub>
+tanlang {
+   kengligi: 100%;
+   to'ldirish: 16px 20px;
+   chegara: yo'q;
+   chegara radiusi: 4px;
+   fon rangi: #f1f1f1;
+}
+</style>
+</head>
+<tana>
+
+<h2>Tanlangan menyuni shakllantirish</h2>
+
+<form>
+   <select id="mamlakat" nomi="mamlakat">
+   <option value="au">Avstraliya</option>
+   <option value="ca">Kanada</option>
+   <option value="usa">AQSh</option>
+   </select>
+</form>
+
+</body>
+</html>
+
+
+
+Styling kiritish tugmalari
+
+<!DOCTYPE html>
+<html>
+<head>
+<uslub>
+kiritish[turi=tugma], kiritish[turi=yuborish], kiritish[turi=qayta tiklash] {
+   fon rangi: #4CAF50;
+   chegara: yo'q;
+   rang: oq;
+   to'ldirish: 16px 32px;
+   matn-bezak: yo'q;
+   chegara: 4px 2px;
+   kursor: ko'rsatgich;
+}
+</style>
+</head>
+<tana>
+
+<h2>Stillash shakli tugmalari</h2>
+
+<kiritish turi="tugma" qiymati="tugma">
 <input type="reset" value="Reset">
-<input type="submit" value="Submit">
+<input type="submit" value="yuborish">
 
 </body>
 </html>
 
 
-See CSS Buttons tutorial here: https://www.w3schools.com/css/css3_buttons.asp
+Bu yerda CSS tugmalari qoʻllanmasini koʻring: https://www.w3schools.com/css/css3_buttons.asp
 
-Responsive Form
+Javob berish shakli
 
-Resize the browser window to see the effect. When the screen is less than 600px wide, make the two columns 
+Effektni ko'rish uchun brauzer oynasining o'lchamini o'zgartiring. Ekranning kengligi 600px dan kam bo'lsa, ikkita ustun hosil qiling
 
-stack on top of each other instead of next to each other.
+bir-birining yonida emas, balki bir-birining ustiga qo'ying.
 
-Advanced: The following example use media queries to create a responsive form. You will learn more about 
+Kengaytirilgan: Quyidagi misolda javob beruvchi shakl yaratish uchun media so'rovlaridan foydalaniladi. haqida ko'proq bilib olasiz
 
-this in a later chapter.
+bu keyingi bobda.
 
 
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
+<uslub>
 * {
-  box-sizing: border-box;
+   quti o'lchami: chegara qutisi;
 }
 
-input[type=text], select, textarea {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  resize: vertical;
+kiritish[type=matn], tanlash, matn maydoni {
+   kengligi: 100%;
+   to'ldirish: 12px;
+   chegara: 1px qattiq #ccc;
+   chegara radiusi: 4px;
+   o'lchamini o'zgartirish: vertikal;
 }
 
-label {
-  padding: 12px 12px 12px 0;
-  display: inline-block;
+teg {
+   to'ldirish: 12px 12px 12px 0;
+   displey: inline-block;
 }
 
-input[type=submit] {
-  background-color: #4CAF50;
-  color: white;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  float: right;
+kiritish[type=submit] {
+   fon rangi: #4CAF50;
+   rang: oq;
+   to'ldirish: 12px 20px;
+   chegara: yo'q;
+   chegara radiusi: 4px;
+   kursor: ko'rsatgich;
+   suzuvchi: o'ng;
 }
 
-input[type=submit]:hover {
-  background-color: #45a049;
+kiritish[type=submit]: suring {
+   fon rangi: #45a049;
 }
 
-.container {
-  border-radius: 5px;
-  background-color: #f2f2f2;
-  padding: 20px;
+.idish {
+   chegara radiusi: 5px;
+   fon rangi: #f2f2f2;
+   to'ldirish: 20px;
 }
 
 .col-25 {
-  float: left;
-  width: 25%;
-  margin-top: 6px;
+   float: chap;
+   kengligi: 25%;
+   tepadan chet: 6px;
 }
 
 .col-75 {
-  float: left;
-  width: 75%;
-  margin-top: 6px;
+   float: chap;
+   kengligi: 75%;
+   tepadan chet: 6px;
 }
 
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
+/* Ustunlardan keyingi floatlarni tozalash */
+.qator:keyin {
+   tarkib: "";
+   ko'rsatish: jadval;
+   aniq: ikkalasi ham;
 }
 
-/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each 
+/* Javob beruvchi tartib - ekran kengligi 600px dan kam bo'lsa, ikkita ustunni har birining ustiga qo'ying.
 
-other instead of next to each other */
-@media screen and (max-width: 600px) {
-  .col-25, .col-75, input[type=submit] {
-    width: 100%;
-    margin-top: 0;
-  }
+bir-birining o'rniga boshqa */
+@media ekrani va (maksimal kenglik: 600px) {
+   .col-25, .col-75, input[type=submit] {
+     kengligi: 100%;
+     yuqori chegara: 0;
+   }
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h2>Responsive Form</h2>
-<p>Resize the browser window to see the effect. When the screen is less than 600px wide, make the two 
+<h2>Javob beruvchi shakl</h2>
+<p>Effektni ko'rish uchun brauzer oynasining o'lchamini o'zgartiring. Ekranning kengligi 600px dan kam bo'lsa, ikkitasini qiling
 
-columns stack on top of each other instead of next to each other.</p>
+ustunlar yonma-yon emas, bir-birining ustiga joylashadi.</p>
 
 <div class="container">
-  <form action="/action_page.php">
-  <div class="row">
-    <div class="col-25">
-      <label for="fname">First Name</label>
-    </div>
-    <div class="col-75">
-      <input type="text" id="fname" name="firstname" placeholder="Your name..">
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-25">
-      <label for="lname">Last Name</label>
-    </div>
-    <div class="col-75">
-      <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-25">
-      <label for="country">Country</label>
-    </div>
-    <div class="col-75">
-      <select id="country" name="country">
-        <option value="australia">Australia</option>
-        <option value="canada">Canada</option>
-        <option value="usa">USA</option>
-      </select>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-25">
-      <label for="subject">Subject</label>
-    </div>
-    <div class="col-75">
-      <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
-    </div>
-  </div>
-  <br>
-  <div class="row">
-    <input type="submit" value="Submit">
-  </div>
-  </form>
+   <form action="/action_page.php">
+   <div class="satr">
+     <div class="col-25">
+       <label for="fname">Ism</label>
+     </div>
+     <div class="col-75">
+       <input type="text" id="fname" name="firstname" placeholder="Sizning ismingiz..">
+     </div>
+   </div>
+   <div class="satr">
+     <div class="col-25">
+       <label for="lname">Familiya</label>
+     </div>
+     <div class="col-75">
+       <input type="text" id="lname" name="familiya" placeholder="Sizning familiyangiz..">
+     </div>
+   </div>
+   <div class="satr">
+     <div class="col-25">
+       <label for="country">Mamlakat</label>
+     </div>
+     <div class="col-75">
+       <select id="mamlakat" nomi="mamlakat">
+         <option value="australia">Avstraliya</option>
+         <option value="canada">Kanada</option>
+         <option value="usa">AQSh</option>
+       </select>
+     </div>
+   </div>
+   <div class="satr">
+     <div class="col-25">
+       <label for="subject">Mavzu</label>
+     </div>
+     <div class="col-75">
+       <textarea id="subject" name="subject" placeholder="Biror narsa yozing.." style="height:200px"></textarea>
+     </div>
+   </div>
+   <br>
+   <div class="satr">
+     <input type="submit" value="yuborish">
+   </div>
+   </form>
 </div>
 
 </body>
 </html>
-
-
-<kbd>return</kbd>[Back to table of contents](#homepage)
+<kbd>qaytish</kbd>[Mundarijaga qaytish](#homepage)

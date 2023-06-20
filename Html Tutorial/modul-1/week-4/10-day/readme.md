@@ -1,392 +1,390 @@
-Part 6 HTML API
+6-qism HTML API
 ## HTML GEOLOCATION
 HTML GEOLOCATION API
-* HTML Geolocation API is used to locate a user position. 
+* HTML Geolocation API foydalanuvchi pozitsiyasini aniqlash uchun ishlatiladi.
 
-* Locate the user's Position
+* Foydalanuvchining pozitsiyasini toping
 
-The HTML Geolocation API is used to get the geographical position of a user.
+HTML Geolocation API foydalanuvchining geografik joylashuvini olish uchun ishlatiladi.
 
-Since this can compromise privacy, the position is not available unless the user approves it.
+Bu maxfiylikni buzishi mumkinligi sababli, agar foydalanuvchi ma'qullamasa, pozitsiya mavjud emas.
 
-Note: Geolocation is most accurate for devices with GPS, like smartphones.
-
-
-Note: As of Chrome 50, the Geolocation API will only work on secure contexts such as HTTPS. If your site is hosted on an non-secure origin (such as HTTP) the requests to get the users location will no longer function.
+Eslatma: Geolokatsiya smartfonlar kabi GPSga ega qurilmalar uchun eng aniq hisoblanadi.
 
 
-The ```getCurrentPosition()``` method is used to return the user's position.
+Eslatma: Chrome 50 dan boshlab Geolocation API faqat HTTPS kabi xavfsiz kontekstlarda ishlaydi. Agar sizning saytingiz xavfsiz bo'lmagan manbada (masalan, HTTP) joylashtirilgan bo'lsa, foydalanuvchilarning joylashuvini aniqlash so'rovlari endi ishlamaydi.
 
-The example below returns the latitude and longitude of the user's position( a basic geolocation without error handling):
+
+```getCurrentPosition()``` usuli foydalanuvchi o`rnini qaytarish uchun ishlatiladi.
+
+Quyidagi misol foydalanuvchi joylashuvining kenglik va uzunligini qaytaradi (xatolarsiz asosiy geolokatsiya):
 ```
 <p id="demo"></p>
 
-<script>
+<skript>
 var x = document.getElementById("demo");
 
-function getLocation() {
-  if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(showPosition);
-  } else { 
-    x.innerHTML = "Geolocation is not supported by this browser.";
-  }
+getLocation() funksiyasi
+   agar (navigator.geolocation) {
+     navigator.geolocation.getCurrentPosition(showPosition);
+   } boshqa {
+     x.innerHTML = "Ushbu brauzer geografik joylashuvni qo'llab-quvvatlamaydi.";
+   }
 }
 
-function showPosition(position) {
-  x.innerHTML = "Latitude: " + position.coords.latitude + 
-  "<br>Longitude: " + position.coords.longitude;
+funktsiyani ko'rsatishPosition(pozitsiya) {
+   x.innerHTML = "Latitude: " + position.coords.latitude +
+   "<br>Boylik: " + position.coords.longitude;
 }
 </script>
 ```
 
-code above explained.
+yuqoridagi kod tushuntirilgan.
 
-Example explained:
-Check if Geolocation is supported
-If supported, run the ```getCurrentPosition() method```. If not, display a message to the user
-If the ```getCurrentPosition()``` method is successful, it returns a coordinates object to the function specified in the parameter (showPosition)
-The ```showPosition()``` function outputs the Latitude and Longitude
+Misol tushuntirildi:
+Geolocation qo'llab-quvvatlanishini tekshiring
+Agar qo'llab-quvvatlansa, ```getCurrentPosition() usuli```ni ishga tushiring. Agar yo'q bo'lsa, foydalanuvchiga xabarni ko'rsating
+Agar ```getCurrentPosition()``` usuli muvaffaqiyatli bo`lsa, u koordinatalar obyektini parametrda ko`rsatilgan funksiyaga qaytaradi (showPosition)
+```showPosition()``` funksiyasi kenglik va uzunlikni chiqaradi
 
-The example above is a very basic Geolocation script, with no error handling.
+Yuqoridagi misol juda oddiy Geolocation skripti bo'lib, hech qanday xatolik yo'q.
 
-* Handling Errors and Rejections
+* Xatolar va rad etishlarni boshqarish
 
-The second parameter of the getCurrentPosition() method is used to handle errors. It specifies a function to run if it fails to get the user's location:
+GetCurrentPosition() usulining ikkinchi parametri xatolarni qayta ishlash uchun ishlatiladi. U foydalanuvchining joylashuvini ololmasa, ishga tushirish funksiyasini belgilaydi:
 ```
-<button onclick="getLocation()">Try It</button>
+<button onclick="getLocation()">Sinab ko'ring</button>
 
 <p id="demo"></p>
 
-<script>
+<skript>
 var x = document.getElementById("demo");
 
-function getLocation() {
-  if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(showPosition, showError);
-  } else { 
-    x.innerHTML = "Geolocation is not supported by this browser.";
-  }
+getLocation() funksiyasi
+   agar (navigator.geolocation) {
+     navigator.geolocation.getCurrentPosition(showPosition, showError);
+   } boshqa {
+     x.innerHTML = "Ushbu brauzer geografik joylashuvni qo'llab-quvvatlamaydi.";
+   }
 }
 
-function showPosition(position) {
-  x.innerHTML = "Latitude: " + position.coords.latitude + 
-  "<br>Longitude: " + position.coords.longitude;
+funktsiyani ko'rsatishPosition(pozitsiya) {
+   x.innerHTML = "Latitude: " + position.coords.latitude +
+   "<br>Boylik: " + position.coords.longitude;
 }
 
-function showError(error) {
-  switch(error.code) {
-    case error.PERMISSION_DENIED:
-      x.innerHTML = "User denied the request for Geolocation."
-      break;
-    case error.POSITION_UNAVAILABLE:
-      x.innerHTML = "Location information is unavailable."
-      break;
-    case error.TIMEOUT:
-      x.innerHTML = "The request to get user location timed out."
-      break;
-    case error.UNKNOWN_ERROR:
-      x.innerHTML = "An unknown error occurred."
-      break;
-  }
+funktsiya showError(xato) {
+   switch(xato.kod) {
+     hodisa xatosi.PERMISSION_DENIED:
+       x.innerHTML = "Foydalanuvchi Geolocation so'rovini rad etdi."
+       sindirish;
+     hodisa xatosi.POSITION_UNAVAILABLE:
+       x.innerHTML = "Joylashuv ma'lumoti mavjud emas."
+       sindirish;
+     hodisa xatosi.TIMEOUT:
+       x.innerHTML = "Foydalanuvchi manzilini aniqlash so'rovi vaqti tugadi."
+       sindirish;
+     hodisa xatosi.UNKNOWN_ERROR:
+       x.innerHTML = "Noma'lum xatolik yuz berdi."
+       sindirish;
+   }
 }
 </script>
 ```
 
-* Displaying the Result in a Map
+* Natijani xaritada ko'rsatish
 
-To display the result in a map, you need access to a map service, like Google Maps.
+Natijani xaritada ko'rsatish uchun sizga Google Xaritalar kabi xarita xizmatiga kirishingiz kerak.
 
-In the example below, the returned latitude and longitude is used to show the location in a Google Map (using a static image):
+Quyidagi misolda qaytarilgan kenglik va uzunlik Google Xaritadagi joylashuvni ko'rsatish uchun ishlatiladi (statik rasm yordamida):
 
 ```
-function showPosition(position) {
-  var latlon = position.coords.latitude + "," + position.coords.longitude;
+funktsiyani ko'rsatishPosition(pozitsiya) {
+   var latlon = position.coords.latitude + "," + position.coords.longitude;
 
-  var img_url = "https://maps.googleapis.com/maps/api/staticmap?center=
-  "+latlon+"&zoom=14&size=400x300&sensor=false&key=YOUR_KEY";
+   var img_url = "https://maps.googleapis.com/maps/api/staticmap?center=
+   "+latlon+"&zoom=14&size=400x300&sensor=false&key=YOUR_KEY";
 
-  document.getElementById("mapholder").innerHTML = "<img src='"+img_url+"'>";
+   document.getElementById("mapholder").innerHTML = "<img src='"+img_url+"'>";
 }
 ```
 
-* Location-specific Information
+* Joylashuvga oid ma'lumotlar
 
-This page has demonstrated how to show a user's position on a map.
+Ushbu sahifada foydalanuvchining xaritadagi o'rnini qanday ko'rsatish mumkinligi ko'rsatilgan.
 
-Geolocation is also very useful for location-specific information, like:
+Geolokatsiya shuningdek, joylashuvga oid ma'lumotlar uchun juda foydali, masalan:
 
-   Up-to-date local information
-   Showing Points-of-interest near the user
-   Turn-by-turn navigation (GPS)
-
-
-The ```getCurrentPosition()``` Method - Return Data
-
-The ```getCurrentPosition()``` method returns an object on success. The latitude, longitude and accuracy properties are always returned. The other properties are returned if available:
-Property 	Returns
-coords.latitude 	The latitude as a decimal number (always returned)
-coords.longitude 	The longitude as a decimal number (always returned)
-coords.accuracy 	The accuracy of position (always returned)
-coords.altitude 	The altitude in meters above the mean sea level (returned if available)
-coords.altitudeAccuracy 	The altitude accuracy of position (returned if available)
-coords.heading 	The heading as degrees clockwise from North (returned if available)
-coords.speed 	The speed in meters per second (returned if available)
-timestamp 	The date/time of the response (returned if available)
+    Yangilangan mahalliy ma'lumotlar
+    Foydalanuvchi yaqinidagi qiziqish nuqtalarini ko'rsatish
+    Navbatma-navbat navigatsiya (GPS)
 
 
-Geolocation Object - Other interesting Methods
+```getCurrentPosition()``` usuli - Ma'lumotlarni qaytarish
 
-The Geolocation object also has other interesting methods:
+```getCurrentPosition()``` usuli ob'ektni muvaffaqiyatli qaytaradi. Kenglik, uzunlik va aniqlik xususiyatlari har doim qaytariladi. Agar mavjud bo'lsa, boshqa xususiyatlar qaytariladi:
+Mulkni qaytarish
+coords.latitude O'nlik son sifatida kenglik (har doim qaytariladi)
+coords.longitude Uzunlik o'nlik son sifatida (har doim qaytariladi)
+coords.accuracy joylashuvning aniqligi (har doim qaytariladi)
+koordinatlar.altitude o'rtacha dengiz sathidan metrlarda balandlik (mavjud bo'lsa qaytariladi)
+coords.altitudeAccuracy Manzilning balandlik aniqligi (mavjud bo'lsa qaytariladi)
+coords.heading Shimoldan soat yo'nalishi bo'yicha gradus bo'yicha sarlavha (mavjud bo'lsa qaytariladi)
+coords.speed sekundiga metrdagi tezlik (mavjud bo'lsa qaytariladi)
+vaqt tamg'asi Javobning sanasi/vaqti (mavjud bo'lsa qaytariladi)
 
-   ```watchPosition()``` - Returns the current position of the user and continues to return updated position as the user moves (like the GPS in a car).
-   ```clearWatch()``` - Stops the ```watchPosition()``` method.
 
-The example below shows the watchPosition() method. You need an accurate GPS device to test this (like smartphone): 
+Geolokatsiya ob'ekti - Boshqa qiziqarli usullar
+
+Geolocation obyektida boshqa qiziqarli usullar ham mavjud:
+
+    ```watchPosition()``` - foydalanuvchining joriy holatini qaytaradi va foydalanuvchi harakatlanayotganda yangilangan pozitsiyasini qaytarishda davom etadi (masalan, mashinadagi GPS).
+    ```clearWatch()``` - ```watchPosition()``` usulini to`xtatadi.
+
+Quyidagi misol watchPosition() usulini ko'rsatadi. Buni tekshirish uchun sizga aniq GPS qurilmasi kerak (masalan, smartfon):
 ```
-<p>Click the button to get your coordinates.</p>
+<p>Koordinatalaringizni olish uchun tugmani bosing.</p>
 
-<button onclick="getLocation()">Try It</button>
+<button onclick="getLocation()">Sinab ko'ring</button>
 
 <p id="demo"></p>
 
-<script>
+<skript>
 var x = document.getElementById("demo");
 
-function getLocation() {
-  if (navigator.geolocation) {
-    navigator.geolocation.watchPosition(showPosition);
-  } else { 
-    x.innerHTML = "Geolocation is not supported by this browser.";
-  }
+getLocation() funksiyasi
+   agar (navigator.geolocation) {
+     navigator.geolocation.watchPosition(showPosition);
+   } boshqa {
+     x.innerHTML = "Ushbu brauzer geografik joylashuvni qo'llab-quvvatlamaydi.";
+   }
 }
     
-function showPosition(position) {
-    x.innerHTML="Latitude: " + position.coords.latitude + 
-    "<br>Longitude: " + position.coords.longitude;
+funktsiyani ko'rsatishPosition(pozitsiya) {
+     x.innerHTML="Latitude: " + position.coords.latitude +
+     "<br>Boylik: " + position.coords.longitude;
 }
 </script>
 
 ```
-<kbd>return</kbd>[Back to table of contents](#homepage)
+<kbd>qaytish</kbd>[Mundarijaga qaytish](#homepage)
 
 
 ------
 
-## CSS Navigation Bar
+## CSS navigatsiya paneli
 
-Navigation bars::
+Navigatsiya paneli::
 
-It is important for the audience of a website to find it easy to navigate. The CSS enables you to transform 
+Veb-sayt auditoriyasi uchun uni oson o'tishni topish juda muhimdir. CSS sizga o'zgartirish imkonini beradi
 
-HTML menus into appealing navigation bars.
-
-
-Navigation Bar= List of Links
-
-A standard HTML is needed as a base for a navigation bar. In the examples in this chapter, navigation bar is 
-
-built from standard HTML list. The use of <ul> and <li> elements in a navigation bar is reasonable since a 
-
-navigation bar is essentially a list of links. 
+HTML menyularini jozibali navigatsiya paneliga aylantiring.
 
 
+Navigatsiya paneli = Havolalar ro'yxati
 
-See an example below of a plain HTML list as navigation menu:
+Navigatsiya paneli uchun asos sifatida standart HTML kerak. Ushbu bobdagi misollarda navigatsiya paneli mavjud
+
+standart HTML ro'yxatidan tuzilgan. Navigatsiya panelida <ul> va <li> elementlaridan foydalanish maqsadga muvofiqdir, chunki a
+
+navigatsiya paneli asosan havolalar ro'yxatidir.
+
+
+
+Navigatsiya menyusi sifatida oddiy HTML roʻyxatining quyidagi misolini koʻring:
 
 <!DOCTYPE html>
 <html>
-<body>
+<tana>
 
 <ul>
-  <li><a href="#home">Home</a></li>
-  <li><a href="#news">News</a></li>
-  <li><a href="#contact">Contact</a></li>
-  <li><a href="#about">About</a></li>
+   <li><a href="#home">Uy</a></li>
+   <li><a href="#news">Yangiliklar</a></li>
+   <li><a href="#contact">Aloqa</a></li>
+   <li><a href="#about">Haqida</a></li>
 </ul>
 
-<p>Note: We use href="#" for test links. In a real web site this would be URLs.</p>
+<p>Eslatma: Sinov havolalari uchun href="#" dan foydalanamiz. Haqiqiy veb-saytda bu URL manzillar bo'ladi.</p>
 
 </body>
 </html>
 
 
-We can then remove bullets, margins, and paddings from the list to make it look more appealing:
+Keyinchalik jozibador ko'rinishi uchun ro'yxatdagi o'qlarni, chekkalarni va to'ldirishlarni olib tashlashimiz mumkin:
 
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
+<uslub>
 ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+   ro'yxat uslubi turi: yo'q;
+   chegara: 0;
+   to'ldirish: 0;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<p>In this example, we remove the bullets from the list, and its default padding and margin.</p>
+<p>Ushbu misolda biz roʻyxatdagi oʻqlarni, uning birlamchi toʻldirish va chetini olib tashlaymiz.</p>
 
 <ul>
-  <li><a href="#home">Home</a></li>
-  <li><a href="#news">News</a></li>
-  <li><a href="#contact">Contact</a></li>
-  <li><a href="#about">About</a></li>
+   <li><a href="#home">Uy</a></li>
+   <li><a href="#news">Yangiliklar</a></li>
+   <li><a href="#contact">Aloqa</a></li>
+   <li><a href="#about">Haqida</a></li>
 </ul>
 
 </body>
 </html>
 
 
-NB: In the example above:
+Eslatma: Yuqoridagi misolda:
 
-list-style-type: none; - Removes the bullets. A navigation bar does not need list markers
+ro'yxat uslubi turi: yo'q; - O'qlarni olib tashlaydi. Navigatsiya paneli ro'yxat belgilariga muhtoj emas
   
-Set margin: 0; and padding: 0; to remove browser default settings
+Belgilangan chegara: 0; va to'ldirish: 0; brauzerning standart sozlamalarini o'chirish uchun
 
-The code used above is the standard code used in both vertical and horizontal navigation bars. 
-
-
-
-CSS Vertical Navigation Bar::
+Yuqorida ishlatilgan kod vertikal va gorizontal navigatsiya panellarida ishlatiladigan standart koddir.
 
 
-Vertical Navigation Bar:
 
-To build a vertical nav bar, you can style <a> elements inside the list in addition to the code explained 
+CSS vertikal navigatsiya paneli::
 
-above. :
+
+Vertikal navigatsiya paneli:
+
+Vertikal navbat satrini yaratish uchun siz tushuntirilgan kodga qo'shimcha ravishda ro'yxat ichidagi <a> elementlarini uslublashingiz mumkin
+
+yuqorida. :
 
 
 <head>
-<style>
+<uslub>
 ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+   ro'yxat uslubi turi: yo'q;
+   chegara: 0;
+   to'ldirish: 0;
 }
 
 li a {
-  display: block;
-  width: 60px;
-  background-color: #dddddd;
+   displey: blok;
+   kengligi: 60px;
+   fon rangi: #dddddd;
 }
 </style>
 </head>
-<body>
+<tana>
 
 <ul>
-  <li><a href="#home">Home</a></li>
-  <li><a href="#news">News</a></li>
-  <li><a href="#contact">Contact</a></li>
-  <li><a href="#about">About</a></li>
+   <li><a href="#home">Uy</a></li>
+   <li><a href="#news">Yangiliklar</a></li>
+   <li><a href="#contact">Aloqa</a></li>
+   <li><a href="#about">Haqida</a></li>
 </ul>
 
-<p>A background color is added to the links to show the link area.</p>
-<p>Notice that the whole link area is clickable, not just the text.</p>
+<p>Havola maydonini ko'rsatish uchun havolalarga fon rangi qo'shiladi.</p>
+<p>E'tibor bering, faqat matnni emas, balki butun havola maydonini bosish mumkin.</p>
 
 </body>
 </html>
 
 
-In the example above:  
+Yuqoridagi misolda:
 
-display: block; - Displaying the links as block elements makes the whole link area clickable (not just the 
+displey: blok; - Havolani blok elementlari sifatida ko'rsatish butun havola maydonini bosish imkoniyatini beradi (nafaqat
 
-text), and it allows us to specify the width (and padding, margin, height, etc. if you want)
+matn) va u bizga kenglikni (va agar xohlasangiz, to'ldirish, chekka, balandlik va h.k.) belgilash imkonini beradi.
     
-width: 60px; - Block elements take up the full width available by default. We want to specify a 60 pixels 
+kengligi: 60px; - Blok elementlari sukut bo'yicha mavjud bo'lgan to'liq kenglikni egallaydi. Biz 60 pikselni belgilamoqchimiz
 
-width
+kengligi
 
 
-You can also set the width of <ul>, and remove the width of <a>, as they will take up the full width 
+Shuningdek, siz <ul> kengligini belgilashingiz va <a> kengligini olib tashlashingiz mumkin, chunki ular butun kenglikni egallaydi.
 
-available when displayed as block elements. This will produce the same result as our previous example:
+blok elementlari sifatida ko'rsatilganda mavjud. Bu avvalgi misolimiz bilan bir xil natija beradi:
 
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
+<uslub>
 ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  width: 60px;
-} 
+   ro'yxat uslubi turi: yo'q;
+   chegara: 0;
+   to'ldirish: 0;
+   kengligi: 60px;
+}
 
 li a {
-  display: block;
-  background-color: #dddddd;
+   displey: blok;
+   fon rangi: #dddddd;
 }
 </style>
 </head>
-<body>
+<tana>
 
 <ul>
-  <li><a href="#home">Home</a></li>
-  <li><a href="#news">News</a></li>
-  <li><a href="#contact">Contact</a></li>
-  <li><a href="#about">About</a></li>
+   <li><a href="#home">Uy</a></li>
+   <li><a href="#news">Yangiliklar</a></li>
+   <li><a href="#contact">Aloqa</a></li>
+   <li><a href="#about">Haqida</a></li>
 </ul>
 
-<p>A background color is added to the links to show the link area.</p>
-<p>Notice that the whole link area is clickable, not just the text.</p>
+<p>Havola maydonini ko'rsatish uchun havolalarga fon rangi qo'shiladi.</p>
+<p>E'tibor bering, faqat matnni emas, balki butun havola maydonini bosish mumkin.</p>
 
 </body>
 </html>
 
 
-Examples of Vertical Navigation Bars:::
+Vertikal navigatsiya paneliga misollar:::
 
 
-To obtain a basic vertical navigation bar with a gray background color and change the background color of 
+Kulrang fon rangi bilan asosiy vertikal navigatsiya panelini olish va fon rangini o'zgartirish uchun
 
-the links when the user moves the mouse over them:
+foydalanuvchi sichqonchani ularning ustiga siljitganda havolalar:
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
+<uslub>
 ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  width: 200px;
-  background-color: #f1f1f1;
+   ro'yxat uslubi turi: yo'q;
+   chegara: 0;
+   to'ldirish: 0;
+   kengligi: 200px;
+   fon rangi: #f1f1f1;
 }
 
 li a {
-  display: block;
-  color: #000;
-  padding: 8px 16px;
-  text-decoration: none;
+   displey: blok;
+   rang: #000;
+   to'ldirish: 8px 16px;
+   matn-bezak: yo'q;
 }
 
-/* Change the link color on hover */
-li a:hover {
-  background-color: #555;
-  color: white;
+/* kursor ustidagi havola rangini o'zgartiring */
+li a: suring {
+   fon rangi: #555;
+   rang: oq;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h2>Vertical Navigation Bar</h2>
+<h2>Vertikal navigatsiya paneli</h2>
 
 <ul>
-  <li><a href="#home">Home</a></li>
-  <li><a href="#news">News</a></li>
-  <li><a href="#contact">Contact</a></li>
-  <li><a href="#about">About</a></li>
+   <li><a href="#home">Uy</a></li>
+   <li><a href="#news">Yangiliklar</a></li>
+   <li><a href="#contact">Aloqa</a></li>
+   <li><a href="#about">Haqida</a></li>
 </ul>
 
 </body>
 </html>
-
-
 
 Active/Current Navigation Link:::
 
@@ -508,74 +506,74 @@ li a:hover:not(.active) {
 
 
 
-Full-height Fixed Vertical Navbar:::
+Toʻliq balandlikdagi Ruxsat etilgan vertikal Navbar :::
 
-To create a full-height sticky side navigation, apply the code below (it may not work properly on mobile 
+Toʻliq balandlikdagi yopishqoq yon navigatsiya yaratish uchun quyidagi kodni qoʻllang (u mobil qurilmada toʻgʻri ishlamasligi mumkin).
 
-devices):
+qurilmalar):
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-body {
-  margin: 0;
+<uslub>
+tana {
+   chegara: 0;
 }
 
 ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  width: 25%;
-  background-color: #f1f1f1;
-  position: fixed;
-  height: 100%;
-  overflow: auto;
+   ro'yxat uslubi turi: yo'q;
+   chegara: 0;
+   to'ldirish: 0;
+   kengligi: 25%;
+   fon rangi: #f1f1f1;
+   pozitsiyasi: qattiq;
+   balandligi: 100%;
+   toshib ketish: avtomatik;
 }
 
 li a {
-  display: block;
-  color: #000;
-  padding: 8px 16px;
-  text-decoration: none;
+   displey: blok;
+   rang: #000;
+   to'ldirish: 8px 16px;
+   matn-bezak: yo'q;
 }
 
-li a.active {
-  background-color: #04AA6D;
-  color: white;
+li a.faol {
+   fon rangi: #04AA6D;
+   rang: oq;
 }
 
 li a:hover:not(.active) {
-  background-color: #555;
-  color: white;
+   fon rangi: #555;
+   rang: oq;
 }
 </style>
 </head>
-<body>
+<tana>
 
 <ul>
-  <li><a class="active" href="#home">Home</a></li>
-  <li><a href="#news">News</a></li>
-  <li><a href="#contact">Contact</a></li>
-  <li><a href="#about">About</a></li>
+   <li><a class="active" href="#home">Uy</a></li>
+   <li><a href="#news">Yangiliklar</a></li>
+   <li><a href="#contact">Aloqa</a></li>
+   <li><a href="#about">Haqida</a></li>
 </ul>
 
 <div style="margin-left:25%;padding:1px 16px;height:1000px;">
-  <h2>Fixed Full-height Side Nav</h2>
-  <h3>Try to scroll this area, and see how the sidenav sticks to the page</h3>
-  <p>Notice that this div element has a left margin of 25%. This is because the side navigation is set to 
+   <h2>Toʻliq balandlikda oʻrnatilgan Yon Navigatsiya</h2>
+   <h3>Ushbu hududni aylantirib ko'ring va sidenav sahifaga qanday yopishganini ko'ring</h3>
+   <p>E'tibor bering, ushbu div elementi chap chekkasi 25%. Buning sababi, yon navigatsiya o'rnatilgan
 
-25% width. If you remove the margin, the sidenav will overlay/sit on top of this div.</p>
-  <p>Also notice that we have set overflow:auto to sidenav. This will add a scrollbar when the sidenav is 
+25% kengligi. Agar siz chetni olib tashlasangiz, sidenav bu boʻlimning ustiga qoʻyadi/oʻtiradi.</p>
+   <p>Shuningdek, biz overflow:auto-ni sidenav-ga o'rnatganimizga e'tibor bering. Bu sidenav bo'lganda aylantirish paneli qo'shadi
 
-too long (for example if it has over 50 links inside of it).</p>
-  <p>Some text..</p>
-  <p>Some text..</p>
-  <p>Some text..</p>
-  <p>Some text..</p>
-  <p>Some text..</p>
-  <p>Some text..</p>
-  <p>Some text..</p>
+juda uzun (masalan, uning ichida 50 dan ortiq havola bo'lsa).</p>
+   <p>Ba'zi matn..</p>
+   <p>Ba'zi matn..</p>
+   <p>Ba'zi matn..</p>
+   <p>Ba'zi matn..</p>
+   <p>Ba'zi matn..</p>
+   <p>Ba'zi matn..</p>
+   <p>Ba'zi matn..</p>
 </div>
 
 </body>
@@ -584,44 +582,44 @@ too long (for example if it has over 50 links inside of it).</p>
 
 
 
-CSS Horizontal Navigation Bar::
+CSS gorizontal navigatsiya paneli::
 
-You can create horizontal navigation bar using either inline or floating list items. 
+Inline yoki suzuvchi ro'yxat elementlaridan foydalanib, gorizontal navigatsiya panelini yaratishingiz mumkin.
 
 
-Inline List Items
+Inline ro'yxat elementlari
 
-In addition to the standard code described above, you can specify <li> elements as inline to build 
+Yuqorida tavsiflangan standart kodga qo'shimcha ravishda siz <li> elementlarni qurish uchun inline sifatida belgilashingiz mumkin
 
-horizontal navigation bar. Since <li> elements are block elements by default, styling them with display: 
+gorizontal navigatsiya paneli. <li> elementlari sukut bo'yicha blok elementlari bo'lgani uchun ularni displey bilan uslublash:
 
-inline; removes the line breaks before and after each list item to display them all on a single line. See 
+mos ravishda; Roʻyxatning har bir elementidan oldingi va keyingi qatorlarni bir qatorda koʻrsatish uchun ularni olib tashlaydi. Qarang
 
-illustration below:
+quyidagi rasm:
 
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
+<uslub>
 ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+   ro'yxat uslubi turi: yo'q;
+   chegara: 0;
+   to'ldirish: 0;
 }
 
 li {
-  display: inline;
+   displey: inline;
 }
 </style>
 </head>
-<body>
+<tana>
 
 <ul>
-  <li><a href="#home">Home</a></li>
-  <li><a href="#news">News</a></li>
-  <li><a href="#contact">Contact</a></li>
-  <li><a href="#about">About</a></li>
+   <li><a href="#home">Uy</a></li>
+   <li><a href="#news">Yangiliklar</a></li>
+   <li><a href="#contact">Aloqa</a></li>
+   <li><a href="#about">Haqida</a></li>
 </ul>
 
 </body>
@@ -631,203 +629,203 @@ li {
 
 
 
-Floating List Items:::
+Suzuvchi roʻyxat elementlari:::
 
-Floating the <li> elements to the left and specifiying the navigation link layout creates a horizontal 
+<li> elementlarini chapga surib, navigatsiya havolasi tartibini belgilash gorizontal hosil qiladi.
 
-navigation bar. Overflow:hidden; when added to <ul> element prevents <li> elements from going outside the 
+navigatsiya paneli. Overflow: yashirin; <ul> elementiga qo'shilganda <li> elementlarning tashqariga chiqishini oldini oladi
 
-list. See the illustration below:
+ro'yxati. Quyidagi rasmga qarang:
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
+<uslub>
 ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
+   ro'yxat uslubi turi: yo'q;
+   chegara: 0;
+   to'ldirish: 0;
+   toshib ketish: yashirin;
 }
 
 li {
-  float: left;
+   float: chap;
 }
 
 li a {
-  display: block;
-  padding: 8px;
-  background-color: #dddddd;
+   displey: blok;
+   to'ldirish: 8px;
+   fon rangi: #dddddd;
 }
 </style>
 </head>
-<body>
+<tana>
 
 <ul>
-  <li><a href="#home">Home</a></li>
-  <li><a href="#news">News</a></li>
-  <li><a href="#contact">Contact</a></li>
-  <li><a href="#about">About</a></li>
+   <li><a href="#home">Uy</a></li>
+   <li><a href="#news">Yangiliklar</a></li>
+   <li><a href="#contact">Aloqa</a></li>
+   <li><a href="#about">Haqida</a></li>
 </ul>
 
-<p><b>Note:</b> If a !DOCTYPE is not specified, floating items can produce unexpected results.</p>
-<p>A background color is added to the links to show the link area. The whole link area is clickable, not 
+<p><b>Eslatma:</b> Agar !DOCTYPE belgilanmagan bo'lsa, suzuvchi elementlar kutilmagan natijalar berishi mumkin.</p>
+<p>Havola maydonini ko'rsatish uchun havolalarga fon rangi qo'shiladi. Butun havola maydonini bosish mumkin, emas
 
-just the text.</p>
-<p><b>Note:</b> overflow:hidden is added to the ul element to prevent li elements from going outside of the 
+faqat matn.</p>
+<p><b>Eslatma:</b> overflow:hidden ul elementiga li elementlarning tashqariga chiqishini oldini olish uchun qo'shiladi.
 
-list.</p>
+roʻyxati.</p>
 
 </body>
 </html>
 
 
-In the example above, float:left; uses float to get block elements floating next to each other. 
-display:block; allows us to specify  padding (and height, width, margins, etc. if you want)
-    padding: 8px; - Specify some padding between each <a> element, to make them look good
-    background-color: #dddddd; - Add a gray background-color to each <a> element
+Yuqoridagi misolda float:left; bir-birining yonida suzuvchi blok elementlarini olish uchun floatdan foydalanadi.
+displey: blok; bizga to'ldirishni belgilash imkonini beradi (va agar xohlasangiz, balandlik, kenglik, chekka va hokazo)
+     to'ldirish: 8px; - Har bir <a> elementi o'rtasida yaxshi ko'rinishga ega bo'lish uchun biroz to'ldirishni belgilang
+     fon rangi: #dddddd; - Har bir <a> elementiga kulrang fon rangi qo'shing
 
 
-Tip: Add the background-color to <ul> instead of each <a> element if you want a full-width background color:
-
-
-<!DOCTYPE html>
-<html>
-<head>
-<style>
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #dddddd;
-}
-
-li {
-  float: left;
-}
-
-li a {
-  display: block;
-  padding: 8px;
-}
-</style>
-</head>
-<body>
-
-<ul>
-  <li><a href="#home">Home</a></li>
-  <li><a href="#news">News</a></li>
-  <li><a href="#contact">Contact</a></li>
-  <li><a href="#about">About</a></li>
-</ul>
-
-<p>A background color is added to the list instead of each link to create a full-width background color.</p>
-<p><b>Note:</b> overflow:hidden is added to the ul element to prevent li elements from going outside of the 
-
-list.</p>
-
-</body>
-</html>
-
-
-
-
-Horizontal Navigation Bar Examples
-
-To create a basic horizontal navigation bar with a dark background color and change the background color of 
-
-the links when the user moves the mouse over them:
+Maslahat: Toʻliq kenglikdagi fon rangini istasangiz, har bir <a> elementi oʻrniga <ul> ga fon rangini qoʻshing:
 
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
+<uslub>
 ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #333;
+   ro'yxat uslubi turi: yo'q;
+   chegara: 0;
+   to'ldirish: 0;
+   toshib ketish: yashirin;
+   fon rangi: #dddddd;
 }
 
 li {
-  float: left;
+   float: chap;
 }
 
 li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-li a:hover {
-  background-color: #111;
+   displey: blok;
+   to'ldirish: 8px;
 }
 </style>
 </head>
-<body>
+<tana>
 
 <ul>
-  <li><a class="active" href="#home">Home</a></li>
-  <li><a href="#news">News</a></li>
-  <li><a href="#contact">Contact</a></li>
-  <li><a href="#about">About</a></li>
+   <li><a href="#home">Uy</a></li>
+   <li><a href="#news">Yangiliklar</a></li>
+   <li><a href="#contact">Aloqa</a></li>
+   <li><a href="#about">Haqida</a></li>
 </ul>
+
+<p>Toʻliq kenglikdagi fon rangini yaratish uchun har bir havola oʻrniga roʻyxatga fon rangi qoʻshiladi.</p>
+<p><b>Eslatma:</b> overflow:hidden ul elementiga li elementlarning tashqariga chiqishini oldini olish uchun qo'shiladi.
+
+roʻyxati.</p>
 
 </body>
 </html>
 
 
 
-Active/Current Navigation Link
 
-Add an "active" class to the current link to let the user know which page he/she is on:
+Gorizontal navigatsiya paneliga misollar
+
+Qorong'i fon rangi bilan asosiy gorizontal navigatsiya panelini yaratish va fon rangini o'zgartirish uchun
+
+foydalanuvchi sichqonchani ularning ustiga siljitganda havolalar:
 
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
+<uslub>
 ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #333;
+   ro'yxat uslubi turi: yo'q;
+   chegara: 0;
+   to'ldirish: 0;
+   toshib ketish: yashirin;
+   fon rangi: #333;
 }
 
 li {
-  float: left;
+   float: chap;
 }
 
 li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
+   displey: blok;
+   rang: oq;
+   matnni tekislash: markaz;
+   to'ldirish: 14px 16px;
+   matn-bezak: yo'q;
+}
+
+li a: suring {
+   fon rangi: #111;
+}
+</style>
+</head>
+<tana>
+
+<ul>
+   <li><a class="active" href="#home">Uy</a></li>
+   <li><a href="#news">Yangiliklar</a></li>
+   <li><a href="#contact">Aloqa</a></li>
+   <li><a href="#about">Haqida</a></li>
+</ul>
+
+</body>
+</html>
+
+
+
+Faol/joriy navigatsiya havolasi
+
+Joriy havolaga “faol” sinf qo‘shing va foydalanuvchi qaysi sahifada ekanligini bilishi mumkin:
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<uslub>
+ul {
+   ro'yxat uslubi turi: yo'q;
+   chegara: 0;
+   to'ldirish: 0;
+   toshib ketish: yashirin;
+   fon rangi: #333;
+}
+
+li {
+   float: chap;
+}
+
+li a {
+   displey: blok;
+   rang: oq;
+   matnni tekislash: markaz;
+   to'ldirish: 14px 16px;
+   matn-bezak: yo'q;
 }
 
 li a:hover:not(.active) {
-  background-color: #111;
+   fon rangi: #111;
 }
 
-.active {
-  background-color: #04AA6D;
+.faol {
+   fon rangi: #04AA6D;
 }
 </style>
 </head>
-<body>
+<tana>
 
 <ul>
-  <li><a class="active" href="#home">Home</a></li>
-  <li><a href="#news">News</a></li>
-  <li><a href="#contact">Contact</a></li>
-  <li><a href="#about">About</a></li>
+   <li><a class="active" href="#home">Uy</a></li>
+   <li><a href="#news">Yangiliklar</a></li>
+   <li><a href="#contact">Aloqa</a></li>
+   <li><a href="#about">Haqida</a></li>
 </ul>
 
 </body>
@@ -835,50 +833,50 @@ li a:hover:not(.active) {
 
 
 
-Right-Align Links
+O'ngga tekislash havolalari
 
-Right-align links by floating the list items to the right (float:right;):
+Roʻyxat elementlarini oʻngga surish orqali havolalarni oʻngga tekislang (float:right;):
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
+<uslub>
 ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #333;
+   ro'yxat uslubi turi: yo'q;
+   chegara: 0;
+   to'ldirish: 0;
+   toshib ketish: yashirin;
+   fon rangi: #333;
 }
 
 li {
-  float: left;
+   float: chap;
 }
 
 li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
+   displey: blok;
+   rang: oq;
+   matnni tekislash: markaz;
+   to'ldirish: 14px 16px;
+   matn-bezak: yo'q;
 }
 
 li a:hover:not(.active) {
-  background-color: #111;
+   fon rangi: #111;
 }
 
-.active {
-  background-color: #04AA6D;
+.faol {
+   fon rangi: #04AA6D;
 }
 </style>
 </head>
-<body>
+<tana>
 
 <ul>
-  <li><a href="#home">Home</a></li>
-  <li><a href="#news">News</a></li>
-  <li><a href="#contact">Contact</a></li>
-  <li style="float:right"><a class="active" href="#about">About</a></li>
+   <li><a href="#home">Uy</a></li>
+   <li><a href="#news">Yangiliklar</a></li>
+   <li><a href="#contact">Aloqa</a></li>
+   <li style="float:right"><a class="active" href="#about">Haqida</a></li>
 </ul>
 
 </body>
@@ -886,142 +884,141 @@ li a:hover:not(.active) {
 
 
 
-Border Dividers
+Chegara bo'linuvchilari
 
-Add the border-right property to <li> to create link dividers:
+Havola ajratgichlarini yaratish uchun chegara huquqi xususiyatini <li> ga qo'shing:
 
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
+<uslub>
 ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #333;
+   ro'yxat uslubi turi: yo'q;
+   chegara: 0;
+   to'ldirish: 0;
+   toshib ketish: yashirin;
+   fon rangi: #333;
 }
 
 li {
-  float: left;
-  border-right:1px solid #bbb;
+   float: chap;
+   chegara o'ng: 1px qattiq #bbb;
 }
 
-li:last-child {
-  border-right: none;
+li: oxirgi bola {
+   chegara o'ng: yo'q;
 }
 
 li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
+   displey: blok;
+   rang: oq;
+   matnni tekislash: markaz;
+   to'ldirish: 14px 16px;
+   matn-bezak: yo'q;
 }
 
 li a:hover:not(.active) {
-  background-color: #111;
+   fon rangi: #111;
 }
 
-.active {
-  background-color: #04AA6D;
+.faol {
+   fon rangi: #04AA6D;
 }
 </style>
 </head>
-<body>
+<tana>
 
 <ul>
-  <li><a class="active" href="#home">Home</a></li>
-  <li><a href="#news">News</a></li>
-  <li><a href="#contact">Contact</a></li>
-  <li style="float:right"><a href="#about">About</a></li>
+   <li><a class="active" href="#home">Uy</a></li>
+   <li><a href="#news">Yangiliklar</a></li>
+   <li><a href="#contact">Aloqa</a></li>
+   <li style="float:right"><a href="#about">Haqida</a></li>
 </ul>
 
 </body>
 </html>
 
+Ruxsat etilgan navigatsiya paneli
 
-Fixed Navigation Bar
-
-Make the navigation bar stay at the top or the bottom of the page, even when the user scrolls the page:
-
+Foydalanuvchi sahifani aylantirganda ham navigatsiya paneli sahifaning yuqori yoki pastki qismida qolsin:
 
 
-Fixed top nav bar:
+
+Ruxsat etilgan yuqori navbat paneli:
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-body {margin:0;}
+<uslub>
+tana (chegara: 0;}
 
 ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #333;
-  position: fixed;
-  top: 0;
-  width: 100%;
+   ro'yxat uslubi turi: yo'q;
+   chegara: 0;
+   to'ldirish: 0;
+   toshib ketish: yashirin;
+   fon rangi: #333;
+   pozitsiyasi: qattiq;
+   yuqori: 0;
+   kengligi: 100%;
 }
 
 li {
-  float: left;
+   float: chap;
 }
 
 li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
+   displey: blok;
+   rang: oq;
+   matnni tekislash: markaz;
+   to'ldirish: 14px 16px;
+   matn-bezak: yo'q;
 }
 
 li a:hover:not(.active) {
-  background-color: #111;
+   fon rangi: #111;
 }
 
-.active {
-  background-color: #04AA6D;
+.faol {
+   fon rangi: #04AA6D;
 }
 </style>
 </head>
-<body>
+<tana>
 
 <ul>
-  <li><a class="active" href="#home">Home</a></li>
-  <li><a href="#news">News</a></li>
-  <li><a href="#contact">Contact</a></li>
-  <li><a href="#about">About</a></li>
+   <li><a class="active" href="#home">Uy</a></li>
+   <li><a href="#news">Yangiliklar</a></li>
+   <li><a href="#contact">Aloqa</a></li>
+   <li><a href="#about">Haqida</a></li>
 </ul>
 
 <div style="padding:20px;margin-top:30px;background-color:#1abc9c;height:1500px;">
-  <h1>Fixed Top Navigation Bar</h1>
-  <h2>Scroll this page to see the effect</h2>
-  <h2>The navigation bar will stay at the top of the page while scrolling</h2>
+   <h1>Ruxsat etilgan yuqori navigatsiya paneli</h1>
+   <h2>Effektni ko'rish uchun ushbu sahifani aylantiring</h2>
+   <h2>O'tish paytida navigatsiya paneli sahifaning yuqori qismida qoladi</h2>
 
-  <p>Some text some text some text some text..</p>
-  <p>Some text some text some text some text..</p>
-  <p>Some text some text some text some text..</p>
-  <p>Some text some text some text some text..</p>
-  <p>Some text some text some text some text..</p>
-  <p>Some text some text some text some text..</p>
-  <p>Some text some text some text some text..</p>
-  <p>Some text some text some text some text..</p>
-  <p>Some text some text some text some text..</p>
-  <p>Some text some text some text some text..</p>
-  <p>Some text some text some text some text..</p>
-  <p>Some text some text some text some text..</p>
-  <p>Some text some text some text some text..</p>
-  <p>Some text some text some text some text..</p>
-  <p>Some text some text some text some text..</p>
-  <p>Some text some text some text some text..</p>
-  <p>Some text some text some text some text..</p>
-  <p>Some text some text some text some text..</p>
-  <p>Some text some text some text some text..</p>
-  <p>Some text some text some text some text..</p>
+   <p>Ba'zi matnlar ba'zi matnlar, ba'zilari matnlar...</p>
+   <p>Ba'zi matnlar ba'zi matnlar, ba'zilari matnlar...</p>
+   <p>Ba'zi matnlar ba'zi matnlar, ba'zilari matnlar...</p>
+   <p>Ba'zi matnlar ba'zi matnlar, ba'zilari matnlar...</p>
+   <p>Ba'zi matnlar ba'zi matnlar, ba'zilari matnlar...</p>
+   <p>Ba'zi matnlar ba'zi matnlar, ba'zilari matnlar...</p>
+   <p>Ba'zi matnlar ba'zi matnlar, ba'zilari matnlar...</p>
+   <p>Ba'zi matnlar ba'zi matnlar, ba'zilari matnlar...</p>
+   <p>Ba'zi matnlar ba'zi matnlar, ba'zilari matnlar...</p>
+   <p>Ba'zi matnlar ba'zi matnlar, ba'zilari matnlar...</p>
+   <p>Ba'zi matnlar ba'zi matnlar, ba'zilari matnlar...</p>
+   <p>Ba'zi matnlar ba'zi matnlar, ba'zilari matnlar...</p>
+   <p>Ba'zi matnlar ba'zi matnlar, ba'zilari matnlar...</p>
+   <p>Ba'zi matnlar ba'zi matnlar, ba'zilari matnlar...</p>
+   <p>Ba'zi matnlar ba'zi matnlar, ba'zilari matnlar...</p>
+   <p>Ba'zi matnlar ba'zi matnlar, ba'zilari matnlar...</p>
+   <p>Ba'zi matnlar ba'zi matnlar, ba'zilari matnlar...</p>
+   <p>Ba'zi matnlar ba'zi matnlar, ba'zilari matnlar...</p>
+   <p>Ba'zi matnlar ba'zi matnlar, ba'zilari matnlar...</p>
+   <p>Ba'zi matnlar ba'zi matnlar, ba'zilari matnlar...</p>
 </div>
 
 </body>
@@ -1029,133 +1026,132 @@ li a:hover:not(.active) {
 
 
 
-Fixed Bottom Navigation Bar:
+Ruxsat etilgan pastki navigatsiya paneli:
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-body {margin:0;}
+<uslub>
+tana (chegara: 0;}
 
 ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #333;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
+   ro'yxat uslubi turi: yo'q;
+   chegara: 0;
+   to'ldirish: 0;
+   toshib ketish: yashirin;
+   fon rangi: #333;
+   pozitsiyasi: qattiq;
+   pastki: 0;
+   kengligi: 100%;
 }
 
 li {
-  float: left;
+   float: chap;
 }
 
 li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
+   displey: blok;
+   rang: oq;
+   matnni tekislash: markaz;
+   to'ldirish: 14px 16px;
+   matn-bezak: yo'q;
 }
 
 li a:hover:not(.active) {
-  background-color: #111;
+   fon rangi: #111;
 }
 
-.active {
-  background-color: #04AA6D;
+.faol {
+   fon rangi: #04AA6D;
 }
 </style>
 </head>
-<body>
+<tana>
 
 <ul>
-  <li><a class="active" href="#home">Home</a></li>
-  <li><a href="#news">News</a></li>
-  <li><a href="#contact">Contact</a></li>
-  <li><a href="#about">About</a></li>
+   <li><a class="active" href="#home">Uy</a></li>
+   <li><a href="#news">Yangiliklar</a></li>
+   <li><a href="#contact">Aloqa</a></li>
+   <li><a href="#about">Haqida</a></li>
 </ul>
 
 <div style="padding:20px;background-color:#1abc9c;height:1500px;">
-  <h1>Fixed Bottom Navigation Bar</h1>
-  <h2>Scroll this page to see the effect</h2>
-  <h2>The navigation bar will stay at the bottom of the page while scrolling</h2>
+   <h1> Ruxsat etilgan pastki navigatsiya paneli</h1>
+   <h2>Effektni ko'rish uchun ushbu sahifani aylantiring</h2>
+   <h2>O'tish paytida navigatsiya paneli sahifaning pastki qismida qoladi</h2>
 
-  <p>Some text some text some text some text..</p>
-  <p>Some text some text some text some text..</p>
-  <p>Some text some text some text some text..</p>
-  <p>Some text some text some text some text..</p>
-  <p>Some text some text some text some text..</p>
-  <p>Some text some text some text some text..</p>
-  <p>Some text some text some text some text..</p>
-  <p>Some text some text some text some text..</p>
-  <p>Some text some text some text some text..</p>
-  <p>Some text some text some text some text..</p>
-  <p>Some text some text some text some text..</p>
-  <p>Some text some text some text some text..</p>
-  <p>Some text some text some text some text..</p>
-  <p>Some text some text some text some text..</p>
-  <p>Some text some text some text some text..</p>
-  <p>Some text some text some text some text..</p>
-  <p>Some text some text some text some text..</p>
-  <p>Some text some text some text some text..</p>
-  <p>Some text some text some text some text..</p>
-  <p>Some text some text some text some text..</p>
+   <p>Ba'zi matnlar ba'zi matnlar, ba'zilari matnlar...</p>
+   <p>Ba'zi matnlar ba'zi matnlar, ba'zilari matnlar...</p>
+   <p>Ba'zi matnlar ba'zi matnlar, ba'zilari matnlar...</p>
+   <p>Ba'zi matnlar ba'zi matnlar, ba'zilari matnlar...</p>
+   <p>Ba'zi matnlar ba'zi matnlar, ba'zilari matnlar...</p>
+   <p>Ba'zi matnlar ba'zi matnlar, ba'zilari matnlar...</p>
+   <p>Ba'zi matnlar ba'zi matnlar, ba'zilari matnlar...</p>
+   <p>Ba'zi matnlar ba'zi matnlar, ba'zilari matnlar...</p>
+   <p>Ba'zi matnlar ba'zi matnlar, ba'zilari matnlar...</p>
+   <p>Ba'zi matnlar ba'zi matnlar, ba'zilari matnlar...</p>
+   <p>Ba'zi matnlar ba'zi matnlar, ba'zilari matnlar...</p>
+   <p>Ba'zi matnlar ba'zi matnlar, ba'zilari matnlar...</p>
+   <p>Ba'zi matnlar ba'zi matnlar, ba'zilari matnlar...</p>
+   <p>Ba'zi matnlar ba'zi matnlar, ba'zilari matnlar...</p>
+   <p>Ba'zi matnlar ba'zi matnlar, ba'zilari matnlar...</p>
+   <p>Ba'zi matnlar ba'zi matnlar, ba'zilari matnlar...</p>
+   <p>Ba'zi matnlar ba'zi matnlar, ba'zilari matnlar...</p>
+   <p>Ba'zi matnlar ba'zi matnlar, ba'zilari matnlar...</p>
+   <p>Ba'zi matnlar ba'zi matnlar, ba'zilari matnlar...</p>
+   <p>Ba'zi matnlar ba'zi matnlar, ba'zilari matnlar...</p>
 </div>
 
 </body>
 </html>
 
 
+Kulrang gorizontal Navbar
 
-Gray Horizontal Navbar
-
-A gray horizontal bar with thin gray border is created as shown below:
+Yupqa kulrang hoshiyali kulrang gorizontal chiziq quyida ko'rsatilganidek yaratilgan:
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
+<uslub>
 ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  border: 1px solid #e7e7e7;
-  background-color: #f3f3f3;
+   ro'yxat uslubi turi: yo'q;
+   chegara: 0;
+   to'ldirish: 0;
+   toshib ketish: yashirin;
+   chegara: 1px qattiq #e7e7e7;
+   fon rangi: #f3f3f3;
 }
 
 li {
-  float: left;
+   float: chap;
 }
 
 li a {
-  display: block;
-  color: #666;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
+   displey: blok;
+   rang: #666;
+   matnni tekislash: markaz;
+   to'ldirish: 14px 16px;
+   matn-bezak: yo'q;
 }
 
 li a:hover:not(.active) {
-  background-color: #ddd;
+   fon rangi: #ddd;
 }
 
-li a.active {
-  color: white;
-  background-color: #04AA6D;
+li a.faol {
+   rang: oq;
+   fon rangi: #04AA6D;
 }
 </style>
 </head>
-<body>
+<tana>
 
 <ul>
-  <li><a class="active" href="#home">Home</a></li>
-  <li><a href="#news">News</a></li>
-  <li><a href="#contact">Contact</a></li>
-  <li><a href="#about">About</a></li>
+   <li><a class="active" href="#home">Uy</a></li>
+   <li><a href="#news">Yangiliklar</a></li>
+   <li><a href="#contact">Aloqa</a></li>
+   <li><a href="#about">Haqida</a></li>
 </ul>
 
 </body>
@@ -1165,45 +1161,45 @@ li a.active {
 <!DOCTYPE html>
 <html>
 <head>
-<style>
+<uslub>
 ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  border: 1px solid #e7e7e7;
-  background-color: #f3f3f3;
+   ro'yxat uslubi turi: yo'q;
+   chegara: 0;
+   to'ldirish: 0;
+   toshib ketish: yashirin;
+   chegara: 1px qattiq #e7e7e7;
+   fon rangi: #f3f3f3;
 }
 
 li {
-  float: left;
+   float: chap;
 }
 
 li a {
-  display: block;
-  color: #666;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
+   displey: blok;
+   rang: #666;
+   matnni tekislash: markaz;
+   to'ldirish: 14px 16px;
+   matn-bezak: yo'q;
 }
 
 li a:hover:not(.active) {
-  background-color: #ddd;
+   fon rangi: #ddd;
 }
 
-li a.active {
-  color: white;
-  background-color: #04AA6D;
+li a.faol {
+   rang: oq;
+   fon rangi: #04AA6D;
 }
 </style>
 </head>
-<body>
+<tana>
 
 <ul>
-  <li><a class="active" href="#home">Home</a></li>
-  <li><a href="#news">News</a></li>
-  <li><a href="#contact">Contact</a></li>
-  <li><a href="#about">About</a></li>
+   <li><a class="active" href="#home">Uy</a></li>
+   <li><a href="#news">Yangiliklar</a></li>
+   <li><a href="#contact">Aloqa</a></li>
+   <li><a href="#about">Haqida</a></li>
 </ul>
 
 </body>
@@ -1211,90 +1207,89 @@ li a.active {
 
 
 
-Sticky Navbar
+Yopishqoq Navbar
 
-Add position: sticky; to <ul> to create a sticky navbar.
+Lavozim qo'shing: yopishqoq; yopishqoq navbar yaratish uchun <ul> ga.
 
-A sticky element toggles between relative and fixed, depending on the scroll position. It is positioned 
+Yopishqoq element aylantirish holatiga qarab nisbiy va qattiq o'rtasida almashinadi. U joylashtirilgan
 
-relative until a given offset position is met in the viewport - then it "sticks" in place (like 
+ko'rish oynasida ma'lum bir ofset pozitsiyasi bajarilmaguncha nisbiy - keyin u joyida "yopishadi" (masalan
 
-position:fixed). Note that Internet Explorer do not support sticky positioning. Safari requires a -webkit- 
+pozitsiyasi: belgilangan). E'tibor bering, Internet Explorer yopishqoq joylashuvni qo'llab-quvvatlamaydi. Safari uchun -webkit- kerak
 
-prefix (see example above). You must also specify at least one of top, right, bottom or left for sticky 
+prefiks (yuqoridagi misolga qarang). Yopishqoqlik uchun yuqori, o'ng, pastki yoki chapdan kamida bittasini belgilashingiz kerak
 
-positioning to work. See illustration of the creation of sticky l
+ishlash uchun joylashishni aniqlash. Yopishqoq l ning yaratilishi tasviriga qarang
 
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-body {
-  font-size: 28px;
+<uslub>
+tana {
+   shrift o'lchami: 28px;
 }
 
 ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #333;
-  position: -webkit-sticky; /* Safari */
-  position: sticky;
-  top: 0;
+   ro'yxat uslubi turi: yo'q;
+   chegara: 0;
+   to'ldirish: 0;
+   toshib ketish: yashirin;
+   fon rangi: #333;
+   pozitsiyasi: -webkit-yopishqoq; /* Safari */
+   pozitsiyasi: yopishqoq;
+   yuqori: 0;
 }
 
 li {
-  float: left;
+   float: chap;
 }
 
 li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
+   displey: blok;
+   rang: oq;
+   matnni tekislash: markaz;
+   to'ldirish: 14px 16px;
+   matn-bezak: yo'q;
 }
 
-li a:hover {
-  background-color: #111;
+li a: suring {
+   fon rangi: #111;
 }
 
-.active {
-  background-color: #4CAF50;
+.faol {
+   fon rangi: #4CAF50;
 }
 </style>
 </head>
-<body>
+<tana>
 
 <div class="header">
-  <h2>Scroll Down</h2>
-  <p>Scroll down to see the sticky effect.</p>
+   <h2>Pastga aylantiring</h2>
+   <p>Yopishqoq effektni ko‘rish uchun pastga aylantiring.</p>
 </div>
 
 <ul>
-  <li><a class="active" href="#home">Home</a></li>
-  <li><a href="#news">News</a></li>
-  <li><a href="#contact">Contact</a></li>
+   <li><a class="active" href="#home">Uy</a></li>
+   <li><a href="#news">Yangiliklar</a></li>
+   <li><a href="#contact">Aloqa</a></li>
 </ul>
 
-<h3>Sticky Navigation Bar Example</h3>
-<p>The navbar will <strong>stick</strong> to the top when you reach its scroll position.</p>
-<p><strong>Note:</strong> Internet Explorer do not support sticky positioning and Safari requires a -webkit- 
+<h3>Yopishqoq navigatsiya paneliga misol</h3>
+<p>O'tish joyiga yetganingizda, navigatsiya paneli tepaga <strong>yopishadi</strong>.</p>
+<p><strong>Eslatma:</strong> Internet Explorer yopishqoq joylashuvni qo'llab-quvvatlamaydi va Safari -webkit-ni talab qiladi.
 
-prefix.</p>
-<p>Some text to enable scrolling. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset 
+prefiks.</p>
+<p>O'tkazishni yoqish uchun bir nechta matn. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
 
-concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. 
+concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum.
 
-Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-<p>Some text to enable scrolling. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset 
+Affert laboramus repudiandae nec et. Inciderint uning reklamasi samarali. Eum no molestiae voluptatibus.</p>
+<p>O'tkazishni yoqish uchun bir nechta matn. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset
 
-concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. 
+concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum.
 
-Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-<p>Some text to enable scrolling. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset 
+Affert laboramus repudiandae nec et. Inciderint uning reklamasi samarali. Eum no molestiae voluptatibus.</p><p>Some text to enable scrolling. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset 
 
 concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. 
 
@@ -1393,94 +1388,94 @@ less.</p>
 
 
 
-Responsive Sidenav
+Javob beruvchi Sidenav
 
-How to use CSS media queries to create a responsive side navigation.
+Javob beruvchi yon navigatsiyani yaratish uchun CSS media so'rovlaridan qanday foydalanish kerak.
 
 
 <!DOCTYPE html>
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style>
-body {margin: 0;}
+<uslub>
+tana (chegara: 0;}
 
 ul.sidenav {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  width: 25%;
-  background-color: #f1f1f1;
-  position: fixed;
-  height: 100%;
-  overflow: auto;
+   ro'yxat uslubi turi: yo'q;
+   chegara: 0;
+   to'ldirish: 0;
+   kengligi: 25%;
+   fon rangi: #f1f1f1;
+   pozitsiyasi: qattiq;
+   balandligi: 100%;
+   toshib ketish: avtomatik;
 }
 
 ul.sidenav li a {
-  display: block;
-  color: #000;
-  padding: 8px 16px;
-  text-decoration: none;
+   displey: blok;
+   rang: #000;
+   to'ldirish: 8px 16px;
+   matn-bezak: yo'q;
 }
  
-ul.sidenav li a.active {
-  background-color: #4CAF50;
-  color: white;
+ul.sidenav li a.faol {
+   fon rangi: #4CAF50;
+   rang: oq;
 }
 
 ul.sidenav li a:hover:not(.active) {
-  background-color: #555;
-  color: white;
+   fon rangi: #555;
+   rang: oq;
 }
 
 div.content {
-  margin-left: 25%;
-  padding: 1px 16px;
-  height: 1000px;
+   chap chekka: 25%;
+   to'ldirish: 1px 16px;
+   balandligi: 1000px;
 }
 
-@media screen and (max-width: 900px) {
-  ul.sidenav {
-    width: 100%;
-    height: auto;
-    position: relative;
-  }
+@media ekrani va (maksimal kenglik: 900px) {
+   ul.sidenav {
+     kengligi: 100%;
+     balandligi: avtomatik;
+     pozitsiya: nisbiy;
+   }
   
-  ul.sidenav li a {
-    float: left;
-    padding: 15px;
-  }
+   ul.sidenav li a {
+     float: chap;
+     to'ldirish: 15px;
+   }
   
-  div.content {margin-left: 0;}
+   div.content {chap cheti: 0;}
 }
 
-@media screen and (max-width: 400px) {
-  ul.sidenav li a {
-    text-align: center;
-    float: none;
-  }
+@media ekrani va (maksimal kenglik: 400px) {
+   ul.sidenav li a {
+     matnni tekislash: markaz;
+     float: yo'q;
+   }
 }
 </style>
 </head>
-<body>
+<tana>
 
 <ul class="sidenav">
-  <li><a class="active" href="#home">Home</a></li>
-  <li><a href="#news">News</a></li>
-  <li><a href="#contact">Contact</a></li>
-  <li><a href="#about">About</a></li>
+   <li><a class="active" href="#home">Uy</a></li>
+   <li><a href="#news">Yangiliklar</a></li>
+   <li><a href="#contact">Aloqa</a></li>
+   <li><a href="#about">Haqida</a></li>
 </ul>
 
 <div class="content">
-  <h2>Responsive Sidenav Example</h2>
-  <p>This example use media queries to transform the sidenav to a top navigation bar when the screen size is 
+   <h2>Javob beruvchi Sidenav misoli</h2>
+   <p>Bu misolda ekran oʻlchami katta boʻlganda sidenavni yuqori navigatsiya paneliga aylantirish uchun media soʻrovlaridan foydalaniladi.
 
-900px or less.</p>
-  <p>We have also added a media query for screens that are 400px or less, which will vertically stack and 
+900px yoki undan kamroq.</p>
+   <p>Shuningdek, biz 400px yoki undan kichik ekranlar uchun media soʻrovni qoʻshdik, ular vertikal ravishda joylashadi va
 
-center the navigation links.</p>
-  <p>You will learn more about media queries and responsive web design later in our CSS Tutorial.</p>
-  <h3>Resize the browser window to see the effect.</h3>
+navigatsiya havolalarini markazlashtiring.</p>
+   <p>Media so'rovlari va sezgir veb-dizayn haqida batafsil ma'lumotni keyinroq CSS qo'llanmamizdan bilib olasiz.</p>
+   <h3>Effektni ko'rish uchun brauzer oynasining o'lchamini o'zgartiring.</h3>
 </div>
 
 </body>
@@ -1489,246 +1484,245 @@ center the navigation links.</p>
 
 
 
-Dropdown Navbar
+Ochiladigan Navbar
 
-How to add a dropdown menu inside a navigation bar.
+Navigatsiya paneliga ochiladigan menyuni qanday qo'shish mumkin.
 
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
+<uslub>
 ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #333;
+   ro'yxat uslubi turi: yo'q;
+   chegara: 0;
+   to'ldirish: 0;
+   toshib ketish: yashirin;
+   fon rangi: #333;
 }
 
 li {
-  float: left;
+   float: chap;
 }
 
 li a, .dropbtn {
-  display: inline-block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
+   displey: inline-block;
+   rang: oq;
+   matnni tekislash: markaz;
+   to'ldirish: 14px 16px;
+   matn-bezak: yo'q;
 }
 
 li a:hover, .dropdown:hover .dropbtn {
-  background-color: red;
+   fon rangi: qizil;
 }
 
-li.dropdown {
-  display: inline-block;
+li.ochiladigan pastga {
+   displey: inline-block;
 }
 
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
+.ochiladigan tarkib {
+   ko'rsatish: yo'q;
+   pozitsiyasi: mutlaq;
+   fon rangi: #f9f9f9;
+   min-kengligi: 160px;
+   quti soyasi: 0px 8px 16px 0px rgba(0,0,0,0.2);
+   z-indeks: 1;
 }
 
 .dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  text-align: left;
+   rang: qora;
+   to'ldirish: 12px 16px;
+   matn-bezak: yo'q;
+   displey: blok;
+   matnni tekislash: chapga;
 }
 
-.dropdown-content a:hover {background-color: #f1f1f1;}
+.ochiladigan tarkib a: hover {fon rangi: #f1f1f1;}
 
-.dropdown:hover .dropdown-content {
-  display: block;
+.dropdown: hover .dropdown-content {
+   displey: blok;
 }
 </style>
 </head>
-<body>
+<tana>
 
 <ul>
-  <li><a href="#home">Home</a></li>
-  <li><a href="#news">News</a></li>
-  <li class="dropdown">
-    <a href="javascript:void(0)" class="dropbtn">Dropdown</a>
-    <div class="dropdown-content">
-      <a href="#">Link 1</a>
-      <a href="#">Link 2</a>
-      <a href="#">Link 3</a>
-    </div>
-  </li>
+   <li><a href="#home">Uy</a></li>
+   <li><a href="#news">Yangiliklar</a></li>
+   <li class="ochiladigan">
+     <a href="javascript:void(0)" class="dropbtn">Ochiladigan menyu</a>
+     <div class="dropdown-content">
+       <a href="#">1-havola</a>
+       <a href="#">2-havola</a>
+       <a href="#">3-havola</a>
+     </div>
+   </li>
 </ul>
 
-<h3>Dropdown Menu inside a Navigation Bar</h3>
-<p>Hover over the "Dropdown" link to see the dropdown menu.</p>
+<h3>Navigatsiya paneli ichidagi ochiladigan menyu</h3>
+<p>Ochiladigan menyuni koʻrish uchun kursorni “Ochiladigan” havolasi ustiga olib boring.</p>
 
 </body>
 </html>
 
   
-<kbd>return</kbd>[Back to table of contents](#homepage)
+<kbd>qaytish</kbd>[Mundarijaga qaytish](#homepage)
 
 --------
 
 
-## CSS Dropdowns
+## CSS ochiladi
 
-This section shows how to add hoverable dropdown with CSS:
+Ushbu bo'limda CSS yordamida ochiladigan ro'yxatni qanday qo'shish mumkinligi ko'rsatilgan:
 
-Basic Dropdown:::
-Create a dropdown box that appears when the user moves the mouse over an element,as shown below:
-
+Asosiy ochiladigan menyu:::
+Quyida ko'rsatilganidek, foydalanuvchi sichqonchani element ustida harakatlantirganda paydo bo'ladigan ochiladigan oynani yarating:
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-.dropdown {
-  position: relative;
-  display: inline-block;
+<uslub>
+.ochiladigan ro'yxat {
+   pozitsiya: nisbiy;
+   displey: inline-block;
 }
 
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  padding: 12px 16px;
-  z-index: 1;
+.ochiladigan tarkib {
+   ko'rsatish: yo'q;
+   pozitsiyasi: mutlaq;
+   fon rangi: #f9f9f9;
+   min-kengligi: 160px;
+   quti soyasi: 0px 8px 16px 0px rgba(0,0,0,0.2);
+   to'ldirish: 12px 16px;
+   z-indeks: 1;
 }
 
-.dropdown:hover .dropdown-content {
-  display: block;
+.dropdown: hover .dropdown-content {
+   displey: blok;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h2>Hoverable Dropdown</h2>
-<p>Move the mouse over the text below to open the dropdown content.</p>
+<h2>Hoverable ochiladigan menyu</h2>
+<p>Ochiladigan tarkibni ochish uchun sichqonchani quyidagi matn ustiga olib boring.</p>
 
-<div class="dropdown">
-  <span>Mouse over me</span>
-  <div class="dropdown-content">
-  <p>Hello World!</p>
-  </div>
+<div class="ochiladigan">
+   <span>Sichqoncha ustimda</span>
+   <div class="dropdown-content">
+   <p>Salom dunyo!</p>
+   </div>
 </div>
 
 </body>
 </html>
 
 
-In the example above:
+Yuqoridagi misolda:
 
 HTML:
 
-Use <span> element to open the dropdown. You can also use <button> element
+Ochiladigan menyuni ochish uchun <span> elementidan foydalaning. Siz <button> elementidan ham foydalanishingiz mumkin
 
-Use container element like <div> to create content of the drop-down and add whatever you want to include 
+Ochiladigan menyu tarkibini yaratish va qo'shmoqchi bo'lgan narsalarni qo'shish uchun <div> kabi konteyner elementidan foydalaning
 
-inside it. 
+uning ichida.
 
-wrap a <div> element around elements to position drop-down correctly with CSS
+CSS bilan ochiladigan menyuni to'g'ri joylashtirish uchun <div> elementini elementlar atrofiga o'rang
 
 
 css:
 
-The .dropdown class uses position:relative, which is needed when we want the dropdown content to be placed 
+.dropdown klassi position:relative dan foydalanadi, bu biz ochiladigan tarkibni joylashtirishni xohlaganimizda kerak bo'ladi
 
-right below the dropdown button (using position:absolute).
+ochiladigan tugmaning o'ng ostidagi (pozitsiyadan foydalanish: mutlaq).
 
-The .dropdown-content class holds the actual dropdown content. It is hidden by default, and will be 
+.dropdown-content sinfi haqiqiy ochiladigan tarkibga ega. U sukut bo'yicha yashiringan va shunday bo'ladi
 
-displayed on hover (see below).
+hoverda ko'rsatiladi (pastga qarang).
 
-Note: Here, we have set the min-width to 160px. You can change it to suit your taste.
+Eslatma: Bu erda biz min-kenglikni 160px ga o'rnatdik. Siz uni didingizga qarab o'zgartirishingiz mumkin.
 
-Tip: To make the width of drop-down content to be as wide as the dropdown button, set the width to 100% (and 
+Maslahat: Ochiladigan kontentning kengligi ochiladigan tugma kabi keng bo'lishi uchun kenglikni 100% ga o'rnating (va
 
-overflow:auto; to enable scroll on small screens)
+toshib ketish:avto; kichik ekranlarda aylantirishni yoqish uchun)
 
-To make dropdown menu look like a card, rather than a border, we have set CSS box-shadow property, not 
+Ochiladigan menyuni chegaraga emas, balki kartaga o'xshatish uchun biz CSS box-shadow xususiyatini emas, balki o'rnatdik
 
-border.
-
-
-The :hover selector is used to show the dropdown menu when the user moves the mouse over the dropdown 
-
-button.
+chegara.
 
 
+:hover selektori foydalanuvchi sichqonchani ochiladigan menyu ustida harakatlantirganda ochiladigan menyuni ko'rsatish uchun ishlatiladi
 
-Dropdown Menu
+tugmasi.
 
-Create a dropdown menu that allows the user to choose an option from a list as illustrated below:
+
+
+Ochiladigan menyu
+
+Quyida ko'rsatilgandek, foydalanuvchiga ro'yxatdagi variantni tanlash imkonini beruvchi ochiladigan menyu yarating:
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
+<uslub>
 .dropbtn {
-  background-color: #4CAF50;
-  color: white;
-  padding: 16px;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
+   fon rangi: #4CAF50;
+   rang: oq;
+   to'ldirish: 16px;
+   shrift o'lchami: 16px;
+   chegara: yo'q;
+   kursor: ko'rsatgich;
 }
 
-.dropdown {
-  position: relative;
-  display: inline-block;
+.ochiladigan ro'yxat {
+   pozitsiya: nisbiy;
+   displey: inline-block;
 }
 
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
+.ochiladigan tarkib {
+   ko'rsatish: yo'q;
+   pozitsiyasi: mutlaq;
+   fon rangi: #f9f9f9;
+   min-kengligi: 160px;
+   quti soyasi: 0px 8px 16px 0px rgba(0,0,0,0.2);
+   z-indeks: 1;
 }
 
 .dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
+   rang: qora;
+   to'ldirish: 12px 16px;
+   matn-bezak: yo'q;
+   displey: blok;
 }
 
-.dropdown-content a:hover {background-color: #f1f1f1}
+.dropdown-content a: hover {fon rangi: #f1f1f1}
 
-.dropdown:hover .dropdown-content {
-  display: block;
+.dropdown: hover .dropdown-content {
+   displey: blok;
 }
 
-.dropdown:hover .dropbtn {
-  background-color: #3e8e41;
+.dropdown: hover .dropbtn {
+   fon rangi: #3e8e41;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h2>Dropdown Menu</h2>
-<p>Move the mouse over the button to open the dropdown menu.</p>
+<h2>Ochiladigan menyu</h2>
+<p>Ochiladigan menyuni ochish uchun sichqonchani tugma ustiga olib boring.</p>
 
-<div class="dropdown">
-  <button class="dropbtn">Dropdown</button>
-  <div class="dropdown-content">
-  <a href="#">Link 1</a>
-  <a href="#">Link 2</a>
-  <a href="#">Link 3</a>
-  </div>
+<div class="ochiladigan">
+   <button class="dropbtn">ochiladigan pastga</button>
+   <div class="dropdown-content">
+   <a href="#">1-havola</a>
+   <a href="#">2-havola</a>
+   <a href="#">3-havola</a>
+   </div>
 </div>
 
-<p><strong>Note:</strong> We use href="#" for test links. In a real web site this would be URLs.</p>
+<p><strong>Eslatma:</strong> Biz sinov havolalari uchun href="#" dan foydalanamiz. Haqiqiy veb-saytda bu URL manzillar bo'ladi.</p>
 
 </body>
 </html>
@@ -1737,133 +1731,132 @@ Create a dropdown menu that allows the user to choose an option from a list as i
 
 
 
-Right-aligned Dropdown Content
+O'ng tomonga tekislangan ochiladigan tarkib
 
 
-To make dropdown menu go from right to left instead of left to right, add right:0; in the styling as shown 
+Ochiladigan menyuni chapdan o'ngga emas, o'ngdan chapga o'tkazish uchun o'ngga qo'shing: 0; ko'rsatilgandek uslubda
 
-below:
+quyida:
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
+<uslub>
 .dropbtn {
-  background-color: #4CAF50;
-  color: white;
-  padding: 16px;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
+   fon rangi: #4CAF50;
+   rang: oq;
+   to'ldirish: 16px;
+   shrift o'lchami: 16px;
+   chegara: yo'q;
+   kursor: ko'rsatgich;
 }
 
-.dropdown {
-  position: relative;
-  display: inline-block;
+.ochiladigan ro'yxat {
+   pozitsiya: nisbiy;
+   displey: inline-block;
 }
 
-.dropdown-content {
-  display: none;
-  position: absolute;
-  right: 0;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
+.ochiladigan tarkib {
+   ko'rsatish: yo'q;
+   pozitsiyasi: mutlaq;
+   o'ng: 0;
+   fon rangi: #f9f9f9;
+   min-kengligi: 160px;
+   quti soyasi: 0px 8px 16px 0px rgba(0,0,0,0.2);
+   z-indeks: 1;
 }
 
 .dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
+   rang: qora;
+   to'ldirish: 12px 16px;
+   matn-bezak: yo'q;
+   displey: blok;
 }
 
-.dropdown-content a:hover {background-color: #f1f1f1;}
+.ochiladigan tarkib a: hover {fon rangi: #f1f1f1;}
 
-.dropdown:hover .dropdown-content {
-  display: block;
+.dropdown: hover .dropdown-content {
+   displey: blok;
 }
 
-.dropdown:hover .dropbtn {
-  background-color: #3e8e41;
+.dropdown: hover .dropbtn {
+   fon rangi: #3e8e41;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h2>Aligned Dropdown Content</h2>
-<p>Determine whether the dropdown content should go from left to right or right to left with the left and 
+<h2>Tezlangan ochiladigan tarkib</h2>
+<p>Ochiladigan tarkib chapdan o'ngga yoki o'ngdan chapga chapga va chapga o'tishini aniqlang
 
-right properties.</p>
+to'g'ri xususiyatlar.</p>
 
 <div class="dropdown" style="float:left;">
-  <button class="dropbtn">Left</button>
-  <div class="dropdown-content" style="left:0;">
-  <a href="#">Link 1</a>
-  <a href="#">Link 2</a>
-  <a href="#">Link 3</a>
-  </div>
+   <button class="dropbtn">Chapga</button>
+   <div class="dropdown-content" style="left:0;">
+   <a href="#">1-havola</a>
+   <a href="#">2-havola</a>
+   <a href="#">3-havola</a>
+   </div>
 </div>
 
 <div class="dropdown" style="float:right;">
-  <button class="dropbtn">Right</button>
-  <div class="dropdown-content">
-  <a href="#">Link 1</a>
-  <a href="#">Link 2</a>
-  <a href="#">Link 3</a>
-  </div>
+   <button class="dropbtn">O'ng</button>
+   <div class="dropdown-content">
+   <a href="#">1-havola</a>
+   <a href="#">2-havola</a>
+   <a href="#">3-havola</a>
+   </div>
 </div>
 
 </body>
 </html>
 
 
+Ochiladigan rasm
 
-Dropdown Image
-
-How to add an image and other content inside the dropdown box.
+Ochiladigan oynaga rasm va boshqa tarkibni qanday qo'shish mumkin.
 
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-.dropdown {
-  position: relative;
-  display: inline-block;
+<uslub>
+.ochiladigan ro'yxat {
+   pozitsiya: nisbiy;
+   displey: inline-block;
 }
 
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
+.ochiladigan tarkib {
+   ko'rsatish: yo'q;
+   pozitsiyasi: mutlaq;
+   fon rangi: #f9f9f9;
+   min-kengligi: 160px;
+   quti soyasi: 0px 8px 16px 0px rgba(0,0,0,0.2);
+   z-indeks: 1;
 }
 
-.dropdown:hover .dropdown-content {
-  display: block;
+.dropdown: hover .dropdown-content {
+   displey: blok;
 }
 
 .desc {
-  padding: 15px;
-  text-align: center;
+   to'ldirish: 15px;
+   matnni tekislash: markaz;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h2>Dropdown Image</h2>
-<p>Move the mouse over the image below to open the dropdown content.</p>
+<h2>Ochiladigan rasm</h2>
+<p>Ochiladigan tarkibni ochish uchun sichqonchani quyidagi rasm ustiga olib boring.</p>
 
-<div class="dropdown">
-  <img src="img_5terre.jpg" alt="Cinque Terre" width="100" height="50">
-  <div class="dropdown-content">
-  <img src="img_5terre.jpg" alt="Cinque Terre" width="300" height="200">
-  <div class="desc">Beautiful Cinque Terre</div>
-  </div>
+<div class="ochiladigan">
+   <img src="img_5terre.jpg" alt="Cinque Terre" kengligi="100" balandligi="50">
+   <div class="dropdown-content">
+   <img src="img_5terre.jpg" alt="Cinque Terre" kengligi="300" balandligi="200">
+   <div class="desc">Chiroyli Cinque Terre</div>
+   </div>
 </div>
 
 </body>
@@ -1872,277 +1865,277 @@ How to add an image and other content inside the dropdown box.
 
 
 
-Dropdown Navbar
+Ochiladigan Navbar
 
-How to add a dropdown menu inside a navigation bar:
+Navigatsiya paneliga ochiladigan menyuni qanday qo'shish mumkin:
 
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
+<uslub>
 ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #333;
+   ro'yxat uslubi turi: yo'q;
+   chegara: 0;
+   to'ldirish: 0;
+   toshib ketish: yashirin;
+   fon rangi: #333;
 }
 
 li {
-  float: left;
+   float: chap;
 }
 
 li a, .dropbtn {
-  display: inline-block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
+   displey: inline-block;
+   rang: oq;
+   matnni tekislash: markaz;
+   to'ldirish: 14px 16px;
+   matn-bezak: yo'q;
 }
 
 li a:hover, .dropdown:hover .dropbtn {
-  background-color: red;
+   fon rangi: qizil;
 }
 
-li.dropdown {
-  display: inline-block;
+li.ochiladigan pastga {
+   displey: inline-block;
 }
 
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
+.ochiladigan tarkib {
+   ko'rsatish: yo'q;
+   pozitsiyasi: mutlaq;
+   fon rangi: #f9f9f9;
+   min-kengligi: 160px;
+   quti soyasi: 0px 8px 16px 0px rgba(0,0,0,0.2);
+   z-indeks: 1;
 }
 
 .dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  text-align: left;
+   rang: qora;
+   to'ldirish: 12px 16px;
+   matn-bezak: yo'q;
+   displey: blok;
+   matnni tekislash: chapga;
 }
 
-.dropdown-content a:hover {background-color: #f1f1f1;}
+.ochiladigan tarkib a: hover {fon rangi: #f1f1f1;}
 
-.dropdown:hover .dropdown-content {
-  display: block;
+.dropdown: hover .dropdown-content {
+   displey: blok;
 }
 </style>
 </head>
-<body>
+<tana>
 
 <ul>
-  <li><a href="#home">Home</a></li>
-  <li><a href="#news">News</a></li>
-  <li class="dropdown">
-    <a href="javascript:void(0)" class="dropbtn">Dropdown</a>
-    <div class="dropdown-content">
-      <a href="#">Link 1</a>
-      <a href="#">Link 2</a>
-      <a href="#">Link 3</a>
-    </div>
-  </li>
+   <li><a href="#home">Uy</a></li>
+   <li><a href="#news">Yangiliklar</a></li>
+   <li class="ochiladigan">
+     <a href="javascript:void(0)" class="dropbtn">Ochiladigan menyu</a>
+     <div class="dropdown-content">
+       <a href="#">1-havola</a>
+       <a href="#">2-havola</a>
+       <a href="#">3-havola</a>
+     </div>
+   </li>
 </ul>
 
-<h3>Dropdown Menu inside a Navigation Bar</h3>
-<p>Hover over the "Dropdown" link to see the dropdown menu.</p>
+<h3>Navigatsiya paneli ichidagi ochiladigan menyu</h3>
+<p>Ochiladigan menyuni koʻrish uchun kursorni “Ochiladigan” havolasi ustiga olib boring.</p>
 
 </body>
 </html>
 
 
-<kbd>return</kbd>[Back to table of contents](#homepage)
+<kbd>qaytish</kbd>[Mundarijaga qaytish](#homepage)
 
 
 --------
 
 
-## CSS Image Gallery
+## CSS rasmlar galereyasi
 
 
-You can create an image gallery with CSS as illustrated below:
+Quyida tasvirlanganidek CSS yordamida rasm galereyasini yaratishingiz mumkin:
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
+<uslub>
 div.gallery {
-  margin: 5px;
-  border: 1px solid #ccc;
-  float: left;
-  width: 180px;
+   chegara: 5px;
+   chegara: 1px qattiq #ccc;
+   float: chap;
+   kengligi: 180px;
 }
 
-div.gallery:hover {
-  border: 1px solid #777;
+div.gallery: hover {
+   chegara: 1px qattiq #777;
 }
 
 div.gallery img {
-  width: 100%;
-  height: auto;
+   kengligi: 100%;
+   balandligi: avtomatik;
 }
 
 div.desc {
-  padding: 15px;
-  text-align: center;
+   to'ldirish: 15px;
+   matnni tekislash: markaz;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<div class="gallery">
-  <a target="_blank" href="img_5terre.jpg">
-    <img src="img_5terre.jpg" alt="Cinque Terre" width="600" height="400">
-  </a>
-  <div class="desc">Add a description of the image here</div>
+<div class="galereya">
+   <a target="_blank" href="img_5terre.jpg">
+     <img src="img_5terre.jpg" alt="Cinque Terre" kengligi="600" balandligi="400">
+   </a>
+   <div class="desc">Rasm tavsifini shu yerga qo'shing</div>
+</div>
+
+<div class="galereya">
+   <a target="_blank" href="img_forest.jpg">
+     <img src="img_forest.jpg" alt="O'rmon" kengligi="600" balandligi="400">
+   </a>
+   <div class="desc">Rasm tavsifini shu yerga qo'shing</div>
 </div>
 
 <div class="gallery">
-  <a target="_blank" href="img_forest.jpg">
-    <img src="img_forest.jpg" alt="Forest" width="600" height="400">
-  </a>
-  <div class="desc">Add a description of the image here</div>
+   <a target="_blank" href="img_lights.jpg">
+     <img src="img_lights.jpg" alt="Shimoliy chiroqlar" kengligi="600" balandligi="400">
+   </a>
+   <div class="desc">Rasm tavsifini shu yerga qo'shing</div>
 </div>
 
 <div class="gallery">
-  <a target="_blank" href="img_lights.jpg">
-    <img src="img_lights.jpg" alt="Northern Lights" width="600" height="400">
-  </a>
-  <div class="desc">Add a description of the image here</div>
-</div>
-
-<div class="gallery">
-  <a target="_blank" href="img_mountains.jpg">
-    <img src="img_mountains.jpg" alt="Mountains" width="600" height="400">
-  </a>
-  <div class="desc">Add a description of the image here</div>
+   <a target="_blank" href="img_mountains.jpg">
+     <img src="img_mountains.jpg" alt="Tog'lar" kengligi="600" balandligi="400">
+   </a>
+   <div class="desc">Rasm tavsifini shu yerga qo'shing</div>
 </div>
 
 </body>
 </html>
 
 
-Responsive Image Gallery
+Javob beruvchi tasvirlar galereyasi
 
-How to use CSS media queries to create a responsive image gallery that will look good on desktops, tablets 
+Ish stollarida, planshetlarda yaxshi ko'rinadigan sezgir tasvirlar galereyasini yaratish uchun CSS media so'rovlaridan qanday foydalanish kerak
 
-and smart phones.
+va aqlli telefonlar.
 
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
+<uslub>
 div.gallery {
-  border: 1px solid #ccc;
+   chegara: 1px qattiq #ccc;
 }
 
-div.gallery:hover {
-  border: 1px solid #777;
+div.gallery: hover {
+   chegara: 1px qattiq #777;
 }
 
 div.gallery img {
-  width: 100%;
-  height: auto;
+   kengligi: 100%;
+   balandligi: avtomatik;
 }
 
 div.desc {
-  padding: 15px;
-  text-align: center;
+   to'ldirish: 15px;
+   matnni tekislash: markaz;
 }
 
 * {
-  box-sizing: border-box;
+   quti o'lchami: chegara qutisi;
 }
 
 .responsive {
-  padding: 0 6px;
-  float: left;
-  width: 24.99999%;
+   to'ldirish: 0 6px;
+   float: chap;
+   kengligi: 24,99999%;
 }
 
-@media only screen and (max-width: 700px) {
-  .responsive {
-    width: 49.99999%;
-    margin: 6px 0;
-  }
+@media faqat ekran va (maksimal kenglik: 700px) {
+   .responsive {
+     kengligi: 49,99999%;
+     chegara: 6px 0;
+   }
 }
 
-@media only screen and (max-width: 500px) {
-  .responsive {
-    width: 100%;
-  }
+@media faqat ekran va (maksimal kenglik: 500px) {
+   .responsive {
+     kengligi: 100%;
+   }
 }
 
-.clearfix:after {
-  content: "";
-  display: table;
-  clear: both;
+.clearfix:keyin {
+   tarkib: "";
+   ko'rsatish: jadval;
+   aniq: ikkalasi ham;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h2>Responsive Image Gallery</h2>
+<h2>Responsive rasmlar galereyasi</h2>
 
-<h4>Resize the browser window to see the effect.</h4>
+<h4>Effektni ko'rish uchun brauzer oynasining o'lchamini o'zgartiring.</h4>
 
 <div class="responsive">
-  <div class="gallery">
-    <a target="_blank" href="img_5terre.jpg">
-      <img src="img_5terre.jpg" alt="Cinque Terre" width="600" height="400">
-    </a>
-    <div class="desc">Add a description of the image here</div>
-  </div>
+   <div class="gallery">
+     <a target="_blank" href="img_5terre.jpg">
+       <img src="img_5terre.jpg" alt="Cinque Terre" kengligi="600" balandligi="400">
+     </a>
+     <div class="desc">Rasm tavsifini shu yerga qo'shing</div>
+   </div>
 </div>
 
 
 <div class="responsive">
-  <div class="gallery">
-    <a target="_blank" href="img_forest.jpg">
-      <img src="img_forest.jpg" alt="Forest" width="600" height="400">
-    </a>
-    <div class="desc">Add a description of the image here</div>
-  </div>
+   <div class="gallery">
+     <a target="_blank" href="img_forest.jpg">
+       <img src="img_forest.jpg" alt="O'rmon" kengligi="600" balandligi="400">
+     </a>
+     <div class="desc">Rasm tavsifini shu yerga qo'shing</div>
+   </div>
 </div>
 
 <div class="responsive">
-  <div class="gallery">
-    <a target="_blank" href="img_lights.jpg">
-      <img src="img_lights.jpg" alt="Northern Lights" width="600" height="400">
-    </a>
-    <div class="desc">Add a description of the image here</div>
-  </div>
+   <div class="gallery">
+     <a target="_blank" href="img_lights.jpg">
+       <img src="img_lights.jpg" alt="Shimoliy chiroqlar" kengligi="600" balandligi="400">
+     </a>
+     <div class="desc">Rasm tavsifini shu yerga qo'shing</div>
+   </div>
 </div>
 
 <div class="responsive">
-  <div class="gallery">
-    <a target="_blank" href="img_mountains.jpg">
-      <img src="img_mountains.jpg" alt="Mountains" width="600" height="400">
-    </a>
-    <div class="desc">Add a description of the image here</div>
-  </div>
+   <div class="gallery">
+     <a target="_blank" href="img_mountains.jpg">
+       <img src="img_mountains.jpg" alt="Tog'lar" kengligi="600" balandligi="400">
+     </a>
+     <div class="desc">Rasm tavsifini shu yerga qo'shing</div>
+   </div>
 </div>
 
 <div class="clearfix"></div>
 
 <div style="padding:6px;">
-  <p>This example use media queries to re-arrange the images on different screen sizes: for screens larger 
+   <p>Ushbu misol turli ekran o'lchamlaridagi tasvirlarni qayta joylashtirish uchun media so'rovlaridan foydalanadi: kattaroq ekranlar uchun
 
-than 700px wide, it will show four images side by side, for screens smaller than 700px, it will show two 
+kengligi 700px dan katta bo'lsa, u to'rtta tasvirni yonma-yon ko'rsatadi, 700px dan kichik ekranlar uchun ikkitasini ko'rsatadi.
 
-images side by side. For screens smaller than 500px, the images will stack vertically (100%).</p>
-  <p>You will learn more about media queries and responsive web design later in our CSS Tutorial.</p>
+tasvirlar yonma-yon. 500px dan kichikroq ekranlar uchun tasvirlar vertikal ravishda joylashadi (100%).</p>
+   <p>Media so'rovlari va sezgir veb-dizayn haqida batafsil ma'lumotni keyinroq CSS qo'llanmamizdan bilib olasiz.</p>
 </div>
 
 </body>
 </html>
 
-<kbd>return</kbd>[Back to table of contents](#homepage)
+<kbd>qaytish</kbd>[Mundarijaga qaytish](#homepage)
 
 
 
@@ -2150,55 +2143,55 @@ images side by side. For screens smaller than 500px, the images will stack verti
 
 
 
-## CSS Image Sprites
+## CSS tasvir spritlari
 
 
-An image sprite is a collection of images put into a single image to reduce the number of server requests, 
+Tasvir sprite - bu server so'rovlari sonini kamaytirish uchun bitta rasmga joylashtirilgan rasmlar to'plami,
 
-save bandwidths and reduce the loading time of a page caused by multiple server requests. 
+tarmoqli kengligini tejash va bir nechta server so'rovlaridan kelib chiqqan sahifani yuklash vaqtini qisqartirish.
 
 
 
-Simple Example: Image Sprites:::
+Oddiy misol: Rasm spritlari:::
 
-Image sprites enables us to show just the part of the image we need. Within a composite of multiple images. 
+Rasm spritlari bizga rasmning kerakli qismini ko'rsatishga imkon beradi. Bir nechta tasvirlar kompozitsiyasi ichida.
 
-See illustration below:
+Quyidagi rasmga qarang:
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-#home {
-  width: 46px;
-  height: 44px;
-  background: url(img_navsprites.gif) 0 0;
+<uslub>
+#uy {
+   kengligi: 46px;
+   balandligi: 44px;
+   fon: url (img_navsprites.gif) 0 0;
 }
 
-#next {
-  width: 43px;
-  height: 44px;
-  background: url(img_navsprites.gif) -91px 0;
+#Keyingisi {
+   kengligi: 43px;
+   balandligi: 44px;
+   fon: url (img_navsprites.gif) -91px 0;
 }
 </style>
 </head>
-<body>
+<tana>
 
 <img id="home" src="img_trans.gif" width="1" height="1">
-<img id="next" src="img_trans.gif" width="1" height="1">
+<img id="keyingi" src="img_trans.gif" kengligi="1" balandligi="1">
 
 </body>
 </html>
 
 
-In the example above,
+Yuqoridagi misolda,
 
 
-    <img id="home" src="img_trans.gif"> - Only defines a small transparent image because the src attribute 
+     <img id="home" src="img_trans.gif"> - Faqat kichik shaffof tasvirni belgilaydi, chunki src atributi
 
-cannot be empty. The displayed image will be the background image we specify in CSS
-    width: 46px; height: 44px; - Defines the portion of the image we want to use
-    background: url(img_navsprites.gif) 0 0; - Defines the background image and its position (left 0px, top 
+bo'sh bo'lishi mumkin emas. Ko'rsatilgan rasm biz CSS-da belgilagan fon tasviri bo'ladi
+     kengligi: 46px; balandligi: 44px; - Rasmning biz foydalanmoqchi bo'lgan qismini belgilaydi
+     fon: url (img_navsprites.gif) 0 0; - Fon rasmi va uning o'rnini belgilaydi (chapda 0px, tepada
 
 0px)
 
@@ -2206,214 +2199,213 @@ cannot be empty. The displayed image will be the background image we specify in 
 
 
 
+Image Sprites - Navigatsiya ro'yxatini yarating
 
-Image Sprites - Create a Navigation List
+Quyidagi rasmda sprite tasvir ("img_navsprites.gif") yordamida navigatsiya ro'yxatini yaratish ko'rsatilgan. An
 
-The illustration below shows the creation of navigation list using sprite image ("img_navsprites.gif"). An 
+Bu yerda HTML roʻyxati ishlatiladi, chunki u roʻyxat boʻlishi mumkin va fon tasvirini ham qoʻllab-quvvatlaydi. Rasmga qarang
 
-HTML list is used here because it  can be a list and supports background image as well. See the illustration 
-
-below now:
+hozir quyida:
 
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
+<uslub>
 #navlist {
-  position: relative;
+   pozitsiya: nisbiy;
 }
 
 #navlist li {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  position: absolute;
-  top: 0;
+   chegara: 0;
+   to'ldirish: 0;
+   ro'yxat uslubi: yo'q;
+   pozitsiyasi: mutlaq;
+   yuqori: 0;
 }
 
 #navlist li, #navlist a {
-  height: 44px;
-  display: block;
+   balandligi: 44px;
+   displey: blok;
 }
 
-#home {
-  left: 0px;
-  width: 46px;
-  background: url('img_navsprites.gif') 0 0;
+#uy {
+   chap: 0px;
+   kengligi: 46px;
+   fon: url('img_navsprites.gif') 0 0;
 }
 
-#prev {
-  left: 63px;
-  width: 43px;
-  background: url('img_navsprites.gif') -47px 0;
+#oldingi {
+   chap: 63px;
+   kengligi: 43px;
+   fon: url('img_navsprites.gif') -47px 0;
 }
 
-#next {
-  left: 129px;
-  width: 43px;
-  background: url('img_navsprites.gif') -91px 0;
+#Keyingisi {
+   chap: 129px;
+   kengligi: 43px;
+   fon: url('img_navsprites.gif') -91px 0;
 }
 </style>
 </head>
-<body>
+<tana>
 
 <ul id="navlist">
-  <li id="home"><a href="default.asp"></a></li>
-  <li id="prev"><a href="css_intro.asp"></a></li>
-  <li id="next"><a href="css_syntax.asp"></a></li>
+   <li id="home"><a href="default.asp"></a></li>
+   <li id="prev"><a href="css_intro.asp"></a></li>
+   <li id="next"><a href="css_syntax.asp"></a></li>
 </ul>
 
 </body>
 </html>
 
 
-Explanation for the example above: 
+Yuqoridagi misol uchun tushuntirish:
 
 
-    #navlist {position:relative;} - position is set to relative to allow absolute positioning inside it
-    #navlist li {margin:0;padding:0;list-style:none;position:absolute;top:0;} - margin and padding are set 
+     #navlist {pozitsiya: nisbiy;} - uning ichida mutlaq joylashishni ta'minlash uchun pozitsiya nisbatan o'rnatiladi
+     #navlist li {margin:0;padding:0;list-style:none;position:absolute;top:0;} - chekka va to'ldirish o'rnatiladi
 
-to 0, list-style is removed, and all list items are absolute positioned
-    #navlist li, #navlist a {height:44px;display:block;} - the height of all the images are 44px
-
-
-Positioning and Styling each specific part:
+0 ga, ro'yxat uslubi o'chiriladi va barcha ro'yxat elementlari mutlaq joylashadi
+     #navlist li, #navlist a {height:44px;display:block;} - barcha tasvirlarning balandligi 44px.
 
 
-    #home {left:0px;width:46px;} - Positioned all the way to the left, and the width of the image is 46px
-    #home {background:url(img_navsprites.gif) 0 0;} - Defines the background image and its position (left 
-
-0px, top 0px)
-    #prev {left:63px;width:43px;} - Positioned 63px to the right (#home width 46px + some extra space 
-
-between items), and the width is 43px.
-    #prev {background:url('img_navsprites.gif') -47px 0;} - Defines the background image 47px to the right 
-
-(#home width 46px + 1px line divider)
-    #next {left:129px;width:43px;}- Positioned 129px to the right (start of #prev is 63px + #prev width 43px 
-
-+ extra space), and the width is 43px.
-    #next {background:url('img_navsprites.gif') -91px 0;} - Defines the background image 91px to the right 
-
-(#home width 46px + 1px line divider + #prev width 43px + 1px line divider )
+Har bir alohida qismni joylashtirish va uslublash:
 
 
+     #home {left:0px;width:46px;} - Toʻliq chap tomonga joylashtirilgan va tasvirning kengligi 46px.
+     #home {background:url(img_navsprites.gif) 0 0;} - Fon rasmi va uning oʻrnini belgilaydi (chapda)
 
-Image Sprites - Hover Effect:::
+0px, yuqori 0px)
+     #prev {chap:63px;width:43px;} - 63px oʻngga joylashtirilgan (#uy kengligi 46px + biroz qoʻshimcha joy)
 
-Here, we will add hover effect to the navigation list. Note that the :hover selector can be used on all 
+elementlar orasida) va kengligi 43px.
+     #prev {background:url('img_navsprites.gif') -47px 0;} - Fon rasmini 47px oʻngga belgilaydi
 
-elements including, but not limited to, links. 
+(#uy kengligi 46px + 1px chiziq ajratuvchi)
+     #keyingi {chap:129px;width:43px;}- 129px oʻngga joylashtirilgan (#oldingi 63px + #oldingi kengligi 43px)
+
++ qo'shimcha joy) va kengligi 43px.
+     #next {background:url('img_navsprites.gif') -91px 0;} - Fon rasmini 91px oʻngga belgilaydi
+
+(#uy kengligi 46px + 1px chiziqni ajratuvchi + #oldingi kengligi 43px + 1px chiziq boʻluvchisi )
+
+
+
+Rasm spritlari - Hover effekti:::
+
+Bu erda biz navigatsiya ro'yxatiga hover effektini qo'shamiz. E'tibor bering, :hover selektori hamma uchun ishlatilishi mumkin
+
+elementlar, shu jumladan, lekin ular bilan cheklanmagan, havolalar.
 
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
+<uslub>
 #navlist {
-  position: relative;
+   pozitsiya: nisbiy;
 }
 
 #navlist li {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  position: absolute;
-  top: 0;
+   chegara: 0;
+   to'ldirish: 0;
+   ro'yxat uslubi: yo'q;
+   pozitsiyasi: mutlaq;
+   yuqori: 0;
 }
 
 #navlist li, #navlist a {
-  height: 44px;
-  display: block;
+   balandligi: 44px;
+   displey: blok;
 }
 
-#home {
-  left: 0px;
-  width: 46px;
-  background: url('img_navsprites_hover.gif') 0 0;
+#uy {
+   chap: 0px;
+   kengligi: 46px;
+   fon: url('img_navsprites_hover.gif') 0 0;
 }
 
-#prev {
-  left: 63px;
-  width: 43px;
-  background: url('img_navsprites_hover.gif') -47px 0;
+#oldingi {
+   chap: 63px;
+   kengligi: 43px;
+   fon: url('img_navsprites_hover.gif') -47px 0;
 }
 
-#next {
-  left: 129px;
-  width: 43px;
-  background: url('img_navsprites_hover.gif') -91px 0;
+#Keyingisi {
+   chap: 129px;
+   kengligi: 43px;
+   fon: url('img_navsprites_hover.gif') -91px 0;
 }
 
-#home a:hover {
-  background: url('img_navsprites_hover.gif') 0 -45px;
+#uy a: suring {
+   fon: url('img_navsprites_hover.gif') 0 -45px;
 }
 
-#prev a:hover {
-  background: url('img_navsprites_hover.gif') -47px -45px;
+#oldingi a: suring {
+   fon: url('img_navsprites_hover.gif') -47px -45px;
 }
 
-#next a:hover {
-  background: url('img_navsprites_hover.gif') -91px -45px;
+#keyingi a: suring {
+   fon: url('img_navsprites_hover.gif') -91px -45px;
 }
 </style>
 </head>
-<body>
+<tana>
 
 <ul id="navlist">
-  <li id="home"><a href="default.asp"></a></li>
-  <li id="prev"><a href="css_intro.asp"></a></li>
-  <li id="next"><a href="css_syntax.asp"></a></li>
+   <li id="home"><a href="default.asp"></a></li>
+   <li id="prev"><a href="css_intro.asp"></a></li>
+   <li id="next"><a href="css_syntax.asp"></a></li>
 </ul>
 
 </body>
 </html>
 
 
-Explanation of the example above:
+Yuqoridagi misolning tushuntirishi:
 
-    #home a:hover {background: url('img_navsprites_hover.gif') 0 -45px;} - For all three hover images we 
+     #home a:hover {background: url('img_navsprites_hover.gif') 0 -45px;} - Barcha uchta hover tasvir uchun biz
 
-specify the same background position, only 45px further down
+bir xil fon holatini belgilang, faqat 45px pastga
 
 
-<kbd>return</kbd>[Back to table of contents](#homepage)
+<kbd>qaytish</kbd>[Mundarijaga qaytish](#homepage)
 
 
 ------
 
 
 
-## CSS Attr Selectors
+## CSS Attr selektorlari
   
-CSS Attribute Selectors
+CSS atribut selektorlari
 
 
-Style HTML Elements With Specific Attributes
+Muayyan atributlarga ega uslub HTML elementlari
 
-You can style HTML elements with specifit attributes or attribute values. 
+Siz HTML elementlarini maxsus atributlar yoki atribut qiymatlari bilan uslublashingiz mumkin.
 
 
 
-The [attribute] selector is used to select elements with a specified attribute.
+[atribut] selektori belgilangan atributga ega elementlarni tanlash uchun ishlatiladi.
 
-The following example selects all <a> elements with a target attribute:
+Quyidagi misol maqsad atributiga ega barcha <a> elementlarni tanlaydi:
 
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-a[target] {
-  background-color: yellow;
+<uslub>
+a[maqsad] {
+   fon rangi: sariq;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h2>CSS [attribute] Selector</h2>
-<p>The links with a target attribute gets a yellow background:</p>
+<h2>CSS [atribut] selektori</h2>
+<p>Maqsadli atributli havolalar sariq fonga ega bo'ladi:</p>
 
 <a href="https://www.w3schools.com">w3schools.com</a>
 <a href="http://www.disney.com" target="_blank">disney.com</a>
@@ -2424,26 +2416,26 @@ a[target] {
 
 
 
-CSS [attribute="value"] Selector
+CSS [attribute="value"] selektori
 
-The [attribute="value"] selector is used to select elements with a specified attribute and value.
+[attribute="value"] selektori belgilangan atribut va qiymatga ega elementlarni tanlash uchun ishlatiladi.
 
-The following example selects all <a> elements with a target="_blank" attribute:
+Quyidagi misol target="_blank" atributiga ega barcha <a> elementlarni tanlaydi:
 
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
+<uslub>
 a[target=_blank] {
-  background-color: yellow;
+   fon rangi: sariq;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h2>CSS [attribute="value"] Selector</h2>
-<p>The link with target="_blank" gets a yellow background:</p>
+<h2>CSS [attribute="value"] Selektor</h2>
+<p>Target="_blank" havolasi sariq fonga ega:</p>
 
 <a href="https://www.w3schools.com">w3schools.com</a>
 <a href="http://www.disney.com" target="_blank">disney.com</a>
@@ -2454,213 +2446,212 @@ a[target=_blank] {
 
 
 
-CSS [attribute~="value"] Selector
+CSS [atribut~="qiymat"] selektori
 
 
-The [attribute~="value"] selector is used to select elements with an attribute value containing a specified 
+[atribut~="value"] selektori ko'rsatilgan atribut qiymatiga ega elementlarni tanlash uchun ishlatiladi
 
-word.
+so'z.
 
-The following example selects all elements with a title attribute that contains a space-separated list of 
+Quyidagi misol bo'sh joy bilan ajratilgan ro'yxatini o'z ichiga olgan sarlavha atributiga ega barcha elementlarni tanlaydi
 
-words, one of which is "flower": 
+so'zlar, ulardan biri "gul":
 
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-[title~=flower] {
-  border: 5px solid yellow;
+<uslub>
+[title~=gul] {
+   chegara: 5px qattiq sariq;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h2>CSS [attribute~="value"] Selector</h2>
-<p>All images with the title attribute containing the word "flower" get a yellow border.</p>
+<h2>CSS [atribut~="value"] Selektor</h2>
+<p>"Gul" so'zini o'z ichiga olgan sarlavha atributiga ega barcha rasmlar sariq hoshiyaga ega bo'ladi.</p>
 
-<img src="klematis.jpg" title="klematis flower" width="150" height="113">
-<img src="img_flwr.gif" title="flower" width="224" height="162">
-<img src="img_tree.gif" title="tree" width="200" height="358">
+<img src="klematis.jpg" title="klematis gul" kengligi="150" balandligi="113">
+<img src="img_flwr.gif" title="gul" kengligi="224" balandligi="162">
+<img src="img_tree.gif" title="daraxt" kengligi="200" balandligi="358">
 
 </body>
 </html>
 
 
-The example above will match elements with title="flower", title="summer flower", and title="flower new", 
+Yuqoridagi misolda title="flower", title="yozgi gul" va title="gul new" bilan elementlar mos keladi.
 
-but not title="my-flower" or title="flowers".
-
-
-
-CSS [attribute|="value"] Selector
-
-The [attribute|="value"] selector is used to select elements with the specified attribute starting with the 
-
-specified value.
-
-The following example selects all elements with a class attribute value that begins with "top".
-
-Note: The value has to be a whole word, either alone, like class="top", or followed by a hyphen( - ), like 
-
-class="top-text"! 
-
-
-See example below: 
-
-<!DOCTYPE html>
-<html>
-<head>
-<style>
-[class|=top] {
-  background: yellow;
-}
-</style>
-</head>
-<body>
-
-<h2>CSS [attribute|="value"] Selector</h2>
-
-<h1 class="top-header">Welcome</h1>
-<p class="top-text">Hello world!</p>
-<p class="topcontent">Are you learning CSS?</p>
-
-</body>
-</html>
+lekin unvon = "mening gulim" yoki "gullar" emas.
 
 
 
+CSS [atribut|="value"] selektori
 
-CSS [attribute^="value"] Selector
+[atribut|="value"] selektori belgilangan atribut bilan boshlanadigan elementlarni tanlash uchun ishlatiladi
 
-The [attribute^="value"] selector is used to select elements whose attribute value begins with a specified 
+belgilangan qiymat.
 
-value.
+Quyidagi misol "yuqori" bilan boshlanadigan sinf atributi qiymatiga ega barcha elementlarni tanlaydi.
 
-The following example selects all elements with a class attribute value that begins with "top":
+Eslatma: Qiymat yaxlit so'z bo'lishi kerak, masalan, class="top" yoki keyin chiziqcha( - ), kabi
 
-Note: The value does not have to be a whole word! In this case topcontent and top-content are both selected.
+class="top-matn"!
 
+
+Quyidagi misolga qarang:
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-[class^="top"] {
-  background: yellow;
+<uslub>
+[sinf|=yuqori] {
+   fon: sariq;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h2>CSS [attribute^="value"] Selector</h2>
+<h2>CSS [atribut|="value"] Selektor</h2>
 
-<h1 class="top-header">Welcome</h1>
-<p class="top-text">Hello world!</p>
-<p class="topcontent">Are you learning CSS?</p>
+<h1 class="top-header">Xush kelibsiz</h1>
+<p class="top-text">Salom dunyo!</p>
+<p class="topcontent">CSS-ni o'rganyapsizmi?</p>
 
 </body>
 </html>
 
 
 
-CSS [attribute$="value"] Selector
+CSS [atribut^="value"] selektori
 
-The [attribute$="value"] selector is used to select elements whose attribute value ends with a specified 
+[atribut^="value"] selektori atribut qiymati belgilangan qiymatdan boshlanadigan elementlarni tanlash uchun ishlatiladi.
 
-value.
+qiymat.
 
-The following example selects all elements with a class attribute value that ends with "test":
+Quyidagi misol "yuqori" bilan boshlanadigan sinf atributi qiymatiga ega barcha elementlarni tanlaydi:
 
-Note: The value does not have to be a whole word!  
+Eslatma: Qiymat butun so'z bo'lishi shart emas! Bu holda yuqori tarkib va yuqori tarkib tanlanadi.
+
 
 <!DOCTYPE html>
 <html>
 <head>
-<style> 
-[class$="test"] {
-  background: yellow;
+<uslub>
+[sinf ^ = "yuqori"] {
+   fon: sariq;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h2>CSS [attribute$="value"] Selector</h2>
+<h2>CSS [atribut^="value"] Selektor</h2>
 
-<div class="first_test">The first div element.</div>
-<div class="second">The second div element.</div>
-<div class="my-test">The third div element.</div>
-<p class="mytest">This is some text in a paragraph.</p>
+<h1 class="top-header">Xush kelibsiz</h1>
+<p class="top-text">Salom dunyo!</p>
+<p class="topcontent">CSS-ni o'rganyapsizmi?</p>
 
 </body>
 </html>
 
 
-CSS [attribute*="value"] Selector
 
-The [attribute*="value"] selector is used to select elements whose attribute value contains a specified 
+CSS [attribute$="value"] selektori
 
-value.
+[attribute$="value"] selektori atribut qiymati belgilangan qiymat bilan tugaydigan elementlarni tanlash uchun ishlatiladi.
 
-The following example selects all elements with a class attribute value that contains "te":
+qiymat.
 
-Note: The value does not have to be a whole word!  
+Quyidagi misol "test" bilan tugaydigan sinf atributi qiymatiga ega barcha elementlarni tanlaydi:
 
+Eslatma: Qiymat butun so'z bo'lishi shart emas!
 
 <!DOCTYPE html>
 <html>
 <head>
-<style> 
-[class*="te"] {
-  background: yellow;
+<uslub>
+[sinf $ = "test"] {
+   fon: sariq;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h2>CSS [attribute*="value"] Selector</h2>
+<h2>CSS [attribute$="value"] selektori</h2>
 
-<div class="first_test">The first div element.</div>
-<div class="second">The second div element.</div>
-<div class="my-test">The third div element.</div>
-<p class="mytest">This is some text in a paragraph.</p>
+<div class="first_test">Birinchi div elementi.</div>
+<div class="second">Ikkinchi div elementi.</div>
+<div class="my-test">Uchinchi div elementi.</div>
+<p class="mytest">Bu paragrafdagi matn.</p>
 
 </body>
 </html>
 
 
-Styling Forms
+CSS [attribute*="value"] selektori
 
-The attribute selectors can be useful for styling forms without class or ID:
+[atribut*="value"] selektori atribut qiymati ko'rsatilgan elementlarni tanlash uchun ishlatiladi
+
+qiymat.
+
+Quyidagi misol "te" ni o'z ichiga olgan sinf atributi qiymatiga ega barcha elementlarni tanlaydi:
+
+Eslatma: Qiymat butun so'z bo'lishi shart emas!
 
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-input[type=text] {
-  width: 150px;
-  display: block;
-  margin-bottom: 10px;
-  background-color: yellow;
-}
-
-input[type=button] {
-  width: 120px;
-  margin-left: 35px;
-  display: block;
+<uslub>
+[sinf*="te"] {
+   fon: sariq;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h2>Styling Forms</h2>
+<h2>CSS [attribute*="value"] Selektor</h2>
+
+<div class="first_test">Birinchi div elementi.</div>
+<div class="second">Ikkinchi div elementi.</div>
+<div class="my-test">Uchinchi div elementi.</div>
+<p class="mytest">Bu paragrafdagi matn.</p>
+
+</body>
+</html>
+
+
+Styling shakllari
+
+Atribut selektorlari sinf yoki identifikatorsiz shakllarni shakllantirish uchun foydali bo'lishi mumkin:
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<uslub>
+kiritish[type=matn] {
+   kengligi: 150px;
+   displey: blok;
+   pastki chet: 10px;
+   fon rangi: sariq;
+}
+
+kiritish[type=tugma] {
+   kengligi: 120px;
+   chap chekka: 35px;
+   displey: blok;
+}
+</style>
+</head>
+<tana>
+
+<h2>Uslublar shakllari</h2>
 
 <form name="input" action="" method="get">
-  Firstname:<input type="text" name="Name" value="Peter" size="20">
-  Lastname:<input type="text" name="Name" value="Griffin" size="20">
-  <input type="button" value="Example Button">
+   Ism:<input type="text" name="Name" value="Piter" size="20">
+   Familiya:<input type="text" name="Name" value="Griffin" size="20">
+   <input type="tugma" qiymati="Misol tugmasi">
 </form>
 
 </body>
@@ -2669,160 +2660,159 @@ input[type=button] {
 
 
 
-All CSS Attribute Selectors
-Selector 	Example 	Example description
-[attribute] 	[target] 	Selects all elements with a target attribute
-[attribute=value] 	[target=_blank] 	Selects all elements with target="_blank"
-[attribute~=value] 	[title~=flower] 	Selects all elements with a title attribute containing the 
+Barcha CSS atribut selektorlari
+Selektor misoli Misol tavsifi
+[atribut] [maqsad] Maqsad atributiga ega barcha elementlarni tanlaydi
+[atribut=value] [target=_blank] target="_blank" bilan barcha elementlarni tanlaydi
+[atribut~=qiymat] [title~=gul] Sarlavha atributiga ega barcha elementlarni tanlaydi.
 
-word "flower"
-[attribute|=value] 	[lang|=en] 	Selects all elements with a lang attribute value starting with "en"
-[attribute^=value] 	a[href^="https"] 	Selects every <a> element whose href attribute value begins 
+"gul" so'zi
+[atribut|=value] [lang|=en] “en” bilan boshlanadigan lang atribut qiymatiga ega barcha elementlarni tanlaydi
+[atribut^=value] a[href^="https"] href atribut qiymati boshlanadigan har bir <a> elementni tanlaydi
 
-with "https"
-[attribute$=value] 	a[href$=".pdf"] 	Selects every <a> element whose href attribute value ends 
+"https" bilan
+[attribute$=value] a[href$=".pdf"] href atribut qiymati tugaydigan har bir <a> elementni tanlaydi
 
-with ".pdf"
-[attribute*=value] 	a[href*="w3schools"] 	Selects every <a> element whose href attribute value 
+".pdf" bilan
+[atribut*=value] a[href*="w3schools"] href atribut qiymatiga ega har bir <a> elementni tanlaydi
 
-contains the substring "w3schools"
+"w3schools" pastki qatorini o'z ichiga oladi
 
-<kbd>return</kbd>[Back to table of contents](#homepage)
+<kbd>qaytish</kbd>[Mundarijaga qaytish](#homepage)
 
 
 
 ------
 
 
-
-## CSS Counters
-
-
-They are CSS-maintained variables whose values can be incremental by CSS rules (to track the number of times 
-
-they are used).  You can also use counters to adjust appearance of content based on its placement in the 
-
-document.
+## CSS hisoblagichlari
 
 
-Automatic Numbering With Counters
+Ular CSS-qo'llab-quvvatlanadigan o'zgaruvchilar bo'lib, ularning qiymatlari CSS qoidalari bo'yicha qo'shimcha bo'lishi mumkin (marta sonini kuzatish uchun)
 
-CSS counters are like "variables". The variable values can be incremented by CSS rules (which will track how 
+ular ishlatiladi). Kontentning ko'rinishini uning joylashuviga qarab sozlash uchun hisoblagichlardan ham foydalanishingiz mumkin
 
-many times they are used).
-
-To work with CSS counters we will use the following properties:
-
-    counter-reset - Creates or resets a counter
-    counter-increment - Increments a counter value
-    content - Inserts generated content
-    counter() or counters() function - Adds the value of a counter to an element
-
-To use a CSS counter, it must first be created with counter-reset.
+hujjat.
 
 
-To illustrate, the example below creates a counter for the page (in the body selector), increments the 
+Hisoblagichlar bilan avtomatik raqamlash
 
-counter value for each <h2> element and adds "Section <value of the counter>:" to the beginning of each <h2> 
+CSS hisoblagichlari "o'zgaruvchilar" ga o'xshaydi. O'zgaruvchi qiymatlari CSS qoidalari bilan oshirilishi mumkin (bu qanday qilib kuzatilishini kuzatib boradi
+
+ko'p marta ishlatiladi).
+
+CSS hisoblagichlari bilan ishlash uchun biz quyidagi xususiyatlardan foydalanamiz:
+
+     counter-reset - hisoblagichni yaratadi yoki qayta o'rnatadi
+     counter-increment - hisoblagich qiymatini oshiradi
+     kontent - Yaratilgan tarkibni kiritadi
+     counter() yoki counters() funksiyasi - elementga hisoblagich qiymatini qo'shadi
+
+CSS hisoblagichidan foydalanish uchun avval uni qayta tiklash bilan yaratish kerak.
+
+
+Tasavvur qilish uchun quyidagi misol sahifa uchun hisoblagich yaratadi (tana selektorida), ni oshiradi
+
+Har bir <h2> elementi uchun hisoblagich qiymati va har bir <h2> elementining boshiga “<hisoblagich qiymati>:” boʻlimi qoʻshiladi.
 
 element:
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-body {
-  counter-reset: section;
+<uslub>
+tana {
+   qarshi qayta o'rnatish: bo'lim;
 }
 
-h2::before {
-  counter-increment: section;
-  content: "Section " counter(section) ": ";
+h2 :: oldin {
+   qarama-qarshi o'sish: bo'lim;
+   tarkib: "Bo'lim " counter(bo'lim) ": ";
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h1>Using CSS Counters</h1>
+<h1>CSS hisoblagichlaridan foydalanish</h1>
 
-<h2>HTML Tutorial</h2>
-<h2>CSS Tutorial</h2>
-<h2>JavaScript Tutorial</h2>
-<h2>Python Tutorial</h2>
-<h2>SQL Tutorial</h2>
+<h2>HTML darsligi</h2>
+<h2>CSS darsligi</h2>
+<h2>JavaScript darsligi</h2>
+<h2>Python darsligi</h2>
+<h2>SQL darsligi</h2>
 
 </body>
 </html>
 
 
-In the example above, this is what the outcome looks like:
+Yuqoridagi misolda natija shunday ko'rinadi:
 
 
-Using CSS Counters
+CSS hisoblagichlaridan foydalanish
 
-Section 1: HTML Tutorial
-Section 2: CSS Tutorial
-Section 3: JavaScript Tutorial
-Section 4: Python Tutorial
-Section 5: SQL Tutorial
+1-bo'lim: HTML qo'llanmasi
+2-bo'lim: CSS qo'llanmasi
+3-bo'lim: JavaScript qo'llanmasi
+4-bo'lim: Python qo'llanmasi
+5-bo'lim: SQL qo'llanmasi
 
-And when you highlight, the 'Section 1' through 5 is not highlighted as it is automatically generated from 
+Va siz ta'kidlaganingizda, "1-dan 5-gachasi bo'lim" ajratilmaydi, chunki u avtomatik ravishda yaratiladi.
 
-CSS. 
-
-
+CSS.
 
 
 
-Nesting Counters
 
-The following example creates one counter for the page (section) and one counter for each <h1> element 
 
-(subsection). The "section" counter will be counted for each <h1> element with "Section <value of the 
+Yuvalash hisoblagichlari
 
-section counter>.", and the "subsection" counter will be counted for each <h2> element with "<value of the 
+Quyidagi misol sahifa (bo'lim) uchun bitta hisoblagich va har bir <h1> elementi uchun bitta hisoblagich yaratadi
 
-section counter>.<value of the subsection counter>":
+(kichik bo'lim). "Bo'lim" hisoblagichi har bir <h1> element uchun "bo'lim <qiymati" bilan hisoblanadi
+
+bo'lim hisoblagichi>.", va "kichik bo'lim" hisoblagichi har bir <h2> element uchun "<qiymati" bilan hisoblanadi.
+
+bo'lim hisoblagichi>.<kichik bo'lim hisoblagichining qiymati>":
 
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-body {
-  counter-reset: section;
+<uslub>
+tana {
+   qarshi qayta o'rnatish: bo'lim;
 }
 
 h1 {
-  counter-reset: subsection;
+   qarshi qayta o'rnatish: kichik bo'lim;
 }
 
-h1::before {
-  counter-increment: section;
-  content: "Section " counter(section) ". ";
+h1 :: oldin {
+   qarama-qarshi o'sish: bo'lim;
+   mazmuni: "Bo'lim" hisoblagich(bo'lim) ". ";
 }
 
-h2::before {
-  counter-increment: subsection;
-  content: counter(section) "." counter(subsection) " ";
+h2 :: oldin {
+   qarama-qarshi o'sish: kichik bo'lim;
+   tarkib: hisoblagich (bo'lim) "." hisoblagich (kichik bo'lim) " ";
 }
 </style>
 </head>
-<body>
+<tana>
 
 
-<h1>HTML/CSS Tutorials</h1>
+<h1>HTML/CSS darsliklari</h1>
 <h2>HTML</h2>
 <h2>CSS</h2>
 <h2>Bootstrap</h2>
 <h2>W3.CSS</h2>
 
-<h1>Scripting Tutorials</h1>
+<h1>Skript yaratish boʻyicha qoʻllanmalar</h1>
 <h2>JavaScript</h2>
 <h2>jQuery</h2>
-<h2>React</h2>
+<h2>Reaksiya</h2>
 
-<h1>Programming Tutorials</h1>
+<h1>Dasturlash bo'yicha qo'llanmalar</h1>
 <h2>Python</h2>
 <h2>Java</h2>
 <h2>C++</h2>
@@ -2831,22 +2821,22 @@ h2::before {
 </html>
 
 
-The nested counters above are displayed like this:
+Yuqoridagi ichki hisoblagichlar quyidagicha ko'rsatiladi:
 
-Section 1. HTML/CSS Tutorials
+1-bo'lim. HTML/CSS darsliklari
 
 1.1 HTML
 1.2 CSS
 1.3 Bootstrap
 1.4 W3.CSS
 
-Section 2. Scripting Tutorials
+2-bo'lim. Skript yaratish bo'yicha qo'llanmalar
 
 2.1 JavaScript
 2.2 jQuery
-2.3 React
+2.3 Reaksiya
 
-Section 3. Programming Tutorials
+3-bo'lim. Dasturlash bo'yicha qo'llanmalar
 
 3.1 Python
 3.2 Java
@@ -2854,132 +2844,132 @@ Section 3. Programming Tutorials
 
 
 
-A counter can also be useful to make outlined lists because a new instance of a counter is automatically 
+Hisoblagich belgilangan ro'yxatlarni yaratish uchun ham foydali bo'lishi mumkin, chunki hisoblagichning yangi nusxasi avtomatik ravishda paydo bo'ladi
 
-created in child elements. Here we use the counters() function to insert a string between different levels 
+bola elementlarda yaratilgan. Bu yerda biz counters() funksiyasidan turli darajalar orasiga qator kiritish uchun foydalanamiz
 
-of nested counters:
+o'rnatilgan hisoblagichlar:
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
+<uslub>
 ol {
-  counter-reset: section;
-  list-style-type: none;
+   qarshi qayta o'rnatish: bo'lim;
+   ro'yxat uslubi turi: yo'q;
 }
 
-li::before {
-  counter-increment: section;
-  content: counters(section,".") " ";
+li :: oldin {
+   qarama-qarshi o'sish: bo'lim;
+   tarkib: hisoblagichlar(bo'lim,".") " ";
 }
 </style>
 </head>
-<body>
+<tana>
 
 <ol>
-  <li>item</li>
-  <li>item   
-  <ol>
-    <li>item</li>
-    <li>item</li>
-    <li>item
-    <ol>
-      <li>item</li>
-      <li>item</li>
-      <li>item</li>
-    </ol>
-    </li>
-    <li>item</li>
-  </ol>
-  </li>
-  <li>item</li>
-  <li>item</li>
+   <li>element</li>
+   <li>element
+   <ol>
+     <li>element</li>
+     <li>element</li>
+     <li>element
+     <ol>
+       <li>element</li>
+       <li>element</li>
+       <li>element</li>
+     </ol>
+     </li>
+     <li>element</li>
+   </ol>
+   </li>
+   <li>element</li>
+   <li>element</li>
 </ol>
 
 <ol>
-  <li>item</li>
-  <li>item</li>
+   <li>element</li>
+   <li>element</li>
 </ol>
 
 </body>
 </html>
 
 
-The counter above is rendered as shown below:
+Yuqoridagi hisoblagich quyida ko'rsatilgandek ko'rsatilgan:
 
 
-    1 item
-    2 item
-        2.1 item
-        2.2 item
-        2.3 item
-            2.3.1 item
-            2.3.2 item
-            2.3.3 item
-        2.4 item
-    3 item
-    4 item
+     1 ta element
+     2 ta element
+         2.1 band
+         2.2-band
+         2.3-band
+             2.3.1-band
+             2.3.2-band
+             2.3.3-band
+         2.4-band
+     3 ta element
+     4 ta element
 
-    1 item
-    2 item
-
-
-CSS Counter Properties
-Property 	Description
-content 	Used with the ::before and ::after pseudo-elements, to insert generated content
-counter-increment 	Increments one or more counter values
-counter-reset 	Creates or resets one or more counters
-counter() 	Returns the current value of the named counter
+     1 ta element
+     2 ta element
 
 
-<kbd>return</kbd>[Back to table of contents](#homepage)
+CSS hisoblagich xususiyatlari
+Mulk tavsifi
+kontent Yaratilgan tarkibni kiritish uchun ::oldin va ::pseudo-elementlar bilan ishlatiladi
+counter-increment Bir yoki bir nechta hisoblagich qiymatlarini oshiradi
+counter-reset Bir yoki bir nechta hisoblagichlarni yaratadi yoki qayta o'rnatadi
+counter() Nomlangan hisoblagichning joriy qiymatini qaytaradi
+
+
+<kbd>qaytish</kbd>[Mundarijaga qaytish](#homepage)
 
 
 --------
 
 
-## CSS Website Layout
+## CSS veb-sayt tartibi
 
-Website Layout
+Veb-sayt tartibi
 
-A website is often divided into headers, menus, content and a footer:
+Veb-sayt ko'pincha sarlavhalar, menyular, kontent va altbilgiga bo'linadi:
 
-There are tons of different layout designs to choose from. However, the structure above, is one of the most 
+Tanlash uchun juda ko'p turli xil dizayn dizaynlari mavjud. Biroq, yuqoridagi tuzilma eng ko'p biridir
 
-common, and we will take a closer look at it in this tutorial.
+keng tarqalgan va biz buni ushbu qo'llanmada batafsil ko'rib chiqamiz.
 
 
-Header
+Sarlavha
 
-A header is usually located at the top of the website (or right below a top navigation menu). It often 
+Sarlavha odatda veb-saytning yuqori qismida (yoki yuqori navigatsiya menyusi ostida) joylashgan. Tez-tez
 
-contains a logo or the website name:
+logotip yoki veb-sayt nomini o'z ichiga oladi:
 
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>CSS Website Layout</title>
+<title>CSS veb-sayt tartibi</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-body {
-  margin: 0;
+<uslub>
+tana {
+   chegara: 0;
 }
 
-/* Style the header */
-.header {
-  background-color: #f1f1f1;
-  padding: 20px;
-  text-align: center;
+/* Sarlavhani uslublash */
+.sarlavha {
+   fon rangi: #f1f1f1;
+   to'ldirish: 20px;
+   matnni tekislash: markaz;
 }
 </style>
 </head>
-<body>
+<tana>
 
 <div class="header">
-  <h1>Header</h1>
+   <h1>Sarlavha</h1>
 </div>
 
 </body>
@@ -2987,677 +2977,671 @@ body {
 
 
 
-Navigation Bar
+Navigatsiya paneli
 
 
-A navigation bar contains a list of links to help visitors navigating through your website:
+Navigatsiya paneli tashrif buyuruvchilarga veb-saytingizda harakat qilishiga yordam beradigan havolalar ro'yxatini o'z ichiga oladi:
 
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>CSS Website Layout</title>
+<title>CSS veb-sayt tartibi</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
+<uslub>
 * {
-  box-sizing: border-box;
+   quti o'lchami: chegara qutisi;
 }
 
-body {
-  margin: 0;
+tana {
+   chegara: 0;
 }
 
-/* Style the header */
-.header {
-  background-color: #f1f1f1;
-  padding: 20px;
-  text-align: center;
+/* Sarlavhani uslublash */
+.sarlavha {
+   fon rangi: #f1f1f1;
+   to'ldirish: 20px;
+   matnni tekislash: markaz;
 }
 
-/* Style the top navigation bar */
+/* Yuqori navigatsiya panelini uslublash */
 .topnav {
-  overflow: hidden;
-  background-color: #333;
+   toshib ketish: yashirin;
+   fon rangi: #333;
 }
 
-/* Style the topnav links */
+/* Topnav havolalarini uslublash */
 .topnav a {
-  float: left;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
+   float: chap;
+   displey: blok;
+   rang: #f2f2f2;
+   matnni tekislash: markaz;
+   to'ldirish: 14px 16px;
+   matn-bezak: yo'q;
 }
 
-/* Change color on hover */
-.topnav a:hover {
-  background-color: #ddd;
-  color: black;
+/* sichqonchani ko'targanda rangni o'zgartiring */
+.topnav a: hover {
+   fon rangi: #ddd;
+   rang: qora;
 }
 </style>
 </head>
-<body>
+<tana>
 
 <div class="header">
-  <h1>Header</h1>
+   <h1>Sarlavha</h1>
 </div>
 
 <div class="topnav">
-  <a href="#">Link</a>
-  <a href="#">Link</a>
-  <a href="#">Link</a>
+   <a href="#">Havola</a>
+   <a href="#">Havola</a>
+   <a href="#">Havola</a>
 </div>
 
 </body>
 </html>
 
 
+Tarkib
 
-Content
+Ushbu bo'limdagi tartib ko'pincha maqsadli foydalanuvchilarga bog'liq. Eng keng tarqalgan tartib - bitta (yoki birlashtiruvchi
 
-The layout in this section, often depends on the target users. The most common layout is one (or combining 
+ular) quyidagilardan:
 
-them) of the following:
+     1-ustun (ko'pincha mobil brauzerlar uchun ishlatiladi)
+     2 ustunli (ko'pincha planshetlar va noutbuklar uchun ishlatiladi)
+     3 ustunli tartib (faqat ish stoli uchun ishlatiladi)
 
-    1-column (often used for mobile browsers)
-    2-column (often used for tablets and laptops)
-    3-column layout (only used for desktops)
-
-We will create a 3-column layout, and change it to a 1-column layout on smaller screens:
+Biz 3 ustunli tartibni yaratamiz va uni kichikroq ekranlarda 1 ustunli tartibga o'zgartiramiz:
 
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>CSS Website Layout</title>
+<title>CSS veb-sayt tartibi</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
+<uslub>
 * {
-  box-sizing: border-box;
+   quti o'lchami: chegara qutisi;
 }
 
-body {
-  margin: 0;
+tana {
+   chegara: 0;
 }
 
-/* Style the header */
-.header {
-  background-color: #f1f1f1;
-  padding: 20px;
-  text-align: center;
+/* Sarlavhani uslublash */
+.sarlavha {
+   fon rangi: #f1f1f1;
+   to'ldirish: 20px;
+   matnni tekislash: markaz;
 }
 
-/* Style the top navigation bar */
+/* Yuqori navigatsiya panelini uslublash */
 .topnav {
-  overflow: hidden;
-  background-color: #333;
+   toshib ketish: yashirin;
+   fon rangi: #333;
 }
 
-/* Style the topnav links */
+/* Topnav havolalarini uslublash */
 .topnav a {
-  float: left;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
+   float: chap;
+   displey: blok;
+   rang: #f2f2f2;
+   matnni tekislash: markaz;
+   to'ldirish: 14px 16px;
+   matn-bezak: yo'q;
 }
 
-/* Change color on hover */
-.topnav a:hover {
-  background-color: #ddd;
-  color: black;
+/* sichqonchani ko'targanda rangni o'zgartiring */
+.topnav a: hover {
+   fon rangi: #ddd;
+   rang: qora;
 }
 
-/* Create three equal columns that floats next to each other */
-.column {
-  float: left;
-  width: 33.33%;
-  padding: 15px;
+/* Bir-birining yonida suzuvchi uchta teng ustun yarating */
+.ustun {
+   float: chap;
+   kengligi: 33,33%;
+   to'ldirish: 15px;
 }
 
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
+/* Ustunlardan keyingi floatlarni tozalash */
+.qator:keyin {
+   tarkib: "";
+   ko'rsatish: jadval;
+   aniq: ikkalasi ham;
 }
 
-/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
-@media screen and (max-width:600px) {
-  .column {
-    width: 100%;
-  }
+/* Ta’sirchan tartib – uchta ustunni yonma-yon emas, bir-birining ustiga qo‘yadi */
+@media ekrani va (maksimal kenglik: 600px) {
+   .ustun {
+     kengligi: 100%;
+   }
 }
 </style>
 </head>
-<body>
+<tana>
 
 <div class="header">
-  <h1>Header</h1>
-  <p>Resize the browser window to see the responsive effect.</p>
+   <h1>Sarlavha</h1>
+   <p>Ta'sirchan effektni ko'rish uchun brauzer oynasining o'lchamini o'zgartiring.</p>
 </div>
 
 <div class="topnav">
-  <a href="#">Link</a>
-  <a href="#">Link</a>
-  <a href="#">Link</a>
+   <a href="#">Havola</a>
+   <a href="#">Havola</a>
+   <a href="#">Havola</a>
 </div>
 
-<div class="row">
-  <div class="column">
-    <h2>Column</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus 
+<div class="satr">
+   <div class="ustun">
+     <h2>Ustun</h2>
+     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mesenatlar amet pretium urna o'tirishadi. Vivamus
 
-venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam 
+venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque Vehicula, Risus Eget Aliquam
 
-placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan 
+placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent sclerisque tortor sed accumsan
 
 convallis.</p>
-  </div>
+   </div>
   
-  <div class="column">
-    <h2>Column</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus 
+   <div class="ustun">
+     <h2>Ustun</h2>
+     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mesenatlar amet pretium urna o'tirishadi. Vivamus
 
-venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam 
+venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque Vehicula, Risus Eget Aliquam
 
-placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan 
+placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent sclerisque tortor sed accumsan
 
 convallis.</p>
-  </div>
+   </div>
   
-  <div class="column">
-    <h2>Column</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus 
+   <div class="ustun">
+     <h2>Ustun</h2>
+     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mesenatlar amet pretium urna o'tirishadi. Vivamus
 
-venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam 
+venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque Vehicula, Risus Eget Aliquam
 
-placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan 
+placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent sclerisque tortor sed accumsan
 
 convallis.</p>
-  </div>
+   </div>
 </div>
 
 </body>
 </html>
 
 
-Tip: To create a 2-column layout, change the width to 50%. To create a 4-column layout, use 25%, etc.
-Tip: See CSS Media Queries chapter to learn how the @media rule works
+Maslahat: 2 ustunli tartib yaratish uchun kenglikni 50% ga o'zgartiring. 4 ustunli tartibni yaratish uchun 25% va hokazolardan foydalaning.
+Maslahat: @media qoidasi qanday ishlashini bilish uchun CSS Media so'rovlari bo'limiga qarang
 
-Tip: A more modern way of creating column layouts, is to use CSS Flexbox. However, it is not supported in 
+Maslahat: Ustun maketlarini yaratishning zamonaviy usuli bu CSS Flexbox-dan foydalanishdir. Biroq, u qo'llab-quvvatlanmaydi
 
-Internet Explorer 10 and earlier versions. If you require IE6-10 support, use floats (as shown above). 
+Internet Explorer 10 va undan oldingi versiyalari. Agar sizga IE6-10 yordami kerak bo'lsa, floatlardan foydalaning (yuqorida ko'rsatilganidek).
 
 
 
-Unequal Columns
+Teng bo'lmagan ustunlar
 
-The main content is the biggest and the most important part of your site.
+Asosiy tarkib saytingizning eng katta va eng muhim qismidir.
 
-It is common with unequal column widths, so that most of the space is reserved for the main content. The 
+Bu teng bo'lmagan ustunlar kengligi bilan keng tarqalgan, shuning uchun bo'sh joyning katta qismi asosiy tarkib uchun ajratilgan. The
 
-side content (if any) is often used as an alternative navigation or to specify information relevant to the 
+yon kontent (agar mavjud bo'lsa) ko'pincha muqobil navigatsiya sifatida yoki tegishli ma'lumotlarni ko'rsatish uchun ishlatiladi
 
-main content. Change the widths as you like, only remember that it should add up to 100% in total:
-
+asosiy tarkib. Kengliklarni xohlaganingizcha o'zgartiring, faqat jami 100% gacha qo'shilishi kerakligini yodda tuting:
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>CSS Website Layout</title>
+<title>CSS veb-sayt tartibi</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
+<uslub>
 * {
-  box-sizing: border-box;
+   quti o'lchami: chegara qutisi;
 }
 
-body {
-  margin: 0;
+tana {
+   chegara: 0;
 }
 
-/* Style the header */
-.header {
-  background-color: #f1f1f1;
-  padding: 20px;
-  text-align: center;
+/* Sarlavhani uslublash */
+.sarlavha {
+   fon rangi: #f1f1f1;
+   to'ldirish: 20px;
+   matnni tekislash: markaz;
 }
 
-/* Style the top navigation bar */
+/* Yuqori navigatsiya panelini uslublash */
 .topnav {
-  overflow: hidden;
-  background-color: #333;
+   toshib ketish: yashirin;
+   fon rangi: #333;
 }
 
-/* Style the topnav links */
+/* Topnav havolalarini uslublash */
 .topnav a {
-  float: left;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
+   float: chap;
+   displey: blok;
+   rang: #f2f2f2;
+   matnni tekislash: markaz;
+   to'ldirish: 14px 16px;
+   matn-bezak: yo'q;
 }
 
-/* Change color on hover */
-.topnav a:hover {
-  background-color: #ddd;
-  color: black;
+/* sichqonchani ko'targanda rangni o'zgartiring */
+.topnav a: hover {
+   fon rangi: #ddd;
+   rang: qora;
 }
 
-/* Create three unequal columns that floats next to each other */
-.column {
-  float: left;
-  padding: 10px;
+/* Bir-birining yonida suzuvchi uchta teng bo'lmagan ustunlar yarating */
+.ustun {
+   float: chap;
+   to'ldirish: 10px;
 }
 
-/* Left and right column */
-.column.side {
-  width: 25%;
+/* Chap va o'ng ustun */
+.ustun.tomoni {
+   kengligi: 25%;
 }
 
-/* Middle column */
-.column.middle {
-  width: 50%;
+/* o'rta ustun */
+.ustun.middle {
+   kengligi: 50%;
 }
 
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
+/* Ustunlardan keyingi floatlarni tozalash */
+.qator:keyin {
+   tarkib: "";
+   ko'rsatish: jadval;
+   aniq: ikkalasi ham;
 }
 
-/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-  .column.side, .column.middle {
-    width: 100%;
-  }
+/* Ta’sirchan tartib – uchta ustunni yonma-yon emas, bir-birining ustiga qo‘yadi */
+@media ekrani va (maksimal kenglik: 600px) {
+   .ustun.yon, .ustun.oʻrta {
+     kengligi: 100%;
+   }
 }
 </style>
 </head>
-<body>
+<tana>
 
 <div class="header">
-  <h1>Header</h1>
-  <p>Resize the browser window to see the responsive effect.</p>
+   <h1>Sarlavha</h1>
+   <p>Ta'sirchan effektni ko'rish uchun brauzer oynasining o'lchamini o'zgartiring.</p>
 </div>
 
 <div class="topnav">
-  <a href="#">Link</a>
-  <a href="#">Link</a>
-  <a href="#">Link</a>
+   <a href="#">Havola</a>
+   <a href="#">Havola</a>
+   <a href="#">Havola</a>
 </div>
 
-<div class="row">
-  <div class="column side">
-    <h2>Side</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit..</p>
-  </div>
+<div class="satr">
+   <div class="ustun tomoni">
+     <h2>Yon</h2>
+     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit..</p>
+   </div>
   
-  <div class="column middle">
-    <h2>Main Content</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus 
+   <div class="ustun o'rtasi">
+     <h2>Asosiy tarkib</h2>
+     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mesenatlar amet pretium urna o'tirishadi. Vivamus
 
-venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam 
+venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque Vehicula, Risus Eget Aliquam
 
-placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan 
+placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent sclerisque tortor sed accumsan
 
 convallis.</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus 
+     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mesenatlar amet pretium urna o'tirishadi. Vivamus
 
-venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam 
+venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque Vehicula, Risus Eget Aliquam
 
-placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan 
+placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent sclerisque tortor sed accumsan
 
 convallis.</p>
-  </div>
+   </div>
   
-  <div class="column side">
-    <h2>Side</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit..</p>
-  </div>
+   <div class="ustun tomoni">
+     <h2>Yon</h2>
+     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit..</p>
+   </div>
 </div>
   
 </body>
 </html>
 
 
-Footer
+Altbilgi
 
-The footer is placed at the bottom of your page. It often contains information like copyright and contact 
+Altbilgi sahifangizning pastki qismida joylashgan. U ko'pincha mualliflik huquqi va aloqa kabi ma'lumotlarni o'z ichiga oladi
 
-info:
+ma'lumot:
 
 
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>CSS Website Layout</title>
+<title>CSS veb-sayt tartibi</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
+<uslub>
 * {
-  box-sizing: border-box;
+   quti o'lchami: chegara qutisi;
 }
 
-body {
-  margin: 0;
+tana {
+   chegara: 0;
 }
 
-/* Style the header */
-.header {
-  background-color: #f1f1f1;
-  padding: 20px;
-  text-align: center;
+/* Sarlavhani uslublash */
+.sarlavha {
+   fon rangi: #f1f1f1;
+   to'ldirish: 20px;
+   matnni tekislash: markaz;
 }
 
-/* Style the top navigation bar */
+/* Yuqori navigatsiya panelini uslublash */
 .topnav {
-  overflow: hidden;
-  background-color: #333;
+   toshib ketish: yashirin;
+   fon rangi: #333;
 }
 
-/* Style the topnav links */
+/* Topnav havolalarini uslublash */
 .topnav a {
-  float: left;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
+   float: chap;
+   displey: blok;
+   rang: #f2f2f2;
+   matnni tekislash: markaz;
+   to'ldirish: 14px 16px;
+   matn-bezak: yo'q;
 }
 
-/* Change color on hover */
-.topnav a:hover {
-  background-color: #ddd;
-  color: black;
+/* sichqonchani ko'targanda rangni o'zgartiring */
+.topnav a: hover {
+   fon rangi: #ddd;
+   rang: qora;
 }
 
-/* Create three unequal columns that floats next to each other */
-.column {
-  float: left;
-  padding: 10px;
+/* Bir-birining yonida suzuvchi uchta teng bo'lmagan ustunlar yarating */
+.ustun {
+   float: chap;
+   to'ldirish: 10px;
 }
 
-/* Left and right column */
-.column.side {
-  width: 25%;
+/* Chap va o'ng ustun */
+.ustun.tomoni {
+   kengligi: 25%;
 }
 
-/* Middle column */
-.column.middle {
-  width: 50%;
+/* o'rta ustun */
+.ustun.middle {
+   kengligi: 50%;
 }
 
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
+/* Ustunlardan keyingi floatlarni tozalash */
+.qator:keyin {
+   tarkib: "";
+   ko'rsatish: jadval;
+   aniq: ikkalasi ham;
 }
 
-/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-  .column.side, .column.middle {
-    width: 100%;
-  }
+/* Ta’sirchan tartib – uchta ustunni yonma-yon emas, bir-birining ustiga qo‘yadi */
+@media ekrani va (maksimal kenglik: 600px) {
+   .ustun.yon, .ustun.oʻrta {
+     kengligi: 100%;
+   }
 }
 
-/* Style the footer */
+/* Altbilgiga uslub */
 .footer {
-  background-color: #f1f1f1;
-  padding: 10px;
-  text-align: center;
+   fon rangi: #f1f1f1;
+   to'ldirish: 10px;
+   matnni tekislash: markaz;
 }
 </style>
 </head>
-<body>
+<tana>
 
 <div class="header">
-  <h1>Header</h1>
-  <p>Resize the browser window to see the responsive effect.</p>
+   <h1>Sarlavha</h1>
+   <p>Ta'sirchan effektni ko'rish uchun brauzer oynasining o'lchamini o'zgartiring.</p>
 </div>
 
 <div class="topnav">
-  <a href="#">Link</a>
-  <a href="#">Link</a>
-  <a href="#">Link</a>
+   <a href="#">Havola</a>
+   <a href="#">Havola</a>
+   <a href="#">Havola</a>
 </div>
 
-<div class="row">
-  <div class="column side">
-    <h2>Side</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit..</p>
-  </div>
+<div class="satr">
+   <div class="ustun tomoni">
+     <h2>Yon</h2>
+     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit..</p>
+   </div>
   
-  <div class="column middle">
-    <h2>Main Content</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus 
+   <div class="ustun o'rtasi">
+     <h2>Asosiy tarkib</h2>
+     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mesenatlar amet pretium urna o'tirishadi. Vivamus
 
-venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam 
+venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque Vehicula, Risus Eget Aliquam
 
-placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan 
+placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent sclerisque tortor sed accumsan
 
 convallis.</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus 
+     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mesenatlar amet pretium urna o'tirishadi. Vivamus
 
-venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam 
+venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque Vehicula, Risus Eget Aliquam
 
-placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan 
+placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent sclerisque tortor sed accumsan
 
 convallis.</p>
-  </div>
+   </div>
   
-  <div class="column side">
-    <h2>Side</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit..</p>
-  </div>
+   <div class="ustun tomoni">
+     <h2>Yon</h2>
+     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit..</p>
+   </div>
 </div>
 
 <div class="footer">
-  <p>Footer</p>
+   <p>Alt-bilgi</p>
 </div>
   
 </body>
 </html>
 
+Javob beruvchi veb-sayt tartibi
 
-Responsive Website Layout
+Yuqoridagi ba'zi CSS kodlaridan foydalanib, biz javob beruvchi veb-sayt tartibini yaratdik, u ikkitadan farq qiladi.
 
-By using some of the CSS code above, we have created a responsive website layout, which varies between two 
-
-columns and full-width columns depending on screen width:
+ekran kengligiga qarab ustunlar va to'liq kenglikdagi ustunlar:
 
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
+<uslub>
 * {
-  box-sizing: border-box;
+   quti o'lchami: chegara qutisi;
 }
 
-body {
-  font-family: Arial;
-  padding: 10px;
-  background: #f1f1f1;
+tana {
+   shrift oilasi: Arial;
+   to'ldirish: 10px;
+   fon: #f1f1f1;
 }
 
-/* Header/Blog Title */
-.header {
-  padding: 30px;
-  text-align: center;
-  background: white;
+/* Sarlavha/Blog sarlavhasi */
+.sarlavha {
+   to'ldirish: 30px;
+   matnni tekislash: markaz;
+   fon: oq;
 }
 
 .header h1 {
-  font-size: 50px;
+   shrift o'lchami: 50px;
 }
 
-/* Style the top navigation bar */
+/* Yuqori navigatsiya panelini uslublash */
 .topnav {
-  overflow: hidden;
-  background-color: #333;
+   toshib ketish: yashirin;
+   fon rangi: #333;
 }
 
-/* Style the topnav links */
+/* Topnav havolalarini uslublash */
 .topnav a {
-  float: left;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
+   float: chap;
+   displey: blok;
+   rang: #f2f2f2;
+   matnni tekislash: markaz;
+   to'ldirish: 14px 16px;
+   matn-bezak: yo'q;
 }
 
-/* Change color on hover */
-.topnav a:hover {
-  background-color: #ddd;
-  color: black;
+/* sichqonchani ko'targanda rangni o'zgartiring */
+.topnav a: hover {
+   fon rangi: #ddd;
+   rang: qora;
 }
 
-/* Create two unequal columns that floats next to each other */
-/* Left column */
-.leftcolumn {   
-  float: left;
-  width: 75%;
+/* Bir-birining yonida suzuvchi ikkita teng bo'lmagan ustunlar yarating */
+/* Chap ustun */
+.chap ustun {
+   float: chap;
+   kengligi: 75%;
 }
 
-/* Right column */
-.rightcolumn {
-  float: left;
-  width: 25%;
-  background-color: #f1f1f1;
-  padding-left: 20px;
+/* o'ng ustun */
+.o'ng ustun {
+   float: chap;
+   kengligi: 25%;
+   fon rangi: #f1f1f1;
+   padding-chap: 20px;
 }
 
-/* Fake image */
+/* Soxta rasm */
 .fakeimg {
-  background-color: #aaa;
-  width: 100%;
-  padding: 20px;
+   fon rangi: #aaa;
+   kengligi: 100%;
+   to'ldirish: 20px;
 }
 
-/* Add a card effect for articles */
-.card {
-  background-color: white;
-  padding: 20px;
-  margin-top: 20px;
+/* Maqolalar uchun karta effektini qo'shing */
+.karta {
+   fon rangi: oq;
+   to'ldirish: 20px;
+   yuqori chegara: 20px;
 }
 
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
+/* Ustunlardan keyingi floatlarni tozalash */
+.qator:keyin {
+   tarkib: "";
+   ko'rsatish: jadval;
+   aniq: ikkalasi ham;
 }
 
-/* Footer */
+/* Altbilgi */
 .footer {
-  padding: 20px;
-  text-align: center;
-  background: #ddd;
-  margin-top: 20px;
+   to'ldirish: 20px;
+   matnni tekislash: markaz;
+   fon: #ddd;
+   yuqori chegara: 20px;
 }
 
-/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each 
+/* Javob beruvchi tartib - ekran kengligi 800px dan kam bo'lsa, ikkita ustunni har birining ustiga qo'ying.
 
-other instead of next to each other */
-@media screen and (max-width: 800px) {
-  .leftcolumn, .rightcolumn {   
-    width: 100%;
-    padding: 0;
-  }
+bir-birining o'rniga boshqa */
+@media ekrani va (maksimal kenglik: 800px) {
+   .leftcolumn, .rightcolumn {
+     kengligi: 100%;
+     to'ldirish: 0;
+   }
 }
 
-/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of 
+/* Javob beruvchi tartib - ekran kengligi 400px dan kam bo'lsa, navigatsiya havolalarini tepaga joylashtiring.
 
-each other instead of next to each other */
-@media screen and (max-width: 400px) {
-  .topnav a {
-    float: none;
-    width: 100%;
-  }
+bir-birining o'rniga bir-birlari */
+@media ekrani va (maksimal kenglik: 400px) {
+   .topnav a {
+     float: yo'q;
+     kengligi: 100%;
+   }
 }
 </style>
 </head>
-<body>
+<tana>
 
 <div class="header">
-  <h1>My Website</h1>
-  <p>Resize the browser window to see the effect.</p>
+   <h1>Mening veb-saytim</h1>
+   <p>Effektni ko'rish uchun brauzer oynasining o'lchamini o'zgartiring.</p>
 </div>
 
 <div class="topnav">
-  <a href="#">Link</a>
-  <a href="#">Link</a>
-  <a href="#">Link</a>
-  <a href="#" style="float:right">Link</a>
+   <a href="#">Havola</a>
+   <a href="#">Havola</a>
+   <a href="#">Havola</a>
+   <a href="#" style="float:right">Havola</a>
 </div>
 
-<div class="row">
-  <div class="leftcolumn">
-    <div class="card">
-      <h2>TITLE HEADING</h2>
-      <h5>Title description, Dec 7, 2017</h5>
-      <div class="fakeimg" style="height:200px;">Image</div>
-      <p>Some text..</p>
-      <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do 
+<div class="satr">
+   <div class="leftcolumn">
+     <div class="card">
+       <h2>SARLI SAVOL</h2>
+       <h5>Sarlavha tavsifi, 2017-yil 7-dekabr</h5>
+       <div class="fakeimg" style="height:200px;">Rasm</div>
+       <p>Ba'zi matn..</p>
+       <p>Unt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do
 
-eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
+eiusmod tempor incididunt ut labore va doore magna aliqua. Ut enim ad minim veniam, quis nostrud
 
-exercitation ullamco.</p>
-    </div>
-    <div class="card">
-      <h2>TITLE HEADING</h2>
-      <h5>Title description, Sep 2, 2017</h5>
-      <div class="fakeimg" style="height:200px;">Image</div>
-      <p>Some text..</p>
-      <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do 
+mashqlar ullamco.</p>
+     </div>
+     <div class="card">
+       <h2>SARLI SAVOL</h2>
+       <h5>Sarlavha tavsifi, 2017-yil, 2-sentabr</h5>
+       <div class="fakeimg" style="height:200px;">Rasm</div>
+       <p>Ba'zi matn..</p>
+       <p>Unt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do
 
-eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
+eiusmod tempor incididunt ut labore va doore magna aliqua. Ut enim ad minim veniam, quis nostrud
 
-exercitation ullamco.</p>
-    </div>
-  </div>
-  <div class="rightcolumn">
-    <div class="card">
-      <h2>About Me</h2>
-      <div class="fakeimg" style="height:100px;">Image</div>
-      <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
-    </div>
-    <div class="card">
-      <h3>Popular Post</h3>
-      <div class="fakeimg"><p>Image</p></div>
-      <div class="fakeimg"><p>Image</p></div>
-      <div class="fakeimg"><p>Image</p></div>
-    </div>
-    <div class="card">
-      <h3>Follow Me</h3>
-      <p>Some text..</p>
-    </div>
-  </div>
+mashqlar ullamco.</p>
+     </div>
+   </div>
+   <div class="rightcolumn">
+     <div class="card">
+       <h2>Men haqimda</h2>
+       <div class="fakeimg" style="height:100px;">Rasm</div>
+       <p>Men haqimda ba'zi matn culpa qui officia deserunt mollit anim..</p>
+     </div>
+     <div class="card">
+       <h3>Mashhur post</h3>
+       <div class="fakeimg"><p>Rasm</p></div>
+       <div class="fakeimg"><p>Rasm</p></div>
+       <div class="fakeimg"><p>Rasm</p></div>
+     </div>
+     <div class="card">
+       <h3>Meni kuzatib boring</h3>
+       <p>Ba'zi matn..</p>
+     </div>
+   </div>
 </div>
 
 <div class="footer">
-  <h2>Footer</h2>
+   <h2>Alt-bilgi</h2>
 </div>
 
 </body>
 </html>
 
 
-<kbd>return</kbd>[Back to table of contents](#homepage)
+<kbd>qaytish</kbd>[Mundarijaga qaytish](#homepage)
 
 
 ------
-
-
-
