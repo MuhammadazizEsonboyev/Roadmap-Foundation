@@ -1,388 +1,386 @@
-## HTML IMAGES
+## HTML TASVIRLAR
 
-## IMAGES
+## TASVIR
 
 ```<img src="pic_trulli.jpg" alt="Italian Trulli">```
 
-Image tag is used to insert images in a webpage. Images are linked to a webpage not embeded. 
+Rasm tegi veb-sahifaga rasmlarni kiritish uchun ishlatiladi. Rasmlar o'rnatilmagan veb-sahifaga bog'langan.
 
-SRC attributes
-src - Specifies the path to the image
-alt - Specifies an alternate text for the image
+SRC atributlari
+src - tasvirga yo'lni belgilaydi
+alt - tasvir uchun muqobil matnni belgilaydi
 
-Syntax
-```<img src="url" alt="alternatetext">``` 
+Sintaksis
+```<img src="url" alt="alternatetext">```
 
-Browsers get image from a web server and inserts into the page each time yu load. Image stays in same spot in relation to a webpage...else the alt text shows up to indicate that the link is brocken.
+Brauzerlar veb-serverdan rasm oladi va har safar yuklanganda sahifaga kiritadi. Rasm veb-sahifaga nisbatan bir xil joyda qoladi... aks holda havola buzilganligini bildirish uchun pastki matn paydo bo'ladi.
 
-**Value of alt attribute shows in cases where: because of slow connection, an error in the src attribute, or if the user uses a screen reader which reads html code and reads out for the user...usually used by the visually impaired people.
+**Alt atributining qiymati quyidagi hollarda ko‘rsatiladi: sekin ulanish tufayli, src atributidagi xatolik yoki foydalanuvchi html kodni o‘qiydigan va foydalanuvchi uchun o‘qib chiqadigan ekranni o‘qish moslamasidan foydalansa...odatda ko‘zi ojizlar tomonidan foydalaniladi. odamlar.
 
-**You can also specify width and height in the style attribute of the image
+**Shuningdek, siz tasvirning uslub atributida kenglik va balandlikni belgilashingiz mumkin
 
- ```<img src="img_girl.jpg" alt="Girl in a jacket" style="width:500px;height:600px;">``` 
+  ```<img src="img_girl.jpg" alt="Kumtkadagi qiz" style="width:500px;height:600px;">```
 
-**With and height attribute as width and height attribute...which is always in pixels
- ```<img src="img_girl.jpg" alt="Girl in a jacket" width="500" height="600">``` 
+**Wi and height atributi kenglik va balandlik atributi sifatida... bu har doim pikselda
+  ```<img src="img_girl.jpg" alt="Kumtkadagi qiz" eni="500" balandligi="600">```
 
-**It is better to use style attribute so the stylesheet does not end up changing image size.
+**Uslublar jadvali tasvir hajmini o'zgartirmasligi uchun uslub atributidan foydalangan ma'qul.
 
 ```
 <!DOCTYPE html>
 <html>
 <head>
-<style>
+<uslub>
 img {
-  width: 100%;
+   kengligi: 100%;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<img src="html5.gif" alt="HTML5 Icon" width="128" height="128">
+<img src="html5.gif" alt="HTML5 belgisi" kengligi="128" balandligi="128">
 
-<img src="html5.gif" alt="HTML5 Icon" style="width:128px;height:128px;">
+<img src="html5.gif" alt="HTML5 belgisi" style="width:128px;height:128px;">
 
 </body>
-</html> 
+</html>
 ```
 
-**For images in the subfolder, you must include the folder name
+**Ichki jilddagi tasvirlar uchun siz jild nomini kiritishingiz kerak
 
-```<img src="/images/html5.gif" alt="HTML5 Icon" style="width:128px;height:128px;">``` 
+```<img src="/images/html5.gif" alt="HTML5 Icon" style="width:128px;height:128px;">```
 
-If your  site point to an external image on another server, specify full URL to point to the image.
+Agar saytingiz boshqa serverdagi tashqi rasmga ishora qilsa, tasvirga ishora qilish uchun toʻliq URL manzilini koʻrsating.
 
- ```mg src="https://www.w3schools.com/images/w3schools_green.jpg" alt="W3Schools.com">``` 
+  ```mg src="https://www.w3schools.com/images/w3schools_green.jpg" alt="W3Schools.com">```
 
-NB on external images: Might be removed by site owner anytime. Also getting permission may be necessary to avoid copyright violation
+Tashqi tasvirlarga eslatma: istalgan vaqtda sayt egasi tomonidan olib tashlanishi mumkin. Shuningdek, mualliflik huquqi buzilishining oldini olish uchun ruxsat olish kerak bo'lishi mumkin
 
-**Animated Images:: HTML allows GIFs
+**Animatsiyalangan rasmlar:: HTML GIF-larga ruxsat beradi
 
-```<img src="programming.gif" alt="Computer Man" style="width:48px;height:48px;">``` 
+```<img src="programming.gif" alt="Kompyuter odami" style="width:48px;height:48px;">```
 
-**Image as a tag:: Put <img> tag inside the <a> tag
+**Tasvirni teg sifatida:: <a> tegi ichiga <img> tegini qo'ying
 
 ```
 <a href="default.asp">
-  <img src="smiley.gif" alt="HTML tutorial" style="width:42px;height:42px;">
-</a> 
+   <img src="smiley.gif" alt="HTML qo'llanmasi" style="width:42px;height:42px;">
+</a>
 ```
-**Let image float to the right or to the left of a text using CSS float property
+**CSS float xususiyatidan foydalangan holda tasvirni matnning o‘ng yoki chap tomonida suzishga ruxsat bering
 ```
-<p><img src="smiley.gif" alt="Smiley face" style="float:right;width:42px;height:42px;">
-The image will float to the right of the text.</p>
+<p><img src="smiley.gif" alt="Tabassumli yuz" style="float:right;width:42px;height:42px;">
+Tasvir matnning o‘ng tomonida suzib yuradi.</p>
 
-<p><img src="smiley.gif" alt="Smiley face" style="float:left;width:42px;height:42px;">
-The image will float to the left of the text.</p> 
+<p><img src="smiley.gif" alt="Tabassumli yuz" style="float:left;width:42px;height:42px;">
+Rasm matnning chap tomonida suzib yuradi.</p>
 ```
-**Common image formats supported on a website
+** Veb-saytda qo'llab-quvvatlanadigan umumiy rasm formatlari
 
-bbreviation 	File Format 	File Extension
-APNG 	Animated Portable Network Graphics 	.apng
-GIF 	Graphics Interchange Format 	.gif
-ICO 	Microsoft Icon 	.ico, .cur
-JPEG 	Joint Photographic Expert Group image 	.jpg, .jpeg, .jfif, .pjpeg, .pjp
-PNG 	Portable Network Graphics 	.png
-SVG 	Scalable Vector Graphics 	.svg
+qisqartma Fayl formati fayl kengaytmasi
+APNG animatsion portativ tarmoq grafikasi .apng
+GIF grafik almashish formati .gif
+ICO Microsoft Icon .ico, .cur
+JPEG Joint Photographic Expert Group rasmi .jpg, .jpeg, .jfif, .pjpeg, .pjp
+PNG Portativ tarmoq grafikasi .png
+SVG Scalable vektor grafikasi .svg
 
 
-**Loading large images takes time and can slow down your webpage...so use images carefully.
+**Katta rasmlarni yuklash vaqt talab etadi va veb-sahifangizni sekinlashtirishi mumkin...shuning uchun rasmlardan ehtiyotkorlik bilan foydalaning.
 
-<kbd>return</kbd>[Back to table of contents](#homepage)
+<kbd>qaytish</kbd>[Mundarijaga qaytish](#homepage)
 
 
 ------- 
 
 
 
-## HTML IMAGES
+## HTML TASVIRLAR
 
-## IMAGES
+## TASVIR
 
 ```<img src="pic_trulli.jpg" alt="Italian Trulli">```
 
-Image tag is used to insert images in a webpage. Images are linked to a webpage not embeded. 
+Rasm tegi veb-sahifaga rasmlarni kiritish uchun ishlatiladi. Rasmlar o'rnatilmagan veb-sahifaga bog'langan.
 
-SRC attributes
-src - Specifies the path to the image
-alt - Specifies an alternate text for the image
+SRC atributlari
+src - tasvirga yo'lni belgilaydi
+alt - tasvir uchun muqobil matnni belgilaydi
 
-Syntax
-```<img src="url" alt="alternatetext">``` 
+Sintaksis
+```<img src="url" alt="alternatetext">```
 
-Browsers get image from a web server and inserts into the page each time yu load. Image stays in same spot in relation to a webpage...else the alt text shows up to indicate that the link is brocken.
+Brauzerlar veb-serverdan rasm oladi va har safar yuklanganda sahifaga kiritadi. Rasm veb-sahifaga nisbatan bir xil joyda qoladi... aks holda havola buzilganligini bildirish uchun pastki matn paydo bo'ladi.
 
-**Value of alt attribute shows in cases where: because of slow connection, an error in the src attribute, or if the user uses a screen reader which reads html code and reads out for the user...usually used by the visually impaired people.
+**Alt atributining qiymati quyidagi hollarda ko‘rsatiladi: sekin ulanish tufayli, src atributidagi xatolik yoki foydalanuvchi html kodni o‘qiydigan va foydalanuvchi uchun o‘qib chiqadigan ekranni o‘qish moslamasidan foydalansa...odatda ko‘zi ojizlar tomonidan foydalaniladi. odamlar.
 
-**You can also specify width and height in the style attribute of the image
+**Shuningdek, siz tasvirning uslub atributida kenglik va balandlikni belgilashingiz mumkin
 
- ```<img src="img_girl.jpg" alt="Girl in a jacket" style="width:500px;height:600px;">``` 
+  ```<img src="img_girl.jpg" alt="Kumtkadagi qiz" style="width:500px;height:600px;">```
 
-**With and height attribute as width and height attribute...which is always in pixels
- ```<img src="img_girl.jpg" alt="Girl in a jacket" width="500" height="600">``` 
+**Wi and height atributi kenglik va balandlik atributi sifatida... bu har doim pikselda
+  ```<img src="img_girl.jpg" alt="Kumtkadagi qiz" eni="500" balandligi="600">```
 
-**It is better to use style attribute so the stylesheet does not end up changing image size.
+**Uslublar jadvali tasvir hajmini o'zgartirmasligi uchun uslub atributidan foydalangan ma'qul.
 
 ```
 <!DOCTYPE html>
 <html>
 <head>
-<style>
+<uslub>
 img {
-  width: 100%;
+   kengligi: 100%;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<img src="html5.gif" alt="HTML5 Icon" width="128" height="128">
+<img src="html5.gif" alt="HTML5 belgisi" kengligi="128" balandligi="128">
 
-<img src="html5.gif" alt="HTML5 Icon" style="width:128px;height:128px;">
+<img src="html5.gif" alt="HTML5 belgisi" style="width:128px;height:128px;">
 
 </body>
-</html> 
+</html>
 ```
 
-**For images in the subfolder, you must include the folder name
+**Ichki jilddagi tasvirlar uchun siz jild nomini kiritishingiz kerak
 
-```<img src="/images/html5.gif" alt="HTML5 Icon" style="width:128px;height:128px;">``` 
+```<img src="/images/html5.gif" alt="HTML5 Icon" style="width:128px;height:128px;">```
 
-If your  site point to an external image on another server, specify full URL to point to the image.
+Agar saytingiz boshqa serverdagi tashqi rasmga ishora qilsa, tasvirga ishora qilish uchun toʻliq URL manzilini koʻrsating.
 
- ```mg src="https://www.w3schools.com/images/w3schools_green.jpg" alt="W3Schools.com">``` 
+  ```mg src="https://www.w3schools.com/images/w3schools_green.jpg" alt="W3Schools.com">```
 
-NB on external images: Might be removed by site owner anytime. Also getting permission may be necessary to avoid copyright violation
+Tashqi tasvirlarga eslatma: istalgan vaqtda sayt egasi tomonidan olib tashlanishi mumkin. Shuningdek, mualliflik huquqi buzilishining oldini olish uchun ruxsat olish kerak bo'lishi mumkin
 
-**Animated Images:: HTML allows GIFs
+**Animatsiyalangan rasmlar:: HTML GIF-larga ruxsat beradi
 
-```<img src="programming.gif" alt="Computer Man" style="width:48px;height:48px;">``` 
+```<img src="programming.gif" alt="Kompyuter odami" style="width:48px;height:48px;">```
 
-**Image as a tag:: Put <img> tag inside the <a> tag
+**Tasvirni teg sifatida:: <a> tegi ichiga <img> tegini qo'ying
 
 ```
 <a href="default.asp">
-  <img src="smiley.gif" alt="HTML tutorial" style="width:42px;height:42px;">
-</a> 
+   <img src="smiley.gif" alt="HTML qo'llanmasi" style="width:42px;height:42px;">
+</a>
 ```
-**Let image float to the right or to the left of a text using CSS float property
+**CSS float xususiyatidan foydalangan holda tasvirni matnning o‘ng yoki chap tomonida suzishga ruxsat bering
 ```
-<p><img src="smiley.gif" alt="Smiley face" style="float:right;width:42px;height:42px;">
-The image will float to the right of the text.</p>
+<p><img src="smiley.gif" alt="Tabassumli yuz" style="float:right;width:42px;height:42px;">
+Tasvir matnning o‘ng tomonida suzib yuradi.</p>
 
-<p><img src="smiley.gif" alt="Smiley face" style="float:left;width:42px;height:42px;">
-The image will float to the left of the text.</p> 
+<p><img src="smiley.gif" alt="Tabassumli yuz" style="float:left;width:42px;height:42px;">
+Rasm matnning chap tomonida suzib yuradi.</p>
 ```
-**Common image formats supported on a website
+** Veb-saytda qo'llab-quvvatlanadigan umumiy rasm formatlari
 
-bbreviation 	File Format 	File Extension
-APNG 	Animated Portable Network Graphics 	.apng
-GIF 	Graphics Interchange Format 	.gif
-ICO 	Microsoft Icon 	.ico, .cur
-JPEG 	Joint Photographic Expert Group image 	.jpg, .jpeg, .jfif, .pjpeg, .pjp
-PNG 	Portable Network Graphics 	.png
-SVG 	Scalable Vector Graphics 	.svg
+qisqartma Fayl formati fayl kengaytmasi
+APNG animatsion portativ tarmoq grafikasi .apng
+GIF grafik almashish formati .gif
+ICO Microsoft Icon .ico, .cur
+JPEG Joint Photographic Expert Group rasmi .jpg, .jpeg, .jfif, .pjpeg, .pjp
+PNG Portativ tarmoq grafikasi .png
+SVG Scalable vektor grafikasi .svg
 
 
-**Loading large images takes time and can slow down your webpage...so use images carefully.
+**Katta rasmlarni yuklash vaqt talab etadi va veb-sahifangizni sekinlashtirishi mumkin...shuning uchun rasmlardan ehtiyotkorlik bilan foydalaning.
 
-<kbd>return</kbd>[Back to table of contents](#homepage)
+<kbd>qaytish</kbd>[Mundarijaga qaytish](#homepage)
 
-## IMAGE MAP
-Image Maps::Allows you to perform actions depending on where in image  you click. You need an image, some html code that describes the clickable area. 
+## TASVIR XARITA
+Image Maps::Rasmning qayerini bosganingizga qarab amallarni bajarish imkonini beradi. Sizga rasm, bosiladigan maydonni tavsiflovchi html kod kerak.
 
-The image: Inserted using image tag, but you must add usemap attribute in this case.
-
-```
-<img src="workplace.jpg" alt="Workplace" usemap="#workmap">
-```
-
--The usemap value starts with a hash tag # followed by the name of the image map, and is used to create a relationship between the image and the image map.
-
-You can use any image as an image map.
-
--add a ```<map>``` element linked to the image using the name attribute.
+Rasm: Tasvir yorlig'i yordamida kiritilgan, ammo bu holda usemap atributini qo'shishingiz kerak.
 
 ```
-<map name="workmap">
+<img src="workplace.jpg" alt="Ish joyi" usemap="#ishchimap">
 ```
-name attribute must have the same value as the <img>'s usemap attribute
 
--Add clickable area to the image: You define the clickable area using an <area> element.
-* Define shape of the clickable area using any of these values: 
- rect - defines a rectangular region
- circle - defines a circular region
- poly - defines a polygonal region
- default - defines the entire region
+-Usermap qiymati # xesh-tegidan boshlanadi, undan keyin rasm xaritasi nomi keladi va rasm va tasvir xaritasi o'rtasida aloqa yaratish uchun ishlatiladi.
 
--Define coordinate to be able to place the clickable area onto the image.
+Tasvir xaritasi sifatida istalgan tasvirdan foydalanishingiz mumkin.
+
+-name atributidan foydalangan holda rasmga bog'langan ```<map>``` elementni qo`shing.
 
 ```
-Shape="rect"
+<map name="ishchi xaritasi">
 ```
-The coordinates for ```shape="rect"``` come in pairs, one for the x-axis (distance from left) and one for the y-axis(distance from top).
+name atributi <img> ning usemap atributi bilan bir xil qiymatga ega bo'lishi kerak
 
-So, the coordinates 34,44 is located 34 pixels from the left margin and 44 pixels from the top:
+-Rasmga bosiladigan maydon qo'shish: Siz bosiladigan maydonni <maydon> elementi yordamida belgilaysiz.
+* Quyidagi qiymatlardan birini ishlatib bosiladigan maydon shaklini aniqlang:
+  rect - to'rtburchaklar hududni belgilaydi
+  aylana - dumaloq hududni belgilaydi
+  poly - ko'pburchak mintaqani belgilaydi
+  standart - butun mintaqani belgilaydi
 
-The coordinates 270,350 is located 270 pixels from the left margin and 350 pixels from the top:
-
-
-```Shape="circle"```
-
-To add a circle area, first locate the coordinates of the center of the circle:
-
-337,300  
-
-then specify the radius: 44 pixels
-
-** 
-```
-<area shape="circle" coords="337, 300, 44" href="coffee.htm"> 
-``` 
-```Shape=poly"```
-
-The ```shape="poly"``` contains several coordinate points, which creates a shape formed with straight lines (a polygon).
-
-This can be used to create any shape. Such as a croissant. You have to find x and y coordinates for all edges of the croissant.
-
-* Each point has x and y...specify all the coordinates around the perimeter of the polygonal shape. 
-
- ```
- <area shape="poly" coords="140,121,181,116,204,160,204,222,191,270,140,329,85,355,58,352,37,322,40,259,103,161,128,147" href="croissant.htm">
- ``` 
-**You can also trigger a JS function by clicking the poissant shape.
-Add a click event to the <area> element to execute a JavaScript function:
+- Rasmga bosiladigan maydonni joylashtirish uchun koordinatani aniqlang.
 
 ```
- <map name="workmap">
-  <area shape="circle" coords="337,300,44" onclick="myFunction()">
+Shakl = "to'g'ri"
+```
+```shape="rect"``` uchun koordinatalar juft bo`lib, biri x o`qi (chapdan masofa) va biri y o`qi (yuqoridan masofa) uchundir.
+
+Shunday qilib, 34,44 koordinatalari chap chetidan 34 piksel va yuqoridan 44 piksel masofada joylashgan:
+
+270,350 koordinatalari chap chetidan 270 piksel va yuqoridan 350 piksel masofada joylashgan:
+
+
+``` Shakl="doira"```
+
+Doira maydonini qo'shish uchun avval doira markazining koordinatalarini toping:
+
+337,300
+
+keyin radiusni belgilang: 44 piksel
+
+**
+```
+<area shape="circle" coords="337, 300, 44" href="coffee.htm">
+```
+```Shape=poli"```
+
+```shape="poly"``` bir nechta koordinata nuqtalarini o`z ichiga oladi, ular to`g`ri chiziqlar (ko`pburchak) bilan hosil qilingan shaklni yaratadi.
+
+Bu har qanday shaklni yaratish uchun ishlatilishi mumkin. Kruvasan kabi. Kruvasanning barcha qirralari uchun x va y koordinatalarini topishingiz kerak.
+
+* Har bir nuqtada x va y ... ko'pburchak shaklning perimetri atrofidagi barcha koordinatalarni belgilang.
+
+  ```
+  <area shape="poly" coords="140,121,181,116,204,160,204,222,191,270,140,329,85,355,58,352,37,322,40,259,103,161,103,161,103,16141," href="m)
+  ```
+**Poissant shaklini bosish orqali JS funksiyasini ham ishga tushirishingiz mumkin.
+JavaScript funksiyasini bajarish uchun <area> elementiga bosish hodisasini qo'shing:
+
+```
+  <map name="ishchi xaritasi">
+   <area shape="circle" coords="337,300,44" onclick="myFunction()">
 </map>
 
-<script>
-function myFunction() {
-  alert("You clicked the coffee cup!");
+<skript>
+funktsiya myFunction() {
+   alert("Siz kofe stakanini bosdingiz!");
 }
-</script> 
+</script>
 ```
-You can use href with the function to inform user to confirm what they are trying to do before they follow the hyperlink on the picture.
+Rasmdagi giperhavolaga amal qilishdan oldin foydalanuvchi nima qilmoqchi bo'lganligini tasdiqlash uchun foydalanuvchini xabardor qilish uchun href funktsiyasidan foydalanishingiz mumkin.
 
-**Image Map summary: =
+**Rasm xaritasi xulosasi: =
 
 ```
-<img> 	Defines an image
-<map> 	Defines an image map
-<area> 	Defines a clickable area inside an image map
-<picture> 	Defines a container for multiple image resources
+<img> Tasvirni belgilaydi
+<map> Rasm xaritasini belgilaydi
+<maydon> Rasm xaritasi ichidagi bosiladigan maydonni belgilaydi
+<rasm> Bir nechta rasm resurslari uchun konteynerni belgilaydi
 ```
-<kbd>return</kbd>[Back to table of contents](#homepage)
+<kbd>qaytish</kbd>[Mundarijaga qaytish](#homepage)
 
-## Background Images
+## Fon rasmlari
 
-Background Images: Repeats itself if it is smaller 
+Fon rasmlari: Agar u kichikroq bo'lsa, o'zini takrorlaydi
 
-*Add background image on an HTML element using style attribute and css background-image.
+*Stil atributi va CSS fon tasviridan foydalangan holda HTML elementiga fon rasmini qo'shing.
 ```
- <div style="background-image: url('img_girl.jpg');"> 
+  <div style="background-image: url('img_girl.jpg');">
 ```
 
-**You can also specify background image in the style element of the head section
+**Shuningdek, siz fon tasvirini bosh qismining uslub elementida ham belgilashingiz mumkin
 ```
- <style>
+  <uslub>
 div {
-  background-image: url('img_girl.jpg');
+   fon rasmi: url('img_girl.jpg');
 }
-</style> 
+</style>
 ```
 
-**Adding background image for an entire page:specify background image on the body element
+**To‘liq sahifa uchun fon rasmini qo‘shish: tana elementida fon tasvirini belgilang
 ```
-<style>
-body {
-  background-image: url('img_girl.jpg');
+<uslub>
+tana {
+   fon rasmi: url('img_girl.jpg');
 }
-</style> 
+</style>
 ```
 
-**Background image repeat:: Background image smaller than the element will repeat itself, horizontally and vertically,until it reaches the end of the element. 
+**Fon tasvirini takrorlash:: Elementdan kichikroq fon tasviri element oxiriga yetguncha gorizontal va vertikal ravishda takrorlanadi.
 
 ```
-<style>
-body {
-  background-image: url('img_girl.jpg');
+<uslub>
+tana {
+   fon rasmi: url('img_girl.jpg');
 }
-</style> 
+</style>
 
-**You can set background repeat property to no repeat to prevent the background image from repeating itself. 
+**Fon tasvirini takrorlashning oldini olish uchun siz fonni takrorlash xususiyatini takrorlanmaydigan qilib sozlashingiz mumkin.
 
- <style>
-body {
-  background-image: url('example_img_girl.jpg');
-  background-repeat: no-repeat;
+  <uslub>
+tana {
+   fon rasmi: url('misol_img_girl.jpg');
+   fon-takrorlash: takrorlanmaslik;
 }
-</style> 
+</style>
 ```
 
-* Background Cover: You can set background-size property to cover to make background image to cover the entire element. set the background-attachment property to fixed to make sure the entire element is always covered...This keeps image original proportions. 
+* Fon qopqog'i: butun elementni qoplash uchun fon tasvirini yaratish uchun qoplash uchun fon o'lchami xususiyatini o'rnatishingiz mumkin. Butun element har doim qoplanishiga ishonch hosil qilish uchun background-attachment xususiyatini fixed ga sozlang... Bu tasvirning asl nisbatlarini saqlaydi.
 
 ```
-<style>
-body {
-  background-image: url('img_girl.jpg');
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
+<uslub>
+tana {
+   fon rasmi: url('img_girl.jpg');
+   fon-takrorlash: takrorlanmaslik;
+   fon-ilova: belgilangan;
+   fon o'lchami: qopqoq;
 ```
-** Background stretch::  Allows you to make the background image to stretch to fit the entire element. Set background-size property to 100% 100%
+** Fon cho‘zilishi:: Fon tasvirini butun elementga mos keladigan qilib cho‘zish imkonini beradi. Fon o'lchami xususiyatini 100% 100% ga o'rnating
 
 ```
- <style>
-body {
-  background-image: url('img_girl.jpg');
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: 100% 100%;
+  <uslub>
+tana {
+   fon rasmi: url('img_girl.jpg');
+   fon-takrorlash: takrorlanmaslik;
+   fon-ilova: belgilangan;
+   fon o'lchami: 100% 100%;
 }
-</style> 
+</style>
 ```
 
-<kbd>return</kbd>[Back to table of contents](#homepage)
-
+<kbd>qaytish</kbd>[Mundarijaga qaytish](#homepage)
 
 ------
 
 
+## CSS CSS QANDAY QO'SHISH MUMKIN
 
-## CSS HOW TO ADD CSS
-
-Browser formats html using the information in the style sheet or <style>
-
-
-External CSS::
-
-It is a file that you can use to change the style of an entire website. Each page of the website then 
-
-include <link> , in the <head> section, which contains a link to the external styling sheet that controls 
-
-the style of the whole document. You can create the external file with any text editor. This file should be 
-
-saved with a .css extension and the file must not contain any HTML tags. 
+Brauzer uslublar jadvalidagi yoki <style>dagi ma'lumotlardan foydalangan holda html-ni formatlaydi
 
 
-when "mystyle.css" contains the code:
+Tashqi CSS::
+
+Bu butun veb-sayt uslubini o'zgartirish uchun foydalanishingiz mumkin bo'lgan fayl. Keyin veb-saytning har bir sahifasi
+
+boshqaruvchi tashqi uslublar varag'iga havolani o'z ichiga olgan <head> bo'limiga <link> ni qo'shing
+
+butun hujjatning uslubi. Siz har qanday matn muharriri yordamida tashqi fayl yaratishingiz mumkin. Bu fayl bo'lishi kerak
+
+.css kengaytmasi bilan saqlangan va faylda HTML teglari bo'lmasligi kerak.
+
+
+"mystyle.css" kodini o'z ichiga olganida:
 
 ```
-body {
-  background-color: lightblue;
+tana {
+   fon rangi: ochiq ko'k;
 }
 
 h1 {
-  color: navy;
-  margin-left: 20px;
+   rang: ko'k;
+   chap chekka: 20px;
 }
   
 ```
 
 
-The mystyle can be inherited below:
+Mystyle quyida meros qilib olinishi mumkin:
   
 ```
 <!DOCTYPE html>
@@ -390,43 +388,43 @@ The mystyle can be inherited below:
 <head>
 <link rel="stylesheet" href="mystyle.css">
 </head>
-<body>
+<tana>
 
-<h1>This is a heading</h1>
-<p>This is a paragraph.</p>
+<h1>Bu sarlavha</h1>
+<p>Bu paragraf.</p>
 
 </body>
 </html>
 ```
 
-NB: No space between property value and it's unit. I.e use: 20px not 20 px
+Eslatma: Mulk qiymati va uning birligi o'rtasida bo'sh joy yo'q. Ya'ni foydalaning: 20 piksel emas, balki 20 piksel
 
 
-Internal CSS::
+Ichki CSS::
 
-Can be used if one single HTML page has a unique style. You should define inside the ```<style>``` element, inside 
+Bitta HTML sahifasi o'ziga xos uslubga ega bo'lsa foydalanish mumkin. Siz ```<style>``` element ichida, ichida belgilashingiz kerak
 
-the ```<head>``` section. Example of internal CSS is shown below:
+```<head>``` bo`limi. Ichki CSS misoli quyida ko'rsatilgan:
 
 ```
 !DOCTYPE html>
 <html>
 <head>
-<style>
-body {
-  background-color: linen;
+<uslub>
+tana {
+   fon rangi: zig'ir;
 }
 
 h1 {
-  color: maroon;
-  margin-left: 40px;
-} 
+   rang: to'q qizil;
+   chap chekka: 40px;
+}
 </style>
 </head>
-<body>
+<tana>
 
-<h1>This is a heading</h1>
-<p>This is a paragraph.</p>
+<h1>Bu sarlavha</h1>
+<p>Bu paragraf.</p>
 
 </body>
 </html>
@@ -435,225 +433,225 @@ h1 {
 
 Inline CSS::
 
-You can use an inline style to apply unique style to just a single element. To use inline styles, add the 
+Siz faqat bitta elementga noyob uslubni qo'llash uchun inline uslubdan foydalanishingiz mumkin. Inline uslublaridan foydalanish uchun qo'shing
 
-style attribute to the appropriate element. Style attribute can contain any of the CSS properties.
+mos elementga uslub atributi. Style atributi har qanday CSS xususiyatlarini o'z ichiga olishi mumkin.
 
 ```
 <!DOCTYPE html>
 <html>
-<body>
+<tana>
 
-<h1 style="color:blue;text-align:center;">This is a heading</h1>
-<p style="color:red;">This is a paragraph.</p>
+<h1 style="color:blue;text-align:center;">Bu sarlavha</h1>
+<p style="color:red;">Bu paragraf.</p>
 
 </body>
 </html>
 ```
 
-NB: And inline style denies you the benefits of a style sheet since you now have to edit the styling of 
+Eslatma: Inline uslub sizga uslublar jadvalining afzalliklarini rad etadi, chunki siz endi uslubni tahrirlashingiz kerak.
 
-elements individually. Only use CSS inline when necessary
-
-
-
-Multiple Style Sheets::
-
-If you have styles for same element in different style sheet, the last read style of sheet for the elements 
-
-is applied to the element.
+elementlar alohida. Faqat kerak bo'lganda CSS inline foydalaning
 
 
-if mystyle.css contains:
+
+Bir nechta uslublar jadvallari::
+
+Turli xil uslublar jadvalida bir xil element uchun uslublar mavjud bo'lsa, elementlar uchun oxirgi o'qilgan varaq uslubi
+
+elementga qo'llaniladi.
+
+
+mystyle.css faylida:
 
 ```
 h1 {
-  color: navy;
+   rang: ko'k;
 }
 
-and internal style sheet contains the following:
+va ichki uslublar jadvali quyidagilarni o'z ichiga oladi:
 
 
 h1 {
-  color: orange;   
+   rang: to'q sariq;
 }
 ```
 
-Case A: Internal style defined after the link to external style sheet,```<h1>``` elements will take an orange 
+A holi: tashqi uslublar jadvaliga havoladan keyin belgilangan ichki uslub,```<h1>``` elementlar to'q sariq rangga ega bo'ladi
 
-color since the internal style comes last
+rang, chunki ichki uslub oxirgi keladi
 
 ```
 <!DOCTYPE html>
 <html>
 <head>
 <link rel="stylesheet" type="text/css" href="mystyle.css">
-<style>
+<uslub>
 h1 {
-  color: orange;
+   rang: to'q sariq;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h1>This is a heading</h1>
-<p>The style of this document is a combination of an external stylesheet, and internal style</p>
+<h1>Bu sarlavha</h1>
+<p>Ushbu hujjatning uslubi tashqi uslublar jadvali va ichki uslubning kombinatsiyasidan iborat</p>
 
 </body>
 </html>
 ```
 
-Case B: If the internal style is defined before the link the external style sheet, then the ```<h1>``` elements 
+B holi: Agar ichki uslub tashqi uslublar jadvali havolasidan oldin aniqlangan bo'lsa, u holda ```<h1>``` elementlari
 
-will take the navy color defined in the style sheet. 
+uslublar jadvalida belgilangan ko'k rangni oladi.
 
 ```
 <!DOCTYPE html>
 <html>
 <head>
-<style>
+<uslub>
 h1 {
-  color: orange;
+   rang: to'q sariq;
 }
 </style>
 <link rel="stylesheet" type="text/css" href="mystyle.css">
 </head>
-<body>
+<tana>
 
-<h1>This is a heading</h1>
-<p>The style of this document is a combination of an external stylesheet, and internal style</p>
+<h1>Bu sarlavha</h1>
+<p>Ushbu hujjatning uslubi tashqi uslublar jadvali va ichki uslubning kombinatsiyasidan iborat</p>
 
 </body>
 </html>
 ```
 
 
-Cascading Order::
+Kaskad tartibi::
 
-When an HTML element has more than one style specified for it, all styles will 'cascade' into a new virtual 
+Agar HTML elementida bir nechta uslublar belgilangan bo'lsa, barcha uslublar yangi virtualga "kaskad" qiladi
 
-style sheet according to the rules below 1. has highest priority and 3. has the least.
+quyidagi qoidalarga muvofiq uslublar jadvali 1. eng yuqori ustuvorlikka ega va 3. eng kam.
 
 
-1. Inline style (inside an HTML element)
-2. External and internal style sheets (in the head section)
-3. Browser default
+1. Inline uslub (HTML elementi ichida)
+2. Tashqi va ichki uslublar jadvallari (bosh qismida)
+3. Brauzer standarti
 
-Inline style is highest priority and can override external styles and browser defaults.
+Inline uslub eng ustuvor hisoblanadi va tashqi uslublar va brauzer standartlarini bekor qilishi mumkin.
 
-<kbd>return</kbd>[Back to table of contents](#homepage)
+<kbd>qaytish</kbd>[Mundarijaga qaytish](#homepage)
   
 -------
 
-## CSS COMMENTS
+## CSS SHOXLARI
 
   
 
-They do not show in the browser but improve code readability:
+Ular brauzerda ko'rsatilmaydi, lekin kodni o'qishni yaxshilaydi:
 
 
-They may help you edit the source code later on. The comment is placed inside <style> element, starts with 
+Ular keyinchalik manba kodini tahrirlashda yordam berishi mumkin. Izoh <style> elementi ichiga joylashtiriladi, bilan boshlanadi
 
-```/* and ends with */```   and you can have the comment anywhere in the code you like.
+```/* va */``` bilan tugaydi va o`zingizga yoqqan kodning istalgan joyida sharh qoldirishingiz mumkin.
 
 ```
- /* This is a single-line comment */
+  /* Bu bir qatorli izoh */
 p {
-  color: red;
-} 
+   rang: qizil;
+}
 
 
-/* This is
-a multi-line
-comment */
+/* Bu
+ko'p qatorli
+izoh */
 
 
 p {
-  color: red;
-} 
+   rang: qizil;
+}
 ```
 
-HTML and CSS Comments
+HTML va CSS sharhlari
 
-The HTML comment is: ```<!--this is a comment--!>```. You can combine HTML style with a CSS for an element:
+HTML izohi: ```<!--bu sharh--!>```. Element uchun HTML uslubini CSS bilan birlashtirishingiz mumkin:
 
 ```
 <!DOCTYPE html>
 <html>
 <head>
-<style>
+<uslub>
 p {
-  color: red; /* Set text color to red */
+   rang: qizil; /* Matn rangini qizil rangga o'rnating */
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h2>My Heading</h2>
+<h2>Mening sarlavham</h2>
 
-<!-- These paragraphs will be red -->
-<p>Hello World!</p>
-<p>This paragraph is styled with CSS.</p>
-<p>HTML and CSS comments are not shown in the output.</p>
+<!-- Bu paragraflar qizil bo'ladi -->
+<p>Salom dunyo!</p>
+<p>Ushbu paragraf CSS uslubida yaratilgan.</p>
+<p>HTML va CSS sharhlari chiqishda ko'rsatilmaydi.</p>
 
 </body>
 </html>
 ```
-<kbd>return</kbd>[Back to table of contents](#homepage)
+<kbd>qaytish</kbd>[Mundarijaga qaytish](#homepage)
 
 
 --------
 
 
-## CSS COLORS
+## CSS RANGLARI
 
 
-Colors:: 
+Ranglar::
 
-You can specify color with predefined color names: RGB, HEX, HSL, RGBA, HSLA.
-
-
-CSS Color names: There are 140 supported standard color names. See the link below for the full list.
+Siz rangni oldindan belgilangan rang nomlari bilan belgilashingiz mumkin: RGB, HEX, HSL, RGBA, HSLA.
 
 
+CSS Rang nomlari: 140 ta qo'llab-quvvatlanadigan standart rang nomlari mavjud. Toʻliq roʻyxat uchun quyidagi havolaga qarang.
 
-CSS Background Color: Set the background color as shown below
+
+
+CSS fon rangi: fon rangini quyida ko'rsatilganidek o'rnating
   
 ```
-<h1 style="background-color:DodgerBlue;">Hello World</h1>
+<h1 style="background-color:DodgerBlue;">Salom dunyo</h1>
 
-<p style="background-color:Tomato;">
+<p style="background-color:Pomidor;">
 ```
 
-CSS Text Color: You can also set the color of the text as shown below:
+CSS matn rangi: Matn rangini quyida ko'rsatilganidek o'rnatishingiz mumkin:
 
 ```
-<h1 style="color:Tomato;">Hello World</h1>
+<h1 style="color:Tomato;">Salom dunyo</h1>
 <p style="color:DodgerBlue;">Lorem ipsum...</p>
-<p style="color:MediumSeaGreen;">Ut wisi enim...</p> 
+<p style="color:MediumSeaGreen;">Bu juda yaxshi...</p>
 ```
 
-CSS Border Color: Use can use this to change the color of the border (the box around a text). The
+CSS chegara rangi: Foydalanish chegara rangini (matn atrofidagi quti) o'zgartirish uchun undan foydalanishi mumkin. The
 
 ```
-<body>
+<tana>
 
-<h1 style="border: 2px solid Tomato;">Hello World</h1>
+<h1 style="border: 2px solid Pomidor;">Salom dunyo</h1>
 
-<h1 style="border: 2px solid DodgerBlue;">Hello World</h1>
+<h1 style="border: 2px solid DodgerBlue;">Salom dunyo</h1>
 
-<h1 style="border: 2px solid Violet;">Hello World</h1>
+<h1 style="border: 2px solid Violet;">Salom dunyo</h1>
 
 </body>
 ```
 
-CSS Color values
+CSS rang qiymatlari
 
-You can specify color using RGB values, HEX values, HSL values, and RGBA values, and HSLA values.
+Rangni RGB qiymatlari, HEX qiymatlari, HSL qiymatlari va RGBA qiymatlari va HSLA qiymatlari yordamida belgilashingiz mumkin.
 
 
 
-The three below are still tomato colors
+Quyidagi uchtasi hali ham pomidor ranglari
 
 ```
 rgb(255, 99, 71)
@@ -663,32 +661,32 @@ hsl(9, 100%, 64%)
 
 
 
-The below are tomato with 50% transparency:
+Quyida 50% shaffoflikdagi pomidor mavjud:
 
 ```
-rgba(255, 99, 71, 0.5)
-hsla(9, 100%, 64%, 0.5)
+rgba(255, 99, 71, 0,5)
+hsla(9, 100%, 64%, 0,5)
 ```
 
-See the application below:
+Quyidagi ilovaga qarang:
 ```
 <!DOCTYPE html>
 <html>
-<body>
+<tana>
 
-<p>Same as color name "Tomato":</p>
+<p>Rang nomi "Pomidor" bilan bir xil:</p>
 
 <h1 style="background-color:rgb(255, 99, 71);">rgb(255, 99, 71)</h1>
 <h1 style="background-color:#ff6347;">#ff6347</h1>
 <h1 style="background-color:hsl(9, 100%, 64%);">hsl(9, 100%, 64%)</h1>
 
-<p>Same as color name "Tomato", but 50% transparent:</p>
+<p>Rang nomi "Pomidor" bilan bir xil, lekin 50% shaffof:</p>
 <h1 style="background-color:rgba(255, 99, 71, 0.5);">rgba(255, 99, 71, 0.5)</h1>
 <h1 style="background-color:hsla(9, 100%, 64%, 0.5);">hsla(9, 100%, 64%, 0.5)</h1>
 
-<p>In addition to the predefined color names, colors can be specified using RGB, HEX, HSL, or even 
+<p>Oldindan belgilangan rang nomlariga qo'shimcha ravishda ranglarni RGB, HEX, HSL yoki hatto belgilash mumkin
 
-transparent colors using RGBA or HSLA color values.</p>
+RGBA yoki HSLA rang qiymatlaridan foydalangan holda shaffof ranglar.</p>
 
 </body>
 </html>
@@ -698,172 +696,172 @@ transparent colors using RGBA or HSLA color values.</p>
 
 CSS RGB::
 
-RGB Value: RGB rep red, green, and blue light sources
+RGB qiymati: RGB vakili qizil, yashil va ko'k yorug'lik manbalari
 
 ```
-format: rgb(red_value,green_value,blue_value)
+format: rgb (qizil_qiymat, yashil_qiymat, ko'k_qiymat)
 
 ```
-Each of the color values range from 0 to 255
+Rang qiymatlarining har biri 0 dan 255 gacha
 
-```red= rgb(255,0,0);``` since red color is max while blue and green are absent.
+```red= rgb(255,0,0);``` chunki qizil rang maksimal, ko`k va yashil esa yo`q.
 
 
-```black=rgb(0,0,0);``` since there is absence of light
+```qora=rgb(0,0,0);``` chunki yorug`lik yo`q
 
-```white=rgb(255,255,255);``` since there is an excess of all the lights...no color shows
+```white=rgb(255,255,255);``` chunki barcha chiroqlar ko`p... rang ko`rsatilmaydi
 
-```grey=rgb(x,x,x);``` equal color values produce grey. So, you have black at ```rgb(0,0,0)```, and white at ```rgb(255,255,255)```.Every other equal mix between 0 and 255 is grey but to different extent. The closer the equal 
+```grey=rgb(x,x,x);``` teng rang qiymatlari kul rang hosil qiladi. Shunday qilib, sizda ```rgb(0,0,0)``` qora rang va ```rgb(255,255,255)``` da oq rang bor. 0 va 255 orasidagi har bir teng aralash kulrang, lekin har xil darajada. Qanchalik yaqin bo'lsa, shunchalik teng
 
-values are to zero the darker the grey color is. 
+qiymatlar nolga teng, kul rang qanchalik quyuqroq bo'lsa.
 
   
-RGBA Value: It includes alpha channel ( a measure of opacity) for each of the colors. 
+RGBA qiymati: U ranglarning har biri uchun alfa-kanalni (shaffoflik o'lchovi) o'z ichiga oladi.
 
-format: rgba(red_value,green_value,blue_value,alpha)
+format: rgba (qizil_qiymat, yashil_qiymat, ko'k_qiymat, alfa)
 
-Fully transparent: alpha=0.0
-Not transparent at all: alpha=1.0
-
-
-
-CSS HEX COLORS::
-
-hexadecimal color format: #RRGGBB   (RR=RED, GG=GREEN, BB=BLUE)
-
-The hexadecimal integers specify the component of the color. 
+To'liq shaffof: alfa=0,0
+Hech qanday shaffof emas: alfa=1,0
 
 
-HEX Value ranges from  00 to ff, just like decimal ranges from 0 to 255
+
+CSS HEX RANGLARI::
+
+o‘n oltilik rang formati: #RRGGBB (RR=QIZIL, GG=YASIL, BB=KO‘K)
+
+O'n oltilik butun sonlar rangning komponentini belgilaydi.
 
 
-#ff0000=red because red is set to max while green and blue are set to zero. 
-
-#000000: black because no color light present
-
-#ffffff: white because max color light present in all the cases.
-
-Any equal values between 000000 and ffffff gives grey
-
-#787878=grey
+HEX qiymati 0 dan ff gacha, xuddi o'nlik 0 dan 255 gacha
 
 
-3 Digit HEX Value: It is a short form ofsome 6 digit hex codes 
-The format of the 3 digit hex code is: #rgb
+#ff0000=qizil, chunki qizil rang maksimal, yashil va ko'k esa nolga o'rnatiladi.
 
-You can only use the 3digit hex code when both red, green, and blue component values are the same for 
+#000000: qora, chunki rangli yorug'lik yo'q
 
-example:
+#ffffff: oq, chunki barcha holatlarda maksimal rang yorug'lik mavjud.
 
-body {
-  background-color: #fc9; /* same as #ffcc99 */
+000000 va ffffff orasidagi har qanday teng qiymatlar kulrang rang beradi
+
+#787878=kulrang
+
+
+3 raqamli HEX qiymati: Bu 6 xonali olti raqamli kodlarning qisqa shaklidir
+3 xonali hex kod formati: #rgb
+
+Qizil, yashil va ko‘k komponent qiymatlari bir xil bo‘lgandagina siz 3 raqamli hex kodidan foydalanishingiz mumkin
+
+misol:
+
+tana {
+   fon rangi: #fc9; /* #ffcc99 bilan bir xil */
 }
 
 h1 {
-  color: #f0f; /* same as #ff00ff */
+   rang: #f0f; /* #ff00ff bilan bir xil */
 }
 
 p {
-  color: #b58; /* same as #bb5588 */
+   rang: #b58; /* #bb5588 bilan bir xil */
 }
 
 
 
 
-CSS HSL Colors::
+CSS HSL ranglari::
 
 HSL = Hue, Saturation, Lightness
 
 
-format: hsl(hue, saturation, lightness)
+format: hsl (rang, to'yinganlik, yorug'lik)
 
 
-Hue=Degree on color wheel from  0 to 360 ( Hue=0 (Red), Hue=120(Green), Hue=240(Blue))
+Rang = 0 dan 360 gacha bo'lgan rang g'ildiragidagi daraja ( Hue = 0 (Qizil), Hue = 120 (Yashil), Hue = 240 (Moviy))
 
-Saturation: Percentage value from shade of gray (0%) to full color(100%)
+Toʻyinganlik: kul rangdan (0%) toʻliq ranggacha (100%) foiz qiymati
 
-LIghtness: Percentage value from Black(0%) to white(100%), to neither white or black (50%)
-
-
-
-Saturation::: Intensity of a color. Pure color+no shades of gray=100%, Gray+invisible color=50%, Completely 
-
-gray=0% and you can no longer see the color
+Yorug'lik: Qoradan (0%) oq ranggacha (100%), oq yoki qora emas (50%) foiz qiymati
 
 
-Lightness: CAn be described by how much light you want give the color. No light( black)=0%, Neither light 
 
-nor dark=50%, full lightness (white) = 100%
+To'yinganlik::: Rangning intensivligi. Sof rang+kulrang soyalarsiz=100%, Kulrang+koʻrinmas rang=50%, Toʻliq
 
-
-Shades of gray involves setting hue and saturation to zero and then adjusting lightness from 0% to 100% to 
-
-get darker/lighter shades. 
-
-hsl(0%,0%,0%)=black
-
-hsl(0%,0%,100%)=white
-hsl(0%,0%,47%)=grey
+kulrang = 0% va siz endi rangni ko'ra olmaysiz
 
 
-HsLA Value::: They are an extension of the HSL color values by including an alpha channel
+Yengillik: rang berishni qanchalik yorug'lik bilan ta'riflash mumkin. Yorug'lik yo'q (qora) = 0%, yorug'lik ham yo'q
 
-hsla(hue, saturation, lightness, alpha)
+na qorong'i = 50%, to'liq ochiqlik (oq) = 100%
 
 
-<kbd>return</kbd>[Back to table of contents](#homepage)
+Kulrang soyalar rang va to'yinganlikni nolga o'rnatishni va keyin yorug'likni 0% dan 100% gacha sozlashni o'z ichiga oladi.
+
+quyuqroq / engilroq soyalarni oling.
+
+hsl(0%,0%,0%)=qora
+
+hsl(0%,0%,100%)=oq
+hsl(0%,0%,47%)=kulrang
+
+
+HsLA Value::: Ular alfa kanalini o'z ichiga olgan HSL rang qiymatlarining kengaytmasi
+
+hsla(rang, toʻyinganlik, yengillik, alfa)
+
+
+<kbd>qaytish</kbd>[Mundarijaga qaytish](#homepage)
 
 
 ---------
 
 
-## CSS Box Model
+## CSS qutisi modeli
 
-All html elements can be considered to be boxes. The box model wraps around every HTML element and consists 
+Barcha html elementlarini qutilar deb hisoblash mumkin. Quti modeli har bir HTML elementini o'rab oladi va undan iborat
 
-of margins, borders, padding, and the actual content ( when you go from outside the element to inside the 
+hoshiyalar, hoshiyalar, toʻldirish va haqiqiy tarkib (element tashqarisidan ichkariga oʻtganingizda)
 
-element. 
+element.
 
 
 
-Explanation of the different parts:
+Turli qismlarni tushuntirish:
 
-    Content - The content of the box, where text and images appear
-    Padding - Clears an area around the content. The padding is transparent
-    Border - A border that goes around the padding and content
-    Margin - Clears an area outside the border. The margin is transparent
+     Kontent - matn va tasvirlar paydo bo'ladigan qutining mazmuni
+     To'ldirish - kontent atrofidagi maydonni tozalaydi. Qoplama shaffof
+     Chegara - to'ldirish va tarkibni aylanib o'tadigan chegara
+     Chegara - chegaradan tashqaridagi maydonni tozalaydi. Chegara shaffof
 
-For example,
+Masalan,
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
+<uslub>
 div {
-  background-color: lightgrey;
-  width: 300px;
-  border: 15px solid green;
-  padding: 50px;
-  margin: 20px;
+   fon rangi: och kulrang;
+   kengligi: 300px;
+   chegara: 15px qattiq yashil;
+   to'ldirish: 50px;
+   chegara: 20px;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h2>Demonstrating the Box Model</h2>
+<h2>Boks modelini namoyish qilish</h2>
 
-<p>The CSS box model is essentially a box that wraps around every HTML element. It consists of: borders, 
+<p>CSS qutisi modeli aslida har bir HTML elementini oʻrab oladigan qutidir. U quyidagilardan iborat: chegaralar,
 
-padding, margins, and the actual content.</p>
+toʻldirish, chetlari va haqiqiy kontent.</p>
 
-<div>This text is the content of the box. We have added a 50px padding, 20px margin and a 15px green border. 
+<div>Ushbu matn qutining mazmunidir. Biz 50px toʻldirish, 20px chekka va 15px yashil chegara qoʻshdik.
 
-Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+Ut enim ad minim veniam, quis nostrud exercitation ullamco workis nisi ut aliquip ex ea commodo consequat.
 
-Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
 
-Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est 
+Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
 
 laborum.</div>
 
@@ -871,295 +869,294 @@ laborum.</div>
 </html>
 
 
-Width and height of an element
+Elementning kengligi va balandligi
 
-The knowledge of the box model allows you to set the width and height of website elements correctly in al 
+Quti modeli haqidagi bilim veb-sayt elementlarining kengligi va balandligini alda to'g'ri o'rnatish imkonini beradi
 
-browsers.
-
-
-Important: When you set the width and height properties of an element with CSS, you just set the width and 
-
-height of the content area. To calculate the full size of an element, you must also add padding, borders and 
-
-margins.
+brauzerlar.
 
 
-In the script below,
+Muhim: CSS yordamida elementning kengligi va balandligi xususiyatlarini o'rnatganingizda, siz shunchaki kenglik va
+
+tarkib maydonining balandligi. Elementning to'liq hajmini hisoblash uchun siz to'ldirish, chegaralar va qo'shishingiz kerak
+
+chegaralar.
+
+
+Quyidagi skriptda,
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
+<uslub>
 div {
-  width: 320px;
-  padding: 10px;
-  border: 5px solid gray;
-  margin: 0;
+   kengligi: 320px;
+   to'ldirish: 10px;
+   chegara: 5px qattiq kulrang;
+   chegara: 0;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h2>Calculate the total width:</h2>
+<h2>Umumiy kenglikni hisoblang:</h2>
 
 <img src="klematis4_big.jpg" width="350" height="263" alt="Klematis">
-<div>The picture above is 350px wide. The total width of this element is also 350px.</div>
+<div>Yuqoridagi rasmning kengligi 350px. Ushbu elementning umumiy kengligi ham 350px ni tashkil qiladi.</div>
 
 </body>
 </html>
 
-The total width can be calculated as shown below,
+Umumiy kenglik quyida ko'rsatilgandek hisoblanishi mumkin,
 
 
-320px (width)
-+ 20px (left + right padding)
-+ 10px (left + right border)
-+ 0px (left + right margin)
-= 350px 
+320px (kenglik)
++ 20px (chap + o'ng to'ldirish)
++ 10px (chap + o'ng chegara)
++ 0px (chap + o'ng chekka)
+= 350px
 
 
-The total width of an element should be calculated like this:
+Elementning umumiy kengligi quyidagicha hisoblanishi kerak:
 
-Total element width = width + left padding + right padding + left border + right border + left margin + 
+Elementning umumiy kengligi = kenglik + chap to'ldirish + o'ng to'ldirish + chap chegara + o'ng chegara + chap chet +
 
-right margin
+o'ng chekka
 
-Similarly, the total height of an element should be calculated as shown below:
+Xuddi shunday, elementning umumiy balandligi quyida ko'rsatilgandek hisoblanishi kerak:
 
-Total element height = height + top padding + bottom padding + top border + bottom border + top margin + 
+Elementning umumiy balandligi = balandlik + yuqori to'ldirish + pastki to'ldirish + yuqori chegara + pastki chegara + yuqori chet +
 
-bottom margin
+pastki chegara
 
-<kbd>return</kbd>[Back to table of contents](#homepage)
+<kbd>qaytish</kbd>[Mundarijaga qaytish](#homepage)
 
 
 ---------
 
 
 
-## CSS Outline
+## CSS konturi
 
 
-Outline::
+Reja::
 
-An outline is a line drawn around the elements (outside borders) to make the element "stand out"..
+Kontur - bu elementni "ajratib turishi" uchun elementlar (tashqi chegaralar) atrofida chizilgan chiziq.
 
-An outline can be created around an element using the script shown below:
+Quyida ko'rsatilgan skript yordamida element atrofida kontur yaratilishi mumkin:
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
+<uslub>
 p {
-  border: 2px solid black;
-  outline: #4CAF50 solid 2px;
-  margin: auto;  
-  padding: 20px;
-  text-align: center;
+   chegara: 2px qattiq qora;
+   kontur: #4CAF50 qattiq 2px;
+   chegara: avtomatik;
+   to'ldirish: 20px;
+   matnni tekislash: markaz;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h2>CSS Outline</h2>
-<p>This element has a 2px black border and a green outline with a width of 10px.</p>
+<h2>CSS konturi</h2>
+<p>Bu elementda 2px qora hoshiya va kengligi 10px yashil kontur mavjud.</p>
 
 </body>
 </html>
 
 
 
-The outline properties of CSS include,
+CSS-ning asosiy xususiyatlari quyidagilarni o'z ichiga oladi:
 
-    outline-style
-    outline-color
-    outline-width
-    outline-offset
-    outline
-
-
-Note: Outline differs from borders! Unlike border, the outline is drawn outside the element's border, and 
-
-may overlap other content. Also, the outline is NOT a part of the element's dimensions; the element's total 
-
-width and height is not affected by the width of the outline.
+     kontur uslubi
+     kontur-rang
+     kontur kengligi
+     kontur-ofset
+     kontur
 
 
-CSS Outline Style
+Eslatma: Kontur chegaralardan farq qiladi! Chegaradan farqli o'laroq, kontur element chegarasidan tashqarida chiziladi va
 
-The outline-style property specifies the style of the outline, and can have one of the following values:
+boshqa kontent bilan bir-biriga mos kelishi mumkin. Bundan tashqari, kontur element o'lchamlarining bir qismi EMAS; elementning umumiy miqdori
 
-    dotted - Defines a dotted outline
-    dashed - Defines a dashed outline
-    solid - Defines a solid outline
-    double - Defines a double outline
-    groove - Defines a 3D grooved outline
-    ridge - Defines a 3D ridged outline
-    inset - Defines a 3D inset outline
-    outset - Defines a 3D outset outline
-    none - Defines no outline
-    hidden - Defines a hidden outline
+kenglik va balandlik konturning kengligidan ta'sirlanmaydi.
 
 
-The implementation of the above outlines is shown below:
+CSS kontur uslubi
+
+Outline-style xususiyati kontur uslubini belgilaydi va quyidagi qiymatlardan biriga ega bo'lishi mumkin:
+
+     nuqtali - nuqtali konturni belgilaydi
+     chiziqli - chiziqli konturni belgilaydi
+     qattiq - qattiq konturni belgilaydi
+     double - juft konturni belgilaydi
+     groove - 3D yivli konturni belgilaydi
+     ridge - 3D qirrali konturni belgilaydi
+     inset - 3D inset konturini belgilaydi
+     outset - 3D boshlang'ich konturini belgilaydi
+     none - hech qanday konturni belgilamaydi
+     yashirin - Yashirin konturni belgilaydi
+
+
+Yuqoridagi sxemalarni amalga oshirish quyida ko'rsatilgan:
 
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-p {outline-color:red;}
+<uslub>
+p {kontur-rang: qizil;}
 
-p.dotted {outline-style: dotted;}
-p.dashed {outline-style: dashed;}
-p.solid {outline-style: solid;}
-p.double {outline-style: double;}
-p.groove {outline-style: groove;}
-p.ridge {outline-style: ridge;}
-p.inset {outline-style: inset;}
-p.outset {outline-style: outset;}
+p.dotted {kontur uslubi: nuqta;}
+p.dashed {kontur uslubi: chiziqcha;}
+p.solid {kontur uslubi: qattiq;}
+p.double {kontur uslubi: double;}
+p.groove {kontur uslubi: groove;}
+p.ridge {kontur uslubi: tizma;}
+p.inset {kontur uslubi: inset;}
+p.outset {kontur uslubi: boshlang'ich;}
 </style>
 </head>
-<body>
+<tana>
 
-<h2>The outline-style Property</h2>
+<h2>Kontur tarzidagi xususiyat</h2>
 
-<p class="dotted">A dotted outline</p>
-<p class="dashed">A dashed outline</p>
-<p class="solid">A solid outline</p>
-<p class="double">A double outline</p>
-<p class="groove">A groove outline. The effect depends on the outline-color value.</p>
-<p class="ridge">A ridge outline. The effect depends on the outline-color value.</p>
-<p class="inset">An inset outline. The effect depends on the outline-color value.</p>
-<p class="outset">An outset outline. The effect depends on the outline-color value.</p>
+<p class="dotted">Nuqtali kontur</p>
+<p class="dashed">Chiziq kontur</p>
+<p class="solid">Yaxshi kontur</p>
+<p class="double">Qo'shaloq kontur</p>
+<p class="groove">Yuz konturi. Effekt kontur-rang qiymatiga bog'liq.</p>
+<p class="ridge">Tiz konturi. Effekt kontur-rang qiymatiga bog'liq.</p>
+<p class="inset">Kiritilgan kontur. Effekt kontur-rang qiymatiga bog'liq.</p>
+<p class="outset">Boshlang'ich kontur. Effekt kontur-rang qiymatiga bog'liq.</p>
 
 </body>
 </html>
 
 
-NB: Note: None of the other outline properties (which you will learn more about in the next chapters) will 
+Eslatma: Eslatma: Boshqa kontur xususiyatlarining hech biri (keyingi boblarda ko'proq bilib olasiz)
 
-have ANY effect unless the outline-style property is set!
-
-
-
-
-CSS Outline Width
-
-The width of the outline is specified using outline-width property, and this outline-width can have multiple 
-
-values:
+Agar kontur uslubi xususiyati o'rnatilmagan bo'lsa, HAR QANDAY ta'sirga ega bo'ling!
 
 
 
-    thin (typically 1px)
-    medium (typically 3px)
-    thick (typically 5px)
-    A specific size (in px, pt, cm, em, etc)
 
-An example of how to specify outline-width is shown below:
+CSS kontur kengligi
+
+Konturning kengligi outline-width xususiyati yordamida belgilanadi va bu kontur kengligi bir nechta bo'lishi mumkin
+
+qiymatlar:
+
+
+
+     yupqa (odatda 1px)
+     o'rtacha (odatda 3px)
+     qalin (odatda 5px)
+     Muayyan o'lcham (px, pt, sm, em va boshqalarda)
+
+Kontur kengligini qanday belgilashga misol quyida ko'rsatilgan:
 
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
+<uslub>
 p.ex1 {
-  border: 1px solid black;
-  outline-style: solid;
-  outline-color: red;
-  outline-width: thin;
+   chegara: 1px qattiq qora;
+   kontur uslubi: qattiq;
+   kontur rangi: qizil;
+   kontur kengligi: ingichka;
 }
 
 p.ex2 {
-  border: 1px solid black;
-  outline-style: solid;
-  outline-color: red;
-  outline-width: medium;
+   chegara: 1px qattiq qora;
+   kontur uslubi: qattiq;
+   kontur rangi: qizil;
+   kontur kengligi: o'rtacha;
 }
 
 p.ex3 {
-  border: 1px solid black;
-  outline-style: solid;
-  outline-color: red;
-  outline-width: thick;
+   chegara: 1px qattiq qora;
+   kontur uslubi: qattiq;
+   kontur rangi: qizil;
+   kontur kengligi: qalin;
 }
 
 p.ex4 {
-  border: 1px solid black;
-  outline-style: solid;
-  outline-color: red;
-  outline-width: 4px;
+   chegara: 1px qattiq qora;
+   kontur uslubi: qattiq;
+   kontur rangi: qizil;
+   kontur kengligi: 4px;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h2>The outline-width Property</h2>
+<h2>Kontur kengligi xossasi</h2>
 
-<p class="ex1">A thin outline.</p>
-<p class="ex2">A medium outline.</p>
-<p class="ex3">A thick outline.</p>
-<p class="ex4">A 4px thick outline.</p>
+<p class="ex1">Yupqa kontur.</p>
+<p class="ex2">O'rtacha kontur.</p>
+<p class="ex3">Qalin kontur.</p>
+<p class="ex4">4px qalinlikdagi kontur.</p>
 
 </body>
 </html>
 
 
 
-
-CSS Outline Color::
-
-
-CSS Outline Color
-
-The outline-color property is used to set the color of the outline.
-
-The color can be set by:
-
-    name - specify a color name, like "red"
-    HEX - specify a hex value, like "#ff0000"
-    RGB - specify a RGB value, like "rgb(255,0,0)"
-    HSL - specify a HSL value, like "hsl(0, 100%, 50%)"
-    invert - performs a color inversion (which ensures that the outline is visible, regardless of color 
-
-background)
+CSS kontur rangi::
 
 
-An example of the application of the outline-color property is shown below:
+CSS kontur rangi
+
+Outline-color xossasi kontur rangini belgilash uchun ishlatiladi.
+
+Rangni quyidagicha sozlash mumkin:
+
+     nom - "qizil" kabi rang nomini belgilang
+     HEX - "#ff0000" kabi olti burchakli qiymatni belgilang
+     RGB - RGB qiymatini belgilang, masalan, "rgb (255,0,0)"
+     HSL - "hsl(0, 100%, 50%)" kabi HSL qiymatini belgilang
+     invert - rangni o'zgartirishni amalga oshiradi (bu rangdan qat'iy nazar konturning ko'rinishini ta'minlaydi.
+
+fon)
+
+
+Outline-color xususiyatini qo'llash misoli quyida ko'rsatilgan:
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
+<uslub>
 p.ex1 {
-  border: 2px solid black;
-  outline-style: solid;
-  outline-color: red;
+   chegara: 2px qattiq qora;
+   kontur uslubi: qattiq;
+   kontur rangi: qizil;
 }
 
 p.ex2 {
-  border: 2px solid black;
-  outline-style: dotted;
-  outline-color: blue;
+   chegara: 2px qattiq qora;
+   kontur uslubi: nuqta;
+   kontur rangi: ko'k;
 }
 
 p.ex3 {
-  border: 2px solid black;
-  outline-style: outset;
-  outline-color: grey;
+   chegara: 2px qattiq qora;
+   kontur uslubi: boshlanish;
+   kontur rangi: kulrang;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h2>The outline-color Property</h2>
-<p>The outline-color property is used to set the color of the outline.</p>
+<h2>Kontur-rang xususiyati</h2>
+<p>Outline-color xususiyati kontur rangini belgilash uchun ishlatiladi.</p>
 
-<p class="ex1">A solid red outline.</p>
-<p class="ex2">A dotted blue outline.</p>
-<p class="ex3">An outset grey outline.</p>
+<p class="ex1">Yaxshi qizil kontur.</p>
+<p class="ex2">Nuqtali ko'k kontur.</p>
+<p class="ex3">Dastlabki kulrang kontur.</p>
 
 </body>
 </html>
@@ -1167,83 +1164,83 @@ p.ex3 {
 
 
 
-HEX Values
+HEX qiymatlari
 
-The hexadecimal value can be used to specify the color of the outline as shown below:
+O'n oltilik qiymat quyida ko'rsatilgandek kontur rangini belgilash uchun ishlatilishi mumkin:
 
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
+<uslub>
 p.ex1 {
-  border: 2px solid black;
-  outline-style: solid;
-  outline-color: #ff0000; /* red */
+   chegara: 2px qattiq qora;
+   kontur uslubi: qattiq;
+   kontur rangi: #ff0000; /* qizil */
 }
 
 p.ex2 {
-  border: 2px solid black;
-  outline-style: dotted;
-  outline-color: #0000ff; /* blue */
+   chegara: 2px qattiq qora;
+   kontur uslubi: nuqta;
+   kontur rangi: #0000ff; /* ko'k */
 }
 
 p.ex3 {
-  border: 2px solid black;
-  outline-style: solid;
-  outline-color: #bbbbbb; /* grey */
+   chegara: 2px qattiq qora;
+   kontur uslubi: qattiq;
+   kontur rangi: #bbbbbb; /* kulrang */
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h2>The outline-color Property</h2>
-<p>The color of the outline can also be specified using a hexadecimal value (HEX):</p>
+<h2>Kontur-rang xususiyati</h2>
+<p>Kontur rangini oʻn oltilik qiymat (HEX) yordamida ham belgilash mumkin:</p>
 
-<p class="ex1">A solid red outline.</p>
-<p class="ex2">A dotted blue outline.</p>
-<p class="ex3">A solid grey outline.</p>
+<p class="ex1">Yaxshi qizil kontur.</p>
+<p class="ex2">Nuqtali ko'k kontur.</p>
+<p class="ex3">Bir tekis kulrang kontur.</p>
 
 </body>
 </html>
 
 
-RGB Values
+RGB qiymatlari
 
-The RGB values can also be used to specify the color of the outline as shown below:
+RGB qiymatlari quyida ko'rsatilganidek, kontur rangini belgilash uchun ham ishlatilishi mumkin:
 
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
+<uslub>
 p.ex1 {
-  border: 2px solid black;
-  outline-style: solid;
-  outline-color: rgb(255, 0, 0); /* red */
+   chegara: 2px qattiq qora;
+   kontur uslubi: qattiq;
+   kontur rangi: rgb(255, 0, 0); /* qizil */
 }
 
 p.ex2 {
-  border: 2px solid black;
-  outline-style: dotted;
-  outline-color: rgb(0, 0, 255); /* blue */
+   chegara: 2px qattiq qora;
+   kontur uslubi: nuqta;
+   kontur rangi: rgb(0, 0, 255); /* ko'k */
 }
 
 p.ex3 {
-  border: 2px solid black;
-  outline-style: solid;
-  outline-color: rgb(187, 187, 187); /* grey */
+   chegara: 2px qattiq qora;
+   kontur uslubi: qattiq;
+   kontur rangi: rgb(187, 187, 187); /* kulrang */
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h2>The outline-color Property</h2>
-<p>The color of the outline can also be specified using RGB values:</p>
+<h2>Kontur-rang xususiyati</h2>
+<p>Kontur rangi RGB qiymatlari yordamida ham belgilanishi mumkin:</p>
 
-<p class="ex1">A solid red outline.</p>
-<p class="ex2">A dotted blue outline.</p>
-<p class="ex3">A solid grey outline.</p>
+<p class="ex1">Yaxshi qizil kontur.</p>
+<p class="ex2">Nuqtali ko'k kontur.</p>
+<p class="ex3">Bir tekis kulrang kontur.</p>
 
 </body>
 </html>
@@ -1251,44 +1248,44 @@ p.ex3 {
 
 
 
-HSL Values
+HSL qiymatlari
 
-The HSL values (hue, saturation, and lightness values) can also be used to specify the color of a CSS 
+HSL qiymatlari (rang, to'yinganlik va yorug'lik qiymatlari) CSS rangini belgilash uchun ham ishlatilishi mumkin.
 
-outline as shown below:
+quyida ko'rsatilgandek kontur:
 
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
+<uslub>
 p.ex1 {
-  border: 2px solid black;
-  outline-style: solid;
-  outline-color: hsl(0, 100%, 50%); /* red */
+   chegara: 2px qattiq qora;
+   kontur uslubi: qattiq;
+   kontur rangi: hsl(0, 100%, 50%); /* qizil */
 }
 
 p.ex2 {
-  border: 2px solid black;
-  outline-style: dotted;
-  outline-color: hsl(240, 100%, 50%); /* blue */
+   chegara: 2px qattiq qora;
+   kontur uslubi: nuqta;
+   kontur rangi: hsl(240, 100%, 50%); /* ko'k */
 }
 
 p.ex3 {
-  border: 2px solid black;
-  outline-style: solid;
-  outline-color: hsl(0, 0%, 73%); /* grey */
+   chegara: 2px qattiq qora;
+   kontur uslubi: qattiq;
+   kontur rangi: hsl(0, 0%, 73%); /* kulrang */
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h2>The outline-color Property</h2>
-<p>The color of the outline can also be specified using HSL values:</p>
+<h2>Kontur-rang xususiyati</h2>
+<p>Kontur rangi HSL qiymatlari yordamida ham belgilanishi mumkin:</p>
 
-<p class="ex1">A solid red outline.</p>
-<p class="ex2">A dotted blue outline.</p>
-<p class="ex3">A solid grey outline.</p>
+<p class="ex1">Yaxshi qizil kontur.</p>
+<p class="ex2">Nuqtali ko'k kontur.</p>
+<p class="ex3">Bir tekis kulrang kontur.</p>
 
 </body>
 </html>
@@ -1297,204 +1294,204 @@ p.ex3 {
 
 
 
-Invert Color
+Rangni o'zgartirish
 
-The outline-color: invert performs color inversion which enables visibility of the outline irrespective of 
+Kontur rangi: invert rangni inversiyani amalga oshiradi, bu esa konturning qanday bo'lishidan qat'i nazar, ko'rinishini ta'minlaydi.
 
-the background color.
+fon rangi.
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
+<uslub>
 p.ex1 {
-  border: 1px solid yellow;
-  outline-style: solid;
-  outline-color: invert;
+   chegara: 1px qattiq sariq;
+   kontur uslubi: qattiq;
+   kontur-rang: invert;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h2>Using outline-color:invert</h2>
+<h2>Outline-color:invert dan foydalanish</h2>
 
-<p class="ex1">A solid invert outline.</p>
+<p class="ex1">Qattiq teskari kontur.</p>
 
 </body>
 </html>
 
 
-CSS Outline Shorthand::
+CSS-ning qisqacha matni::
 
 
-CSS Outline - Shorthand property
+CSS Outline - Stenografiya xususiyati
 
-The outline property is a shorthand property for setting the following individual outline properties:
+Outline xususiyati quyidagi individual kontur xususiyatlarini o'rnatish uchun stenografiya xususiyatidir:
 
-    outline-width
-    outline-style (required)
-    outline-color
+     kontur kengligi
+     kontur uslubi (majburiy)
+     kontur-rang
 
-The outline property is specified as one, two, or three values from the list above. The order of the values 
+Kontur xususiyati yuqoridagi roʻyxatdagi bir, ikki yoki uchta qiymat sifatida koʻrsatilgan. Qiymatlarning tartibi
 
-does not matter.
+farqi yo'q.
 
-The following example shows some outlines specified with the shorthand outline property:
+Quyidagi misolda stenogramma kontur xususiyati bilan belgilangan ba'zi konturlar ko'rsatilgan:
 
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-p.ex1 {outline: dashed;}
-p.ex2 {outline: dotted red;}
-p.ex3 {outline: 5px solid yellow;}
-p.ex4 {outline: thick ridge pink;}
+<uslub>
+p.ex1 {kontur: chizilgan;}
+p.ex2 {kontur: nuqta qizil;}
+p.ex3 (kontur: 5px qattiq sariq;}
+p.ex4 {kontur: qalin tizma pushti;}
 </style>
 </head>
-<body>
+<tana>
 
-<h2>The outline Property</h2>
+<h2>Konturiy xususiyat</h2>
 
-<p class="ex1">A dashed outline.</p>
-<p class="ex2">A dotted red outline.</p>
-<p class="ex3">A 5px solid yellow outline.</p>
-<p class="ex4">A thick ridge pink outline.</p>
+<p class="ex1">Chiziq chiziq.</p>
+<p class="ex2">Nuqtali qizil kontur.</p>
+<p class="ex3">5px qattiq sariq kontur.</p>
+<p class="ex4">Qalin tog'li pushti kontur.</p>
 
 </body>
 </html>
 
 
 
-CSS Outline Offset
+CSS Outline ofset
 
-The outline-offset property is used to include space between an outline and the edge/border of an element, 
+Outline-offset xususiyati kontur va elementning cheti/chegarasi orasidagi bo'shliqni kiritish uchun ishlatiladi,
 
-leaving the space between an element and its outline transparent.
+element va uning konturlari orasidagi bo'shliqni shaffof qoldirish.
 
 
-The script below shows how the outline offset is added to an element, such that the outline is 15px outside 
+Quyidagi skriptda kontur ofset elementga qanday qo'shilganligi ko'rsatilgan, shunda kontur 15px tashqarida bo'ladi.
 
-the border of the <p> element:
+<p> elementining chegarasi:
 
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
+<uslub>
 p {
-  margin: 30px;
-  border: 1px solid black;
-  outline: 1px solid red;
-  outline-offset: 15px;
+   chegara: 30px;
+   chegara: 1px qattiq qora;
+   kontur: 1px qattiq qizil;
+   kontur-ofset: 15px;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h2>The outline-offset Property</h2>
+<h2>Kontur-offset xususiyati</h2>
 
-<p>This paragraph has an outline 15px outside the border edge.</p>
+<p>Ushbu paragraf chegaradan tashqarida 15px konturga ega.</p>
 
 </body>
 </html>
 
 
 
-To visualize that the space between an element's border and its outline offset is transparent
+Element chegarasi va uning kontur ofseti orasidagi bo'shliq shaffof ekanligini tasavvur qilish uchun
 
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
+<uslub>
 p {
-  margin: 30px;
-  background:yellow;
-  border: 1px solid black;
-  outline: 1px solid red;
-  outline-offset: 15px;
+   chegara: 30px;
+   fon: sariq;
+   chegara: 1px qattiq qora;
+   kontur: 1px qattiq qizil;
+   kontur-ofset: 15px;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h2>The outline-offset Property</h2>
+<h2>Kontur-offset xususiyati</h2>
 
-<p>This paragraph has an outline of 15px outside the border edge.</p>
+<p>Ushbu paragraf chegaradan tashqarida 15px konturga ega.</p>
 
 </body>
 </html>
 
 
 
-All CSS Outline Properties Summarized
+Barcha CSS Outline xususiyatlari umumlashtirilgan
 
-All CSS Outline Properties
-Property 	Description
-outline 	A shorthand property for setting outline-width, outline-style, and outline-color in one 
+Barcha CSS Outline xususiyatlari
+Mulk tavsifi
+kontur Kontur-kenglik, kontur-uslub va kontur-rangni birida oʻrnatish uchun stenografiya xususiyati
 
-declaration
-outline-color 	Sets the color of an outline
-outline-offset 	Specifies the space between an outline and the edge or border of an element
-outline-style 	Sets the style of an outline
-outline-width 	Sets the width of an outline
+deklaratsiya
+outline-color Kontur rangini o'rnatadi
+outline-offset Kontur va elementning cheti yoki chegarasi orasidagi bo'shliqni belgilaydi
+outline-style Kontur uslubini o'rnatadi
+outline-width Konturning kengligini o'rnatadi
 
 
-<kbd>return</kbd>[Back to table of contents](#homepage)
+<kbd>qaytish</kbd>[Mundarijaga qaytish](#homepage)
 
 
 
 -----------
 
 
-# CSS Text
+# CSS matni
 
-We explain properties used in formatting texts in CSS under this section and subsections that follow.
+Biz ushbu bo'lim va keyingi bo'limlar ostida CSS-da matnlarni formatlashda foydalaniladigan xususiyatlarni tushuntiramiz.
 
 
-Text formatting example is shown below:
+Matnni formatlash misoli quyida ko'rsatilgan:
 
 
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
+<uslub>
 div {
-  border: 1px solid gray;
-  padding: 8px;
+   chegara: 1px qattiq kulrang;
+   to'ldirish: 8px;
 }
 
 h1 {
-  text-align: center;
-  text-transform: uppercase;
-  color: #4CAF50;
+   matnni tekislash: markaz;
+   matnni o'zgartirish: katta harf;
+   rang: #4CAF50;
 }
 
 p {
-  text-indent: 50px;
-  text-align: justify;
-  letter-spacing: 3px;
+   matn chegarasi: 50px;
+   matnni tekislash: oqlash;
+   harflar oralig'i: 3px;
 }
 
 a {
-  text-decoration: none;
-  color: #008CBA;
+   matn-bezak: yo'q;
+   rang: #008CBA;
 }
 </style>
 </head>
-<body>
+<tana>
 
 <div>
-  <h1>text formatting</h1>
-  <p>This text is styled with some of the text formatting properties. The heading uses the text-align, 
+   <h1>matnni formatlash</h1>
+   <p>Ushbu matn matnni formatlashning ba'zi xususiyatlari bilan yaratilgan. Sarlavha matnni tekislashdan foydalanadi,
 
-text-transform, and color properties.
-  The paragraph is indented, aligned, and the space between characters is specified. The underline is 
+matnni o'zgartirish va rang xususiyatlari.
+   Abzas ichkariga kiritiladi, tekislanadi va belgilar orasidagi bo'shliq belgilanadi. Pastki chiziq
 
-removed from this colored
-  <a target="_blank" href="tryit.asp?filename=trycss_text">"Try it Yourself"</a> link.</p>
+bu rangdan olib tashlangan
+   <a target="_blank" href="tryit.asp?filename=trycss_text">"O‘zingiz sinab ko‘ring"</a> havolasi.</p>
 </div>
 
 </body>
@@ -1503,74 +1500,74 @@ removed from this colored
 
 
 
-Text Color::
+Matn rangi::
 
-The color property is used to set the color of the text using:
+Color xususiyati matn rangini o'rnatish uchun ishlatiladi:
 
 
-    a color name - like "red"
-    a HEX value - like "#ff0000"
-    an RGB value - like "rgb(255,0,0)"
-NB: The default text color or a page is defined in the 'body' selector, under the <style> tags. See below 
+     rang nomi - "qizil" kabi
+     HEX qiymati - "#ff0000" kabi
+     RGB qiymati - "rgb (255,0,0)" kabi
+Eslatma: Standart matn rangi yoki sahifa <style> teglari ostidagi "tana" selektorida aniqlanadi. Pastga qarang
 
-for example:
+masalan:
 
 
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-body {
-  color: blue;
+<uslub>
+tana {
+   rang: ko'k;
 }
 
 h1 {
-  color: green;
+   rang: yashil;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h1>This is heading 1</h1>
-<p>This is an ordinary paragraph. Notice that this text is blue. The default text color for a page is 
+<h1>Bu sarlavha 1</h1>
+<p>Bu oddiy paragraf. E'tibor bering, bu matn ko'k rangda. Sahifa uchun standart matn rangi
 
-defined in the body selector.</p>
-<p>Another paragraph.</p>
+tana selektorida belgilangan.</p>
+<p>Boshqa paragraf.</p>
 
 </body>
 </html>
 
 
-Note: For W3C compliant CSS: If you define the color property, you must also define the background-color.
+Eslatma: W3C-ga mos keladigan CSS uchun: Agar rang xususiyatini aniqlasangiz, fon rangini ham belgilashingiz kerak.
 
 
 
-Text Color and Background Color
+Matn rangi va fon rangi
 
-In this example, we define both the background-color property and the color property (for an element):
+Ushbu misolda biz fon rangi xususiyatini ham, rang xususiyatini ham aniqlaymiz (element uchun):
 
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-body {
-  background-color: lightgrey;
-  color: blue;
+<uslub>
+tana {
+   fon rangi: och kulrang;
+   rang: ko'k;
 }
 
 h1 {
-  background-color: black;
-  color: white;
+   fon rangi: qora;
+   rang: oq;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h1>This Heading is Black with White Text</h1>
-<p>This page has a grey background color and a blue text.</p>
-<p>Another paragraph.</p>
+<h1>Bu sarlavha oq matn bilan qora rangda</h1>
+<p>Ushbu sahifa kulrang fon rangi va koʻk matnga ega.</p>
+<p>Boshqa paragraf.</p>
 
 </body>
 </html>
@@ -1578,76 +1575,76 @@ h1 {
 
 
 
-CSS Text Alignment::
+CSS matnni tekislash::
 
-the css text-align property is used to set the horizontal alignment of a text to left, right, or justified 
+CSS text-align xususiyati matnning gorizontal tekislanishini chapga, o'ngga yoki oqlangan tomonga o'rnatish uchun ishlatiladi.
 
-aligned. If text direction is left-to-right, the default alignment is left. On the other hand, if the text 
+tekislangan. Agar matn yo'nalishi chapdan o'ngga bo'lsa, standart hizalama chapda bo'ladi. Boshqa tomondan, agar matn
 
-is from right-to-left, the default alignment is right. An example of the use of text-align property is shown 
+o'ngdan chapga, standart hizalama o'ngga. Matnni tekislash xususiyatidan foydalanish misoli ko'rsatilgan
 
-below:
+quyida:
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
+<uslub>
 h1 {
-  text-align: center;
+   matnni tekislash: markaz;
 }
 
 h2 {
-  text-align: left;
+   matnni tekislash: chapga;
 }
 
 h3 {
-  text-align: right;
+   matnni tekislash: o'ngga;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h1>Heading 1 (center)</h1>
-<h2>Heading 2 (left)</h2>
-<h3>Heading 3 (right)</h3>
+<h1>1-sarlavha (markazda)</h1>
+<h2>2-sarlavha (chapda)</h2>
+<h3>3-sarlavha (o'ngda)</h3>
 
-<p>The three headings above are aligned center, left and right.</p>
+<p>Yuqoridagi uchta sarlavha markazga, chapga va oʻngga tekislangan.</p>
 
 </body>
 </html>
 
 
-When the text-align property is set to "justify", each line is stretched so that every line has equal width, 
+Matnni tekislash xususiyati "oqlash" ga o'rnatilganda, har bir satr teng kenglikka ega bo'lishi uchun har bir satr uzaytiriladi,
 
-and the left and right margins are straight (like in magazines and newspapers):
+va chap va o'ng chetlari tekis (jurnal va gazetalardagi kabi):
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
+<uslub>
 div {
-  border: 1px solid black;
-  padding: 10px;
-  width: 200px;
-  height: 200px;
-  text-align: justify;
+   chegara: 1px qattiq qora;
+   to'ldirish: 10px;
+   kengligi: 200px;
+   balandligi: 200px;
+   matnni tekislash: oqlash;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h1>Example text-align: justify;</h1>
+<h1>Matnni tekislash misoli: oqlash;</h1>
 
-<p>The text-align: justify; value stretches the lines so that each line has equal width (like in newspapers 
+<p>Matnni tekislash: asoslash; qiymat chiziqlarni har bir satrning kengligi teng bo'lishi uchun uzaytiradi (gazetalardagi kabi
 
-and magazines).</p>
+va jurnallar).</p>
 
 <div>
-In my younger and more vulnerable years my father gave me some advice that I've been turning over in my mind 
+Yoshroq va zaifroq yillarimda otam menga bir qancha maslahatlar berdi, men xayolimda o'girilib yurganman.
 
-ever since. 'Whenever you feel like criticizing anyone,' he told me, 'just remember that all the people in 
+shundan buyon. — Qachonki siz kimnidir tanqid qilmoqchi bo'lsangiz, - dedi u menga, - shuni yodda tutingki, hamma odamlar
 
-this world haven't had the advantages that you've had.'
+Bu dunyoda sizlar kabi afzalliklar yo'q.
 </div>
 
 </body>
@@ -1655,112 +1652,112 @@ this world haven't had the advantages that you've had.'
 
 
 
-Text Direction
+Matn yo'nalishi
 
-The direction and unicode-bidi (invert each of the letters from left to right) properties can be used to 
+Yo'nalish va unicode-bidi (har bir harfni chapdan o'ngga o'zgartirish) xususiyatlaridan foydalanish mumkin
 
-change the text direction of an element:
+elementning matn yo'nalishini o'zgartirish:
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
+<uslub>
 p.ex1 {
-  direction: rtl;
-  unicode-bidi: bidi-override;
+   yo'nalishi: rtl;
+   unicode-bidi: bidi-override;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<p>This is the default text direction.</p>
+<p>Bu standart matn yoʻnalishi.</p>
 
-<p class="ex1">This is right-to-left text direction.</p>
+<p class="ex1">Bu matnning o'ngdan chapga yo'nalishi.</p>
 
 </body>
 </html>
 
 
-Vertical Alignment
+Vertikal tekislash
 
-The vertical-align property sets the vertical alignment of an element. The example below shows how to set 
+Vertical-align xususiyati elementning vertikal tekislanishini o'rnatadi. Quyidagi misol qanday o'rnatishni ko'rsatadi
 
-the vertical alignment of an image in a text.
+matndagi tasvirning vertikal tekislanishi.
 
 
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
+<uslub>
 img.a {
-  vertical-align: baseline;
+   vertikal tekislash: asosiy chiziq;
 }
 
 img.b {
-  vertical-align: text-top;
+   vertikal tekislash: matn tepasiga;
 }
 
 img.c {
-  vertical-align: text-bottom;
+   vertikal tekislash: matn-pastki;
 }
 
 img.d {
-  vertical-align: sub;
+   vertikal tekislash: pastki;
 }
 
 img.e {
-  vertical-align: super;
+   vertikal tekislash: super;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h1>The vertical-align Property</h1>
+<h1>Vertikal tekislash xususiyati</h1>
 
-<h2>vertical-align: baseline (default):</h2>
-<p>An <img class="a" src="sqpurple.gif" width="9" height="9"> image with a default alignment.</p> 
+<h2>vertikal tekislash: asosiy chiziq (standart):</h2>
+<p>Birlamchi tekislangan <img class="a" src="sqpurple.gif" width="9" height="9"> rasm.</p>
 
-<h2>vertical-align: text-top:</h2>
-<p>An <img class="b" src="sqpurple.gif" width="9" height="9"> image with a text-top alignment.</p> 
+<h2>vertikal tekislash: matn tepasida:</h2>
+<p><img class="b" src="sqpurple.gif" width="9" height="9"> rasm, matn tepasiga tekislangan.</p>
 
-<h2>vertical-align: text-bottom:</h2>
-<p>An <img class="c" src="sqpurple.gif" width="9" height="9"> image with a text-bottom alignment.</p>
+<h2>vertikal tekislash: matn-pastki:</h2>
+<p><img class="c" src="sqpurple.gif" width="9" height="9"> rasm, matnning pastki qismiga tekislangan.</p>
 
-<h2>vertical-align: sub:</h2>
-<p>An <img class="d" src="sqpurple.gif" width="9" height="9"> image with a sub alignment.</p> 
+<h2>vertikal tekislash: pastki:</h2>
+<p><img class="d" src="sqpurple.gif" width="9" height="9"> pastki tekislangan rasm.</p>
 
-<h2>vertical-align: sup:</h2>
-<p>An <img class="e" src="sqpurple.gif" width="9" height="9"> image with a super alignment.</p>
+<h2>vertikal tekislash: sup:</h2>
+<p>Super tekislangan <img class="e" src="sqpurple.gif" width="9" height="9"> rasm.</p>
 
 </body>
 </html>
 
 
 
-CSS Text Decoration
+CSS matnni bezash
 
 
-Text Decoration
+Matnni bezash
 
-The text-decoration property is used to set or remove decorations from text.
+Matnni bezash xususiyati matndan bezaklarni o'rnatish yoki olib tashlash uchun ishlatiladi.
 
-The value text-decoration: none; is often used to remove underlines from links:
+Matn-bezatish qiymati: yo'q; ko'pincha havolalardan pastki chiziqni olib tashlash uchun ishlatiladi:
 
 
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
+<uslub>
 a {
-  text-decoration: none;
+   matn-bezak: yo'q;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<p>A link with no underline: <a href="https://www.w3schools.com">W3Schools.com</a></p>
+<p>Ustiga chizilmagan havola: <a href="https://www.w3schools.com">W3Schools.com</a></p>
 
 </body>
 </html>
@@ -1768,72 +1765,72 @@ a {
 
 
 
-Other text decoration values are shown below:
+Boshqa matnni bezash qiymatlari quyida ko'rsatilgan:
 
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
+<uslub>
 h1 {
-  text-decoration: overline;
+   matn-bezatish: yuqori chiziq;
 }
 
 h2 {
-  text-decoration: line-through;
+   matn-bezak: chiziq orqali;
 }
 
 h3 {
-  text-decoration: underline;
+   matnni bezash: tagiga chizish;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h1>This is heading 1</h1>
-<h2>This is heading 2</h2>
-<h3>This is heading 3</h3>
+<h1>Bu sarlavha 1</h1>
+<h2>Bu 2-sarlavha</h2>
+<h3>Bu 3-sarlavha</h3>
 
 </body>
 </html>
 
 
-Note: It is not recommended to underline text that is not a link, as this often confuses the reader.
+Eslatma: havola bo'lmagan matnning tagiga chizish tavsiya etilmaydi, chunki bu ko'pincha o'quvchini chalkashtirib yuboradi.
 
 
 
-Text Transformation::
+Matnni o'zgartirish::
 
-The text-transform property is used to specify uppercase and lowercase letters in a text.
+Matnni o'zgartirish xususiyati matndagi katta va kichik harflarni belgilash uchun ishlatiladi.
 
-It can be used to turn everything into uppercase or lowercase letters, or capitalize the first letter of 
+U hamma narsani katta yoki kichik harflarga aylantirish yoki birinchi harfini katta qilish uchun ishlatilishi mumkin
 
-each word:
+har bir so'z:
 
 
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-p.uppercase {
-  text-transform: uppercase;
+<uslub>
+p.katta {
+   matnni o'zgartirish: katta harf;
 }
 
-p.lowercase {
-  text-transform: lowercase;
+p.kichik harf {
+   matnni o'zgartirish: kichik harflar;
 }
 
-p.capitalize {
-  text-transform: capitalize;
+p.kapitalizatsiya {
+   matnni o'zgartirish: bosh harf bilan yozish;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<p class="uppercase">This is some text.</p>
-<p class="lowercase">This is some text.</p>
-<p class="capitalize">This is some text.</p>
+<p class="uppercase">Bu qandaydir matn.</p>
+<p class="lowercase">Bu qandaydir matn.</p>
+<p class="capitalize">Bu qandaydir matn.</p>
 
 </body>
 </html>
@@ -1843,58 +1840,58 @@ p.capitalize {
 
 
 
-CSS Text Spacing::
+CSS matn oralig'i::
 
-The text-indent property is used to specify the indentation of the first line of a text.
+Text-indent xossasi matnning birinchi qatorining chekinishini belgilash uchun ishlatiladi.
 
 
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
+<uslub>
 p {
-  text-indent: 50px;
+   matn chegarasi: 50px;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<p>In my younger and more vulnerable years my father gave me some advice that I've been turning over in my 
+<p>Yosh va zaif yillarimda otam menga bir necha maslahatlar berdi, men ularni hayotimda o'zgartiraman.
 
-mind ever since. 'Whenever you feel like criticizing anyone,' he told me, 'just remember that all the people 
+o'shandan beri aql. — Qachonki siz kimnidir tanqid qilmoqchi bo'lsangiz, - dedi u menga, - hamma odamlar buni yodda tutinglar
 
-in this world haven't had the advantages that you've had.'</p>
+Bu dunyoda siz ega bo'lgan afzalliklar yo'q.'</p>
 
 </body>
 </html>
 
 
 
-Letter Spacing
+Harf oralig'i
 
-The letter-spacing property is used to specify the space between the characters in a text.
+Harf oralig'i xususiyati matndagi belgilar orasidagi bo'shliqni belgilash uchun ishlatiladi.
 
-The following example demonstrates how to increase or decrease the space between characters:
+Quyidagi misol belgilar orasidagi bo'shliqni qanday oshirish yoki kamaytirishni ko'rsatadi:
 
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
+<uslub>
 h1 {
-  letter-spacing: 3px;
+   harflar oralig'i: 3px;
 }
 
 h2 {
-  letter-spacing: -3px;
+   harflar oralig'i: -3px;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h1>This is heading 1</h1>
-<h2>This is heading 2</h2>
+<h1>Bu sarlavha 1</h1>
+<h2>Bu 2-sarlavha</h2>
 
 </body>
 </html>
@@ -1902,39 +1899,39 @@ h2 {
 
 
 
-Line Height
+Chiziq balandligi
 
-The line-height property is used to specify the space between lines:
+Line-height xususiyati qatorlar orasidagi bo'shliqni belgilash uchun ishlatiladi:
 
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-p.small {
-  line-height: 0.7;
+<uslub>
+p.kichik {
+   chiziq balandligi: 0,7;
 }
 
-p.big {
-  line-height: 1.8;
+katta {
+   chiziq balandligi: 1,8;
 }
 </style>
 </head>
-<body>
+<tana>
 
 <p>
-This is a paragraph with a standard line-height.<br>
-The default line height in most browsers is about 110% to 120%.<br>
+Bu standart satr balandligidagi paragraf.<br>
+Ko'pgina brauzerlarda standart satr balandligi taxminan 110% dan 120% gacha.<br>
 </p>
 
-<p class="small">
-This is a paragraph with a smaller line-height.<br>
-This is a paragraph with a smaller line-height.<br>
+<p class="kichik">
+Bu kichikroq satr balandligidagi paragraf.<br>
+Bu kichikroq satr balandligidagi paragraf.<br>
 </p>
 
-<p class="big">
-This is a paragraph with a bigger line-height.<br>
-This is a paragraph with a bigger line-height.<br>
+<p class="katta">
+Bu kattaroq satr balandligidagi paragraf.<br>
+Bu kattaroq satr balandligidagi paragraf.<br>
 </p>
 
 </body>
@@ -1986,32 +1983,32 @@ This is a paragraph with a bigger line-height.<br>
 
 
 
-Word Spacing
+So'z oralig'i
 
-The word-spacing property is used to specify the space between the words in a text.
+So'z oralig'i xususiyati matndagi so'zlar orasidagi bo'shliqni ko'rsatish uchun ishlatiladi.
 
-The following example demonstrates how to increase (positive value) or decrease (negative value) the space 
+Quyidagi misolda bo'sh joyni qanday oshirish (ijobiy qiymat) yoki kamaytirish (salbiy qiymat) ko'rsatilgan
 
-between words:
+so'zlar orasida:
 
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
+<uslub>
 h1 {
-  word-spacing: 10px;
+   so'zlar oralig'i: 10px;
 }
 
 h2 {
-  word-spacing: -5px;
+   so'z oralig'i: -5px;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h1>This is heading 1</h1>
-<h2>This is heading 2</h2>
+<h1>Bu sarlavha 1</h1>
+<h2>Bu 2-sarlavha</h2>
 
 </body>
 </html>
@@ -2019,36 +2016,36 @@ h2 {
 
 
 
-White Space
+Oq bo'shliq
 
-The white-space property specifies how white-space inside an element is handled.
+White-space xususiyati element ichidagi bo'sh joy qanday ishlov berilishini belgilaydi.
 
-This example demonstrates how to disable text wrapping inside an element:
+Ushbu misol element ichidagi matnni o'rashni qanday o'chirishni ko'rsatadi:
 
 
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
+<uslub>
 p {
-  white-space: nowrap;
+   oq bo'shliq: nowrap;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h2>White Space</h2>
+<h2>Oq bo'shliq</h2>
 
 <p>
-This is some text. This is some text. This is some text.
-This is some text. This is some text. This is some text.
-This is some text. This is some text. This is some text.
-This is some text. This is some text. This is some text.
-This is some text. This is some text. This is some text.
+Bu qandaydir matn. Bu qandaydir matn. Bu qandaydir matn.
+Bu qandaydir matn. Bu qandaydir matn. Bu qandaydir matn.
+Bu qandaydir matn. Bu qandaydir matn. Bu qandaydir matn.
+Bu qandaydir matn. Bu qandaydir matn. Bu qandaydir matn.
+Bu qandaydir matn. Bu qandaydir matn. Bu qandaydir matn.
 </p>
 
-<p>Try to remove the white-space property to see the difference.</p>
+<p>Farqni ko'rish uchun bo'sh joy xususiyatini olib tashlashga harakat qiling.</p>
 
 </body>
 </html>
@@ -2058,28 +2055,28 @@ This is some text. This is some text. This is some text.
 
 
 
-CSS Text Shadow::
+CSS matn soyasi::
 
 
-Text Shadow
+Matn soyasi
 
-The text-shadow property adds shadow to text.
+Matn-shadow xossasi matnga soya qo‘shadi.
 
-In its simplest use, you only specify the horizontal shadow (2px) and the vertical shadow (2px):
+Eng oddiy foydalanishda siz faqat gorizontal soyani (2px) va vertikal soyani (2px) belgilaysiz:
 
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
+<uslub>
 h1 {
-  text-shadow: 2px 2px;
+   matn soyasi: 2px 2px;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h1>Text-shadow effect!</h1>
+<h1>Matn-soya effekti!</h1>
 
 </body>
 </html>
@@ -2087,20 +2084,20 @@ h1 {
 
 
 
-To add a color (red) to the shadow:
+Soyaga rang (qizil) qo'shish uchun:
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
+<uslub>
 h1 {
-  text-shadow: 2px 2px red;
+   matn soyasi: 2px 2px qizil;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h1>Text-shadow effect!</h1>
+<h1>Matn-soya effekti!</h1>
 
 </body>
 </html>
@@ -2108,213 +2105,212 @@ h1 {
 
 
 
-To add a blur effect (5px) to the shadow:
+Soyaga loyqalik effektini (5px) qo'shish uchun:
 
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
+<uslub>
 h1 {
-  text-shadow: 2px 2px 5px red;
+   matn soyasi: 2px 2px 5px qizil;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h1>Text-shadow effect!</h1>
+<h1>Matn-soya effekti!</h1>
 
 </body>
 </html>
 
 
-<kbd>return</kbd>[Back to table of contents](#homepage)
+<kbd>qaytish</kbd>[Mundarijaga qaytish](#homepage)
 
 
 --------
 
 
 
-## CSS Fonts
+## CSS shriftlari
 
 
-The right fond can improve UX of a website and can create a unique and strong brand identity. Readability of 
+To'g'ri fond veb-saytning UX-ni yaxshilashi va noyob va kuchli brend identifikatorini yaratishi mumkin. O'qish qobiliyati
 
-a font is very crucial, for font to add value to text. Color and text size of a font are important too while 
+shrift matnga qiymat qo'shishi uchun shrift juda muhim. Shriftning rangi va matn hajmi ham muhimdir
 
-choosing a font.
-
-
-
-Generic Font Families
-
-In CSS there are five generic font families:
-
-    Serif fonts have a small stroke at the edges of each letter. They create a sense of formality and 
-
-elegance.
-    Sans-serif fonts have clean lines (no small strokes attached). They create a modern and minimalistic 
-
-look.
-    Monospace fonts - here all the letters have the same fixed width. They create a mechanical look. 
-    Cursive fonts imitate human handwriting.
-    Fantasy fonts are decorative/playful fonts.
-
-All the different font names belong to one of the generic font families. 
+shrift tanlash.
 
 
 
-Note: On computer screens, sans-serif fonts are considered easier to read than serif fonts.
+Umumiy shrift oilalari
 
+CSS-da beshta umumiy shrift oilasi mavjud:
 
-Some Font Examples
+     Serif shriftlari har bir harfning chetida kichik chiziqqa ega. Ular rasmiyatchilik hissi yaratadi va
 
-Generic Font Family    Examples of Font Names
+nafislik.
+     Sans-serif shriftlari toza chiziqlarga ega (kichik chiziqlar biriktirilmagan). Ular zamonaviy va minimalizmni yaratadilar
 
+qarang.
+     Monospace shriftlari - bu erda barcha harflar bir xil sobit kenglikka ega. Ular mexanik ko'rinish hosil qiladi.
+     Cursive shriftlar inson qo'l yozuviga taqlid qiladi.
+     Fantaziya shriftlari dekorativ/o'ynoqi shriftlardir.
 
-Serif    		Times New Roman, Georgia, Garamond
-
-Sans-serif		Arial Verdana, Helvetica
-
-Monospace               Courier New, Lucida Console, Monaco,
-
-Cursive			Brush Script MT, Lucida Handwriting
-
-Fantasy			Copperplate, Papyrus
+Barcha shrift nomlari umumiy shrift oilalaridan biriga tegishli.
 
 
 
-The CSS font-family Property
+Eslatma: Kompyuter ekranlarida sans-serif shriftlari serif shriftlarga qaraganda osonroq o'qiladi.
 
-In CSS, we use the font-family property to specify the font of a text.
 
-The font-family property should hold several font names as a "fallback" system, to ensure maximum 
+Ba'zi shriftlarga misollar
 
-compatibility between browsers/operating systems. Start with the font you want, and end with a generic 
+Shrift nomlarining umumiy shrift turkumiga misollar
 
-family (to let the browser pick a similar font in the generic family, if no other fonts are available). The 
 
-font names should be separated with comma.
+Serif Times New Roman, Jorjiya, Garamond
 
-Note: If the font name is more than one word, it must be in quotation marks, like: "Times New Roman". 
+Sans-serif Arial Verdana, Helvetica
 
-An example of the application of font-family in CSS is shown below:
+Monospace Courier New, Lucida Console, Monako,
+
+Cursive Brush Script MT, Lucida Handwriting
+
+Fantasy mis plastinka, papirus
+
+
+
+CSS shrift oilasi xususiyati
+
+CSS-da biz matn shriftini belgilash uchun font-family xususiyatidan foydalanamiz.
+
+Shrift-family xususiyati maksimal darajada ta'minlash uchun "qayta" tizim sifatida bir nechta shrift nomlariga ega bo'lishi kerak
+
+brauzerlar/operatsion tizimlar o'rtasidagi muvofiqlik. O'zingiz xohlagan shrift bilan boshlang va umumiy bilan tugating
+
+oila (agar boshqa shriftlar mavjud bo'lmasa, brauzerga umumiy oilada o'xshash shriftni tanlashiga ruxsat berish uchun). The
+
+shrift nomlari vergul bilan ajratilishi kerak.
+
+Eslatma: Agar shrift nomi bir nechta so'zlardan iborat bo'lsa, u tirnoq ichida bo'lishi kerak, masalan: "Times New Roman".
+
+CSS-da font-family qo'llanilishiga misol quyida ko'rsatilgan:
 
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
+<uslub>
 .p1 {
-  font-family: "Times New Roman", Times, serif;
+   shrift oilasi: "Times New Roman", Times, serif;
 }
 
 .p2 {
-  font-family: Arial, Helvetica, sans-serif;
+   shrift oilasi: Arial, Helvetica, sans-serif;
 }
 
 .p3 {
-  font-family: "Lucida Console", "Courier New", monospace;
+   shrift oilasi: "Lucida Console", "Courier New", monospace;
 }
 </style>
 </head>
-<body>
+<tana>
 
 <h1>CSS font-family</h1>
-<p class="p1">This is a paragraph, shown in the Times New Roman font.</p>
-<p class="p2">This is a paragraph, shown in the Arial font.</p>
-<p class="p3">This is a paragraph, shown in the Lucida Console font.</p>
+<p class="p1">Bu paragraf Times New Roman shriftida ko'rsatilgan.</p>
+<p class="p2">Bu Arial shriftida ko'rsatilgan paragraf.</p>
+<p class="p3">Bu Lucida Console shriftida ko'rsatilgan paragraf.</p>
 
 </body>
 </html>
 
 
 
+CSS veb-xavfsiz shriftlari::
 
-CSS Web Safe Fonts::
-
-They are fonts that are universally installed on all browsers and devices. 
-
-
-Fallback Fonts: since there are no 100% web safe fonts, always use fallback fonts in case a font is not 
-
-found or is not properly installed on the browser or device.
+Ular barcha brauzerlar va qurilmalarda universal o'rnatilgan shriftlardir.
 
 
-You should always add a list of similar 'backup fonts' in the font-family property.If the first font does 
+Qayta shriftlar: 100% veb-xavfsiz shriftlar mavjud emasligi sababli, agar shrift bo'lmasa, har doim zaxira shriftlardan foydalaning.
 
-not work, the browser will try the next one, and the next one, and so on. Always end the list with a generic 
-
-font family name.
+topilgan yoki brauzer yoki qurilmada to'g'ri o'rnatilmagan.
 
 
+Har doim font-family xususiyatiga o'xshash "zaxira shriftlar" ro'yxatini qo'shishingiz kerak. Agar birinchi shrift shunday qilsa.
 
-An illustration of this concept is shown below:
+ishlamasa, brauzer keyingisini sinab ko'radi va keyingisini va hokazo. Har doim ro'yxatni umumiy bilan yakunlang
+
+shrift familiyasi.
+
+
+
+Ushbu kontseptsiyaning tasviri quyida ko'rsatilgan:
 
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
+<uslub>
 p {
 font-family: Tahoma, Verdana, sans-serif;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h1>CSS Fallback Fonts</h1>
+<h1>CSS-ning orqa fontlari</h1>
 
-<p>This is a paragraph.</p>
-<p>This is another paragraph.</p>
+<p>Bu paragraf.</p>
+<p>Bu boshqa paragraf.</p>
 
 </body>
 </html>
 
 
 
-Best Web Safe Fonts for HTML and CSS
+HTML va CSS uchun eng yaxshi veb-xavfsiz shriftlar
 
-The following list are the best web safe fonts for HTML and CSS:
+Quyidagi ro'yxat HTML va CSS uchun eng yaxshi veb-xavfsiz shriftlardir:
 
-    Arial (sans-serif)
-    Verdana (sans-serif)
-    Helvetica (sans-serif)
-    Tahoma (sans-serif)
-    Trebuchet MS (sans-serif)
-    Times New Roman (serif)
-    Georgia (serif)
-    Garamond (serif)
-    Courier New (monospace)
-    Brush Script MT (cursive)
+     Arial (sans-serif)
+     Verdana (sans-serif)
+     Helvetica (sans-serif)
+     Tahoma (sans-serif)
+     Trebuchet MS (sans-serif)
+     Times New Roman (serif)
+     Gruziya (serif)
+     Garamond (serif)
+     Courier New (bir fazo)
+     Brush Script MT (kursiv)
 
-Note: Before you publish your website, always check how your fonts appear on different browsers and devices, 
+Eslatma: Veb-saytingizni nashr etishdan oldin har doim shriftlaringiz turli brauzer va qurilmalarda qanday ko‘rinishini tekshiring.
 
-and always use fallback fonts!
+va har doim zaxira shriftlardan foydalaning!
 
 
 Arial (sans-serif)
 
-Arial is the most widely used font for both online and printed media. Arial is also the default font in 
+Arial ham onlayn, ham bosma ommaviy axborot vositalari uchun eng keng tarqalgan shriftdir. Arial ham standart shrift hisoblanadi
 
 Google Docs.
 
-Arial is one of the safest web fonts, and it is available on all major operating systems.
+Arial eng xavfsiz veb-shriftlardan biri bo'lib, u barcha asosiy operatsion tizimlarda mavjud.
 
-An example of specifying arial font with font-family 
+Font-family bilan arial shriftni belgilashga misol
 
 
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-body {
-  font-family: Arial, sans-serif;
+<uslub>
+tana {
+   font-family: Arial, sans-serif;
 }
 </style>
 </head>
-<body>
+<tana>
 
 <h1>Lorem ipsum dolor sit amet</h1>
 
@@ -2328,19 +2324,19 @@ body {
 
 Verdana (sans-serif)
 
-Verdana is a very popular font. Verdana is easily readable even for small font sizes.
+Verdana - juda mashhur shrift. Verdana hatto kichik shrift o'lchamlari uchun ham oson o'qilishi mumkin.
 
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-body {
-  font-family: Verdana, sans-serif;
+<uslub>
+tana {
+   font-family: Verdana, sans-serif;
 }
 </style>
 </head>
-<body>
+<tana>
 
 <h1>Lorem ipsum dolor sit amet</h1>
 
@@ -2354,19 +2350,19 @@ body {
 
 Helvetica (sans-serif)
 
-The Helvetica font is loved by designers. It is suitable for many types of business. See example below:
+Helvetica shrifti dizaynerlar tomonidan yaxshi ko'riladi. Bu ko'plab biznes turlari uchun javob beradi. Quyidagi misolga qarang:
 
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-body {
-  font-family: Helvetica, sans-serif;
+<uslub>
+tana {
+   font-family: Helvetica, sans-serif;
 }
 </style>
 </head>
-<body>
+<tana>
 
 <h1>Lorem ipsum dolor sit amet</h1>
 
@@ -2381,19 +2377,19 @@ body {
 
 Tahoma (sans-serif)
 
-The Tahoma font has less space between the characters. See example below:
+Tahoma shriftida belgilar orasidagi bo'sh joy kamroq. Quyidagi misolga qarang:
 
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-body {
-  font-family: Tahoma, sans-serif;
+<uslub>
+tana {
+   font-family: Tahoma, sans-serif;
 }
 </style>
 </head>
-<body>
+<tana>
 
 <h1>Lorem ipsum dolor sit amet</h1>
 
@@ -2406,22 +2402,22 @@ body {
 
 Trebuchet MS (sans-serif)
 
-Trebuchet MS was designed by Microsoft in 1996. Use this font carefully. Not supported by all mobile 
+Trebuchet MS 1996 yilda Microsoft tomonidan ishlab chiqilgan. Ushbu shriftdan ehtiyotkorlik bilan foydalaning. Barcha mobil qurilmalar tomonidan qo'llab-quvvatlanmaydi
 
-operating systems. See example below:
+operatsion tizimlar. Quyidagi misolga qarang:
 
 
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-body {
-  font-family: 'Trebuchet MS', sans-serif;
+<uslub>
+tana {
+   font-family: 'Trebuchet MS', sans-serif;
 }
 </style>
 </head>
-<body>
+<tana>
 
 <h1>Lorem ipsum dolor sit amet</h1>
 
@@ -2435,23 +2431,23 @@ body {
 
 Times New Roman (serif)
 
-Times New Roman is one of the most recognizable fonts in the world. It looks professional and is used in 
+Times New Roman - dunyodagi eng taniqli shriftlardan biri. Bu professional ko'rinadi va ishlatiladi
 
-many newspapers and "news" websites. It is also the primary font for Windows devices and applications. See 
+ko'plab gazetalar va "yangiliklar" veb-saytlari. Shuningdek, u Windows qurilmalari va ilovalari uchun asosiy shrift hisoblanadi. Qarang
 
-example bnw
+misol bnw
 
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-body {
-  font-family: 'Times New Roman', serif;
+<uslub>
+tana {
+   font-family: 'Times New Roman', serif;
 }
 </style>
 </head>
-<body>
+<tana>
 
 <h1>Lorem ipsum dolor sit amet</h1>
 
@@ -2463,23 +2459,23 @@ body {
 
 
 
-Georgia (serif)
+Gruziya (serif)
 
-Georgia is an elegant serif font. It is very readable at different font sizes, so it is a good candidate for 
+Gruziya nafis serif shrifti. Turli shrift o'lchamlarida juda o'qilishi mumkin, shuning uchun u yaxshi nomzoddir
 
-mobile-responsive design. See example below:
+mobil javob beruvchi dizayn. Quyidagi misolga qarang:
 
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-body {
-  font-family: Georgia, serif;
+<uslub>
+tana {
+   shrift oilasi: Georgia, serif;
 }
 </style>
 </head>
-<body>
+<tana>
 
 <h1>Lorem ipsum dolor sit amet</h1>
 
@@ -2488,25 +2484,24 @@ body {
 
 </body>
 </html>
-
 
 
 Garamond (serif)
 
-Garamond is a classical font used for many printed books. It has a timeless look and good readability. See 
+Garamond - ko'plab bosma kitoblar uchun ishlatiladigan klassik shrift. U abadiy ko'rinishga ega va yaxshi o'qilishi mumkin. Qarang
 
-example below:
+quyidagi misol:
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-body {
-  font-family: Garamond, serif;
+<uslub>
+tana {
+   shrift oilasi: Garamond, serif;
 }
 </style>
 </head>
-<body>
+<tana>
 
 <h1>Lorem ipsum dolor sit amet</h1>
 
@@ -2518,26 +2513,26 @@ body {
 
 
 
-Courier New (monospace)
+Courier New (bir fazo)
 
-Courier New is the most widely used monospace serif font. Courier New is often used with coding displays, 
+Courier New - eng keng tarqalgan monospace serif shrifti. Courier New ko'pincha kodlash displeylari bilan ishlatiladi,
 
-and many email providers use it as their default font. Courier New is also the standard font for movie 
+va ko'pgina elektron pochta provayderlari undan standart shrift sifatida foydalanadilar. Courier New ham kino uchun standart shrift hisoblanadi
 
-screenplays.
+ssenariylar.
 
 
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-body {
-  font-family: 'Courier New', monospace;
+<uslub>
+tana {
+   font-family: 'Courier New', monospace;
 }
 </style>
 </head>
-<body>
+<tana>
 
 <h1>Lorem ipsum dolor sit amet</h1>
 
@@ -2548,65 +2543,23 @@ body {
 </html>
 
 
-Brush Script MT (cursive)
+Brush Script MT (kursiv)
 
-The Brush Script MT font was designed to mimic handwriting. It is elegant and sophisticated, but can be hard 
+Brush Script MT shrifti qo'l yozuviga taqlid qilish uchun yaratilgan. Bu oqlangan va murakkab, ammo qiyin bo'lishi mumkin
 
-to read. Use it carefully. See example below:
+o'qish. Ehtiyotkorlik bilan foydalaning. Quyidagi misolga qarang:
 
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-body {
-  font-family: 'Brush Script MT', cursive;
+<uslub>
+tana {
+   font-family: 'Brush Script MT', kursiv;
 }
 </style>
 </head>
-<body>
-
-<h1>Lorem ipsum dolor sit amet</h1>
-
-<p>Lorem ipsum dolor sit amet.</p>
-<p>0 1 2 3 4 5 6 7 8 9</p>
-
-</body>
-</html>
-
-
-
-CSS Font Fallbacks::
-
-
-Commonly Used Font Fallbacks
-
-Below are some commonly used font fallbacks, organized by the 5 generic font families:
-
-    Serif
-    Sans-serif
-    Monospace
-    Cursive
-    Fantasy
-
-The different font families and the corresponding script to implement them are shown below:
-
-
-Serif Fonts:::
-
-
-font-family ("Times New Roman", Times, serif). see the code below:
-
-<!DOCTYPE html>
-<html>
-<head>
-<style>
-body {
-  font-family: "Times New Roman", Times, serif;
-}
-</style>
-</head>
-<body>
+<tana>
 
 <h1>Lorem ipsum dolor sit amet</h1>
 
@@ -2618,18 +2571,37 @@ body {
 
 
 
-font-family (Georgia, serif). See the code below:
+CSS shriftlarining qaytarilishi::
+
+
+Tez-tez ishlatiladigan shriftlarni tiklash
+
+Quyida 5 ta umumiy shrift oilalari tomonidan tashkil etilgan ba'zi tez-tez ishlatiladigan shrift zaxiralari keltirilgan:
+
+     Serif
+     Sans-serif
+     Monospace
+     Kursiv
+     Fantaziya
+
+Turli shrift oilalari va ularni amalga oshirish uchun mos skript quyida ko'rsatilgan:
+
+
+Serif shriftlari:::
+
+
+font-family ("Times New Roman", Times, serif). quyidagi kodni ko'ring:
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-body {
-  font-family: Georgia, serif;
+<uslub>
+tana {
+   shrift oilasi: "Times New Roman", Times, serif;
 }
 </style>
 </head>
-<body>
+<tana>
 
 <h1>Lorem ipsum dolor sit amet</h1>
 
@@ -2641,18 +2613,211 @@ body {
 
 
 
-font-family (Garamond, serif). See the code to apply them below:
+font-family (Gruziya, serif). Quyidagi kodga qarang:
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-body {
-  font-family: Garamond, serif;
+<uslub>
+tana {
+   shrift oilasi: Georgia, serif;
 }
 </style>
 </head>
-<body>
+<tana>
+
+<h1>Lorem ipsum dolor sit amet</h1>
+
+<p>Lorem ipsum dolor sit amet.</p>
+<p>0 1 2 3 4 5 6 7 8 9</p>
+
+</body>
+</html>
+
+
+
+shrift oilasi (Garamond, serif). Quyida ularni qo'llash uchun kodni ko'ring:
+
+<!DOCTYPE html>
+<html>
+<head>
+<uslub>
+tana {
+   shrift oilasi: Garamond, serif;
+}
+</style>
+</head>
+<tana>
+
+<h1>Lorem ipsum dolor sit amet</h1>
+
+<p>Lorem ipsum dolor sit amet.</p>
+<p>0 1 2 3 4 5 6 7 8 9</p>
+
+</body>
+</html>
+
+Sans-Serif shriftlari:::
+
+shrift oilasi (Arial, Helvetica, san-serif). Quyidagi amaliyotga qarang:
+
+<!DOCTYPE html>
+<html>
+<head>
+<uslub>
+tana {
+   shrift oilasi: Arial, Helvetica, sans-serif;
+}
+</style>
+</head>
+<tana>
+
+<h1>Lorem ipsum dolor sit amet</h1>
+
+<p>Lorem ipsum dolor sit amet.</p>
+<p>0 1 2 3 4 5 6 7 8 9</p>
+
+</body>
+</html>
+
+
+
+shrift oilasi (Tahoma, Verdana, sans-serif). Quyidagi amaliyotga qarang:
+
+<!DOCTYPE html>
+<html>
+<head>
+<uslub>
+tana {
+   font-family: Tahoma, Verdana, sans-serif;
+}
+</style>
+</head>
+<tana>
+
+<h1>Lorem ipsum dolor sit amet</h1>
+
+<p>Lorem ipsum dolor sit amet.</p>
+<p>0 1 2 3 4 5 6 7 8 9</p>
+
+</body>
+</html>
+
+
+
+shrift oilasi ("Trebuchet MS", Helvetica, sans-serif). Quyidagi amaliyotga qarang:
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<uslub>
+tana {
+   shrift oilasi: "Trebuchet MS", Helvetica, sans-serif;
+}
+</style>
+</head>
+<tana>
+
+<h1>Lorem ipsum dolor sit amet</h1>
+
+<p>Lorem ipsum dolor sit amet.</p>
+<p>0 1 2 3 4 5 6 7 8 9</p>
+
+</body>
+</html>
+
+
+
+font-family (Gruziya, Verdana, sans-serif). Quyida amalga oshirishga qarang:
+
+<!DOCTYPE html>
+<html>
+<head>
+<uslub>
+tana {
+   font-family: Georgia, Verdana, sans-serif;
+}
+</style>
+</head>
+<tana>
+
+<h1>Lorem ipsum dolor sit amet</h1>
+
+<p>Lorem ipsum dolor sit amet.</p>
+<p>0 1 2 3 4 5 6 7 8 9</p>
+
+</body>
+</html>
+
+
+
+Monospace shriftlari:::
+
+font-family ("Courier New", Courier, monospace). Quyida amalga oshirishga qarang:
+
+<!DOCTYPE html>
+<html>
+<head>
+<uslub>
+tana {
+   font-family: "Courier New", Courier, monospace;
+}
+</style>
+</head>
+<tana>
+
+<h1>Lorem ipsum dolor sit amet</h1>
+
+<p>Lorem ipsum dolor sit amet.</p>
+<p>0 1 2 3 4 5 6 7 8 9</p>
+
+</body>
+</html>
+
+
+
+Kursiv shriftlar:::
+
+font-family ("Brush Script MT", kursiv). Ushbu shriftlar oilasini qanday amalga oshirishni quyida ko'ring:
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<uslub>
+tana {
+   font-family: "Brush Script MT", kursiv;
+}
+</style>
+</head>
+<tana>
+
+<h1>Lorem ipsum dolor sit amet</h1>
+
+<p>Lorem ipsum dolor sit amet.</p>
+<p>0 1 2 3 4 5 6 7 8 9</p>
+
+</body>
+</html>
+
+
+
+Fantasy shriftlar:::
+
+shrift oilasi (Mis plastinka, papirus, fantaziya). Ushbu shriftlar oilasini qanday amalga oshirishni quyida ko'ring:
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<uslub>
+tana {
+   shrift oilasi: Copperplate, Papyrus, fantasy;
+}
+</style>
+</head>
+<tana>
 
 <h1>Lorem ipsum dolor sit amet</h1>
 
@@ -2665,219 +2830,46 @@ body {
 
 
 
-Sans-Serif Fonts:::
 
-font-family (Arial, Helvetica, san-serif). See the implementation below:
-
-<!DOCTYPE html>
-<html>
-<head>
-<style>
-body {
-  font-family: Arial, Helvetica, sans-serif;
-}
-</style>
-</head>
-<body>
-
-<h1>Lorem ipsum dolor sit amet</h1>
-
-<p>Lorem ipsum dolor sit amet.</p>
-<p>0 1 2 3 4 5 6 7 8 9</p>
-
-</body>
-</html>
+CSS shrift uslubi::
 
 
+Shrift uslubi
 
-font-family (Tahoma, Verdana, sans-serif). See the implementation below:
+Shrift uslubi xususiyati asosan kursiv matnni belgilash uchun ishlatiladi.
 
-<!DOCTYPE html>
-<html>
-<head>
-<style>
-body {
-  font-family: Tahoma, Verdana, sans-serif;
-}
-</style>
-</head>
-<body>
+Bu xususiyat uchta qiymatga ega:
 
-<h1>Lorem ipsum dolor sit amet</h1>
-
-<p>Lorem ipsum dolor sit amet.</p>
-<p>0 1 2 3 4 5 6 7 8 9</p>
-
-</body>
-</html>
+     normal - matn an'anaviy tarzda ko'rsatiladi
+     kursiv - matn kursiv bilan ko'rsatiladi
+     oblique - matn "egilgan" (qiyshiq kursivga juda o'xshaydi, lekin kamroq qo'llab-quvvatlanadi)
 
 
-
-font-family ("Trebuchet MS", Helvetica, sans-serif). See the implementation below:
+Shrift uslubini amalga oshirish quyida ko'rsatilgan:
 
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-body {
-  font-family: "Trebuchet MS", Helvetica, sans-serif;
-}
-</style>
-</head>
-<body>
-
-<h1>Lorem ipsum dolor sit amet</h1>
-
-<p>Lorem ipsum dolor sit amet.</p>
-<p>0 1 2 3 4 5 6 7 8 9</p>
-
-</body>
-</html>
-
-
-
-font-family (Georgia, Verdana, sans-serif). See implementation below:
-
-<!DOCTYPE html>
-<html>
-<head>
-<style>
-body {
-  font-family: Georgia, Verdana, sans-serif;
-}
-</style>
-</head>
-<body>
-
-<h1>Lorem ipsum dolor sit amet</h1>
-
-<p>Lorem ipsum dolor sit amet.</p>
-<p>0 1 2 3 4 5 6 7 8 9</p>
-
-</body>
-</html>
-
-
-
-Monospace Fonts:::
-
-font-family ("Courier New", Courier, monospace). See implementation below:
-
-<!DOCTYPE html>
-<html>
-<head>
-<style>
-body {
-  font-family: "Courier New", Courier, monospace;
-}
-</style>
-</head>
-<body>
-
-<h1>Lorem ipsum dolor sit amet</h1>
-
-<p>Lorem ipsum dolor sit amet.</p>
-<p>0 1 2 3 4 5 6 7 8 9</p>
-
-</body>
-</html>
-
-
-
-Cursive Fonts:::
-
-font-family ("Brush Script MT", cursive). See how to implement this font family below:
-
-
-<!DOCTYPE html>
-<html>
-<head>
-<style>
-body {
-  font-family: "Brush Script MT", cursive;
-}
-</style>
-</head>
-<body>
-
-<h1>Lorem ipsum dolor sit amet</h1>
-
-<p>Lorem ipsum dolor sit amet.</p>
-<p>0 1 2 3 4 5 6 7 8 9</p>
-
-</body>
-</html>
-
-
-
-Fantasy Fonts:::
-
-font-family (Copperplate, Papyrus, fantasy). See how to implement this font family below:
-
-
-<!DOCTYPE html>
-<html>
-<head>
-<style>
-body {
-  font-family: Copperplate, Papyrus, fantasy;
-}
-</style>
-</head>
-<body>
-
-<h1>Lorem ipsum dolor sit amet</h1>
-
-<p>Lorem ipsum dolor sit amet.</p>
-<p>0 1 2 3 4 5 6 7 8 9</p>
-
-</body>
-</html>
-
-
-
-
-
-CSS Font Style::
-
-
-Font Style
-
-The font-style property is mostly used to specify italic text.
-
-This property has three values:
-
-    normal - The text is shown normally
-    italic - The text is shown in italics
-    oblique - The text is "leaning" (oblique is very similar to italic, but less supported)
-
-
-The implementation of font-style is shown below:
-
-
-<!DOCTYPE html>
-<html>
-<head>
-<style>
+<uslub>
 p.normal {
-  font-style: normal;
+   shrift uslubi: normal;
 }
 
-p.italic {
-  font-style: italic;
+p. kursiv {
+   shrift uslubi: kursiv;
 }
 
 p.oblique {
-  font-style: oblique;
+   shrift uslubi: qiya;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<p class="normal">This is a paragraph in normal style.</p>
-<p class="italic">This is a paragraph in italic style.</p>
-<p class="oblique">This is a paragraph in oblique style.</p>
+<p class="normal">Bu oddiy uslubdagi paragraf.</p>
+<p class="italic">Bu kursiv uslubidagi paragraf.</p>
+<p class="oblique">Bu oblique uslubidagi paragraf.</p>
 
 </body>
 </html>
@@ -2885,68 +2877,68 @@ p.oblique {
 
 
 
-Font Weight
+Shrift vazni
 
-The font-weight property specifies the weight of a font:
+Font-weight xususiyati shrift og'irligini belgilaydi:
 
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
+<uslub>
 p.normal {
-  font-weight: normal;
+   shrift og'irligi: normal;
 }
 
-p.light {
-  font-weight: lighter;
+yorug'lik {
+   shrift vazni: engilroq;
 }
 
-p.thick {
-  font-weight: bold;
+p.qalin {
+   shrift vazni: qalin;
 }
 
-p.thicker {
-  font-weight: 900;
+p.qalinroq {
+   shrift og'irligi: 900;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<p class="normal">This is a paragraph.</p>
-<p class="light">This is a paragraph.</p>
-<p class="thick">This is a paragraph.</p>
-<p class="thicker">This is a paragraph.</p>
+<p class="normal">Bu paragraf.</p>
+<p class="light">Bu paragraf.</p>
+<p class="thick">Bu paragraf.</p>
+<p class="thicker">Bu paragraf.</p>
 
 </body>
 </html>
 
 
-Font Variant
+Shrift varianti
 
-The font-variant property specifies whether or not a text should be displayed in a small-caps font.
+Font-variant xususiyati matnni kichik bosh harflar bilan ko'rsatish yoki ko'rsatmaslik kerakligini belgilaydi.
 
-In a small-caps font, all lowercase letters are converted to uppercase letters. However, the converted 
+Kichik boshli shriftda barcha kichik harflar katta harflarga aylantiriladi. Biroq, aylantirilgan
 
-uppercase letters appears in a smaller font size than the original uppercase letters in the text.
+katta harflar matndagi asl bosh harflardan kichikroq shrift o'lchamida ko'rinadi.
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
+<uslub>
 p.normal {
-  font-variant: normal;
+   shrift-variant: normal;
 }
 
-p.small {
-  font-variant: small-caps;
+p.kichik {
+   shrift-variant: kichik bosh harflar;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<p class="normal">My name is Hege Refsnes.</p>
-<p class="small">My name is Hege Refsnes.</p>
+<p class="normal">Mening ismim Xege Refsnes.</p>
+<p class="small">Mening ismim Xege Refsnes.</p>
 
 </body>
 </html>
@@ -2954,206 +2946,205 @@ p.small {
 
 
 
-
-CSS Font Size::
-
+CSS shrift hajmi::
 
 
-Font Size
 
-The font-size property sets the size of the text.
+Shrift hajmi
 
-Being able to manage the text size is important in web design. However, you should not use font size 
+Font-size xossasi matn hajmini belgilaydi.
 
-adjustments to make paragraphs look like headings, or headings look like paragraphs.
+Matn hajmini boshqarish qobiliyati veb-dizaynda muhim ahamiyatga ega. Biroq, siz shrift o'lchamidan foydalanmasligingiz kerak
 
-Always use the proper HTML tags, like <h1> - <h6> for headings and <p> for paragraphs.
+paragraflarni sarlavhalarga yoki sarlavhalarni paragraflarga o'xshatish uchun tuzatishlar.
 
-The font-size value can be an absolute, or relative size.
+Har doim tegishli HTML teglaridan foydalaning, masalan, sarlavhalar uchun <h1> - <h6> va paragraflar uchun <p>.
 
-Absolute size:
+Shrift o'lchami qiymati mutlaq yoki nisbiy o'lcham bo'lishi mumkin.
 
-    Sets the text to a specified size
-    Does not allow a user to change the text size in all browsers (bad for accessibility reasons)
-    Absolute size is useful when the physical size of the output is known
+Mutlaq o'lcham:
 
-Relative size:
+     Matnni belgilangan hajmga o'rnatadi
+     Foydalanuvchiga barcha brauzerlarda matn hajmini o'zgartirishga ruxsat bermaydi (mavjud sabablarga ko'ra yomon)
+     Chiqarishning jismoniy hajmi ma'lum bo'lganda, mutlaq o'lcham foydalidir
 
-    Sets the size relative to surrounding elements
-    Allows a user to change the text size in browsers
+Nisbiy o'lcham:
+
+     Atrofdagi elementlarga nisbatan o'lchamni o'rnatadi
+     Foydalanuvchiga brauzerlarda matn hajmini o'zgartirish imkonini beradi
 
 
-Note: If you do not specify a font size, the default size for normal text, like paragraphs, is 16px 
+Eslatma: Agar siz shrift o'lchamini belgilamasangiz, oddiy matn uchun standart o'lcham, masalan, paragraflar uchun, 16px.
 
 (16px=1em).
 
-Convertion factor: 1em=12pt=16px=100%
+Konvertatsiya koeffitsienti: 1em=12pt=16px=100%
 
 
 
-Set Font Size With Pixels
+Shrift hajmini piksellar bilan o'rnating
 
-Setting the text size with pixels gives you full control over the text size:
-
-
-<!DOCTYPE html>
-<html>
-<head>
-<style>
-h1 {
-  font-size: 40px;
-}
-
-h2 {
-  font-size: 30px;
-}
-
-p {
-  font-size: 14px;
-}
-</style>
-</head>
-<body>
-
-<h1>This is heading 1</h1>
-<h2>This is heading 2</h2>
-<p>This is a paragraph.</p>
-<p>This is another paragraph.</p>
-
-</body>
-</html>
-
-
-Tip: If you use pixels, you can still use the zoom tool to resize the entire page.
-
-
-
-Set Font Size With Em
-
-To allow users to resize the text (in the browser menu), many developers use em instead of pixels.
-
-1em is equal to the current font size. The default text size in browsers is 16px. So, the default size of 
-
-1em is 16px.
-
-The size can be calculated from pixels to em using this formula: pixels/16=em
-
-See application below:
+Matn o'lchamini piksellar bilan belgilash sizga matn hajmini to'liq boshqarish imkonini beradi:
 
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
+<uslub>
 h1 {
-  font-size: 2.5em; /* 40px/16=2.5em */
+   shrift o'lchami: 40px;
 }
 
 h2 {
-  font-size: 1.875em; /* 30px/16=1.875em */
- }
+   shrift o'lchami: 30px;
+}
 
 p {
-  font-size: 0.875em; /* 14px/16=0.875em */
+   shrift o'lchami: 14px;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h1>This is heading 1</h1>
-<h2>This is heading 2</h2>
-<p>This is a paragraph.</p>
-<p>Specifying the font-size in em allows all major browsers to resize the text.
-Unfortunately, there is still a problem with older versions of IE. When resizing the text, it becomes 
-
-larger/smaller than it should.</p>
+<h1>Bu sarlavha 1</h1>
+<h2>Bu 2-sarlavha</h2>
+<p>Bu paragraf.</p>
+<p>Bu boshqa paragraf.</p>
 
 </body>
 </html>
 
 
-
-In the example above, the text size in em is the same as the previous example in pixels. However, with the 
-
-em size, it is possible to adjust the text size in all browsers.
-
-Unfortunately, there is still a problem with older versions of Internet Explorer. The text becomes larger 
-
-than it should when made larger, and smaller than it should when made smaller.
+Maslahat: Agar siz piksellardan foydalansangiz, butun sahifa hajmini o'zgartirish uchun masshtablash vositasidan foydalanishingiz mumkin.
 
 
 
+Em bilan shrift hajmini o'rnating
 
-Use a Combination of Percent and Em
+Foydalanuvchilarga matn hajmini o'zgartirishga ruxsat berish uchun (brauzer menyusida) ko'plab ishlab chiquvchilar piksel o'rniga em-dan foydalanadilar.
 
-The solution that works in all browsers, is to set a default font-size in percent for the <body> element:
+1em joriy shrift hajmiga teng. Brauzerlarda standart matn hajmi 16px. Shunday qilib, standart o'lcham
+
+1em 16px.
+
+O'lchamni pikseldan emgacha quyidagi formula yordamida hisoblash mumkin: piksel/16=em
+
+Quyidagi ilovaga qarang:
 
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-body {
-  font-size: 100%;
-}
-
+<uslub>
 h1 {
-  font-size: 2.5em;
+   shrift hajmi: 2,5em; /* 40px/16=2,5em */
 }
 
 h2 {
-  font-size: 1.875em;
-}
+   shrift hajmi: 1.875em; /* 30px/16=1.875em */
+  }
 
 p {
-  font-size: 0.875em;
+   shrift o'lchami: 0,875em; /* 14px/16=0,875em */
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h1>This is heading 1</h1>
-<h2>This is heading 2</h2>
-<p>This is a paragraph.</p>
-<p>Specifying the font-size in percent and em displays the same size in all major browsers, and allows all 
+<h1>Bu sarlavha 1</h1>
+<h2>Bu 2-sarlavha</h2>
+<p>Bu paragraf.</p>
+<p>Em-da shrift o'lchamini belgilash barcha asosiy brauzerlarga matn hajmini o'zgartirish imkonini beradi.
+Afsuski, IE ning eski versiyalari bilan bog'liq muammo hali ham mavjud. Matn o'lchamini o'zgartirganda, u bo'ladi
 
-browsers to resize the text!</p>
+kerak bo'lganidan kattaroq/kichikroq.</p>
 
 </body>
 </html>
 
 
-NB: Our code now works great! It shows the same text size in all browsers, and allows all browsers to zoom 
 
-or resize the text!
+Yuqoridagi misolda emdagi matn hajmi piksellardagi oldingi misol bilan bir xil. Biroq, bilan
+
+em o'lchami, barcha brauzerlarda matn hajmini sozlash mumkin.
+
+Afsuski, Internet Explorer-ning eski versiyalarida muammo hali ham mavjud. Matn kattalashadi
+
+kattaroq qilinganida kerak bo'lganidan va kichikroq qilinganidan kichikroq.
 
 
 
-Responsive Font Size
 
-The text size can be set with a vw unit, which means the "viewport width". Viewport is the browser window 
+Foiz va Em birikmasidan foydalaning
 
-size. 1vw = 1% of viewport width. If the viewport is 50cm wide, 1vw is 0.5cm.
+Barcha brauzerlarda ishlaydigan yechim <body> elementi uchun foizda standart shrift o'lchamini o'rnatishdir:
 
-That way the text size will follow the size of the browser window:
+
+<!DOCTYPE html>
+<html>
+<head>
+<uslub>
+tana {
+   shrift o'lchami: 100%;
+}
+
+h1 {
+   shrift hajmi: 2,5em;
+}
+
+h2 {
+   shrift hajmi: 1.875em;
+}
+
+p {
+   shrift o'lchami: 0,875em;
+}
+</style>
+</head>
+<tana>
+
+<h1>Bu sarlavha 1</h1>
+<h2>Bu 2-sarlavha</h2>
+<p>Bu paragraf.</p>
+<p>Shrift o‘lchamini foiz va em bilan belgilash barcha asosiy brauzerlarda bir xil o‘lchamni ko‘rsatadi va barchaga ruxsat beradi
+
+matn hajmini o'zgartirish uchun brauzerlar!</p>
+
+</body>
+</html>
+
+
+Eslatma: Bizning kodimiz endi ajoyib ishlaydi! U barcha brauzerlarda bir xil matn hajmini ko'rsatadi va barcha brauzerlarga kattalashtirish imkonini beradi
+
+yoki matn hajmini o'zgartiring!
+
+
+
+Javob beruvchi shrift hajmi
+
+Matn o'lchamini vw birligi bilan o'rnatish mumkin, bu "ko'rish maydoni kengligi" degan ma'noni anglatadi. Viewport - bu brauzer oynasi
+
+hajmi. 1vw = ko'rish maydoni kengligining 1%. Agar ko'rish maydoni 50 sm kengligida bo'lsa, 1vw 0,5 sm.
+
+Shunday qilib, matn hajmi brauzer oynasining o'lchamiga mos keladi:
 
 
 <!DOCTYPE html>
 <html>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<body>
+<tana>
 
-<h1 style="font-size:10vw;">Responsive Text</h1>
+<h1 style="font-size:10vw;">Javob beruvchi matn</h1>
 
-<p style="font-size:5vw;">Resize the browser window to see how the text size scales.</p>
+<p style="font-size:5vw;">Matn o'lchami qanday o'zgarishini ko'rish uchun brauzer oynasining o'lchamini o'zgartiring.</p>
 
-<p style="font-size:5vw;">Use the "vw" unit when sizing the text. 10vw will set the size to 10% of the 
+<p style="font-size:5vw;">Matn o'lchamini belgilashda "vw" birligidan foydalaning. 10vw o'lchamni 10% ga o'rnatadi
 
-viewport width.</p>
+ko'rish maydoni kengligi.</p>
 
-<p>Viewport is the browser window size. 1vw = 1% of viewport width. If the viewport is 50cm wide, 1vw is 
+<p>Viewport - bu brauzer oynasining o'lchami. 1vw = ko'rish maydoni kengligining 1%. Agar ko'rish oynasi kengligi 50 sm bo'lsa, 1vw
 
-0.5cm.</p>
+0,5 sm.</p>
 
 </body>
 </html>
@@ -3162,16 +3153,16 @@ viewport width.</p>
 
 
 
-CSS Google Fonts::
+CSS Google shriftlari::
 
 
-Google fonts are 1000+ free-to-use additoinal fonts for people who prefer not to use the standard HTML 
+Google shriftlari standart HTML-dan foydalanishni istamaydigan odamlar uchun 1000 dan ortiq bepul qo'shimcha shriftlardir.
 
-fonts.
+shriftlar.
 
-How To Use Google Fonts
+Google shriftlaridan qanday foydalanish
 
-Just add a special style sheet link in the <head> section and then refer to the font in the CSS.
+Faqat <head> bo'limiga maxsus uslublar jadvali havolasini qo'shing va keyin CSS-dagi shriftga murojaat qiling.
 
 
 
@@ -3179,15 +3170,15 @@ Just add a special style sheet link in the <head> section and then refer to the 
 <html>
 <head>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
-<style>
-body {
-  font-family: "Sofia", sans-serif;
+<uslub>
+tana {
+   font-family: "Sofiya", sans-serif;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h1>Sofia Font</h1>
+<h1>Sofiya shrifti</h1>
 <p>Lorem ipsum dolor sit amet.</p>
 <p>123456790</p>
 
@@ -3196,21 +3187,21 @@ body {
 
 
 
-To use a font named "Trirong" from Google Fonts:
+Google Shriftlardan “Trirong” nomli shriftdan foydalanish uchun:
 
 <!DOCTYPE html>
 <html>
 <head>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong">
-<style>
-body {
-  font-family: "Trirong", serif;
+<uslub>
+tana {
+   shrift oilasi: "Tirong", serif;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h1>Trirong Font</h1>
+<h1>Trirong shrifti</h1>
 <p>Lorem ipsum dolor sit amet.</p>
 <p>123456790</p>
 
@@ -3218,21 +3209,21 @@ body {
 </html>
 
 
-To use a font named "Audiowide" from Google Fonts:
+Google Fonts’dan “Audiowide” nomli shriftdan foydalanish uchun:
 
 <!DOCTYPE html>
 <html>
 <head>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
-<style>
-body {
-  font-family: "Audiowide", sans-serif;
+<uslub>
+tana {
+   font-family: "Audiowide", sans-serif;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h1>Audiowide Font</h1>
+<h1>Ovozli shrift</h1>
 <p>Lorem ipsum dolor sit amet.</p>
 <p>123456790</p>
 
@@ -3242,74 +3233,74 @@ body {
 
 
 
-Note: When specifying a font in CSS, always list at minimum one fallback font (to avoid unexpected 
+Eslatma: CSS-da shriftni belgilashda har doim kamida bitta zaxira shrift ro'yxatini kiriting (kutilmagan holatlarning oldini olish uchun
 
-behaviors). So, also here you should add a generic font family (like serif or sans-serif) to the end of the 
+xatti-harakatlari). Shunday qilib, bu erda siz umumiy shrift oilasini (masalan, serif yoki sans-serif) oxiriga qo'shishingiz kerak.
 
-list.
+ro'yxati.
 
-See all available google fonts here: https://www.w3schools.com/howto/howto_google_fonts.asp
+Barcha mavjud google shriftlarini bu yerda koʻring: https://www.w3schools.com/howto/howto_google_fonts.asp
 
 
-To use multiple Google fonts, just separate the font names with a pipe character (|), like this:
+Bir nechta Google shriftlaridan foydalanish uchun shrift nomlarini chiziqli belgi (|) bilan ajrating, shunga o'xshash:
 
 
 
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide|Sofia|Trirong">
-<style>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide|Sofiya|Trirong">
+<uslub>
 h1.a {
-  font-family: "Audiowide", sans-serif;
+   font-family: "Audiowide", sans-serif;
 }
 
 h1.b {
-  font-family: "Sofia", sans-serif;
+   font-family: "Sofiya", sans-serif;
 }
 
 h1.c {
-  font-family: "Trirong", serif;
+   shrift oilasi: "Tirong", serif;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h1 class="a">Audiowide Font</h1>
+<h1 class="a">Audiowide shrifti</h1>
 
-<h1 class="b">Sofia Font</h1>
+<h1 class="b">Sofiya shrifti</h1>
 
-<h1 class="c">Trirong Font</h1>
+<h1 class="c">Trirong shrifti</h1>
 
 </body>
 </html>
 
 
 
-NB: Requesting multiple fonts may slow down your web pages! So be careful about that.
+Eslatma: Bir nechta shriftlarni so'rash veb-sahifalaringizni sekinlashtirishi mumkin! Shuning uchun bundan ehtiyot bo'ling.
 
 
 
-Styling Google Fonts
+Google shriftlarini uslublash
 
-CSS can be used to style Google Fonts as shown below:
+CSS-dan Google shriftlarini quyida ko'rsatilganidek uslublash uchun foydalanish mumkin:
 
 
 <!DOCTYPE html>
 <html>
 <head>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
-<style>
-body {
-  font-family: "Sofia", sans-serif;
-  font-size: 30px;
-  text-shadow: 3px 3px 3px #ababab;
+<uslub>
+tana {
+   font-family: "Sofiya", sans-serif;
+   shrift o'lchami: 30px;
+   matn soyasi: 3px 3px 3px #ababab;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h1>Sofia Font</h1>
+<h1>Sofiya shrifti</h1>
 <p>Lorem ipsum dolor sit amet.</p>
 <p>123456790</p>
 
@@ -3318,33 +3309,32 @@ body {
 
 
 
+Shrift effektlarini yoqish
 
-Enabling Font Effects
+Google siz foydalanishingiz mumkin bo'lgan turli xil shrift effektlarini ham yoqdi.
 
-Google have also enabled different font effects that you can use.
+Avval Google API-ga effekt=effekt nomini qo'shing, so'ngra boradigan elementga maxsus sinf nomini qo'shing
 
-First add effect=effectname to the Google API, then add a special class name to the element that is going to 
-
-use the special effect. The class name always starts with font-effect- and ends with the effectname.
+maxsus effektdan foydalaning. Sinf nomi har doim font-effect- bilan boshlanadi va effekt nomi bilan tugaydi.
 
 
-To add the fire effect to the "Sofia" font
+"Sofiya" shriftiga olov effektini qo'shish uchun
 
 
 <!DOCTYPE html>
 <html>
 <head>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=fire">
-<style>
-body {
-  font-family: "Sofia", sans-serif;
-  font-size: 30px;
+<uslub>
+tana {
+   font-family: "Sofiya", sans-serif;
+   shrift o'lchami: 30px;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h1 class="font-effect-fire">Sofia on Fire</h1>
+<h1 class="font-effect-fire">Yonayotgan Sofiya</h1>
 <p class="font-effect-fire">Lorem ipsum dolor sit amet.</p>
 <p class="font-effect-fire">123456790</p>
 
@@ -3352,29 +3342,29 @@ body {
 </html>
 
 
-To request multiple font effects, just separate the effect names with a pipe character (|), like this:
+Bir nechta shrift effektlarini so'rash uchun effekt nomlarini chiziq belgisi (|) bilan ajrating, shunga o'xshash:
 
 
 
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=neon|outline|emboss|
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=neon|outline|bo'rtma|
 
 shadow-multiple">
-<style>
-body {
-  font-family: "Sofia", sans-serif;
-  font-size: 30px;
+<uslub>
+tana {
+   font-family: "Sofiya", sans-serif;
+   shrift o'lchami: 30px;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h1 class="font-effect-neon">Neon Effect</h1>
-<h1 class="font-effect-outline">Outline Effect</h1>
-<h1 class="font-effect-emboss">Emboss Effect</h1>
-<h1 class="font-effect-shadow-multiple">Multiple Shadow Effect</h1>
+<h1 class="font-effect-neon">Neon effekti</h1>
+<h1 class="font-effect-outline">Kontakt effekti</h1>
+<h1 class="font-effect-emboss">Bo'rtma effekti</h1>
+<h1 class="font-effect-shadow-multiple">Bir nechta soya effekti</h1>
 
 </body>
 </html>
@@ -3383,81 +3373,81 @@ body {
 
 
 
-CSS Great Font Pairings::
+CSS ajoyib shrift juftligi::
 
-It is important for a website to have great font pairings. This improves the design.
+Veb-sayt uchun ajoyib shrift juftligiga ega bo'lish juda muhimdir. Bu dizaynni yaxshilaydi.
 
 
-Font Pairing Rules
+Shriftlarni ulash qoidalari
 
-Here are some basic rules to create great font pairings:
-1. Complement
+Ajoyib shrift juftlarini yaratish uchun bir necha asosiy qoidalar:
+1. To‘ldiruvchi
 
-It is always safe to find font pairings that complement one another.
+Bir-birini to'ldiradigan shrift juftlarini topish har doim xavfsizdir.
 
-A great font combination should harmonize, without being too similar or too different.
-2. Use Font Superfamilies
+Ajoyib shrift kombinatsiyasi juda o'xshash yoki juda farq qilmasdan uyg'unlashishi kerak.
+2. Shrift Superfamilies dan foydalaning
 
-A font superfamily is a set of fonts designed to work well together. So, using different fonts within the 
+Shrift superfamily - bu birgalikda yaxshi ishlash uchun mo'ljallangan shriftlar to'plami. Shunday qilib, ichida turli shriftlardan foydalanish
 
-same superfamily is safe.
+Xuddi shu super oila xavfsiz.
 
-For example, the Lucida superfamily contains the following fonts: Lucida Sans, Lucida Serif, Lucida 
+Masalan, Lucida super oilasi quyidagi shriftlarni o'z ichiga oladi: Lucida Sans, Lucida Serif, Lucida
 
-Typewriter Sans, Lucida Typewriter Serif and Lucida Math.
-3. Contrast is King
+Yozuv mashinkasi Sans, Lucida yozuv mashinasi Serif va Lucida Math.
+3. Kontrast - King
 
-Two fonts that are too similar will often conflict. However, contrasts, done the right way, brings out the 
+Juda o'xshash ikkita shrift ko'pincha ziddiyatli bo'ladi. Biroq, qarama-qarshiliklar, to'g'ri yo'l bilan amalga oshirilgan, olib keladi
 
-best in each font.
+har bir shriftda eng yaxshisi.
 
-Example: Combining serif with sans serif is a well known combination.
+Misol: Serifni sans serif bilan birlashtirish yaxshi ma'lum kombinatsiyadir.
 
-A strong superfamily includes both serif and sans serif variations of the same font (e.g. Lucida and Lucida 
+Kuchli superoila bir xil shriftning serif va sans serif turlarini o'z ichiga oladi (masalan, Lucida va Lucida).
 
 Sans).
-4. Choose Only One Boss
+4. Faqat bitta xo'jayinni tanlang
 
-One font should be the boss. This establishes a hierarchy for the fonts on your page. This can be achieved 
+Bitta shrift boss bo'lishi kerak. Bu sizning sahifangizdagi shriftlar uchun ierarxiyani o'rnatadi. Bunga erishish mumkin
 
-by varying the size, weight and color.
+hajmi, vazni va rangini o'zgartirish orqali.
 
 
-In the example below, Georgia font family is the boss as it is larger and a compatible but different fonts:
+Quyidagi misolda, Jorjiya shriftlar oilasi boss hisoblanadi, chunki u kattaroq va mos keladi, lekin har xil shriftlar:
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-body {
-  background-color: black;
-  font-family: Verdana, sans-serif;
-  font-size: 16px;
-  color: gray;  
+<uslub>
+tana {
+   fon rangi: qora;
+   font-family: Verdana, sans-serif;
+   shrift o'lchami: 16px;
+   rang: kulrang;
 }
 
 h1 {
-  font-family: Georgia, serif;
-  font-size: 60px;
-  color: white;
+   shrift oilasi: Georgia, serif;
+   shrift o'lchami: 60px;
+   rang: oq;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h1>Beautiful Norway</h1>
+<h1>Chiroyli Norvegiya</h1>
 
-<p>Norway has a total area of 385,252 square kilometers and a population of 5,438,657 (December 2020). 
+<p>Norvegiyaning umumiy maydoni 385 252 kvadrat kilometr va aholisi 5 438 657 kishi (2020 yil dekabr).
 
-Norway is bordered by Sweden, Finland and Russia to the north-east, and the Skagerrak to the south, with 
+Norvegiya shimoli-sharqda Shvetsiya, Finlyandiya va Rossiya bilan, janubda esa Skagerrak bilan chegaradosh.
 
-Denmark on the other side.</p>
+Boshqa tomonda Daniya.</p>
 
-<p>Norway has beautiful mountains, glaciers and stunning fjords. Oslo, the capital, is a city of green 
+<p>Norvegiyada go'zal tog'lar, muzliklar va ajoyib fyordlar bor. Poytaxt Oslo yashil shahar
 
-spaces and museums. Bergen, with colorful wooden houses, is the starting point for cruises to the dramatic 
+joylar va muzeylar. Rangli yog'och uylari bo'lgan Bergen dramatik sayohatlar uchun boshlang'ich nuqtadir
 
-Sognefjord. Norway is also known for fishing, hiking and skiing.</p>
+Sognefjord. Norvegiya baliq ovlash, piyoda sayr qilish va chang'i sporti bilan ham mashhur.</p>
 
 </body>
 </html>
@@ -3465,241 +3455,238 @@ Sognefjord. Norway is also known for fishing, hiking and skiing.</p>
 
 
 
-Some of the available popular font pairings that will suit many brands and contexts are shown in the 
+Ko'pgina brendlar va kontekstlarga mos keladigan mashhur shrift juftliklaridan ba'zilari ko'rsatilgan
 
-examples below:
-
-
-Georgia and Verdana
-
-Georgia and Verdana is a classic combination. It also sticks to the web safe font standards. Use "Georgia" 
-
-font for headings, and "Verdana" font for text. See example below:
+quyidagi misollar:
 
 
+Jorjiya va Verdana
 
-<!DOCTYPE html>
-<html>
-<head>
-<style>
-body  {
-  font-family: Verdana, sans-serif;
-  font-size: 16px;
-}
+Jorjiya va Verdana klassik kombinatsiyadir. Shuningdek, u veb-xavfsiz shrift standartlariga amal qiladi. "Gruziya" dan foydalaning
 
-h1 {
-  font-family: Georgia, serif;
-  font-size: 46px;  
-}
-</style>
-</head>
-<body>
-
-<h1>Beautiful Norway</h1>
-
-<p>Norway has a total area of 385,252 square kilometers and a population of 5,438,657 (December 2020). 
-
-Norway is bordered by Sweden, Finland and Russia to the north-east, and the Skagerrak to the south, with 
-
-Denmark on the other side.</p>
-
-<p>Norway has beautiful mountains, glaciers and stunning fjords. Oslo, the capital, is a city of green 
-
-spaces and museums. Bergen, with colorful wooden houses, is the starting point for cruises to the dramatic 
-
-Sognefjord. Norway is also known for fishing, hiking and skiing.</p>
-
-</body>
-</html> 
-
-
-
-Helvetica and Garamond
-
-Helvetica and Garamond is another classic combination that uses web safe fonts. Use "Helvetica" font for 
-
-headings and "Garamond" font for text. See example below:
+sarlavhalar uchun shrift va matn uchun "Verdana" shrifti. Quyidagi misolga qarang:
 
 
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-body {
-  font-family: Garamond, serif;
-  font-size: 16px;  
+<uslub>
+tana {
+   font-family: Verdana, sans-serif;
+   shrift o'lchami: 16px;
 }
 
 h1 {
-  font-family: Helvetica, sans-serif;
-  font-size: 46px;  
+   shrift oilasi: Georgia, serif;
+   shrift o'lchami: 46px;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h1>Beautiful Norway</h1>
+<h1>Chiroyli Norvegiya</h1>
 
-<p>Norway has a total area of 385,252 square kilometers and a population of 5,438,657 (December 2020). 
+<p>Norvegiyaning umumiy maydoni 385 252 kvadrat kilometr va aholisi 5 438 657 kishi (2020 yil dekabr).
 
-Norway is bordered by Sweden, Finland and Russia to the north-east, and the Skagerrak to the south, with 
+Norvegiya shimoli-sharqda Shvetsiya, Finlyandiya va Rossiya bilan, janubda esa Skagerrak bilan chegaradosh.
 
-Denmark on the other side.</p>
+Boshqa tomonda Daniya.</p>
 
-<p>Norway has beautiful mountains, glaciers and stunning fjords. Oslo, the capital, is a city of green 
+<p>Norvegiyada go'zal tog'lar, muzliklar va ajoyib fyordlar bor. Poytaxt Oslo yashil shahar
 
-spaces and museums. Bergen, with colorful wooden houses, is the starting point for cruises to the dramatic 
+joylar va muzeylar. Rangli yog'och uylari bo'lgan Bergen dramatik sayohatlar uchun boshlang'ich nuqtadir
 
-Sognefjord. Norway is also known for fishing, hiking and skiing.</p>
+Sognefjord. Norvegiya baliq ovlash, piyoda sayr qilish va chang'i sporti bilan ham mashhur.</p>
 
 </body>
-</html> 
+</html>
+
+
+
+Helvetica va Garamond
+
+Helvetica va Garamond - bu veb-xavfsiz shriftlardan foydalanadigan yana bir klassik birikma. "Helvetica" shriftidan foydalaning
+
+sarlavhalar va matn uchun "Garamond" shrifti. Quyidagi misolga qarang:
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<uslub>
+tana {
+   shrift oilasi: Garamond, serif;
+   shrift o'lchami: 16px;
+}
+
+h1 {
+   font-family: Helvetica, sans-serif;
+   shrift o'lchami: 46px;
+}
+</style>
+</head>
+<tana>
+
+<h1>Chiroyli Norvegiya</h1>
+
+<p>Norvegiyaning umumiy maydoni 385 252 kvadrat kilometr va aholisi 5 438 657 kishi (2020 yil dekabr).
+
+Norvegiya shimoli-sharqda Shvetsiya, Finlyandiya va Rossiya bilan, janubda esa Skagerrak bilan chegaradosh.
+
+Boshqa tomonda Daniya.</p>
+
+<p>Norvegiyada go'zal tog'lar, muzliklar va ajoyib fyordlar bor. Poytaxt Oslo yashil shahar
+
+joylar va muzeylar. Rangli yog'och uylari bo'lgan Bergen dramatik sayohatlar uchun boshlang'ich nuqtadir
+
+Sognefjord. Norvegiya baliq ovlash, piyoda sayr qilish va chang'i sporti bilan ham mashhur.</p>
+
+</body>
+</html>
 
 
 
 
 
-Popular Google Font Pairings
+Mashhur Google shriftlari
 
-Google fonts provide 1000+ alternatives to traditional HTML fonts.They are free to use on your website. 
-
-
-Below are the compatible google fonts
+Google shriftlari an'anaviy HTML shriftlariga 1000 dan ortiq muqobillarni taqdim etadi. Ulardan veb-saytingizda bepul foydalanish mumkin.
 
 
+Quyida mos google shriftlari keltirilgan
 
 
-Merriweather and Open Sans 
 
-Meriwether font for headings, and "Open Sans" for text::
+
+Merriweather va Open Sans
+
+Sarlavhalar uchun Meriwether shrifti va matn uchun "Ochiq Sans"::
 
 
 <!DOCTYPE html>
 <html>
 <head>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather|Open+Sans">
-<style>
-body {
-  font-family: "Open Sans", sans-serif;
-  font-size: 16px;
+<uslub>
+tana {
+   font-family: "Open Sans", sans-serif;
+   shrift o'lchami: 16px;
 }
 
 h1 {
-  font-family: Merriweather, serif;
-  font-size: 46px;
+   shrift oilasi: Merriweather, serif;
+   shrift o'lchami: 46px;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h1>Beautiful Norway</h1>
+<h1>Chiroyli Norvegiya</h1>
 
-<p>Norway has a total area of 385,252 square kilometers and a population of 5,438,657 (December 2020). 
+<p>Norvegiyaning umumiy maydoni 385 252 kvadrat kilometr va aholisi 5 438 657 kishi (2020 yil dekabr).
 
-Norway is bordered by Sweden, Finland and Russia to the north-east, and the Skagerrak to the south, with 
+Norvegiya shimoli-sharqda Shvetsiya, Finlyandiya va Rossiya bilan, janubda esa Skagerrak bilan chegaradosh.
 
-Denmark on the other side.</p>
+Boshqa tomonda Daniya.</p>
 
-<p>Norway has beautiful mountains, glaciers and stunning fjords. Oslo, the capital, is a city of green 
+<p>Norvegiyada go'zal tog'lar, muzliklar va ajoyib fyordlar bor. Poytaxt Oslo yashil shahar
 
-spaces and museums. Bergen, with colorful wooden houses, is the starting point for cruises to the dramatic 
+joylar va muzeylar. Rangli yog'och uylari bo'lgan Bergen dramatik sayohatlar uchun boshlang'ich nuqtadir
 
-Sognefjord. Norway is also known for fishing, hiking and skiing.</p>
+Sognefjord. Norvegiya baliq ovlash, piyoda sayr qilish va chang'i sporti bilan ham mashhur.</p>
 
 </body>
-</html> 
+</html>
 
 
 
 
-Ubuntu and Lora
+Ubuntu va Lora
 
-USe Ubuntu for headings and Lora for text. See example below:
+Sarlavhalar uchun Ubuntu va matn uchun Lora'dan foydalaning. Quyidagi misolga qarang:
 
 
 <!DOCTYPE html>
 <html>
 <head>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu|Lora">
-<style>
-body {
-  font-family: Lora, serif;
-  font-size: 16px;  
+<uslub>
+tana {
+   shrift oilasi: Lora, serif;
+   shrift o'lchami: 16px;
 }
 
 h1 {
-  font-family: Ubuntu, sans-serif;
-  font-size: 46px;  
+   font-family: Ubuntu, sans-serif;
+   shrift o'lchami: 46px;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h1>Beautiful Norway</h1>
+<h1>Chiroyli Norvegiya</h1>
 
-<p>Norway has a total area of 385,252 square kilometers and a population of 5,438,657 (December 2020). 
+<p>Norvegiyaning umumiy maydoni 385 252 kvadrat kilometr va aholisi 5 438 657 kishi (2020 yil dekabr).
 
-Norway is bordered by Sweden, Finland and Russia to the north-east, and the Skagerrak to the south, with 
+Norvegiya shimoli-sharqda Shvetsiya, Finlyandiya va Rossiya bilan, janubda esa Skagerrak bilan chegaradosh.
 
-Denmark on the other side.</p>
+Boshqa tomonda Daniya.</p>
 
-<p>Norway has beautiful mountains, glaciers and stunning fjords. Oslo, the capital, is a city of green 
+<p>Norvegiyada go'zal tog'lar, muzliklar va ajoyib fyordlar bor. Poytaxt Oslo yashil shahar
 
-spaces and museums. Bergen, with colorful wooden houses, is the starting point for cruises to the dramatic 
+joylar va muzeylar. Rangli yog'och uylari bo'lgan Bergen dramatik sayohatlar uchun boshlang'ich nuqtadir
 
-Sognefjord. Norway is also known for fishing, hiking and skiing.</p>
+Sognefjord. Norvegiya baliq ovlash, piyoda sayr qilish va chang'i sporti bilan ham mashhur.</p>
 
 </body>
-</html> 
+</html>
 
 
 
-Abril Fatface and Poppins
+Abril Fatface va Poppins
 
-Use "Abril Fatface" font for headings, and "Poppins" for text. For example:
+Sarlavhalar uchun “Abril Fatface” shriftidan, matn uchun esa “Poppins” shriftidan foydalaning. Masalan:
 
 
 <!DOCTYPE html>
 <html>
 <head>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|Poppins">
-<style>
-body {
-  font-family: Poppins, sans-serif;
-  font-size: 16px;  
+<uslub>
+tana {
+   font-family: Poppins, sans-serif;
+   shrift o'lchami: 16px;
 }
 
 h1 {
-  font-family: 'Abril Fatface', serif;
-  font-size: 46px;  
+   font-family: 'Abril Fatface', serif;
+   shrift o'lchami: 46px;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h1>Beautiful Norway</h1>
+<h1>Chiroyli Norvegiya</h1>
 
-<p>Norway has a total area of 385,252 square kilometers and a population of 5,438,657 (December 2020). 
+<p>Norvegiyaning umumiy maydoni 385 252 kvadrat kilometr va aholisi 5 438 657 kishi (2020 yil dekabr).
 
-Norway is bordered by Sweden, Finland and Russia to the north-east, and the Skagerrak to the south, with 
+Norvegiya shimoli-sharqda Shvetsiya, Finlyandiya va Rossiya bilan, janubda esa Skagerrak bilan chegaradosh.
 
-Denmark on the other side.</p>
+Boshqa tomonda Daniya.</p>
 
-<p>Norway has beautiful mountains, glaciers and stunning fjords. Oslo, the capital, is a city of green 
+<p>Norvegiyada go'zal tog'lar, muzliklar va ajoyib fyordlar bor. Poytaxt Oslo yashil shahar
 
-spaces and museums. Bergen, with colorful wooden houses, is the starting point for cruises to the dramatic 
+joylar va muzeylar. Rangli yog'och uylari bo'lgan Bergen dramatik sayohatlar uchun boshlang'ich nuqtadir
 
-Sognefjord. Norway is also known for fishing, hiking and skiing.</p>
+Sognefjord. Norvegiya baliq ovlash, piyoda sayr qilish va chang'i sporti bilan ham mashhur.</p>
 
 </body>
-</html> 
+</html>
 
+Cinzel va fauna One
 
-
-Cinzel and Fauna One
-
-Use "Cinzel" font for headings and "Fauna One" for text.
+Sarlavhalar uchun "Cinzel" shrifti va matn uchun "Fauna One" shriftidan foydalaning.
 
 
 
@@ -3707,86 +3694,86 @@ Use "Cinzel" font for headings and "Fauna One" for text.
 <html>
 <head>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cinzel|Fauna+One">
-<style>
-body {
-  font-family: 'Fauna One', serif;
-  font-size: 16px;  
+<uslub>
+tana {
+   font-family: 'Fauna One', serif;
+   shrift o'lchami: 16px;
 }
 
 h1 {
-  font-family: Cinzel, serif;
-  font-size: 46px;  
+   shrift oilasi: Cinzel, serif;
+   shrift o'lchami: 46px;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h1>Beautiful Norway</h1>
+<h1>Chiroyli Norvegiya</h1>
 
-<p>Norway has a total area of 385,252 square kilometers and a population of 5,438,657 (December 2020). 
+<p>Norvegiyaning umumiy maydoni 385 252 kvadrat kilometr va aholisi 5 438 657 kishi (2020 yil dekabr).
 
-Norway is bordered by Sweden, Finland and Russia to the north-east, and the Skagerrak to the south, with 
+Norvegiya shimoli-sharqda Shvetsiya, Finlyandiya va Rossiya bilan, janubda esa Skagerrak bilan chegaradosh.
 
-Denmark on the other side.</p>
+Boshqa tomonda Daniya.</p>
 
-<p>Norway has beautiful mountains, glaciers and stunning fjords. Oslo, the capital, is a city of green 
+<p>Norvegiyada go'zal tog'lar, muzliklar va ajoyib fyordlar bor. Poytaxt Oslo yashil shahar
 
-spaces and museums. Bergen, with colorful wooden houses, is the starting point for cruises to the dramatic 
+joylar va muzeylar. Rangli yog'och uylari bo'lgan Bergen dramatik sayohatlar uchun boshlang'ich nuqtadir
 
-Sognefjord. Norway is also known for fishing, hiking and skiing.</p>
+Sognefjord. Norvegiya baliq ovlash, piyoda sayr qilish va chang'i sporti bilan ham mashhur.</p>
 
 </body>
-</html> 
+</html>
 
 
 
-Fjalla One and Libre Baskerville
+Fjalla One va Libre Baskerville
 
 
-The "Fjalla One" font should be used for headings and "Libre Baskerville" for text.
+Sarlavhalar uchun "Fjalla One" shrifti va matn uchun "Libre Baskerville" shrifti ishlatilishi kerak.
 
 
 <!DOCTYPE html>
 <html>
 <head>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fjalla+One|Libre+Baskerville">
-<style>
-body {
-  font-family: 'Libre Baskerville', serif;
-  font-size: 16px;  
+<uslub>
+tana {
+   font-family: 'Libre Baskerville', serif;
+   shrift o'lchami: 16px;
 }
 
 h1 {
-  font-family: 'Fjalla One', sans-serif;
-  font-size: 46px;  
+   font-family: 'Fjalla One', sans-serif;
+   shrift o'lchami: 46px;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h1>Beautiful Norway</h1>
+<h1>Chiroyli Norvegiya</h1>
 
-<p>Norway has a total area of 385,252 square kilometers and a population of 5,438,657 (December 2020). 
+<p>Norvegiyaning umumiy maydoni 385 252 kvadrat kilometr va aholisi 5 438 657 kishi (2020 yil dekabr).
 
-Norway is bordered by Sweden, Finland and Russia to the north-east, and the Skagerrak to the south, with 
+Norvegiya shimoli-sharqda Shvetsiya, Finlyandiya va Rossiya bilan, janubda esa Skagerrak bilan chegaradosh.
 
-Denmark on the other side.</p>
+Boshqa tomonda Daniya.</p>
 
-<p>Norway has beautiful mountains, glaciers and stunning fjords. Oslo, the capital, is a city of green 
+<p>Norvegiyada go'zal tog'lar, muzliklar va ajoyib fyordlar bor. Poytaxt Oslo yashil shahar
 
-spaces and museums. Bergen, with colorful wooden houses, is the starting point for cruises to the dramatic 
+joylar va muzeylar. Rangli yog'och uylari bo'lgan Bergen dramatik sayohatlar uchun boshlang'ich nuqtadir
 
-Sognefjord. Norway is also known for fishing, hiking and skiing.</p>
+Sognefjord. Norvegiya baliq ovlash, piyoda sayr qilish va chang'i sporti bilan ham mashhur.</p>
 
 </body>
-</html> 
+</html>
 
 
 
 
-Space Mono and Muli
+Space Mono va Muli
 
-Use "Space Mono" font for headings, and "Muli" for text. See example below:
+Sarlavhalar uchun "Space Mono" shriftidan foydalaning va matn uchun "Muli". Quyidagi misolga qarang:
 
 
 
@@ -3794,235 +3781,235 @@ Use "Space Mono" font for headings, and "Muli" for text. See example below:
 <html>
 <head>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Space+Mono|Muli">
-<style>
-body {
-  font-family: Muli, sans-serif;
-  font-size: 16px;
+<uslub>
+tana {
+   font-family: Muli, sans-serif;
+   shrift o'lchami: 16px;
 }
 
 h1 {
-  font-family: "Space Mono", monospace;
-  font-size: 46px;
+   shrift oilasi: "Space Mono", monospace;
+   shrift o'lchami: 46px;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h1>Beautiful Norway</h1>
+<h1>Chiroyli Norvegiya</h1>
 
-<p>Norway has a total area of 385,252 square kilometers and a population of 5,438,657 (December 2020). 
+<p>Norvegiyaning umumiy maydoni 385 252 kvadrat kilometr va aholisi 5 438 657 kishi (2020 yil dekabr).
 
-Norway is bordered by Sweden, Finland and Russia to the north-east, and the Skagerrak to the south, with 
+Norvegiya shimoli-sharqda Shvetsiya, Finlyandiya va Rossiya bilan, janubda esa Skagerrak bilan chegaradosh.
 
-Denmark on the other side.</p>
+Boshqa tomonda Daniya.</p>
 
-<p>Norway has beautiful mountains, glaciers and stunning fjords. Oslo, the capital, is a city of green 
+<p>Norvegiyada go'zal tog'lar, muzliklar va ajoyib fyordlar bor. Poytaxt Oslo yashil shahar
 
-spaces and museums. Bergen, with colorful wooden houses, is the starting point for cruises to the dramatic 
+joylar va muzeylar. Rangli yog'och uylari bo'lgan Bergen dramatik sayohatlar uchun boshlang'ich nuqtadir
 
-Sognefjord. Norway is also known for fishing, hiking and skiing.</p>
+Sognefjord. Norvegiya baliq ovlash, piyoda sayr qilish va chang'i sporti bilan ham mashhur.</p>
 
 </body>
-</html> 
+</html>
 
 
 
-Spectral and Rubik
+Spektral va Rubik
 
-Use the Spectral font for headings and "Rubik" for text:
+Sarlavhalar uchun Spektral shriftdan va matn uchun "Rubik" dan foydalaning:
 
 
 <!DOCTYPE html>
 <html>
 <head>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Spectral|Rubik">
-<style>
-body {
-  font-family: Rubik, sans-serif;
-  font-size: 16px;
+<uslub>
+tana {
+   font-family: Rubik, sans-serif;
+   shrift o'lchami: 16px;
 }
 
 h1 {
-  font-family: Spectral, serif;
-  font-size: 46px;
+   shrift oilasi: Spektral, serif;
+   shrift o'lchami: 46px;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h1>Beautiful Norway</h1>
+<h1>Chiroyli Norvegiya</h1>
 
-<p>Norway has a total area of 385,252 square kilometers and a population of 5,438,657 (December 2020). 
+<p>Norvegiyaning umumiy maydoni 385 252 kvadrat kilometr va aholisi 5 438 657 kishi (2020 yil dekabr).
 
-Norway is bordered by Sweden, Finland and Russia to the north-east, and the Skagerrak to the south, with 
+Norvegiya shimoli-sharqda Shvetsiya, Finlyandiya va Rossiya bilan, janubda esa Skagerrak bilan chegaradosh.
 
-Denmark on the other side.</p>
+Boshqa tomonda Daniya.</p>
 
-<p>Norway has beautiful mountains, glaciers and stunning fjords. Oslo, the capital, is a city of green 
+<p>Norvegiyada go'zal tog'lar, muzliklar va ajoyib fyordlar bor. Poytaxt Oslo yashil shahar
 
-spaces and museums. Bergen, with colorful wooden houses, is the starting point for cruises to the dramatic 
+joylar va muzeylar. Rangli yog'och uylari bo'lgan Bergen dramatik sayohatlar uchun boshlang'ich nuqtadir
 
-Sognefjord. Norway is also known for fishing, hiking and skiing.</p>
+Sognefjord. Norvegiya baliq ovlash, piyoda sayr qilish va chang'i sporti bilan ham mashhur.</p>
 
 </body>
-</html> 
+</html>
 
 
 
 
 
-Oswald and Noto Sans
+Osvald va Noto Sans
 
-Use the "Oswald" font for headings and "Noto Sans" for text. See an example below:
+Sarlavhalar uchun "Oswald" shrifti va matn uchun "Noto Sans" dan foydalaning. Quyidagi misolga qarang:
 
 
 <!DOCTYPE html>
 <html>
 <head>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald|Noto+Sans">
-<style>
-body {
-  font-family: "Noto Sans", sans-serif;
-  font-size: 16px;
+<uslub>
+tana {
+   font-family: "Noto Sans", sans-serif;
+   shrift o'lchami: 16px;
 }
 
 h1 {
-  font-family: Oswald, sans-serif;
-  font-size: 46px;
+   font-family: Oswald, sans-serif;
+   shrift o'lchami: 46px;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h1>Beautiful Norway</h1>
+<h1>Chiroyli Norvegiya</h1>
 
-<p>Norway has a total area of 385,252 square kilometers and a population of 5,438,657 (December 2020). 
+<p>Norvegiyaning umumiy maydoni 385 252 kvadrat kilometr va aholisi 5 438 657 kishi (2020 yil dekabr).
 
-Norway is bordered by Sweden, Finland and Russia to the north-east, and the Skagerrak to the south, with 
+Norvegiya shimoli-sharqda Shvetsiya, Finlyandiya va Rossiya bilan, janubda esa Skagerrak bilan chegaradosh.
 
-Denmark on the other side.</p>
+Boshqa tomonda Daniya.</p>
 
-<p>Norway has beautiful mountains, glaciers and stunning fjords. Oslo, the capital, is a city of green 
+<p>Norvegiyada go'zal tog'lar, muzliklar va ajoyib fyordlar bor. Poytaxt Oslo yashil shahar
 
-spaces and museums. Bergen, with colorful wooden houses, is the starting point for cruises to the dramatic 
+joylar va muzeylar. Rangli yog'och uylari bo'lgan Bergen dramatik sayohatlar uchun boshlang'ich nuqtadir
 
-Sognefjord. Norway is also known for fishing, hiking and skiing.</p>
-
-</body>
-</html> 
-
-
-
-
-CSS Font Property::
-
-
-To shorten the code, it is also possible to specify all the individual font properties in one property.
-
-The font property is a shorthand property for:
-
-    font-style
-    font-variant
-    font-weight
-    font-size/line-height
-    font-family
-
-See an example of this application below:
-
-<!DOCTYPE html>
-<html>
-<head>
-<style>
-p.a {
-  font: 20px Arial, sans-serif;
-}
-
-p.b {
-  font: italic bold 12px/30px Georgia, serif;
-}
-</style>
-</head>
-<body>
-
-<h1>The font Property</h1>
-
-<p class="a">This is a paragraph. The font size is set to 20 pixels, and the font family is Arial.</p>
-
-<p class="b">This is a paragraph. The font is set to italic and bold, the font size is set to 12 pixels, the 
-
-line height is set to 30 pixels, and the font family is Georgia.</p>
+Sognefjord. Norvegiya baliq ovlash, piyoda sayr qilish va chang'i sporti bilan ham mashhur.</p>
 
 </body>
 </html>
 
 
-Note: The font-size and font-family values are required. If one of the other values is missing, their 
-
-default value are used.
-
-<kbd>return</kbd>[Back to table of contents](#homepage)
- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  - - -  - - - - - - - - - - - - - - - - - -- - - - - - -- - - -
 
 
-## CSS Icons
-
-There is an icon library in CSS that facilitates the addition of icons to an HTML page. 
+CSS shrift xususiyati::
 
 
-How to Add Icons
+Kodni qisqartirish uchun barcha individual shrift xususiyatlarini bitta xususiyatda ko'rsatish ham mumkin.
 
-Icon can be simply added to an HTML page with an icon library like Font Awesome. You simply add the name of 
+Shrift xususiyati stenografiya xususiyatidir:
 
-the specified icon class to any inline HTML element (like <i> or <span>). The resulting icons are scalable 
+     shrift uslubi
+     shrift-variant
+     shrift og'irligi
+     shrift o'lchami/satr balandligi
+     shrift oilasi
 
-vectors that you can customize using the CSS styling tools to change the size, color, shadow, etc of such 
+Quyida ushbu ilovaning namunasini ko'ring:
 
-icons.
+<!DOCTYPE html>
+<html>
+<head>
+<uslub>
+p.a {
+   shrift: 20px Arial, sans-serif;
+}
+
+p.b {
+   shrift: kursiv qalin 12px/30px Georgia, serif;
+}
+</style>
+</head>
+<tana>
+
+<h1>Shrift xususiyati</h1>
+
+<p class="a">Bu paragraf. Shrift o‘lchami 20 pikselga o‘rnatilgan va shriftlar oilasi Arial.</p>
+
+<p class="b">Bu paragraf. Shrift kursiv va qalin qilib o'rnatiladi, shrift o'lchami 12 pikselga o'rnatiladi,
+
+satr balandligi 30 piksel qilib belgilangan, shrift oilasi esa Georgia.</p>
+
+</body>
+</html>
+
+
+Eslatma: Shrift o'lchami va shrift oilasi qiymatlari talab qilinadi. Agar boshqa qiymatlardan biri etishmayotgan bo'lsa, ularning
+
+standart qiymat ishlatiladi.
+
+<kbd>qaytish</kbd>[Mundarijaga qaytish](#homepage)
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+
+## CSS piktogrammalari
+
+CSS-da HTML sahifasiga piktogramma qo'shishni osonlashtiradigan piktogramma kutubxonasi mavjud.
+
+
+Qanday qilib piktogramma qo'shish kerak
+
+Belgini oddiygina HTML sahifasiga Font Awesome kabi piktogramma kutubxonasi bilan qo'shish mumkin. Siz shunchaki nomini qo'shasiz
+
+belgilangan ikonka sinfini har qanday ichki HTML elementiga (masalan, <i> yoki <span>). Olingan piktogrammalar kengaytirilishi mumkin
+
+o'lchamini, rangini, soyasini va hokazolarni o'zgartirish uchun CSS uslublar vositalaridan foydalanib sozlashingiz mumkin bo'lgan vektorlar
+
+piktogramma.
 
  
 
-Font Awesome Icons
+Shriftning ajoyib piktogrammalari
 
-Go to fontawesome.com and sign in. The code needed to be added to the <head> section of the HTML page can be 
+fontawesome.com saytiga o‘ting va tizimga kiring. HTML sahifasining <head> bo‘limiga qo‘shilishi kerak bo‘lgan kod shunday bo‘lishi mumkin.
 
-obtained on this website as shown below:
+quyida ko'rsatilganidek, ushbu veb-saytda olingan:
 
 <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
 
 
-To learn more about how to get started in font-awesome, check here: 
+Font-awesome-ni qanday boshlash haqida ko'proq bilish uchun bu yerga qarang:
 
 https://www.w3schools.com/icons/fontawesome5_intro.asp
 
-YOu do not need any downloading or installation to use font awesome
+Ajoyib shriftdan foydalanish uchun sizga yuklab olish yoki o'rnatish kerak emas
 
 
-A full list of references of all icons available in font awesome can be see here: 
+Awesome shriftida mavjud bo'lgan barcha piktogrammalarga havolalarning to'liq ro'yxatini bu erda ko'rish mumkin:
 
 https://www.w3schools.com/icons/icons_reference.asp
 
 
-An example of implementation of font awesome is shown below:
+Awesome shriftini amalga oshirish misoli quyida ko'rsatilgan:
 
 
 <!DOCTYPE html>
 <html>
 <head>
-<title>Font Awesome Icons</title>
+<title>Ajoyib shrift piktogrammalari</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-<!--Get your own code at fontawesome.com-->
+<!--O'z kodingizni fontawesome.com--> saytidan oling
 </head>
-<body>
+<tana>
 
-<p>Some Font Awesome icons:</p>
+<p>Ajoyib shrift belgilari:</p>
 <i class="fas fa-cloud"></i>
 <i class="fas fa-heart"></i>
 <i class="fas fa-car"></i>
-<i class="fas fa-file"></i>
+<i class="fas fa-fayl"></i>
 <i class="fas fa-bars"></i>
 
-<p>Styled Font Awesome icons (size and color):</p>
+<p>Uslubli shrift Ajoyib piktogramma (hajmi va rangi):</p>
 <i class="fas fa-cloud" style="font-size:24px;"></i>
 <i class="fas fa-cloud" style="font-size:36px;"></i>
 <i class="fas fa-cloud" style="font-size:48px;color:red;"></i>
@@ -4034,35 +4021,35 @@ An example of implementation of font awesome is shown below:
 
 
 
-Bootstrap Icons
+Bootstrap piktogrammalari
 
-To use the Bootstrap glyphicons, add the following line inside the <head> section of your HTML page:
+Bootstrap glifikalaridan foydalanish uchun HTML sahifangizning <head> boʻlimiga quyidagi qatorni qoʻshing:
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
-Note: No downloading or installation is required!
+Eslatma: Yuklab olish yoki o'rnatish shart emas!
 
 
-See example of the implementation of Boostrap icon below:
+Quyidagi Boostrap belgisini amalga oshirish misoliga qarang:
 
 <!DOCTYPE html>
 <html>
 <head>
-<title>Bootstrap Icons</title>
+<title>Bootstrap piktogrammalari</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
 <body class="container">
 
-<p>Some Bootstrap icons:</p>
+<p>Ba'zi Bootstrap piktogrammalari:</p>
 <i class="glyphicon glyphicon-cloud"></i>
 <i class="glyphicon glyphicon-remove"></i>
 <i class="glyphicon glyphicon-user"></i>
-<i class="glyphicon glyphicon-envelope"></i>
+<i class="glyphicon glyphicon-convelope"></i>
 <i class="glyphicon glyphicon-thumbs-up"></i>
 <br><br>
 
-<p>Styled Bootstrap icons (size and color):</p>
+<p>Uslubli Bootstrap piktogrammalari (hajmi va rangi):</p>
 <i class="glyphicon glyphicon-cloud" style="font-size:24px;"></i>
 <i class="glyphicon glyphicon-cloud" style="font-size:36px;"></i>
 <i class="glyphicon glyphicon-cloud" style="font-size:48px;color:red;"></i>
@@ -4073,109 +4060,106 @@ See example of the implementation of Boostrap icon below:
 
 
 
-Google Icons
+Google ikonkalari
 
-To use the Google icons, add the following line inside the <head> section of your HTML page:
+Google piktogrammalaridan foydalanish uchun HTML sahifangizning <head> boʻlimiga quyidagi qatorni qoʻshing:
 
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
-Note: No downloading or installation is required!
+Eslatma: Yuklab olish yoki o'rnatish shart emas!
 
-See the example of the implementation of google icon below:
-
-
-
+Quyidagi google belgisini amalga oshirish misoliga qarang:
 <!DOCTYPE html>
 <html>
 <head>
-<title>Google Icons</title>
+<title>Google ikonkalari</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
-<body>
+<tana>
 
-<p>Some Google icons:</p>
-<i class="material-icons">cloud</i>
-<i class="material-icons">favorite</i>
-<i class="material-icons">attachment</i>
-<i class="material-icons">computer</i>
-<i class="material-icons">traffic</i>
+<p>Ba'zi Google piktogrammalari:</p>
+<i class="material-icons">bulut</i>
+<i class="material-icons">sevimli</i>
+<i class="material-icons">ilova</i>
+<i class="material-icons">kompyuter</i>
+<i class="material-icons">trafik</i>
 <br><br>
 
-<p>Styled Google icons (size and color):</p>
-<i class="material-icons" style="font-size:24px;">cloud</i>
-<i class="material-icons" style="font-size:36px;">cloud</i>
-<i class="material-icons" style="font-size:48px;color:red;">cloud</i>
-<i class="material-icons" style="font-size:60px;color:lightblue;">cloud</i>
+<p>Uslubli Google piktogrammalari (hajmi va rangi):</p>
+<i class="material-icons" style="font-size:24px;">bulut</i>
+<i class="material-icons" style="font-size:36px;">bulut</i>
+<i class="material-icons" style="font-size:48px;color:red;">bulut</i>
+<i class="material-icons" style="font-size:60px;color:lightblue;">bulut</i>
 
 </body>
 </html>
 
 
-<kbd>return</kbd>[Back to table of contents](#homepage)
+<kbd>qaytish</kbd>[Mundarijaga qaytish](#homepage)
 
 
 --------
 
-## CSS Icons
+## CSS piktogrammalari
 
-There is an icon library in CSS that facilitates the addition of icons to an HTML page. 
+CSS-da HTML sahifasiga piktogramma qo'shishni osonlashtiradigan piktogramma kutubxonasi mavjud.
 
 
-How to Add Icons
+Qanday qilib piktogramma qo'shish kerak
 
-Icon can be simply added to an HTML page with an icon library like Font Awesome. You simply add the name of 
+Belgini oddiygina HTML sahifasiga Font Awesome kabi piktogramma kutubxonasi bilan qo'shish mumkin. Siz shunchaki nomini qo'shasiz
 
-the specified icon class to any inline HTML element (like <i> or <span>). The resulting icons are scalable 
+belgilangan ikonka sinfini har qanday ichki HTML elementiga (masalan, <i> yoki <span>). Olingan piktogrammalar kengaytirilishi mumkin
 
-vectors that you can customize using the CSS styling tools to change the size, color, shadow, etc of such 
+o'lchamini, rangini, soyasini va hokazolarni o'zgartirish uchun CSS uslublar vositalaridan foydalanib sozlashingiz mumkin bo'lgan vektorlar
 
-icons.
+piktogramma.
 
  
 
-Font Awesome Icons
+Shriftning ajoyib piktogrammalari
 
-Go to fontawesome.com and sign in. The code needed to be added to the <head> section of the HTML page can be 
+fontawesome.com saytiga o‘ting va tizimga kiring. HTML sahifasining <head> bo‘limiga qo‘shilishi kerak bo‘lgan kod shunday bo‘lishi mumkin.
 
-obtained on this website as shown below:
+quyida ko'rsatilganidek, ushbu veb-saytda olingan:
 
 <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
 
 
-To learn more about how to get started in font-awesome, check here: 
+Font-awesome-ni qanday boshlash haqida ko'proq bilish uchun bu yerga qarang:
 
 https://www.w3schools.com/icons/fontawesome5_intro.asp
 
-YOu do not need any downloading or installation to use font awesome
+Ajoyib shriftdan foydalanish uchun sizga yuklab olish yoki o'rnatish kerak emas
 
 
-A full list of references of all icons available in font awesome can be see here: 
+Awesome shriftida mavjud bo'lgan barcha piktogrammalarga havolalarning to'liq ro'yxatini bu erda ko'rish mumkin:
 
 https://www.w3schools.com/icons/icons_reference.asp
 
 
-An example of implementation of font awesome is shown below:
+Awesome shriftini amalga oshirish misoli quyida ko'rsatilgan:
 
 
 <!DOCTYPE html>
 <html>
 <head>
-<title>Font Awesome Icons</title>
+<title>Ajoyib shrift piktogrammalari</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-<!--Get your own code at fontawesome.com-->
+<!--O'z kodingizni fontawesome.com--> saytidan oling
 </head>
-<body>
+<tana>
 
-<p>Some Font Awesome icons:</p>
+<p>Ajoyib shrift belgilari:</p>
 <i class="fas fa-cloud"></i>
 <i class="fas fa-heart"></i>
 <i class="fas fa-car"></i>
-<i class="fas fa-file"></i>
+<i class="fas fa-fayl"></i>
 <i class="fas fa-bars"></i>
 
-<p>Styled Font Awesome icons (size and color):</p>
+<p>Uslubli shrift Ajoyib piktogramma (hajmi va rangi):</p>
 <i class="fas fa-cloud" style="font-size:24px;"></i>
 <i class="fas fa-cloud" style="font-size:36px;"></i>
 <i class="fas fa-cloud" style="font-size:48px;color:red;"></i>
@@ -4187,35 +4171,35 @@ An example of implementation of font awesome is shown below:
 
 
 
-Bootstrap Icons
+Bootstrap piktogrammalari
 
-To use the Bootstrap glyphicons, add the following line inside the <head> section of your HTML page:
+Bootstrap glifikalaridan foydalanish uchun HTML sahifangizning <head> boʻlimiga quyidagi qatorni qoʻshing:
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
-Note: No downloading or installation is required!
+Eslatma: Yuklab olish yoki o'rnatish shart emas!
 
 
-See example of the implementation of Boostrap icon below:
+Quyidagi Boostrap belgisini amalga oshirish misoliga qarang:
 
 <!DOCTYPE html>
 <html>
 <head>
-<title>Bootstrap Icons</title>
+<title>Bootstrap piktogrammalari</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
 <body class="container">
 
-<p>Some Bootstrap icons:</p>
+<p>Ba'zi Bootstrap piktogrammalari:</p>
 <i class="glyphicon glyphicon-cloud"></i>
 <i class="glyphicon glyphicon-remove"></i>
 <i class="glyphicon glyphicon-user"></i>
-<i class="glyphicon glyphicon-envelope"></i>
+<i class="glyphicon glyphicon-convelope"></i>
 <i class="glyphicon glyphicon-thumbs-up"></i>
 <br><br>
 
-<p>Styled Bootstrap icons (size and color):</p>
+<p>Uslubli Bootstrap piktogrammalari (hajmi va rangi):</p>
 <i class="glyphicon glyphicon-cloud" style="font-size:24px;"></i>
 <i class="glyphicon glyphicon-cloud" style="font-size:36px;"></i>
 <i class="glyphicon glyphicon-cloud" style="font-size:48px;color:red;"></i>
@@ -4226,548 +4210,541 @@ See example of the implementation of Boostrap icon below:
 
 
 
-Google Icons
+Google ikonkalari
 
-To use the Google icons, add the following line inside the <head> section of your HTML page:
+Google piktogrammalaridan foydalanish uchun HTML sahifangizning <head> boʻlimiga quyidagi qatorni qoʻshing:
 
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
-Note: No downloading or installation is required!
+Eslatma: Yuklab olish yoki o'rnatish shart emas!
 
-See the example of the implementation of google icon below:
-
+Quyidagi google belgisini amalga oshirish misoliga qarang:
 
 
 <!DOCTYPE html>
 <html>
 <head>
-<title>Google Icons</title>
+<title>Google ikonkalari</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
-<body>
+<tana>
 
-<p>Some Google icons:</p>
-<i class="material-icons">cloud</i>
-<i class="material-icons">favorite</i>
-<i class="material-icons">attachment</i>
-<i class="material-icons">computer</i>
-<i class="material-icons">traffic</i>
+<p>Ba'zi Google piktogrammalari:</p>
+<i class="material-icons">bulut</i>
+<i class="material-icons">sevimli</i>
+<i class="material-icons">ilova</i>
+<i class="material-icons">kompyuter</i>
+<i class="material-icons">trafik</i>
 <br><br>
 
-<p>Styled Google icons (size and color):</p>
-<i class="material-icons" style="font-size:24px;">cloud</i>
-<i class="material-icons" style="font-size:36px;">cloud</i>
-<i class="material-icons" style="font-size:48px;color:red;">cloud</i>
-<i class="material-icons" style="font-size:60px;color:lightblue;">cloud</i>
+<p>Uslubli Google piktogrammalari (hajmi va rangi):</p>
+<i class="material-icons" style="font-size:24px;">bulut</i>
+<i class="material-icons" style="font-size:36px;">bulut</i>
+<i class="material-icons" style="font-size:48px;color:red;">bulut</i>
+<i class="material-icons" style="font-size:60px;color:lightblue;">bulut</i>
 
 </body>
 </html>
 
 
-<kbd>return</kbd>[Back to table of contents](#homepage)
+<kbd>qaytish</kbd>[Mundarijaga qaytish](#homepage)
 
 
 
 ---------
 
-## HTML TABLES
+## HTML JADVALLARI
 ```
-<table> tag defined the HTML table. 
-<tr> defines table row
-<th> defines table header. By default bold and centered.
-<td> defines table data/cell.. By default regular and left-aligned. They are data containers for text, images, lists, other tables, etc.
+<table> tegi HTML jadvalini aniqladi.
+<tr> jadval qatorini belgilaydi
+<th> jadval sarlavhasini belgilaydi. Odatiy bo'lib qalin va markazlashtirilgan.
+<td> jadval ma'lumotlari/hujayralarini belgilaydi.. Odatiy bo'lib, odatiy va chapga tekislangan. Ular matn, rasmlar, ro'yxatlar, boshqa jadvallar va boshqalar uchun ma'lumotlar konteynerlari.
 ```
-* A Simple HTML Table
+* Oddiy HTML jadvali
 ```
- <table style="width:100%">
-  <tr>
-    <th>Firstname</th>
-    <th>Lastname</th>
-    <th>Age</th>
-  </tr>
-  <tr>
-    <td>Jill</td>
-    <td>Smith</td>
-    <td>50</td>
-  </tr>
-  <tr>
-    <td>Eve</td>
-    <td>Jackson</td>
-    <td>94</td>
-  </tr>
-</table> 
+  <table style="width:100%">
+   <tr>
+     <th>Ism</th>
+     <th>Familiya</th>
+     <th>Yosh</th>
+   </tr>
+   <tr>
+     <td>Jill</td>
+     <td>Smit</td>
+     <td>50</td>
+   </tr>
+   <tr>
+     <td>Havo</td>
+     <td>Jekson</td>
+     <td>94</td>
+   </tr>
+</jadval>
 ```
-** Table looks like this::
-Firstname 	Lastname 	Age
-Jill 	Smith 	50
-Eve 	Jackson 	94
-John 	Doe 	80
+** Jadval quyidagicha ko'rinadi::
+Ism familiyasi Yosh
+Jill Smit 50
+Momo Jekson 94
+Jon Dou 80
 
 
-* Add a border to HTML table:::
+* HTML jadvaliga chegara qo'shing:::
 ```
-table, th, td {
-  border: 1px solid black;
+jadval, th, td {
+   chegara: 1px qattiq qora;
 }
 ```
 
-** Collapsed Table Border:: Add Border collapse property to enable all borders to collapse into  one border. 
+** Yigʻilgan jadval chegarasi:: Barcha chegaralarni bir chegaraga yigʻish uchun chegarani yigʻish xususiyatini qoʻshing.
 ```
-table, th, td {
-  border: 1px solid black;
-  border-collapse: collapse;
+jadval, th, td {
+   chegara: 1px qattiq qora;
+   chegara-burilish: qulash;
 }
 ```
-
-** Add Cell Padding::: Specifies the space between the cell and its borders. If not specified, table cells are displayed without padding. Use css padding property to set padding:
+** Add Cell Padding::: Hujayra va uning chegaralari orasidagi bo'shliqni belgilaydi. Agar ko'rsatilmagan bo'lsa, jadval kataklari to'ldirishsiz ko'rsatiladi. To'ldirishni o'rnatish uchun CSS padding xususiyatidan foydalaning:
 
 ```
 th, td {
-  padding: 15px;
+   to'ldirish: 15px;
 }
 ```
-** Left-align Headings::Table headings are by default bold and centred. 
+** Chapga tekislangan sarlavhalar::Jadval sarlavhalari sukut bo'yicha qalin va markazlashtirilgan.
 
-To left-align table headings, use CSS text-align property. 
+Jadval sarlavhalarini chapga tekislash uchun CSS matnni tekislash xususiyatidan foydalaning.
 ```
-th {
-  text-align: left;
+n {
+   matnni tekislash: chapga;
 }
 ```
 
-** Add border spacing:: Specifies space between cells. Use CSS border-spacing property. Border spacing has no effect for table with collapsed borders
+** Chegara oralig‘ini qo‘shish:: Hujayralar orasidagi bo‘shliqni belgilaydi. CSS chegarasi oralig'i xususiyatidan foydalaning. Chegara oralig'i chegaralari yiqilgan jadvalga ta'sir qilmaydi
 ```
-table {
-  border-spacing: 5px;
+stol {
+   chegara oralig'i: 5px;
 }
 ```
-** Cells that Spans Many Columns:: use colspan attribute
+** Ko'p ustunlarni o'z ichiga olgan hujayralar:: colspan atributidan foydalaning
 ```
- <table style="width:100%">
-  <tr>
-    <th>Name</th>
-    <th colspan="2">Telephone</th>
-  </tr>
-  <tr>
-    <td>Bill Gates</td>
-    <td>55577854</td>
-    <td>55577855</td>
-  </tr>
-</table> 
+  <table style="width:100%">
+   <tr>
+     <th>Ism</th>
+     <th colspan="2">Telefon</th>
+   </tr>
+   <tr>
+     <td>Bill Geyts</td>
+     <td>55577854</td>
+     <td>55577855</td>
+   </tr>
+</jadval>
 ```
 
-** Looks like this:Name 	Telephone
-Bill Gates 	55577854 	55577855
+** Bu shunday ko'rinadi: Telefon nomi
+Bill Geyts 55577854 55577855
 
 
-** Make cell that spans many rows::use rowspan. rowspan=2 means that you will specify two row <tr> elements to contain the content spanning two rows
-	
+** Ko'p qatorli katakchani yarating:: rowspan dan foydalaning. rowspan=2 ikki qatorli tarkibni o'z ichiga olishi uchun ikkita satr <tr> elementini belgilashingizni bildiradi.
+
 ```
- <table style="width:100%">
-  <tr>
-    <th>Name:</th>
-    <td>Bill Gates</td>
-  </tr>
-  <tr>
-    <th rowspan="2">Telephone:</th>
-    <td>55577854</td>
-  </tr>
-  <tr>
-    <td>55577855</td>
-  </tr>
-</table> 
+  <table style="width:100%">
+   <tr>
+     <th>Ism:</th>
+     <td>Bill Geyts</td>
+   </tr>
+   <tr>
+     <th rowspan="2">Telefon:</th>
+     <td>55577854</td>
+   </tr>
+   <tr>
+     <td>55577855</td>
+   </tr>
+</jadval>
 ```
-** Add a caption to the table:: use <caption>  tag...inserted immediately after the table tag
-	
+** Jadvalga sarlavha qo'shing:: jadval tegidan keyin darhol kiritilgan <caption> tegidan foydalaning
+
 ```
- <table style="width:100%">
-  <caption>Monthly savings</caption>
-  <tr>
-    <th>Month</th>
-    <th>Savings</th>
-  </tr>
-  <tr>
-    <td>January</td>
-    <td>$100</td>
-  </tr>
-  <tr>
-    <td>February</td>
-    <td>$50</td>
-  </tr>
-</table> 
+  <table style="width:100%">
+   <caption>Oylik tejash</caption>
+   <tr>
+     <th>Oy</th>
+     <th>Tejamkorlik</th>
+   </tr>
+   <tr>
+     <td>yanvar</td>
+     <td>$100</td>
+   </tr>
+   <tr>
+     <td>Fevral</td>
+     <td>50$</td>
+   </tr>
+</jadval>
 ```
-** Define a special style for one table. Add an id to the table and then define the special style next
-``` 
-<table id="t01">
-  <tr>
-    <th>Firstname</th>
-    <th>Lastname</th>
-    <th>Age</th>
-  </tr>
-  <tr>
-    <td>Eve</td>
-    <td>Jackson</td>
-    <td>94</td>
-  </tr>
-</table> 
+** Bitta jadval uchun maxsus uslubni belgilang. Jadvalga identifikator qo'shing va keyingi maxsus uslubni belgilang
+```
+<jadval id="t01">
+   <tr>
+     <th>Ism</th>
+     <th>Familiya</th>
+     <th>Yosh</th>
+   </tr>
+   <tr>
+     <td>Havo</td>
+     <td>Jekson</td>
+     <td>94</td>
+   </tr>
+</jadval>
 
 
 #t01 {
-  width: 100%;
-  background-color: #f1f1c1;
+   kengligi: 100%;
+   fon rangi: #f1f1c1;
 }
 
 ```
 
-you can also add more styles:
+siz qo'shimcha uslublarni qo'shishingiz mumkin:
 ```
-#t01 tr:nth-child(even) {
-  background-color: #eee;
+#t01 tr:nth-child(hatto) {
+   fon rangi: #eee;
 }
-#t01 tr:nth-child(odd) {
-  background-color: #fff;
+#t01 tr:nth-child(toq) {
+   fon rangi: #fff;
 }
-#t01 th {
-  color: white;
-  background-color: black;
+#t01 {
+   rang: oq;
+   fon rangi: qora;
 }
 ```
 
 
-* CHAPTER SUMMARY _HTML CHAPTER SUMMARY
-   Use the HTML ```<table>``` element to define a table
-   Use the HTML ``<tr>``element to define a table row
-   Use the HTML ``<td>`` element to define a table data
-   Use the HTML ```<th>``` element to define a table heading
-   Use the HTML ```<caption>``` element to define a table caption
-   Use the CSS border property to define a border
-   Use the CSS border-collapse property to collapse cell borders
-   Use the CSS padding property to add padding to cells
-   Use the CSS text-align property to align cell text
-   Use the CSS border-spacing property to set the spacing between cells
-   Use the colspan attribute to make a cell span many columns
-   Use the rowspan attribute to make a cell span many rows
-   Use the id attribute to uniquely define one table
+* BOBLAR XULOSASI _HTML BOB XULOSALARI
+    Jadvalni aniqlash uchun HTML ```<table>``` elementidan foydalaning
+    Jadval qatorini aniqlash uchun HTML ``<tr>`` elementidan foydalaning
+    Jadval ma'lumotlarini aniqlash uchun HTML ``<td>`` elementidan foydalaning
+    Jadval sarlavhasini aniqlash uchun HTML ```<th>``` elementidan foydalaning
+    Jadval sarlavhasini aniqlash uchun HTML ```<caption>``` elementidan foydalaning
+    Chegarani aniqlash uchun CSS border xususiyatidan foydalaning
+    Hujayra chegaralarini yopish uchun CSS border-collapse xususiyatidan foydalaning
+    Hujayralarga toʻldirish qoʻshish uchun CSS padding xususiyatidan foydalaning
+    Hujayra matnini tekislash uchun CSS text-align xususiyatidan foydalaning
+    Hujayralar orasidagi masofani o'rnatish uchun CSS chegarasi oralig'i xususiyatidan foydalaning
+    Hujayrani ko'p ustunli qilish uchun colspan atributidan foydalaning
+    Hujayrani ko'p qatorli qilish uchun rowspan atributidan foydalaning
+    Bitta jadvalni yagona aniqlash uchun id atributidan foydalaning
 
 
-<kbd>return</kbd>[Back to table of contents](#homepage)
+<kbd>qaytish</kbd>[Mundarijaga qaytish](#homepage)
 
 --------
 
+# HTML RO'YXATLARI
 
+** tartibsiz roʻyxatda oʻqlar bor
+** tartiblangan ro'yxatlar raqamlash yoki qandaydir ketma-ketlik belgilariga ega
 
-# HTML LISTS
-
-** unordered list has bullets
-** ordered lists have numberings or some kind of sequence labels
-
-* Unordered html list:: each starts with ```<ul>``` tag and each list item starts with ```<li>``` tag
-by default, list item  is marked with small black circles as bullets.
+* Tartibsiz html roʻyxati:: har biri ```<ul>``` tegi bilan boshlanadi va har bir ro`yxat elementi ```<li>``` tegi bilan boshlanadi
+sukut bo'yicha, ro'yxat elementi o'q sifatida kichik qora doiralar bilan belgilanadi.
 ```
- <ul>
-  <li>Coffee</li>
-  <li>Tea</li>
-  <li>Milk</li>
-</ul> 
+  <ul>
+   <li>Qahva</li>
+   <li>Choy</li>
+   <li>Sut</li>
+</ul>
 ```
 
-<kbd>return</kbd>[Back to table of contents](#homepage)
+<kbd>qaytish</kbd>[Mundarijaga qaytish](#homepage)
 
-## ORDERED
+## Buyurtma berildi
 
-* Ordered HTML list: Marked by <ol> and each list item is marked by <li> tag. Numbers are usd to mark list items by default.
+* Tartiblangan HTML ro'yxati: <ol> tomonidan belgilanadi va har bir ro'yxat elementi <li> tegi bilan belgilanadi. Sukut bo'yicha ro'yxat elementlarini belgilash uchun raqamlar usd hisoblanadi.
 
 ```
- <ol>
-  <li>Coffee</li>
-  <li>Tea</li>
-  <li>Milk</li>
-</ol> 
+  <ol>
+   <li>Qahva</li>
+   <li>Choy</li>
+   <li>Sut</li>
+</ol>
 ```
 
-HTML Description lists:: List of terms with description of each term in the list. description list is marked by ```<dl>``` tag and each description term (name) is marked by ```<dt>``` xyz and the description of each description list term is tagged by ```<dd>```:
+HTML tavsifi roʻyxatlari:: Roʻyxatdagi har bir atama tavsifi bilan atamalar roʻyxati. tavsif ro'yxati ```<dl>``` tegi bilan belgilanadi va har bir tavsif atamasi (nomi) ```<dt>``` xyz bilan belgilanadi va har bir tavsif ro`yxati atamasi ```< bilan belgilanadi. dd>```:
 ```
- <dl>
-  <dt>Coffee</dt>
-  <dd>- black hot drink</dd>
-  <dt>Milk</dt>
-  <dd>- white cold drink</dd>
-</dl> 
+  <dl>
+   <dt>Qahva</dt>
+   <dd>- qora issiq ichimlik</dd>
+   <dt>Sut</dt>
+   <dd>- oq sovuq ichimlik</dd>
+</dl>
 ```
 
-* HTML List tags summary
-Tag 	Description
-```<ul>``` 	Defines an unordered list
-```<ol>``` 	Defines an ordered list
-```<li>``` 	Defines a list item
-```<dl>``` 	Defines a description list
-```<dt>``` 	Defines a term in a description list
-```<dd>``` 	Describes the term in a description list
+* HTML ro'yxati teglari xulosasi
+Teg tavsifi
+```<ul>``` Tartibsiz ro`yxatni belgilaydi
+```<ol>``` Tartiblangan ro`yxatni belgilaydi
+```<li>``` Ro`yxat elementini belgilaydi
+```<dl>``` Tavsif ro`yxatini belgilaydi
+```<dt>``` Tavsiflar ro`yxatidagi atamani belgilaydi
+```<dd>``` Tavsiflar ro`yxatidagi atamani tavsiflaydi
 
-<kbd>return</kbd>[Back to table of contents](#homepage)
+<kbd>qaytish</kbd>[Mundarijaga qaytish](#homepage)
 
-## UNORDERED
-**HTML Unordered lists cont'd-List marker
+## Buyurtmasiz
+**HTML tartibsiz roʻyxatlar roʻyxati belgisi
 
-To choose list marker, use css list-style-type property to define style of the list item market.
+Ro'yxat markerini tanlash uchun ro'yxat ob'ektlari bozori uslubini aniqlash uchun CSS list-style-type xususiyatidan foydalaning.
 
-Value 	Description
-disc 	Sets the list item marker to a bullet (default)
-circle 	Sets the list item marker to a circle
-square 	Sets the list item marker to a square
-none 	The list items will not be marked
+Qiymat tavsifi
+disk Ro'yxat elementi markerini markerga o'rnatadi (standart)
+doira Ro‘yxat elementi markerini aylanaga o‘rnatadi
+kvadrat Ro'yxat elementi markerini kvadratga o'rnatadi
+yo'q Ro'yxat elementlari belgilanmaydi
 
-* Disc(filled circle)
+* Disk (to'ldirilgan doira)
 ```
 <ul style="list-style-type:disc;">
-  <li>Coffee</li>
-  <li>Tea</li>
-  <li>Milk</li>
-</ul> 
+   <li>Qahva</li>
+   <li>Choy</li>
+   <li>Sut</li>
+</ul>
 ```
 
-* Open( unfilled circle)
+* Ochiq (to'ldirilmagan doira)
 ```
- <ul style="list-style-type:circle;">
-  <li>Coffee</li>
-  <li>Tea</li>
-  <li>Milk</li>
-</ul> 
-```
-
-** Square (filled with black)
-```
- <ul style="list-style-type:square;">
-  <li>Coffee</li>
-  <li>Tea</li>
-  <li>Milk</li>
-</ul> 
+  <ul style="list-style-type:circle;">
+   <li>Qahva</li>
+   <li>Choy</li>
+   <li>Sut</li>
+</ul>
 ```
 
-** None ( No marker)
+** Kvadrat (qora bilan to'ldirilgan)
 ```
- <ul style="list-style-type:none;">
-  <li>Coffee</li>
-  <li>Tea</li>
-  <li>Milk</li>
-</ul> 
+  <ul style="list-style-type:square;">
+   <li>Qahva</li>
+   <li>Choy</li>
+   <li>Sut</li>
+</ul>
 ```
 
-** Nested HTML List: List inside list
+** Yo'q (marker yo'q)
 ```
- <ul>
-  <li>Coffee</li>
-  <li>Tea
-    <ul>
-      <li>Black tea</li>
-      <li>Green tea</li>
-    </ul>
-  </li>
-  <li>Milk</li>
-</ul> 
+  <ul style="list-style-type:none;">
+   <li>Qahva</li>
+   <li>Choy</li>
+   <li>Sut</li>
+</ul>
 ```
-** A list item (```<li>```) can contain a new list, and other HTML elements, like images and links, etc.
 
-* Horizontal list with CSS
-
-You can style lists horizontally, to create a navigation menu. 
-
-** You can style list horizontally to create a navigation menu. The float style left sets the navigation menu to the left
+** Ichki HTML ro'yxati: ro'yxat ichidagi ro'yxat
 ```
- <!DOCTYPE html>
+  <ul>
+   <li>Qahva</li>
+   <li>Choy
+     <ul>
+       <li>Qora choy</li>
+       <li>Yashil choy</li>
+     </ul>
+   </li>
+   <li>Sut</li>
+</ul>
+```
+** Roʻyxat elementi (```<li>```) yangi roʻyxatni va boshqa HTML elementlarini, masalan, rasmlar va havolalarni va hokazolarni oʻz ichiga olishi mumkin.
+
+* CSS bilan gorizontal ro'yxat
+
+Navigatsiya menyusini yaratish uchun siz roʻyxatlarni gorizontal tarzda belgilashingiz mumkin.
+
+** Navigatsiya menyusini yaratish uchun roʻyxatni gorizontal tarzda oʻzgartirishingiz mumkin. Chapdagi float uslubi navigatsiya menyusini chapga o'rnatadi
+```
+  <!DOCTYPE html>
 <html>
 <head>
-<style>
+<uslub>
 ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #333333;
+   ro'yxat uslubi turi: yo'q;
+   chegara: 0;
+   to'ldirish: 0;
+   toshib ketish: yashirin;
+   fon rangi: #333333;
 }
 
 li {
-  float: left;
+   float: chap;
 }
 
 li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 16px;
-  text-decoration: none;
+   displey: blok;
+   rang: oq;
+   matnni tekislash: markaz;
+   to'ldirish: 16px;
+   matn-bezak: yo'q;
 }
 
-li a:hover {
-  background-color: #111111;
+li a: suring {
+   fon rangi: #111111;
 }
 </style>
 </head>
-<body>
+<tana>
 
 <ul>
-  <li><a href="#home">Home</a></li>
-  <li><a href="#news">News</a></li>
-  <li><a href="#contact">Contact</a></li>
-  <li><a href="#about">About</a></li>
+   <li><a href="#home">Uy</a></li>
+   <li><a href="#news">Yangiliklar</a></li>
+   <li><a href="#contact">Aloqa</a></li>
+   <li><a href="#about">Haqida</a></li>
 </ul>
 
 </body>
-</html> 
+</html>
 ```
+** Bo'lim xulosasi
+Bo'lim xulosasi
 
-** Chapter Summary
-Chapter Summary
+  Tartibsiz roʻyxatni aniqlash uchun HTML ```<ul>``` elementidan foydalaning
+  Ro'yxat elementi markerini aniqlash uchun CSS list-style-type xususiyatidan foydalaning
+  Roʻyxat elementini aniqlash uchun HTML ```<li>``` elementidan foydalaning
+  Ro'yxatlarni joylashtirish mumkin
+  Ro'yxat elementlari boshqa HTML elementlarini o'z ichiga olishi mumkin
+  Roʻyxatni gorizontal koʻrsatish uchun CSS float:left xususiyatidan foydalaning
 
- Use the HTML ```<ul>``` element to define an unordered list
- Use the CSS list-style-type property to define the list item marker
- Use the HTML ```<li>``` element to define a list item
- Lists can be nested
- List items can contain other HTML elements
- Use the CSS property float:left to display a list horizontally
-
-** HTML List Tags Summary
+** HTML ro'yxati teglari xulosasi
 ```
-HTML List Tags
-Tag 	Description
-<ul> 	Defines an unordered list
-<ol> 	Defines an ordered list
-<li> 	Defines a list item
-<dl> 	Defines a description list
-<dt> 	Defines a term in a description list
-<dd> 	Describes the term in a description list
+HTML ro'yxati teglari
+Teg tavsifi
+<ul> Tartibsiz ro'yxatni belgilaydi
+<ol> Tartiblangan ro'yxatni belgilaydi
+<li> Ro'yxat elementini belgilaydi
+<dl> Tavsif ro'yxatini belgilaydi
+<dt> Ta'riflar ro'yxatidagi atamani belgilaydi
+<dd> Ta'riflar ro'yxatidagi atamani tavsiflaydi
 ```
-<kbd>return</kbd>[Back to table of contents](#homepage)
+<kbd>qaytish</kbd>[Mundarijaga qaytish](#homepage)
 
-HTML Ordered List:: 
-```<ol>``` tag defines an ordered list which can be numerical or alphabetical.
-List are marked by numbers by default
+HTML tartibi ro'yxati::
+```<ol>``` teg raqamli yoki alifbo tartibida bo`lishi mumkin bo`lgan tartiblangan ro`yxatni belgilaydi.
+Ro'yxat sukut bo'yicha raqamlar bilan belgilanadi
 
-** Ordered HTML List - The Type Attribute
-With the type attribute of the <ol> tag, you can define the type of the list item marker
+** Tartiblangan HTML ro'yxati - Type atributi
+<ol> tegining type atributi yordamida siz ro'yxat elementi markerining turini belgilashingiz mumkin
 
 ```
-Type 	Description
-type="1" 	The list items will be numbered with numbers (default)
-type="A" 	The list items will be numbered with uppercase letters
-type="a" 	The list items will be numbered with lowercase letters
-type="I" 	The list items will be numbered with uppercase roman numbers
-type="i" 	The list items will be numbered with lowercase roman numbers
-```
-
-
-* Numbers
-```
- <ol type="1">
-  <li>Coffee</li>
-  <li>Tea</li>
-  <li>Milk</li>
-</ol> 
+Turi Tavsif
+type="1" Ro'yxat elementlari raqamlar bilan raqamlanadi (standart)
+type="A" Ro'yxat elementlari bosh harflar bilan raqamlanadi
+type="a" Ro'yxat elementlari kichik harflar bilan raqamlanadi
+type="I" Ro'yxat elementlari katta rim raqamlari bilan raqamlanadi
+type="i" Ro'yxat elementlari kichik rim raqamlari bilan raqamlanadi
 ```
 
 
-* Uppercase Letters:
+* Raqamlar
 ```
- <ol type="A">
-  <li>Coffee</li>
-  <li>Tea</li>
-  <li>Milk</li>
-</ol> 
-```
-
-* Lowercase Letters:
-```
- <ol type="a">
-  <li>Coffee</li>
-  <li>Tea</li>
-  <li>Milk</li>
-</ol> 
+  <ol type="1">
+   <li>Qahva</li>
+   <li>Choy</li>
+   <li>Sut</li>
+</ol>
 ```
 
-* Uppercase Roman Numbers:
+
+* Katta harflar:
+```
+  <ol type="A">
+   <li>Qahva</li>
+   <li>Choy</li>
+   <li>Sut</li>
+</ol>
+```
+
+* Kichik harflar:
+```
+  <ol type="a">
+   <li>Qahva</li>
+   <li>Choy</li>
+   <li>Sut</li>
+</ol>
+```
+
+* Katta Rim raqamlari:
 ```
 <ol type="I">
-  <li>Coffee</li>
-  <li>Tea</li>
-  <li>Milk</li>
-</ol> 
+   <li>Qahva</li>
+   <li>Choy</li>
+   <li>Sut</li>
+</ol>
 ```
-* Lowercase Roman Numbers:
+* Kichik Rim raqamlari:
 ```
 <ol type="I">
-  <li>Coffee</li>
-  <li>Tea</li>
-  <li>Milk</li>
-</ol> 
+   <li>Qahva</li>
+   <li>Choy</li>
+   <li>Sut</li>
+</ol>
 ```
-* Control List Counting: Enables you to be able to start counting controlled list at a certain number other than 50
+* Boshqaruv ro'yxatini hisoblash: 50 dan boshqa ma'lum bir raqamdan boshqariladigan ro'yxatni hisoblashni boshlash imkonini beradi
 ```
 <ol start="50">
-  <li>Coffee</li>
-  <li>Tea</li>
-  <li>Milk</li>
-</ol> 
+   <li>Qahva</li>
+   <li>Choy</li>
+   <li>Sut</li>
+</ol>
 ```
-<kbd>return</kbd>[Back to table of contents](#homepage)
+<kbd>qaytish</kbd>[Mundarijaga qaytish](#homepage)
 
-## OTHER
-* Nested HTML Lists(list inside list)
+## BOSHQA
+* Ichki HTML ro'yxatlari (ro'yxat ichidagi ro'yxat)
 ```
 <ol>
-  <li>Coffee</li>
-  <li>Tea
-    <ol>
-      <li>Black tea</li>
-      <li>Green tea</li>
-    </ol>
-  </li>
-  <li>Milk</li>
-</ol> 
+   <li>Qahva</li>
+   <li>Choy
+     <ol>
+       <li>Qora choy</li>
+       <li>Yashil choy</li>
+     </ol>
+   </li>
+   <li>Sut</li>
+</ol>
 ```
-* Chapter summary:
+* Bo'lim xulosasi:
 
-Use the HTML ```<ol>``` element to define an ordered list
-Use the HTML type attribute to define the numbering type
-Use the HTML ```<li>``` element to define a list item
-Lists can be nested
-List items can contain other HTML elements
+Tartiblangan roʻyxatni aniqlash uchun HTML ```<ol>``` elementidan foydalaning
+Raqamlash turini aniqlash uchun HTML turi atributidan foydalaning
+Roʻyxat elementini aniqlash uchun HTML ```<li>``` elementidan foydalaning
+Ro'yxatlarni joylashtirish mumkin
+Ro'yxat elementlari boshqa HTML elementlarini o'z ichiga olishi mumkin
 
-HTML List Tags
+HTML ro'yxati teglari
 ```
-<ul> 	Defines an unordered list
-<ol> 	Defines an ordered list
-<li> 	Defines a list item
-<dl> 	Defines a description list
-<dt> 	Defines a term in a description list
-<dd> 	Describes the term in a description list
+<ul> Tartibsiz ro'yxatni belgilaydi
+<ol> Tartiblangan ro'yxatni belgilaydi
+<li> Ro'yxat elementini belgilaydi
+<dl> Tavsif ro'yxatini belgilaydi
+<dt> Ta'riflar ro'yxatidagi atamani belgilaydi
+<dd> Ta'riflar ro'yxatidagi atamani tavsiflaydi
 ```
 
-* Description lists: List of terms with a description of each term. 
-```<dl>``` tag defines the list, ```<dt>``` defines the term (name), and ```<dd>``` tag describes each term:
+* Tavsif ro'yxatlari: Har bir atama tavsifi bilan atamalar ro'yxati.
+```<dl>``` tegi ro`yxatni, ```<dt>``` atamani (ismni) belgilaydi va ```<dd>``` tegi har bir atamani tavsiflaydi:
 ```
 <dl>
-  <dt>Coffee</dt>
-  <dd>- black hot drink</dd>
-  <dt>Milk</dt>
-  <dd>- white cold drink</dd>
-</dl> 
+   <dt>Qahva</dt>
+   <dd>- qora issiq ichimlik</dd>
+   <dt>Sut</dt>
+   <dd>- oq sovuq ichimlik</dd>
+</dl>
 ```
-* Description list summary:
-Use the HTML ```<dl>``` element to define a description list
-Use the HTML ```<dt>``` element to define the description term
-Use the HTML ```<dd>``` element to describe the term in a description list
+* Tavsif ro'yxatining qisqacha mazmuni:
+Ta'riflar ro'yxatini aniqlash uchun HTML ```<dl>``` elementidan foydalaning
+Ta'rif atamasini aniqlash uchun HTML ```<dt>``` elementidan foydalaning
+Ta'riflar ro'yxatidagi atamani tavsiflash uchun HTML ```<dd>``` elementidan foydalaning
 
-HTML List Tags
+HTML ro'yxati teglari
 ```
-**Tag 	Description
-<ul> 	Defines an unordered list
-<ol> 	Defines an ordered list
-<li> 	Defines a list item
-<dl> 	Defines a description list
-<dt> 	Defines a term in a description list
-<dd> 	Describes the term in a description list
+**Teg tavsifi
+<ul> Tartibsiz ro'yxatni belgilaydi
+<ol> Tartiblangan ro'yxatni belgilaydi
+<li> Ro'yxat elementini belgilaydi
+<dl> Tavsif ro'yxatini belgilaydi
+<dt> Ta'riflar ro'yxatidagi atamani belgilaydi
+<dd> Ta'riflar ro'yxatidagi atamani tavsiflaydi
 ```
-<kbd>return</kbd>[Back to table of contents](#homepage)
-
-
+<kbd>qaytish</kbd>[Mundarijaga qaytish](#homepage)

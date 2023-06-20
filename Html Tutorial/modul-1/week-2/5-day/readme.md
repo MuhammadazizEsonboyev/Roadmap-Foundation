@@ -1,436 +1,434 @@
-## HTML CLASSES
+## HTML SINFLARI
 
-** html class attribute is used to specify a class for an html element. 
+** html klassi atributi html elementi uchun sinfni belgilash uchun ishlatiladi.
 
-* Multiple html elements can also share the same class.
-* Class attribute is used to point to a class to manipulate together in a style sheet. Javascript can also manipulate elements in the same class together.
+* Bir nechta HTML elementlari ham bir xil sinfni baham ko'rishi mumkin.
+* Class atributi uslublar jadvalida birgalikda manipulyatsiya qilish uchun sinfga ishora qilish uchun ishlatiladi. Javascript bir sinfdagi elementlarni birgalikda boshqarishi mumkin.
 
-** In the example below, all three div elements with class city are style equally together equally according to the .city style definition in the header.
+** Quyidagi misolda, shahar sinfiga ega bo'lgan uchta div elementi sarlavhadagi .city uslubi ta'rifiga ko'ra bir xil tarzda bir xil uslubda.
 ```
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-.city {
-  background-color: tomato;
-  color: white;
-  border: 2px solid black;
-  margin: 20px;
-  padding: 20px;
+<uslub>
+.shahar {
+   fon rangi: pomidor;
+   rang: oq;
+   chegara: 2px qattiq qora;
+   chegara: 20px;
+   to'ldirish: 20px;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<div class="city">
-  <h2>London</h2>
-  <p>London is the capital of England.</p>
+<div class="shahar">
+   <h2>London</h2>
+   <p>London - Angliya poytaxti.</p>
 </div>
 
-<div class="city">
-  <h2>Paris</h2>
-  <p>Paris is the capital of France.</p>
+<div class="shahar">
+   <h2>Parij</h2>
+   <p>Parij - Fransiyaning poytaxti.</p>
 </div>
 
-<div class="city">
-  <h2>Tokyo</h2>
-  <p>Tokyo is the capital of Japan.</p>
+<div class="shahar">
+   <h2>Tokio</h2>
+   <p>Tokio - Yaponiya poytaxti.</p>
 </div>
 
 </body>
-</html> 
+</html>
 ```
 
 
 
-** Here we can also style note class in ```<span>``` elements with .note style definition
+** Bu yerda biz ```<span>``` elementlaridagi eslatma sinfini .note uslubi ta'rifi bilan ham uslublashimiz mumkin
 
 ```
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-.note {
-  font-size: 120%;
-  color: red;
+<uslub>
+.Eslatma {
+   shrift hajmi: 120%;
+   rang: qizil;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h1>My <span class="note">Important</span> Heading</h1>
-<p>This is some <span class="note">important</span> text.</p>
+<h1>Mening <span class="note">Muhim</span> sarlavham</h1>
+<p>Bu <span class="note">muhim</span> matn.</p>
 
 </body>
-</html> 
+</html>
 ```
 NB
 
-Tip: The class attribute can be used on any HTML element.
+Maslahat: Class atributidan istalgan HTML elementida foydalanish mumkin.
 
-Note: The class name is case sensitive!
+Eslatma: sinf nomi katta-kichik harflarga sezgir!
 
 
-* The Syntax for Class. 
+* Sintaksis sintaksisi.
 
-To create a class; write a period (.) character, followed by a class name. Then, define the CSS properties within curly braces {}
+Sinf yaratish uchun; nuqta (.) belgisini, undan keyin sinf nomini yozing. Keyin, jingalak qavslar ichida CSS xususiyatlarini aniqlang {}
 
 ```
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-.city {
-  background-color: tomato;
-  color: white;
-  padding: 10px;
+<uslub>
+.shahar {
+   fon rangi: pomidor;
+   rang: oq;
+   to'ldirish: 10px;
 }
 </style>
 </head>
-<body>
+<tana>
 
 <h2 class="city">London</h2>
-<p>London is the capital of England.</p>
+<p>London - Angliya poytaxti.</p>
 
-<h2 class="city">Paris</h2>
-<p>Paris is the capital of France.</p>
+<h2 class="city">Parij</h2>
+<p>Parij - Fransiyaning poytaxti.</p>
 
-<h2 class="city">Tokyo</h2>
-<p>Tokyo is the capital of Japan.</p>
+<h2 class="city">Tokio</h2>
+<p>Tokio - Yaponiya poytaxti.</p>
 
 </body>
 </html>
 ```
-* Multiple classes. 
+* Bir nechta sinflar.
 
-HTML elements can belong to multiple classes. Define multiple classes by separating the class names with a space. The element will be styled according to all classes specified. 
+HTML elementlari bir nechta sinflarga tegishli bo'lishi mumkin. Sinf nomlarini bo'sh joy bilan ajratib, bir nechta sinflarni aniqlang. Element belgilangan barcha sinflar bo'yicha uslublanadi.
 
-Below, ```<h2>``` elements belongs to both city class and also main class(```<div class="city main">```)
+Quyida ```<h2>``` elementlari ham shahar sinfiga, ham asosiy sinfga tegishli (```<div class="city main">```)
 
-Below, h2 element belongs to both city class and also to the main class and will get CSS styles from both of the classes
+Quyida h2 elementi shahar sinfiga ham, asosiy sinfga ham tegishli va ikkala sinfdan CSS uslublarini oladi.
 ```
 <h2 class="city main">London</h2>
-<h2 class="city">Paris</h2>
-<h2 class="city">Tokyo</h2>
+<h2 class="city">Parij</h2>
+<h2 class="city">Tokio</h2>
 ```
 
-* The full html
+* To'liq html
 ```
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-.city {
-  background-color: tomato;
-  color: white;
-  padding: 10px;
-} 
+<uslub>
+.shahar {
+   fon rangi: pomidor;
+   rang: oq;
+   to'ldirish: 10px;
+}
 
-.main {
-  text-align: center;
+.asosiy {
+   matnni tekislash: markaz;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h2>Multiple Classes</h2>
-<p>Here, all three h2 elements belongs to the "city" class. In addition, London also belongs to the "main" class, which center-aligns the text.</p>
+<h2>Bir nechta sinflar</h2>
+<p>Bu erda barcha uchta h2 elementi "shahar" sinfiga tegishli. Bundan tashqari, London ham matnni markazga tekislovchi “asosiy” sinfga tegishli.</p>
 
 <h2 class="city main">London</h2>
-<h2 class="city">Paris</h2>
-<h2 class="city">Tokyo</h2>
+<h2 class="city">Parij</h2>
+<h2 class="city">Tokio</h2>
 
 </body>
 </html>
 ```
 
-Different HTML elements like ```<p>``` and ```<h2>``` points to city class ans share same style
-	
-```
-<h2 class="city">Paris</h2>
-<p class="city">Paris is the capital of France</p>
-```
-** Use ofthe class Attribute in Javascript
-Class name can also be used by JS to perform certain tasks for specific elements. 
-JS usually access elemetns with a specific class name with the ```getElementByClassName()``` method:
+```<p>``` va ```<h2>``` kabi turli HTML elementlari shahar sinfiga ishora qiladi va bir xil uslubga ega.
 
 ```
-<script>
-function myFunction() {
-  var x = document.getElementsByClassName("city");
-  for (var i = 0; i < x.length; i++) {
-    x[i].style.display = "none";
-  }
-}
-</script> 
+<h2 class="city">Parij</h2>
+<p class="city">Parij - Fransiya poytaxti</p>
 ```
-<kbd>return</kbd>[Back to table of contents](#homepage)
+** Javascriptda sinf atributidan foydalaning
+Sinf nomi JS tomonidan muayyan elementlar uchun muayyan vazifalarni bajarish uchun ham ishlatilishi mumkin.
+JS odatda ```getElementByClassName()``` usuli bilan ma`lum sinf nomiga ega elementlarga kirishadi:
+
+```
+<skript>
+funktsiya myFunction() {
+   var x = document.getElementsByClassName("shahar");
+   uchun (var i = 0; i < x.length; i++) {
+     x[i].style.display = "yo'q";
+   }
+}
+</script>
+```
+<kbd>qaytish</kbd>[Mundarijaga qaytish](#homepage)
 
 
 ---------
+## HTML identifikatori
+HTML ID ATTRIBUTE: HTML elementi uchun noyob identifikatorni belgilash uchun ishlatiladi.
+
+Faqat bitta element ma'lum bir identifikatorga ega.
 
 
-## HTML ID
-HTML ID ATTRIBUTE: Used to specify a unique id for an HTML element.
+Id atributi uslublar jadvalidagi muayyan uslub deklaratsiyasiga ishora qilish uchun ishlatiladi. JS tomonidan ma'lum identifikatorga ega elementlarga kirish va ularni boshqarish uchun ham foydalaniladi.
 
-Only one element has a particular id. 
-
-
-The id attribute is used to point to a specific style declaration in a style sheet. Also used by JS to access and manipulate elements with the specific id. 
-
-id syntax: write hash ```(#)``` followed by an id name. Then define the CSS properties with curly braces {}. in the sheet below, ```<h1>``` element is styled according to the 
-HashmyHeader style definition in the header section
+id sintaksisi: ```(#)``` xeshdan keyin id nomini yozing. Keyin CSS xususiyatlarini jingalak qavslar bilan belgilang {}. quyidagi varaqda ```<h1>``` elementi ga muvofiq uslublangan
+Sarlavha qismida HashmyHeader uslubi ta'rifi
 
 ```
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-#myHeader {
-  background-color: lightblue;
-  color: black;
-  padding: 40px;
-  text-align: center;
+<uslub>
+#mening sarlavham {
+   fon rangi: ochiq ko'k;
+   rang: qora;
+   to'ldirish: 40px;
+   matnni tekislash: markaz;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h1 id="myHeader">My Header</h1>
+<h1 id="myHeader">Mening sarlavham</h1>
 
 </body>
-</html> 
+</html>
 ```
 
-** The id name is case sensitive! And it must contain at least one character, and must not contain whitespaces (spaces, tabs, etc.).
+** ID nomi katta-kichik harflarga sezgir! Va u kamida bitta belgidan iborat bo'lishi kerak va bo'sh joylar (bo'shliqlar, yorliqlar va boshqalar) bo'lmasligi kerak.
 
-Diff between Class and ID: Class can be used by multiple HTML elements while id name must only be used by one HTML element within the page. 
+Class va ID o'rtasidagi farq: Class bir nechta HTML elementlari tomonidan ishlatilishi mumkin, id nomi esa sahifadagi faqat bitta HTML elementi tomonidan ishlatilishi kerak.
 
-** Below we illlustrate the difference between Class and ID
+** Quyida biz Class va ID o'rtasidagi farqni ko'rsatamiz
 ```
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-/* Style the element with the id "myHeader" */
-#myHeader {
-  background-color: lightblue;
-  color: black;
-  padding: 40px;
-  text-align: center;
+<uslub>
+/* Elementga “myHeader” identifikatori bilan uslub bering */
+#mening sarlavham {
+   fon rangi: ochiq ko'k;
+   rang: qora;
+   to'ldirish: 40px;
+   matnni tekislash: markaz;
 }
 
-/* Style all elements with the class name "city" */
-.city {
-  background-color: tomato;
-  color: white;
-  padding: 10px;
-} 
+/* Barcha elementlarni “shahar” sinf nomi bilan uslublang */
+.shahar {
+   fon rangi: pomidor;
+   rang: oq;
+   to'ldirish: 10px;
+}
 </style>
 </head>
-<body>
+<tana>
 
-<h2>Difference Between Class and ID</h2>
-<p>A class name can be used by multiple HTML elements, while an id name must only be used by one HTML element within the page:</p>
+<h2>Sinf va ID o'rtasidagi farq</h2>
+<p>Sinf nomi bir nechta HTML elementlari tomonidan ishlatilishi mumkin, id nomi esa sahifadagi faqat bitta HTML elementi tomonidan ishlatilishi kerak:</p>
 
-<!-- An element with a unique id -->
-<h1 id="myHeader">My Cities</h1>
+<!-- Noyob identifikatorli element -->
+<h1 id="myHeader">Mening shaharlarim</h1>
 
-<!-- Multiple elements with same class -->
+<!-- Bir xil sinfga ega bir nechta elementlar -->
 <h2 class="city">London</h2>
-<p>London is the capital of England.</p>
+<p>London - Angliya poytaxti.</p>
 
-<h2 class="city">Paris</h2>
-<p>Paris is the capital of France.</p>
+<h2 class="city">Parij</h2>
+<p>Parij - Fransiyaning poytaxti.</p>
 
-<h2 class="city">Tokyo</h2>
-<p>Tokyo is the capital of Japan.</p>
+<h2 class="city">Tokio</h2>
+<p>Tokio - Yaponiya poytaxti.</p>
 
 </body>
 </html>
 ```
 
-** HTML Bookmarks with ID and Links. 
+** ID va havolalar bilan HTML xatcho'plari.
 
-Html bookmarks allows readers to jump to a specific part of a webpage, useful for very long pages. 
+Html xatcho'plari o'quvchilarga veb-sahifaning ma'lum bir qismiga o'tish imkonini beradi, bu juda uzun sahifalar uchun foydalidir.
 
-To use a bookmark, create it and then add a link to it. Once link is clicked, page scrolls to the location with the bookmark.
-
-
-** To create a bookmark, 
-
-```<h2 id="C4">Chapter 4</h2>```
+Xatcho‘pdan foydalanish uchun uni yarating va unga havola qo‘shing. Havolani bosgandan so'ng, sahifa xatcho'p joylashgan joyga o'tadi.
 
 
-* To add a link to it:
+** Xatcho'p yaratish uchun,
+
+```<h2 id="C4">4-bob</h2>```
+
+
+* Unga havola qo'shish uchun:
 ```
-<a href="#C4">Jump to Chapter 4</a> 
+<a href="#C4">4-bobga o‘tish</a>
 ```
-* To add a link to the bookmark (Jump to Chapter 4) from another page.
+* Boshqa sahifadan xatcho'pga havola qo'shish uchun (4-bo'limga o'tish).
 
 ```
-<a href="html_demo.html#C4">Jump to Chapter 4</a>
+<a href="html_demo.html#C4">4-bobga o‘tish</a>
 ```
 
-** See the demonstration below:
+** Quyidagi namoyishga qarang:
 ```
 <!DOCTYPE html>
 <html>
-<body>
+<tana>
 
-<p><a href="#C4">Jump to Chapter 4</a></p>
-<p><a href="#C10">Jump to Chapter 10</a></p>
+<p><a href="#C4">4-bobga o‘tish</a></p>
+<p><a href="#C10">10-bobga o‘tish</a></p>
 
-<h2>Chapter 1</h2>
-<p>This chapter explains ba bla bla</p>
+<h2>1-bob</h2>
+<p>Ushbu bobda ba bla bla tushuntiriladi</p>
 
-<h2>Chapter 2</h2>
-<p>This chapter explains ba bla bla</p>
+<h2>2-bob</h2>
+<p>Ushbu bobda ba bla bla tushuntiriladi</p>
 
-<h2>Chapter 3</h2>
-<p>This chapter explains ba bla bla</p>
+<h2>3-bob</h2>
+<p>Ushbu bobda ba bla bla tushuntiriladi</p>
 
-<h2 id="C4">Chapter 4</h2>
-<p>This chapter explains ba bla bla</p>
+<h2 id="C4">4-bob</h2>
+<p>Ushbu bobda ba bla bla tushuntiriladi</p>
 
-<h2>Chapter 5</h2>
-<p>This chapter explains ba bla bla</p>
+<h2>5-bob</h2>
+<p>Ushbu bobda ba bla bla tushuntiriladi</p>
 
-<h2>Chapter 6</h2>
-<p>This chapter explains ba bla bla</p>
+<h2>6-bob</h2>
+<p>Ushbu bobda ba bla bla tushuntiriladi</p>
 
-<h2>Chapter 7</h2>
-<p>This chapter explains ba bla bla</p>
+<h2>7-bob</h2>
+<p>Ushbu bobda ba bla bla tushuntiriladi</p>
 
-<h2>Chapter 8</h2>
-<p>This chapter explains ba bla bla</p>
+<h2>8-bob</h2>
+<p>Ushbu bobda ba bla bla tushuntiriladi</p>
 
-<h2>Chapter 9</h2>
-<p>This chapter explains ba bla bla</p>
+<h2>9-bob</h2>
+<p>Ushbu bobda ba bla bla tushuntiriladi</p>
 
-<h2 id="C10">Chapter 10</h2>
-<p>This chapter explains ba bla bla</p>
+<h2 id="C10">10-bob</h2>
+<p>Ushbu bobda ba bla bla tushuntiriladi</p>
 
-<h2>Chapter 11</h2>
-<p>This chapter explains ba bla bla</p>
+<h2>11-bob</h2>
+<p>Ushbu bobda ba bla bla tushuntiriladi</p>
 
-<h2>Chapter 12</h2>
-<p>This chapter explains ba bla bla</p>
+<h2>12-bob</h2>
+<p>Ushbu bobda ba bla bla tushuntiriladi</p>
 
-<h2>Chapter 13</h2>
-<p>This chapter explains ba bla bla</p>
+<h2>13-bob</h2>
+<p>Ushbu bobda ba bla bla tushuntiriladi</p>
 
-<h2>Chapter 14</h2>
-<p>This chapter explains ba bla bla</p>
+<h2>14-bob</h2>
+<p>Ushbu bobda ba bla bla tushuntiriladi</p>
 
-<h2>Chapter 15</h2>
-<p>This chapter explains ba bla bla</p>
+<h2>15-bob</h2>
+<p>Ushbu bobda ba bla bla tushuntiriladi</p>
 
-<h2>Chapter 16</h2>
-<p>This chapter explains ba bla bla</p>
+<h2>16-bob</h2>
+<p>Ushbu bobda ba bla bla tushuntiriladi</p>
 
-<h2>Chapter 17</h2>
-<p>This chapter explains ba bla bla</p>
+<h2>17-bob</h2>
+<p>Ushbu bobda ba bla bla tushuntiriladi</p>
 
-<h2>Chapter 18</h2>
-<p>This chapter explains ba bla bla</p>
+<h2>18-bob</h2>
+<p>Ushbu bobda ba bla bla tushuntiriladi</p>
 
-<h2>Chapter 19</h2>
-<p>This chapter explains ba bla bla</p>
+<h2>19-bob</h2>
+<p>Ushbu bobda ba bla bla tushuntiriladi</p>
 
-<h2>Chapter 20</h2>
-<p>This chapter explains ba bla bla</p>
+<h2>20-bob</h2>
+<p>Ushbu bobda ba bla bla tushuntiriladi</p>
 
-<h2>Chapter 21</h2>
-<p>This chapter explains ba bla bla</p>
+<h2>21-bob</h2>
+<p>Ushbu bobda ba bla bla tushuntiriladi</p>
 
-<h2>Chapter 22</h2>
-<p>This chapter explains ba bla bla</p>
+<h2>22-bob</h2>
+<p>Ushbu bobda ba bla bla tushuntiriladi</p>
 
-<h2>Chapter 23</h2>
-<p>This chapter explains ba bla bla</p>
+<h2>23-bob</h2>
+<p>Ushbu bobda ba bla bla tushuntiriladi</p>
 
 </body>
 </html>
 ```
 
-* Using the id Attribute in JavaScript
+* JavaScript-da id atributidan foydalanish
 
-The id attribute can also be used by JavaScript to perform some tasks for that specific element.
+Id atributi JavaScript tomonidan ushbu element uchun ba'zi vazifalarni bajarish uchun ham ishlatilishi mumkin.
 
-JavaScript can access an element with a specific id with the ```getElementById()``` method:
+JavaScript ```getElementById()``` usuli bilan ma`lum identifikatorli elementga kirishi mumkin:
 
 ```
-<script>
-function displayResult() {
-  document.getElementById("myHeader").innerHTML = "Have a nice day!";
+<skript>
+funktsiya displayResult() {
+   document.getElementById("myHeader").innerHTML = "Kuningiz xayrli o'tsin!";
 }
-</script> 
+</script>
 ```
 
-* Chapter Summary::
-Chapter Summary
-The id attribute is used to specify a unique id for an HTML element
-The value of the id attribute must be unique within the HTML document
-The id attribute is used by CSS and JavaScript to style/select a specific element
-The value of the id attribute is case sensitive
-The id attribute is also used to create HTML bookmarks
-JavaScript can access an element with a specific id with the getElementById() method
+* Bo'lim xulosasi::
+Bo'lim xulosasi
+Id atributi HTML elementi uchun noyob identifikatorni belgilash uchun ishlatiladi
+ID atributining qiymati HTML hujjatida yagona bo'lishi kerak
+Id atributi CSS va JavaScript tomonidan muayyan elementni uslublash/tanlash uchun ishlatiladi
+Id atributining qiymati katta-kichik harflarga sezgir
+Id atributi HTML xatcho'plarini yaratish uchun ham ishlatiladi
+JavaScript getElementById() usuli yordamida ma'lum identifikatorga ega elementga kirishi mumkin
 
-<kbd>return</kbd>[Back to table of contents](#homepage)
+<kbd>qaytish</kbd>[Mundarijaga qaytish](#homepage)
 
 
 -------
 
 
-#CSS Backgrounds
+#CSS fonlari
 
-CSS Multiple Backgrounds
+CSS bir nechta fon
 
-In this chapter you will learn how to add multiple background images to one element.
+Ushbu bo'limda siz bir elementga bir nechta fon rasmlarini qanday qo'shishni o'rganasiz.
 
-You will also learn about the following properties:
+Shuningdek, siz quyidagi xususiyatlar haqida bilib olasiz:
 
-    background-size
-    background-origin
-    background-clip
+     fon o'lchami
+     fon kelib chiqishi
+     fon klipi
 
-CSS Multiple Backgrounds
+CSS bir nechta fon
 
-CSS allows you to add multiple background images for an element, through the background-image property.
+CSS fon tasviri xususiyati orqali element uchun bir nechta fon rasmlarini qo'shish imkonini beradi.
 
-The different background images are separated by commas, and the images are stacked on top of each other, 
+Turli fon rasmlari vergul bilan ajratiladi va tasvirlar bir-birining ustiga joylashtiriladi,
 
-where the first image is closest to the viewer.
+birinchi rasm tomoshabinga eng yaqin bo'lgan joyda.
 
-The following example has two background images, the first image is a flower (aligned to the bottom and 
+Quyidagi misolda ikkita fon tasviri bor, birinchi rasm gul (pastga tekislangan va
 
-right) and the second image is a paper background (aligned to the top-left corner):
+o'ng) va ikkinchi rasm qog'oz fon (yuqori chap burchakka tekislangan):
 
 
 <!DOCTYPE html>
 <html>
 <head>
-<style> 
-#example1 {
-  background-image: url(img_flwr.gif), url(paper.gif);
-  background-position: right bottom, left top;
-  background-repeat: no-repeat, repeat;
-  padding: 15px;
+<uslub>
+#misol1 {
+   fon rasmi: url(img_flwr.gif), url(paper.gif);
+   fon-pozitsiya: o'ng pastki, chap yuqori;
+   fon-takrorlash: takrorlanmaslik, takrorlash;
+   to'ldirish: 15px;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h1>Multiple Backgrounds</h1>
-<p>The following div element has two background images:</p>
+<h1>Bir nechta fon</h1>
+<p>Quyidagi div elementida ikkita fon tasviri mavjud:</p>
 
 <div id="example1">
-  <h1>Lorem Ipsum Dolor</h1>
-  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut 
+   <h1>Lorem Ipsum Dolor</h1>
+   <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
 
 laoreet dolore magna aliquam erat volutpat.</p>
-  <p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip 
+   <p>Ut wisi enim ad minim vaniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip
 
 ex ea commodo consequat.</p>
 </div>
@@ -441,30 +439,30 @@ ex ea commodo consequat.</p>
 
 
 
-Multiple background images can be specified using either the individual background properties (as above) or 
+Bir nechta fon tasvirlari alohida fon xususiyatlaridan (yuqoridagi kabi) yoki yordamida belgilanishi mumkin
 
-the background shorthand property.
+fon stenografiyasi xususiyati.
 
-The following example uses the background shorthand property (same result as example above):
+Quyidagi misol fon stenografiyasi xususiyatidan foydalanadi (yuqoridagi misol bilan bir xil natija):
 
 <!DOCTYPE html>
 <html>
 <head>
-<style> 
-#example1 {
-  background: url(img_flwr.gif) right bottom no-repeat, url(paper.gif) left top repeat;
-  padding: 15px;
+<uslub>
+#misol1 {
+   fon: url(img_flwr.gif) o'ng pastki takrorlanmaydi, url(paper.gif) chap yuqori takror;
+   to'ldirish: 15px;
 }
 </style>
 </head>
-<body>
+<tana>
 
 <div id="example1">
-  <h1>Lorem Ipsum Dolor</h1>
-  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut 
+   <h1>Lorem Ipsum Dolor</h1>
+   <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
 
 laoreet dolore magna aliquam erat volutpat.</p>
-  <p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip 
+   <p>Ut wisi enim ad minim vaniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip
 
 ex ea commodo consequat.</p>
 </div>
@@ -475,59 +473,59 @@ ex ea commodo consequat.</p>
 
 
 
-CSS Background Size
+CSS fon hajmi
 
-The CSS background-size property allows you to specify the size of background images.
+CSS fon o'lchami xususiyati fon tasvirlarining o'lchamini belgilash imkonini beradi.
 
-The size can be specified in lengths, percentages, or by using one of the two keywords: contain or cover.
+Hajmi uzunliklarda, foizlarda yoki ikkita kalit so'zdan biri yordamida ko'rsatilishi mumkin: o'z ichiga yoki qoplash.
 
-The following example resizes a background image to much smaller than the original image (using pixels). See 
+Quyidagi misol fon tasvirini asl tasvirdan ancha kichikroq qilib o'zgartiradi (piksellar yordamida). Qarang
 
-the code below:
+quyidagi kod:
 
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-#example1 {
-  border: 1px solid black;
-  background: url(img_flwr.gif);
-  background-size: 100px 80px;
-  background-repeat: no-repeat;
-  padding: 15px;
+<uslub>
+#misol1 {
+   chegara: 1px qattiq qora;
+   fon: url (img_flwr.gif);
+   fon o'lchami: 100px 80px;
+   fon-takrorlash: takrorlanmaslik;
+   to'ldirish: 15px;
 }
 
-#example2 {
-  border: 1px solid black;
-  background: url(img_flwr.gif);
-  background-repeat: no-repeat;
-  padding: 15px;
+#misol2 {
+   chegara: 1px qattiq qora;
+   fon: url (img_flwr.gif);
+   fon-takrorlash: takrorlanmaslik;
+   to'ldirish: 15px;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h1>The background-size Property</h1>
+<h1>Fon o'lchamidagi xususiyat</h1>
 
-<p>Resized background-image:</p>
+<p>O'lchami o'zgartirilgan fon rasmi:</p>
 <div id="example1">
-  <h2>Lorem Ipsum Dolor</h2>
-  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut 
+   <h2>Lorem Ipsum Dolor</h2>
+   <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
 
 laoreet dolore magna aliquam erat volutpat.</p>
-  <p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip 
+   <p>Ut wisi enim ad minim vaniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip
 
 ex ea commodo consequat.</p>
 </div>
 
-<p>Original size of the background-image:</p>
+<p>Fon-tasvirning asl hajmi:</p>
 <div id="example2">
-  <h2>Lorem Ipsum Dolor</h2>
-  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut 
+   <h2>Lorem Ipsum Dolor</h2>
+   <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
 
 laoreet dolore magna aliquam erat volutpat.</p>
-  <p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip 
+   <p>Ut wisi enim ad minim vaniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip
 
 ex ea commodo consequat.</p>
 </div>
@@ -538,76 +536,76 @@ ex ea commodo consequat.</p>
 
 
 
-The two other possible values for background-size are contain and cover.
+Fon o'lchami uchun boshqa ikkita mumkin bo'lgan qiymatlar o'z ichiga va qopqoqdir.
 
-The contain keyword scales the background image to be as large as possible (but both its width and its 
+Content kalit so'zi fon tasvirini iloji boricha kattalashtirishga imkon beradi (lekin uning kengligi ham, uning ham
 
-height must fit inside the content area). As such, depending on the proportions of the background image and 
+balandligi kontent maydoniga mos kelishi kerak). Shunday qilib, fon tasvirining nisbatlariga qarab va
 
-the background positioning area, there may be some areas of the background which are not covered by the 
+fon joylashuvi maydonida, fonning tomonidan qoplanmagan ba'zi joylari bo'lishi mumkin
 
-background image.
+fon tasviri.
 
-The cover keyword scales the background image so that the content area is completely covered by the 
+Muqova kalit so'zi fon tasvirini o'lchaydi, shunda kontent maydoni to'liq qoplanadi
 
-background image (both its width and height are equal to or exceed the content area). As such, some parts of 
+fon tasviri (uning kengligi ham, balandligi ham kontent maydoniga teng yoki undan katta). Shunday qilib, ba'zi qismlari
 
-the background image may not be visible in the background positioning area.
+fon rasmi fonni joylashtirish sohasida ko'rinmasligi mumkin.
 
-The following example illustrates the use of contain and cover:
+Quyidagi misolda contain va cover dan foydalanish ko‘rsatilgan:
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
+<uslub>
 .div1 {
-  border: 1px solid black;
-  height: 120px;
-  width: 150px;
-  background: url(img_flwr.gif);
-  background-repeat: no-repeat;
-  background-size: contain;
+   chegara: 1px qattiq qora;
+   balandligi: 120px;
+   kengligi: 150px;
+   fon: url (img_flwr.gif);
+   fon-takrorlash: takrorlanmaslik;
+   fon o'lchami: o'z ichiga oladi;
 }
 
 .div2 {
-  border: 1px solid black;
-  height: 120px;
-  width: 150px;
-  background: url(img_flwr.gif);
-  background-repeat: no-repeat;
-  background-size: cover;
+   chegara: 1px qattiq qora;
+   balandligi: 120px;
+   kengligi: 150px;
+   fon: url (img_flwr.gif);
+   fon-takrorlash: takrorlanmaslik;
+   fon o'lchami: qopqoq;
 }
 
 .div3 {
-  border: 1px solid black;
-  height: 120px;
-  width: 150px;
-  background: url(img_flwr.gif);
-  background-repeat: no-repeat;
+   chegara: 1px qattiq qora;
+   balandligi: 120px;
+   kengligi: 150px;
+   fon: url (img_flwr.gif);
+   fon-takrorlash: takrorlanmaslik;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h1>The background-size Property</h1>
+<h1>Fon o'lchamidagi xususiyat</h1>
 
-<h2>background-size: contain:</h2>
+<h2>fon o'lchami: tarkibi:</h2>
 <div class="div1">
 <p>Lorem ipsum dolor sit amet.</p>
 </div>
 
-<h2>background-size: cover:</h2>
+<h2>fon o'lchami: qopqoq:</h2>
 <div class="div2">
 <p>Lorem ipsum dolor sit amet.</p>
 </div>
 
-<h2>No background-size defined:</h2>
+<h2>Fon o'lchami aniqlanmagan:</h2>
 <div class="div3">
 <p>Lorem ipsum dolor sit amet.</p>
 </div>
 
-<p>Original image:</p>
-<img src="img_flwr.gif" alt="Flowers" width="224" height="162">
+<p>Asl rasm:</p>
+<img src="img_flwr.gif" alt="Gullar" kengligi="224" balandligi="162">
 
 </body>
 </html>
@@ -615,39 +613,39 @@ The following example illustrates the use of contain and cover:
 
 
 
-Define Sizes of Multiple Background Images
+Bir nechta fon rasmlarining o'lchamlarini aniqlang
 
-The background-size property also accepts multiple values for background size (using a comma-separated 
+Fon o'lchami xususiyati fon o'lchami uchun bir nechta qiymatlarni ham qabul qiladi (vergul bilan ajratilgan
 
-list), when working with multiple backgrounds.
+ro'yxat), bir nechta fon bilan ishlashda.
 
-The following example has three background images specified, with different background-size value for each 
+Quyidagi misolda har biri uchun har xil fon o'lchami qiymatiga ega uchta fon tasviri ko'rsatilgan
 
-image:
+rasm:
 
 
 
 <!DOCTYPE html>
 <html>
 <head>
-<style> 
-#example1 {
-  background: url(img_tree.gif) left top no-repeat, url(img_flwr.gif) right bottom no-repeat, url(paper.gif) 
+<uslub>
+#misol1 {
+   fon: url(img_tree.gif) chap tepada takrorlanmaydi, url(img_flwr.gif) o‘ng pastki qismida takrorlanmaydi, url(paper.gif)
 
-left top repeat;
-  padding: 15px;
-  background-size: 50px, 130px, auto;
+chap yuqori takrorlash;
+   to'ldirish: 15px;
+   fon o'lchami: 50px, 130px, avtomatik;
 }
 </style>
 </head>
-<body>
+<tana>
 
 <div id="example1">
-  <h1>Lorem Ipsum Dolor</h1>
-  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut 
+   <h1>Lorem Ipsum Dolor</h1>
+   <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
 
 laoreet dolore magna aliquam erat volutpat.</p>
-  <p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip 
+   <p>Ut wisi enim ad minim vaniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip
 
 ex ea commodo consequat.</p>
 </div>
@@ -659,45 +657,45 @@ ex ea commodo consequat.</p>
 
 
 
-Full Size Background Image
+To'liq o'lchamli fon rasmi
 
-Now we want to have a background image on a website that covers the entire browser window at all times.
+Endi biz veb-saytda har doim butun brauzer oynasini qamrab oladigan fon tasviriga ega bo'lishni xohlaymiz.
 
-The requirements are as follows:
+Talablar quyidagicha:
 
-    Fill the entire page with the image (no white space)
-    Scale image as needed
-    Center image on page
-    Do not cause scrollbars
+     Butun sahifani rasm bilan to'ldiring (bo'sh joysiz)
+     Tasvirni kerak bo'lganda masshtablashtiring
+     Sahifadagi markaziy rasm
+     O'tkazish paneliga olib kelmang
 
-The following example shows how to do it; Use the <html> element (the <html> element is always at least the 
+Quyidagi misol buni qanday qilishni ko'rsatadi; <html> elementidan foydalaning (<html> elementi har doim kamida
 
-height of the browser window). Then set a fixed and centered background on it. Then adjust its size with the 
+brauzer oynasining balandligi). Keyin unga sobit va markazlashtirilgan fonni o'rnating. Keyin uning o'lchamini o'rnating
 
-background-size property:
+fon o'lchami xususiyati:
 
 
 
 <!DOCTYPE html>
 <html>
 <head>
-<style> 
-html { 
-  background: url(img_man.jpg) no-repeat center fixed; 
-  background-size: cover;
+<uslub>
+html {
+   fon: url(img_man.jpg) takrorlanmaydigan markaz o'rnatildi;
+   fon o'lchami: qopqoq;
 }
 
-body { 
-  color: white; 
+tana {
+   rang: oq;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h1>Full Page Background Image</h1>
-<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut 
+<h1>To'liq sahifa fon rasmi</h1>
+<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
 
-laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation 
+laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minimal vaniam, quis nostrud exercitation
 
 ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
 
@@ -706,33 +704,33 @@ ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
 
 
 
-Hero Image
+Qahramon tasviri
 
-You could also use different background properties on a <div> to create a hero image (a large image with 
+Qahramon tasvirini yaratish uchun <div> da turli xil fon xususiyatlaridan foydalanishingiz mumkin (katta rasm
 
-text), and place it where you want.
+matn) va uni xohlagan joyga joylashtiring.
 
 
 <!DOCTYPE html>
 <html>
 <head>
-<style> 
-html { 
-  background: url(img_man.jpg) no-repeat center fixed; 
-  background-size: cover;
+<uslub>
+html {
+   fon: url(img_man.jpg) takrorlanmaydigan markaz o'rnatildi;
+   fon o'lchami: qopqoq;
 }
 
-body { 
-  color: white; 
+tana {
+   rang: oq;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h1>Full Page Background Image</h1>
-<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut 
+<h1>To'liq sahifa fon rasmi</h1>
+<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
 
-laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation 
+laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minimal vaniam, quis nostrud exercitation
 
 ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
 
@@ -742,77 +740,76 @@ ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
 
 
 
-The CSS background-origin property specifies where the background image is positioned.
+CSS background-origin xususiyati fon tasviri qayerda joylashganligini belgilaydi.
 
-The property takes three different values:
+Mulk uch xil qiymatga ega:
 
-    border-box - the background image starts from the upper left corner of the border
-    padding-box - (default) the background image starts from the upper left corner of the padding edge
-    content-box - the background image starts from the upper left corner of the content
+     border-box - fon tasviri chegaraning yuqori chap burchagidan boshlanadi
+     padding-box - (standart) fon tasviri to'ldirish chetining yuqori chap burchagidan boshlanadi
+     content-box - fon tasviri kontentning yuqori chap burchagidan boshlanadi
 
-The following example illustrates the background-origin property:
+Quyidagi misol fon-origin xususiyatini ko'rsatadi:
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-#example1 {
-  border: 10px solid black;
-  padding: 35px;
-  background: url(img_flwr.gif);
-  background-repeat: no-repeat;
+<uslub>
+#misol1 {
+   chegara: 10px qattiq qora;
+   to'ldirish: 35px;
+   fon: url (img_flwr.gif);
+   fon-takrorlash: takrorlanmaslik;
 }
 
-#example2 {
-  border: 10px solid black;
-  padding: 35px;
-  background: url(img_flwr.gif);
-  background-repeat: no-repeat;
-  background-origin: border-box;
+#misol2 {
+   chegara: 10px qattiq qora;
+   to'ldirish: 35px;
+   fon: url (img_flwr.gif);
+   fon-takrorlash: takrorlanmaslik;
+   fon-kelib chiqishi: chegara qutisi;
 }
 
-#example3 {
-  border: 10px solid black;
-  padding: 35px;
-  background: url(img_flwr.gif);
-  background-repeat: no-repeat;
-  background-origin: content-box;
+#misol3 {
+   chegara: 10px qattiq qora;
+   to'ldirish: 35px;
+   fon: url (img_flwr.gif);
+   fon-takrorlash: takrorlanmaslik;
+   fon-kelib chiqishi: kontent-box;
 }
 </style>
 </head>
-<body>
+<tana>
+<h1>Fondan kelib chiqadigan xususiyat</h1>
 
-<h1>The background-origin Property</h1>
-
-<p>No background-origin (padding-box is default):</p>
+<p>Fon manbasi yo'q (to'ldirish qutisi sukut bo'yicha):</p>
 <div id="example1">
-  <h2>Lorem Ipsum Dolor</h2>
-  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut 
+   <h2>Lorem Ipsum Dolor</h2>
+   <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
 
 laoreet dolore magna aliquam erat volutpat.</p>
-  <p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip 
+   <p>Ut wisi enim ad minim vaniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip
 
 ex ea commodo consequat.</p>
 </div>
 
-<p>background-origin: border-box:</p>
+<p>fon-kelib chiqishi: chegara qutisi:</p>
 <div id="example2">
-  <h2>Lorem Ipsum Dolor</h2>
-  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut 
+   <h2>Lorem Ipsum Dolor</h2>
+   <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
 
 laoreet dolore magna aliquam erat volutpat.</p>
-  <p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip 
+   <p>Ut wisi enim ad minim vaniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip
 
 ex ea commodo consequat.</p>
 </div>
 
-<p>background-origin: content-box:</p>
+<p>fon-kelib chiqishi: kontent-box:</p>
 <div id="example3">
-  <h2>Lorem Ipsum Dolor</h2>
-  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut 
+   <h2>Lorem Ipsum Dolor</h2>
+   <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
 
 laoreet dolore magna aliquam erat volutpat.</p>
-  <p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip 
+   <p>Ut wisi enim ad minim vaniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip
 
 ex ea commodo consequat.</p>
 </div>
@@ -822,74 +819,73 @@ ex ea commodo consequat.</p>
 
   
 
-CSS background-clip Property
+CSS fon-klip xususiyati
 
-The CSS background-clip property specifies the painting area of the background.
+CSS background-clip xususiyati fonning bo'yash maydonini belgilaydi.
 
-The property takes three different values:
+Mulk uch xil qiymatga ega:
 
-    border-box - (default) the background is painted to the outside edge of the border
-    padding-box - the background is painted to the outside edge of the padding
-    content-box - the background is painted within the content box
+     chegara qutisi - (standart) fon chegaraning tashqi chetiga bo'yalgan
+     padding-box - fon plombaning tashqi chetiga bo'yalgan
+     kontent qutisi - fon kontent oynasida bo'yalgan
 
-The following example illustrates the background-clip property:
+Quyidagi misolda background-clip xususiyati tasvirlangan:
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-#example1 {
-  border: 10px dotted black;
-  padding: 35px;
-  background: yellow;
+<uslub>
+#misol1 {
+   chegara: 10px nuqtali qora;
+   to'ldirish: 35px;
+   fon: sariq;
 }
 
-#example2 {
-  border: 10px dotted black;
-  padding: 35px;
-  background: yellow;
-  background-clip: padding-box;
+#misol2 {
+   chegara: 10px nuqtali qora;
+   to'ldirish: 35px;
+   fon: sariq;
+   fon-klip: padding-box;
 }
 
-#example3 {
-  border: 10px dotted black;
-  padding: 35px;
-  background: yellow;
-  background-clip: content-box;
+#misol3 {
+   chegara: 10px nuqtali qora;
+   to'ldirish: 35px;
+   fon: sariq;
+   fon-klip: kontent qutisi;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h1>The background-clip Property</h1>
+<h1>Fon-klip xususiyati</h1>
 
-<p>No background-clip (border-box is default):</p>
+<p>Fon-klip yo'q (chegara qutisi birlamchi):</p>
 <div id="example1">
-  <h2>Lorem Ipsum Dolor</h2>
-  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut 
+   <h2>Lorem Ipsum Dolor</h2>
+   <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
 
 laoreet dolore magna aliquam erat volutpat.</p>
 </div>
 
-<p>background-clip: padding-box:</p>
+<p>fon-klip: padding-box:</p>
 <div id="example2">
-  <h2>Lorem Ipsum Dolor</h2>
-  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut 
+   <h2>Lorem Ipsum Dolor</h2>
+   <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
 
 laoreet dolore magna aliquam erat volutpat.</p>
 </div>
 
-<p>background-clip: content-box:</p>
+<p>fon-klip: kontent qutisi:</p>
 <div id="example3">
-  <h2>Lorem Ipsum Dolor</h2>
-  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut 
+   <h2>Lorem Ipsum Dolor</h2>
+   <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
 
 laoreet dolore magna aliquam erat volutpat.</p>
 </div>
 
 </body>
 </html>
-
 
 
 
@@ -906,43 +902,43 @@ background-size 	Specifies the size of the background image(s)
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -   
   
  
-## CSS Colors
+## CSS ranglari
 
 
-RGBA Colors
+RGBA ranglari
 
-RGBA color values are an extension of RGB color values with an alpha channel - which specifies the opacity 
+RGBA rang qiymatlari alfa kanali bilan RGB rang qiymatlarining kengaytmasi bo'lib, shaffoflikni belgilaydi.
 
-for a color.
+rang uchun.
 
-An RGBA color value is specified with: rgba(red, green, blue, alpha). The alpha parameter is a number 
+RGBA rang qiymati quyidagi bilan belgilanadi: rgba (qizil, yashil, ko'k, alfa). Alfa parametri raqamdir
 
-between 0.0 (fully transparent) and 1.0 (fully opaque). See the example below for the definition of RGBA 
+0,0 (to'liq shaffof) va 1,0 (to'liq shaffof) orasida. RGBA ta'rifi uchun quyidagi misolga qarang
 
-colors:
+ranglar:
 
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-#p1 {background-color:rgba(255,0,0,0.3);}
-#p2 {background-color:rgba(0,255,0,0.3);}
-#p3 {background-color:rgba(0,0,255,0.3);}
-#p4 {background-color:rgba(192,192,192,0.3);}
-#p5 {background-color:rgba(255,255,0,0.3);}
-#p6 {background-color:rgba(255,0,255,0.3);}
+<uslub>
+#p1 {fon rangi: rgba (255,0,0,0,3);}
+#p2 {fon rangi: rgba (0,255,0,0,3);}
+#p3 {fon rangi:rgba(0,0,255,0,3);}
+#p4 {fon rangi: rgba (192,192,192,0.3);}
+#p5 {fon rangi:rgba(255,255,0,0,3);}
+#p6 {fon rangi:rgba(255,0,255,0,3);}
 </style>
 </head>
-<body>
+<tana>
 
-<h1>Define Colors With RGBA Values</h1>
+<h1>RGBA qiymatlari bilan ranglarni aniqlang</h1>
 
-<p id="p1">Red</p>
-<p id="p2">Green</p>
-<p id="p3">Blue</p>
-<p id="p4">Grey</p>
-<p id="p5">Yellow</p>
+<p id="p1">Qizil</p>
+<p id="p2">Yashil</p>
+<p id="p3">Moviy</p>
+<p id="p4">Kulrang</p>
+<p id="p5">Sariq</p>
 <p id="p6">Cerise</p>
 
 </body>
@@ -950,83 +946,83 @@ colors:
 
 
 
-HSL Colors
+HSL ranglari
 
-HSL stands for Hue, Saturation and Lightness.
+HSL qisqartmasi Hue, Saturation va Lightness degan ma'noni anglatadi.
 
-An HSL color value is specified with: hsl(hue, saturation, lightness).
+HSL rang qiymati quyidagi bilan belgilanadi: hsl (rang, to'yinganlik, yorug'lik).
 
-    Hue is a degree on the color wheel (from 0 to 360):
-        0 (or 360) is red
-        120 is green
-        240 is blue
-    Saturation is a percentage value: 100% is the full color.
-    Lightness is also a percentage; 0% is dark (black) and 100% is white.
-The example below shows the definition of HSL colors:
+     Hue - rang g'ildiragidagi daraja (0 dan 360 gacha):
+         0 (yoki 360) qizil
+         120 yashil
+         240 ko'k
+     To'yinganlik - bu foizli qiymat: 100% - to'liq rang.
+     Yengillik ham foiz hisoblanadi; 0% quyuq (qora) va 100% oq.
+Quyidagi misol HSL ranglarining ta'rifini ko'rsatadi:
 
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-#p1 {background-color:hsl(120,100%,50%);}
-#p2 {background-color:hsl(120,100%,75%);}
-#p3 {background-color:hsl(120,100%,25%);}
-#p4 {background-color:hsl(120,60%,70%);}
-#p5 {background-color:hsl(290,100%,50%);}
-#p6 {background-color:hsl(290,60%,70%);}
+<uslub>
+#p1 {fon rangi: hsl(120,100%,50%);}
+#p2 {fon rangi: hsl(120,100%,75%);}
+#p3 {fon rangi: hsl(120,100%,25%);}
+#p4 {fon rangi: hsl(120,60%,70%);}
+#p5 {fon rangi: hsl(290,100%,50%);}
+#p6 {fon rangi: hsl(290,60%,70%);}
 </style>
 </head>
-<body>
+<tana>
 
-<h1>Define Colors With HSL Values</h1>
+<h1>HSL qiymatlari bilan ranglarni aniqlang</h1>
 
-<p id="p1">Green</p>
-<p id="p2">Light green</p>
-<p id="p3">Dark green</p>
-<p id="p4">Pastel green</p>
-<p id="p5">Violet</p>
-<p id="p6">Pastel violet</p>
+<p id="p1">Yashil</p>
+<p id="p2">Och yashil</p>
+<p id="p3">To‘q yashil</p>
+<p id="p4">Yashil pastel</p>
+<p id="p5">Binafsha</p>
+<p id="p6">Pastel binafsha</p>
 
 </body>
 </html>
 
 
 
-HSLA Colors
+HSLA ranglari
 
-HSLA color values are an extension of HSL color values with an alpha channel - which specifies the opacity 
+HSLA rang qiymatlari HSL rang qiymatlarining alfa-kanalli kengaytmasi bo'lib, shaffoflikni belgilaydi.
 
-for a color.
+rang uchun.
 
-An HSLA color value is specified with: hsla(hue, saturation, lightness, alpha), where the alpha parameter 
+HSLA rang qiymati quyidagi bilan belgilanadi: hsla(rang, toʻyinganlik, yorugʻlik, alfa), bu yerda alfa parametri
 
-defines the opacity. The alpha parameter is a number between 0.0 (fully transparent) and 1.0 (fully opaque).
+shaffoflikni belgilaydi. Alfa parametri 0,0 (to'liq shaffof) va 1,0 (to'liq shaffof) orasidagi raqamdir.
 
-See the example below for different HSLA colors:
+Turli xil HSLA ranglari uchun quyidagi misolga qarang:
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-#p1 {background-color:hsla(120,100%,50%,0.3);}
-#p2 {background-color:hsla(120,100%,75%,0.3);}
-#p3 {background-color:hsla(120,100%,25%,0.3);}
-#p4 {background-color:hsla(120,60%,70%,0.3);}
-#p5 {background-color:hsla(290,100%,50%,0.3);}
-#p6 {background-color:hsla(290,60%,70%,0.3);}
+<uslub>
+#p1 {fon rangi: hsla(120,100%,50%,0,3);}
+#p2 {fon rangi: hsla(120,100%,75%,0,3);}
+#p3 {fon rangi: hsla (120,100%, 25%, 0,3);}
+#p4 {fon rangi: hsla(120,60%,70%,0,3);}
+#p5 {fon rangi: hsla(290,100%,50%,0,3);}
+#p6 {fon rangi: hsla(290,60%,70%,0,3);}
 </style>
 </head>
-<body>
+<tana>
 
-<h1>Define Colors With HSLA Values</h1>
+<h1>Ranglarni HSLA qiymatlari bilan aniqlang</h1>
 
-<p id="p1">Green</p>
-<p id="p2">Light green</p>
-<p id="p3">Dark green</p>
-<p id="p4">Pastel green</p>
-<p id="p5">Violet</p>
-<p id="p6">Pastel violet</p>
+<p id="p1">Yashil</p>
+<p id="p2">Och yashil</p>
+<p id="p3">To‘q yashil</p>
+<p id="p4">Yashil pastel</p>
+<p id="p5">Binafsha</p>
+<p id="p6">Pastel binafsha</p>
 
 </body>
 </html>
@@ -1034,169 +1030,167 @@ See the example below for different HSLA colors:
 
 
 
-Opacity
+Shaffoflik
 
-The CSS opacity property sets the opacity for the whole element (both background color and text will be 
+CSS noaniqlik xususiyati butun element uchun shaffoflikni o'rnatadi (fon rangi ham, matn ham shunday bo'ladi).
 
-opaque/transparent).
+shaffof/shaffof).
 
-The opacity property value must be a number between 0.0 (fully transparent) and 1.0 (fully opaque). 
+Shaffoflik xususiyati qiymati 0,0 (to'liq shaffof) va 1,0 (to'liq shaffof) orasidagi raqam bo'lishi kerak.
 
-The texts above will also be transparent. See example below for elements with specified opacity:
+Yuqoridagi matnlar ham shaffof bo'ladi. Belgilangan shaffoflikka ega elementlar uchun quyidagi misolga qarang:
 
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-#p1 {background-color:rgb(255,0,0);opacity:0.6;}
-#p2 {background-color:rgb(0,255,0);opacity:0.6;}
-#p3 {background-color:rgb(0,0,255);opacity:0.6;}
-#p4 {background-color:rgb(192,192,192);opacity:0.6;}
-#p5 {background-color:rgb(255,255,0);opacity:0.6;}
-#p6 {background-color:rgb(255,0,255);opacity:0.6;}
+<uslub>
+#p1 {fon rangi: rgb(255,0,0); shaffoflik: 0,6;}
+#p2 {fon rangi:rgb(0,255,0); shaffoflik:0,6;}
+#p3 {fon rangi: rgb(0,0,255); shaffoflik: 0,6;}
+#p4 {fon rangi: rgb (192,192,192); shaffoflik: 0,6;}
+#p5 {fon rangi: rgb(255,255,0); shaffoflik: 0,6;}
+#p6 {fon rangi: rgb(255,0,255); shaffoflik: 0,6;}
 </style>
 </head>
-<body>
+<tana>
 
-<h1>Define Colors With Opacity</h1>
+<h1>Ranglarni shaffofligi bilan aniqlang</h1>
 
-<p id="p1">Red</p>
-<p id="p2">Green</p>
-<p id="p3">Blue</p>
-<p id="p4">Grey</p>
-<p id="p5">Yellow</p>
+<p id="p1">Qizil</p>
+<p id="p2">Yashil</p>
+<p id="p3">Moviy</p>
+<p id="p4">Kulrang</p>
+<p id="p5">Sariq</p>
 <p id="p6">Cerise</p>
 
 </body>
 </html>
 
 
-<kbd>return</kbd>[Back to table of contents](#homepage)
+<kbd>qaytish</kbd>[Mundarijaga qaytish](#homepage)
 
 
 -----------
+## CSS chegaralari
 
+CSS chegara uslubi
 
-## CSS Borders
+Chegara uslubi xossasi qanday chegarani ko'rsatishni belgilaydi.
 
-CSS Border Style
+Quyidagi qiymatlarga ruxsat beriladi:
 
-The border-style property specifies what kind of border to display.
+nuqta - nuqta chegarasini belgilaydi
+chiziqli - chiziqli chegarani belgilaydi
+qattiq - qattiq chegarani belgilaydi
+double - juft chegarani belgilaydi
+groove - 3D yivli chegarani belgilaydi. Effekt chegara rangi qiymatiga bog'liq
+ridge - 3D qirrali chegarani belgilaydi. Effekt chegara rangi qiymatiga bog'liq
+inset - 3D ichki chegarani belgilaydi. Effekt chegara rangi qiymatiga bog'liq
+outset - 3D boshlang'ich chegarani belgilaydi. Effekt chegara rangi qiymatiga bog'liq
+none - Chegarani belgilamaydi
+yashirin - Yashirin chegarani belgilaydi
 
-The following values are allowed:
+Chegara uslubidagi xususiyat birdan to'rtgacha qiymatga ega bo'lishi mumkin (yuqori chegara, o'ng chegara, pastki chegara,
 
-dotted - Defines a dotted border
-dashed - Defines a dashed border
-solid - Defines a solid border
-double - Defines a double border
-groove - Defines a 3D grooved border. The effect depends on the border-color value
-ridge - Defines a 3D ridged border. The effect depends on the border-color value
-inset - Defines a 3D inset border. The effect depends on the border-color value
-outset - Defines a 3D outset border. The effect depends on the border-color value
-none - Defines no border
-hidden - Defines a hidden border
-
-The border-style property can have from one to four values (for the top border, right border, bottom border, 
-
-and the left border).
+va chap chegara).
 
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-p.dotted {border-style: dotted;}
-p.dashed {border-style: dashed;}
-p.solid {border-style: solid;}
-p.double {border-style: double;}
-p.groove {border-style: groove;}
-p.ridge {border-style: ridge;}
-p.inset {border-style: inset;}
-p.outset {border-style: outset;}
-p.none {border-style: none;}
-p.hidden {border-style: hidden;}
-p.mix {border-style: dotted dashed solid double;}
+<uslub>
+p.dotted {chegara uslubi: nuqta;}
+p.dashed {chegara uslubi: chiziqcha;}
+p.solid {chegara uslubi: qattiq;}
+p.double {chegara uslubi: double;}
+p.groove {chegara uslubi: groove;}
+p.ridge {chegara uslubi: tizma;}
+p.inset {chegara uslubi: inset;}
+p.outset {chegara uslubi: boshlang'ich;}
+p.none {chegara uslubi: yo'q;}
+p.hidden {chegara uslubi: yashirin;}
+p.mix {chegara uslubi: nuqtali chiziqli qattiq dubl;}
 </style>
 </head>
-<body>
+<tana>
 
-<h2>The border-style Property</h2>
-<p>This property specifies what kind of border to display:</p>
+<h2>Chegara uslubidagi xususiyat</h2>
+<p>Bu xususiyat qanday chegarani ko'rsatishni belgilaydi:</p>
 
-<p class="dotted">A dotted border.</p>
-<p class="dashed">A dashed border.</p>
-<p class="solid">A solid border.</p>
-<p class="double">A double border.</p>
-<p class="groove">A groove border.</p>
-<p class="ridge">A ridge border.</p>
-<p class="inset">An inset border.</p>
-<p class="outset">An outset border.</p>
-<p class="none">No border.</p>
-<p class="hidden">A hidden border.</p>
-<p class="mix">A mixed border.</p>
+<p class="dotted">Nuqtali hoshiya.</p>
+<p class="dashed">Chiziq chiziq.</p>
+<p class="solid">Battiq chegara.</p>
+<p class="double">Qo'shaloq chegara.</p>
+<p class="groove">Yivik chegara.</p>
+<p class="ridge">Tiz chegarasi.</p>
+<p class="inset">O'rnatilgan chegara.</p>
+<p class="outset">Boshlabki chegara.</p>
+<p class="none">Chegara yo'q.</p>
+<p class="hidden">Yashirin chegara.</p>
+<p class="mix">Aralash chegara.</p>
 
 </body>
 </html>
 
 
 
-Note: None of the OTHER CSS border properties (such as borders width, border colors, border sides, border 
+Eslatma: BOSHQA CSS chegara xususiyatlaridan hech biri (chegara kengligi, chegara ranglari, chegara tomonlari, chegara kabi)
 
-shorthand, rounded borders) will have ANY effect unless the border-style property is set!
+stenografiya, yumaloq chegaralar) chegara uslubi xususiyati o'rnatilmasa, HAR QANDAY ta'sirga ega bo'ladi!
 
 
-Border Width::
+Chegara kengligi::
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-p.one {
-  border-style: solid;
-  border-width: 5px;
+<uslub>
+p.bir {
+   chegara uslubi: qattiq;
+   chegara kengligi: 5px;
 }
 
-p.two {
-  border-style: solid;
-  border-width: medium;
+ikkinchi p. {
+   chegara uslubi: qattiq;
+   chegara kengligi: o'rtacha;
 }
 
-p.three {
-  border-style: dotted;
-  border-width: 2px;
+uchinchi p. {
+   chegara uslubi: nuqta;
+   chegara kengligi: 2px;
 }
 
-p.four {
-  border-style: dotted;
-  border-width: thick;
+to'rt {
+   chegara uslubi: nuqta;
+   chegara kengligi: qalin;
 }
 
-p.five {
-  border-style: double;
-  border-width: 15px;
+bet {
+   chegara uslubi: juftlik;
+   chegara kengligi: 15px;
 }
 
-p.six {
-  border-style: double;
-  border-width: thick;
+p.6 {
+   chegara uslubi: juftlik;
+   chegara kengligi: qalin;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h2>The border-width Property</h2>
-<p>This property specifies the width of the four borders:</p>
+<h2>Chegara kengligi xossasi</h2>
+<p>Bu xususiyat to'rtta chegaraning kengligini belgilaydi:</p>
 
-<p class="one">Some text.</p>
-<p class="two">Some text.</p>
-<p class="three">Some text.</p>
-<p class="four">Some text.</p>
-<p class="five">Some text.</p>
-<p class="six">Some text.</p>
+<p class="one">Ba'zi matn.</p>
+<p class="two">Ba'zi matn.</p>
+<p class="three">Ba'zi matn.</p>
+<p class="four">Ba'zi matn.</p>
+<p class="five">Ba'zi matn.</p>
+<p class="six">Ba'zi matn.</p>
 
-<p><b>Note:</b> The "border-width" property does not work if it is used alone. 
-Always specify the "border-style" property to set the borders first.</p>
+<p><b>Eslatma:</b> "border-width" xususiyati, agar u yolg'iz ishlatilsa, ishlamaydi.
+Avval chegaralarni belgilash uchun har doim “border-style” xususiyatini belgilang.</p>
 
 </body>
 </html>
@@ -1206,415 +1200,413 @@ Always specify the "border-style" property to set the borders first.</p>
 
 
 
-CSS Border Width
+CSS chegara kengligi
 
-The border-width property specifies the width of the four borders (top border, right border, bottom border, 
+border-width xususiyati to‘rtta chegaraning kengligini belgilaydi (yuqori chegara, o‘ng chegara, pastki chegara,
 
-and left border) using px, pt, cm, em, etc. or using thin,medium, or thick. For specific side widths, two 
+va chap chegara) px, pt, sm, em va boshqalar yordamida yoki ingichka, o'rta yoki qalin. Muayyan yon kengliklari uchun ikkita
 
-borders are specified. The first represents top and bottom border with, while the second represents the 
+chegaralari belgilanadi. Birinchisi yuqori va pastki chegarani, ikkinchisi esa chegarani ifodalaydi
 
-width for the sides borders. 
+yon chegaralar uchun kenglik.
 
 
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-p.one {
-  border-style: solid;
-  border-width: 5px 20px; /* 5px top and bottom, 20px on the sides */
+<uslub>
+p.bir {
+   chegara uslubi: qattiq;
+   chegara kengligi: 5px 20px; /* yuqori va pastki 5px, yon tomonlarda 20px */
 }
 
-p.two {
-  border-style: solid;
-  border-width: 20px 5px; /* 20px top and bottom, 5px on the sides */
+ikkinchi p. {
+   chegara uslubi: qattiq;
+   chegara kengligi: 20px 5px; /* yuqori va pastda 20px, yon tomonlarda 5px */
 }
 
-p.three {
-  border-style: solid;
-  border-width: 25px 10px 4px 35px; /* 25px top, 10px right, 4px bottom and 35px left */
+uchinchi p. {
+   chegara uslubi: qattiq;
+   chegara kengligi: 25px 10px 4px 35px; /* 25px tepada, 10px oʻngda, 4px pastda va 35px chapda */
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h2>The border-width Property</h2>
-<p>The border-width property can have from one to four values (for the top border, right border, bottom 
+<h2>Chegara kengligi xossasi</h2>
+<p>Chegara kengligi xususiyati birdan toʻrtgacha qiymatga ega boʻlishi mumkin (yuqori chegara, oʻng chegara, pastki uchun
 
-border, and the left border):</p>
+chegara va chap chegara):</p>
 
-<p class="one">Some text.</p>
-<p class="two">Some text.</p>
-<p class="three">Some text.</p>
+<p class="one">Ba'zi matn.</p>
+<p class="two">Ba'zi matn.</p>
+<p class="three">Ba'zi matn.</p>
 
 </body>
 </html>
 
-CSS Border Color::
+CSS chegara rangi::
 
-The border-color property is used to set the color of the four borders using name ( e.g. red), HEX value 
+Chegara rangi xususiyati nom (masalan, qizil), HEX qiymati yordamida to'rtta chegara rangini o'rnatish uchun ishlatiladi.
 
-(e.g. #ff0000), RGB value (e.g. rgb(255,0,0), and HSL value (e.g. hsl (0, 100%, 50%), and transparency
+(masalan, #ff0000), RGB qiymati (masalan, rgb(255,0,0) va HSL qiymati (masalan, hsl (0, 100%, 50%)) va shaffoflik
 
-(specified using alpha value). 
-
-
-Note: The elements's color is the default border-color whenever you did not set the border color.
-
-<!DOCTYPE html>
-<html>
-<head>
-<style>
-p.one {
-  border-style: solid;
-  border-color: red;
-}
-
-p.two {
-  border-style: solid;
-  border-color: green;
-} 
-
-p.three {
-  border-style: dotted;
-  border-color: blue;
-} 
-</style>
-</head>
-<body>
-
-<h2>The border-color Property</h2>
-<p>This property specifies the color of the four borders:</p>
-
-<p class="one">A solid red border</p>
-<p class="two">A solid green border</p>
-<p class="three">A dotted blue border</p>
-
-<p><b>Note:</b> The "border-color" property does not work if it is used alone. Use the "border-style" 
-
-property to set the borders first.</p>
-
-</body>
-</html>
+(alfa qiymatidan foydalangan holda ko'rsatilgan).
 
 
-
-Specific Side Colors
-
-
-The border-color property can have from one to four values (for the top border, right border, bottom border, 
-
-and the left border). 
-
+Eslatma: Agar siz chegara rangini o'rnatmagan bo'lsangiz, elementlarning rangi standart chegara rangidir.
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-p.one {
-  border-style: solid;
-  border-color: red green blue yellow; /* red top, green right, blue bottom and yellow left */
+<uslub>
+p.bir {
+   chegara uslubi: qattiq;
+   chegara rangi: qizil;
+}
+
+ikkinchi p. {
+   chegara uslubi: qattiq;
+   chegara rangi: yashil;
+}
+
+uchinchi p. {
+   chegara uslubi: nuqta;
+   chegara rangi: ko'k;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h2>The border-color Property</h2>
-<p>The border-color property can have from one to four values (for the top border, right border, bottom 
+<h2>Chegara rangi xususiyati</h2>
+<p>Bu xususiyat to'rtta chegara rangini belgilaydi:</p>
 
-border, and the left border):</p>
+<p class="one">Qizil chegara</p>
+<p class="two">Yashil chegara</p>
+<p class="three">Nuqtali ko'k hoshiya</p>
 
-<p class="one">A solid multicolor border</p>
+<p><b>Eslatma:</b> "border-color" xususiyati yolg'iz ishlatilsa ishlamaydi. "Chegara uslubi" dan foydalaning
 
-</body>
-</html>
-
-
-Hexadecimal (HEX) Values
-
-The color of the border can also be specified using HEX values. 
-
-
-<!DOCTYPE html>
-<html>
-<head>
-<style>
-p.one {
-  border-style: solid;
-  border-color: #ff0000; /* red */
-}
-
-p.two {
-  border-style: solid;
-  border-color: #0000ff; /* blue */
-}
-
-p.three {
-  border-style: solid;
-  border-color: #bbbbbb; /* grey */
-}
-</style>
-</head>
-<body>
-
-<h2>The border-color Property</h2>
-<p>The color of the border can also be specified using a hexadecimal value (HEX):</p>
-
-<p class="one">A solid red border</p>
-<p class="two">A solid blue border</p>
-<p class="three">A solid grey border</p>
+avval chegaralarni belgilash uchun xususiyat.</p>
 
 </body>
 </html>
 
 
 
-RGB Values
+Maxsus yon ranglar
 
-RGB values can also be used to specify color. 
+
+border-color xususiyati birdan toʻrtgacha qiymatga ega boʻlishi mumkin (yuqori chegara, oʻng chegara, pastki chegara,
+
+va chap chegara).
+
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-p.one {
-  border-style: solid;
-  border-color: rgb(255, 0, 0); /* red */
-}
-
-p.two {
-  border-style: solid;
-  border-color: rgb(0, 0, 255); /* blue */
-}
-
-p.three {
-  border-style: solid;
-  border-color: rgb(187, 187, 187); /* grey */
+<uslub>
+p.bir {
+   chegara uslubi: qattiq;
+   chegara rangi: qizil yashil ko'k sariq; /* qizil tepa, yashil o'ng, ko'k pastki va sariq chap */
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h2>The border-color Property</h2>
-<p>The color of the border can also be specified using RGB values:</p>
+<h2>Chegara rangi xususiyati</h2>
+<p>chegara rangi xususiyati birdan toʻrtgacha qiymatga ega boʻlishi mumkin (yuqori chegara, oʻng chegara, pastki uchun
 
-<p class="one">A solid red border</p>
-<p class="two">A solid blue border</p>
-<p class="three">A solid grey border</p>
+chegara va chap chegara):</p>
+
+<p class="one">Yaxshi ko'p rangli hoshiya</p>
 
 </body>
 </html>
 
 
-HSL Values
+O'n oltilik (HEX) qiymatlari
 
-HSL values can be used to specify.
+Chegaraning rangi HEX qiymatlari yordamida ham aniqlanishi mumkin.
+
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-p.one {
-  border-style: solid;
-  border-color: hsl(0, 100%, 50%); /* red */
+<uslub>
+p.bir {
+   chegara uslubi: qattiq;
+   chegara rangi: #ff0000; /* qizil */
 }
 
-p.two {
-  border-style: solid;
-  border-color: hsl(240, 100%, 50%); /* blue */
+ikkinchi p. {
+   chegara uslubi: qattiq;
+   chegara rangi: #0000ff; /* ko'k */
 }
 
-p.three {
-  border-style: solid;
-  border-color: hsl(0, 0%, 73%); /* grey */
+uchinchi p. {
+   chegara uslubi: qattiq;
+   chegara rangi: #bbbbbb; /* kulrang */
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h2>The border-color Property</h2>
-<p>The color of the border can also be specified using HSL values:</p>
+<h2>Chegara rangi xususiyati</h2>
+<p>Chegara rangini oʻn oltilik qiymat (HEX) yordamida ham belgilash mumkin:</p>
 
-<p class="one">A solid red border</p>
-<p class="two">A solid blue border</p>
-<p class="three">A solid grey border</p>
+<p class="one">Qizil chegara</p>
+<p class="two">Yagona ko'k hoshiya</p>
+<p class="three">Yaxlit kulrang hoshiya</p>
 
 </body>
 </html>
 
 
 
-CSS Border Sides::
+RGB qiymatlari
 
-CSS Border - Individual Sides
-
-You can use some CSS properties to specify the type of border each side (top, right, bottom, and left) has
-
+RGB qiymatlari rangni belgilash uchun ham ishlatilishi mumkin.
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
+<uslub>
+p.bir {
+   chegara uslubi: qattiq;
+   chegara rangi: rgb(255, 0, 0); /* qizil */
+}
+
+ikkinchi p. {
+   chegara uslubi: qattiq;
+   chegara rangi: rgb(0, 0, 255); /* ko'k */
+}
+
+uchinchi p. {
+   chegara uslubi: qattiq;
+   chegara rangi: rgb(187, 187, 187); /* kulrang */
+}
+</style>
+</head>
+<tana>
+
+<h2>Chegara rangi xususiyati</h2>
+<p>Chegara rangini RGB qiymatlari yordamida ham belgilash mumkin:</p>
+
+<p class="one">Qizil chegara</p>
+<p class="two">Yagona ko'k hoshiya</p>
+<p class="three">Yaxlit kulrang hoshiya</p>
+
+</body>
+</html>
+
+
+HSL qiymatlari
+
+HSL qiymatlari belgilash uchun ishlatilishi mumkin.
+
+<!DOCTYPE html>
+<html>
+<head>
+<uslub>
+p.bir {
+   chegara uslubi: qattiq;
+   chegara rangi: hsl(0, 100%, 50%); /* qizil */
+}
+
+ikkinchi p. {
+   chegara uslubi: qattiq;
+   chegara rangi: hsl(240, 100%, 50%); /* ko'k */
+}
+
+uchinchi p. {
+   chegara uslubi: qattiq;
+   chegara rangi: hsl(0, 0%, 73%); /* kulrang */
+}
+</style>
+</head>
+<tana>
+
+<h2>Chegara rangi xususiyati</h2>
+<p>Chegara rangini HSL qiymatlari yordamida ham belgilash mumkin:</p>
+
+<p class="one">Qizil chegara</p>
+<p class="two">Yagona ko'k hoshiya</p>
+<p class="three">Yaxlit kulrang hoshiya</p>
+
+</body>
+</html>
+
+
+
+CSS chegara tomonlari::
+
+CSS chegarasi - individual tomonlar
+
+Har bir tomon (yuqori, o'ng, pastki va chap) chegara turini belgilash uchun ba'zi CSS xususiyatlaridan foydalanishingiz mumkin
+
+<!DOCTYPE html>
+<html>
+<head>
+<uslub>
 p {
-  border-top-style: dotted;
-  border-right-style: solid;
-  border-bottom-style: dotted;
-  border-left-style: solid;
+   chegara tepasi uslubi: nuqta;
+   chegara o'ng uslubi: qattiq;
+   chegara-pastki uslub: nuqta;
+   chegara-chap uslubi: qattiq;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h2>Individual Border Sides</h2>
-<p>2 different border styles.</p>
+<h2>Alohida chegara tomonlari</h2>
+<p>2 xil chegara uslubi.</p>
 
 </body>
 </html>
 
 
-The code above can also be written as (dotted and solid represent top+bottom, and left+right respectively: 
+Yuqoridagi kodni shunday yozish ham mumkin (nuqta va qattiq mos ravishda yuqori+past va chap+o‘ngni ifodalaydi:
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
+<uslub>
 p {
-  border-style: dotted solid;
+   chegara uslubi: nuqtali qattiq;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h2>Individual Border Sides</h2>
-<p>2 different border styles.</p>
+<h2>Alohida chegara tomonlari</h2>
+<p>2 xil chegara uslubi.</p>
 
 </body>
 </html>
 
 
-Border style explanation : 
-If the border-style property has four values:
+Chegara uslubini tushuntirish:
+Agar chegara uslubidagi xususiyat to'rtta qiymatga ega bo'lsa:
 
-    border-style: dotted solid double dashed;
-        top border is dotted
-        right border is solid
-        bottom border is double
-        left border is dashed
+     chegara uslubi: nuqtali qattiq qo'sh chiziqli;
+         yuqori chegarasi nuqtali
+         o'ng chegara mustahkam
+         pastki chegara ikki barobar
+         chap chegara chizilgan
 
-If the border-style property has three values:
+Agar chegara uslubidagi xususiyat uchta qiymatga ega bo'lsa:
 
-    border-style: dotted solid double;
-        top border is dotted
-        right and left borders are solid
-        bottom border is double
+     chegara uslubi: nuqtali qattiq juftlik;
+         yuqori chegarasi nuqtali
+         o'ng va chap chegaralar mustahkam
+         pastki chegara ikki barobar
 
-If the border-style property has two values:
+Agar chegara uslubidagi xususiyat ikkita qiymatga ega bo'lsa:
 
-    border-style: dotted solid;
-        top and bottom borders are dotted
-        right and left borders are solid
+     chegara uslubi: nuqtali qattiq;
+         yuqori va pastki chegaralari nuqtali
+         o'ng va chap chegaralar mustahkam
 
-If the border-style property has one value:
+Agar chegara uslubidagi xususiyat bitta qiymatga ega bo'lsa:
 
-    border-style: dotted;
-        all four borders are dotted
+     chegara uslubi: nuqta;
+         barcha to'rtta chegara nuqtali
 
 
-The above also works with border-width and border-color
+Yuqoridagilar chegara kengligi va chegara rangi bilan ham ishlaydi
 
-See code below for example of practical use of the border styling parameters
+Chegara uslubi parametrlaridan amaliy foydalanish misoli uchun quyidagi kodga qarang
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-body {
-  text-align: center;
+<uslub>
+tana {
+   matnni tekislash: markaz;
 }
-/* Four values */
-p.four {
-  border-style: dotted solid double dashed;
-}
-
-/* Three values */
-p.three {
-  border-style: dotted solid double;
+/* To'rt qiymat */
+to'rt {
+   chegara uslubi: nuqtali qattiq qo'sh chiziqli;
 }
 
-/* Two values */
-p.two {
-  border-style: dotted solid;
+/* Uchta qiymat */
+uchinchi p. {
+   chegara uslubi: nuqtali qattiq juftlik;
 }
 
-/* One value */
-p.one {
-  border-style: dotted;
+/* Ikki qiymat */
+ikkinchi p. {
+   chegara uslubi: nuqtali qattiq;
+}
+
+/* Bitta qiymat */
+p.bir {
+   chegara uslubi: nuqta;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h2>Individual Border Sides</h2>
-<p class="four">4 different border styles.</p>
-<p class="three">3 different border styles.</p>
-<p class="two">2 different border styles.</p>
-<p class="one">1 border style.</p>
+<h2>Alohida chegara tomonlari</h2>
+<p class="four">4 xil chegara uslubi.</p>
+<p class="three">3 xil chegara uslubi.</p>
+<p class="two">2 xil chegara uslubi.</p>
+<p class="one">1 ta chegara uslubi.</p>
 
 </body>
 </html>
 
-CSS Border-Shorthand property::
-Enable shortening of the border styling codes. The 'border' property is a shorthand for individual border 
+CSS Border-Shorthand xususiyati::
+Chegara uslublari kodlarini qisqartirishni yoqing. "Chegara" xususiyati individual chegaraning qisqartmasi hisoblanadi
 
-properties, as shown below (for example)
+xususiyatlari, quyida ko'rsatilganidek (masalan)
 
 
-    border-width
-    border-style (required)
-    border-color
+     chegara kengligi
+     chegara uslubi (majburiy)
+     chegara rangi
 <!DOCTYPE html>
 <html>
 <head>
-<style>
+<uslub>
 p {
-  border: 5px solid red;
+   chegara: 5px qattiq qizil;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h2>The border Property</h2>
+<h2>Chegara xususiyati</h2>
 
-<p>This property is a shorthand property for border-width, border-style, and border-color.</p>
+<p>Bu xususiyat chegara kengligi, hoshiya uslubi va hoshiya rangi uchun stenografiya xususiyatidir.</p>
 
 </body>
 </html>
 
 
 
-Border properties can also be specified for each side:
+Chegara xususiyatlari har bir tomon uchun ham belgilanishi mumkin:
 <!DOCTYPE html>
 <html>
 <head>
-<style>
+<uslub>
 p {
-  border-left: 6px solid red;
-  background-color: lightgrey;
+   chegara-chap: 6px qattiq qizil;
+   fon rangi: och kulrang;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h2>The border-left Property</h2>
-<p>This property is a shorthand property for border-left-width, border-left-style, and border-left-
+<h2>Chap chegarasidagi xususiyat</h2>
+<p>Bu xususiyat chegara-chap-kenglik, chegara-chap-uslubi va chegara-chap- uchun stenografiya xususiyatidir.
 
-color.</p>
+rang.</p>
 
 </body>
 </html>
-
 
 To repeat the same for bottom border:
 
@@ -1737,233 +1729,233 @@ p.outset {border-bottom-style: outset;}
 
 
 
-To set the width of the left border
+Chap chegaraning kengligini o'rnatish uchun
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
+<uslub>
 p {
-  border-style: solid;
-  border-left-width: 15px;
+   chegara uslubi: qattiq;
+   chegara-chap-kengligi: 15px;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<p><b>Note:</b> The "border-left-width" property does not work if it is used alone. Use the "border-style" 
+<p><b>Eslatma:</b> "chegara-chap-kenglik" xususiyati, agar u yolg'iz ishlatilsa, ishlamaydi. "Chegara uslubi" dan foydalaning
 
-property to set the borders first.</p>
+avval chegaralarni belgilash uchun xususiyat.</p>
 
 </body>
 </html>
 
 
-To set the color of the four borders:
+To'rtta chegara rangini o'rnatish uchun:
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-p.one {
-  border-style: solid;
+<uslub>
+p.bir {
+   chegara uslubi: qattiq;
   
-  border-color: #0000ff;
+   chegara rangi: #0000ff;
 }
 
-p.two {
-  border-style: solid;
-  border-color: #ff0000 #0000ff;
+ikkinchi p. {
+   chegara uslubi: qattiq;
+   chegara rangi: #ff0000 #0000ff;
 }
 
-p.three {
-  border-style: solid;
-  border-color: #ff0000 #00ff00 #0000ff;
+uchinchi p. {
+   chegara uslubi: qattiq;
+   chegara rangi: #ff0000 #00ff00 #0000ff;
 }
 
-p.four {
-  border-style: solid;
-  border-color: #ff0000 #00ff00 #0000ff rgb(250,0,255);
+to'rt {
+   chegara uslubi: qattiq;
+   chegara rangi: #ff0000 #00ff00 #0000ff rgb(250,0,255);
 }
 </style>
 </head>
-<body>
+<tana>
 
-<p class="one">One-colored border!</p>
-<p class="two">Two-colored border!</p>
-<p class="three">Three-colored border!</p>
-<p class="four">Four-colored border!</p>
-<p><b>Note:</b> The "border-color" property does not work if it is used alone. Use the "border-style" 
+<p class="one">Bir rangli hoshiya!</p>
+<p class="two">Ikki rangli hoshiya!</p>
+<p class="three">Uch rangli hoshiya!</p>
+<p class="four">To'rt rangli hoshiya!</p>
+<p><b>Eslatma:</b> "border-color" xususiyati yolg'iz ishlatilsa ishlamaydi. "Chegara uslubi" dan foydalaning
 
-property to set the borders first.</p>
+avval chegaralarni belgilash uchun xususiyat.</p>
 
 </body>
 </html>
 
 
-To set the color of the right border:
+O'ng chegara rangini o'rnatish uchun:
 <!DOCTYPE html>
 <html>
 <head>
-<style>
+<uslub>
 p {
-  border-style: solid;
-  border-right-color: #ff0000;
+   chegara uslubi: qattiq;
+   chegara-o'ng-rang: #ff0000;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<p>This is some text in a paragraph.</p>
+<p>Bu xatboshidagi ayrim matn.</p>
 
 </body>
 </html>
 
 
-All CSS Border Properties
-Property 	Description
-border 	Sets all the border properties in one declaration
-border-bottom 	Sets all the bottom border properties in one declaration
-border-bottom-color 	Sets the color of the bottom border
-border-bottom-style 	Sets the style of the bottom border
-border-bottom-width 	Sets the width of the bottom border
-border-color 	Sets the color of the four borders
-border-left 	Sets all the left border properties in one declaration
-border-left-color 	Sets the color of the left border
-border-left-style 	Sets the style of the left border
-border-left-width 	Sets the width of the left border
-border-radius 	Sets all the four border-*-radius properties for rounded corners
-border-right 	Sets all the right border properties in one declaration
-border-right-color 	Sets the color of the right border
-border-right-style 	Sets the style of the right border
-border-right-width 	Sets the width of the right border
-border-style 	Sets the style of the four borders
-border-top 	Sets all the top border properties in one declaration
-border-top-color 	Sets the color of the top border
-border-top-style 	Sets the style of the top border
-border-top-width 	Sets the width of the top border
-border-width 	Sets the width of the four borders
+Barcha CSS chegara xususiyatlari
+Mulk tavsifi
+border Barcha chegara xususiyatlarini bitta deklaratsiyada o'rnatadi
+border-bottom Barcha pastki chegara xususiyatlarini bitta deklaratsiyada o'rnatadi
+border-bottom-color Pastki chegara rangini o'rnatadi
+border-bottom-style Pastki chegara uslubini o'rnatadi
+border-bottom-width Pastki chegaraning kengligini o'rnatadi
+border-color Toʻrtta chegara rangini oʻrnatadi
+border-left Barcha chap chegara xususiyatlarini bitta deklaratsiyada o'rnatadi
+border-left-color Chap chegara rangini o'rnatadi
+border-left-style Chap chegara uslubini o'rnatadi
+border-left-width Chap chegaraning kengligini o'rnatadi
+border-radius Yumaloq burchaklar uchun to'rtta chegara-*-radius xususiyatlarini o'rnatadi
+border-right Bitta deklaratsiyada barcha to'g'ri chegara xususiyatlarini o'rnatadi
+border-right-color Oʻng chegara rangini oʻrnatadi
+border-right-style O'ng chegara uslubini o'rnatadi
+border-right-width Oʻng chegaraning kengligini oʻrnatadi
+border-style To'rtta hoshiya uslubini o'rnatadi
+border-top Bitta deklaratsiyada barcha yuqori chegara xususiyatlarini o'rnatadi
+border-top-color Yuqori chegara rangini o'rnatadi
+border-top-style Yuqori chegara uslubini o'rnatadi
+border-top-width Yuqori chegaraning kengligini o'rnatadi
+border-width To'rtta chegaraning kengligini o'rnatadi
 
-<kbd>return</kbd>[Back to table of contents](#homepage)
+<kbd>qaytish</kbd>[Mundarijaga qaytish](#homepage)
 
 -----
-## CSS Margins
+## CSS chegaralari
 
-To create space around an element outside of specified borders. the 'margin' gives control over the margin 
+Belgilangan chegaralardan tashqarida element atrofida bo'sh joy yaratish uchun. "marja" marja ustidan nazoratni beradi
 
-around an element. You can also set margin on the four sides. There are properties for setting the margin 
+element atrofida. Shuningdek, siz to'rt tomondan chekka o'rnatishingiz mumkin. Chegarani o'rnatish uchun xususiyatlar mavjud
 
-for each side of an element (top, right, bottom, and left).
+elementning har bir tomoni uchun (yuqori, o'ng, pastki va chap).
 
-The code below add a 70px margin space around <p> element. 
+Quyidagi kod <p> elementi atrofida 70px bo'sh joy qo'shadi.
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
+<uslub>
 div {
-  margin: 70px;
-  border: 1px solid #4CAF50;
+   chegara: 70px;
+   chegara: 1px qattiq #4CAF50;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h2>CSS Margins</h2>
-<div>This element has a margin of 70px.</div>
+<h2>CSS chegaralari</h2>
+<div>Ushbu element 70px chetiga ega.</div>
 
 </body>
 </html>
 
 
 
-Margin - Individual Sides::
+Chegara - Individual tomonlar::
 
-CSS has properties for specifying the margin for each side of an element:
+CSS elementning har bir tomoni uchun chegarani belgilash uchun xususiyatlarga ega:
 
-    margin-top
-    margin-right
-    margin-bottom
-    margin-left
+     chekka tepa
+     chekka o'ng
+     chekka-pastki
+     chekka-chap
 
-All the margin properties can have the following values:
+Barcha marj xususiyatlari quyidagi qiymatlarga ega bo'lishi mumkin:
 
-    auto - the browser calculates the margin
-    length - specifies a margin in px, pt, cm, etc.
-    % - specifies a margin in % of the width of the containing element
-    inherit - specifies that the margin should be inherited from the parent element
+     avtomatik - brauzer chegarani hisoblab chiqadi
+     uzunlik - px, pt, sm va hokazolarda chegarani belgilaydi.
+     % - o'z ichiga olgan element kengligining % da chetini belgilaydi
+     inherit - chekka asosiy elementdan meros bo'lishi kerakligini bildiradi
 
-Tip: Negative values are allowed.
+Maslahat: Salbiy qiymatlarga ruxsat beriladi.
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
+<uslub>
 div {
-  border: 1px solid black;
-  margin-top: 100px;
-  margin-bottom: 100px;
-  margin-right: 150px;
-  margin-left: 80px;
-  background-color: lightblue;
+   chegara: 1px qattiq qora;
+   yuqori chegara: 100px;
+   pastki chet: 100px;
+   chekka o'ng: 150px;
+   chap chekka: 80px;
+   fon rangi: ochiq ko'k;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h2>Using individual margin properties</h2>
+<h2>Alohida chegara xususiyatlaridan foydalanish</h2>
 
-<div>This div element has a top margin of 100px, a right margin of 150px, a bottom margin of 100px, and a 
+<div>Ushbu div elementining yuqori cheti 100px, oʻng tomoni 150px, pastki cheti 100px va
 
-left margin of 80px.</div>
+chap cheti 80px.</div>
 
 </body>
 </html>
 
 
 
-Margin Shorthand Property
+Margin stenografiya xususiyati
 
-To shorten the code, it is possible to specify all the margin properties in one property.
+Kodni qisqartirish uchun barcha chegara xususiyatlarini bitta xususiyatda ko'rsatish mumkin.
 
-The margin property is a shorthand property for the following individual margin properties:
+Margin xususiyati quyidagi individual marja xususiyatlari uchun stenografiya xususiyatidir:
 
-    margin-top
-    margin-right
-    margin-bottom
-    margin-left
+     chekka tepa
+     chekka o'ng
+     chekka-pastki
+     chekka-chap
 
-So, here is how it works:
+Shunday qilib, bu qanday ishlaydi:
 
-If the margin property has four values:
+Agar margin xususiyati to'rtta qiymatga ega bo'lsa:
 
-    margin: 25px 50px 75px 100px;
-        top margin is 25px
-        right margin is 50px
-        bottom margin is 75px
-        left margin is 100px
+     hoshiya: 25px 50px 75px 100px;
+         yuqori chegarasi 25px
+         o'ng cheti 50px
+         pastki cheti 75px
+         chap chekka 100px
 
 
-Example:
+Misol:
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
+<uslub>
 div {
-  border: 1px solid black;
-  margin: 25px 50px 75px 100px;
-  background-color: lightblue;
+   chegara: 1px qattiq qora;
+   hoshiya: 25px 50px 75px 100px;
+   fon rangi: ochiq ko'k;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h2>The margin shorthand property - 4 values</h2>
+<h2>Marja stenografiya xususiyati - 4 ta qiymat</h2>
 
-<div>This div element has a top margin of 25px, a right margin of 50px, a bottom margin of 75px, and a left 
+<div>Ushbu div elementining yuqori cheti 25px, oʻng tomoni 50px, pastki cheti 75px va chap tomoni bor
 
-margin of 100px.</div>
+chegarasi 100px.</div>
 
 <hr>
 
@@ -1971,29 +1963,29 @@ margin of 100px.</div>
 </html>
 
 
-If the margin property has three values:
+Agar margin xususiyati uchta qiymatga ega bo'lsa:
 
-    margin: 25px 50px 75px;
-        top margin is 25px
-        right and left margins are 50px
-        bottom margin is 75px
+     hoshiya: 25px 50px 75px;
+         yuqori chegarasi 25px
+         o'ng va chap chekkalar 50px
+         pastki cheti 75px
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
+<uslub>
 div {
-  border: 1px solid black;
-  margin: 25px 50px 75px;
-  background-color: lightblue;
+   chegara: 1px qattiq qora;
+   hoshiya: 25px 50px 75px;
+   fon rangi: ochiq ko'k;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h2>The margin shorthand property - 3 values</h2>
+<h2>Marja stenografiya xususiyati - 3 ta qiymat</h2>
 
-<div>This div element has a top margin of 25px, a right and left margin of 50px, and a bottom margin of 
+<div>Ushbu div elementining yuqori cheti 25px, oʻng va chap chetlari 50px va pastki chetlari:
 
 75px.</div>
 
@@ -2003,29 +1995,29 @@ div {
 </html>
 
 
-If the margin property has two values:
+Agar margin xususiyati ikkita qiymatga ega bo'lsa:
 
-    margin: 25px 50px;
-        top and bottom margins are 25px
-        right and left margins are 50px
+     chegara: 25px 50px;
+         yuqori va pastki chetlari 25px
+         o'ng va chap chekkalar 50px
 
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
+<uslub>
 div {
-  border: 1px solid black;
-  margin: 25px 50px;
-  background-color: lightblue;
+   chegara: 1px qattiq qora;
+   chegara: 25px 50px;
+   fon rangi: ochiq ko'k;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h2>The margin shorthand property - 2 values</h2>
+<h2>Marja stenogramma xususiyati - 2 qiymat</h2>
 
-<div>This div element has a top and bottom margin of 25px, and a right and left margin of 50px.</div>
+<div>Ushbu div elementining yuqori va pastki chetlari 25px, oʻng va chap chetlari esa 50px.</div>
 
 <hr>
 
@@ -2034,10 +2026,10 @@ div {
 
 
 
-If the margin property has one value:
+Agar margin xususiyati bitta qiymatga ega bo'lsa:
 
-    margin: 25px;
-        all four margins are 25px
+     chekka: 25px;
+         to'rtta chekkaning hammasi 25px
 
 
 
@@ -2045,19 +2037,19 @@ If the margin property has one value:
 <!DOCTYPE html>
 <html>
 <head>
-<style>
+<uslub>
 div {
-  border: 1px solid black;
-  margin: 25px;
-  background-color: lightblue;
+   chegara: 1px qattiq qora;
+   chegara: 25px;
+   fon rangi: ochiq ko'k;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h2>The margin shorthand property - 1 value</h2>
+<h2>Marja stenografiya xususiyati - 1 qiymat</h2>
 
-<div>This div element has a top, bottom, left, and right margin of 25px.</div>
+<div>Ushbu div elementining yuqori, pastki, chap va oʻng chetlari 25px.</div>
 
 <hr>
 
@@ -2067,206 +2059,204 @@ div {
 
 
 
-The margin: auto,  Value
+Chegara: avtomatik, qiymat
 
-You can set the margin property to auto to horizontally center the element within its container.
+Elementni konteyner ichida gorizontal markazlashtirish uchun margin xususiyatini avtomatik qilib sozlashingiz mumkin.
 
-The element will then take up the specified width, and the remaining space will be split equally between the 
+Keyin element belgilangan kenglikni egallaydi va qolgan bo'sh joy teng ravishda bo'linadi
 
-left and right margins.
+chap va o'ng chetlari.
 
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
+<uslub>
 div {
-  width:300px;
-  margin: auto;
-  border: 1px solid red;
+   kengligi: 300px;
+   chegara: avtomatik;
+   chegara: 1px qattiq qizil;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h2>Use of margin:auto</h2>
-<p>You can set the margin property to auto to horizontally center the element within its container. The 
+<h2>Marjadan foydalanish:avto</h2>
+<p>Elementni konteyner ichida gorizontal markazlashtirish uchun margin xususiyatini avtomatik qilib sozlashingiz mumkin. The
 
-element will then take up the specified width, and the remaining space will be split equally between the 
+keyin element belgilangan kenglikni egallaydi va qolgan bo'sh joy o'rtasida teng ravishda bo'linadi
 
-left and right margins:</p>
+chap va o'ng chetlari:</p>
 
 <div>
-This div will be horizontally centered because it has margin: auto;
+Bu div gorizontal markazlashtirilgan bo'ladi, chunki uning chegarasi bor: auto;
 </div>
 
 </body>
 </html>
-
-
-The inherit Value for margin
-To let the left margin of the <p class="ex1"> element be inherited from the parent element.
+Marja uchun meros qiymati
+<p class="ex1"> elementining chap chetiga asosiy elementdan meros qilib olinishiga ruxsat berish.
 
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
+<uslub>
 div {
-  border: 1px solid red;
-  margin-left: 100px;
+   chegara: 1px qattiq qizil;
+   chap chekka: 100px;
 }
 
 p.ex1 {
-  margin-left: inherit;
+   margin-left: meros;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h2>Use of the inherit value</h2>
-<p>Let the left margin be inherited from the parent element:</p>
+<h2> Meros qiymatidan foydalanish</h2>
+<p>Chap chekka asosiy elementdan meros bo'lsin:</p>
 
 <div>
-<p class="ex1">This paragraph has an inherited left margin (from the div element).</p>
+<p class="ex1">Ushbu paragraf meros qilib olingan chap chetiga ega (div elementidan).</p>
 </div>
 
 </body>
 </html>
 
 
-CSS Margin Collapse::
-Enables you to collapse 2 margins into one.
+CSS chegarasini yig'ish::
+2 ta chetni bittaga yig'ish imkonini beradi.
 
-Margin Collapse
+Chegaraning siqilishi
 
-Top and bottom margins of elements are sometimes collapsed into a single margin that is equal to the largest 
+Elementlarning yuqori va pastki chetlari ba'zan eng kattasiga teng bo'lgan bitta chekkaga yig'iladi
 
-of the two margins.
+ikki chetidan.
 
-This does not happen on left and right margins! Only top and bottom margins!
+Bu chap va o'ng chekkalarda sodir bo'lmaydi! Faqat yuqori va pastki chegaralar!
 
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
+<uslub>
 h1 {
-  margin: 0 0 50px 0;
+   chegara: 0 0 50px 0;
 }
 
 h2 {
-  margin: 20px 0 0 0;
+   chegara: 20px 0 0 0;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<p>In this example the h1 element has a bottom margin of 50px and the h2 element has a top margin of 20px. 
+<p>Ushbu misolda h1 elementining pastki chegarasi 50px va h2 elementining yuqori chegarasi 20px.
 
-So, the vertical margin between h1 and h2 should have been 70px (50px + 20px). However, due to margin 
+Shunday qilib, h1 va h2 orasidagi vertikal chegara 70px (50px + 20px) bo'lishi kerak edi. Biroq, marj tufayli
 
-collapse, the actual margin ends up being 50px.</p>
+siqilsa, haqiqiy chegara 50px boʻladi.</p>
 
-<h1>Heading 1</h1>
-<h2>Heading 2</h2>
+<h1>1-sarlavha</h1>
+<h2>2-sarlavha</h2>
 
 </body>
 </html>
 
 
-In the example above, the <h1> element has a bottom margin of 50px and the <h2> element has a top margin set 
+Yuqoridagi misolda <h1> elementi pastki chetiga 50px, <h2> elementi esa yuqori chegaraga ega.
 
-to 20px.
+20px gacha.
 
-Common sense would seem to suggest that the vertical margin between the <h1> and the <h2> would be a total 
+Sog'lom fikr <h1> va <h2> orasidagi vertikal chegara jami bo'lishini taxmin qiladi.
 
-of 70px (50px + 20px). But due to margin collapse, the actual margin ends up being 50px.
+70px (50px + 20px). Ammo marjaning yiqilishi tufayli haqiqiy chegara 50px ni tashkil qiladi.
 
 
 
-All CSS Margin Properties
-Property 	Description
-margin 	A shorthand property for setting the margin properties in one declaration
-margin-bottom 	Sets the bottom margin of an element
-margin-left 	Sets the left margin of an element
-margin-right 	Sets the right margin of an element
-margin-top 	Sets the top margin of an element
+Barcha CSS Margin xususiyatlari
+Mulk tavsifi
+margin Bitta deklaratsiyada chegara xususiyatlarini o'rnatish uchun stenografiya xususiyati
+margin-bottom Elementning pastki chetini o'rnatadi
+margin-left Elementning chap chetini o'rnatadi
+margin-right Elementning o'ng chetini o'rnatadi
+margin-top Elementning yuqori chetini o'rnatadi
 
-<kbd>return</kbd>[Back to table of contents](#homepage)
+<kbd>qaytish</kbd>[Mundarijaga qaytish](#homepage)
 
 -----
 
 
 
-## CSS Padding
+## CSS to'ldirish
 
-CSS 'padding' is used to create spaces outside an element inside any specified borders. To use css padding, 
+CSS "padding" har qanday belgilangan chegaralar ichida element tashqarisida bo'shliqlar yaratish uchun ishlatiladi. CSS paddingdan foydalanish uchun,
 
-see below for an example. You can also use CSS to set padding for all the four sides of a CSS element. 
+misol uchun pastga qarang. CSS elementining barcha to'rt tomoni uchun to'ldirishni o'rnatish uchun CSS-dan foydalanishingiz mumkin.
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
+<uslub>
 div {
-  padding: 100px;
-  border: 1px solid #4CAF50;
+   to'ldirish: 100px;
+   chegara: 1px qattiq #4CAF50;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h2>CSS Padding</h2>
-<div>This element has a padding of 70px.</div>
+<h2>CSS padding</h2>
+<div>Ushbu element 70px hajmga ega.</div>
 
 </body>
 </html>
 
 
 
-Padding - Individual Sides
+To'ldirish - individual tomonlar
 
 
-CSS has properties for specifying the padding for each side of an element:
+CSS elementning har bir tomoni uchun to'ldirishni belgilash uchun xususiyatlarga ega:
 
-    padding-top
-    padding-right
-    padding-bottom
-    padding-left
+     to'ldiruvchi
+     to'ldirish - o'ng
+     to'ldirish - pastki
+     to'ldirish - chap
 
-All the padding properties can have the following values:
+Barcha to'ldirish xususiyatlari quyidagi qiymatlarga ega bo'lishi mumkin:
 
-    length - specifies a padding in px, pt, cm, etc.
-    % - specifies a padding in % of the width of the containing element
-    inherit - specifies that the padding should be inherited from the parent element
+     uzunlik - px, pt, sm va hokazolarda to'ldirishni belgilaydi.
+     % - o'z ichiga olgan element kengligining % da to'ldirishni belgilaydi
+     inherit - to'ldirish asosiy elementdan meros bo'lishi kerakligini bildiradi
 
-Note: Negative values are not allowed.
+Eslatma: Salbiy qiymatlarga ruxsat berilmaydi.
 
 
-For the used of padding on all the four sides, see below for example of use case:
+To'rt tomondan to'ldirgichdan foydalanish uchun foydalanish misoli uchun quyida ko'ring:
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
+<uslub>
 div {
-  border: 1px solid black;
-  background-color: lightblue;
-  padding-top: 50px;
-  padding-right: 30px;
-  padding-bottom: 50px;
-  padding-left: 80px;
+   chegara: 1px qattiq qora;
+   fon rangi: ochiq ko'k;
+   to'ldirish tepasi: 50px;
+   to'ldirish - o'ng: 30px;
+   pastki qism: 50px;
+   padding-chap: 80px;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h2>Using individual padding properties</h2>
+<h2>Alohida to'ldirish xususiyatlaridan foydalanish</h2>
 
-<div>This div element has a top padding of 50px, a right padding of 30px, a bottom padding of 50px, and a 
+<div>Ushbu div elementining yuqori toʻldirgichi 50px, oʻng tomoni 30px, pastki qismi 50px va
 
-left padding of 80px.</div>
+80px chap toʻldirish.</div>
 
 </body>
 </html>
@@ -2274,83 +2264,83 @@ left padding of 80px.</div>
 
 
 
-Padding - Shorthand Property
+Padding - stenografiya xususiyati
 
-These properties enable shortening padding properties in one property. For example: 
-
-
-The padding property is a shorthand property for the following individual padding properties:
-
-    padding-top
-    padding-right
-    padding-bottom
-    padding-left
-
-So, here is how it works:
-
-If the padding property has four values:
-
-    padding: 25px 50px 75px 100px;
-        top padding is 25px
-        right padding is 50px
-        bottom padding is 75px
-        left padding is 100px
+Bu xususiyatlar bitta xususiyatda to'ldirish xususiyatlarini qisqartirishga imkon beradi. Masalan:
 
 
-For example:
+To'ldirish xususiyati quyidagi individual to'ldirish xususiyatlari uchun qisqartma xususiyatdir:
+
+     to'ldiruvchi-usti
+     to'ldirish - o'ng
+     to'ldirish - pastki
+     to'ldirish - chap
+
+Shunday qilib, bu qanday ishlaydi:
+
+Agar to'ldirish xususiyati to'rtta qiymatga ega bo'lsa:
+
+     to'ldirish: 25px 50px 75px 100px;
+         yuqori to'ldirish - 25px
+         o'ng to'ldirish 50px
+         pastki to'ldirish - 75px
+         chap to'ldirish 100px
+
+
+Masalan:
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
+<uslub>
 div {
-  border: 1px solid black;
-  padding: 25px 50px 75px 100px;
-  background-color: lightblue;
+   chegara: 1px qattiq qora;
+   to'ldirish: 25px 50px 75px 100px;
+   fon rangi: ochiq ko'k;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h2>The padding shorthand property - 4 values</h2>
+<h2>To'ldirish stenografiyasi xususiyati - 4 ta qiymat</h2>
 
-<div>This div element has a top padding of 25px, a right padding of 50px, a bottom padding of 75px, and a 
+<div>Ushbu div elementining yuqori toʻldirgichi 25px, oʻng tomoni 50px, pastki qismi 75px va
 
-left padding of 100px.</div>
+100px chap toʻldirish.</div>
 
 </body>
 </html>
 
 
-For padding properties having three values:
+Uch qiymatga ega bo'lgan to'ldirish xususiyatlari uchun:
 
-If the padding property has three values:
+Agar padding xususiyati uchta qiymatga ega bo'lsa:
 
-    padding: 25px 50px 75px;
-        top padding is 25px
-        right and left paddings are 50px
-        bottom padding is 75px
+     to'ldirish: 25px 50px 75px;
+         yuqori to'ldirish - 25px
+         o'ng va chap to'ldirishlar 50px
+         pastki to'ldirish - 75px
 
 
-For example,
+Masalan,
 
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
+<uslub>
 div {
-  border: 1px solid black;
-  padding: 25px 50px 75px;
-  background-color: lightblue;
+   chegara: 1px qattiq qora;
+   to'ldirish: 25px 50px 75px;
+   fon rangi: ochiq ko'k;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h2>The padding shorthand property - 3 values</h2>
+<h2>To'ldirish stenografiyasi xususiyati - 3 ta qiymat</h2>
 
-<div>This div element has a top padding of 25px, a right and left padding of 50px, and a bottom padding of 
+<div>Ushbu div elementi 25px yuqori toʻldirishga, oʻng va chapga 50px va pastki toʻldirishga ega.
 
 75px.</div>
 
@@ -2360,64 +2350,64 @@ div {
 
 
 
-For padding properties with two values,
+Ikki qiymatli toʻldirish xususiyatlari uchun,
 
-If the padding property has two values:
+Agar padding xususiyati ikkita qiymatga ega bo'lsa:
 
-    padding: 25px 50px;
-        top and bottom paddings are 25px
-        right and left paddings are 50px
+     to'ldirish: 25px 50px;
+         yuqori va pastki to'ldirishlar 25px
+         o'ng va chap to'ldirishlar 50px
 
 
-For example:
+Masalan:
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
+<uslub>
 div {
-  border: 1px solid black;
-  padding: 25px 50px;
-  background-color: lightblue;
+   chegara: 1px qattiq qora;
+   to'ldirish: 25px 50px;
+   fon rangi: ochiq ko'k;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h2>The padding shorthand property - 2 values</h2>
+<h2>To'ldirish stenografiyasi xususiyati - 2 ta qiymat</h2>
 
-<div>This div element has a top and bottom padding of 25px, and a right and left padding of 50px.</div>
+<div>Ushbu div elementining yuqori va pastki toʻldirgichlari 25px, oʻng va chap tomonlari esa 50px.</div>
 
 </body>
 </html>
 
 
 
-When padding property has one value:
+Agar padding xususiyati bitta qiymatga ega bo'lsa:
 
-If the padding property has one value:
+Agar padding xususiyati bitta qiymatga ega bo'lsa:
 
-    padding: 25px;
-        all four paddings are 25px
+     to'ldirish: 25px;
+         to'rtta to'ldirishning hammasi 25px
 
 
-For example,
+Masalan,
 <!DOCTYPE html>
 <html>
 <head>
-<style>
+<uslub>
 div {
-  border: 1px solid black;
-  padding: 25px;
-  background-color: lightblue;
+   chegara: 1px qattiq qora;
+   to'ldirish: 25px;
+   fon rangi: ochiq ko'k;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h2>The padding shorthand property - 1 value</h2>
+<h2>To'ldirish stenografiyasi xususiyati - 1 qiymat</h2>
 
-<div>This div element has a top, bottom, left, and right padding of 25px.</div>
+<div>Ushbu div elementi 25px yuqori, pastki, chap va oʻng toʻldirishga ega.</div>
 
 </body>
 </html>
@@ -2425,82 +2415,81 @@ div {
 
 
 
-Padding and Element Width
+To'ldirish va element kengligi
 
-The width element specify width of element's content area ( the area inside the padding, border, and margin 
+Kenglik elementi elementning kontent maydonining kengligini belgilaydi (to'ldirish, chegara va chekka ichidagi maydon)
 
-of the element accordingt to the box model). For an element witrh specified width, the padding of such 
+quti modeliga muvofiq elementning). Belgilangan kenglikdagi element uchun bunday to'ldirish
 
-element is added to the value of the specified width ( an often undesirable result).
+element belgilangan kenglik qiymatiga qo'shiladi (ko'pincha istalmagan natija).
 
 
-For example,
-
+Masalan,
 <!DOCTYPE html>
 <html>
 <head>
-<style>
+<uslub>
 div.ex1 {
-  width: 300px;
-  background-color: yellow;
+   kengligi: 300px;
+   fon rangi: sariq;
 }
 
 div.ex2 {
-  width: 300px;
-  padding: 25px;
-  background-color: lightblue;
+   kengligi: 300px;
+   to'ldirish: 25px;
+   fon rangi: ochiq ko'k;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h2>Padding and element width</h2>
+<h2>To'ldirish va element kengligi</h2>
 
-<div class="ex1">This div is 300px wide.</div>
+<div class="ex1">Bu div kengligi 300px.</div>
 <br>
 
-<div class="ex2">The width of this div is 350px, even though it is defined as 300px in the CSS.</div>
+<div class="ex2">Ushbu divning kengligi CSS-da 300px sifatida belgilangan boʻlsa ham, 350px.</div>
 
 </body>
 </html>
 
 
-Whenever you need to maintain the widht, the box-sizing property is used to keep width constant irrespective 
+Kenglikni saqlashingiz kerak bo'lganda, box-sizing xususiyati kenglikdan qat'i nazar, doimiylikni saqlash uchun ishlatiladi.
 
-of the amount of padding. This effect will collapse available space for the element inwards of the defined 
+to'ldirish miqdori. Bu ta'sir element uchun mavjud bo'sh joyni aniqlanganning ichkarisiga qisqartiradi
 
-borders. 
+chegaralar.
 
  
-For example.
+Masalan.
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
+<uslub>
 div.ex1 {
-  width: 300px;
-  background-color: yellow;
+   kengligi: 300px;
+   fon rangi: sariq;
 }
 
 div.ex2 {
-  width: 300px;
-  padding: 25px;
-  box-sizing: border-box;
-  background-color: lightblue;
+   kengligi: 300px;
+   to'ldirish: 25px;
+   quti o'lchami: chegara qutisi;
+   fon rangi: ochiq ko'k;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h2>Padding and element width - with box-sizing</h2>
+<h2>To'ldirish va element kengligi - quti o'lchami bilan</h2>
 
-<div class="ex1">This div is 300px wide.</div>
+<div class="ex1">Bu div kengligi 300px.</div>
 <br>
 
-<div class="ex2">The width of this div remains at 300px, in spite of the 50px of total left and right 
+<div class="ex2">Ushbu divning kengligi chap va o'ngning umumiy soni 50px bo'lishiga qaramay, 300px da qoladi.
 
-padding, because of the box-sizing: border-box property.
+padding, box-sizing: border-box xususiyati tufayli.
 </div>
 
 </body>
@@ -2508,145 +2497,143 @@ padding, because of the box-sizing: border-box property.
 
 
 
-Other padding examples,
+Boshqa to'ldirish misollari,
 
 
-To set the left padding of an element,
+Elementning chap toʻldirishini oʻrnatish uchun,
 
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
+<uslub>
 p.padding {
-  padding-left: 2cm;
+   to'ldirish - chap: 2 sm;
 }
 p.padding2 {
-  padding-left: 50%;
+   to'ldirish-chap: 50%;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h1>The padding-left Property</h1>
+<h1>chap to'ldirish xususiyati</h1>
 
-<p>This is a text with no left padding.</p>
-<p class="padding">This text has a left padding of 2 cm.</p>
-<p class="padding2">This text has a left padding of 50%.</p>
+<p>Bu matn chap toʻldirishsiz.</p>
+<p class="padding">Ushbu matnning chap tomoni 2 sm.</p>
+<p class="padding2">Ushbu matnning chap qismi 50% ni tashkil etadi.</p>
 
 </body>
 </html>
 
 
 
-To set the right padding,
+To'g'ri to'ldirishni o'rnatish uchun,
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
+<uslub>
 p.padding {
-  padding-right: 2cm;
+   to'ldirish - o'ng: 2 sm;
 }
 
 p.padding2 {
-  padding-right: 50%;
+   to'ldirish - o'ng: 50%;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h1>The padding-right Property</h1>
+<h1>To'ldirish-o'ng xususiyati</h1>
 
-<p>This is a text with no right padding. This is a text with no right padding. This is a text with no right 
+<p>Bu toʻgʻri toʻldirilmagan matn. Bu to'g'ri to'ldirishsiz matn. Bu huquqsiz matn
 
-padding.</p>
-<p class="padding">This text has a right padding of 2 cm. This text has a right padding of 2 cm. This text 
+to'ldirish.</p>
+<p class="padding">Ushbu matnning o'ng tomoni 2 sm hajmga ega. Ushbu matn 2 sm o'ng to'ldirishga ega. Ushbu matn
 
-has a right padding of 2 cm.</p>
-<p class="padding2">This text has a right padding of 50%. This text has a right padding of 50%. This text 
+2 sm o'ng yostig'i bor.</p>
+<p class="padding2">Ushbu matnning o'ng tomoni 50% to'ldirilgan. Ushbu matn 50% o'ng to'ldirishga ega. Ushbu matn
 
-has a right padding of 50%.</p>
+50% oʻng toʻldirishga ega.</p>
 
 </body>
 </html>
 
 
-To set the top padding,
+Yuqori to'ldirishni o'rnatish uchun,
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
+<uslub>
 p.padding {
-  padding-top: 2cm;
+   to'ldiruvchi ustki qismi: 2 sm;
 }
 
 p.padding2 {
-  padding-top: 50%;
+   to'ldiruvchi - 50%;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h1>The padding-top Property</h1>
+<h1>To'ldiruvchi ustki xususiyat</h1>
 
-<p>This is a text with no top padding. This is a text with no top padding. This is a text with no top 
+<p>Bu yuqori toʻldirishsiz matn. Bu yuqori toʻldirishsiz matn. Bu tepada bo'lmagan matn
 
-padding.</p>
-<p class="padding">This text has a top padding of 2 cm. This text has a top padding of 2 cm. This text has a 
+to'ldirish.</p>
+<p class="padding">Ushbu matnning ustki qismi 2 sm. Ushbu matnning yuqori qismi 2 sm. Ushbu matnda mavjud
 
-top padding of 2 cm.</p>
-<p class="padding2">This text has a top padding of 50%. This text has a top padding of 50%. This text has a 
+2 sm yuqori qoplama.</p>
+<p class="padding2">Ushbu matn 50% yuqori toʻldirishga ega. Bu matn 50% yuqori toʻldirishga ega. Ushbu matnda mavjud
 
-top padding of 50%.</p>
+yuqori toʻldirish 50%.</p>
+
+</body>
+</html>
+
+Pastki qoplamani o'rnatish uchun,
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<uslub>
+p.padding {
+   to'ldirish - pastki: 2 sm;
+}
+
+p.padding2 {
+   to'ldirish-pastki: 50%;
+}
+</style>
+</head>
+<tana>
+
+<h1>To'ldiruvchi-pastki xususiyat</h1>
+
+<p>Bu matnning pastki qismi boʻlmagan matn. Bu pastki toʻldirishsiz matn. Bu raqam bilan yozilgan matn
+
+pastki to'ldirish.</p>
+<p class="padding">Ushbu matnning pastki qismi 2 sm. Ushbu matnning pastki qismi 2 sm. Ushbu matn
+
+pastki qoplamasi 2 sm.</p>
+<p class="padding2">Ushbu matnning pastki qismi 50% toʻldirilgan. Ushbu matnning pastki qismi 50% ni tashkil qiladi. Ushbu matn
+
+50% pastki to'ldirishga ega.</p>
 
 </body>
 </html>
 
 
-To set the bottom padding,
 
+Barcha CSS padding xususiyatlarining xulosasi
+Mulk tavsifi
+padding Bitta deklaratsiyada barcha to'ldirish xususiyatlarini o'rnatish uchun stenografiya xususiyati
+padding-bottom Elementning pastki toʻldirishini oʻrnatadi
+padding-left Elementning chap toʻldirishini oʻrnatadi
+padding-right Elementning toʻgʻri toʻldirishini oʻrnatadi
+padding-top Elementning yuqori toʻldirishini oʻrnatadi
 
-<!DOCTYPE html>
-<html>
-<head>
-<style>
-p.padding {
-  padding-bottom:2cm;
-}
-
-p.padding2 {
-  padding-bottom:50%;
-}
-</style>
-</head>
-<body>
-
-<h1>The padding-bottom Property</h1>
-
-<p>This is a text with no bottom padding. This is a text with no bottom padding. This is a text with no 
-
-bottom padding.</p>
-<p class="padding">This text has a bottom padding of 2 cm. This text has a bottom padding of 2 cm. This text 
-
-has a bottom padding of 2 cm.</p>
-<p class="padding2">This text has a bottom padding of 50%. This text has a bottom padding of 50%. This text 
-
-has a bottom padding of 50%.</p>
-
-</body>
-</html>
-
-
-
-All CSS Padding Properties summary
-Property 	Description
-padding 	A shorthand property for setting all the padding properties in one declaration
-padding-bottom 	Sets the bottom padding of an element
-padding-left 	Sets the left padding of an element
-padding-right 	Sets the right padding of an element
-padding-top 	Sets the top padding of an element
-
-<kbd>return</kbd>[Back to table of contents](#homepage)
-
+<kbd>qaytish</kbd>[Mundarijaga qaytish](#homepage)

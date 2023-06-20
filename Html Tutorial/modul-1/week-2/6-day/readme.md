@@ -1,135 +1,135 @@
-## CSS Display
+## CSS displeyi
 
-CSS Layout - The display Property
+CSS Layout - displey xususiyati
 
-The most important CSS property for controlling layout is the  'display' property, and it states how an 
+Tartibni boshqarish uchun eng muhim CSS xususiyati "displey" xususiyati bo'lib, u qanday qilib
 
-element is to be displayed. The default display value for most HTML elements is block or inline
-
-
-Block-level Elements
+element ko'rsatilishi kerak. Ko'pgina HTML elementlari uchun standart displey qiymati blok yoki inline hisoblanadi
 
 
-A block-level element always starts on a new line and takes up the full width available (stretches out to 
-
-the left and right as far as it can).
-The <div> element is a block-level element.
-
-Examples of block-level elements:
-
-    <div>
-    <h1> - <h6>
-    <p>
-    <form>
-    <header>
-    <footer>
-    <section>
+Blok darajasidagi elementlar
 
 
-Inline Elements
+Blok darajasidagi element har doim yangi satrdan boshlanadi va mavjud bo'lgan to'liq kenglikni egallaydi (
 
-Inline Elements
+iloji boricha chap va o'ng).
+<div> elementi blok darajasidagi element hisoblanadi.
 
-An inline element does not start on a new line and only takes up as much width as necessary.
+Blok darajasidagi elementlarga misollar:
 
-This is an inline <span> element inside a paragraph.
-
-Examples of inline elements:
-
-    <span>
-    <a>
-    <img>
-
-
-Display: none;
-
-display: none; is commonly used with JavaScript to hide and show elements without deleting and recreating 
-
-them. Take a look at our last example on this page if you want to know how this can be achieved.
-
-The <script> element uses display: none; as default. 
+     <div>
+     <h1> - <h6>
+     <p>
+     <form>
+     <sarlavha>
+     <footer>
+     <bo'lim>
 
 
+Inline elementlar
+
+Inline elementlar
+
+Inline element yangi satrda boshlanmaydi va faqat kerak bo'lganda shuncha kenglikni egallaydi.
+
+Bu paragraf ichidagi satr <span> elementidir.
+
+Inline elementlarga misollar:
+
+     <span>
+     <a>
+     <img>
+
+
+Displey: yo'q;
+
+ko'rsatish: yo'q; odatda JavaScript bilan elementlarni oʻchirmasdan va qayta yaratmasdan yashirish va koʻrsatish uchun ishlatiladi
+
+ular. Bunga qanday erishish mumkinligini bilmoqchi bo'lsangiz, ushbu sahifadagi so'nggi misolimizni ko'rib chiqing.
+
+<script> elementi displeydan foydalanadi: none; sukut bo'yicha.
 
 
 
 
-Override The Default Display Value
-To override the default display value of every element, simply change an inline element to a block element 
 
-or vice versa. This also allows you to make the page the way you like while complying with the web 
 
-standards. See illustration below:
+Standart ko'rsatish qiymatini bekor qiling
+Har bir elementning standart displey qiymatini bekor qilish uchun oddiy elementni blok elementiga o'zgartiring
+
+yoki aksincha. Bu shuningdek, veb-sahifani o'zingiz yoqtirgan tarzda qilish imkonini beradi
+
+standartlar. Quyidagi rasmga qarang:
 
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
+<uslub>
 li {
-  display: inline;
+   displey: inline;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<p>Display a list of links as a horizontal menu:</p>
+<p>Havolalar roʻyxatini gorizontal menyu sifatida koʻrsatish:</p>
 
 <ul>
-  <li><a href="/html/default.asp" target="_blank">HTML</a></li>
-  <li><a href="/css/default.asp" target="_blank">CSS</a></li>
-  <li><a href="/js/default.asp" target="_blank">JavaScript</a></li>
+   <li><a href="/html/default.asp" target="_blank">HTML</a></li>
+   <li><a href="/css/default.asp" target="_blank">CSS</a></li>
+   <li><a href="/js/default.asp" target="_blank">JavaScript</a></li>
 </ul>
 
 </body>
 </html>
 
 
-Note: Setting the display property of an element only changes how the element is displayed, NOT what kind of 
+Eslatma: Elementning ko'rsatish xususiyatini o'rnatish faqat elementning qanday ko'rsatilishini o'zgartiradi, qanday turdagi emas
 
-element it is. So, an inline element with display: block; is not allowed to have other block elements inside 
+element hisoblanadi. Shunday qilib, displeyli inline element: blok; ichida boshqa blok elementlari bo'lishiga yo'l qo'yilmaydi
 
-it.
+bu.
 
 
-To display <span> elements as block elements:
+<span> elementlarini blok elementlari sifatida ko'rsatish uchun:
 
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-span {
-  display: block;
+<uslub>
+oraliq {
+   displey: blok;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<span>A display property with a value of "block" results in</span> <span>a line break between the two 
+<span>"Blok" qiymatiga ega bo'lgan ko'rsatish xususiyati</span> <span>ikkisi o'rtasida qator uzilishiga olib keladi
 
-elements.</span>
+elementlar.</span>
 
 </body>
 </html>
 
 
 
-The following example displays <a> elements as block elements:
+Quyidagi misolda <a> elementlar blok elementlari sifatida ko‘rsatilgan:
 
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
+<uslub>
 a {
-  display: block;
+   displey: blok;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<p>Display links as block elements:</p>
+<p>Havolalarni blok elementlari sifatida ko'rsatish:</p>
 
 <a href="/html/default.asp" target="_blank">HTML</a>
 <a href="/css/default.asp" target="_blank">CSS</a>
@@ -140,27 +140,27 @@ a {
 
 
 
-Hide an Element - display:none or visibility:hidden?
+Elementni yashirish - displey: yo'q yoki ko'rinish: yashirinmi?
 
-Setting the display property to none enables an element to be hidden and display the page as if the element 
+Displey xususiyatini none ga o'rnatish elementni yashirish va sahifani element kabi ko'rsatish imkonini beradi
 
-is not there. See example below:
+u erda yo'q. Quyidagi misolga qarang:
 
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-h1.hidden {
-  display: none;
+<uslub>
+h1. yashirin {
+   ko'rsatish: yo'q;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h1>This is a visible heading</h1>
-<h1 class="hidden">This is a hidden heading</h1>
-<p>Notice that the h1 element with display: none; does not take up any space.</p>
+<h1>Bu ko'rinadigan sarlavha</h1>
+<h1 class="hidden">Bu yashirin sarlavha</h1>
+<p>E'tibor bering, h1 elementi displeyli: none; hech qanday joy egallamaydi.</p>
 
 </body>
 </html>
@@ -169,90 +169,88 @@ h1.hidden {
 
 
 
-Setting visibility:hidden; also hides an element. However, the element will still take up the same space as 
+Ko'rinishni sozlash: yashirin; elementni ham yashiradi. Biroq, element hali ham bir xil joyni egallaydi
 
-before. The element will be hidden, but still affect the layout: 
+oldin. Element yashirin bo'ladi, lekin baribir tartibga ta'sir qiladi:
 
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-h1.hidden {
-  visibility: hidden;
+<uslub>
+h1. yashirin {
+   ko'rinish: yashirin;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h1>This is a visible heading</h1>
-<h1 class="hidden">This is a hidden heading</h1>
-<p>Notice that the hidden heading still takes up space.</p>
+<h1>Bu ko'rinadigan sarlavha</h1>
+<h1 class="hidden">Bu yashirin sarlavha</h1>
+<p>E'tibor bering, yashirin sarlavha hali ham joy egallaydi.</p>
 
 </body>
 </html>
 
 
-Additional Examples:
+Qo'shimcha misollar:
 
-The differences between display:none; and visibility:hidden; is shown in the example below. 
+Displey orasidagi farqlar:none; va ko'rinish: yashirin; quyidagi misolda ko'rsatilgan.
 
-visibility:hidden hides the element, but it still takes up space in the layout.
+visibility:hidden elementni yashiradi, lekin u baribir tartibda joy egallaydi.
 
-display:none removes the element from the document. It does not take up any space.
-
-
+display:none elementni hujjatdan olib tashlamaydi. Hech qanday joy egallamaydi.
 <!DOCTYPE html>
 <html>
 <head>
-<style>
+<uslub>
 .imgbox {
-  float: left;
-  text-align: center;
-  width: 120px;
-  border: 1px solid gray;
-  margin: 4px;
-  padding: 6px;
+   float: chap;
+   matnni tekislash: markaz;
+   kengligi: 120px;
+   chegara: 1px qattiq kulrang;
+   chegara: 4px;
+   to'ldirish: 6px;
 }
 
-button {
-  width: 100%;
+tugma {
+   kengligi: 100%;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h3>Difference between display:none and visiblity: hidden</h3>
-<p><strong>visibility:hidden</strong> hides the element, but it still takes up space in the layout.</p>
-<p><strong>display:none</strong> removes the element from the document. It does not take up any space.</p>
+<h3>Displey: yo'q va ko'rinish: yashirin</h3> o'rtasidagi farq
+<p><strong>visibility:hidden</strong> elementni yashiradi, lekin u baribir tartibda joy egallaydi.</p>
+<p><strong>display:none</strong> hujjatdan elementni olib tashlaydi. U joy egallamaydi.</p>
 
-<div class="imgbox" id="imgbox1">Box 1<br>
-  <img src="img_5terre.jpg" alt="Italy" style="width:100%">
-  <button onclick="removeElement()">Remove</button>
+<div class="imgbox" id="imgbox1">1-quti<br>
+   <img src="img_5terre.jpg" alt="Italiya" style="width:100%">
+   <button onclick="removeElement()">O'chirish</button>
 </div>
 
-<div class="imgbox" id="imgbox2">Box 2<br>
-  <img src="img_lights.jpg" alt="Lights" style="width:100%">
-  <button onclick="changeVisibility()">Hide</button>
+<div class="imgbox" id="imgbox2">2-quti<br>
+   <img src="img_lights.jpg" alt="Chiroqlar" style="width:100%">
+   <button onclick="changeVisibility()">Yashirish</button>
 </div>
 
-<div class="imgbox">Box 3<br>
-  <img src="img_forest.jpg" alt="Forest" style="width:100%">
-  <button onclick="resetElement()">Reset All</button>
+<div class="imgbox">3-quti<br>
+   <img src="img_forest.jpg" alt="O'rmon" style="width:100%">
+   <button onclick="resetElement()">Hammasini tiklash</button>
 </div>
 
-<script>
-function removeElement() {
-  document.getElementById("imgbox1").style.display = "none";
+<skript>
+removeElement() funksiyasi {
+   document.getElementById("imgbox1").style.display = "yo'q";
 }
 
-function changeVisibility() {
-  document.getElementById("imgbox2").style.visibility = "hidden";
+funktsiyani o'zgartirishVisibility() {
+   document.getElementById("imgbox2").style.visibility = "yashirin";
 }
 
-function resetElement() {
-  document.getElementById("imgbox1").style.display = "block";
-  document.getElementById("imgbox2").style.visibility = "visible";
+funktsiya resetElement() {
+   document.getElementById("imgbox1").style.display = "blok";
+   document.getElementById("imgbox2").style.visibility = "ko'rinadigan";
 }
 </script>
 
@@ -261,182 +259,180 @@ function resetElement() {
 
 
 
-CSS can also be used together with Javascript to show an element on click as shown below:
+Quyida ko'rsatilgandek bosish orqali elementni ko'rsatish uchun CSS Javascript bilan birgalikda ishlatilishi mumkin:
 
-CSS Display/Visibility Properties
-Property 	Description
-display 	Specifies how an element should be displayed
-visibility 	Specifies whether or not an element should be visible
+CSS displey/ko'rinish xususiyatlari
+Mulk tavsifi
+displey Element qanday ko'rsatilishi kerakligini belgilaydi
+visibility Element ko'rinadigan yoki ko'rinmasligini belgilaydi
 
-<kbd>return</kbd>[Back to table of contents](#homepage)
+<kbd>qaytish</kbd>[Mundarijaga qaytish](#homepage)
 
 
 --------
 
-## HTML Iframes 
+## HTML Iframes
 
-It is used to display a webpage within another webpage
+U boshqa veb-sahifa ichida veb-sahifani ko'rsatish uchun ishlatiladi
 
-* HTML Iframe syntax
+* HTML Iframe sintaksisi
 
-HTML Iframe Syntax:
+HTML Iframe sintaksisi:
 
-```<iframe>``` tag specifies an inline frame. This inline frame is used to  embed another document within the current html document
+```<iframe>``` tegi chiziqli ramkani belgilaydi. Ushbu inline ramka joriy html hujjatiga boshqa hujjatni joylashtirish uchun ishlatiladi
 
-** Syntax example below
+** Quyida sintaksis misoli
 
-```<iframe src="url" title="description">```
+```<iframe src="url" title="ta'rif">```
 
-NB: It is a good practice to always include a title attribute for the <iframe>. This is used by screen readers to read out what the content of the iframe is.
+Eslatma: Har doim <iframe> uchun nom atributini kiritish yaxshi amaliyotdir. Bu ekran o'quvchilari tomonidan iframe tarkibi nima ekanligini o'qish uchun ishlatiladi.
 
 
-** Use height and width to specify the size ofthe iframe
+** Iframe o'lchamini belgilash uchun balandlik va kenglikdan foydalaning
 ```
-<iframe src="demo_iframe.htm" height="200" width="300" title="Iframe Example"></iframe>
-```
-
-** You can also add style attribute and use css height and width properties:
-```
-<iframe src="demo_iframe.htm" style="height:200px;width:300px;" title="Iframe Example"></iframe>
-```
-** Iframe-Remove the border
-
-* To remove border add style attribute and use the CSS border property. 
-```
-<iframe src="demo_iframe.htm" style="border:none;" title="Iframe Example"></iframe>
+<iframe src="demo_iframe.htm" height="200" width="300" title="Iframe misoli"></iframe>
 ```
 
-* You can also use css style to change the size and color of the iframe's border:
+** Shuningdek, siz uslub atributini qo'shishingiz va CSS balandligi va kengligi xususiyatlaridan foydalanishingiz mumkin:
+```
+<iframe src="demo_iframe.htm" style="height:200px;width:300px;" title="Iframe misoli"></iframe>
+```
+** Iframe - chegarani olib tashlang
+
+* Chegara qo'shish uslubi atributini olib tashlash va CSS chegara xususiyatidan foydalanish.
+```
+<iframe src="demo_iframe.htm" style="border:none;" title="Iframe misoli"></iframe>
+```
+
+* Iframe chegarasining o'lchami va rangini o'zgartirish uchun CSS uslubidan ham foydalanishingiz mumkin:
 
 ```
-<iframe src="demo_iframe.htm" style="border:2px solid red;" title="Iframe Example"></iframe>
+<iframe src="demo_iframe.htm" style="border:2px qattiq qizil;" title="Iframe misoli"></iframe>
 ```
 
-Iframe - Target for a Link
+Iframe - havola uchun maqsad
 
-An iframe can be used as the target frame for a link. The target attribute of the link must refer to the name attribute ofthe iframe
+Iframe havola uchun maqsadli ramka sifatida ishlatilishi mumkin. Havolaning maqsadli atributi iframe nomi atributiga murojaat qilishi kerak
 ```
-<iframe src="demo_iframe.htm" name="iframe_a" title="Iframe Example"></iframe>
+<iframe src="demo_iframe.htm" name="iframe_a" title="Iframe misoli"></iframe>
 
 <p><a href="https://www.w3schools.com" target="iframe_a">W3Schools.com</a></p>
 ```
 
-** When the target attribute of a link matches the name of an iframe, the link will open in the iframe
+** Agar havolaning maqsadli atributi iframe nomiga mos kelsa, havola iframe-da ochiladi.
 
 
-In essence, the target of a url can be a new (_blank) page and  can also be the name (attribute) of an iframe
+Aslini olganda, url maqsadi yangi (_blank) sahifa boʻlishi va iframe nomi (atributi) ham boʻlishi mumkin.
 
-<kbd>return</kbd>[Back to table of contents](#homepage)
+<kbd>qaytish</kbd>[Mundarijaga qaytish](#homepage)
 
 ---------
 
 ## HTML JavaScript
-Javascript inclusion in HTML makes it more interactive and dynamic.
+HTML-ga Javascriptning kiritilishi uni yanada interaktiv va dinamik qiladi.
 
 
-** The below gives a button that shows date and time.
+** Quyida sana va vaqtni ko'rsatadigan tugma mavjud.
 ```
 <!DOCTYPE html>
 <html>
-<body>
+<tana>
 
-<h1>My First JavaScript</h1>
+<h1>Mening birinchi JavaScriptim</h1>
 
-<button type="button"
-onclick="document.getElementById('demo').innerHTML = Date()">
-Click me to display Date and Time.</button>
+<button type="tugma"
+onclick="document.getElementById('demo').innerHTML = Sana()">
+Sana va vaqtni ko'rsatish uchun meni bosing.</button>
 
 <p id="demo"></p>
 
 </body>
-</html> 
+</html>
 ```
 
-* HTML Script tag.
+* HTML skript yorlig'i.
 
-It defines client-side JavaScript...the the <script> element contains script statement or points to an external script through an src attribute. JS is used for image manipulation, form validation, and dynamic changes of content.
+U mijoz tomoni JavaScript-ni belgilaydi... <script> elementi skript bayonotini o'z ichiga oladi yoki src atributi orqali tashqi skriptga ishora qiladi. JS tasvirni manipulyatsiya qilish, shaklni tekshirish va tarkibni dinamik o'zgartirish uchun ishlatiladi.
 
-To select an HTML element, JavaScript most often uses the ```document.getElementById()``` method.
+HTML elementini tanlash uchun JavaScript ko'pincha ```document.getElementById()``` usulidan foydalanadi.
 
-This JavaScript example writes "Hello JavaScript!" into an HTML element with id="demo":
+Ushbu JavaScript misolida "Salom JavaScript!" id="demo" bilan HTML elementiga:
 ```
-<h2>Use JavaScript to Change Text</h2>
-<p>This example writes "Hello JavaScript!" into an HTML element with id="demo":</p>
+<h2>Matnni o'zgartirish uchun JavaScript-dan foydalaning</h2>
+<p>Ushbu misolda "Salom JavaScript!" id="demo" bilan HTML elementiga:</p>
 
 <p id="demo"></p>
 
-<script>
-document.getElementById("demo").innerHTML = "Hello JavaScript!";
-</script> 
+<skript>
+document.getElementById("demo").innerHTML = "Salom JavaScript!";
+</script>
 ```
 
-** Use JavaScript to change the style of an HTML document
+** HTML hujjatining uslubini o'zgartirish uchun JavaScript-dan foydalaning
 ```
-<h1>My First JavaScript</h1>
+<h1>Mening birinchi JavaScriptim</h1>
 
-<p id="demo">JavaScript can change the style of an HTML element.</p>
+<p id="demo">JavaScript HTML elementining uslubini o'zgartirishi mumkin.</p>
 
-<script>
-function myFunction() {
-  document.getElementById("demo").style.fontSize = "25px"; 
-  document.getElementById("demo").style.color = "red";
-  document.getElementById("demo").style.backgroundColor = "yellow";        
+<skript>
+funktsiya myFunction() {
+   document.getElementById("demo").style.fontSize = "25px";
+   document.getElementById("demo").style.color = "qizil";
+   document.getElementById("demo").style.backgroundColor = "sariq";
 }
 </script>
 
-<button type="button" onclick="myFunction()">Click Me!</button>
+<button type="button" onclick="myFunction()">Menga bosing!</button>
 ```
 
-** Use Javascript to change the src attribute of an image.
-```document.getElementById("image").src = "picture.gif";```
+** Rasmning src atributini oʻzgartirish uchun Javascriptdan foydalaning.
+```document.getElementById("rasm").src = "rasm.gif";```
 
-* see full code below
+* quyida to'liq kodni ko'ring
 ```
-<h1>My First JavaScript</h1>
-<p>Here, a JavaScript changes the value of the src (source) attribute of an image.</p>
+<h1>Mening birinchi JavaScriptim</h1>
+<p>Bu yerda JavaScript tasvirning src (manba) atributining qiymatini oʻzgartiradi.</p>
 
-<script>
-function light(sw) {
-  var pic;
-  if (sw == 0) {
-    pic = "pic_bulboff.gif"
-  } else {
-    pic = "pic_bulbon.gif"
-  }
-  document.getElementById('myImage').src = pic;
+<skript>
+funktsiya nuri (sw) {
+   var pic;
+   agar (sw == 0) {
+     pic = "pic_bulboff.gif"
+   } boshqa {
+     pic = "pic_bulbon.gif"
+   }
+   document.getElementById('myImage').src = pic;
 }
 </script>
 
 <img id="myImage" src="pic_bulboff.gif" width="100" height="180">
 
 <p>
-<button type="button" onclick="light(1)">Light On</button>
-<button type="button" onclick="light(0)">Light Off</button>
+<button type="button" onclick="light(1)">Chiroq yoqilgan</button>
+<button type="button" onclick="light(0)">Chiroq o'chirilgan</button>
 </p>
 ```
 
-* HTML ```<noscript>``` tag
+* HTML ```<noscript>``` tegi
 
-Defines alternate content to be displayed to users that have disabled scripts in their browsers or have browsers with no support for scripts
+Brauzerlarida skriptlarni o‘chirib qo‘ygan yoki skriptlarni qo‘llab-quvvatlamaydigan brauzerlarga ega foydalanuvchilarga ko‘rsatiladigan muqobil kontentni belgilaydi.
 
-* This is the script 
+* Bu skript
 ```
-<script>
-document.getElementById("demo").innerHTML = "Hello JavaScript!";
+<skript>
+document.getElementById("demo").innerHTML = "Salom JavaScript!";
 </script>
-<noscript>Sorry, your browser does not support JavaScript!</noscript> 
+<noscript>Kechirasiz, brauzeringiz JavaScript-ni qo‘llab-quvvatlamaydi!</noscript>
 
-**The full script is:
+**To'liq skript:
 <p id="demo"></p>
 
-<script>
-document.getElementById("demo").innerHTML = "Hello JavaScript!";
+<skript>
+document.getElementById("demo").innerHTML = "Salom JavaScript!";
 </script>
 
-<noscript>Sorry, your browser does not support JavaScript!</noscript>
+<noscript>Kechirasiz, brauzeringiz JavaScript-ni qo‘llab-quvvatlamaydi!</noscript>
 
-<p>A browser without support for JavaScript will show the text written inside the noscript element.</p>
+<p>JavaScript-ni qo'llab-quvvatlamaydigan brauzer noscript elementi ichida yozilgan matnni ko'rsatadi.</p>
 ```
-<kbd>return</kbd>[Back to table of contents](#homepage)
-
-
+<kbd>qaytish</kbd>[Mundarijaga qaytish](#homepage)

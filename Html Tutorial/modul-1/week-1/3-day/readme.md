@@ -1,101 +1,101 @@
-## HTML FORMATTING
+## HTML FORMATLASH
 ```
-<b> - Bold text
-<strong> - Important text
-<i> - Italic text...often used to indicate a technical term, a phrase from another language, a thought, a ship name, etc.
-<em> - Emphasized text. A screen reader will emphasize the text using verbal stress
-<mark> - Marked text. Element that should be highlighted. You can use style to change the color.
-<small> - Smaller text
-<del> - Deleted text. Browsers usually strike a line through
-<ins> - Inserted text... (into a document) Browsers usually underline this. Can be used after del. 
-<sub> - Subscript text...appears half a character below the normal line
-<sup> - Superscript text...can be used for footnotes citation
+<b> - Qalin matn
+<strong> - Muhim matn
+<i> - kursiv matn...koʻpincha texnik atama, boshqa tildagi ibora, fikr, kema nomi va hokazolarni koʻrsatish uchun ishlatiladi.
+<em> - ta'kidlangan matn. Ekranni o'quvchi matnni og'zaki stress yordamida ta'kidlaydi
+<belgi> - Belgilangan matn. Belgilanishi kerak bo'lgan element. Rangni o'zgartirish uchun uslubdan foydalanishingiz mumkin.
+<kichik> - kichikroq matn
+<del> - o'chirilgan matn. Brauzerlar odatda bir qatorga o'tadi
+<ins> - Kiritilgan matn... (hujjatga) Brauzerlar odatda buni tagiga chizadilar. Del dan keyin foydalanish mumkin.
+<sub> - Subscript matni... oddiy satrdan yarim belgi ostida paydo bo'ladi
+<sup> - Yuqori skript matni... izohlarga iqtibos keltirish uchun ishlatilishi mumkin
 ```
 ```
 *<p>My favorite color is <del>blue</del> <ins>red</ins>.</p>
 ```
-<kbd>return</kbd>[Back to table of contents](#homepage)
+<kbd>return</kbd>[Mundarijaga qaytish](#homepage)
 
 
 --------------
 
 
-## HTML QUOTATIONS
-HTML QUOTATIONs AND CITATION ELEMENTS
+## HTML IQTISODIYoTI
+HTML IQTISODIYoTI VA IQTISODIYoTI Elementlari
 ```
-<abbr> 	Defines an abbreviation or acronym. Marking them give information to browsers, translation systems and search engines. Use global attribute title with it to show full meaning of the abbreviation.
-<address> 	Defines contact information for the author/owner of a document or an article. This can be email, url, physical, mobile no, social media handles etc. Browsers add line break before and after <address> element.
-<bdo> 	Defines the text direction.Used to override current text direction
-<blockquote>	Defines a section that is quoted from another source. Browser usually indents this. cite is used here to show the source, not href.
-<cite> 	Defines the title of a creative work. Creator's name is not a title.Browsers will usually cite this element in italic
-<q> 	Defines a short inline quotation.Browser inserts quotation marks around the quotation
+<abbr> Qisqartma yoki qisqartmani belgilaydi. Ularni belgilash brauzerlar, tarjima tizimlari va qidiruv tizimlariga ma'lumot beradi. Qisqartmaning to'liq ma'nosini ko'rsatish uchun u bilan global atribut sarlavhasidan foydalaning.
+<adres> Hujjat yoki maqola muallifi/egasi uchun aloqa ma'lumotlarini belgilaydi. Bu e-pochta, url, jismoniy, mobil raqam, ijtimoiy media tutqichlari va boshqalar bo'lishi mumkin. Brauzerlar <adres> elementidan oldin va keyin qatorlarni qo'shadilar.
+<bdo> Matn yoʻnalishini belgilaydi. Joriy matn yoʻnalishini bekor qilish uchun ishlatiladi
+<blockquote> Boshqa manbadan keltirilgan bo'limni belgilaydi. Brauzer odatda buni cheklaydi. cite bu erda href emas, manbani ko'rsatish uchun ishlatiladi.
+<cite> Ijodiy ish nomini belgilaydi. Ijodkor nomi sarlavha emas. Brauzerlar odatda bu elementni kursiv bilan keltiradilar
+<q> Qisqa chiziqli tirnoqni belgilaydi. Brauzer tirnoq atrofida qo'shtirnoq qo'yadi.
 ```
-* Quote
+* Iqtibos
 ```
- <p>Here is a quote from WWF's website:</p>
+<p>Bu yerda WWF veb-saytidan iqtibos:</p>
 <blockquote cite="http://www.worldwildlife.org/who/index.html">
-For 50 years, WWF has been protecting the future of nature.
-The world's leading conservation organization,
-WWF works in 100 countries and is supported by
-1.2 million members in the United States and
-close to 5 million globally.
-</blockquote> 
+50 yil davomida WWF tabiat kelajagini himoya qilib keladi.
+Tabiatni muhofaza qilish bo‘yicha dunyodagi yetakchi tashkilot,
+WWF 100 ta mamlakatda ishlaydi va tomonidan qo'llab-quvvatlanadi
+Qo'shma Shtatlarda 1,2 million a'zo va
+dunyo bo'ylab 5 millionga yaqin.
+</blockquote>
 ```
-* Short Quotations
+* Qisqa iqtiboslar
 ```
  <p>WWF's goal is to: <q>Build a future where people live in harmony with nature.</q></p> 
 ```
-* The use of abbreviation ```<abbr>```
+* Qisqartirishdan foydalanish ```<abbr>```
 ```
 <p>The <abbr title="World Health Organization">WHO</abbr> was founded in 1948.</p> 
 ```
-Address
+Manzil
 ```
 <address>
-Written by John Doe.<br>
-Visit us at:<br>
-Example.com<br>
-Box 564, Disneyland<br>
-USA
-</address> 
+Jon Doe tomonidan yozilgan.<br>
+Bizga tashrif buyuring:<br>
+Misol.com<br>
+Box 564, Disneylend<br>
+AQSH
+</address>
 ```
-* Cite for work title
+* Ish nomi uchun iqtibos keltiring
  ```
- <p><cite>The Scream</cite> by Edvard Munch. Painted in 1893.</p> 
+<p><cite>Qichqiriq</cite>, Edvard Munch. 1893 yilda chizilgan.</p>
 ```
-* Bi-Directional Override(BDO)
+* Ikki tomonlama bekor qilish (BDO)
 ```
  <bdo dir="rtl">This text will be written from right to left</bdo> 
 ```
-<kbd>return</kbd>[Back to table of contents](#homepage)
+<kbd>return</kbd>[Mundarijaga qaytish](#homepage)
 
 --------
 
 
-## HTML COMMENTS
-There is only exclamation at the start not at the end
+## HTML MUHAMMOTLARI
+Faqat boshida emas, oxirida undov bor
 ```
-<!-- Write your comments here -->
+<!-- Fikrlaringizni shu yerga yozing -->
 ```
-Example usage
+Foydalanish misoli
 ```
-<!-- This is a comment -->
+<!-- Bu izoh -->
 
-<p>This is a paragraph.</p>
+<p>Bu paragraf.</p>
 
-<!-- Remember to add more information here -->
+<!-- Bu yerga qo'shimcha ma'lumot qo'shishni unutmang -->
 ```
-* Comments can help you to debug your html lines of code
-<kbd>return</kbd>[Back to table of contents](#homepage)
+* Sharhlar HTML kod satrlarini disk raskadrovka qilishga yordam beradi
+<kbd>return</kbd>[Mundarijaga qaytish](#homepage)
 
 
 
 ---------------
 
-## HTML COLORS
-You specify them with color names, RGB, HEX, HSL,RGBA(the alpha is for transparency),HSLA values.
-HTML supports 140 standard color names
-* Specify background color as shown below:
+## HTML RANGLARI
+Siz ularni rang nomlari, RGB, HEX, HSL, RGBA (alfa shaffoflik uchun), HSLA qiymatlari bilan belgilaysiz.
+HTML 140 ta standart rang nomlarini qo'llab-quvvatlaydi
+* Quyida ko'rsatilgandek fon rangini belgilang:
 ```
 <h1 style="background-color:DodgerBlue;">Hello World</h1>
 <p style="background-color:Tomato;">Lorem ipsum...</p> 
@@ -106,14 +106,14 @@ HTML supports 140 standard color names
 <p style="color:DodgerBlue;">Lorem ipsum...</p>
 <p style="color:MediumSeaGreen;">Ut wisi enim...</p> 
 ```
-* Set Color of border ( the square box) around text
+* Matn atrofidagi chegara rangini (kvadrat quti) o'rnating
 ```
-<h1 style="border:2px solid Tomato;">Hello World</h1>
-<h1 style="border:2px solid DodgerBlue;">Hello World</h1>
-<h1 style="border:2px solid Violet;">Hello World</h1> 
+<h1 style="border:2px solid Pomidor;">Salom Dunyo</h1>
+<h1 style="border:2px solid DodgerBlue;">Salom Dunyo</h1>
+<h1 style="border:2px solid Violet;">Salom dunyo</h1>
 ```
 ## RGB
-* These are all the same
+* Bularning barchasi bir xil
 ```
 rgb(255, 99, 71)
 #ff6347
@@ -121,8 +121,8 @@ hsl(9, 100%, 64%)
 ```
 * RGBA, HSLA
 ```
-rgba(255, 99, 71, 0.5)
-hsla(9, 100%, 64%, 0.5)
+rgba(255, 99, 71, 0,5)
+hsla(9, 100%, 64%, 0,5)
 ```
 ```
 <h1 style="background-color:rgb(255, 99, 71);">...</h1>
@@ -130,57 +130,57 @@ hsla(9, 100%, 64%, 0.5)
 <h1 style="background-color:hsl(9, 100%, 64%);">...</h1>
 
 <h1 style="background-color:rgba(255, 99, 71, 0.5);">...</h1>
-<h1 style="background-color:hsla(9, 100%, 64%, 0.5);">...</h1> 
+<h1 style="background-color:hsla(9, 100%, 64%, 0.5);">...</h1>
 ```
-<kbd>return</kbd>[Back to table of contents](#homepage)
+<kbd>qaytish</kbd>[Mundarijaga qaytish](#homepage)
 ## RGBA
-RGB and RGBA Coloring
-Red, Green, Blue, and Alpha
-```rgb(r,g,b)```  each parameter has a value between  0 and 255 i.e 256 in total
-Total number of colors: 256 x 256 x 256 = 16777216 possible colors!
+RGB va RGBA rang berish
+Qizil, yashil, ko'k va alfa
+```rgb(r,g,b)``` har bir parametr 0 dan 255 gacha bo`lgan qiymatga ega, ya'ni jami 256 ta
+Ranglarning umumiy soni: 256 x 256 x 256 = 16777216 mumkin bo'lgan ranglar!
 ```
-Red color: rgb(255, 0, 0), 
-Green color: rgb(0, 255, 0)
-Black: rgb(0, 0, 0)
-White:rgb(255, 255, 255). 
-Grey: rgb( x,x,x) where x is not zero or 255. Black and white are at the two ends of the color spectrum.
+Qizil rang: rgb(255, 0, 0),
+Yashil rang: rgb(0, 255, 0)
+Qora: rgb(0, 0, 0)
+Oq: rgb (255, 255, 255).
+Kulrang: rgb( x,x,x) bu yerda x nol emas yoki 255. Qora va oq rang spektrining ikki uchida joylashgan.
 ```
 RGBA
-```rgba(red, green, blue, alpha)``` alpha 0 means fully transparent while 1.0 is not transparent at all. 
-<kbd>return</kbd>[Back to table of contents](#homepage)
-HTML HEX COLORS
-RR(RED), GG(GREEN)BB(BLUE)...HEXADECIMAL INTEGERS SPECIFY THE COMPONENTS OF THE COLORS, EACH WITH VALUES RANGING FROM 00 TO ff ( same as decimal 0-255)
-```#ff0000```- red since red has the highest value (ff) while the green and blue appear as 00 and 00
-```#00ff00``` appears as green since green is set to the highest value(ff) and the remaining two have zero values
-To display black, set all color parameters to 00, like this: ```#000000```.
-To display white, setll all color parameters to ff: ```#ffffff```
-Shades of gray: Equal values for all the parameters:
-Each one of these are different shades of gray.
+```rgba(qizil, yashil, ko`k, alfa)``` alfa 0 butunlay shaffof degan ma'noni anglatadi, 1.0 esa umuman shaffof emas.
+<kbd>qaytish</kbd>[Mundarijaga qaytish](#homepage)
+HTML HEX RANGLARI
+RR(QIZIL), GG(GREEN)BB(BLUE)...OLTINTILI BUTUN SALAR HAR BIR 00 dan ff gacha boʻlgan QIYMATLAR BILAN RANGLAR KOMPONENTLARINI AYTARILADI (0-255 kasr bilan bir xil)
+```#ff0000```- qizil, chunki qizil rang eng yuqori qiymatga (ff) ega, yashil va ko`k esa 00 va 00 sifatida ko`rinadi.
+```#00ff00``` yashil rangda ko`rinadi, chunki yashil rang eng yuqori qiymatga (ff) o`rnatilgan va qolgan ikkitasi nol qiymatga ega
+Qora rangni ko'rsatish uchun barcha rang parametrlarini 00 ga o'rnating, masalan: ```#000000```.
+Oq rangni ko'rsatish uchun barcha rang parametrlarini ff ga o'rnating: ```#ffffff```
+Kulrang soyalar: barcha parametrlar uchun teng qiymatlar:
+Ularning har biri turli xil kul ranglardir.
 ```
 #404040
 #686868
 #a0a0a0
 ```
-<kbd>return</kbd>[Back to table of contents](#homepage)
-## HSL AND HSLA
-HSL: Hue, Saturation, and, lightness
-HSLA: Hue, Saturation, Lightness, and Alpha.
-Hue: Degree on the colorwheel from 0 to 360  0 is red, 120 gree, 240 blue
-Saturation: It is a percentage value. 0% is black, and 100 % is full color 
-Lightness:Alsp a percentage value: 0% is black and 100% white
-Saturation can be described as the intensity of a color. It is about how much shade of gray you want to have showing up on the color. 
-100% is pure color, no shades of gray
-50% is 50% gray, but you can still see the color.
-0% is completely gray, you can no longer see the color.
-** The lightness of a color can be described as how much light you want to give the color, where 0% means no light (black), 50% means 50% light (neither dark nor light) 100% means full lightness (white).
-Shades of Gray: Can be obtained by setting hue and saturation to 0, and adjust the lighness from 0 % to 100 % to get darker/lighter shades: 
+<kbd>qaytish</kbd>[Mundarijaga qaytish](#homepage)
+## HSL VA HSLA
+HSL: rang, to'yinganlik va yorug'lik
+HSLA: rang, to'yinganlik, yorug'lik va alfa.
+Rang: rang g'ildiragidagi 0 dan 360 0 gacha bo'lgan daraja qizil, 120 yashil, 240 ko'k
+To'yinganlik: bu foizli qiymat. 0% qora, 100% esa to'liq rangli
+Yengillik: Alsp foiz qiymati: 0% qora va 100% oq
+To'yinganlikni rangning intensivligi deb ta'riflash mumkin. Bu rangda qancha kul rang ko'rinishini xohlashingiz haqida.
+100% sof rang, kulrang soyalar yo'q
+50% 50% kulrang, lekin siz hali ham rangni ko'rishingiz mumkin.
+0% butunlay kulrang, endi rangni ko'ra olmaysiz.
+** Rangning ochiqligini siz rangga qancha yorug‘lik berishni xohlayotganingizni tasvirlash mumkin, bu erda 0% yorug‘lik yo‘q (qora), 50% 50% yorug‘lik (na qorong‘u, na yorug‘lik) 100% to‘liq ochiqlikni (oq) bildiradi. ).
+Kulrang soyalar: Toʻqroq/ochroq soyalarni olish uchun rang va toʻyinganlikni 0 ga oʻrnatish va yorugʻlikni 0 % dan 100 % gacha sozlash orqali olish mumkin:
 ```
-hsl(0, 0%, 20%)   --darker shade of grey
-hsl(0, 0%, 70%)== lighter shade of grey
+hsl(0, 0%, 20%) --kulrangning quyuqroq soyasi
+hsl(0, 0%, 70%)== ochroq kul rang
 ```
-HSLA Color Values: 
-Alpha rep transparency. 0.00 means fully transparent and 1.0 not transparent at all. 
-<kbd>return</kbd>[Back to table of contents](#homepage)
+HSLA rang qiymatlari:
+Alfa rep shaffofligi. 0,00 to'liq shaffof va 1,0 umuman shaffof emas degan ma'noni anglatadi.
+<kbd>qaytish</kbd>[Mundarijaga qaytish](#homepage)
 
 
 ---------
@@ -189,101 +189,101 @@ Alpha rep transparency. 0.00 means fully transparent and 1.0 not transparent at 
 
 ## HTML CSS
 HTML STYLES-CSS
-CSS can control layout of multiple pages at same time. 
-CSS: CAscading style sheets: To control color, font, the size of text, the spacing between elements, how elements are positioned and laid out, what background images or background colors are to be used, different displays for different devices and screen sizes etc
-Tip: The word cascading means that a style applied to a parent element will also apply to all children elements within the parent. So, if you set the color of the body text to "blue", all headings, paragraphs, and other text elements within the body will also get the same color (unless you specify something else)!
-CSS can be added to HTML documents in 3 ways:
-   Inline - by using the style attribute inside HTML elements
-   Internal - by using a ```<style>``` element in the ```<head>``` section
-   External - by using a ```<link>``` element to link to an external CSS file
-	
-<kbd>return</kbd>[Back to table of contents](#homepage)
-## CSS INLINE
-Inline CSS: To apply a unique style to a single HTML element, and it uses the style attribute of such element. 
-* Set h1 color to blue and p to red
-```
-<h1 style="color:blue;">A Blue Heading</h1>
+CSS bir vaqtning o'zida bir nechta sahifalar tartibini boshqarishi mumkin.
+CSS: CAscading uslublar jadvallari: rang, shrift, matn o'lchami, elementlar orasidagi masofa, elementlar qanday joylashishi va joylashtirilishi, qanday fon tasvirlari yoki fon ranglari ishlatilishi, turli qurilmalar va ekran o'lchamlari uchun turli xil displeylar va boshqalarni boshqarish uchun.
+Maslahat: Kaskad so'zi asosiy elementga qo'llaniladigan uslub ota-ona ichidagi barcha kichik elementlarga ham qo'llanilishini anglatadi. Shunday qilib, agar siz asosiy matn rangini "ko'k" rangga o'rnatsangiz, barcha sarlavhalar, paragraflar va matn ichidagi boshqa matn elementlari ham bir xil rangga ega bo'ladi (agar siz boshqa narsani belgilamasangiz)!
+CSS-ni HTML hujjatlariga 3 usulda qo'shish mumkin:
+    Inline - HTML elementlari ichidagi uslub atributidan foydalanish orqali
+    Ichki - ```<head>``` bo`limidagi ```<style>``` elementi yordamida
+    Tashqi - tashqi CSS fayliga ulanish uchun ```<link>``` elementi yordamida
 
-<p style="color:red;">A red paragraph.</p> 
+<kbd>qaytish</kbd>[Mundarijaga qaytish](#homepage)
+## CSS INLINE
+Inline CSS: bitta HTML elementiga noyob uslubni qo'llash uchun va u bunday elementning uslub atributidan foydalanadi.
+* h1 rangini ko'k rangga va p qizil rangga o'rnating
 ```
-<kbd>return</kbd>[Back to table of contents](#homepage)
-# CSS INTERNAL
-Internal CSS: To define style for a single HTML Page and it defined in <head> section of an html page within <style> element
+<h1 style="color:blue;">Moviy sarlavha</h1>
+
+<p style="color:red;">Qizil paragraf.</p>
+```
+<kbd>qaytish</kbd>[Mundarijaga qaytish](#homepage)
+# CSS ICHKI
+Ichki CSS: Bitta HTML sahifasi uchun uslubni aniqlash va u HTML sahifasining <style> elementidagi <head> bo'limida aniqlangan.
 ```
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-body {background-color: powderblue;}
-h1   {color: blue;}
-p    {color: red;}
+<uslub>
+tana (fon rangi: chang ko'k;}
+h1 {rang: ko'k;}
+p {rang: qizil;}
 </style>
 </head>
-<body>
+<tana>
 
-<h1>This is a heading</h1>
-<p>This is a paragraph.</p>
+<h1>Bu sarlavha</h1>
+<p>Bu paragraf.</p>
 
 </body>
-</html> 
+</html>
 ```
-<kbd>return</kbd>[Back to table of contents](#homepage)
+<kbd>qaytish</kbd>[Mundarijaga qaytish](#homepage)
 
 
---------  
+--------
 
-## CSS INTRODUCTION
+## CSS KIRISH
 
 
-CSS Solved a Big problem:
-HTML was NEVER intended to contain tags for formatting a web page!
+CSS katta muammoni hal qildi:
+HTML hech qachon veb-sahifani formatlash uchun teglarni o'z ichiga olmaydi!
 
-HTML was created to describe the content of a web page, like:
+HTML veb-sahifa mazmunini tavsiflash uchun yaratilgan, masalan:
 
 ```
-<h1>This is a heading</h1>
+<h1>Bu sarlavha</h1>
 
-<p>This is a paragraph.</p>
+<p>Bu paragraf.</p>
 ```
   
-Adding fonts color to HTML elements which was introduced in html 3 was a deviation from what HTML was meant 
+HTML 3 da kiritilgan HTML elementlariga shrift rangini qo'shish HTML nazarda tutilganidan og'ish edi.
 
-to do in the first place.
+birinchi navbatda qilish.
 
-CSS Saves a Lot of Work!
+CSS ko'p ishni tejaydi!
 
-The style definitions are normally saved in external .css files.
+Uslub ta'riflari odatda tashqi .css fayllarida saqlanadi.
 
-With an external stylesheet file, you can change the look of an entire website by changing just one file!
-
-
-<kbd>return</kbd>[Back to table of contents](#homepage)
+Tashqi uslublar jadvali fayli yordamida siz faqat bitta faylni o'zgartirish orqali butun veb-sayt ko'rinishini o'zgartirishingiz mumkin!
 
 
---------- 
+<kbd>qaytish</kbd>[Mundarijaga qaytish](#homepage)
+
+
+---------
 
 ## CSS SYNTAX
 
 ```
-h1 {color:blue;font-size:12px;}
+h1 {rang: ko'k; shrift o'lchami: 12px;}
 
-selector {property:value;property:value;} 
+selektor {xususiyat: qiymat; xususiyat: qiymat;}
 ```
-property+value=declaration block.
+mulk+qiymat=deklaratsiya bloki.
 
   
 ```
 p {
-  color: red;
-  text-align: center;
-} 
+   rang: qizil;
+   matnni tekislash: markaz;
+}
 
 ```
 
-the p is set to red and centered automatically.
+p qizil rangga o'rnatiladi va avtomatik ravishda markazlashtiriladi.
 
 
-<kbd>return</kbd>[Back to table of contents](#homepage)
+<kbd>return</kbd>[Mundarijaga qaytish](#homepage)
 
 
 ------
@@ -292,51 +292,51 @@ the p is set to red and centered automatically.
 
 ## CSS SELECTORS
 
-They help in dictating the styles of specific html elements
+Ular ma'lum html elementlarining uslublarini belgilashda yordam beradi
 
-Categories of css selectors::
+CSS selektorlari toifalari::
 
-Simple selectors: use name, id, and class to select elements
-Combinator selectors: use relationship between elements to select them
-Pseudo-class selectors: To select elements based on a certain state
-Pseudo-elements selectors:select and style part of an element
-Attribute selectors: Use an attribute or attribute value to select an element
+Oddiy selektorlar: elementlarni tanlash uchun nom, id va sinfdan foydalaning
+Kombinator selektorlari: ularni tanlash uchun elementlar orasidagi munosabatlardan foydalaning
+Pseudo-klass selektorlari: elementlarni ma'lum holatga qarab tanlash uchun
+Pseudoelement selektorlari: elementning bir qismini tanlash va uslublash
+Atribut selektorlari: elementni tanlash uchun atribut yoki atribut qiymatidan foydalaning
 
-Explaining the most basic css selectors
+Eng asosiy CSS selektorlarini tushuntirish
 
-1. CSS element Selector: Uses element name to select html elements
+1. CSS element Selektori: HTML elementlarini tanlash uchun element nomidan foydalanadi
 
 ```
 p {
-  text-align: center;
-  color: red;
+   matnni tekislash: markaz;
+   rang: qizil;
 }
 
 ```
 
 
-2. CSS id Selector: Uses the id attribute of an element to select it. Element id is unique within a webpage 
+2. CSS id Selector: Elementni tanlash uchun uning id atributidan foydalanadi. Element identifikatori veb-sahifa ichida noyobdir
 
-and it can select one unique element. 
-To use id to select element, use hash(#) followed by the id of the element.The name of an id cannot start 
+va u bitta noyob elementni tanlashi mumkin.
+Elementni tanlashda identifikatordan foydalanish uchun hash(#) dan keyin element identifikatoridan foydalaning. Id nomi boshlanmaydi
 
-with a number.
+raqam bilan.
 
 ```
 <!DOCTYPE html>
 <html>
 <head>
-<style>
+<uslub>
 #para1 {
-  text-align: center;
-  color: red;
+   matnni tekislash: markaz;
+   rang: qizil;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<p id="para1">Hello World!</p>
-<p>This paragraph is not affected by the style.</p>
+<p id="para1">Salom dunyo!</p>
+<p>Ushbu paragrafga uslub ta'sir qilmaydi.</p>
 
 </body>
 </html>
@@ -345,26 +345,26 @@ with a number.
 
 
 
-The CSS class Selector: Selects html elements with specific class attribute. Use (.) character followed by 
+CSS klassi selektori: muayyan sinf atributiga ega HTML elementlarini tanlaydi. (.) belgisidan keyin foydalaning
 
-class name. The code below makes class="center" red and center-aligned
+sinf nomi. Quyidagi kod class="center" ni qizil va markazga moslashtiradi
 
 ```
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-.center {
-  text-align: center;
-  color: red;
+<uslub>
+.markaz {
+   matnni tekislash: markaz;
+   rang: qizil;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h1 class="center">Red and center-aligned heading</h1>
-<p class="center">Red and center-aligned paragraph.</p> 
+<h1 class="center">Qizil va markazga tekislangan sarlavha</h1>
+<p class="center">Qizil va markazga tekislangan paragraf.</p>
 
 </body>
 </html>
@@ -372,85 +372,85 @@ class name. The code below makes class="center" red and center-aligned
 ```
 
 
-You can also specify only html elements that should be affected by a class styling. In the code below, only 
+Bundan tashqari, siz faqat sinf uslubiga ta'sir qilishi kerak bo'lgan HTML elementlarini belgilashingiz mumkin. Quyidagi kodda faqat
 
-```p``` elements with ```class="center"``` will be red and center aligned.
+```class="center"``` bo`lgan ```p``` elementlar qizil rangda bo`ladi va markazga tekislanadi.
 
 ```
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-p.center {
-  text-align: center;
-  color: red;
+<uslub>
+p.markaz {
+   matnni tekislash: markaz;
+   rang: qizil;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h1 class="center">This heading will not be affected</h1>
-<p class="center">This paragraph will be red and center-aligned.</p> 
+<h1 class="center">Bu sarlavha ta'sir qilmaydi</h1>
+<p class="center">Ushbu paragraf qizil rangda va markazga hizalanadi.</p>
 
 </body>
 </html>
 
 ```
 
-HTMl elements can refer to more than one class. In that case, p elemen is styled according to all the 
+HTML elementlari bir nechta sinflarga murojaat qilishi mumkin. Bunday holda, p element barchaga mos ravishda uslublanadi
 
-classes
+sinflar
 
 
 ```
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-p.center {
-  text-align: center;
-  color: red;
+<uslub>
+p.markaz {
+   matnni tekislash: markaz;
+   rang: qizil;
 }
 
-p.large {
-  font-size: 300%;
+katta {
+   shrift hajmi: 300%;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h1 class="center">This heading will not be affected</h1>
-<p class="center">This paragraph will be red and center-aligned.</p>
-<p class="center large">This paragraph will be red, center-aligned, and in a large font-size.</p> 
+<h1 class="center">Bu sarlavha ta'sir qilmaydi</h1>
+<p class="center">Ushbu paragraf qizil rangda va markazga hizalanadi.</p>
+<p class="center large">Ushbu paragraf qizil, markazga tekislangan va katta shrift o'lchamida bo'ladi.</p>
 
 </body>
 </html>
 ```
 
 
-The CSS Universal Selector
+CSS universal selektori
 
-The * selects all the HTML elements on a page
+* sahifadagi barcha HTML elementlarini tanlaydi
 
 ```
 <!DOCTYPE html>
 <html>
 <head>
-<style>
+<uslub>
 * {
-  text-align: center;
-  color: blue;
+   matnni tekislash: markaz;
+   rang: ko'k;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h1>Hello world!</h1>
+<h1>Salom dunyo!</h1>
 
-<p>Every element on the page will be affected by the style.</p>
-<p id="para1">Me too!</p>
-<p>And me!</p>
+<p>Sahifadagi har bir elementga uslub ta'sir qiladi.</p>
+<p id="para1">Men ham!</p>
+<p>Va men!</p>
 
 </body>
 </html>
@@ -458,112 +458,112 @@ The * selects all the HTML elements on a page
 ```
 
 
-The CSS Grouping Selector::
+CSS guruhlash selektori::
 
-Selects all the html elements with same sty le definitions. 
+Bir xil ta'riflarga ega barcha HTML elementlarini tanlaydi.
 
 
-rather than having the code below:
+quyidagi kodga ega bo'lish o'rniga:
 
 ```
 h1 {
-  text-align: center;
-  color: red;
+   matnni tekislash: markaz;
+   rang: qizil;
 }
 
 h2 {
-  text-align: center;
-  color: red;
+   matnni tekislash: markaz;
+   rang: qizil;
 }
 
 p {
-  text-align: center;
-  color: red;
+   matnni tekislash: markaz;
+   rang: qizil;
 }
 ```
 
-We can simply have:
+Bizda oddiygina bo'lishi mumkin:
 
 ```
 
 h1, h2, p {
-  text-align: center;
-  color: red;
+   matnni tekislash: markaz;
+   rang: qizil;
 }
 
 ```
-and still get the same result
+va hali ham bir xil natijaga erishasiz
 
 
-Summary of all CSS selectors:
+Barcha CSS selektorlarining qisqacha mazmuni:
 
-All CSS Simple Selectors
+Barcha CSS oddiy selektorlari
   
 ```
-Selector 	Example 	Example description
+Selektor misoli Misol tavsifi
 
-#id 	#firstname 	Selects the element with id="firstname"
-.class 	.intro 	Selects all elements with class="intro"
-element.class 	p.intro 	Selects only <p> elements with class="intro"
-* 	* 	Selects all elements
-element 	p 	Selects all <p> elements
-element,element,.. 	div, p 	Selects all <div> elements and all <p> elements
+#id #firstname id="firstname"li elementni tanlaydi
+.class .intro Class="intro" bilan barcha elementlarni tanlaydi
+element.class p.intro Faqat class="intro" bilan <p> elementlarni tanlaydi
+* * Barcha elementlarni tanlaydi
+element p Barcha <p> elementlarni tanlaydi
+element,element,.. div, p Barcha <div> va barcha <p> elementlarni tanlaydi
 ```
 
 
 
-<kbd>return</kbd>[Back to table of contents](#homepage)
+<kbd>qaytish</kbd>[Mundarijaga qaytish](#homepage)
 
 ---------
 
 
 ## CSS SELECTORS
 
-They help in dictating the styles of specific html elements
+Ular ma'lum html elementlarining uslublarini belgilashda yordam beradi
 
-Categories of css selectors::
+CSS selektorlari toifalari::
 
-Simple selectors: use name, id, and class to select elements
-Combinator selectors: use relationship between elements to select them
-Pseudo-class selectors: To select elements based on a certain state
-Pseudo-elements selectors:select and style part of an element
-Attribute selectors: Use an attribute or attribute value to select an element
+Oddiy selektorlar: elementlarni tanlash uchun nom, id va sinfdan foydalaning
+Kombinator selektorlari: ularni tanlash uchun elementlar orasidagi munosabatlardan foydalaning
+Pseudo-klass selektorlari: elementlarni ma'lum holatga qarab tanlash uchun
+Pseudoelement selektorlari: elementning bir qismini tanlash va uslublash
+Atribut selektorlari: elementni tanlash uchun atribut yoki atribut qiymatidan foydalaning
 
-Explaining the most basic css selectors
+Eng asosiy CSS selektorlarini tushuntirish
 
-1. CSS element Selector: Uses element name to select html elements
+1. CSS element Selektori: HTML elementlarini tanlash uchun element nomidan foydalanadi
 
 ```
 p {
-  text-align: center;
-  color: red;
+   matnni tekislash: markaz;
+   rang: qizil;
 }
 
 ```
 
 
-2. CSS id Selector: Uses the id attribute of an element to select it. Element id is unique within a webpage 
+2. CSS id Selector: Elementni tanlash uchun uning id atributidan foydalanadi. Element identifikatori veb-sahifa ichida noyobdir
 
-and it can select one unique element. 
-To use id to select element, use hash(#) followed by the id of the element.The name of an id cannot start 
+va u bitta noyob elementni tanlashi mumkin.
+Elementni tanlashda identifikatordan foydalanish uchun hash(#) dan keyin element identifikatoridan foydalaning. Id nomi boshlanmaydi
 
-with a number.
+raqam bilan.
 
 ```
 <!DOCTYPE html>
 <html>
 <head>
-<style>
+<uslub>
 #para1 {
-  text-align: center;
-  color: red;
+   matnni tekislash: markaz;
+   rang: qizil;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<p id="para1">Hello World!</p>
-<p>This paragraph is not affected by the style.</p>
+<p id="para1">Salom dunyo!</p>
+<p>Ushbu paragrafga uslub ta'sir qilmaydi.</p>
 
 </body>
 </html>
@@ -572,26 +572,26 @@ with a number.
 
 
 
-The CSS class Selector: Selects html elements with specific class attribute. Use (.) character followed by 
+CSS klassi selektori: muayyan sinf atributiga ega HTML elementlarini tanlaydi. (.) belgisidan keyin foydalaning
 
-class name. The code below makes class="center" red and center-aligned
+sinf nomi. Quyidagi kod class="center" ni qizil va markazga moslashtiradi
 
 ```
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-.center {
-  text-align: center;
-  color: red;
+<uslub>
+.markaz {
+   matnni tekislash: markaz;
+   rang: qizil;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h1 class="center">Red and center-aligned heading</h1>
-<p class="center">Red and center-aligned paragraph.</p> 
+<h1 class="center">Qizil va markazga tekislangan sarlavha</h1>
+<p class="center">Qizil va markazga tekislangan paragraf.</p>
 
 </body>
 </html>
@@ -599,85 +599,85 @@ class name. The code below makes class="center" red and center-aligned
 ```
 
 
-You can also specify only html elements that should be affected by a class styling. In the code below, only 
+Bundan tashqari, siz faqat sinf uslubiga ta'sir qilishi kerak bo'lgan HTML elementlarini belgilashingiz mumkin. Quyidagi kodda faqat
 
-```p``` elements with ```class="center"``` will be red and center aligned.
+```class="center"``` bo`lgan ```p``` elementlar qizil rangda bo`ladi va markazga tekislanadi.
 
 ```
 
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-p.center {
-  text-align: center;
-  color: red;
+<uslub>
+p.markaz {
+   matnni tekislash: markaz;
+   rang: qizil;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h1 class="center">This heading will not be affected</h1>
-<p class="center">This paragraph will be red and center-aligned.</p> 
+<h1 class="center">Bu sarlavha ta'sir qilmaydi</h1>
+<p class="center">Ushbu paragraf qizil rangda va markazga hizalanadi.</p>
 
 </body>
 </html>
 
 ```
 
-HTMl elements can refer to more than one class. In that case, p elemen is styled according to all the 
+HTML elementlari bir nechta sinflarga murojaat qilishi mumkin. Bunday holda, p element barchaga mos ravishda uslublanadi
 
-classes
+sinflar
 
 
 ```
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-p.center {
-  text-align: center;
-  color: red;
+<uslub>
+p.markaz {
+   matnni tekislash: markaz;
+   rang: qizil;
 }
 
-p.large {
-  font-size: 300%;
+katta {
+   shrift hajmi: 300%;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h1 class="center">This heading will not be affected</h1>
-<p class="center">This paragraph will be red and center-aligned.</p>
-<p class="center large">This paragraph will be red, center-aligned, and in a large font-size.</p> 
+<h1 class="center">Bu sarlavha ta'sir qilmaydi</h1>
+<p class="center">Ushbu paragraf qizil rangda va markazga hizalanadi.</p>
+<p class="center large">Ushbu paragraf qizil, markazga tekislangan va katta shrift o'lchamida bo'ladi.</p>
 
 </body>
 </html>
 ```
 
 
-The CSS Universal Selector
+CSS universal selektori
 
-The * selects all the HTML elements on a page
+* sahifadagi barcha HTML elementlarini tanlaydi
 
 ```
 <!DOCTYPE html>
 <html>
 <head>
-<style>
+<uslub>
 * {
-  text-align: center;
-  color: blue;
+   matnni tekislash: markaz;
+   rang: ko'k;
 }
 </style>
 </head>
-<body>
+<tana>
 
-<h1>Hello world!</h1>
+<h1>Salom dunyo!</h1>
 
-<p>Every element on the page will be affected by the style.</p>
-<p id="para1">Me too!</p>
-<p>And me!</p>
+<p>Sahifadagi har bir elementga uslub ta'sir qiladi.</p>
+<p id="para1">Men ham!</p>
+<p>Va men!</p>
 
 </body>
 </html>
@@ -685,94 +685,91 @@ The * selects all the HTML elements on a page
 ```
 
 
-The CSS Grouping Selector::
+CSS guruhlash selektori::
 
-Selects all the html elements with same sty le definitions. 
+Bir xil ta'riflarga ega barcha HTML elementlarini tanlaydi.
 
 
-rather than having the code below:
+quyidagi kodga ega bo'lish o'rniga:
 
 ```
 h1 {
-  text-align: center;
-  color: red;
+   matnni tekislash: markaz;
+   rang: qizil;
 }
 
 h2 {
-  text-align: center;
-  color: red;
+   matnni tekislash: markaz;
+   rang: qizil;
 }
 
 p {
-  text-align: center;
-  color: red;
+   matnni tekislash: markaz;
+   rang: qizil;
 }
 ```
 
-We can simply have:
+Bizda oddiygina bo'lishi mumkin:
 
 ```
 
 h1, h2, p {
-  text-align: center;
-  color: red;
+   matnni tekislash: markaz;
+   rang: qizil;
 }
 
 ```
-and still get the same result
+va hali ham bir xil natijaga erishasiz
 
 
-Summary of all CSS selectors:
+Barcha CSS selektorlarining qisqacha mazmuni:
 
-All CSS Simple Selectors
+Barcha CSS oddiy selektorlari
   
 ```
-Selector 	Example 	Example description
+Selektor misoli Misol tavsifi
 
-#id 	#firstname 	Selects the element with id="firstname"
-.class 	.intro 	Selects all elements with class="intro"
-element.class 	p.intro 	Selects only <p> elements with class="intro"
-* 	* 	Selects all elements
-element 	p 	Selects all <p> elements
-element,element,.. 	div, p 	Selects all <div> elements and all <p> elements
+#id #firstname id="firstname"li elementni tanlaydi
+.class .intro Class="intro" bilan barcha elementlarni tanlaydi
+element.class p.intro Faqat class="intro" bilan <p> elementlarni tanlaydi
+* * Barcha elementlarni tanlaydi
+element p Barcha <p> elementlarni tanlaydi
+element,element,.. div, p Barcha <div> va barcha <p> elementlarni tanlaydi
 ```
 
 
 
-<kbd>return</kbd>[Back to table of contents](#homepage)
+<kbd>qaytish</kbd>[Mundarijaga qaytish](#homepage)
 
 
 ----------
 
-## Link Bookmarks
-HTML Links - Create Bookmarks: can enable users to jump to certain part of a webpage. This helps for a long webpage. 
+## Xatcho‘plarni bog‘lash
+HTML havolalari - xatcho'plar yaratish: foydalanuvchilarga veb-sahifaning ma'lum bir qismiga o'tish imkonini beradi. Bu uzoq veb-sahifa uchun yordam beradi.
 
-* To create bookmark, create bookmark then add link to it. Clicking the page automatically redirects to boookmarked location in the webpage
+* Xatcho‘p yaratish uchun xatcho‘p yarating va unga havola qo‘shing. Sahifani bosish avtomatik ravishda veb-sahifadagi xatcho'plangan joyga yo'naltiriladi
 
--Use id attribute to create a bookmark: 
+- Xatcho'p yaratish uchun id atributidan foydalaning:
 ```
-<h2 id="C4">Chapter 4</h2>
+<h2 id="C4">4-bob</h2>
 ```
--Add link to the bookmark from within the same page.
+- Xatcho'pga o'sha sahifadan havola qo'shing.
 ```
- <a href="#C4">Jump to Chapter 4</a> 
+  <a href="#C4">4-bobga o‘tish</a>
 ```
--Add link to a bookmark on another page: 
+-Boshqa sahifadagi xatcho'pga havola qo'shing:
 ```
-<a href="html_demo.html#C4">Jump to Chapter 4</a>
+<a href="html_demo.html#C4">4-bobga o‘tish</a>
 ```
-**To remove the underline from link, remove text decoration: 
+**Havoladan pastki chiziqni olib tashlash uchun matn bezaklarini olib tashlang:
 ```
-<a href="html_images.asp" style="text-decoration:none">HTML Images</a> 
+<a href="html_images.asp" style="text-decoration:none">HTML rasmlar</a>
 ```
-Chapter Summary:
+Bo'lim xulosasi:
 
-Chapter Summary
+Bo'lim xulosasi
 
-Use the id attribute (```id="value"```) to define bookmarks in a page
-Use the href attribute (```href="#value"```) to link to the bookmark
+Sahifadagi xatcho‘plarni aniqlash uchun id atributidan (```id="qiymat"```) foydalaning
+Xatcho‘pga havola qilish uchun href atributidan (```href="#value"```) foydalaning
 
-<kbd>return</kbd>[Back to table of contents](#homepage)
-
-
-
+<kbd>qaytish</kbd>[Mundarijaga qaytish](#homepage)
